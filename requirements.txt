@@ -1,0 +1,5 @@
+regex
+numpy
+openai
+python-dotenv
+pytest

@@ -325,6 +325,26 @@ export OPENAI_API_KEY="your-key"
 ./run.sh
 ```
 
+## Configuration
+
+### Quick Start (OpenAI Backend)
+
+1. **Create a `.env` file:**
+```bash
+cp env.example .env
+```
+
+2. **Add your OpenAI API key:**
+```bash
+VECTOR_BACKEND=openai
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+3. **Run the application:**
+```bash
+./run.sh
+```
+
 ## Usage Example
 
 ```

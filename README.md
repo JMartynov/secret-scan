@@ -301,6 +301,37 @@ risk: CRITICAL
 
 ---
 
+## Installation
+
+```bash
+# Create virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set API key
+export OPENAI_API_KEY="your-key"
+
+# Run
+python3 infinite_memory_chat.py
+```
+
+Or simply:
+```bash
+chmod +x run.sh
+export OPENAI_API_KEY="your-key"
+./run.sh
+```
+
+## Usage Example
+
+```
+You: My name is Alice and I'm working on Project Neptune.
+Assistant: Nice to meet you, Alice! I will remember that...
+
+
 # Use Cases
 
 ### AI Application Development

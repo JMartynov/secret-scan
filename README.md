@@ -406,8 +406,6 @@ LLM Secrets Leak Detector provides a safety layer that prevents confidential dat
 MIT License
 
 
-These would make this idea much easier to ship in **~1 week MVP**.
-
 [1]: https://arxiv.org/abs/2307.00714?utm_source=chatgpt.com "A Comparative Study of Software Secrets Reporting by Secret Detection Tools"
 [2]: https://www.gitguardian.com/solutions/secrets-detection?utm_source=chatgpt.com "Secrets Detection: Scan Code for Exposed API Keys and Credentials | GitGuardian"
 [3]: https://github.com/mazen160/secrets-patterns-db?utm_source=chatgpt.com "GitHub - mazen160/secrets-patterns-db: Secrets Patterns DB: The largest open-source Database for detecting secrets, API keys, passwords, tokens, and more."

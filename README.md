@@ -28,7 +28,7 @@ These inputs often contain secrets such as:
 * encryption keys
 * JWT tokens
 
-For example:
+Example input that might be leaked:
 
 ```
 OPENAI_API_KEY=sk-abc123
@@ -281,7 +281,6 @@ Input text:
 ```
 Here is my configuration:
 
-OPENAI_API_KEY=sk-test1234567890
 DATABASE_URL=postgres://admin:password@localhost
 ```
 
@@ -311,45 +310,28 @@ source .venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Set API key
-export OPENAI_API_KEY="your-key"
-
 # Run
-python3 infinite_memory_chat.py
+./run.sh example_file.txt
 ```
 
-Or simply:
+Or scan text directly:
 ```bash
-chmod +x run.sh
-export OPENAI_API_KEY="your-key"
-./run.sh
-```
-
-## Configuration
-
-### Quick Start (OpenAI Backend)
-
-1. **Create a `.env` file:**
-```bash
-cp env.example .env
-```
-
-2. **Add your OpenAI API key:**
-```bash
-VECTOR_BACKEND=openai
-OPENAI_API_KEY=your_openai_api_key_here
-```
-
-3. **Run the application:**
-```bash
-./run.sh
+python3 cli.py --text "My API key is AIzaSy-12345"
 ```
 
 ## Usage Example
 
 ```
-You: My name is Alice and I'm working on Project Neptune.
-Assistant: Nice to meet you, Alice! I will remember that...
+$ ./run.sh test_file.py
+
+⚠ Secrets detected: 1
+- CRITICAL: 1
+
+Type: Database Credentials
+Location: line 10
+Risk: CRITICAL
+Content: post...ocal (redacted)
+```
 
 
 # Use Cases

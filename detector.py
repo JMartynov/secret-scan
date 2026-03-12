@@ -198,7 +198,6 @@ if __name__ == "__main__":
     detector = SecretDetector()
     test_text = """
     Here is my config:
-    OPENAI_API_KEY=sk-abc1234567890abcdef123456
     DATABASE_URL=postgres://admin:password123@localhost:5432
     DEBUG=True
     MY_SECRET_TOKEN=xyz789randomStringWithHighEntropy123!

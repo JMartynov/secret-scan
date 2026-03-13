@@ -88,57 +88,98 @@ class DetectionEngine:
         return findings
 
 class SecretDetector:
-    def __init__(self, entropy_threshold: float = 4.0, rules_path: str = 'data/rules.json'):
+    def __init__(self, entropy_threshold: float = 4.0, rules_path: str = 'data/rules.json', force_scan_all: bool = False):
         self.engine = DetectionEngine(entropy_threshold, rules_path)
+        self.force_scan_all = force_scan_all
         self.context_rules = [
             re2.compile(r"(?i)(?:my|here is|prod|our).*?(?:api|token|secret|password|key)\s*[:=]\s*(\S+)"),
             re2.compile(r"(?i)(?:api|access|auth).*?(?:key|token|secret)\s*[:=]\s*(\S+)")
         ]
 
-    def scan(self, text: str) -> List[Finding]:
-        cleaned_text = text[:MAX_TEXT_SIZE].strip()
+    def scan(self, text: str, force_scan_all: Optional[bool] = None) -> List[Finding]:
+        do_force = force_scan_all if force_scan_all is not None else self.force_scan_all
+        cleaned_text = text[:MAX_TEXT_SIZE]
         if not cleaned_text: return []
+        
+        # Line number tracking
         line_offsets = [0]
-        for match in standard_re.finditer(r"\n", cleaned_text): line_offsets.append(match.end())
+        for match in standard_re.finditer(r"\n", cleaned_text):
+            line_offsets.append(match.end())
+        
         def get_line_num(pos):
-            for i, offset in enumerate(line_offsets):
-                if pos < offset: return max(1, i)
-            return len(line_offsets)
+            # Binary search for efficiency on large files
+            import bisect
+            idx = bisect.bisect_right(line_offsets, pos)
+            return max(1, idx)
 
-        found_keywords = {original_value for _, original_value in self.engine.automaton.iter(cleaned_text.lower())}
-        triggered_indices = set()
-        for kw in found_keywords: triggered_indices.update(self.engine.keyword_map.get(kw, []))
-            
         all_findings = []
+        triggered_indices = set()
+        if not do_force:
+            found_keywords = {original_value for _, original_value in self.engine.automaton.iter(cleaned_text.lower())}
+            for kw in found_keywords: triggered_indices.update(self.engine.keyword_map.get(kw, []))
+            
+        # 1. Regex Matching
         for rule in self.engine.re2_rules:
-            if not self.engine.rules[rule['original_idx']].get('keywords') or rule['original_idx'] in triggered_indices:
+            if do_force or not self.engine.rules[rule['original_idx']].get('keywords') or rule['original_idx'] in triggered_indices:
                 for m in rule['regex'].finditer(cleaned_text):
-                    all_findings.append(Finding(rule['id'], get_line_num(m.start()), rule['risk'].upper(), m.group(1) if m.groups() else m.group(0), 0.9))
+                    content = m.group(1) if m.groups() else m.group(0)
+                    all_findings.append(Finding(rule['id'], get_line_num(m.start()), rule['risk'].upper(), content, 0.9))
         
         for rule in self.engine.legacy_rules:
-            if not self.engine.rules[rule['original_idx']].get('keywords') or rule['original_idx'] in triggered_indices:
+            if do_force or not self.engine.rules[rule['original_idx']].get('keywords') or rule['original_idx'] in triggered_indices:
                 for m in self.engine.run_safe_legacy_match(rule['regex'], cleaned_text):
-                    all_findings.append(Finding(rule['id'], get_line_num(m.start()), rule['risk'].upper(), m.group(1) if m.groups() else m.group(0), 0.8))
+                    content = m.group(1) if m.groups() else m.group(0)
+                    all_findings.append(Finding(rule['id'], get_line_num(m.start()), rule['risk'].upper(), content, 0.8))
 
+        # 2. Contextual rules
         for regex in self.context_rules:
             for m in regex.finditer(cleaned_text):
                 all_findings.append(Finding("Contextual Secret (LLM Prompt)", get_line_num(m.start()), "MEDIUM", m.group(1), 0.6))
 
-        for i, line in enumerate(cleaned_text.splitlines(), 1):
-            all_findings.extend(self.engine.run_entropy_detection(line, i, all_findings))
+        # 3. Entropy Detection
+        lines = cleaned_text.splitlines()
+        for i, line in enumerate(lines, 1):
+            line_findings = self.engine.run_entropy_detection(line, i, all_findings)
+            all_findings.extend(line_findings)
+
         return all_findings
 
     def format_report(self, findings: List[Finding]) -> str:
         if not findings: return "✅ No secrets detected."
+        
+        # Sort and deduplicate findings
+        # If multiple rules hit exactly same location/content, take highest confidence
         unique = {}
         for f in findings:
-            if (f.location, f.content) not in unique or f.confidence > unique[(f.location, f.content)].confidence:
-                unique[(f.location, f.content)] = f
-        final = sorted(unique.values(), key=lambda x: x.location)
-        report = f"⚠ Secrets detected: {len(final)}\n\n"
+            key = (f.location, f.content)
+            if key not in unique or f.confidence > unique[key].confidence:
+                unique[key] = f
+        
+        final = sorted(unique.values(), key=lambda x: (x.location, x.secret_type))
+        
+        counts = {}
+        for f in final: counts[f.risk] = counts.get(f.risk, 0) + 1
+        
+        report = f"⚠ Secrets detected: {len(final)}\n"
+        for risk in sorted(counts.keys()):
+            report += f"- {risk}: {counts[risk]}\n"
+        report += "\n"
+        
         for f in final:
-            redacted = f"{f.content[:4]}...{f.content[-4:]}" if len(f.content) > 8 else "****"
-            report += f"Type: {f.secret_type}\nLocation: line {f.location}\nRisk: {f.risk}\nContent: {redacted} (redacted)\n\n"
+            # Better redaction: keep prefix/suffix, hide middle
+            c = f.content
+            if len(c) > 12:
+                redacted = f"{c[:4]}...{c[-4:]}"
+            elif len(c) > 4:
+                redacted = f"{c[0]}...{c[-1]}"
+            else:
+                redacted = "****"
+            
+            report += f"Type: {f.secret_type}\n"
+            report += f"Location: line {f.location}\n"
+            report += f"Risk: {f.risk}\n"
+            report += f"Content: {redacted} (redacted)\n\n"
+            
         return report.strip()
 
 if __name__ == "__main__":

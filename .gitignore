@@ -9,3 +9,5 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 /.venv/
+data/test_data.json
+__pycache__/

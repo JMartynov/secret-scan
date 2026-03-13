@@ -1,206 +1,146 @@
-import regex as re
+import regex as standard_re
+import re2
+import ahocorasick
 import math
+import json
+import os
+import signal
 from dataclasses import dataclass
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Set
+
+# Design rule #4: Limit input size
+MAX_TEXT_SIZE = 100_000
 
 @dataclass
 class Finding:
     secret_type: str
-    location: int  # Line number (1-indexed)
+    location: int
     risk: str
     content: str
     confidence: float = 0.0
 
-class DetectionEngine:
-    # Common patterns for secret detection
-    PATTERNS = {
-        "OpenAI API Key": {
-            "regex": r"sk-[a-zA-Z0-9]{20,}",
-            "risk": "HIGH"
-        },
-        "AWS Access Key ID": {
-            "regex": r"AKIA[0-9A-Z]{16}",
-            "risk": "HIGH"
-        },
-        "AWS Secret Access Key": {
-            "regex": r"(?i)aws_secret_access_key\s*[:=]\s*['\"]?([a-zA-Z0-9/+=]{40})['\"]?",
-            "risk": "CRITICAL"
-        },
-        "GitHub Personal Access Token": {
-            "regex": r"ghp_[a-zA-Z0-9]{36,}",
-            "risk": "HIGH"
-        },
-        "Azure API Key": {
-            "regex": r"(?i)azure[a-z0-9_]*key\s*[:=]\s*['\"]?([a-zA-Z0-9]{32,})['\"]?",
-            "risk": "HIGH"
-        },
-        "Google API Key": {
-            "regex": r"AIza[0-9A-Za-z-_]{35}",
-            "risk": "HIGH"
-        },
-        "Database Credentials": {
-            "regex": r"(postgres|mysql|mongodb|redis)://[a-zA-Z0-9_.-]+:[a-zA-Z0-9_.-]+@[a-zA-Z0-9_.-]+:[0-9]+",
-            "risk": "CRITICAL"
-        },
-        "Generic Private Key": {
-            "regex": r"-----BEGIN [A-Z ]+ PRIVATE KEY-----",
-            "risk": "CRITICAL"
-        },
-        "JWT Token": {
-            "regex": r"ey[a-zA-Z0-9_-]{10,}\.ey[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}",
-            "risk": "MEDIUM"
-        }
-    }
+class TimeoutError(Exception): pass
+def timeout_handler(signum, frame): raise TimeoutError()
 
-    def __init__(self, entropy_threshold: float = 3.5):
+class DetectionEngine:
+    def __init__(self, entropy_threshold: float = 4.0, rules_path: str = 'data/rules.json'):
         self.entropy_threshold = entropy_threshold
+        self.rules = self._load_rules(rules_path)
+        self.keyword_map = {}
+        self.automaton = ahocorasick.Automaton()
+        self.re2_rules = []
+        self.legacy_rules = []
+        self._initialize_rules()
+
+    def _load_rules(self, rules_path: str) -> List[Dict[str, Any]]:
+        if os.path.exists(rules_path):
+            try:
+                with open(rules_path, 'r', encoding='utf-8') as f: return json.load(f)
+            except Exception: pass
+        return []
+
+    def _initialize_rules(self):
+        for idx, rule in enumerate(self.rules):
+            for kw in rule.get('keywords', []):
+                kw = kw.lower()
+                if kw not in self.keyword_map:
+                    self.keyword_map[kw] = []
+                    self.automaton.add_word(kw, kw)
+                self.keyword_map[kw].append(idx)
+            try:
+                compiled = re2.compile(rule['regex'])
+                self.re2_rules.append({'id': rule['id'], 'risk': rule['risk'], 'regex': compiled, 'original_idx': idx})
+            except Exception:
+                try:
+                    compiled = standard_re.compile(rule['regex'], standard_re.DOTALL | standard_re.MULTILINE)
+                    self.legacy_rules.append({'id': rule['id'], 'risk': rule['risk'], 'regex': compiled, 'original_idx': idx})
+                except Exception: continue
+        self.automaton.make_automaton()
 
     def calculate_entropy(self, data: str) -> float:
-        """Calculates Shannon entropy of a string."""
-        if not data:
-            return 0.0
+        if not data: return 0.0
+        counts = {}
+        for char in data: counts[char] = counts.get(char, 0) + 1
         entropy = 0
-        for x in range(256):
-            p_x = data.count(chr(x)) / len(data)
-            if p_x > 0:
-                entropy += -p_x * math.log(p_x, 2)
+        for count in counts.values():
+            p_x = count / len(data)
+            entropy += -p_x * math.log(p_x, 2)
         return entropy
 
-    def run_regex_matching(self, line: str, line_num: int) -> List[Finding]:
-        findings = []
-        for name, pattern_info in self.PATTERNS.items():
-            matches = re.finditer(pattern_info["regex"], line)
-            for match in matches:
-                findings.append(Finding(
-                    secret_type=name,
-                    location=line_num,
-                    risk=pattern_info["risk"],
-                    content=match.group(0),
-                    confidence=0.9
-                ))
-        return findings
+    def run_safe_legacy_match(self, regex, text):
+        try:
+            signal.signal(signal.SIGALRM, timeout_handler)
+            signal.alarm(1)
+            try: return list(regex.finditer(text))
+            finally: signal.alarm(0)
+        except Exception: return []
 
     def run_entropy_detection(self, line: str, line_num: int, existing_findings: List[Finding]) -> List[Finding]:
         findings = []
-        potential_tokens = re.finditer(r"\b[a-zA-Z0-9]{16,}\b", line)
-        for match in potential_tokens:
+        for match in standard_re.finditer(r"\b[a-zA-Z0-9]{20,}\b", line):
             token = match.group(0)
-            # Skip if this token is already part of a regex match
-            if any(token in f.content for f in existing_findings):
-                continue
-
-            entropy = self.calculate_entropy(token)
-            if entropy > self.entropy_threshold:
-                findings.append(Finding(
-                    secret_type="High Entropy String",
-                    location=line_num,
-                    risk="MEDIUM",
-                    content=token,
-                    confidence=0.5
-                ))
+            if any(token in f.content for f in existing_findings): continue
+            if self.calculate_entropy(token) > self.entropy_threshold:
+                if standard_re.search(r"(?i)(key|secret|token|password|auth|api|cred|prod)", line):
+                    findings.append(Finding("Potential Secret (High Entropy + Context)", line_num, "HIGH", token, 0.7))
+                else:
+                    findings.append(Finding("High Entropy String", line_num, "MEDIUM", token, 0.3))
         return findings
 
-    def apply_context_analysis(self, line: str, finding: Finding) -> Finding:
-        # Context check: look for words like 'secret', 'key', 'token' nearby
-        if re.search(r"(?i)(key|secret|token|password|cred|auth|api)", line):
-            if finding.secret_type == "High Entropy String":
-                finding.secret_type = "Potential Secret (Context Match)"
-                finding.risk = "HIGH"
-                finding.confidence = 0.8
-            else:
-                # Boost confidence for regex findings if context matches
-                finding.confidence = min(finding.confidence + 0.1, 1.0)
-        return finding
-
-class PreprocessingLayer:
-    def __init__(self):
-        pass
-
-    def clean_text(self, text: str) -> str:
-        # Basic text cleaning: strip trailing whitespace, etc.
-        # Could also handle base64 decoding, URL decoding, etc. in future
-        return text.strip()
-
-    def identify_format(self, text: str) -> str:
-        # Identify if it's JSON, YAML, etc. (for better line number tracking in future)
-        if text.startswith("{") and text.endswith("}"):
-            return "JSON"
-        if "---" in text:
-            return "YAML"
-        return "TEXT"
-
-class SecurityReport:
-    def __init__(self, findings: List[Finding]):
-        self.findings = findings
-
-    def generate_summary(self) -> str:
-        if not self.findings:
-            return "✅ No secrets detected."
-        
-        counts = {}
-        for f in self.findings:
-            counts[f.risk] = counts.get(f.risk, 0) + 1
-        
-        summary = f"⚠ Secrets detected: {len(self.findings)}\n"
-        for risk, count in counts.items():
-            summary += f"- {risk}: {count}\n"
-        return summary
-
-    def format_full_report(self) -> str:
-        if not self.findings:
-            return "✅ No secrets detected."
-        
-        report = self.generate_summary() + "\n"
-        for f in self.findings:
-            report += f"Type: {f.secret_type}\n"
-            report += f"Location: line {f.location}\n"
-            report += f"Risk: {f.risk}\n"
-            report += f"Content: {f.content[:4]}...{f.content[-4:] if len(f.content) > 8 else ''} (redacted)\n"
-            report += "\n"
-        return report.strip()
-
 class SecretDetector:
-    def __init__(self, entropy_threshold: float = 3.5):
-        self.preprocessor = PreprocessingLayer()
-        self.engine = DetectionEngine(entropy_threshold)
-
-    def classify_finding(self, finding: Finding) -> Finding:
-        # Final classification step to adjust risk levels if needed
-        # (e.g., tokens found in config files might be higher risk than in random chat messages)
-        # For now, it's a simple pass-through but it's part of the architecture
-        return finding
+    def __init__(self, entropy_threshold: float = 4.0, rules_path: str = 'data/rules.json'):
+        self.engine = DetectionEngine(entropy_threshold, rules_path)
+        self.context_rules = [
+            re2.compile(r"(?i)(?:my|here is|prod|our).*?(?:api|token|secret|password|key)\s*[:=]\s*(\S+)"),
+            re2.compile(r"(?i)(?:api|access|auth).*?(?:key|token|secret)\s*[:=]\s*(\S+)")
+        ]
 
     def scan(self, text: str) -> List[Finding]:
-        cleaned_text = self.preprocessor.clean_text(text)
-        format_type = self.preprocessor.identify_format(cleaned_text)
-        # In future, we could use format_type to use specialized parsers
-        
-        lines = cleaned_text.splitlines()
-        all_findings = []
+        cleaned_text = text[:MAX_TEXT_SIZE].strip()
+        if not cleaned_text: return []
+        line_offsets = [0]
+        for match in standard_re.finditer(r"\n", cleaned_text): line_offsets.append(match.end())
+        def get_line_num(pos):
+            for i, offset in enumerate(line_offsets):
+                if pos < offset: return max(1, i)
+            return len(line_offsets)
 
-        for i, line in enumerate(lines, 1):
-            line_findings = self.engine.run_regex_matching(line, i)
-            entropy_findings = self.engine.run_entropy_detection(line, i, line_findings)
+        found_keywords = {original_value for _, original_value in self.engine.automaton.iter(cleaned_text.lower())}
+        triggered_indices = set()
+        for kw in found_keywords: triggered_indices.update(self.engine.keyword_map.get(kw, []))
             
-            for f in line_findings + entropy_findings:
-                analyzed_finding = self.engine.apply_context_analysis(line, f)
-                classified_finding = self.classify_finding(analyzed_finding)
-                all_findings.append(classified_finding)
+        all_findings = []
+        for rule in self.engine.re2_rules:
+            if not self.engine.rules[rule['original_idx']].get('keywords') or rule['original_idx'] in triggered_indices:
+                for m in rule['regex'].finditer(cleaned_text):
+                    all_findings.append(Finding(rule['id'], get_line_num(m.start()), rule['risk'].upper(), m.group(1) if m.groups() else m.group(0), 0.9))
+        
+        for rule in self.engine.legacy_rules:
+            if not self.engine.rules[rule['original_idx']].get('keywords') or rule['original_idx'] in triggered_indices:
+                for m in self.engine.run_safe_legacy_match(rule['regex'], cleaned_text):
+                    all_findings.append(Finding(rule['id'], get_line_num(m.start()), rule['risk'].upper(), m.group(1) if m.groups() else m.group(0), 0.8))
 
+        for regex in self.context_rules:
+            for m in regex.finditer(cleaned_text):
+                all_findings.append(Finding("Contextual Secret (LLM Prompt)", get_line_num(m.start()), "MEDIUM", m.group(1), 0.6))
+
+        for i, line in enumerate(cleaned_text.splitlines(), 1):
+            all_findings.extend(self.engine.run_entropy_detection(line, i, all_findings))
         return all_findings
 
     def format_report(self, findings: List[Finding]) -> str:
-        report = SecurityReport(findings)
-        return report.format_full_report()
+        if not findings: return "✅ No secrets detected."
+        unique = {}
+        for f in findings:
+            if (f.location, f.content) not in unique or f.confidence > unique[(f.location, f.content)].confidence:
+                unique[(f.location, f.content)] = f
+        final = sorted(unique.values(), key=lambda x: x.location)
+        report = f"⚠ Secrets detected: {len(final)}\n\n"
+        for f in final:
+            redacted = f"{f.content[:4]}...{f.content[-4:]}" if len(f.content) > 8 else "****"
+            report += f"Type: {f.secret_type}\nLocation: line {f.location}\nRisk: {f.risk}\nContent: {redacted} (redacted)\n\n"
+        return report.strip()
 
 if __name__ == "__main__":
-    # Quick test
     detector = SecretDetector()
-    test_text = """
-    Here is my config:
-    DATABASE_URL=postgres://admin:password123@localhost:5432
-    DEBUG=True
-    MY_SECRET_TOKEN=xyz789randomStringWithHighEntropy123!
-    """
-    findings = detector.scan(test_text)
-    print(detector.format_report(findings))
+    print(detector.format_report(detector.scan("sk-1234567890abcdef1234567890abcdef")))

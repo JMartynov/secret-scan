@@ -319,6 +319,14 @@ Or scan text directly:
 python3 cli.py --text "My API key is AIzaSy-12345"
 ```
 
+### Custom CLI helpers
+
+The repository ships with a few convenience commands:
+
+* `./run.sh <file>` formats and scans a local file with `cli.py` and prints the report.
+* `python3 cli.py --text "<string>"` runs the scanner on an inline string (useful when building prompts before sending them to an LLM).
+* `python tools/generate_test_data.py` rebuilds `data/test_data.json` from `data/rules.json` and should be rerun whenever the rule set changes.
+
 ## Usage Example
 
 ```
@@ -332,6 +340,17 @@ Location: line 10
 Risk: CRITICAL
 Content: post...ocal (redacted)
 ```
+
+# Test Data & Custom Cases
+
+Every rule in `data/rules.json` maps to a base64-encoded positive and negative sample under `data/test_data.json`. `tools/generate_test_data.py` drives the data:
+
+* It loads each regex, runs it through `exrex` (with length caps) to emit matches, and encodes them so the detector tests operate on identical strings as production data.
+* Negatives are hand-crafted near-misses that resemble real-world secrets but should not trigger a hit.
+* Rules listed in `STRICT_RULES` bypass the default `encode_str` mutation because even inserting `DUMMY_IGNORE` would break the required format.
+* Custom helpers generate valid payloads for the trickiest patterns (`auth0_domain_url`, `skybiometry_api_key`, `okta_api_domain_url`, `facebook_oauth_id`, `linemessaging_api_key`, `nethunt_api_key`) so the detector still sees legal samples even though those regexes restrict character sets or lengths tightly.
+
+Run `python tools/generate_test_data.py` after any rule changes; it prints progress every 100 rules and overwrites `data/test_data.json` with the refreshed corpus that powers the pytest suite.
 
 
 # Use Cases

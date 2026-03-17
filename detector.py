@@ -5,29 +5,11 @@ import math
 import json
 import os
 import signal
-from dataclasses import dataclass
 from typing import List, Dict, Any, Optional, Set
+from report import Finding, format_report
 
 # Design rule #4: Limit input size
 MAX_TEXT_SIZE = 100_000
-
-@dataclass
-class Finding:
-    secret_type: str
-    location: int
-    risk: str
-    content: str
-    confidence: float = 0.0
-
-    @property
-    def redacted_value(self) -> str:
-        c = self.content
-        if len(c) > 12:
-            return f"{c[:4]}...{c[-4:]}"
-        elif len(c) > 4:
-            return f"{c[0]}...{c[-1]}"
-        else:
-            return "****"
 
 class TimeoutError(Exception): pass
 def timeout_handler(signum, frame): raise TimeoutError()
@@ -164,34 +146,8 @@ class SecretDetector:
 
         return all_findings
 
-    def format_report(self, findings: List[Finding]) -> str:
-        if not findings: return "✅ No secrets detected."
-        
-        # Sort and deduplicate findings
-        # If multiple rules hit exactly same location/content, take highest confidence
-        unique = {}
-        for f in findings:
-            key = (f.location, f.content)
-            if key not in unique or f.confidence > unique[key].confidence:
-                unique[key] = f
-        
-        final = sorted(unique.values(), key=lambda x: (x.location, x.secret_type))
-        
-        counts = {}
-        for f in final: counts[f.risk] = counts.get(f.risk, 0) + 1
-        
-        report = f"⚠ Secrets detected: {len(final)}\n"
-        for risk in sorted(counts.keys()):
-            report += f"- {risk}: {counts[risk]}\n"
-        report += "\n"
-        
-        for f in final:
-            report += f"Type: {f.secret_type}\n"
-            report += f"Location: line {f.location}\n"
-            report += f"Risk: {f.risk}\n"
-            report += f"Content: {f.redacted_value} (redacted)\n\n"
-            
-        return report.strip()
+    def format_report(self, findings: List[Finding], show_full: bool = False, show_short: bool = False) -> str:
+        return format_report(findings, show_full, show_short)
 
 if __name__ == "__main__":
     detector = SecretDetector()

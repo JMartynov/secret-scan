@@ -1,12 +1,15 @@
 import argparse
 import sys
 from detector import SecretDetector
+from report import format_report
 
 def main():
     parser = argparse.ArgumentParser(description="LLM Secrets Leak Detector CLI")
     parser.add_argument("input", nargs="?", help="File to scan or '-' for stdin")
     parser.add_argument("--text", help="Direct text to scan")
     parser.add_argument("--threshold", type=float, default=3.5, help="Entropy threshold (default 3.5)")
+    parser.add_argument("--full", action="store_true", help="Show full content of secrets")
+    parser.add_argument("--short", action="store_true", help="Show redacted content of secrets")
     
     args = parser.parse_args()
     
@@ -29,7 +32,7 @@ def main():
         sys.exit(0)
     
     findings = detector.scan(content)
-    print(detector.format_report(findings))
+    print(format_report(findings, show_full=args.full, show_short=args.short))
 
 if __name__ == "__main__":
     main()

@@ -10,6 +10,7 @@ def main():
     parser.add_argument("--threshold", type=float, default=3.5, help="Entropy threshold (default 3.5)")
     parser.add_argument("--full", action="store_true", help="Show full content of secrets")
     parser.add_argument("--short", action="store_true", help="Show redacted content of secrets")
+    parser.add_argument("--nocolors", action="store_true", help="Disable colored output")
     
     args = parser.parse_args()
     
@@ -32,7 +33,7 @@ def main():
         sys.exit(0)
     
     findings = detector.scan(content)
-    print(format_report(findings, show_full=args.full, show_short=args.short))
+    print(format_report(findings, show_full=args.full, show_short=args.short, no_colors=args.nocolors))
 
 if __name__ == "__main__":
     main()

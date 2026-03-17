@@ -75,7 +75,12 @@ echo ">>> Scanning: combined_small.txt --full"
 ./run.sh "$COMBINED" --full
 echo "----------------------------------------------------"
 
-echo -e "\n--- Part 4: 1MB Performance Benchmark (Summary) ---"
+echo -e "\n--- Part 4: No Colors Output ---"
+echo ">>> Scanning: combined_small.txt --nocolors"
+./run.sh "$COMBINED" --nocolors
+echo "----------------------------------------------------"
+
+echo -e "\n--- Part 5: 1MB Performance Benchmark (Summary) ---"
 echo ">>> Scanning: performance_1mb.txt (1,048,576 bytes)"
 TIMEFORMAT="Execution Time: %R seconds"
 time ./run.sh "$PERF"

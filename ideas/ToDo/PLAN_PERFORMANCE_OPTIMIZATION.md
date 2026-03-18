@@ -26,3 +26,26 @@ Achieve 20MB/s+ scanning throughput on modern hardware while supporting large-sc
 - **SIMD**: Ensure `pyahocorasick` or `ahocorasick_rs` is compiled with SIMD support (SSE4.2/AVX2).
 - **Chunking**: Use 1MB chunks with 4KB overlaps for streaming to balance memory use and detection accuracy.
 - **Profiling**: Use `cProfile` and `line_profiler` to identify bottlenecks in the `DetectionEngine`.
+
+---
+
+## 5. Testing Strategy
+
+### 5.1 Unit Tests (`pytest`)
+- **`test_chunking_boundary_integrity`**: Verify that a secret split exactly at a 1MB boundary is detected correctly using the overlap buffer.
+- **`test_parallel_result_merging`**: Assert that `cli.py` correctly consolidates and deduplicates findings from multiple worker processes.
+- **`test_re2_set_functional_parity`**: Ensure `RE2.Set` matches exactly the same strings as individual `RE2` regex calls.
+- **`test_mmap_handling`**: Assert that `detector.py` can read from memory-mapped files without errors.
+
+### 5.2 Acceptance Tests (BDD)
+- **Scenario: Bulk Scan Performance**
+  - Given a directory of 100 files (10MB total) with 10 hidden secrets
+  - When I run a bulk scan
+  - Then the scan should complete in less than 2 seconds
+- **Scenario: Large File Streaming**
+  - Given a single 100MB file with a secret at the 50MB and 99.9MB positions
+  - When I scan the file via pipe
+  - Then both secrets should be reported with accurate line numbers
+- **Scenario: Parallel vs. Serial Consistency**
+  - When I scan the same directory in serial mode and parallel mode
+  - Then both reports must have identical findings

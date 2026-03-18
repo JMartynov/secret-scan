@@ -33,3 +33,26 @@ Add a new rule file `data/pii_rules.json`:
 - **Luhn Algorithm**: Mandatory for Credit Card validation to reduce false positives.
 - **Regional Scoping**: Allow users to specify country codes to limit PII scanning (e.g., `--pii-region US,UK`).
 - **Checksums**: Many ID formats (like SSNs) have internal checksums; implement these in Python `validators/` to filter regex noise.
+
+---
+
+## 5. Testing Strategy
+
+### 5.1 Unit Tests (`pytest`)
+- **`test_rule_tier_loading`**: Verify `DetectionEngine` correctly parses and assigns tiers from `rules.json`.
+- **`test_luhn_validator`**: Test `validators.luhn_check` with valid/invalid credit card numbers (VISA, Mastercard).
+- **`test_pii_regex_boundaries`**: Test email/phone regex with edge cases (e.g., `user+tag@domain.co.uk`, `+1-555-0100`).
+- **`test_tier_shadowing`**: Provide a string that matches both a Tier 1 rule (AWS) and Tier 4 (Entropy). Assert only Tier 1 is reported.
+
+### 5.2 Acceptance Tests (BDD)
+- **Scenario: PII Detection Toggle**
+  - Given the detector is initialized with `--pii`
+  - When I scan "My email is test@example.com"
+  - Then it should find "email_address"
+- **Scenario: Regional PII Filtering**
+  - Given PII scanning is enabled for region "UK"
+  - When I scan a US-formatted phone number "(555) 123-4567"
+  - Then it should NOT report any findings
+- **Scenario: Financial Data Validation**
+  - When I scan a 16-digit random number that FAILS Luhn check
+  - Then it should NOT report a "credit_card" finding

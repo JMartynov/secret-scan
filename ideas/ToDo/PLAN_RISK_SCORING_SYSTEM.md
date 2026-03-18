@@ -35,3 +35,27 @@ Move from categorical risk levels (HIGH/MEDIUM) to a weighted heuristic score (0
 ## 4. Best Practices
 - **Proximity Weighting**: Use a decay function for context. A keyword right next to the secret is worth more than one 10 lines away.
 - **Multi-Factor Verification**: If a string matches a regex AND has high entropy AND has context, the score should exceed 100 but be capped.
+
+---
+
+## 5. Testing Strategy
+
+### 5.1 Unit Tests (`pytest`)
+- **`test_scoring_weights`**: Verify that `Finding.score` accurately reflects the formula with mocked inputs.
+- **`test_context_decay`**: Assert that context bonus decreases as distance between secret and keyword increases.
+- **`test_score_capping`**: Ensure that no `Finding.score` exceeds 100, even with multiple bonuses.
+- **`test_negative_scoring`**: Verify that "Test Data Markers" correctly penalize/lower the score.
+
+### 5.2 Acceptance Tests (BDD)
+- **Scenario: Score-Based Filtering**
+  - Given the detector has found 5 findings with scores [20, 50, 65, 80, 95]
+  - When I run the report with `--min-score 70`
+  - Then only 2 findings should be visible in the output
+- **Scenario: Proximity Bonus Impact**
+  - Given a text "password is: abc123random" (High Proximity)
+  - And a text "The system has a password. Somewhere below it uses: abc123random" (Low Proximity)
+  - When I scan both
+  - Then the score for the first should be significantly higher than the second
+- **Scenario: Multi-Signal Boosting**
+  - When I scan "My AWS key: AKIA..." (Structured + Context + High Entropy)
+  - Then the finding should have a score > 90

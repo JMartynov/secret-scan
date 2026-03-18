@@ -33,3 +33,27 @@ Add an optional verification step to check if detected secrets are active, signi
 - **Rate Limiting**: Strictly respect provider rate limits to avoid getting the scanning IP blocked.
 - **Caching**: Cache validation results (hashed) for the duration of the scan to avoid redundant network calls for duplicate secrets.
 - **Parallelism**: Run validation calls in a thread pool as they are I/O bound.
+
+---
+
+## 5. Testing Strategy
+
+### 5.1 Unit Tests (`pytest`)
+- **`test_validator_mock_api`**: Use `responses` or `unittest.mock` to simulate successful and failed (401, 403, 429) API calls for each provider.
+- **`test_validation_manager_timeout`**: Ensure the manager correctly skips validation if the API doesn't respond within the configured timeout.
+- **`test_backoff_logic`**: Verify that the manager waits between retries for 429 errors.
+- **`test_validation_caching`**: Assert that `ValidationManager` only calls the external API once for identical secrets within a session.
+
+### 5.2 Acceptance Tests (BDD)
+- **Scenario: Successful Verification Reporting**
+  - Given a real GitHub token is detected (mocked API returns 200)
+  - When I run the scan with `--verify`
+  - Then the finding should be marked as "VERIFIED" and have a score of 100
+- **Scenario: Invalid Secret Reporting**
+  - Given an invalid Stripe key is detected (mocked API returns 401)
+  - When I run the scan with `--verify`
+  - Then the finding should NOT be marked as "VERIFIED"
+- **Scenario: Handling Rate Limits**
+  - Given the provider returns a "429 Too Many Requests"
+  - When I run the scan
+  - Then the tool should gracefully report the finding without verification status and continue.

@@ -33,3 +33,25 @@ Specific focuses:
 - **Entropy for Passwords**: URIs like `postgres://admin:password@localhost` are often false positives. Apply entropy checks to the `password` group specifically.
 - **Non-Greedy Capture**: Ensure the `password` group stops at the `@` or `:` symbols.
 - **Encoding Awareness**: Detect secrets in URL-encoded formats (e.g., `%21` for `!`).
+
+---
+
+## 5. Testing Strategy
+
+### 5.1 Unit Tests (`pytest`)
+- **`test_uri_component_extraction`**: Verify that the "Super-URI" regex correctly maps to named groups (scheme, user, password, host).
+- **`test_multiline_cert_matching`**: Assert that `detector.py` can capture a 20-line PEM file as a single finding.
+- **`test_mongodb_srv_detection`**: Specifically test the `+srv` variant of MongoDB URIs.
+- **`test_env_file_parser`**: Test `.env` formats: `KEY="val"`, `export KEY=val`, `KEY=val # comment`.
+
+### 5.2 Acceptance Tests (BDD)
+- **Scenario: Complex MongoDB URI Detection**
+  - When I scan "mongodb+srv://admin:p@ssword123@cluster0.mongodb.net/test?retryWrites=true"
+  - Then it should report "database_credentials" for "p@ssword123"
+- **Scenario: Private Key Block Detection**
+  - Given a block starting with `-----BEGIN PRIVATE KEY-----` and ending with `-----END PRIVATE KEY-----`
+  - When I scan the block
+  - Then it should be detected as "private_key"
+- **Scenario: Infrastructure-in-Context**
+  - When I scan "Here is my kubeconfig: client-key-data: dGhpcyBpcyBhIGZha2UgdG9rZW4="
+  - Then the Base64 token should be identified as a "Potential Secret".

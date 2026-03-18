@@ -1,3 +1,8 @@
 regex
 numpy
 pytest
+google-re2
+pyahocorasick
+exrex
+regexploit
+redoctor

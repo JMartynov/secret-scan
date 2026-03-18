@@ -69,3 +69,18 @@ Feature: Comprehensive Secret Detection Acceptance
     When I scan haystacks containing batches of all these secrets mixed with random text
     Then the engine must successfully process all rules without crashing
     And the majority of rules should be detected at their correct locations
+
+  Scenario: 14. Report Formatting Options
+    Given a file containing a Stripe key
+    When I generate a "short" report
+    Then the output should contain redacted secrets
+    And the output should NOT contain full secrets
+    When I generate a "full" report
+    Then the output should contain full secrets
+    When I generate a "nocolors" report
+    Then the output should NOT contain ANSI color codes
+
+  Scenario: 15. Streaming Input via Stdin
+    Given a stream of text containing a Stripe key
+    When I scan the stream
+    Then it should find "stripe_api_key"

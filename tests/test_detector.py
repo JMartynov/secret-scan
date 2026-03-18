@@ -59,3 +59,73 @@ def test_no_secrets_clean_text():
     findings = detector.scan(text)
     significant_findings = [f for f in findings if f.confidence > 0.5]
     assert len(significant_findings) == 0
+
+def test_calculate_entropy():
+    detector = SecretDetector()
+    # Low entropy strings
+    assert detector.engine.calculate_entropy("") == 0.0
+    assert detector.engine.calculate_entropy("aaaaa") == 0.0
+    # High entropy strings
+    entropy_high = detector.engine.calculate_entropy("abcde12345FGHIJ!@#$%")
+    entropy_low = detector.engine.calculate_entropy("abcdeabcdeabcdeabcde")
+    assert entropy_high > entropy_low
+
+def test_entropy_detection_with_context():
+    detector = SecretDetector(entropy_threshold=3.0)
+    # High entropy string without context keywords
+    text_no_context = "Here is a random string: dGhpcyBpcyBhIHJhbmRvbSBzdHJpbmcgd2l0aCBoaWdoIGVudHJvcHk="
+    findings_no_context = detector.scan(text_no_context)
+    assert any(f.secret_type == "High Entropy String" for f in findings_no_context)
+    assert not any(f.secret_type == "Potential Secret (High Entropy + Context)" for f in findings_no_context)
+
+    # High entropy string with context keywords
+    text_with_context = "My api key is: dGhpcyBpcyBhIHJhbmRvbSBzdHJpbmcgd2l0aCBoaWdoIGVudHJvcHk="
+    findings_with_context = detector.scan(text_with_context)
+    assert any(f.secret_type == "Potential Secret (High Entropy + Context)" for f in findings_with_context)
+
+def test_scan_stream_basic():
+    detector = SecretDetector()
+    import io
+    content = "Stripe key: sk_live_abc123def456ghi789j012"
+    stream = io.StringIO(content)
+    findings = detector.scan_stream(stream)
+    assert any("stripe" in f.secret_type.lower() for f in findings)
+
+def test_scan_stream_chunking_overlap():
+    detector = SecretDetector()
+    import io
+    # Secret split across chunks
+    # Let's say chunk size is small to force split
+    secret = "sk_live_abc123def456ghi789j012"
+    content = "Stripe key: " + secret
+    # Split content such that the secret is cut in half
+    part1 = content[:20]
+    part2 = content[20:]
+    
+    class MockStream:
+        def __init__(self, parts):
+            self.parts = parts
+            self.idx = 0
+        def read(self, size):
+            if self.idx < len(self.parts):
+                res = self.parts[self.idx]
+                self.idx += 1
+                return res
+            return ""
+    
+    # We need to simulate how scan_stream reads.
+    # If chunk_size is small, it will read part by part.
+    stream = MockStream([part1, part2])
+    # Force small chunk_size in scan_stream if possible, or just rely on how it's called
+    findings = detector.scan_stream(stream, chunk_size=10) 
+    assert any("stripe" in f.secret_type.lower() for f in findings)
+
+def test_scan_stream_line_numbers():
+    detector = SecretDetector()
+    import io
+    content = "Noise\nNoise\nStripe: sk_live_abc123def456ghi789j012\nNoise"
+    stream = io.StringIO(content)
+    findings = detector.scan_stream(stream, chunk_size=10)
+    stripe_finding = next((f for f in findings if "stripe" in f.secret_type.lower()), None)
+    assert stripe_finding is not None
+    assert stripe_finding.location == 3

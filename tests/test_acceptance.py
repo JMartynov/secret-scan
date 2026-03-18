@@ -57,6 +57,12 @@ def test_needle_haystack(): pass
 @scenario('acceptance.feature', '13. Massive Multi-Rule Validation')
 def test_massive_validation(): pass
 
+@scenario('acceptance.feature', '14. Report Formatting Options')
+def test_report_formatting(): pass
+
+@scenario('acceptance.feature', '15. Streaming Input via Stdin')
+def test_streaming_input(): pass
+
 
 # --- Steps ---
 
@@ -73,7 +79,7 @@ def scan_text(detector, ctx, text):
         text = "Stripe " + text
     ctx["text"] = text
     ctx["findings"] = detector.scan(text)
-    ctx["report"] = detector.format_report(ctx["findings"])
+    ctx["report"] = detector.format_report(ctx["findings"], show_short=True)
 
 @when(parsers.parse('I scan "{text}"'))
 def scan_text_alt(detector, ctx, text):
@@ -84,7 +90,7 @@ def scan_text_alt(detector, ctx, text):
         text = "Github " + text
     ctx["text"] = text
     ctx["findings"] = detector.scan(text)
-    ctx["report"] = detector.format_report(ctx["findings"])
+    ctx["report"] = detector.format_report(ctx["findings"], show_short=True)
 
 @when(parsers.parse('I scan a standalone hash "{hash_val}"'))
 def scan_hash(detector, ctx, hash_val):
@@ -120,7 +126,7 @@ def large_input(ctx, size):
 def run_scan(detector, ctx):
     ctx["start_time"] = time.time()
     ctx["findings"] = detector.scan(ctx["text"])
-    ctx["report"] = detector.format_report(ctx["findings"])
+    ctx["report"] = detector.format_report(ctx["findings"], show_short=True)
 
 @then(parsers.parse('findings beyond {limit:d} characters should be ignored'))
 def check_truncation(ctx, limit):
@@ -218,3 +224,42 @@ def check_no_crash(ctx):
 @then('the majority of rules should be detected at their correct locations')
 def check_majority_detected(ctx):
     assert len(ctx["findings"]) >= 2
+
+@given('a file containing a Stripe key')
+def stripe_file(ctx):
+    ctx["text"] = f"Stripe key: {O_STRIPE}"
+
+@when(parsers.parse('I generate a "{mode}" report'))
+def generate_report(detector, ctx, mode):
+    ctx["findings"] = detector.scan(ctx["text"])
+    if mode == "short":
+        ctx["report"] = detector.format_report(ctx["findings"], show_short=True)
+    elif mode == "full":
+        ctx["report"] = detector.format_report(ctx["findings"], show_full=True)
+    elif mode == "nocolors":
+        ctx["report"] = detector.format_report(ctx["findings"], no_colors=True)
+
+@then('the output should contain redacted secrets')
+def check_redacted_report(ctx):
+    assert "(redacted)" in ctx["report"]
+
+@then('the output should NOT contain full secrets')
+def check_no_full_secrets(ctx):
+    assert O_STRIPE not in ctx["report"]
+
+@then('the output should contain full secrets')
+def check_full_secrets(ctx):
+    assert O_STRIPE in ctx["report"]
+
+@then('the output should NOT contain ANSI color codes')
+def check_no_colors(ctx):
+    assert "\033[" not in ctx["report"]
+
+@given('a stream of text containing a Stripe key')
+def stripe_stream(ctx):
+    import io
+    ctx["stream"] = io.StringIO(f"Stripe key: {O_STRIPE}")
+
+@when('I scan the stream')
+def scan_stream(detector, ctx):
+    ctx["findings"] = detector.scan_stream(ctx["stream"])

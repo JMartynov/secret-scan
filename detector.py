@@ -5,29 +5,12 @@ import math
 import json
 import os
 import signal
-from dataclasses import dataclass
-from typing import List, Dict, Any, Optional, Set
+import bisect
+from typing import List, Dict, Any, Optional, Set, Iterator
+from report import Finding, format_report
 
-# Design rule #4: Limit input size
-MAX_TEXT_SIZE = 100_000
-
-@dataclass
-class Finding:
-    secret_type: str
-    location: int
-    risk: str
-    content: str
-    confidence: float = 0.0
-
-    @property
-    def redacted_value(self) -> str:
-        c = self.content
-        if len(c) > 12:
-            return f"{c[:4]}...{c[-4:]}"
-        elif len(c) > 4:
-            return f"{c[0]}...{c[-1]}"
-        else:
-            return "****"
+# Design rule #4: Limit input size for single-block scanning
+MAX_BLOCK_SIZE = 100_000
 
 class TimeoutError(Exception): pass
 def timeout_handler(signum, frame): raise TimeoutError()
@@ -106,35 +89,30 @@ class SecretDetector:
             re2.compile(r"(?is)(?:api|access|auth).*?(?:key|token|secret)\s*[:=]\s*(\S+)")
         ]
 
-    def scan(self, text: str, force_scan_all: Optional[bool] = None) -> List[Finding]:
-        do_force = force_scan_all if force_scan_all is not None else self.force_scan_all
-        cleaned_text = text[:MAX_TEXT_SIZE]
-        if not cleaned_text: return []
+    def _scan_block(self, text: str, base_line: int, force_scan_all: bool) -> List[Finding]:
+        if not text: return []
         
-        # Line number tracking
+        # Line number tracking within the block
         line_offsets = [0]
-        for match in standard_re.finditer(r"\n", cleaned_text):
+        for match in standard_re.finditer(r"\n", text):
             line_offsets.append(match.end())
         
         def get_line_num(pos):
-            # Binary search for efficiency on large files
-            import bisect
             idx = bisect.bisect_right(line_offsets, pos)
-            return max(1, idx)
+            return base_line + max(0, idx - 1)
 
         all_findings = []
         triggered_indices = set()
-        if not do_force:
-            found_keywords = {original_value for _, original_value in self.engine.automaton.iter(cleaned_text.lower())}
+        if not force_scan_all:
+            found_keywords = {original_value for _, original_value in self.engine.automaton.iter(text.lower())}
             for kw in found_keywords: triggered_indices.update(self.engine.keyword_map.get(kw, []))
             
         # 1. Regex Matching
         for rule in self.engine.re2_rules:
             rule_def = self.engine.rules[rule['original_idx']]
-            if do_force or not rule_def.get('keywords') or rule['original_idx'] in triggered_indices:
-                for m in rule['regex'].finditer(cleaned_text):
+            if force_scan_all or not rule_def.get('keywords') or rule['original_idx'] in triggered_indices:
+                for m in rule['regex'].finditer(text):
                     content = m.group(1) if m.groups() else m.group(0)
-                    # Apply entropy threshold if present in rule (with 80% leniency)
                     if 'entropy' in rule_def:
                         if self.engine.calculate_entropy(content) < (rule_def['entropy'] * 0.8):
                             continue
@@ -142,10 +120,9 @@ class SecretDetector:
         
         for rule in self.engine.legacy_rules:
             rule_def = self.engine.rules[rule['original_idx']]
-            if do_force or not rule_def.get('keywords') or rule['original_idx'] in triggered_indices:
-                for m in self.engine.run_safe_legacy_match(rule['regex'], cleaned_text):
+            if force_scan_all or not rule_def.get('keywords') or rule['original_idx'] in triggered_indices:
+                for m in self.engine.run_safe_legacy_match(rule['regex'], text):
                     content = m.group(1) if m.groups() else m.group(0)
-                    # Apply entropy threshold if present in rule (with 80% leniency)
                     if 'entropy' in rule_def:
                         if self.engine.calculate_entropy(content) < (rule_def['entropy'] * 0.8):
                             continue
@@ -153,45 +130,73 @@ class SecretDetector:
 
         # 2. Contextual rules
         for regex in self.context_rules:
-            for m in regex.finditer(cleaned_text):
+            for m in regex.finditer(text):
                 all_findings.append(Finding("Contextual Secret (LLM Prompt)", get_line_num(m.start()), "MEDIUM", m.group(1), 0.6))
 
         # 3. Entropy Detection
-        lines = cleaned_text.splitlines()
-        for i, line in enumerate(lines, 1):
-            line_findings = self.engine.run_entropy_detection(line, i, all_findings)
+        lines = text.splitlines()
+        for i, line in enumerate(lines):
+            line_findings = self.engine.run_entropy_detection(line, base_line + i, all_findings)
             all_findings.extend(line_findings)
 
         return all_findings
 
-    def format_report(self, findings: List[Finding]) -> str:
-        if not findings: return "✅ No secrets detected."
+    def scan(self, text: str, force_scan_all: Optional[bool] = None) -> List[Finding]:
+        do_force = force_scan_all if force_scan_all is not None else self.force_scan_all
+        cleaned_text = text[:MAX_BLOCK_SIZE]
+        return self._scan_block(cleaned_text, 1, do_force)
+
+    def scan_stream(self, stream: Iterator[str], force_scan_all: Optional[bool] = None, chunk_size: int = 1024*1024) -> List[Finding]:
+        do_force = force_scan_all if force_scan_all is not None else self.force_scan_all
+        all_findings = []
+        current_line = 1
+        overlap = ""
         
-        # Sort and deduplicate findings
-        # If multiple rules hit exactly same location/content, take highest confidence
-        unique = {}
-        for f in findings:
-            key = (f.location, f.content)
-            if key not in unique or f.confidence > unique[key].confidence:
-                unique[key] = f
-        
-        final = sorted(unique.values(), key=lambda x: (x.location, x.secret_type))
-        
-        counts = {}
-        for f in final: counts[f.risk] = counts.get(f.risk, 0) + 1
-        
-        report = f"⚠ Secrets detected: {len(final)}\n"
-        for risk in sorted(counts.keys()):
-            report += f"- {risk}: {counts[risk]}\n"
-        report += "\n"
-        
-        for f in final:
-            report += f"Type: {f.secret_type}\n"
-            report += f"Location: line {f.location}\n"
-            report += f"Risk: {f.risk}\n"
-            report += f"Content: {f.redacted_value} (redacted)\n\n"
+        while True:
+            chunk = stream.read(chunk_size)
+            if not chunk:
+                break
             
-        return report.strip()
+            # Combine overlap from previous chunk to ensure no secrets are missed at boundaries
+            # We use a simple strategy: process up to the last newline in the chunk
+            # The remaining part becomes overlap for the next chunk.
+            
+            text_to_scan = overlap + chunk
+            last_newline = text_to_scan.rfind('\n')
+            
+            if last_newline == -1:
+                # No newline in chunk, keep it all as overlap unless chunk is huge
+                if len(text_to_scan) > chunk_size * 5:
+                    # Emergency flush if no newline found for a long time
+                    # We keep a small overlap (e.g. 1024 or chunk_size) to ensure secrets aren't split
+                    keep = min(len(text_to_scan), 4096)
+                    block = text_to_scan[:-keep]
+                    overlap = text_to_scan[-keep:]
+                    
+                    if block:
+                        findings = self._scan_block(block, current_line, do_force)
+                        all_findings.extend(findings)
+                        current_line += block.count('\n')
+                else:
+                    overlap = text_to_scan
+                    continue
+            else:
+                block = text_to_scan[:last_newline + 1]
+                overlap = text_to_scan[last_newline + 1:]
+                
+                findings = self._scan_block(block, current_line, do_force)
+                all_findings.extend(findings)
+                current_line += block.count('\n')
+        
+        # Scan final remaining overlap
+        if overlap:
+            findings = self._scan_block(overlap, current_line, do_force)
+            all_findings.extend(findings)
+            
+        return all_findings
+
+    def format_report(self, findings: List[Finding], show_full: bool = False, show_short: bool = False, no_colors: bool = False) -> str:
+        return format_report(findings, show_full, show_short, no_colors)
 
 if __name__ == "__main__":
     detector = SecretDetector()

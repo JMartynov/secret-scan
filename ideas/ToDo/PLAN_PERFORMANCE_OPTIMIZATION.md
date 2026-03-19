@@ -49,3 +49,17 @@ Achieve 20MB/s+ scanning throughput on modern hardware while supporting large-sc
 - **Scenario: Parallel vs. Serial Consistency**
   - When I scan the same directory in serial mode and parallel mode
   - Then both reports must have identical findings
+
+---
+
+## 6. Demo Update
+Update `demo.sh` to include a section for "High-Performance Scanning":
+- Increase the size of the performance benchmark file.
+- Add a summary of the scanning speed (MB/s) to the demo output to showcase optimization gains.
+
+---
+
+## 7. Documentation Update
+Update `README.md`:
+- Update the "Performance" section with new benchmarks.
+- Briefly mention the high-performance backends (RE2/Hyperscan) and parallel scanning support.

@@ -54,3 +54,18 @@ Integrate the scanner into development workflows to prevent secrets from ever be
   - Given a repository with a secret committed 10 commits ago
   - When I run `./run.sh --history`
   - Then the secret must be found and reported with its original commit hash.
+
+---
+
+## 6. Demo Update
+Update `demo.sh` to include a section for "Git Workflow Integration":
+- Create a temporary git repository in the demo script.
+- Stage a file with a secret and run `./run.sh --git` to show how it protects commits.
+
+---
+
+## 7. Documentation Update
+Update `README.md`:
+- Add a new section for "Git Integration".
+- Document the `--git` (diff scanning) and `--history` (log scanning) flags.
+- Provide instructions for installing the pre-commit hook.

@@ -54,3 +54,17 @@ cat logs.txt | ./run.sh --obfuscate > clean_logs.txt
   - Given a JSON file with secrets as values
   - When I obfuscate the file
   - Then the output should still be a valid JSON with the same structure, but the secret values redacted.
+
+---
+
+## 6. Demo Update
+Update `demo.sh` to include a section for "Data Obfuscation":
+- Demonstrate piping a "dirty" log file through `./run.sh --obfuscate`.
+- Show the "clean" output side-by-side with the original to highlight format preservation.
+
+---
+
+## 7. Documentation Update
+Update `README.md`:
+- Add documentation for the `--obfuscate` flag in the "Usage" section.
+- Explain the different obfuscation modes (redact vs. hash) and their use cases.

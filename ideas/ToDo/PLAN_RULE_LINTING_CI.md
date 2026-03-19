@@ -49,3 +49,17 @@ Ensure the pattern database is performant, secure against ReDoS, and maintains h
   - Given a rule that hangs for > 1 second (simulated ReDoS)
   - When the scanner processes a matching input
   - Then the watchdog must terminate the match and log a warning without crashing the tool.
+
+---
+
+## 6. Demo Update
+Update `demo.sh` to include a section for "Safety & Quality":
+- Show a brief example of the rule linting process if applicable to the demo environment.
+- Demonstrate the runtime watchdog by scanning a string designed to trigger a safe timeout.
+
+---
+
+## 7. Documentation Update
+Update `README.md`:
+- Add a section on "Security & Safety" explaining the ReDoS protection and rule quality standards.
+- Document how developers can contribute new rules safely.

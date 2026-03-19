@@ -57,3 +57,18 @@ Add an optional verification step to check if detected secrets are active, signi
   - Given the provider returns a "429 Too Many Requests"
   - When I run the scan
   - Then the tool should gracefully report the finding without verification status and continue.
+
+---
+
+## 6. Demo Update
+Update `demo.sh` to include a section for "Secret Verification":
+- Show how a verified secret is highlighted in the report.
+- Use a mock verification mode to demonstrate the difference between a "Detected" and "Verified" secret.
+
+---
+
+## 7. Documentation Update
+Update `README.md`:
+- Add a section on "Secret Verification".
+- Document the `--verify` flag and list supported providers (AWS, GitHub, Stripe).
+- Include safety warnings about using verification in CI/CD environments.

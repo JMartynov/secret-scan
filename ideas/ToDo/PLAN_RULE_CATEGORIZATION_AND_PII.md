@@ -56,3 +56,18 @@ Add a new rule file `data/pii_rules.json`:
 - **Scenario: Financial Data Validation**
   - When I scan a 16-digit random number that FAILS Luhn check
   - Then it should NOT report a "credit_card" finding
+
+---
+
+## 6. Demo Update
+Update `demo.sh` to include a section for "PII Detection":
+- Add sample emails, phone numbers, and (valid/invalid) credit card numbers.
+- Show how the tool distinguishes between these categories using the new tiered reporting.
+
+---
+
+## 7. Documentation Update
+Update `README.md`:
+- Add a new section for "PII Detection".
+- Document the `--pii` flag and list the types of PII detected (emails, phones, credit cards).
+- Explain the new multi-tier categorization of findings.

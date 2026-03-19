@@ -59,3 +59,17 @@ Move from categorical risk levels (HIGH/MEDIUM) to a weighted heuristic score (0
 - **Scenario: Multi-Signal Boosting**
   - When I scan "My AWS key: AKIA..." (Structured + Context + High Entropy)
   - Then the finding should have a score > 90
+
+---
+
+## 6. Demo Update
+Update `demo.sh` to include a section for "Advanced Risk Scoring":
+- Display the new numeric scores in the `--short` and `--full` report sections.
+- Demonstrate how `--min-score` filters out low-confidence noise.
+
+---
+
+## 7. Documentation Update
+Update `README.md`:
+- Update the "Reporting System" section to explain the new numeric risk scoring (0-100).
+- Document the `--min-score` flag and how users can tune sensitivity.

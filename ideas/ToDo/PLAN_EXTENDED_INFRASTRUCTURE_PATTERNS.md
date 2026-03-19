@@ -55,3 +55,17 @@ Specific focuses:
 - **Scenario: Infrastructure-in-Context**
   - When I scan "Here is my kubeconfig: client-key-data: dGhpcyBpcyBhIGZha2UgdG9rZW4="
   - Then the Base64 token should be identified as a "Potential Secret".
+
+---
+
+## 6. Demo Update
+Update `demo.sh` to include a section for "Complex Infrastructure Scanning":
+- Add a sample MongoDB URI and a Private Key block to the demo files.
+- Showcase how the tool extracts specific credentials from these technical formats.
+
+---
+
+## 7. Documentation Update
+Update `README.md`:
+- Add new infrastructure and URI patterns to the "Secret Types Detected" section.
+- Provide examples of how to scan for these specific technical formats.

@@ -10,6 +10,7 @@ Use this template when planning and implementing new features or rules for the `
     *   `report.py` (Formatting/Findings)
     *   `data/rules.json` (Patterns)
     *   `cli.py` (User interface)
+    *    any *.py files newly added
 
 ## 2. Research & Strategy
 *   **Pattern Analysis**: [If adding a rule, provide regex and example matches]

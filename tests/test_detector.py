@@ -88,44 +88,20 @@ def test_scan_stream_basic():
     import io
     content = "Stripe key: sk_live_abc123def456ghi789j012"
     stream = io.StringIO(content)
-    findings = detector.scan_stream(stream)
+    findings_gen = detector.scan_stream(stream)
+    findings = [f for _, findings in findings_gen for f in findings]
     assert any("stripe" in f.secret_type.lower() for f in findings)
 
-def test_scan_stream_chunking_overlap():
+def test_scan_stream_line_numbers_new():
     detector = SecretDetector()
     import io
-    # Secret split across chunks
-    # Let's say chunk size is small to force split
-    secret = "sk_live_abc123def456ghi789j012"
-    content = "Stripe key: " + secret
-    # Split content such that the secret is cut in half
-    part1 = content[:20]
-    part2 = content[20:]
-    
-    class MockStream:
-        def __init__(self, parts):
-            self.parts = parts
-            self.idx = 0
-        def read(self, size):
-            if self.idx < len(self.parts):
-                res = self.parts[self.idx]
-                self.idx += 1
-                return res
-            return ""
-    
-    # We need to simulate how scan_stream reads.
-    # If chunk_size is small, it will read part by part.
-    stream = MockStream([part1, part2])
-    # Force small chunk_size in scan_stream if possible, or just rely on how it's called
-    findings = detector.scan_stream(stream, chunk_size=10) 
-    assert any("stripe" in f.secret_type.lower() for f in findings)
-
-def test_scan_stream_line_numbers():
-    detector = SecretDetector()
-    import io
-    content = "Noise\nNoise\nStripe: sk_live_abc123def456ghi789j012\nNoise"
+    content = """Noise
+Noise
+Stripe: sk_live_abc123def456ghi789j012
+Noise"""
     stream = io.StringIO(content)
-    findings = detector.scan_stream(stream, chunk_size=10)
+    findings_gen = detector.scan_stream(stream)
+    findings = [f for _, findings in findings_gen for f in findings]
     stripe_finding = next((f for f in findings if "stripe" in f.secret_type.lower()), None)
     assert stripe_finding is not None
     assert stripe_finding.location == 3

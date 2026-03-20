@@ -2,6 +2,7 @@ import pytest
 from unittest.mock import patch, MagicMock
 import sys
 from cli import main
+from io import StringIO
 
 @pytest.fixture
 def mock_detector():
@@ -23,13 +24,15 @@ def test_cli_help(capsys):
 
 def test_cli_text_input(mock_detector, mock_format_report):
     mock_instance = mock_detector.return_value
-    mock_instance.scan.return_value = []
+    mock_instance.scan_stream.return_value = iter([])  # Must be an iterator
     mock_format_report.return_value = "Mock Report"
     
     with patch.object(sys, 'argv', ['cli.py', '--text', 'my secret']):
         main()
     
-    mock_instance.scan.assert_called_with('my secret')
+    mock_instance.scan_stream.assert_called()
+    args, kwargs = mock_instance.scan_stream.call_args
+    assert isinstance(args[0], StringIO)
     mock_format_report.assert_called()
 
 def test_cli_file_input(mock_detector, mock_format_report, tmp_path):
@@ -37,29 +40,29 @@ def test_cli_file_input(mock_detector, mock_format_report, tmp_path):
     f.write_text("file content")
     
     mock_instance = mock_detector.return_value
-    mock_instance.scan_stream.return_value = []
+    mock_instance.scan_stream.return_value = iter([])
     mock_format_report.return_value = "Mock Report"
     
     with patch.object(sys, 'argv', ['cli.py', str(f)]):
         main()
     
-    # scan_stream is called with a file object
     args, kwargs = mock_instance.scan_stream.call_args
     assert args[0].name == str(f)
 
 def test_cli_stdin_input(mock_detector, mock_format_report):
     mock_instance = mock_detector.return_value
-    mock_instance.scan_stream.return_value = []
+    mock_instance.scan_stream.return_value = iter([])
     
-    with patch.object(sys, 'argv', ['cli.py', '-']):
-        with patch('sys.stdin', MagicMock()):
+    with patch.object(sys, 'argv', ['cli.py']): # No '-' needed
+        with patch('sys.stdin', MagicMock()) as mock_stdin:
+            mock_stdin.isatty.return_value = False
             main()
     
-    mock_instance.scan_stream.assert_called()
+    mock_instance.scan_stream.assert_called_with(mock_stdin, force_scan_all=False)
 
 def test_cli_options_passed(mock_detector, mock_format_report):
     mock_instance = mock_detector.return_value
-    mock_instance.scan.return_value = []
+    mock_instance.scan_stream.return_value = iter([])
     
     with patch.object(sys, 'argv', ['cli.py', '--text', 'secret', '--threshold', '2.5', '--full', '--nocolors']):
         main()
@@ -69,7 +72,7 @@ def test_cli_options_passed(mock_detector, mock_format_report):
 
 def test_cli_short_option(mock_detector, mock_format_report):
     mock_instance = mock_detector.return_value
-    mock_instance.scan.return_value = []
+    mock_instance.scan_stream.return_value = iter([])
     
     with patch.object(sys, 'argv', ['cli.py', '--text', 'secret', '--short']):
         main()

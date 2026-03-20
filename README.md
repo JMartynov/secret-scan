@@ -165,6 +165,37 @@ Examples:
 
 ---
 
+# Feature Matrix
+
+The **LLM Secrets Leak Detector** provides a comprehensive suite of features designed for security, performance, and developer experience.
+
+| Category | Feature | Status | Implementation Details |
+| :--- | :--- | :--- | :--- |
+| **Detection Engines** | **Regex Matching (RE2)** | ✅ | Primary engine using `google-re2`.<br>Fast, linear-time matching. |
+| | **Regex Matching (Legacy)** | ✅ | Fallback to `regex` (Python) for complex patterns.<br>ReDoS protection. |
+| | **Entropy Analysis** | ✅ | Shannon entropy scoring for random-looking tokens (min 20 chars). |
+| | **Contextual Heuristics** | ✅ | Identifies secrets based on surrounding keywords like `prod`, `password`, `key`. |
+| | **Rule-based Logic** | ✅ | 1600+ rules loaded from `data/rules.json`. |
+| **Input Sources** | **File Scanning** | ✅ | Scans local files with UTF-8 support.<br>Error handling. |
+| | **Stdin / Piped Input** | ✅ | Real-time processing of piped data (e.g., `cat log \| ./run.sh`). |
+| | **Direct Text** | ✅ | Via `--text` flag for quick prompt validation. |
+| | **Streaming** | ✅ | Optimized line-by-line generator for low-latency processing. |
+| **Obfuscation** | **Redact** | ✅ | Masks the middle of secrets (e.g., `AKIA...CDEF`). |
+| | **Hash** | ✅ | Consistent SHA-256 hashing (first 12 chars) for safe debugging. |
+| | **Synthetic** | ✅ | [NEW] Realistic fake data generation (AWS, GitHub, Emails) using `Faker`. |
+| **Safety & Performance** | **Keyword Filtering** | ✅ | Uses `Aho-Corasick` automaton to skip rules missing their required keywords. |
+| | **ReDoS Protection** | ✅ | `SIGALRM` timeouts (1s) for non-RE2 regex execution. |
+| | **Input Truncation** | ✅ | Blocks capped at 100,000 characters to prevent memory exhaustion. |
+| | **Deduplication** | ✅ | Merges overlapping findings.<br>Prioritizes longest matches. |
+| **Reporting & UI** | **Colorized Output** | ✅ | ANSI colors for risk levels (Red=High, Yellow=Medium, Blue=Low). |
+| | **Report Formats** | ✅ | `Summary` (counts only).<br>`Short` (redacted).<br>`Full` (raw secrets). |
+| | **CI/CD Friendly** | ✅ | `--nocolors` flag.<br>Standard exit codes for automation. |
+| **Testing & Dev** | **BDD Acceptance** | ✅ | 17 scenarios in `acceptance.feature` using `pytest-bdd`. |
+| | **Unit Testing** | ✅ | Comprehensive suite for core logic (detector, obfuscator, cli). |
+| | **Synthetic Corpus** | ✅ | `generate_test_data.py` creates a balanced test set from rules. |
+
+---
+
 # Pattern Database
 
 The detection engine can leverage large open-source pattern databases containing thousands of secret signatures.
@@ -317,6 +348,40 @@ pip install -r requirements.txt
 Or scan text directly:
 ```bash
 python3 cli.py --text "My API key is AIzaSy-12345"
+```
+
+### Data Obfuscation & Masking
+
+You can redact sensitive data from logs or prompts while preserving the rest of the text. This is useful for sanitizing data before sharing it with an LLM or for safe debugging.
+
+Enable obfuscation with the `--obfuscate` flag:
+
+```bash
+# Default mode: redact (Redacts middle of the secret)
+# Input: "My key is ghp_1234567890abcdefghijklmnopqrstuvwx"
+# Output: "My key is ghp_...uvwx"
+cat logs.txt | python3 cli.py --obfuscate
+```
+
+Choose different obfuscation strategies with `--obfuscate-mode`:
+
+#### 1. `redact` (Default)
+Partial masking that keeps the prefix/suffix for context but hides the sensitive core.
+* **Example:** `AKIA...CDEF`
+
+#### 2. `hash`
+Replaces secrets with a consistent, short SHA-256 hash. Identical secrets will result in identical hashes, which is crucial for debugging data flows without seeing the actual values.
+* **Example:** `[HASHED_d8c7b92f4a19]`
+
+#### 3. `synthetic` (Recommended for LLM Prompts)
+Replaces secrets with realistic-looking fake data that matches the original format (using the `Faker` library). This allows LLMs to still "understand" the structure of your data (e.g., seeing a fake AWS key where a real one was) without exposing real credentials.
+* **Example (AWS ID):** `AKIAJ7O2N6M4L9K0P8R1`
+* **Example (GitHub Token):** `ghp_zXyWvUtSrQpOnMlKjIhGfEdCbA9876543210`
+* **Example (Email):** `fake_user@example.org`
+
+```bash
+# Use synthetic mode for realistic placeholders
+./run.sh --obfuscate --obfuscate-mode synthetic logs.txt
 ```
 
 ### Custom CLI helpers

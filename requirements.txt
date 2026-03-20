@@ -6,3 +6,4 @@ pyahocorasick
 exrex
 regexploit
 redoctor
+Faker

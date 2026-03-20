@@ -90,6 +90,16 @@ echo ">>> Scanning: performance_1mb.txt (1,048,576 bytes)"
 TIMEFORMAT="Execution Time: %R seconds"
 time ./run.sh "$PERF"
 
+echo -e "\n--- Part 7: Data Obfuscation (Piping to clean logs) ---"
+echo ">>> cat combined_small.txt | ./run.sh --obfuscate"
+cat "$COMBINED" | ./run.sh --obfuscate
+echo "----------------------------------------------------"
+
+echo -e "\n--- Part 8: Hashed Obfuscation Mode ---"
+echo ">>> cat combined_small.txt | ./run.sh --obfuscate --obfuscate-mode hash"
+cat "$COMBINED" | ./run.sh --obfuscate --obfuscate-mode hash
+echo "----------------------------------------------------"
+
 # 4. Cleanup
 rm -rf "$DEMO_DIR"
 echo -e "\n--- Demo Complete ---"

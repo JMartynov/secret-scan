@@ -84,3 +84,18 @@ Feature: Comprehensive Secret Detection Acceptance
     Given a stream of text containing a Stripe key
     When I scan the stream
     Then it should find "stripe_api_key"
+
+  Scenario: 16. Obfuscation Mode
+    Given a text with a Stripe key "Stripe key: sk_live_PLACEHOLDER_51IyGfSAdFvX8EZYbATS56oaKOXwIizD05otbS42rQ0Q7ND"
+    When I run the CLI with "--obfuscate"
+    Then the output should contain redacted Stripe key
+    And the non-secret text should be preserved
+    When I run the CLI with "--obfuscate --obfuscate-mode hash"
+    Then the output should contain hashed Stripe key
+
+  Scenario: 17. Synthetic Obfuscation
+    Given a text with an AWS key "AWS key: AKIA1234567890ABCDEF"
+    When I run the CLI with "--obfuscate --obfuscate-mode synthetic"
+    Then the output should contain a fake AWS key starting with "AKIA"
+    And the fake AWS key should NOT be "AKIA1234567890ABCDEF"
+    And the non-secret text should be preserved

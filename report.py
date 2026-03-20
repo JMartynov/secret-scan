@@ -23,6 +23,8 @@ class Finding:
     risk: str
     content: str
     confidence: float = 0.0
+    start: int = -1
+    end: int = -1
 
     @property
     def redacted_value(self) -> str:

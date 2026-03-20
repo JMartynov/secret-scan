@@ -68,16 +68,18 @@ class DetectionEngine:
             finally: signal.alarm(0)
         except Exception: return []
 
-    def run_entropy_detection(self, line: str, line_num: int, existing_findings: List[Finding]) -> List[Finding]:
+    def run_entropy_detection(self, line: str, line_num: int, existing_findings: List[Finding], line_offset: int = 0) -> List[Finding]:
         findings = []
         for match in standard_re.finditer(r"\b[a-zA-Z0-9]{20,}\b", line):
             token = match.group(0)
             if any(token in f.content for f in existing_findings): continue
             if self.calculate_entropy(token) > self.entropy_threshold:
+                start = line_offset + match.start()
+                end = line_offset + match.end()
                 if standard_re.search(r"(?i)(key|secret|token|password|auth|api|cred|prod)", line):
-                    findings.append(Finding("Potential Secret (High Entropy + Context)", line_num, "HIGH", token, 0.7))
+                    findings.append(Finding("Potential Secret (High Entropy + Context)", line_num, "HIGH", token, 0.7, start, end))
                 else:
-                    findings.append(Finding("High Entropy String", line_num, "MEDIUM", token, 0.3))
+                    findings.append(Finding("High Entropy String", line_num, "MEDIUM", token, 0.3, start, end))
         return findings
 
 class SecretDetector:
@@ -116,7 +118,7 @@ class SecretDetector:
                     if 'entropy' in rule_def:
                         if self.engine.calculate_entropy(content) < (rule_def['entropy'] * 0.8):
                             continue
-                    all_findings.append(Finding(rule['id'], get_line_num(m.start()), rule['risk'].upper(), content, 0.9))
+                    all_findings.append(Finding(rule['id'], get_line_num(m.start()), rule['risk'].upper(), content, 0.9, m.start(), m.end()))
         
         for rule in self.engine.legacy_rules:
             rule_def = self.engine.rules[rule['original_idx']]
@@ -126,17 +128,18 @@ class SecretDetector:
                     if 'entropy' in rule_def:
                         if self.engine.calculate_entropy(content) < (rule_def['entropy'] * 0.8):
                             continue
-                    all_findings.append(Finding(rule['id'], get_line_num(m.start()), rule['risk'].upper(), content, 0.8))
+                    all_findings.append(Finding(rule['id'], get_line_num(m.start()), rule['risk'].upper(), content, 0.8, m.start(), m.end()))
 
         # 2. Contextual rules
         for regex in self.context_rules:
             for m in regex.finditer(text):
-                all_findings.append(Finding("Contextual Secret (LLM Prompt)", get_line_num(m.start()), "MEDIUM", m.group(1), 0.6))
+                all_findings.append(Finding("Contextual Secret (LLM Prompt)", get_line_num(m.start()), "MEDIUM", m.group(1), 0.6, m.start(), m.end()))
 
         # 3. Entropy Detection
-        lines = text.splitlines()
-        for i, line in enumerate(lines):
-            line_findings = self.engine.run_entropy_detection(line, base_line + i, all_findings)
+        for i, start in enumerate(line_offsets):
+            end = line_offsets[i+1] if i+1 < len(line_offsets) else len(text)
+            line = text[start:end].rstrip('\r\n')
+            line_findings = self.engine.run_entropy_detection(line, base_line + i, all_findings, start)
             all_findings.extend(line_findings)
 
         return all_findings
@@ -146,54 +149,21 @@ class SecretDetector:
         cleaned_text = text[:MAX_BLOCK_SIZE]
         return self._scan_block(cleaned_text, 1, do_force)
 
-    def scan_stream(self, stream: Iterator[str], force_scan_all: Optional[bool] = None, chunk_size: int = 1024*1024) -> List[Finding]:
+    def scan_stream(self, stream: Iterator[str], force_scan_all: Optional[bool] = None, yield_non_matches=False) -> Iterator[tuple[str, list[Finding]]]:
+        """
+        Scans a stream of text for secrets, line by line.
+
+        :param stream: The stream to scan.
+        :param force_scan_all: If True, scan all lines, otherwise use keyword search to speed up.
+        :param yield_non_matches: If True, yield lines even if they don't have findings.
+        """
         do_force = force_scan_all if force_scan_all is not None else self.force_scan_all
-        all_findings = []
-        current_line = 1
-        overlap = ""
-        
-        while True:
-            chunk = stream.read(chunk_size)
-            if not chunk:
-                break
-            
-            # Combine overlap from previous chunk to ensure no secrets are missed at boundaries
-            # We use a simple strategy: process up to the last newline in the chunk
-            # The remaining part becomes overlap for the next chunk.
-            
-            text_to_scan = overlap + chunk
-            last_newline = text_to_scan.rfind('\n')
-            
-            if last_newline == -1:
-                # No newline in chunk, keep it all as overlap unless chunk is huge
-                if len(text_to_scan) > chunk_size * 5:
-                    # Emergency flush if no newline found for a long time
-                    # We keep a small overlap (e.g. 1024 or chunk_size) to ensure secrets aren't split
-                    keep = min(len(text_to_scan), 4096)
-                    block = text_to_scan[:-keep]
-                    overlap = text_to_scan[-keep:]
-                    
-                    if block:
-                        findings = self._scan_block(block, current_line, do_force)
-                        all_findings.extend(findings)
-                        current_line += block.count('\n')
-                else:
-                    overlap = text_to_scan
-                    continue
-            else:
-                block = text_to_scan[:last_newline + 1]
-                overlap = text_to_scan[last_newline + 1:]
-                
-                findings = self._scan_block(block, current_line, do_force)
-                all_findings.extend(findings)
-                current_line += block.count('\n')
-        
-        # Scan final remaining overlap
-        if overlap:
-            findings = self._scan_block(overlap, current_line, do_force)
-            all_findings.extend(findings)
-            
-        return all_findings
+        for i, line in enumerate(stream):
+            findings = self._scan_block(line, i + 1, do_force)
+            if findings:
+                yield (line, findings)
+            elif yield_non_matches:
+                yield (line, [])
 
     def format_report(self, findings: List[Finding], show_full: bool = False, show_short: bool = False, no_colors: bool = False) -> str:
         return format_report(findings, show_full, show_short, no_colors)

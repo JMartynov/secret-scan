@@ -1,11 +1,21 @@
 import pytest
 import json
 import base64
+import os
 from detector import SecretDetector
 
 def load_all_test_data():
-    with open('data/test_data.json', 'r') as f:
-        return json.load(f)
+    all_data = {}
+    data_dir = 'data'
+    for root, dirs, files in os.walk(data_dir):
+        if 'test_data.json' in files:
+            try:
+                with open(os.path.join(root, 'test_data.json'), 'r') as f:
+                    data = json.load(f)
+                    # Merging dictionaries
+                    all_data.update(data)
+            except Exception: pass
+    return all_data
 
 def decode(s):
     decoded = base64.b64decode(s.encode('utf-8')).decode('utf-8')

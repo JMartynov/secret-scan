@@ -1,0 +1,4 @@
+(?i)(?:github)(?:.|[\n\r]){0,40}(-----BEGIN RSA PRIVATE KEY-----\s[A-Za-z0-9+\/\s]*\s-----END RSA PRIVATE KEY-----)
+(?i)(?:kraken)(?:.|[\n\r]){0,40}\b([0-9A-Za-z\/\+=]{86,88}[ "'\r\n]{1})
+/(?i)-----\s*?BEGIN[ A-Z0-9_-]*?PRIVATE KEY\s*?-----[\s\S]*?----\s*?END[ A-Z0-9_-]*? PRIVATE KEY\s*?-----/gm
+(?i)(?:theoddsapi|the-odds-api)(?:.|[\n\r]){0,40}\b([0-9a-f]{32})\b

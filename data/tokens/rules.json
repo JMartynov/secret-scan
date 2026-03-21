@@ -1,0 +1,360 @@
+[
+  {
+    "id": "asana_access_token",
+    "category": "api_key",
+    "keywords": [
+      "asana"
+    ],
+    "regex": "(?i)(?:asana)(?:.|[\\n\\r]){0,40}\\b([0-9]{1,}\\/[0-9]{16,}:[A-Za-z0-9]{32,})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "auth0_api_token",
+    "category": "api_key",
+    "keywords": [
+      "auth0"
+    ],
+    "regex": "(?i)(?:auth0)(?:.|[\\n\\r]){0,40}\\b(ey[a-zA-Z0-9._-]+)\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "auth0_domain_url",
+    "category": "api_key",
+    "keywords": [
+      "auth0"
+    ],
+    "regex": "([a-zA-Z0-9\\-]{2,16}\\.[a-zA-Z0-9_-]{2,3}\\.auth0\\.com)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "auth0_oauth_client_id",
+    "category": "api_key",
+    "keywords": [
+      "auth0"
+    ],
+    "regex": "(?i)(?:auth0)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{32,60})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "auth0_oauth_client_secret",
+    "category": "api_key",
+    "keywords": [
+      "auth0"
+    ],
+    "regex": "\\b([a-zA-Z0-9_-]{64,})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "auth0_oauth_domain_url",
+    "category": "api_key",
+    "keywords": [
+      "auth0"
+    ],
+    "regex": "\\b([a-zA-Z0-9][a-zA-Z0-9._-]*auth0\\.com)\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "avaza_api_token",
+    "category": "api_key",
+    "keywords": [
+      "avaza"
+    ],
+    "regex": "(?i)(?:avaza)(?:.|[\\n\\r]){0,40}\\b([0-9]+-[0-9a-f]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "amazon_mws_auth_token",
+    "category": "api_key",
+    "keywords": [
+      "amazon"
+    ],
+    "regex": "amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bitly_access_token",
+    "category": "api_key",
+    "keywords": [
+      "bitly"
+    ],
+    "regex": "(?i)(?:bitly)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "clickup_personal_token",
+    "category": "api_key",
+    "keywords": [
+      "clickup"
+    ],
+    "regex": "(?i)(?:clickup)(?:.|[\\n\\r]){0,40}\\b(pk_[0-9]{8}_[0-9A-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cloudflare_api_token",
+    "category": "api_key",
+    "keywords": [
+      "cloudflare"
+    ],
+    "regex": "(?i)(?:cloudflare)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "contentful_api_personal_token",
+    "category": "api_key",
+    "keywords": [
+      "contentful"
+    ],
+    "regex": "\\b([CFPAT\\-a-zA-Z-0-9]{49})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "discord_api_token",
+    "category": "api_key",
+    "keywords": [
+      "discord"
+    ],
+    "regex": "(?i)(?:discord)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{24}\\.[A-Za-z0-9_-]{6}\\.[A-Za-z0-9_-]{27})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "facebook_oauth_id",
+    "category": "api_key",
+    "keywords": [
+      "facebook"
+    ],
+    "regex": "(?i)(?:facebook)(?:.|[\\n\\r]){0,40}\\b([0-9]{15,18})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "facebook_oauth_secret",
+    "category": "api_key",
+    "keywords": [
+      "facebook"
+    ],
+    "regex": "(?i)(?:facebook)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "facebook_access_token",
+    "category": "api_key",
+    "keywords": [
+      "facebook"
+    ],
+    "regex": "EAACEdEose0cBA[0-9A-Za-z]+",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fastly_api_token",
+    "category": "api_key",
+    "keywords": [
+      "fastly"
+    ],
+    "regex": "(?i)(?:fastly)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "figma_access_token",
+    "category": "api_key",
+    "keywords": [
+      "figma"
+    ],
+    "regex": "(?i)(?:figma)(?:.|[\\n\\r]){0,40}\\b([0-9]{6}-[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "github_token",
+    "category": "api_key",
+    "keywords": [
+      "github"
+    ],
+    "regex": "\\b((?:ghp|gho|ghu|ghs|ghr)_[a-zA-Z0-9]{36,255})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "jira_token",
+    "category": "api_key",
+    "keywords": [
+      "jira"
+    ],
+    "regex": "(?i)(?:jira)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mux_secret_token",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "(?i)(?:mux)(?:.|[\\n\\r]){0,40}([ \\r\\n]{0,1}[0-9A-Za-z\\/\\+]{75}[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "okta_api_token",
+    "category": "api_key",
+    "keywords": [
+      "okta"
+    ],
+    "regex": "00[a-zA-Z0-9_-]{40}",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "onelogin_oauth_client_secret",
+    "category": "api_key",
+    "keywords": [
+      "onelogin"
+    ],
+    "regex": "(?i)secret[a-zA-Z0-9_' \"=]{0,20}([a-z0-9]{64})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "paypal/braintree_access_token",
+    "category": "api_key",
+    "keywords": [
+      "paypal/braintree"
+    ],
+    "regex": "access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "runrunit_api_user_token",
+    "category": "api_key",
+    "keywords": [
+      "runrunit"
+    ],
+    "regex": "(?i)(?:runrunit)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{18,20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sentiment_api_token",
+    "category": "api_key",
+    "keywords": [
+      "sentiment"
+    ],
+    "regex": "(?i)(?:sentiment)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "shutterstock_oauth_key",
+    "category": "api_key",
+    "keywords": [
+      "shutterstock"
+    ],
+    "regex": "(?i)(?:shutterstock)(?:.|[\\n\\r]){0,40}\\b(v2/[0-9A-Za-z]{388})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "slack_token",
+    "category": "api_key",
+    "keywords": [
+      "slack"
+    ],
+    "regex": "(?:xoxb|xoxp|xapp|xoxa|xoxr)\\-[0-9]{10,13}\\-[a-zA-Z0-9\\-]*",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "slack_token_v2",
+    "category": "api_key",
+    "keywords": [
+      "slack"
+    ],
+    "regex": "xox[baprs]-([0-9a-zA-Z]{10,48})?",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "square_access_token",
+    "category": "api_key",
+    "keywords": [
+      "square"
+    ],
+    "regex": "sq0atp-[0-9A-Za-z\\-_]{22}",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "square_oauth_secret",
+    "category": "api_key",
+    "keywords": [
+      "square"
+    ],
+    "regex": "sq0csp-[0-9A-Za-z\\-_]{43}",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "teamgate_api_token",
+    "category": "api_key",
+    "keywords": [
+      "teamgate"
+    ],
+    "regex": "(?i)(?:teamgate)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "telegram_api_token",
+    "category": "api_key",
+    "keywords": [
+      "telegram"
+    ],
+    "regex": "(?i)(?:telegram)(?:.|[\\n\\r]){0,40}\\b([0-9]{8,10}:[a-zA-Z0-9_-]{35})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "twitter_access_token",
+    "category": "api_key",
+    "keywords": [
+      "twitter"
+    ],
+    "regex": "(?i)(?:twitter)(?:.|[\\n\\r]){0,40}\\b[1-9][0-9]+-[0-9a-zA-Z]{40}\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "youtube/google_oauth_id",
+    "category": "api_key",
+    "keywords": [
+      "youtube/google"
+    ],
+    "regex": "[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zendesk_api_token",
+    "category": "api_key",
+    "keywords": [
+      "zendesk"
+    ],
+    "regex": "(?i)(?:zendesk)(?:.|[\\n\\r]){0,40}([A-Za-z0-9_-]{40})",
+    "risk": "high",
+    "entropy": 3.5
+  }
+]

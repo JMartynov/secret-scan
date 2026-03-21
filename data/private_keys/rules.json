@@ -1,0 +1,42 @@
+[
+  {
+    "id": "github_private_key",
+    "category": "api_key",
+    "keywords": [
+      "github"
+    ],
+    "regex": "(?i)(?:github)(?:.|[\\n\\r]){0,40}(-----BEGIN RSA PRIVATE KEY-----\\s[A-Za-z0-9+\\/\\s]*\\s-----END RSA PRIVATE KEY-----)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "kraken_api_private_key",
+    "category": "api_key",
+    "keywords": [
+      "kraken"
+    ],
+    "regex": "(?i)(?:kraken)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z\\/\\+=]{86,88}[ \"'\\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "private_key",
+    "category": "api_key",
+    "keywords": [
+      "private"
+    ],
+    "regex": "/(?i)-----\\s*?BEGIN[ A-Z0-9_-]*?PRIVATE KEY\\s*?-----[\\s\\S]*?----\\s*?END[ A-Z0-9_-]*? PRIVATE KEY\\s*?-----/gm",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "theoddsapi_key",
+    "category": "api_key",
+    "keywords": [
+      "theoddsapi"
+    ],
+    "regex": "(?i)(?:theoddsapi|the-odds-api)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  }
+]

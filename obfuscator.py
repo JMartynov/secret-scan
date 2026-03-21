@@ -9,6 +9,9 @@ This module provides the Obfuscator class, which is used to redact, hash, or
 replace secrets in a given text.
 """
 
+import base64
+import urllib.parse
+...
 class Obfuscator:
     """
     Obfuscates secrets in a line of text, based on a list of findings.
@@ -17,40 +20,58 @@ class Obfuscator:
         self.mode = mode
         self.secret_map = {} # For consistent hashing
         self.fake = Faker()
-        # Seed for reproducibility if needed, but for obfuscation randomness is usually fine.
-        # self.fake.seed_instance(42)
+
+    def decode_if_encoded(self, content: str) -> str:
+        """Attempts to decode base64, hex, or url-encoded content for better analysis."""
+        # 1. URL Decoding
+        decoded = urllib.parse.unquote(content)
+        if decoded != content: return decoded
+
+        # 2. Base64 Decoding
+        try:
+            return base64.b64decode(content).decode('utf-8')
+        except Exception: pass
+
+        # 3. Hex Decoding
+        try:
+            return bytes.fromhex(content).decode('utf-8')
+        except Exception: pass
+
+        return content
 
     def _generate_synthetic(self, secret_type: str, original_length: int) -> str:
         """Generates realistic-looking fake data based on the secret type."""
         st = secret_type.lower()
         
-        if "aws_api_id" in st:
-            return "AKIA" + self.fake.bothify(text="????????????????", letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
-        elif "aws_api_secret" in st:
-            return self.fake.password(length=40, special_chars=True, digits=True, upper_case=True, lower_case=True)
-        elif "github_token" in st:
+        # Expanded taxonomy support
+        if "aws" in st or "cloud" in st:
+            if "id" in st:
+                return "AKIA" + self.fake.bothify(text="????????????????", letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+            return self.fake.password(length=original_length, special_chars=True)
+        elif "mongo" in st or "database" in st or "db" in st:
+            return self.fake.password(length=original_length, special_chars=True)
+        elif "github" in st:
             return "ghp_" + self.fake.password(length=36, special_chars=False)
         elif "slack" in st:
-            if "token" in st:
-                return "xoxb-" + self.fake.bothify(text="############-############-????????????????", letters="abcdefghijklmnopqrstuvwxyz0123456789")
+            return "xoxb-" + self.fake.bothify(text="############-############-????????????????", letters="abcdefghijklmnopqrstuvwxyz0123456789")
+        elif "private_key" in st or "ssh" in st:
+            return "-----BEGIN PRIVATE KEY-----\n" + self.fake.text(max_nb_chars=original_length) + "\n-----END PRIVATE KEY-----"
         elif "email" in st:
             return self.fake.email()
-        elif "password" in st or "secret" in st:
+        elif "password" in st or "secret" in st or "auth" in st:
             return self.fake.password(length=original_length)
-        elif "api_key" in st or "token" in st:
+        elif "token" in st or "api_key" in st:
             return self.fake.password(length=original_length, special_chars=False)
         
-        # Fallback to a generic but realistic-looking hex/alphanumeric string
         return self.fake.hexify(text="^" * original_length)
 
     def obfuscate_content(self, content: str, secret_type: str) -> str:
         """
         Applies the configured obfuscation mode to a single secret's content.
-
-        :param content: The secret content to obfuscate.
-        :param secret_type: The type of secret, used for synthetic data generation.
-        :return: The obfuscated string.
         """
+        # Optionally decode before obfuscating if needed, 
+        # but usually we obfuscate the literal match.
+        
         if self.mode == "redact":
             if len(content) > 12:
                 return f"{content[:4]}...{content[-4:]}"
@@ -60,7 +81,6 @@ class Obfuscator:
                 return "****"
         elif self.mode == "hash":
             if content not in self.secret_map:
-                # Use a short hash for readability but keep it unique
                 self.secret_map[content] = hashlib.sha256(content.encode()).hexdigest()[:12]
             return f"[HASHED_{self.secret_map[content]}]"
         elif self.mode == "synthetic":

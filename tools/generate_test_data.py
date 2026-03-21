@@ -36,7 +36,7 @@ STRICT_RULES = {
     'datafire_api_key', 'sendgrid_api_key',
     'simplynoted_api_key', 'sirv_api_key', 'sugester_api_domain',
     'auth0_domain_url', 'skybiometry_api_key', 'okta_api_domain_url',
-    'facebook_oauth_id', 'linemessaging_api_key', 'nethunt_api_key'
+    'facebook_oauth_id', 'linemessaging_api_key', 'nethunt_api_key', 'intercom_api_key'
 }
 
 MANUAL_GENERATORS = {
@@ -61,6 +61,8 @@ MANUAL_GENERATORS = {
     'auth0_domain_url': lambda: generate_auth0_domain(),
     'skybiometry_api_key': lambda: generate_skybiometry_key(),
     'okta_api_domain_url': lambda: generate_okta_domain(),
+    'nethunt_api_key': lambda: "nethunt " + random_string(36, string.ascii_letters + string.digits + "-"),
+    'intercom_api_key': lambda: "intercom " + random_string(59, string.ascii_letters + string.digits + "/") + "=",
 }
 
 def encode_str(s, rule_id=None):
@@ -100,48 +102,56 @@ def generate_near_miss(rule_id, regex):
     return misses
 
 def main():
-    try:
-        with open('data/rules.json', 'r') as f:
-            rules = json.load(f)
-    except Exception as e:
-        print(f"Error loading rules: {e}")
-        sys.exit(1)
+    data_dir = 'data'
+    categories = [d for d in os.listdir(data_dir) if os.path.isdir(os.path.join(data_dir, d))]
+    
+    for cat in categories:
+        cat_path = os.path.join(data_dir, cat)
+        rules_path = os.path.join(cat_path, 'rules.json')
+        if not os.path.exists(rules_path): continue
+        
+        try:
+            with open(rules_path, 'r') as f:
+                rules = json.load(f)
+        except Exception as e:
+            print(f"Error loading rules for {cat}: {e}")
+            continue
 
-    print(f"Generating obfuscated test data for {len(rules)} rules...")
-    test_data = {}
+        print(f"Generating obfuscated test data for {len(rules)} rules in {cat}...")
+        cat_test_data = {}
 
-    for i, rule in enumerate(rules):
-        rid = rule['id']
-        regex = rule['regex']
+        for i, rule in enumerate(rules):
+            rid = rule['id']
+            regex = rule.get('regex') or rule.get('pattern')
 
-        entry = {
-            "positives": [], 
-            "negatives": [encode_str(m, rid) for m in generate_near_miss(rid, regex)]
-        }
+            entry = {
+                "positives": [], 
+                "negatives": [encode_str(m, rid) for m in generate_near_miss(rid, regex)]
+            }
 
-        if rid in MANUAL_GENERATORS:
-            # Use manual generator for tricky rules
-            for _ in range(5):
-                 sample = MANUAL_GENERATORS[rid]()
-                 entry["positives"].append(encode_str(sample, rid))
-        else:
-            try:
-                ex_regex = clean_regex_for_exrex(regex)
+            if rid in MANUAL_GENERATORS:
                 for _ in range(5):
-                    sample = exrex.getone(ex_regex)
-                    entry["positives"].append(encode_str(sample, rid))
-            except Exception:
-                entry["positives"].append(encode_str(f"GENERATION_FAILED_FOR_{rid}", rid))
+                     sample = MANUAL_GENERATORS[rid]()
+                     entry["positives"].append(encode_str(sample, rid))
+            else:
+                try:
+                    ex_regex = clean_regex_for_exrex(regex)
+                    for _ in range(5):
+                        sample = exrex.getone(ex_regex)
+                        entry["positives"].append(encode_str(sample, rid))
+                except Exception:
+                    entry["positives"].append(encode_str(f"GENERATION_FAILED_FOR_{rid}", rid))
 
-        test_data[rid] = entry
+            cat_test_data[rid] = entry
 
-        if (i + 1) % 100 == 0:
-            print(f"Processed {i + 1}/{len(rules)} rules...")
+        with open(os.path.join(cat_path, 'test_data.json'), 'w') as f:
+            json.dump(cat_test_data, f, indent=2)
 
-    with open('data/test_data.json', 'w') as f:
-        json.dump(test_data, f, indent=2)
+    print(f"\nSuccessfully repopulated all test_data.json files.")
 
-    print(f"\nSuccessfully created data/test_data.json with obfuscated samples.")
+if __name__ == '__main__':
+    import os
+    main()
 
 if __name__ == '__main__':
     main()

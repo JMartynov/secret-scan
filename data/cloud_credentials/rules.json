@@ -1,0 +1,66 @@
+[
+  {
+    "id": "aws_api_id",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "\\b((?:AKIA|ABIA|ACCA|ASIA)[0-9A-Z]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "aws_api_secret",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "\\b([A-Za-z0-9+/]{40})[ \\r\\n'\"\\x60]",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "azure_key_id",
+    "category": "api_key",
+    "keywords": [
+      "azure"
+    ],
+    "regex": "(?i)(?:azure).{0,20}([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "azure_client_secret",
+    "category": "api_key",
+    "keywords": [
+      "azure"
+    ],
+    "regex": "(?i)(?:azure).{0,20}([a-z0-9_\\.\\-~]{34})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "digitalocean_api_token",
+    "category": "api_key",
+    "keywords": [
+      "digitalocean"
+    ],
+    "regex": "(?i)(?:digitalocean)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "gcp_api_key",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "\\{[^{]+auth_provider_x509_cert_url[^}]+\\}",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "heroku_api_key",
+    "category": "api_key",
+    "keywords": [
+      "heroku"
+    ],
+    "regex": "(?i)(?:heroku)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  }
+]

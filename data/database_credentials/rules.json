@@ -1,0 +1,82 @@
+[
+  {
+    "id": "abuseipdb_api",
+    "category": "api_key",
+    "keywords": [
+      "abuseipdb"
+    ],
+    "regex": "(?i)(?:abuseipdb)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{80})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "getsandbox_api_key",
+    "category": "api_key",
+    "keywords": [
+      "getsandbox"
+    ],
+    "regex": "(?i)(?:getsandbox)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ipinfodb_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ipinfodb"
+    ],
+    "regex": "(?i)(?:ipinfodb)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "jdbc_token",
+    "category": "api_key",
+    "keywords": [
+      "jdbc"
+    ],
+    "regex": "(?i)jdbc:[\\w]{3,10}:\\/\\/\\w[\\s\\S]{0,512}?password[=: \\\"']+(?P<pass>[^<{($]*?)[ \\s'\\\"]+",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "paymongo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "paymongo"
+    ],
+    "regex": "(?i)(?:paymongo)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sendbird_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sendbird"
+    ],
+    "regex": "(?i)(?:sendbird)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sendbird_organizational_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sendbird"
+    ],
+    "regex": "(?i)(?:sendbird)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "upcdatabase_api_key",
+    "category": "api_key",
+    "keywords": [
+      "upcdatabase"
+    ],
+    "regex": "(?i)(?:upcdatabase)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  }
+]

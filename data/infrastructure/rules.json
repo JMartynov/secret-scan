@@ -1,0 +1,22 @@
+[
+  {
+    "id": "alienvault_api",
+    "category": "api_key",
+    "keywords": [
+      "alienvault"
+    ],
+    "regex": "(?i)(?:alienvault)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "terraformcloud_api_token",
+    "category": "api_key",
+    "keywords": [
+      "terraformcloud"
+    ],
+    "regex": "\\b([A-Za-z0-9]{14}.atlasv1.[A-Za-z0-9]{67})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  }
+]

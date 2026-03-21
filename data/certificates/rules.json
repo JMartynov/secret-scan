@@ -1,0 +1,12 @@
+[
+  {
+    "id": "cloudflare_certificate_key",
+    "category": "api_key",
+    "keywords": [
+      "cloudflare"
+    ],
+    "regex": "(?i)(?:cloudflare)(?:.|[\\n\\r]){0,40}\\b(v[A-Za-z0-9._-]{173,})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  }
+]

@@ -1,0 +1,210 @@
+[
+  {
+    "id": "apimatic_password",
+    "category": "api_key",
+    "keywords": [
+      "apimatic"
+    ],
+    "regex": "(?i)(?:apimatic)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-\\S]{8,32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "autodesk_secret",
+    "category": "api_key",
+    "keywords": [
+      "autodesk"
+    ],
+    "regex": "(?i)(?:autodesk)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bitmex_api_secret",
+    "category": "api_key",
+    "keywords": [
+      "bitmex"
+    ],
+    "regex": "(?i)(?:bitmex)(?:.|[\\n\\r]){0,40}([ \\r\\n]{1}[0-9a-zA-Z\\-\\_]{48}[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "clockwork_api_secret",
+    "category": "api_key",
+    "keywords": [
+      "clockwork"
+    ],
+    "regex": "(?i)(?:clockwork|textanywhere)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "confluent_api_secret",
+    "category": "api_key",
+    "keywords": [
+      "confluent"
+    ],
+    "regex": "(?i)(?:confluent)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dotmailer_password",
+    "category": "api_key",
+    "keywords": [
+      "dotmailer"
+    ],
+    "regex": "(?i)(?:dotmailer)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{8,24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mailjet_api_secret",
+    "category": "api_key",
+    "keywords": [
+      "mailjet"
+    ],
+    "regex": "(?i)(?:mailjet)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{87}\\=)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mrticktock_password",
+    "category": "api_key",
+    "keywords": [
+      "mrticktock"
+    ],
+    "regex": "(?i)(?:mrticktock)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9!=@#$%()_^]{1,50})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nexmo_api_secret",
+    "category": "api_key",
+    "keywords": [
+      "nexmo"
+    ],
+    "regex": "(?i)(?:nexmo)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "onedesk_password",
+    "category": "api_key",
+    "keywords": [
+      "onedesk"
+    ],
+    "regex": "(?i)(?:onedesk)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9!=@#$%^]{8,64})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pusher_api_secret",
+    "category": "api_key",
+    "keywords": [
+      "pusher"
+    ],
+    "regex": "(?i)(?:pusher)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "razorpay_api_secret",
+    "category": "api_key",
+    "keywords": [
+      "razorpay"
+    ],
+    "regex": "(?:razor|secret|rzp|key)[-\\w]*[\\\" :=']*([A-Za-z0-9]{20,50})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "roaring_api_secret",
+    "category": "api_key",
+    "keywords": [
+      "roaring"
+    ],
+    "regex": "(?i)(?:roaring)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_-]{28})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "rownd_api_secret",
+    "category": "api_key",
+    "keywords": [
+      "rownd"
+    ],
+    "regex": "(?i)(?:rownd)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{48})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "satismeter_api_password",
+    "category": "api_key",
+    "keywords": [
+      "satismeter"
+    ],
+    "regex": "(?i)(?:satismeter)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9!=@#$%^]{6,32})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "shutterstock_api_secret",
+    "category": "api_key",
+    "keywords": [
+      "shutterstock"
+    ],
+    "regex": "(?i)(?:shutterstock)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "squareapp_api_secret",
+    "category": "api_key",
+    "keywords": [
+      "squareapp"
+    ],
+    "regex": "[\\w\\-]*sq0c[a-z]{2}-[0-9A-Za-z\\-_]{40,50}",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tru_api_secret",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "(?i)(?:tru)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z.-_]{26})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "usersecretscanner_api_key",
+    "category": "api_key",
+    "keywords": [
+      "usersecretscanner"
+    ],
+    "regex": "(?i)(?:user)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-._+=]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zipapi_password",
+    "category": "api_key",
+    "keywords": [
+      "zipapi"
+    ],
+    "regex": "(?i)(?:zipapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9!=@#$%^]{7,})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zipbooks_password",
+    "category": "api_key",
+    "keywords": [
+      "zipbooks"
+    ],
+    "regex": "(?i)(?:zipbooks|password)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9!=@#$%^]{8,})",
+    "risk": "high",
+    "entropy": 3.5
+  }
+]

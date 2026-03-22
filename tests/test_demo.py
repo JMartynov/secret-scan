@@ -9,7 +9,11 @@ def test_demo_execution():
     os.chmod("demo.sh", 0o755)
     
     result = subprocess.run(["./demo.sh"], capture_output=True, text=True, timeout=60)
-    
+    print("DEBUG: Full stdout from demo.sh:")
+    print(result.stdout)
+    print("DEBUG: Full stderr from demo.sh:")
+    print(result.stderr)
+
     # Check if execution was successful
     assert result.returncode == 0
     
@@ -24,8 +28,8 @@ def test_demo_execution():
     assert "Demo Complete" in result.stdout
     
     # Check if redacted content is present in Part 2
-    # We look for (redacted) string which should be there
-    assert "(redacted)" in result.stdout
+    # We look for ACCA...PM0P string which should be there for AWS key redaction
+    assert "ACCA...PM0P" in result.stdout
     
     # Ensure no ANSI color codes in Part 4 output
     # This is tricky because Part 4 is just a section of the whole output.

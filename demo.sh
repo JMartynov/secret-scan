@@ -21,15 +21,22 @@ def get_noise(length=50):
     words = ["function", "const", "return", "import", "data", "value", "process", "result", "config", "env"]
     return " ".join(random.choices(words, k=length // 8)) + " "
 
-with open('data/test_data.json', 'r') as f:
-    data = json.load(f)
+# Load all test data from categorized files
+categories = ['api_keys', 'authentication', 'certificates', 'cloud_credentials',
+              'database_credentials', 'infrastructure', 'private_keys', 'tokens']
+all_test_data = {}
+for cat in categories:
+    test_file_path = f'data/{cat}/test_data.json'
+    if os.path.exists(test_file_path):
+        with open(test_file_path, 'r') as f:
+            all_test_data.update(json.load(f))
 
-# Secrets to use
+# Secrets to use from the collected test data
 samples = {
-    'aws': 'AWS Access Key: ' + decode_sample(data['aws_api_id']['positives'][0]),
-    'github': 'Github Token: ' + decode_sample(data['github_token']['positives'][0]),
-    'stripe': 'Stripe secret: ' + decode_sample(data['stripe_api_key']['positives'][0]),
-    'db': 'DB Connection: ' + decode_sample(data['jdbc_token']['positives'][0])
+    'aws': 'AWS Access Key: ' + decode_sample(all_test_data['aws_api_id']['positives'][0]),
+    'github': 'Github Token: ' + decode_sample(all_test_data['github_token']['positives'][0]),
+    'stripe': 'Stripe secret: ' + decode_sample(all_test_data['stripe_api_key']['positives'][0]),
+    'db': 'DB Connection: ' + decode_sample(all_test_data['jdbc_token']['positives'][0])
 }
 
 # Scenario 1: Combined Small File

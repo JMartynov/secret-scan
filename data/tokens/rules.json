@@ -161,8 +161,7 @@
       "discord"
     ],
     "regex": "(?i)(?:discord)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{24}\\.[A-Za-z0-9_-]{6}\\.[A-Za-z0-9_-]{27})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "risk": "high"
   },
   {
     "id": "facebook_oauth_id",
@@ -309,8 +308,7 @@
       "slack"
     ],
     "regex": "xox[baprs]-([0-9a-zA-Z]{10,48})?",
-    "risk": "high",
-    "entropy": 3.5
+    "risk": "high"
   },
   {
     "id": "square_access_token",
@@ -348,7 +346,7 @@
     "keywords": [
       "telegram"
     ],
-    "regex": "(?i)(?:telegram)(?:.|[\\n\\r]){0,40}\\b([0-9]{8,10}:[a-zA-Z0-9_-]{35})\\b",
+    "regex": "(?i)(?:telegram)(?:.|[\\n\\r]){0,40}\\b([0-9]{8,12}:[a-zA-Z0-9_-]{35})\\b",
     "risk": "high",
     "entropy": 3.5
   },

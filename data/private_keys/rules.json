@@ -1,5 +1,6368 @@
 [
   {
+    "id": "apideck_key",
+    "category": "api_key",
+    "keywords": [
+      "apideck"
+    ],
+    "regex": "\\b(sk_live_[a-z0-9A-Z-]{93})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "apiflash_key",
+    "category": "api_key",
+    "keywords": [
+      "apiflash"
+    ],
+    "regex": "(?i)(?:apiflash)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "apifonica_key",
+    "category": "api_key",
+    "keywords": [
+      "apifonica"
+    ],
+    "regex": "(?i)(?:apifonica)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{11}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "apify_key",
+    "category": "api_key",
+    "keywords": [
+      "apify"
+    ],
+    "regex": "\\b(apify\\_api\\_[a-zA-Z-0-9]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "apimatic_key",
+    "category": "api_key",
+    "keywords": [
+      "apimatic"
+    ],
+    "regex": "(?i)(?:apimatic)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{3,20}@[a-zA-Z0-9]{2,12}.[a-zA-Z0-9]{2,5})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "apiscience_key",
+    "category": "api_key",
+    "keywords": [
+      "apiscience"
+    ],
+    "regex": "(?i)(?:apiscience)(?:.|[\\n\\r]){0,40}\\b([a-bA-Z0-9\\S]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "apitemplate_key",
+    "category": "api_key",
+    "keywords": [
+      "apitemplate"
+    ],
+    "regex": "(?i)(?:apitemplate)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{39})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "apollo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "apollo"
+    ],
+    "regex": "(?i)(?:apollo)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "appcues_api_key",
+    "category": "api_key",
+    "keywords": [
+      "appcues"
+    ],
+    "regex": "(?i)(?:appcues)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "appfollow_api_key",
+    "category": "api_key",
+    "keywords": [
+      "appfollow"
+    ],
+    "regex": "(?i)(?:appfollow)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "appsynergy_api_key",
+    "category": "api_key",
+    "keywords": [
+      "appsynergy"
+    ],
+    "regex": "(?i)(?:appsynergy)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "apptivo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "apptivo"
+    ],
+    "regex": "(?i)(?:apptivo)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "artifactory_api_key",
+    "category": "api_key",
+    "keywords": [
+      "artifactory"
+    ],
+    "regex": "\\b([a-zA-Z0-9]{73})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "artsy_api_key",
+    "category": "api_key",
+    "keywords": [
+      "artsy"
+    ],
+    "regex": "(?i)(?:artsy)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "asana_api_key",
+    "category": "api_key",
+    "keywords": [
+      "asana"
+    ],
+    "regex": "(?i)(?:asana)(?:.|[\\n\\r]){0,40}\\b([a-z\\/:0-9]{51})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "assemblyai_api_key",
+    "category": "api_key",
+    "keywords": [
+      "assemblyai"
+    ],
+    "regex": "(?i)(?:assemblyai)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "atera_api_key",
+    "category": "api_key",
+    "keywords": [
+      "atera"
+    ],
+    "regex": "(?i)(?:atera)(?:.|[\\n\\r]){0,40}\\b([[0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "audd_api_key",
+    "category": "api_key",
+    "keywords": [
+      "audd"
+    ],
+    "regex": "(?i)(?:audd)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "autodesk_api_key",
+    "category": "api_key",
+    "keywords": [
+      "autodesk"
+    ],
+    "regex": "(?i)(?:autodesk)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "autoklose_api_key",
+    "category": "api_key",
+    "keywords": [
+      "autoklose"
+    ],
+    "regex": "(?i)(?:autoklose)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "autopilot_api_key",
+    "category": "api_key",
+    "keywords": [
+      "autopilot"
+    ],
+    "regex": "(?i)(?:autopilot)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "aviationstack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "aviationstack"
+    ],
+    "regex": "(?i)(?:aviationstack)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "axonaut_api_key",
+    "category": "api_key",
+    "keywords": [
+      "axonaut"
+    ],
+    "regex": "(?i)(?:axonaut)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "aylien_api_key",
+    "category": "api_key",
+    "keywords": [
+      "aylien"
+    ],
+    "regex": "(?i)(?:aylien)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ayrshare_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ayrshare"
+    ],
+    "regex": "(?i)(?:ayrshare)(?:.|[\\n\\r]){0,40}\\b([A-Z]{7}-[A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bannerbear_api_key",
+    "category": "api_key",
+    "keywords": [
+      "bannerbear"
+    ],
+    "regex": "(?i)(?:bannerbear)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{22}tt)\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "baremetrics_api_key",
+    "category": "api_key",
+    "keywords": [
+      "baremetrics"
+    ],
+    "regex": "(?i)(?:baremetrics)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{25})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "base_api_io_api_key",
+    "category": "api_key",
+    "keywords": [
+      "base-api"
+    ],
+    "regex": "(?i)(?:baseapi|base-api)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "beamer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "beamer"
+    ],
+    "regex": "(?i)(?:beamer)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_+/]{45}=)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "beebole_api_key",
+    "category": "api_key",
+    "keywords": [
+      "beebole"
+    ],
+    "regex": "(?i)(?:beebole)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "besnappy_api_key",
+    "category": "api_key",
+    "keywords": [
+      "besnappy"
+    ],
+    "regex": "(?i)(?:besnappy)(?:.|[\\n\\r]){0,40}\\b([a-f0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "besttime_api_key",
+    "category": "api_key",
+    "keywords": [
+      "besttime"
+    ],
+    "regex": "(?i)(?:besttime)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "billomat_api_key",
+    "category": "api_key",
+    "keywords": [
+      "billomat"
+    ],
+    "regex": "(?i)(?:billomat)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bitbar_api_key",
+    "category": "api_key",
+    "keywords": [
+      "bitbar"
+    ],
+    "regex": "(?i)(?:bitbar)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bitcoinaverage_api_key",
+    "category": "api_key",
+    "keywords": [
+      "bitcoinaverage"
+    ],
+    "regex": "(?i)(?:bitcoinaverage)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bitfinex_api_key",
+    "category": "api_key",
+    "keywords": [
+      "bitfinex"
+    ],
+    "regex": "(?i)(?:bitfinex)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bitmex_api_key",
+    "category": "api_key",
+    "keywords": [
+      "bitmex"
+    ],
+    "regex": "(?i)(?:bitmex)(?:.|[\\n\\r]){0,40}([ \\r\\n]{1}[0-9a-zA-Z\\-\\_]{24}[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "blablacar_bus_api_key",
+    "category": "api_key",
+    "keywords": [
+      "blablacar"
+    ],
+    "regex": "(?i)(?:blablabus)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "blazemeter_api_key",
+    "category": "api_key",
+    "keywords": [
+      "blazemeter"
+    ],
+    "regex": "(?i)(?:blazemeter|runscope)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "blitapp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "blitapp"
+    ],
+    "regex": "(?i)(?:blitapp)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{39})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "blogger_api_key",
+    "category": "api_key",
+    "keywords": [
+      "blogger"
+    ],
+    "regex": "(?i)(?:blogger)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z-]{39})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bombbomb_api_key",
+    "category": "api_key",
+    "keywords": [
+      "bombbomb"
+    ],
+    "regex": "(?i)(?:bombbomb)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-._]{704})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "boostnote_api_key",
+    "category": "api_key",
+    "keywords": [
+      "boostnote"
+    ],
+    "regex": "(?i)(?:boostnote)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "borgbase_api_key",
+    "category": "api_key",
+    "keywords": [
+      "borgbase"
+    ],
+    "regex": "(?i)(?:borgbase)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9/_.-]{148,152})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "brandfetch_api_key",
+    "category": "api_key",
+    "keywords": [
+      "brandfetch"
+    ],
+    "regex": "(?i)(?:brandfetch)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "browserstack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "browserstack"
+    ],
+    "regex": "(?i)(?:browserstack)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "browshot_api_key",
+    "category": "api_key",
+    "keywords": [
+      "browshot"
+    ],
+    "regex": "(?i)(?:browshot)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{28})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "buddyns_api_key",
+    "category": "api_key",
+    "keywords": [
+      "buddyns"
+    ],
+    "regex": "(?i)(?:buddyns)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bugherd_api_key",
+    "category": "api_key",
+    "keywords": [
+      "bugherd"
+    ],
+    "regex": "(?i)(?:bugherd)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bugsnag_api_key",
+    "category": "api_key",
+    "keywords": [
+      "bugsnag"
+    ],
+    "regex": "(?i)(?:bugsnag)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "buildkite_api_key",
+    "category": "api_key",
+    "keywords": [
+      "buildkite"
+    ],
+    "regex": "(?i)(?:buildkite)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bulbul_api_key",
+    "category": "api_key",
+    "keywords": [
+      "bulbul"
+    ],
+    "regex": "(?i)(?:bulbul)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bulksms_api_key",
+    "category": "api_key",
+    "keywords": [
+      "bulksms"
+    ],
+    "regex": "(?i)(?:bulksms)(?:.|[\\n\\r]){0,40}\\b([a-fA-Z0-9*]{29})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "buttercms_api_key",
+    "category": "api_key",
+    "keywords": [
+      "buttercms"
+    ],
+    "regex": "(?i)(?:buttercms)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "caflou_api_key",
+    "category": "api_key",
+    "keywords": [
+      "caflou"
+    ],
+    "regex": "(?i)(?:caflou)(?:.|[\\n\\r]){0,40}\\b([a-bA-Z0-9\\S]{155})\\b",
+    "risk": "high",
+    "entropy": 3.0
+  },
+  {
+    "id": "calendarific_api_key",
+    "category": "api_key",
+    "keywords": [
+      "calendarific"
+    ],
+    "regex": "(?i)(?:calendarific)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "calendly_api_key",
+    "category": "api_key",
+    "keywords": [
+      "calendly"
+    ],
+    "regex": "(?i)(?:calendly)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{20}.[a-zA-Z-0-9]{171}.[a-zA-Z-0-9_]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "calorieninja_api_key",
+    "category": "api_key",
+    "keywords": [
+      "calorieninja"
+    ],
+    "regex": "(?i)(?:calorieninja)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "campayn_api_key",
+    "category": "api_key",
+    "keywords": [
+      "campayn"
+    ],
+    "regex": "(?i)(?:campayn)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "canny_api_key",
+    "category": "api_key",
+    "keywords": [
+      "canny"
+    ],
+    "regex": "(?i)(?:canny)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[0-9]{4}-[a-z0-9]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "capsulecrm_api_key",
+    "category": "api_key",
+    "keywords": [
+      "capsulecrm"
+    ],
+    "regex": "(?i)(?:capsulecrm)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-._+=]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "captaindata_api_key",
+    "category": "api_key",
+    "keywords": [
+      "captaindata"
+    ],
+    "regex": "(?i)(?:captaindata)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "carboninterface_api_key",
+    "category": "api_key",
+    "keywords": [
+      "carboninterface"
+    ],
+    "regex": "(?i)(?:carboninterface)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{21})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cashboard_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cashboard"
+    ],
+    "regex": "(?i)(?:cashboard)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{3}-[0-9A-Z]{3}-[0-9A-Z]{3}-[0-9A-Z]{3})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "caspio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "caspio"
+    ],
+    "regex": "(?i)(?:caspio)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{50})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "censys_api_key",
+    "category": "api_key",
+    "keywords": [
+      "censys"
+    ],
+    "regex": "(?i)(?:censys)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "centralstation_api_key",
+    "category": "api_key",
+    "keywords": [
+      "centralstation"
+    ],
+    "regex": "(?i)(?:centralstation)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{30})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cexio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cexio"
+    ],
+    "regex": "(?i)(?:cexio|cex.io)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{24,27})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "chartmogul_api_key",
+    "category": "api_key",
+    "keywords": [
+      "chartmogul"
+    ],
+    "regex": "(?i)(?:chartmogul)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "chatbot_api_key",
+    "category": "api_key",
+    "keywords": [
+      "chatbot"
+    ],
+    "regex": "(?i)(?:chatbot)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "chatfuel_api_key",
+    "category": "api_key",
+    "keywords": [
+      "chatfuel"
+    ],
+    "regex": "(?i)(?:chatfuel)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{128})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "checio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "checio"
+    ],
+    "regex": "(?i)(?:checio)(?:.|[\\n\\r]){0,40}\\b(pk_[a-z0-9]{45})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "checklyhq_api_key",
+    "category": "api_key",
+    "keywords": [
+      "checklyhq"
+    ],
+    "regex": "(?i)(?:checklyhq)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "checkout_api_key",
+    "category": "api_key",
+    "keywords": [
+      "checkout"
+    ],
+    "regex": "(?i)(?:checkout)(?:.|[\\n\\r]){0,40}\\b((sk_|sk_test_)[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "checkvist_api_key",
+    "category": "api_key",
+    "keywords": [
+      "checkvist"
+    ],
+    "regex": "(?i)(?:checkvist)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{14})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cicero_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cicero"
+    ],
+    "regex": "(?i)(?:cicero)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "circelci_api_key",
+    "category": "api_key",
+    "keywords": [
+      "circelci"
+    ],
+    "regex": "(?i)(?:circle)(?:.|[\\n\\r]){0,40}([a-fA-F0-9]{40})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "clarifai_api_key",
+    "category": "api_key",
+    "keywords": [
+      "clarifai"
+    ],
+    "regex": "(?i)(?:clarifai)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "clearbit_api_key",
+    "category": "api_key",
+    "keywords": [
+      "clearbit"
+    ],
+    "regex": "(?i)(?:clearbit)(?:.|[\\n\\r]){0,40}\\b([0-9a-z_]{35})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "clickhelp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "clickhelp"
+    ],
+    "regex": "(?i)(?:clickhelp)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "clicksendsms_api_key",
+    "category": "api_key",
+    "keywords": [
+      "clicksendsms"
+    ],
+    "regex": "\\b([0-9A-Z]{8}-[0-9A-Z]{4}-[0-9A-Z]{4}-[0-9A-Z]{4}-[0-9A-Z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cliengo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cliengo"
+    ],
+    "regex": "(?i)(?:cliengo)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "clinchpad_api_key",
+    "category": "api_key",
+    "keywords": [
+      "clinchpad"
+    ],
+    "regex": "(?i)(?:clinchpad)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "clockify_api_key",
+    "category": "api_key",
+    "keywords": [
+      "clockify"
+    ],
+    "regex": "(?i)(?:clockify)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{48})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "clockwork_api_user_key",
+    "category": "api_key",
+    "keywords": [
+      "clockwork"
+    ],
+    "regex": "(?i)(?:clockwork|textanywhere)(?:.|[\\n\\r]){0,40}\\b([0-9]{5})\\b",
+    "risk": "high",
+    "entropy": 1.5
+  },
+  {
+    "id": "closecrm_api_key",
+    "category": "api_key",
+    "keywords": [
+      "closecrm"
+    ],
+    "regex": "\\b(api_[a-z0-9A-Z.]{45})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cloudelements_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cloudelements"
+    ],
+    "regex": "(?i)(?:cloudelements)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cloudflare_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cloudflare"
+    ],
+    "regex": "(?i)(?:cloudflare)(?:.|[\\n\\r]){0,40}([A-Za-z0-9_-]{37})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cloudimage_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cloudimage"
+    ],
+    "regex": "(?i)(?:cloudimage)(?:.|[\\n\\r]){0,40}\\b([a-z0-9_]{30})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cloudmersive_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cloudmersive"
+    ],
+    "regex": "(?i)(?:cloudmersive)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cloudplan_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cloudplan"
+    ],
+    "regex": "(?i)(?:cloudplan)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9-]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cloudsmith_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cloudsmith"
+    ],
+    "regex": "(?i)(?:cloudsmith)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cloverly_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cloverly"
+    ],
+    "regex": "(?i)(?:cloverly)(?:.|[\\n\\r]){0,40}\\b([a-z0-9:_]{28})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cloze_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cloze"
+    ],
+    "regex": "(?i)(?:cloze)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "clustdoc_api_key",
+    "category": "api_key",
+    "keywords": [
+      "clustdoc"
+    ],
+    "regex": "(?i)(?:clustdoc)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{60})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "codacy_api_key",
+    "category": "api_key",
+    "keywords": [
+      "codacy"
+    ],
+    "regex": "(?i)(?:codacy)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "codequiry_api_key",
+    "category": "api_key",
+    "keywords": [
+      "codequiry"
+    ],
+    "regex": "(?i)(?:codequiry)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "coin_api_key",
+    "category": "api_key",
+    "keywords": [
+      "coin"
+    ],
+    "regex": "(?i)(?:coinapi)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "coinbase_api_key",
+    "category": "api_key",
+    "keywords": [
+      "coinbase"
+    ],
+    "regex": "(?i)(?:coinbase)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "coinlayer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "coinlayer"
+    ],
+    "regex": "(?i)(?:coinlayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "coinlib_api_key",
+    "category": "api_key",
+    "keywords": [
+      "coinlib"
+    ],
+    "regex": "(?i)(?:coinlib)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "collect2_api_key",
+    "category": "api_key",
+    "keywords": [
+      "collect2"
+    ],
+    "regex": "(?i)(?:collect2)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "column_api_key",
+    "category": "api_key",
+    "keywords": [
+      "column"
+    ],
+    "regex": "(?i)(?:column)(?:.|[\\n\\r]){0,40}\\b((?:test|live)_[a-zA-Z0-9]{27})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "commercejs_api_key",
+    "category": "api_key",
+    "keywords": [
+      "commercejs"
+    ],
+    "regex": "(?i)(?:commercejs)(?:.|[\\n\\r]){0,40}\\b([a-z0-9_]{48})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "commodities_api_key",
+    "category": "api_key",
+    "keywords": [
+      "commodities"
+    ],
+    "regex": "(?i)(?:commodities)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{60})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "companyhub_api_key",
+    "category": "api_key",
+    "keywords": [
+      "companyhub"
+    ],
+    "regex": "(?i)(?:companyhub)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "confluent_api_key",
+    "category": "api_key",
+    "keywords": [
+      "confluent"
+    ],
+    "regex": "(?i)(?:confluent)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "conversiontools_api_key",
+    "category": "api_key",
+    "keywords": [
+      "conversiontools"
+    ],
+    "regex": "(?i)(?:conversiontools)(?:.|[\\n\\r]){0,40}\\b(ey[a-zA-Z0-9_.]{157,165})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "convertapi_key",
+    "category": "api_key",
+    "keywords": [
+      "convertapi"
+    ],
+    "regex": "(?i)(?:convertapi)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "convertkit_api_key",
+    "category": "api_key",
+    "keywords": [
+      "convertkit"
+    ],
+    "regex": "(?i)(?:convertkit)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z_]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "convier_api_key",
+    "category": "api_key",
+    "keywords": [
+      "convier"
+    ],
+    "regex": "(?i)(?:convier)(?:.|[\\n\\r]){0,40}\\b([0-9]{2}\\|[a-zA-Z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "copper_api_key",
+    "category": "api_key",
+    "keywords": [
+      "copper"
+    ],
+    "regex": "(?i)(?:copper)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "countrylayer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "countrylayer"
+    ],
+    "regex": "(?i)(?:countrylayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "courier_api_key",
+    "category": "api_key",
+    "keywords": [
+      "courier"
+    ],
+    "regex": "(?i)(?:courier)(?:.|[\\n\\r]){0,40}\\b(pk\\_[a-zA-Z0-9]{1,}\\_[a-zA-Z0-9]{28})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "coveralls_api_key",
+    "category": "api_key",
+    "keywords": [
+      "coveralls"
+    ],
+    "regex": "(?i)(?:coveralls)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{37})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "craftmypdf_api_key",
+    "category": "api_key",
+    "keywords": [
+      "craftmypdf"
+    ],
+    "regex": "(?i)(?:craftmypdf)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{35})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "crossbrowsertesting_api_key",
+    "category": "api_key",
+    "keywords": [
+      "crossbrowsertesting"
+    ],
+    "regex": "(?i)(?:crossbrowsertesting)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "crowdin_api_key",
+    "category": "api_key",
+    "keywords": [
+      "crowdin"
+    ],
+    "regex": "(?i)(?:crowdin)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{80})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cryptocompare_api_key",
+    "category": "api_key",
+    "keywords": [
+      "cryptocompare"
+    ],
+    "regex": "(?i)(?:cryptocompare)(?:.|[\\n\\r]){0,40}\\b([a-z-0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "currencycloud_api_key",
+    "category": "api_key",
+    "keywords": [
+      "currencycloud"
+    ],
+    "regex": "(?i)(?:currencycloud)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "currencyfreaks_api_key",
+    "category": "api_key",
+    "keywords": [
+      "currencyfreaks"
+    ],
+    "regex": "(?i)(?:currencyfreaks)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "currencylayer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "currencylayer"
+    ],
+    "regex": "(?i)(?:currencylayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "currencyscoop_api_key",
+    "category": "api_key",
+    "keywords": [
+      "currencyscoop"
+    ],
+    "regex": "(?i)(?:currencyscoop)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "currents_api_key",
+    "category": "api_key",
+    "keywords": [
+      "currents"
+    ],
+    "regex": "(?i)(?:currentsapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{48})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "customguru_api_key",
+    "category": "api_key",
+    "keywords": [
+      "customguru"
+    ],
+    "regex": "(?i)(?:guru)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{30})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "customerio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "customerio"
+    ],
+    "regex": "(?i)(?:customer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "d7network_api_key",
+    "category": "api_key",
+    "keywords": [
+      "d7network"
+    ],
+    "regex": "(?i)(?:d7network)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\W\\S]{23}\\=)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dailyco_api_key",
+    "category": "api_key",
+    "keywords": [
+      "dailyco"
+    ],
+    "regex": "(?i)(?:daily)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dandelion_api_key",
+    "category": "api_key",
+    "keywords": [
+      "dandelion"
+    ],
+    "regex": "(?i)(?:dandelion)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dareboost_api_key",
+    "category": "api_key",
+    "keywords": [
+      "dareboost"
+    ],
+    "regex": "(?i)(?:dareboost)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{60})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "datadog_api_key",
+    "category": "private_keys",
+    "keywords": [
+      "datadog"
+    ],
+    "regex": "(?:(\\A|\\b)(((?i)(DD|DATADOG)_API_KEY)['\"]?\\s*(value)?[=:,]\\s*['\"]?|new DataDogWinston\\({[^}]*apiKey:\\s*'|terraformer import datadog [^\\n]*--api-key=|provider \"datadog\" {[^}]*api_key\\s*=\\s*\"))([a-f0-9]{32})(?:\\z|\\b)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "datafire_api_key",
+    "category": "api_key",
+    "keywords": [
+      "datafire"
+    ],
+    "regex": "(?i)(?:datafire)(?:.|[\\n\\r]){0,40}\\b([a-z0-9\\S]{175,190})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "usda_gov_api_key",
+    "category": "api_key",
+    "keywords": [
+      "usda"
+    ],
+    "regex": "(?i)(?:data.gov)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "debounce_api_key",
+    "category": "api_key",
+    "keywords": [
+      "debounce"
+    ],
+    "regex": "(?i)(?:debounce)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{13})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "deepai_api_key",
+    "category": "api_key",
+    "keywords": [
+      "deepai"
+    ],
+    "regex": "(?i)(?:deepai)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "deepgram_api_key",
+    "category": "api_key",
+    "keywords": [
+      "deepgram"
+    ],
+    "regex": "(?i)(?:deepgram)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "delighted_api_key",
+    "category": "api_key",
+    "keywords": [
+      "delighted"
+    ],
+    "regex": "(?i)(?:delighted)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "deputy_api_key",
+    "category": "api_key",
+    "keywords": [
+      "deputy"
+    ],
+    "regex": "(?i)(?:deputy)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "detectify_api_key",
+    "category": "api_key",
+    "keywords": [
+      "detectify"
+    ],
+    "regex": "(?i)(?:detectify)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "detectlanguage_api_key",
+    "category": "api_key",
+    "keywords": [
+      "detectlanguage"
+    ],
+    "regex": "(?i)(?:detectlanguage)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dfuse_api_key",
+    "category": "api_key",
+    "keywords": [
+      "dfuse"
+    ],
+    "regex": "\\b(web\\_[0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "diffbot_api_key",
+    "category": "api_key",
+    "keywords": [
+      "diffbot"
+    ],
+    "regex": "(?i)(?:diffbot)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "diggernaut_api_key",
+    "category": "api_key",
+    "keywords": [
+      "diggernaut"
+    ],
+    "regex": "(?i)(?:diggernaut)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "disqus_api_key",
+    "category": "api_key",
+    "keywords": [
+      "disqus"
+    ],
+    "regex": "(?i)(?:disqus)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ditto_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ditto"
+    ],
+    "regex": "(?i)(?:ditto)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{12}\\.[a-z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dnscheck_api_key",
+    "category": "api_key",
+    "keywords": [
+      "dnscheck"
+    ],
+    "regex": "(?i)(?:dnscheck)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "documo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "documo"
+    ],
+    "regex": "\\b(ey[a-zA-Z0-9]{34}.ey[a-zA-Z0-9]{154}.[a-zA-Z0-9_-]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "doppler_api_key",
+    "category": "api_key",
+    "keywords": [
+      "doppler"
+    ],
+    "regex": "\\b(dp\\.pt\\.[a-zA-Z0-9]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dotmailer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "dotmailer"
+    ],
+    "regex": "(?i)(?:dotmailer)(?:.|[\\n\\r]){0,40}\\b(apiuser-[a-z0-9]{12}@apiconnector.com)\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dovico_api_key",
+    "category": "api_key",
+    "keywords": [
+      "dovico"
+    ],
+    "regex": "(?i)(?:dovico)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32}\\.[0-9a-z]{1,}\\b)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dronahq_api_key",
+    "category": "api_key",
+    "keywords": [
+      "dronahq"
+    ],
+    "regex": "(?i)(?:dronahq)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{50})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "droneci_api_key",
+    "category": "api_key",
+    "keywords": [
+      "droneci"
+    ],
+    "regex": "(?i)(?:droneci)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dropbox_api_key",
+    "category": "api_key",
+    "keywords": [
+      "dropbox"
+    ],
+    "regex": "\\b(sl\\.[A-Za-z0-9\\-\\_]{130,140})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dwolla_api_key",
+    "category": "api_key",
+    "keywords": [
+      "dwolla"
+    ],
+    "regex": "(?i)(?:dwolla)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{50})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dynalist_api_key",
+    "category": "api_key",
+    "keywords": [
+      "dynalist"
+    ],
+    "regex": "(?i)(?:dynalist)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-_]{128})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dyspatch_api_key",
+    "category": "api_key",
+    "keywords": [
+      "dyspatch"
+    ],
+    "regex": "(?i)(?:dyspatch)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{52})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "eagleeyenetworks_api_key",
+    "category": "api_key",
+    "keywords": [
+      "eagleeyenetworks"
+    ],
+    "regex": "(?i)(?:eagleeyenetworks)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{15})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "easyinsight_api_key",
+    "category": "api_key",
+    "keywords": [
+      "easyinsight"
+    ],
+    "regex": "(?i)(?:easyinsight)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-zA-Z]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "edamam_api_key",
+    "category": "api_key",
+    "keywords": [
+      "edamam"
+    ],
+    "regex": "(?i)(?:edamam)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "edenai_api_key",
+    "category": "api_key",
+    "keywords": [
+      "edenai"
+    ],
+    "regex": "(?i)(?:edenai)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{36}.[a-zA-Z0-9]{92}.[a-zA-Z0-9_]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "eightxeight_api_key",
+    "category": "api_key",
+    "keywords": [
+      "eightxeight"
+    ],
+    "regex": "(?i)(?:8x8)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "elastic_api_key",
+    "category": "api_key",
+    "keywords": [
+      "elastic"
+    ],
+    "regex": "(?i)(?:elastic)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{96})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "enablex_api_key",
+    "category": "api_key",
+    "keywords": [
+      "enablex"
+    ],
+    "regex": "(?i)(?:enablex)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "enigma_api_key",
+    "category": "api_key",
+    "keywords": [
+      "enigma"
+    ],
+    "regex": "(?i)(?:enigma)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ethplorer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ethplorer"
+    ],
+    "regex": "(?i)(?:ethplorer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "etsy_api_key",
+    "category": "api_key",
+    "keywords": [
+      "etsy"
+    ],
+    "regex": "(?i)(?:etsy)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "everhour_api_key",
+    "category": "api_key",
+    "keywords": [
+      "everhour"
+    ],
+    "regex": "(?i)(?:everhour)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-f]{4}-[0-9a-f]{4}-[0-9a-f]{6}-[0-9a-f]{6}-[0-9a-f]{8})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "exchangerate_api_key",
+    "category": "api_key",
+    "keywords": [
+      "exchangerate"
+    ],
+    "regex": "(?i)(?:exchangerate)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "exchangerates_api_key",
+    "category": "api_key",
+    "keywords": [
+      "exchangerates"
+    ],
+    "regex": "(?i)(?:exchangerates)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "exportsdk_api_key",
+    "category": "api_key",
+    "keywords": [
+      "exportsdk"
+    ],
+    "regex": "(?i)(?:exportsdk)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{5,15}_[0-9a-z-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "extractor_api_key",
+    "category": "api_key",
+    "keywords": [
+      "extractor"
+    ],
+    "regex": "(?i)(?:extractorapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "faceplusplus_api_key",
+    "category": "api_key",
+    "keywords": [
+      "faceplusplus"
+    ],
+    "regex": "(?i)(?:faceplusplus)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z_-]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fakejson_api_key",
+    "category": "api_key",
+    "keywords": [
+      "fakejson"
+    ],
+    "regex": "(?i)(?:fakejson)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fastforex_api_key",
+    "category": "api_key",
+    "keywords": [
+      "fastforex"
+    ],
+    "regex": "(?i)(?:fastforex)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{28})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "feedier_api_key",
+    "category": "api_key",
+    "keywords": [
+      "feedier"
+    ],
+    "regex": "(?i)(?:feedier)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fetchrss_api_key",
+    "category": "api_key",
+    "keywords": [
+      "fetchrss"
+    ],
+    "regex": "(?i)(?:fetchrss)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z.]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fibery_api_key",
+    "category": "api_key",
+    "keywords": [
+      "fibery"
+    ],
+    "regex": "(?i)(?:fibery)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}.[0-9a-f]{35})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fileio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "fileio"
+    ],
+    "regex": "(?i)(?:fileio)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9.-]{39})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "finage_api_key",
+    "category": "api_key",
+    "keywords": [
+      "finage"
+    ],
+    "regex": "\\b(API_KEY[0-9A-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "financialmodelingprep_api_key",
+    "category": "api_key",
+    "keywords": [
+      "financialmodelingprep"
+    ],
+    "regex": "(?i)(?:financialmodelingprep)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "findl_api_key",
+    "category": "api_key",
+    "keywords": [
+      "findl"
+    ],
+    "regex": "(?i)(?:findl)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "finnhub_api_key",
+    "category": "api_key",
+    "keywords": [
+      "finnhub"
+    ],
+    "regex": "(?i)(?:finnhub)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fixer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "fixer"
+    ],
+    "regex": "(?i)(?:fixer)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "flatio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "flatio"
+    ],
+    "regex": "(?i)(?:flat)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{128})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fleetbase_api_key",
+    "category": "api_key",
+    "keywords": [
+      "fleetbase"
+    ],
+    "regex": "\\b(flb_live_[0-9a-zA-Z]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "flickr_api_key",
+    "category": "private_keys",
+    "keywords": [
+      "flickr"
+    ],
+    "regex": "(?:https:\\/\\/api\\.flickr\\.com\\/services\\/rest\\/?([^ ]+&)?api_key=)([0-9a-f]{32})(?:\\z|\\b)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "flight_api_key",
+    "category": "api_key",
+    "keywords": [
+      "flight"
+    ],
+    "regex": "(?i)(?:flightapi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "flight_stats_api_key",
+    "category": "api_key",
+    "keywords": [
+      "flight"
+    ],
+    "regex": "(?i)(?:flightstats)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "float_api_key",
+    "category": "api_key",
+    "keywords": [
+      "float"
+    ],
+    "regex": "(?i)(?:float)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-._+=]{59,60})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "flowdash_api_key",
+    "category": "api_key",
+    "keywords": [
+      "flowdash"
+    ],
+    "regex": "(?i)(?:flowdash)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "flowdock_api_key",
+    "category": "api_key",
+    "keywords": [
+      "flowdock"
+    ],
+    "regex": "(?i)(?:flowdock)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "flowflu_api_key",
+    "category": "api_key",
+    "keywords": [
+      "flowflu"
+    ],
+    "regex": "(?i)(?:flowflu)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{51})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "flutterwave_api_key",
+    "category": "api_key",
+    "keywords": [
+      "flutterwave"
+    ],
+    "regex": "\\b(FLWSECK-[0-9a-z]{32}-X)\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fmfw_api_key",
+    "category": "api_key",
+    "keywords": [
+      "fmfw"
+    ],
+    "regex": "(?i)(?:fmfw)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "formbucket_api_key",
+    "category": "api_key",
+    "keywords": [
+      "formbucket"
+    ],
+    "regex": "(?i)(?:formbucket)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{1,}.[0-9A-Za-z]{1,}\\.[0-9A-Z-a-z\\-_]{1,})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "formcraft_api_key",
+    "category": "api_key",
+    "keywords": [
+      "formcraft"
+    ],
+    "regex": "(?i)(?:formcraft)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "formio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "formio"
+    ],
+    "regex": "(?i)(?:formio)(?:.|[\\n\\r]){0,40}\\b(eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\\.[0-9A-Za-z]{310}\\.[0-9A-Z-a-z\\-_]{43}[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "foursquare_api_key",
+    "category": "api_key",
+    "keywords": [
+      "foursquare"
+    ],
+    "regex": "(?i)(?:foursquare)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{48})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "frameio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "frameio"
+    ],
+    "regex": "\\b(fio-u-[0-9a-zA-Z_-]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "freshbooks_api_key",
+    "category": "api_key",
+    "keywords": [
+      "freshbooks"
+    ],
+    "regex": "(?i)(?:freshbooks)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "freshdesk_api_key",
+    "category": "api_key",
+    "keywords": [
+      "freshdesk"
+    ],
+    "regex": "(?i)(?:freshdesk)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "frontapp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "frontapp"
+    ],
+    "regex": "(?i)(?:front)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{36}.[0-9a-zA-Z\\.\\-\\_]{188,244})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fulcrum_api_key",
+    "category": "api_key",
+    "keywords": [
+      "fulcrum"
+    ],
+    "regex": "(?i)(?:fulcrum)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{80})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fullstory_api_key",
+    "category": "api_key",
+    "keywords": [
+      "fullstory"
+    ],
+    "regex": "(?i)(?:fullstory)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9/+]{88})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fusebill_api_key",
+    "category": "api_key",
+    "keywords": [
+      "fusebill"
+    ],
+    "regex": "(?i)(?:fusebill)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{88})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "fxmarket_api_key",
+    "category": "api_key",
+    "keywords": [
+      "fxmarket"
+    ],
+    "regex": "(?i)(?:fxmarket)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-zA-Z-_=]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "geckoboard_api_key",
+    "category": "api_key",
+    "keywords": [
+      "geckoboard"
+    ],
+    "regex": "(?i)(?:geckoboard)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{44})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "gengo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "gengo"
+    ],
+    "regex": "(?i)(?:gengo)(?:.|[\\n\\r]){0,40}([ ]{0,1}[0-9a-zA-Z\\[\\]\\-\\(\\)\\{\\}|_^@$=~]{64}[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "geoapify_api_key",
+    "category": "api_key",
+    "keywords": [
+      "geoapify"
+    ],
+    "regex": "(?i)(?:geoapify)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "geocode_api_key",
+    "category": "api_key",
+    "keywords": [
+      "geocode"
+    ],
+    "regex": "(?i)(?:geocode)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{28})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "geocodify_api_key",
+    "category": "api_key",
+    "keywords": [
+      "geocodify"
+    ],
+    "regex": "(?i)(?:geocodify)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "geocodeio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "geocodeio"
+    ],
+    "regex": "(?i)(?:geocod)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{39})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "geoipifi_api_key",
+    "category": "api_key",
+    "keywords": [
+      "geoipifi"
+    ],
+    "regex": "(?i)(?:ipifi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z_]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "getemail_api_key",
+    "category": "api_key",
+    "keywords": [
+      "getemail"
+    ],
+    "regex": "(?i)(?:getemail)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "getemails_api_key",
+    "category": "api_key",
+    "keywords": [
+      "getemails"
+    ],
+    "regex": "(?i)(?:getemails)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{26})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "getgeoa_api_key",
+    "category": "api_key",
+    "keywords": [
+      "getgeoa"
+    ],
+    "regex": "(?i)(?:getgeoapi)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "getgist_api_key",
+    "category": "api_key",
+    "keywords": [
+      "getgist"
+    ],
+    "regex": "(?i)(?:getgist)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z+=]{68})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "gitlab_api_key",
+    "category": "api_key",
+    "keywords": [
+      "gitlab"
+    ],
+    "regex": "(?i)(?:gitlab)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\-=_]{20,22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "gitlab_api_key_v2",
+    "category": "api_key",
+    "keywords": [
+      "gitlab"
+    ],
+    "regex": "\\b(glpat-[a-zA-Z0-9\\-=_]{20,22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "gitter_api_key",
+    "category": "api_key",
+    "keywords": [
+      "gitter"
+    ],
+    "regex": "(?i)(?:gitter)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "glassnode_api_key",
+    "category": "api_key",
+    "keywords": [
+      "glassnode"
+    ],
+    "regex": "(?i)(?:glassnode)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{27})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "glitterly_api_key",
+    "category": "api_key",
+    "keywords": [
+      "glitterly"
+    ],
+    "regex": "(?i)(?:glitterlyapi)(?:.|[\\n\\r]){0,40}\\b([0-9a-z-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "gocanvas_api_key",
+    "category": "api_key",
+    "keywords": [
+      "gocanvas"
+    ],
+    "regex": "(?i)(?:gocanvas)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z/+]{43}=[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "gocardless_api_key",
+    "category": "api_key",
+    "keywords": [
+      "gocardless"
+    ],
+    "regex": "\\b(live_[0-9A-Za-z\\_\\-]{40}[ \"'\\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "goodday_api_key",
+    "category": "api_key",
+    "keywords": [
+      "goodday"
+    ],
+    "regex": "(?i)(?:goodday)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "graphcms_api_key",
+    "category": "api_key",
+    "keywords": [
+      "graphcms"
+    ],
+    "regex": "\\b(ey[a-zA-Z0-9]{73}.ey[a-zA-Z0-9]{365}.[a-zA-Z0-9_-]{683})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "graphhopper_api_key",
+    "category": "api_key",
+    "keywords": [
+      "graphhopper"
+    ],
+    "regex": "(?i)(?:graphhopper)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "groove_api_key",
+    "category": "api_key",
+    "keywords": [
+      "groove"
+    ],
+    "regex": "(?i)(?:groove)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{64})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "guardian_api_key",
+    "category": "api_key",
+    "keywords": [
+      "guardian"
+    ],
+    "regex": "\\b([0-9Aa-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "gumroad_api_key",
+    "category": "api_key",
+    "keywords": [
+      "gumroad"
+    ],
+    "regex": "(?i)(?:gumroad)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "guru_api_key",
+    "category": "api_key",
+    "keywords": [
+      "guru"
+    ],
+    "regex": "(?i)(?:guru)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "gyazo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "gyazo"
+    ],
+    "regex": "(?i)(?:gyazo)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z-]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "happi_api_key",
+    "category": "api_key",
+    "keywords": [
+      "happi"
+    ],
+    "regex": "(?i)(?:happi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{56})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "happyscribe_api_key",
+    "category": "api_key",
+    "keywords": [
+      "happyscribe"
+    ],
+    "regex": "(?i)(?:happyscribe)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "harvest_api_key",
+    "category": "api_key",
+    "keywords": [
+      "harvest"
+    ],
+    "regex": "(?i)(?:harvest)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z._]{97})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "hellosign_api_key",
+    "category": "api_key",
+    "keywords": [
+      "hellosign"
+    ],
+    "regex": "(?i)(?:hellosign)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9/+]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "helpcrunch_api_key",
+    "category": "api_key",
+    "keywords": [
+      "helpcrunch"
+    ],
+    "regex": "(?i)(?:helpcrunch)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9+/=]{328})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "helpscout_api_key",
+    "category": "api_key",
+    "keywords": [
+      "helpscout"
+    ],
+    "regex": "(?i)(?:helpscout)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{56})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "hereapi_key",
+    "category": "api_key",
+    "keywords": [
+      "hereapi"
+    ],
+    "regex": "(?i)(?:hereapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "hive_api_key",
+    "category": "api_key",
+    "keywords": [
+      "hive"
+    ],
+    "regex": "(?i)(?:hive)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "hiveage_api_key",
+    "category": "api_key",
+    "keywords": [
+      "hiveage"
+    ],
+    "regex": "(?i)(?:hiveage)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z\\_\\-]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "holidayapi_key",
+    "category": "api_key",
+    "keywords": [
+      "holidayapi"
+    ],
+    "regex": "(?i)(?:holidayapi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "host_api_key",
+    "category": "api_key",
+    "keywords": [
+      "host"
+    ],
+    "regex": "(?i)(?:host)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{14})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "html2pdf_api_key",
+    "category": "api_key",
+    "keywords": [
+      "html2pdf"
+    ],
+    "regex": "(?i)(?:html2pdf)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "hubspot_api_key",
+    "category": "api_key",
+    "keywords": [
+      "hubspot"
+    ],
+    "regex": "(?i)(?:hubspot)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{8}\\-[A-Za-z0-9]{4}\\-[A-Za-z0-9]{4}\\-[A-Za-z0-9]{4}\\-[A-Za-z0-9]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "humanity_api_key",
+    "category": "api_key",
+    "keywords": [
+      "humanity"
+    ],
+    "regex": "(?i)(?:humanity)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "hunter_api_key",
+    "category": "api_key",
+    "keywords": [
+      "hunter"
+    ],
+    "regex": "(?i)(?:hunter)(?:.|[\\n\\r]){0,40}\\b([a-z0-9_-]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "hybiscus_api_key",
+    "category": "api_key",
+    "keywords": [
+      "hybiscus"
+    ],
+    "regex": "(?i)(?:hybiscus)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "hypertrack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "hypertrack"
+    ],
+    "regex": "(?i)(?:hypertrack)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z\\_\\-]{54})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ibm_api_key",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "(?i)(?:ibm)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{44})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "iconfinder_api_key",
+    "category": "api_key",
+    "keywords": [
+      "iconfinder"
+    ],
+    "regex": "(?i)(?:iconfinder)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "iexapis_api_key",
+    "category": "api_key",
+    "keywords": [
+      "iexapis"
+    ],
+    "regex": "(?i)(?:iexapis)(?:.|[\\n\\r]){0,40}\\b(sk_[a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "iexcloud_api_key",
+    "category": "api_key",
+    "keywords": [
+      "iexcloud"
+    ],
+    "regex": "(?i)(?:iexcloud)(?:.|[\\n\\r]){0,40}\\b([a-z0-9_]{35})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "image4_api_key",
+    "category": "api_key",
+    "keywords": [
+      "image4"
+    ],
+    "regex": "(?i)(?:image4)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{22}[0-9a-zA-Z\\=]{2})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "imagekit_api_key",
+    "category": "api_key",
+    "keywords": [
+      "imagekit"
+    ],
+    "regex": "(?i)(?:imagekit)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_=]{36})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "imagga_api_key",
+    "category": "api_key",
+    "keywords": [
+      "imagga"
+    ],
+    "regex": "(?i)(?:imagga)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z=]{72})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "impala_api_key",
+    "category": "api_key",
+    "keywords": [
+      "impala"
+    ],
+    "regex": "(?i)(?:impala)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_]{46})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "insightly_api_key",
+    "category": "api_key",
+    "keywords": [
+      "insightly"
+    ],
+    "regex": "(?i)(?:insightly)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "instabot_api_key",
+    "category": "api_key",
+    "keywords": [
+      "instabot"
+    ],
+    "regex": "(?i)(?:instabot)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z=+\\/]{43}[0-9a-zA-Z+\\/=]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "integromat_api_key",
+    "category": "api_key",
+    "keywords": [
+      "integromat"
+    ],
+    "regex": "(?i)(?:integromat)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "intercom_api_key",
+    "category": "api_key",
+    "keywords": [
+      "intercom"
+    ],
+    "regex": "(?i)(?:intercom)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\W\\S]{59}\\=)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "interseller_api_key",
+    "category": "api_key",
+    "keywords": [
+      "interseller"
+    ],
+    "regex": "(?i)(?:interseller)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "intrinio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "intrinio"
+    ],
+    "regex": "(?i)(?:intrinio)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{44})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "invoiceocean_api_key",
+    "category": "api_key",
+    "keywords": [
+      "invoiceocean"
+    ],
+    "regex": "(?i)(?:invoiceocean)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ipapi_key",
+    "category": "api_key",
+    "keywords": [
+      "ipapi"
+    ],
+    "regex": "(?i)(?:ipapi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ipgeolocation_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ipgeolocation"
+    ],
+    "regex": "(?i)(?:ipgeolocation)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ipify_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ipify"
+    ],
+    "regex": "(?i)(?:ipify)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ipquality_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ipquality"
+    ],
+    "regex": "(?i)(?:ipquality)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ipstack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ipstack"
+    ],
+    "regex": "(?i)(?:ipstack)(?:.|[\\n\\r]){0,40}\\b([a-fA-f0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "jotfrom_api_key",
+    "category": "api_key",
+    "keywords": [
+      "jotfrom"
+    ],
+    "regex": "(?i)(?:jotform)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "jumpcloud_api_key",
+    "category": "api_key",
+    "keywords": [
+      "jumpcloud"
+    ],
+    "regex": "(?i)(?:jumpcloud)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "juro_api_key",
+    "category": "api_key",
+    "keywords": [
+      "juro"
+    ],
+    "regex": "(?i)(?:juro)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "kanban_api_key",
+    "category": "api_key",
+    "keywords": [
+      "kanban"
+    ],
+    "regex": "(?i)(?:kanban)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "karmaacrm_api_key",
+    "category": "api_key",
+    "keywords": [
+      "karmaacrm"
+    ],
+    "regex": "(?i)(?:karma)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "keenio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "keenio"
+    ],
+    "regex": "(?i)(?:keen)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "kickbox_api_key",
+    "category": "api_key",
+    "keywords": [
+      "kickbox"
+    ],
+    "regex": "(?i)(?:kickbox)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]+[a-zA-Z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "klipfolio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "klipfolio"
+    ],
+    "regex": "(?i)(?:klipfolio)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "knapsackpro_api_key",
+    "category": "api_key",
+    "keywords": [
+      "knapsackpro"
+    ],
+    "regex": "(?i)(?:knapsackpro)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "kontent_api_key",
+    "category": "api_key",
+    "keywords": [
+      "kontent"
+    ],
+    "regex": "(?i)(?:kontent)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "kraken_api_key",
+    "category": "api_key",
+    "keywords": [
+      "kraken"
+    ],
+    "regex": "(?i)(?:kraken)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z\\/\\+=]{56}[ \"'\\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "kucoin_api_key",
+    "category": "api_key",
+    "keywords": [
+      "kucoin"
+    ],
+    "regex": "(?i)(?:kucoin)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "kylas_api_key",
+    "category": "api_key",
+    "keywords": [
+      "kylas"
+    ],
+    "regex": "(?i)(?:kylas)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "languagelayer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "languagelayer"
+    ],
+    "regex": "(?i)(?:languagelayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "lastfm_api_key",
+    "category": "api_key",
+    "keywords": [
+      "lastfm"
+    ],
+    "regex": "(?i)(?:lastfm)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "launchdarkly_api_key",
+    "category": "private_keys",
+    "keywords": [
+      "launchdarkly"
+    ],
+    "regex": "(?:\\A|\\b)((api|sdk)-[a-f0-9-]{8}-[a-f0-9-]{4}-[a-f0-9-]{4}-[a-f0-9-]{4}-[a-f0-9-]{12})(?:\\z|\\b)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "leadfeeder_api_key",
+    "category": "api_key",
+    "keywords": [
+      "leadfeeder"
+    ],
+    "regex": "(?i)(?:leadfeeder)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "lendflow_api_key",
+    "category": "api_key",
+    "keywords": [
+      "lendflow"
+    ],
+    "regex": "(?i)(?:lendflow)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{36}\\.[a-zA-Z0-9]{235}\\.[a-zA-Z0-9]{32}\\-[a-zA-Z0-9]{47}\\-[a-zA-Z0-9_]{162}\\-[a-zA-Z0-9]{42}\\-[a-zA-Z0-9_]{40}\\-[a-zA-Z0-9_]{66}\\-[a-zA-Z0-9_]{59}\\-[a-zA-Z0-9]{7}\\-[a-zA-Z0-9_]{220})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "lessannoyingcrm_api_key",
+    "category": "api_key",
+    "keywords": [
+      "lessannoyingcrm"
+    ],
+    "regex": "(?i)(?:less)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{57})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "lexigram_api_key",
+    "category": "api_key",
+    "keywords": [
+      "lexigram"
+    ],
+    "regex": "(?i)(?:lexigram)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{301})\\b",
+    "risk": "high",
+    "entropy": 3.0
+  },
+  {
+    "id": "linearapi_key",
+    "category": "api_key",
+    "keywords": [
+      "linearapi"
+    ],
+    "regex": "\\b(lin_api_[0-9A-Za-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "linemessaging_api_key",
+    "category": "api_key",
+    "keywords": [
+      "linemessaging"
+    ],
+    "regex": "(?i)(?:line)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9+/]{171,172})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "linenotify_api_key",
+    "category": "api_key",
+    "keywords": [
+      "linenotify"
+    ],
+    "regex": "(?i)(?:linenotify)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "linkpreview_api_key",
+    "category": "api_key",
+    "keywords": [
+      "linkpreview"
+    ],
+    "regex": "(?i)(?:linkpreview)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "liveagent_api_key",
+    "category": "api_key",
+    "keywords": [
+      "liveagent"
+    ],
+    "regex": "(?i)(?:liveagent)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "livestorm_api_key",
+    "category": "api_key",
+    "keywords": [
+      "livestorm"
+    ],
+    "regex": "(?i)(?:livestorm)(?:.|[\\n\\r]){0,40}\\b(eyJhbGciOiJIUzI1NiJ9\\.eyJhdWQiOiJhcGkubGl2ZXN0b3JtLmNvIiwianRpIjoi[0-9A-Z-a-z]{134}\\.[0-9A-Za-z\\-\\_]{43}[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "loadmill_api_key",
+    "category": "api_key",
+    "keywords": [
+      "loadmill"
+    ],
+    "regex": "(?i)(?:loadmill)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "lob_api_key",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "(?i)(?:lob)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "locationiq_api_key",
+    "category": "api_key",
+    "keywords": [
+      "locationiq"
+    ],
+    "regex": "\\b(pk\\.[a-zA-Z-0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "loginradius_api_key",
+    "category": "api_key",
+    "keywords": [
+      "loginradius"
+    ],
+    "regex": "(?i)(?:loginradius)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "lokalise_api_key",
+    "category": "api_key",
+    "keywords": [
+      "lokalise"
+    ],
+    "regex": "(?i)(?:lokalise)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "loyverse_api_key",
+    "category": "api_key",
+    "keywords": [
+      "loyverse"
+    ],
+    "regex": "(?i)(?:loyverse)(?:.|[\\n\\r]){0,40}\\b([0-9-a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "lunchmoney_api_key",
+    "category": "api_key",
+    "keywords": [
+      "lunchmoney"
+    ],
+    "regex": "(?i)(?:lunchmoney)(?:.|[\\n\\r]){0,40}\\b([a-f0-9]{50})\\b",
+    "risk": "high",
+    "entropy": 3.0
+  },
+  {
+    "id": "luno_api_key",
+    "category": "api_key",
+    "keywords": [
+      "luno"
+    ],
+    "regex": "(?i)(?:luno)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "m3o_api_key",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "(?i)(?:m3o)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{48})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "macaddress_api_key",
+    "category": "api_key",
+    "keywords": [
+      "macaddress"
+    ],
+    "regex": "(?i)(?:macaddress)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "madkudu_api_key",
+    "category": "api_key",
+    "keywords": [
+      "madkudu"
+    ],
+    "regex": "(?i)(?:madkudu)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "magicbell_api_key",
+    "category": "api_key",
+    "keywords": [
+      "magicbell"
+    ],
+    "regex": "(?i)(?:magicbell)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "magnetic_api_key",
+    "category": "api_key",
+    "keywords": [
+      "magnetic"
+    ],
+    "regex": "(?i)(?:magnetic)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mailboxlayer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mailboxlayer"
+    ],
+    "regex": "(?i)(?:mailboxlayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mailchimp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mailchimp"
+    ],
+    "regex": "[0-9a-f]{32}-us[0-9]{1,2}",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mailerlite_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mailerlite"
+    ],
+    "regex": "(?i)(?:mailerlite)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mailgun_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mailgun"
+    ],
+    "regex": "(?i)(?:mailgun)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{72})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mailjet_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mailjet"
+    ],
+    "regex": "(?i)(?:mailjet)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mailmodo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mailmodo"
+    ],
+    "regex": "(?i)(?:mailmodo)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mailsac_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mailsac"
+    ],
+    "regex": "(?i)(?:mailsac)(?:.|[\\n\\r]){0,40}\\b(k_[0-9A-Za-z]{36,})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mandrill_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mandrill"
+    ],
+    "regex": "(?i)(?:mandrill)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "manifest_api_key",
+    "category": "api_key",
+    "keywords": [
+      "manifest"
+    ],
+    "regex": "(?i)(?:manifest)(?:.|[\\n\\r]){0,40}\\b([a-zA-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mapbox_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mapbox"
+    ],
+    "regex": "\\b(sk\\.[a-zA-Z-0-9\\.]{80,240})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mapquest_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mapquest"
+    ],
+    "regex": "(?i)(?:mapquest)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "marketstack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "marketstack"
+    ],
+    "regex": "(?i)(?:marketstack)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mattermost_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mattermost"
+    ],
+    "regex": "(?i)(?:mattermost)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{26})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mavenlink_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mavenlink"
+    ],
+    "regex": "(?i)(?:mavenlink)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "maxmind_api_key",
+    "category": "api_key",
+    "keywords": [
+      "maxmind"
+    ],
+    "regex": "(?i)(?:maxmind|geoip)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "meaningcloud_api_key",
+    "category": "api_key",
+    "keywords": [
+      "meaningcloud"
+    ],
+    "regex": "(?i)(?:meaningcloud)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mediastack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mediastack"
+    ],
+    "regex": "(?i)(?:mediastack)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "meistertask_api_key",
+    "category": "api_key",
+    "keywords": [
+      "meistertask"
+    ],
+    "regex": "(?i)(?:meistertask)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mesibo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mesibo"
+    ],
+    "regex": "(?i)(?:mesibo)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "messagebird_api_key",
+    "category": "api_key",
+    "keywords": [
+      "messagebird"
+    ],
+    "regex": "(?i)(?:messagebird)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{25})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "metaapi_key",
+    "category": "api_key",
+    "keywords": [
+      "metaapi"
+    ],
+    "regex": "(?i)(?:metaapi|meta-api)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "metrilo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "metrilo"
+    ],
+    "regex": "(?i)(?:metrilo)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "midise_api_key",
+    "category": "api_key",
+    "keywords": [
+      "midise"
+    ],
+    "regex": "midi-662b69edd2[a-zA-Z0-9]{54}",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mindmeister_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mindmeister"
+    ],
+    "regex": "(?i)(?:mindmeister)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "miro_api_key",
+    "category": "api_key",
+    "keywords": [
+      "miro"
+    ],
+    "regex": "(?i)(?:miro)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{27})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mite_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mite"
+    ],
+    "regex": "(?i)(?:mite)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mixmax_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mixmax"
+    ],
+    "regex": "(?i)(?:mixmax)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mixpanel_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mixpanel"
+    ],
+    "regex": "(?i)(?:mixpanel)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mockaroo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "mockaroo"
+    ],
+    "regex": "(?i)(?:mockaroo)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8})\\b",
+    "risk": "high",
+    "entropy": 2.5
+  },
+  {
+    "id": "moderation_api_key",
+    "category": "api_key",
+    "keywords": [
+      "moderation"
+    ],
+    "regex": "(?i)(?:moderation)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{36}\\.[a-zA-Z0-9]{115}\\.[a-zA-Z0-9_]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "monday_api_key",
+    "category": "api_key",
+    "keywords": [
+      "monday"
+    ],
+    "regex": "(?i)(?:monday)(?:.|[\\n\\r]){0,40}\\b(ey[a-zA-Z0-9_.]{210,225})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "moonclerk_api_key",
+    "category": "api_key",
+    "keywords": [
+      "moonclerk"
+    ],
+    "regex": "(?i)(?:moonclerk)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "moosend_api_key",
+    "category": "api_key",
+    "keywords": [
+      "moosend"
+    ],
+    "regex": "(?i)(?:moosend)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "mux_api_key",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "(?i)(?:mux)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "freshworks_api_key",
+    "category": "api_key",
+    "keywords": [
+      "freshworks"
+    ],
+    "regex": "(?i)(?:freshworks)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "myintervals_api_key",
+    "category": "api_key",
+    "keywords": [
+      "myintervals"
+    ],
+    "regex": "(?i)(?:myintervals)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{11})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nasdaqdatalink_api_key",
+    "category": "api_key",
+    "keywords": [
+      "nasdaqdatalink"
+    ],
+    "regex": "(?i)(?:nasdaq)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nethunt_api_key",
+    "category": "api_key",
+    "keywords": [
+      "nethunt"
+    ],
+    "regex": "(?i)(?:nethunt)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-\\S]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "netlify_api_key",
+    "category": "api_key",
+    "keywords": [
+      "netlify"
+    ],
+    "regex": "(?i)(?:netlify)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{43,45})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "neutrino_api_key",
+    "category": "api_key",
+    "keywords": [
+      "neutrino"
+    ],
+    "regex": "(?i)(?:neutrinoapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{48})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "newrelic_api_key",
+    "category": "api_key",
+    "keywords": [
+      "newrelic"
+    ],
+    "regex": "(?i)(?:newrelic)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_\\.]{4}-[A-Za-z0-9_\\.]{42})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "newsapi_key",
+    "category": "api_key",
+    "keywords": [
+      "newsapi"
+    ],
+    "regex": "(?i)(?:newsapi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "newscatcher_api_key",
+    "category": "api_key",
+    "keywords": [
+      "newscatcher"
+    ],
+    "regex": "(?i)(?:newscatcher)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nexmo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "nexmo"
+    ],
+    "regex": "(?i)(?:nexmo)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{8})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nftport_api_key",
+    "category": "api_key",
+    "keywords": [
+      "nftport"
+    ],
+    "regex": "(?i)(?:nftport)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nicereply_api_key",
+    "category": "api_key",
+    "keywords": [
+      "nicereply"
+    ],
+    "regex": "(?i)(?:nicereply)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nightfall_api_key",
+    "category": "api_key",
+    "keywords": [
+      "nightfall"
+    ],
+    "regex": "\\b(NF\\-[a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nimble_api_key",
+    "category": "api_key",
+    "keywords": [
+      "nimble"
+    ],
+    "regex": "(?i)(?:nimble)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{30})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nitro_api_key",
+    "category": "api_key",
+    "keywords": [
+      "nitro"
+    ],
+    "regex": "(?i)(?:nitro)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "noticeable_api_key",
+    "category": "api_key",
+    "keywords": [
+      "noticeable"
+    ],
+    "regex": "(?i)(?:noticeable)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "notion_api_key",
+    "category": "api_key",
+    "keywords": [
+      "notion"
+    ],
+    "regex": "\\b(secret_[A-Za-z0-9]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nozbeteams_api_key",
+    "category": "api_key",
+    "keywords": [
+      "nozbeteams"
+    ],
+    "regex": "(?i)(?:nozbe|nozbeteams)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{16}_[0-9A-Za-z\\-_]{64}[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "numverify_api_key",
+    "category": "api_key",
+    "keywords": [
+      "numverify"
+    ],
+    "regex": "(?i)(?:numverify)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nutritionix_api_key",
+    "category": "api_key",
+    "keywords": [
+      "nutritionix"
+    ],
+    "regex": "(?i)(?:nutritionix)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nylas_api_key",
+    "category": "api_key",
+    "keywords": [
+      "nylas"
+    ],
+    "regex": "(?i)(?:nylas)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{30})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "nytimes_api_key",
+    "category": "api_key",
+    "keywords": [
+      "nytimes"
+    ],
+    "regex": "(?i)(?:nytimes)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "oanda_api_key",
+    "category": "api_key",
+    "keywords": [
+      "oanda"
+    ],
+    "regex": "(?i)(?:oanda)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "omnisend_api_key",
+    "category": "api_key",
+    "keywords": [
+      "omnisend"
+    ],
+    "regex": "(?i)(?:omnisend)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-]{75})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "onepagecrm_api_key",
+    "category": "api_key",
+    "keywords": [
+      "onepagecrm"
+    ],
+    "regex": "(?i)(?:onepagecrm)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9=]{44})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "onesignal_api_key_uuid",
+    "category": "api_key",
+    "keywords": [
+      "onesignal"
+    ],
+    "regex": "(?i)(?:onesignal)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "onwater_api_key",
+    "category": "api_key",
+    "keywords": [
+      "onwater"
+    ],
+    "regex": "(?i)(?:onwater)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "oopspam_api_key",
+    "category": "api_key",
+    "keywords": [
+      "oopspam"
+    ],
+    "regex": "(?i)(?:oopspam)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "opencagedata_api_key",
+    "category": "api_key",
+    "keywords": [
+      "opencagedata"
+    ],
+    "regex": "(?i)(?:opencagedata)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "opengraphr_api_key",
+    "category": "api_key",
+    "keywords": [
+      "opengraphr"
+    ],
+    "regex": "(?i)(?:opengraphr)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-zA-Z]{80})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "openuv_api_key",
+    "category": "api_key",
+    "keywords": [
+      "openuv"
+    ],
+    "regex": "(?i)(?:openuv)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "openweather_api_key",
+    "category": "api_key",
+    "keywords": [
+      "openweather"
+    ],
+    "regex": "(?i)(?:openweather)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "optimizely_api_key",
+    "category": "api_key",
+    "keywords": [
+      "optimizely"
+    ],
+    "regex": "(?i)(?:optimizely)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z-:]{54})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "owlbot_api_key",
+    "category": "api_key",
+    "keywords": [
+      "owlbot"
+    ],
+    "regex": "(?i)(?:owlbot)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "packagecloud_api_key",
+    "category": "api_key",
+    "keywords": [
+      "packagecloud"
+    ],
+    "regex": "(?i)(?:packagecloud)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{48})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pagerduty_api_key",
+    "category": "private_keys",
+    "keywords": [
+      "pagerduty",
+      "service"
+    ],
+    "regex": "(?:(\\A|\\b)(?i)((pd|pagerduty)_(service|api)_key['\"`]?\\s*([:=]|[?:]=|[=-]>)\\s*['\"`]?|Token token=))([A-Za-z0-9_-]{20})(?:\\z|\\b)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pandadoc_api_key",
+    "category": "api_key",
+    "keywords": [
+      "pandadoc"
+    ],
+    "regex": "(?i)(?:pandadoc)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pandascore_api_key",
+    "category": "api_key",
+    "keywords": [
+      "pandascore"
+    ],
+    "regex": "(?i)(?:pandascore)(?:.|[\\n\\r]){0,40}([ \\r\\n]{0,1}[0-9A-Za-z\\-\\_]{51}[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "paperform_api_key",
+    "category": "api_key",
+    "keywords": [
+      "paperform"
+    ],
+    "regex": "(?i)(?:paperform)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-._]{850,1000})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "paralleldots_api_key",
+    "category": "api_key",
+    "keywords": [
+      "paralleldots"
+    ],
+    "regex": "(?i)(?:paralleldots)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "parsehub_api_key",
+    "category": "api_key",
+    "keywords": [
+      "parsehub"
+    ],
+    "regex": "(?i)(?:parsehub)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "parsers_api_key",
+    "category": "api_key",
+    "keywords": [
+      "parsers"
+    ],
+    "regex": "(?i)(?:parsers)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "partnerstack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "partnerstack"
+    ],
+    "regex": "(?i)(?:partnerstack)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "passbase_api_key",
+    "category": "api_key",
+    "keywords": [
+      "passbase"
+    ],
+    "regex": "(?i)(?:passbase)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{128})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pastebin_api_key",
+    "category": "api_key",
+    "keywords": [
+      "pastebin"
+    ],
+    "regex": "(?i)(?:pastebin)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "paydirtapp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "paydirtapp"
+    ],
+    "regex": "(?i)(?:paydirtapp)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "paymoapp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "paymoapp"
+    ],
+    "regex": "(?i)(?:paymoapp)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{44})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "paypal_api_key",
+    "category": "api_key",
+    "keywords": [
+      "paypal"
+    ],
+    "regex": "\\b([A-Za-z0-9_\\.]{69}-[A-Za-z0-9_\\.]{10})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "paystack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "paystack"
+    ],
+    "regex": "\\b(sk\\_[a-z]{1,}\\_[A-Za-z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pdflayer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "pdflayer"
+    ],
+    "regex": "(?i)(?:pdflayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pdfshift_api_key",
+    "category": "api_key",
+    "keywords": [
+      "pdfshift"
+    ],
+    "regex": "(?i)(?:pdfshift)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "peopledatalabs_api_key",
+    "category": "api_key",
+    "keywords": [
+      "peopledatalabs"
+    ],
+    "regex": "(?i)(?:peopledatalabs)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pepipost_api_key",
+    "category": "api_key",
+    "keywords": [
+      "pepipost"
+    ],
+    "regex": "(?i)(?:pepipost|netcore)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "picatic_api_key",
+    "category": "api_key",
+    "keywords": [
+      "picatic"
+    ],
+    "regex": "sk_live_[0-9a-z]{32}",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pinata_api_key",
+    "category": "api_key",
+    "keywords": [
+      "pinata"
+    ],
+    "regex": "(?i)(?:pinata)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pipedream_api_key",
+    "category": "api_key",
+    "keywords": [
+      "pipedream"
+    ],
+    "regex": "(?i)(?:pipedream)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pipedrive_api_key",
+    "category": "api_key",
+    "keywords": [
+      "pipedrive"
+    ],
+    "regex": "(?i)(?:pipedrive)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pivotaltracker_api_key",
+    "category": "api_key",
+    "keywords": [
+      "pivotaltracker"
+    ],
+    "regex": "(?i)(?:pivotal)(?:.|[\\n\\r]){0,40}([a-z0-9]{32})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pixabay_api_key",
+    "category": "api_key",
+    "keywords": [
+      "pixabay"
+    ],
+    "regex": "(?i)(?:pixabay)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{34})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "plaid_api_key",
+    "category": "api_key",
+    "keywords": [
+      "plaid"
+    ],
+    "regex": "(?i)(?:plaid)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{30})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "planviewleankit_api_key",
+    "category": "api_key",
+    "keywords": [
+      "planviewleankit"
+    ],
+    "regex": "(?i)(?:planviewleankit|planview)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{128})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "planyo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "planyo"
+    ],
+    "regex": "(?i)(?:planyo)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{62})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "plivo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "plivo"
+    ],
+    "regex": "(?i)(?:plivo)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "podio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "podio"
+    ],
+    "regex": "(?i)(?:podio)(?:.|[\\n\\r]){0,40}\\b([[0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pollsapi_key",
+    "category": "api_key",
+    "keywords": [
+      "pollsapi"
+    ],
+    "regex": "(?i)(?:pollsapi)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{28})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "poloniex_api_key",
+    "category": "api_key",
+    "keywords": [
+      "poloniex"
+    ],
+    "regex": "(?i)(?:poloniex)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{8}-[0-9A-Z]{8}-[0-9A-Z]{8}-[0-9A-Z]{8})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "polygon_api_key",
+    "category": "api_key",
+    "keywords": [
+      "polygon"
+    ],
+    "regex": "(?i)(?:polygon)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "positionstack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "positionstack"
+    ],
+    "regex": "(?i)(?:positionstack)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "postageapp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "postageapp"
+    ],
+    "regex": "(?i)(?:postageapp)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "postbacks_api_key",
+    "category": "api_key",
+    "keywords": [
+      "postbacks"
+    ],
+    "regex": "(?i)(?:postbacks)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "posthog_api_key",
+    "category": "api_key",
+    "keywords": [
+      "posthog"
+    ],
+    "regex": "\\b(phc_[a-zA-Z0-9_]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "postman_api_key",
+    "category": "api_key",
+    "keywords": [
+      "postman"
+    ],
+    "regex": "\\b(PMAK-[a-zA-Z-0-9]{59})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "postmark_api_key",
+    "category": "api_key",
+    "keywords": [
+      "postmark"
+    ],
+    "regex": "(?i)(?:postmark)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "powrbot_api_key",
+    "category": "api_key",
+    "keywords": [
+      "powrbot"
+    ],
+    "regex": "(?i)(?:powrbot)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "prospectcrm_api_key",
+    "category": "api_key",
+    "keywords": [
+      "prospectcrm"
+    ],
+    "regex": "(?i)(?:prospect)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "prospectio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "prospectio"
+    ],
+    "regex": "(?i)(?:prospect)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-]{50})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "protocolsio_api_key",
+    "category": "api_key",
+    "keywords": [
+      "protocolsio"
+    ],
+    "regex": "(?i)(?:protocols)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "proxycrawl_api_key",
+    "category": "api_key",
+    "keywords": [
+      "proxycrawl"
+    ],
+    "regex": "(?i)(?:proxycrawl)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pubnubpublish_key",
+    "category": "api_key",
+    "keywords": [
+      "pubnubpublish"
+    ],
+    "regex": "\\b(pub-c-[0-9a-z]{8}-[0-9a-z]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pubnub_subscription_key",
+    "category": "api_key",
+    "keywords": [
+      "pubnub"
+    ],
+    "regex": "\\b(sub-c-[0-9a-z]{8}-[a-z]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "purestake_api_key",
+    "category": "api_key",
+    "keywords": [
+      "purestake"
+    ],
+    "regex": "(?i)(?:purestake)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "pushbullet_api_key",
+    "category": "api_key",
+    "keywords": [
+      "pushbullet"
+    ],
+    "regex": "(?i)(?:pushbullet)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_\\.]{34})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "qase_api_key",
+    "category": "api_key",
+    "keywords": [
+      "qase"
+    ],
+    "regex": "(?i)(?:qase)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "qualaroo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "qualaroo"
+    ],
+    "regex": "(?i)(?:qualaroo)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z=]{64})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "qubole_api_key",
+    "category": "api_key",
+    "keywords": [
+      "qubole"
+    ],
+    "regex": "(?i)(?:qubole)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "quickmetrics_api_key",
+    "category": "api_key",
+    "keywords": [
+      "quickmetrics"
+    ],
+    "regex": "(?i)(?:quickmetrics)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "rapidapi_key",
+    "category": "api_key",
+    "keywords": [
+      "rapidapi"
+    ],
+    "regex": "(?i)(?:rapidapi)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{50})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "raven_api_key",
+    "category": "api_key",
+    "keywords": [
+      "raven"
+    ],
+    "regex": "(?i)(?:raven)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9-]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "rawg_api_key",
+    "category": "api_key",
+    "keywords": [
+      "rawg"
+    ],
+    "regex": "(?i)(?:rawg)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "razorpay_api_key",
+    "category": "api_key",
+    "keywords": [
+      "razorpay"
+    ],
+    "regex": "(?i)\\brzp_\\w{2,6}_\\w{10,20}\\b",
+    "risk": "high",
+    "entropy": 3.0
+  },
+  {
+    "id": "reachmail_api_key",
+    "category": "api_key",
+    "keywords": [
+      "reachmail"
+    ],
+    "regex": "(?i)(?:reachmail)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-_]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "readme_api_key",
+    "category": "api_key",
+    "keywords": [
+      "readme"
+    ],
+    "regex": "(?i)(?:readme)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "reallysimplesystem_api_key",
+    "category": "api_key",
+    "keywords": [
+      "reallysimplesystem"
+    ],
+    "regex": "\\b(ey[a-zA-Z0-9-._]{153}.ey[a-zA-Z0-9-._]{916,1000})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "rebrandly_api_key",
+    "category": "api_key",
+    "keywords": [
+      "rebrandly"
+    ],
+    "regex": "(?i)(?:rebrandly)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "refiner_api_key",
+    "category": "api_key",
+    "keywords": [
+      "refiner"
+    ],
+    "regex": "(?i)(?:refiner)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "rentman_api_key",
+    "category": "api_key",
+    "keywords": [
+      "rentman"
+    ],
+    "regex": "(?i)(?:rentman)(?:.|[\\n\\r]){0,40}\\b(ey[a-zA-Z0-9]{34}.ey[a-zA-Z0-9._-]{250,300})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "repairshopr_api_key",
+    "category": "api_key",
+    "keywords": [
+      "repairshopr"
+    ],
+    "regex": "(?i)(?:repairshopr)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{51})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "restpack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "restpack"
+    ],
+    "regex": "(?i)(?:restpack)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{48})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "rev_api_user_key",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "(?i)(?:rev)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z\\/\\+]{27}\\=[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "rev_api_client_key",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "(?i)(?:rev)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z\\-]{27}[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "revamp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "revamp"
+    ],
+    "regex": "(?i)(?:revamp)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40}\\b)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ringcentral_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ringcentral"
+    ],
+    "regex": "(?i)(?:ringcentral)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_-]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ritekit_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ritekit"
+    ],
+    "regex": "(?i)(?:ritekit)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{44})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "rocketreach_api_key",
+    "category": "api_key",
+    "keywords": [
+      "rocketreach"
+    ],
+    "regex": "(?i)(?:rocketreach)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{39})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "rockset_api_key",
+    "category": "api_key",
+    "keywords": [
+      "rockset"
+    ],
+    "regex": "(?i)(?:rockset)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ronin_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ronin"
+    ],
+    "regex": "(?i)(?:ronin)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{26})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "route4me_api_key",
+    "category": "api_key",
+    "keywords": [
+      "route4me"
+    ],
+    "regex": "(?i)(?:route4me)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "rownd_api_key",
+    "category": "api_key",
+    "keywords": [
+      "rownd"
+    ],
+    "regex": "(?i)(?:rownd)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "rubygems_api_key",
+    "category": "api_key",
+    "keywords": [
+      "rubygems"
+    ],
+    "regex": "\\b(rubygems_[a-zA0-9]{48})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "runrunit_api_key",
+    "category": "api_key",
+    "keywords": [
+      "runrunit"
+    ],
+    "regex": "(?i)(?:runrunit)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "salesblink_api_key",
+    "category": "api_key",
+    "keywords": [
+      "salesblink"
+    ],
+    "regex": "(?i)(?:salesblink)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z]{16})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "salescookie_api_key",
+    "category": "api_key",
+    "keywords": [
+      "salescookie"
+    ],
+    "regex": "(?i)(?:salescookie)(?:.|[\\n\\r]){0,40}\\b([a-zA-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "salesflare_api_key",
+    "category": "api_key",
+    "keywords": [
+      "salesflare"
+    ],
+    "regex": "(?i)(?:salesflare)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{45})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "satismeter_api_key",
+    "category": "api_key",
+    "keywords": [
+      "satismeter"
+    ],
+    "regex": "(?i)(?:satismeter)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "saucelabs_api_key",
+    "category": "api_key",
+    "keywords": [
+      "saucelabs"
+    ],
+    "regex": "(?i)(?:saucelabs)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "scaleway_api_key",
+    "category": "api_key",
+    "keywords": [
+      "scaleway"
+    ],
+    "regex": "(?i)(?:scaleway)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "scrapeowl_api_key",
+    "category": "api_key",
+    "keywords": [
+      "scrapeowl"
+    ],
+    "regex": "(?i)(?:scrapeowl)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{30})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "scrapperapi_key",
+    "category": "api_key",
+    "keywords": [
+      "scrapperapi"
+    ],
+    "regex": "(?i)(?:scraperapi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "scraperbox_api_key",
+    "category": "api_key",
+    "keywords": [
+      "scraperbox"
+    ],
+    "regex": "(?i)(?:scraperbox)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "scrapersite_api_key",
+    "category": "api_key",
+    "keywords": [
+      "scrapersite"
+    ],
+    "regex": "(?i)(?:scrapersite)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{45})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "scraperstack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "scraperstack"
+    ],
+    "regex": "(?i)(?:scrapestack)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "scrapfly_api_key",
+    "category": "api_key",
+    "keywords": [
+      "scrapfly"
+    ],
+    "regex": "(?i)(?:scrapfly)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "scrapingant_api_key",
+    "category": "api_key",
+    "keywords": [
+      "scrapingant"
+    ],
+    "regex": "(?i)(?:scrapingant)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "scrapingbee_api_key",
+    "category": "api_key",
+    "keywords": [
+      "scrapingbee"
+    ],
+    "regex": "(?i)(?:scrapingbee)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{80})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "screenshotapi_key",
+    "category": "api_key",
+    "keywords": [
+      "screenshotapi"
+    ],
+    "regex": "(?i)(?:screenshotapi)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{7}\\-[0-9A-Z]{7}\\-[0-9A-Z]{7}\\-[0-9A-Z]{7})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "screenshotlayer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "screenshotlayer"
+    ],
+    "regex": "(?i)(?:screenshotlayer)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "scrutinizer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "scrutinizer"
+    ],
+    "regex": "(?i)(?:scrutinizer)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "securitytrails_api_key",
+    "category": "api_key",
+    "keywords": [
+      "securitytrails"
+    ],
+    "regex": "(?i)(?:securitytrails)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "segment_api_key",
+    "category": "api_key",
+    "keywords": [
+      "segment"
+    ],
+    "regex": "(?i)(?:segment)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_\\-a-zA-Z]{43}\\.[A-Za-z0-9_\\-a-zA-Z]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "selectpdf_api_key",
+    "category": "api_key",
+    "keywords": [
+      "selectpdf"
+    ],
+    "regex": "(?i)(?:selectpdf)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "semaphore_api_key",
+    "category": "api_key",
+    "keywords": [
+      "semaphore"
+    ],
+    "regex": "(?i)(?:semaphore)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sendgrid_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sendgrid"
+    ],
+    "regex": "(?i)(?:sendgrid)(?:.|[\\n\\r]){0,40}(SG\\.[\\w\\-_]{20,24}\\.[\\w\\-_]{39,50})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sendinblue_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sendinblue"
+    ],
+    "regex": "\\b(xkeysib\\-[A-Za-z0-9_-]{81})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sentiment_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sentiment"
+    ],
+    "regex": "(?i)(?:sentiment)(?:.|[\\n\\r]){0,40}\\b([0-9]{17})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sentry_api_key",
+    "category": "private_keys",
+    "keywords": [
+      "sentry"
+    ],
+    "regex": "(?:(?:(?:\\A|[\\r\\n])\\[auth\\][^[]*\\napi_key\\s*=|(?:\\A|\\b)SENTRY_API_KEY\\s*=|(?:\\A|\\b)sentry-cli [^\\r\\n]*--api-key |(?:\\A|\\b)auth\\.api_key\\s*=)\\s*['\"`]?)([a-fA-F0-9]{32})(?:\\z|\\s|['\"`])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "serphouse_api_key",
+    "category": "api_key",
+    "keywords": [
+      "serphouse"
+    ],
+    "regex": "(?i)(?:serphouse)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{60})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "serpstack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "serpstack"
+    ],
+    "regex": "(?i)(?:serpstack)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sheety_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sheety"
+    ],
+    "regex": "(?i)(?:sheety)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sherpadesk_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sherpadesk"
+    ],
+    "regex": "(?i)(?:sherpadesk)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "shipday_api_key",
+    "category": "api_key",
+    "keywords": [
+      "shipday"
+    ],
+    "regex": "(?i)(?:shipday)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9.]{11}[a-zA-Z0-9]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "shodan_api_key",
+    "category": "api_key",
+    "keywords": [
+      "shodan"
+    ],
+    "regex": "(?i)(?:shodan)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "shortcut_api_key",
+    "category": "api_key",
+    "keywords": [
+      "shortcut"
+    ],
+    "regex": "(?i)(?:shortcut)(?:.|[\\n\\r]){0,40}\\b([0-9a-f-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "shortstack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "shortstack"
+    ],
+    "regex": "(?i)(?:shotstack)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "shutterstock_api_key",
+    "category": "api_key",
+    "keywords": [
+      "shutterstock"
+    ],
+    "regex": "(?i)(?:shutterstock)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "signable_api_key",
+    "category": "api_key",
+    "keywords": [
+      "signable"
+    ],
+    "regex": "(?i)(?:signable)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "signalwire_api_key",
+    "category": "api_key",
+    "keywords": [
+      "signalwire"
+    ],
+    "regex": "(?i)(?:signalwire)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{50})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "signaturit_api_key",
+    "category": "api_key",
+    "keywords": [
+      "signaturit"
+    ],
+    "regex": "(?i)(?:signaturit)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{86})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "signupgenius_api_key",
+    "category": "api_key",
+    "keywords": [
+      "signupgenius"
+    ],
+    "regex": "(?i)(?:signupgenius)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sigopt_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sigopt"
+    ],
+    "regex": "(?i)(?:sigopt)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{48})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "simfin_api_key",
+    "category": "api_key",
+    "keywords": [
+      "simfin"
+    ],
+    "regex": "(?i)(?:simfin)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "simplesat_api_key",
+    "category": "api_key",
+    "keywords": [
+      "simplesat"
+    ],
+    "regex": "(?i)(?:simplesat)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "simplynoted_api_key",
+    "category": "api_key",
+    "keywords": [
+      "simplynoted"
+    ],
+    "regex": "(?i)(?:simplynoted)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{340,360})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "simvoly_api_key",
+    "category": "api_key",
+    "keywords": [
+      "simvoly"
+    ],
+    "regex": "(?i)(?:simvoly)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{33})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sinch_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sinch"
+    ],
+    "regex": "(?i)(?:sinch)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sirv_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sirv"
+    ],
+    "regex": "(?i)(?:sirv)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{88})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "siteleaf_api_key",
+    "category": "api_key",
+    "keywords": [
+      "siteleaf"
+    ],
+    "regex": "(?i)(?:siteleaf)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "skrapp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "skrapp"
+    ],
+    "regex": "(?i)(?:skrapp)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{42})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "skybiometry_api_key",
+    "category": "api_key",
+    "keywords": [
+      "skybiometry"
+    ],
+    "regex": "(?i)(?:skybiometry)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{25,26})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "smartsheets_api_key",
+    "category": "api_key",
+    "keywords": [
+      "smartsheets"
+    ],
+    "regex": "(?i)(?:smartsheets)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{37})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "smartystreets_api_key",
+    "category": "api_key",
+    "keywords": [
+      "smartystreets"
+    ],
+    "regex": "(?i)(?:smartystreets)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "smooch_api_key",
+    "category": "api_key",
+    "keywords": [
+      "smooch"
+    ],
+    "regex": "(?i)(?:smooch)(?:.|[\\n\\r]){0,40}\\b(act_[0-9a-z]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "snipcart_api_key",
+    "category": "api_key",
+    "keywords": [
+      "snipcart"
+    ],
+    "regex": "(?i)(?:snipcart)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_]{75})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "synk_api_key",
+    "category": "api_key",
+    "keywords": [
+      "synk"
+    ],
+    "regex": "(?i)(?:snyk)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sonarcloud_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sonarcloud"
+    ],
+    "regex": "(?i)(?:sonarcloud)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sparkpost_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sparkpost"
+    ],
+    "regex": "\\b([a-zA-Z0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "splunk_api_key",
+    "category": "api_key",
+    "keywords": [
+      "splunk"
+    ],
+    "regex": "(?i)(?:splunk)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "spoonacular_api_key",
+    "category": "api_key",
+    "keywords": [
+      "spoonacular"
+    ],
+    "regex": "(?i)(?:spoonacular)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sportradar_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sportradar"
+    ],
+    "regex": "(?i)(?:sportradar)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sportsmonk_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sportsmonk"
+    ],
+    "regex": "(?i)(?:sportsmonk)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{60})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "spotify_api_key",
+    "category": "api_key",
+    "keywords": [
+      "spotify"
+    ],
+    "regex": "(?i)(?:secret|key)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "square_api_key",
+    "category": "api_key",
+    "keywords": [
+      "square"
+    ],
+    "regex": "(?i)(?:square)(?:.|[\\n\\r]){0,40}(EAAA[a-zA-Z0-9\\-\\+\\=]{60})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "squareapp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "squareapp"
+    ],
+    "regex": "[\\w\\-]*sq0i[a-z]{2}-[0-9A-Za-z\\-_]{22,43}",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "squarespace_api_key",
+    "category": "api_key",
+    "keywords": [
+      "squarespace"
+    ],
+    "regex": "(?i)(?:squarespace)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "squareup_api_key",
+    "category": "api_key",
+    "keywords": [
+      "squareup"
+    ],
+    "regex": "\\b(sq0idp-[0-9A-Za-z]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sslmate_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sslmate"
+    ],
+    "regex": "(?i)(?:sslmate)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "statuscake_api_key",
+    "category": "api_key",
+    "keywords": [
+      "statuscake"
+    ],
+    "regex": "(?i)(?:statuscake)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "statuspage_api_key",
+    "category": "api_key",
+    "keywords": [
+      "statuspage"
+    ],
+    "regex": "(?i)(?:statuspage)(?:.|[\\n\\r]){0,40}\\b([0-9a-z-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "statuspal_api_key",
+    "category": "api_key",
+    "keywords": [
+      "statuspal"
+    ],
+    "regex": "(?i)(?:statuspal)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "stitchdata_api_key",
+    "category": "api_key",
+    "keywords": [
+      "stitchdata"
+    ],
+    "regex": "(?i)(?:stitchdata)(?:.|[\\n\\r]){0,40}\\b([0-9a-z_]{35})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "stockdata_api_key",
+    "category": "api_key",
+    "keywords": [
+      "stockdata"
+    ],
+    "regex": "(?i)(?:stockdata)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "storecove_api_key",
+    "category": "api_key",
+    "keywords": [
+      "storecove"
+    ],
+    "regex": "(?i)(?:storecove)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "stormboard_api_key",
+    "category": "api_key",
+    "keywords": [
+      "stormboard"
+    ],
+    "regex": "(?i)(?:stormboard)(?:.|[\\n\\r]){0,40}\\b([a-f0-9]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "stormglass_api_key",
+    "category": "api_key",
+    "keywords": [
+      "stormglass"
+    ],
+    "regex": "(?i)(?:stormglass)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z-]{73})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "storyblok_api_key",
+    "category": "api_key",
+    "keywords": [
+      "storyblok"
+    ],
+    "regex": "(?i)(?:storyblok)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{22}t{2})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "storychief_api_key",
+    "category": "api_key",
+    "keywords": [
+      "storychief"
+    ],
+    "regex": "(?i)(?:storychief)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_\\-.]{940,1000})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "strava_api_key",
+    "category": "api_key",
+    "keywords": [
+      "strava"
+    ],
+    "regex": "(?i)(?:strava)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "streak_api_key",
+    "category": "api_key",
+    "keywords": [
+      "streak"
+    ],
+    "regex": "(?i)(?:streak)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-f]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "stripe_api_key",
+    "category": "api_key",
+    "keywords": [
+      "stripe"
+    ],
+    "regex": "[rs]k_live_[a-zA-Z0-9]{20,30}",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "stytch_api_key",
+    "category": "api_key",
+    "keywords": [
+      "stytch"
+    ],
+    "regex": "(?i)(?:stytch)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-_]{47}=)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sugester_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sugester"
+    ],
+    "regex": "(?i)(?:sugester)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sumo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "sumo"
+    ],
+    "regex": "(?i)(?:sumo)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "supernotes_api_key",
+    "category": "api_key",
+    "keywords": [
+      "supernotes"
+    ],
+    "regex": "(?i)(?:supernotes)(?:.|[\\n\\r]){0,40}([ \\r\\n]{0,1}[0-9A-Za-z\\-_]{43}[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "survey_api_key",
+    "category": "api_key",
+    "keywords": [
+      "survey"
+    ],
+    "regex": "(?i)(?:survey)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "surveybot_api_key",
+    "category": "api_key",
+    "keywords": [
+      "surveybot"
+    ],
+    "regex": "(?i)(?:surveybot)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9-]{80})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "surveysparrow_api_key",
+    "category": "api_key",
+    "keywords": [
+      "surveysparrow"
+    ],
+    "regex": "(?i)(?:surveysparrow)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-_]{88})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "survicate_api_key",
+    "category": "api_key",
+    "keywords": [
+      "survicate"
+    ],
+    "regex": "(?i)(?:survicate)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "swell_api_key",
+    "category": "api_key",
+    "keywords": [
+      "swell"
+    ],
+    "regex": "(?i)(?:swell)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "swiftype_api_key",
+    "category": "api_key",
+    "keywords": [
+      "swiftype"
+    ],
+    "regex": "(?i)(?:swiftype)(?:.|[\\n\\r]){0,40}\\b([a-zA-z-0-9]{6}\\_[a-zA-z-0-9]{6}\\-[a-zA-z-0-9]{6})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tallyfy_api_key",
+    "category": "api_key",
+    "keywords": [
+      "tallyfy"
+    ],
+    "regex": "(?i)(?:tallyfy)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{36}\\.[0-9A-Za-z]{264}\\.[0-9A-Za-z\\-\\_]{683})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tatum_api_key",
+    "category": "api_key",
+    "keywords": [
+      "tatum"
+    ],
+    "regex": "(?i)(?:tatum)(?:.|[\\n\\r]){0,40}\\b([0-9a-z-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "taxjar_api_key",
+    "category": "api_key",
+    "keywords": [
+      "taxjar"
+    ],
+    "regex": "(?i)(?:taxjar)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "teamgate_api_key",
+    "category": "api_key",
+    "keywords": [
+      "teamgate"
+    ],
+    "regex": "(?i)(?:teamgate)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{80})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "teamworkcrm_api_key",
+    "category": "api_key",
+    "keywords": [
+      "teamworkcrm"
+    ],
+    "regex": "(?i)(?:teamwork|teamworkcrm|teamworkdesk|teamworkspaces)(?:.|[\\n\\r]){0,40}\\b(tkn\\.v1_[0-9A-Za-z]{71}=[ \\r\\n]{1})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "technicalanalysisapi_key",
+    "category": "api_key",
+    "keywords": [
+      "technicalanalysisapi"
+    ],
+    "regex": "(?i)(?:technicalanalysisapi)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{48})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tefter_api_key",
+    "category": "api_key",
+    "keywords": [
+      "tefter"
+    ],
+    "regex": "(?i)(?:tefter)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "teletype_api_key",
+    "category": "api_key",
+    "keywords": [
+      "teletype"
+    ],
+    "regex": "(?i)(?:teletype)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z-]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "telenyx_api_key",
+    "category": "api_key",
+    "keywords": [
+      "telenyx"
+    ],
+    "regex": "(?i)(?:telnyx)(?:.|[\\n\\r]){0,40}\\b(KEY[0-9A-Za-z_-]{55})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "testingbot_api_key",
+    "category": "api_key",
+    "keywords": [
+      "testingbot"
+    ],
+    "regex": "(?i)(?:testingbot)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "text2data_api_key",
+    "category": "api_key",
+    "keywords": [
+      "text2data"
+    ],
+    "regex": "(?i)(?:text2data)(?:.|[\\n\\r]){0,40}\\b([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "textmagic_api_key",
+    "category": "api_key",
+    "keywords": [
+      "textmagic"
+    ],
+    "regex": "(?i)(?:textmagic)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{30})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "thinkific_api_key",
+    "category": "api_key",
+    "keywords": [
+      "thinkific"
+    ],
+    "regex": "(?i)(?:thinkific)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "thousandeyes_api_key",
+    "category": "api_key",
+    "keywords": [
+      "thousandeyes"
+    ],
+    "regex": "(?i)(?:thousandeyes)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ticketmaster_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ticketmaster"
+    ],
+    "regex": "(?i)(?:ticketmaster)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tickettailor_api_key",
+    "category": "api_key",
+    "keywords": [
+      "tickettailor"
+    ],
+    "regex": "(?i)(?:tickettailor)(?:.|[\\n\\r]){0,40}\\b(sk[a-fA-Z0-9_]{45})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tiingo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "tiingo"
+    ],
+    "regex": "(?i)(?:tiingo)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "timecamp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "timecamp"
+    ],
+    "regex": "(?i)(?:timecamp)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{26})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "timezone_api_key",
+    "category": "api_key",
+    "keywords": [
+      "timezone"
+    ],
+    "regex": "(?i)(?:timezoneapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tly_api_key",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "(?i)(?:tly)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{60})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tmetric_api_key",
+    "category": "api_key",
+    "keywords": [
+      "tmetric"
+    ],
+    "regex": "(?i)(?:tmetric)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "todoist_api_key",
+    "category": "api_key",
+    "keywords": [
+      "todoist"
+    ],
+    "regex": "(?i)(?:todoist)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "toggltrack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "toggltrack"
+    ],
+    "regex": "(?i)(?:toggl)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tomorrow_api_key",
+    "category": "api_key",
+    "keywords": [
+      "tomorrow"
+    ],
+    "regex": "(?i)(?:tomorrow)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tomtom_api_key",
+    "category": "api_key",
+    "keywords": [
+      "tomtom"
+    ],
+    "regex": "(?i)(?:tomtom)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-zA-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tradier_api_key",
+    "category": "api_key",
+    "keywords": [
+      "tradier"
+    ],
+    "regex": "(?i)(?:tradier)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{28})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "travelpayouts_api_key",
+    "category": "api_key",
+    "keywords": [
+      "travelpayouts"
+    ],
+    "regex": "(?i)(?:travelpayouts)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "travisci_api_key",
+    "category": "api_key",
+    "keywords": [
+      "travisci"
+    ],
+    "regex": "(?i)(?:travis)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9A-Z_]{22})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "trello_api_key",
+    "category": "api_key",
+    "keywords": [
+      "trello"
+    ],
+    "regex": "(?i)(?:trello)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tru_api_key",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "(?i)(?:tru)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "twelvedata_api_key",
+    "category": "api_key",
+    "keywords": [
+      "twelvedata"
+    ],
+    "regex": "(?i)(?:twelvedata)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "twillo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "twillo"
+    ],
+    "regex": "(?i)(?:twillo)(?:.|[\\n\\r]){0,40}\\bSK[0-9a-fA-F]{32}\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "twitch_api_key",
+    "category": "api_key",
+    "keywords": [
+      "twitch"
+    ],
+    "regex": "(?i)(?:twitch)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{30})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "twitter_api_key",
+    "category": "api_key",
+    "keywords": [
+      "twitter"
+    ],
+    "regex": "(?i)(?:twitter)(?:.|[\\n\\r]){0,40}\\b([A-Z]{22}%[a-zA-Z-0-9]{23}%[a-zA-Z-0-9]{6}%[a-zA-Z-0-9]{3}%[a-zA-Z-0-9]{9}%[a-zA-Z-0-9]{52})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "tyntec_api_key",
+    "category": "api_key",
+    "keywords": [
+      "tyntec"
+    ],
+    "regex": "(?i)(?:tyntec)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "typeform_api_key",
+    "category": "api_key",
+    "keywords": [
+      "typeform"
+    ],
+    "regex": "(?i)(?:typeform)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{44})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "typetalk_api_key",
+    "category": "api_key",
+    "keywords": [
+      "typetalk"
+    ],
+    "regex": "(?i)(?:typetalk)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ubidots_api_key",
+    "category": "api_key",
+    "keywords": [
+      "ubidots"
+    ],
+    "regex": "\\b(BBFF-[0-9a-zA-Z]{30})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "uclassify_api_key",
+    "category": "api_key",
+    "keywords": [
+      "uclassify"
+    ],
+    "regex": "(?i)(?:uclassify)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "unify_api_key",
+    "category": "api_key",
+    "keywords": [
+      "unify"
+    ],
+    "regex": "(?i)(?:unify)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_=-]{44})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "unplugg_api_key",
+    "category": "api_key",
+    "keywords": [
+      "unplugg"
+    ],
+    "regex": "(?i)(?:unplu)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "unsplash_api_key",
+    "category": "api_key",
+    "keywords": [
+      "unsplash"
+    ],
+    "regex": "(?i)(?:unsplash)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "uplead_api_key",
+    "category": "api_key",
+    "keywords": [
+      "uplead"
+    ],
+    "regex": "(?i)(?:uplead)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "uploadcare_api_key",
+    "category": "api_key",
+    "keywords": [
+      "uploadcare"
+    ],
+    "regex": "(?i)(?:uploadcare)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{20})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "uptimerobot_api_key",
+    "category": "api_key",
+    "keywords": [
+      "uptimerobot"
+    ],
+    "regex": "(?i)(?:uptimerobot)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{9}-[a-zA-Z0-9]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "upwave_api_key",
+    "category": "api_key",
+    "keywords": [
+      "upwave"
+    ],
+    "regex": "(?i)(?:upwave)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "urlscan_api_key",
+    "category": "api_key",
+    "keywords": [
+      "urlscan"
+    ],
+    "regex": "(?i)(?:urlscan)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "userflow_api_key",
+    "category": "api_key",
+    "keywords": [
+      "userflow"
+    ],
+    "regex": "(?i)(?:userflow)(?:.|[\\n\\r]){0,40}\\b([0-9a-z_]{29})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "userstack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "userstack"
+    ],
+    "regex": "(?i)(?:userstack)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "vatlayer_api_key",
+    "category": "api_key",
+    "keywords": [
+      "vatlayer"
+    ],
+    "regex": "(?i)(?:vatlayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "vbout_api_key",
+    "category": "api_key",
+    "keywords": [
+      "vbout"
+    ],
+    "regex": "(?i)(?:vbout)(?:.|[\\n\\r]){0,40}\\b([0-9]{25})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "vercel_api_key",
+    "category": "api_key",
+    "keywords": [
+      "vercel"
+    ],
+    "regex": "(?i)(?:vercel)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{24})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "verifier_api_key",
+    "category": "api_key",
+    "keywords": [
+      "verifier"
+    ],
+    "regex": "(?i)(?:verifier)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{96})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "verimail_api_key",
+    "category": "api_key",
+    "keywords": [
+      "verimail"
+    ],
+    "regex": "(?i)(?:verimail)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "veriphone_api_key",
+    "category": "api_key",
+    "keywords": [
+      "veriphone"
+    ],
+    "regex": "(?i)(?:veriphone)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "versioneye_api_key",
+    "category": "api_key",
+    "keywords": [
+      "versioneye"
+    ],
+    "regex": "(?i)(?:versioneye)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "viewneo_api_key",
+    "category": "api_key",
+    "keywords": [
+      "viewneo"
+    ],
+    "regex": "(?i)(?:viewneo)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{120,300}.[a-z0-9A-Z]{150,300}.[a-z0-9A-Z-_]{600,800})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "virustotal_api_key",
+    "category": "api_key",
+    "keywords": [
+      "virustotal"
+    ],
+    "regex": "(?i)(?:virustotal)(?:.|[\\n\\r]){0,40}\\b([a-f0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "visualcrossing_api_key",
+    "category": "api_key",
+    "keywords": [
+      "visualcrossing"
+    ],
+    "regex": "(?i)(?:visualcrossing)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{25})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "voiceagain_api_key",
+    "category": "api_key",
+    "keywords": [
+      "voiceagain"
+    ],
+    "regex": "(?i)(?:voicegain)(?:.|[\\n\\r]){0,40}\\b(ey[0-9a-zA-Z_-]{34}.ey[0-9a-zA-Z_-]{108}.[0-9a-zA-Z_-]{43})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "voodoosms_api_key",
+    "category": "api_key",
+    "keywords": [
+      "voodoosms"
+    ],
+    "regex": "(?i)(?:voodoosms)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{46})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "vouchery_api_key",
+    "category": "api_key",
+    "keywords": [
+      "vouchery"
+    ],
+    "regex": "(?i)(?:vouchery)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "vpnapi_key",
+    "category": "api_key",
+    "keywords": [
+      "vpnapi"
+    ],
+    "regex": "(?i)(?:vpnapi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "vultr_api_key",
+    "category": "api_key",
+    "keywords": [
+      "vultr"
+    ],
+    "regex": "(?i)(?:vultr)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "vyte_api_key",
+    "category": "api_key",
+    "keywords": [
+      "vyte"
+    ],
+    "regex": "(?i)(?:vyte)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{50})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "walkscore_api_key",
+    "category": "api_key",
+    "keywords": [
+      "walkscore"
+    ],
+    "regex": "(?i)(?:walkscore)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "weatherbit_api_key",
+    "category": "api_key",
+    "keywords": [
+      "weatherbit"
+    ],
+    "regex": "(?i)(?:weatherbit)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "weatherstack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "weatherstack"
+    ],
+    "regex": "(?i)(?:weatherstack)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "webex_api_key",
+    "category": "api_key",
+    "keywords": [
+      "webex"
+    ],
+    "regex": "(?i)(?:webex)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "webflow_api_key",
+    "category": "api_key",
+    "keywords": [
+      "webflow"
+    ],
+    "regex": "(?i)(?:webflow)(?:.|[\\n\\r]){0,40}\\b([a-zA0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "webscraper_api_key",
+    "category": "api_key",
+    "keywords": [
+      "webscraper"
+    ],
+    "regex": "(?i)(?:webscraper)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{60})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "webscraping_api_key",
+    "category": "api_key",
+    "keywords": [
+      "webscraping"
+    ],
+    "regex": "(?i)(?:webscraping)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "wepay_api_key",
+    "category": "api_key",
+    "keywords": [
+      "wepay"
+    ],
+    "regex": "(?i)(?:wepay)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_?]{62})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "whoxy_api_key",
+    "category": "api_key",
+    "keywords": [
+      "whoxy"
+    ],
+    "regex": "(?i)(?:whoxy)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{33})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "wistia_api_key",
+    "category": "api_key",
+    "keywords": [
+      "wistia"
+    ],
+    "regex": "(?i)(?:wistia)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "wit_api_key",
+    "category": "api_key",
+    "keywords": [],
+    "regex": "(?i)(?:wit)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "worksnaps_api_key",
+    "category": "api_key",
+    "keywords": [
+      "worksnaps"
+    ],
+    "regex": "(?i)(?:worksnaps)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "workstack_api_key",
+    "category": "api_key",
+    "keywords": [
+      "workstack"
+    ],
+    "regex": "(?i)(?:workstack)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-zA-Z]{60})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "worldcoinindex_api_key",
+    "category": "api_key",
+    "keywords": [
+      "worldcoinindex"
+    ],
+    "regex": "(?i)(?:worldcoinindex)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{35})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "worlweather_api_key",
+    "category": "api_key",
+    "keywords": [
+      "worlweather"
+    ],
+    "regex": "(?i)(?:worldweather)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{31})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "wrike_api_key",
+    "category": "api_key",
+    "keywords": [
+      "wrike"
+    ],
+    "regex": "(?i)(?:wrike)(?:.|[\\n\\r]){0,40}\\b(ey[a-zA-Z0-9-._]{333})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "yandex_api_key",
+    "category": "api_key",
+    "keywords": [
+      "yandex"
+    ],
+    "regex": "(?i)(?:yandex)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z.]{83})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "yelp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "yelp"
+    ],
+    "regex": "(?i)(?:yelp)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_\\\\=\\.\\-]{128})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "youneedabudget_api_key",
+    "category": "api_key",
+    "keywords": [
+      "youneedabudget"
+    ],
+    "regex": "(?i)(?:youneedabudget)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "yousign_api_key",
+    "category": "api_key",
+    "keywords": [
+      "yousign"
+    ],
+    "regex": "(?i)(?:yousign)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zenkit_api_key",
+    "category": "api_key",
+    "keywords": [
+      "zenkit"
+    ],
+    "regex": "(?i)(?:zenkit)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}\\-[0-9A-Za-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zenrows_api_key",
+    "category": "api_key",
+    "keywords": [
+      "zenrows"
+    ],
+    "regex": "(?i)(?:zenrows)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{40})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zenscrape_api_key",
+    "category": "api_key",
+    "keywords": [
+      "zenscrape"
+    ],
+    "regex": "(?i)(?:zenscrape)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zenserp_api_key",
+    "category": "api_key",
+    "keywords": [
+      "zenserp"
+    ],
+    "regex": "(?i)(?:zenserp)(?:.|[\\n\\r]){0,40}\\b([0-9a-z-]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zeplin_api_key",
+    "category": "api_key",
+    "keywords": [
+      "zeplin"
+    ],
+    "regex": "(?i)(?:zeplin)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-.]{350,400})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zerobounce_api_key",
+    "category": "api_key",
+    "keywords": [
+      "zerobounce"
+    ],
+    "regex": "(?i)(?:zerobounce)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zipapi_key",
+    "category": "api_key",
+    "keywords": [
+      "zipapi"
+    ],
+    "regex": "(?i)(?:zipapi)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zipcode_api_key",
+    "category": "api_key",
+    "keywords": [
+      "zipcode"
+    ],
+    "regex": "(?i)(?:zipcodeapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zipcodebase_api_key",
+    "category": "api_key",
+    "keywords": [
+      "zipcodebase"
+    ],
+    "regex": "(?i)(?:zipcodebase)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "zonka_api_key",
+    "category": "api_key",
+    "keywords": [
+      "zonka"
+    ],
+    "regex": "(?i)(?:zonka)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{36})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "usersecretscanner_api_key",
+    "category": "api_key",
+    "keywords": [
+      "usersecretscanner"
+    ],
+    "regex": "(?i)(?:user)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-._+=]{64})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "cloudflare_certificate_key",
+    "category": "api_key",
+    "keywords": [
+      "cloudflare"
+    ],
+    "regex": "(?i)(?:cloudflare)(?:.|[\\n\\r]){0,40}\\b(v[A-Za-z0-9._-]{173,})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "upcdatabase_api_key",
+    "category": "api_key",
+    "keywords": [
+      "upcdatabase"
+    ],
+    "regex": "(?i)(?:upcdatabase)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
     "id": "github_private_key",
     "category": "api_key",
     "keywords": [
@@ -36,6 +6399,175 @@
       "theoddsapi"
     ],
     "regex": "(?i)(?:theoddsapi|the-odds-api)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "test_django_secret_key_test",
+    "category": "private_keys",
+    "keywords": [
+      "django",
+      "secret"
+    ],
+    "regex": "(?:(?:\\A|[^0-9A-Za-z])SECRET_KEY\\s*=\\s*[\"']?)([^\\s\"'(${{)][^\\r\\n'\"]*)(?:\\z|[\\r\\n'\"])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "datadog_app_key",
+    "category": "private_keys",
+    "keywords": [
+      "datadog"
+    ],
+    "regex": "(?:(\\A|\\b)(((?i)(DD|DATADOG)_APP(LICATION)?_KEY)['\"]?\\s*(value)?[=:,]\\s*['\"]?|new DataDogWinston\\({[^}]*apiKey:\\s*'|terraformer import datadog [^\\n]*--api-key=|provider \"datadog\" {[^}]*api_key\\s*=\\s*\"))([a-f0-9]{40})(?:\\z|\\b)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "browserstack_access_key",
+    "category": "private_keys",
+    "keywords": [
+      "browserstack",
+      "access"
+    ],
+    "regex": "(?:(\\A|\\b)(?i)_?(browserstack|bs|automate)_?\\.?((Access|Auth)_?Key|Password)['\"`]?\\s*([:=]|[?:]=|[=-]>|,)\\s*['\"`]?)([0-9a-zA-Z]{20})(?:\\z|[^a-zA-Z0-9/+_-])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "browserstack_access_key_imprecise",
+    "category": "private_keys",
+    "keywords": [
+      "browserstack",
+      "access",
+      "imprecise"
+    ],
+    "regex": "(?:(\\A|\\b)(?i)_?(Access|Auth)_?Key['\"`]?\\s*([:=]|[?:]=|[=-]>|,)\\s*['\"`]?)([0-9a-zA-Z]{20})(?:\\z|[^a-zA-Z0-9/+_-])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "openstack_password_or_key",
+    "category": "private_keys",
+    "keywords": [
+      "openstack",
+      "password"
+    ],
+    "regex": "(?:(?i)OPEN_?STACK_(PASSWORD|API_?KEY)[_A-Z]*['\"`]?(\\s*[\\]\\)])?\\s*([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s*([[{])?['\"`]?)([^'\",\\r\\n \\t\\x00-\\x08]+)(?:['\"\\r\\n,]|\\z)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "alienvault_otx_api_key",
+    "category": "private_keys",
+    "keywords": [
+      "alienvault"
+    ],
+    "regex": "(?:(?i)ALIENVAULT(_?OTX)?(_?API)?_?KEY['\"`]?(\\s*[\\]\\)])?\\s*([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s*([[{])?['\"`]?)([a-f0-9]{64}|[a-f0-9]{40})(?:['\"`\\r\\n,]|\\z)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "apollo_io_api_key",
+    "category": "private_keys",
+    "keywords": [
+      "apollo"
+    ],
+    "regex": "(?:(?i)key['\"`]?(\\s*[\\]\\)])?\\s*([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s*([[{])?['\"`]?)(service:[A-Za-z0-9-]+:[^\\s'\"`,\\x00-\\x08\\x7f-\\xff]+)(?:['\"`,]|\\z|\\s)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "clickup_api_key",
+    "category": "private_keys",
+    "keywords": [
+      "clickup"
+    ],
+    "regex": "(?:\\b|\\A)(pk_[0-9]{6,8}_[A-Z0-9]{32})(?:\\b|\\z)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "iban_tr",
+    "category": "private_keys",
+    "keywords": [
+      "iban",
+      "turkey"
+    ],
+    "regex": "(?:\\A|[^A-Za-z0-9-])(TR(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){15}(?:[0-9A-Z][ -]?){3})(?:\\z|[^A-Za-z0-9-])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "generic_rsa_keys",
+    "category": "private_keys",
+    "keywords": [
+      "generic",
+      "keys"
+    ],
+    "regex": "(--BEGIN (?:[A-Z]+ )?PRIVATE KEY--+(\\\\[nr]|[\\r\\n])+([a-zA-Z0-9+/=\\s]|\\\\[rn])+(\\\\[rn]|[\\r\\n])+--+END (?:[A-Z]+ )?PRIVATE KEY--)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ssh_private_keys",
+    "category": "private_keys",
+    "keywords": [
+      "private",
+      "keys"
+    ],
+    "regex": "(--BEGIN OPENSSH PRIVATE KEY--+[a-zA-Z0-9+/=\\s]+--+END OPENSSH PRIVATE KEY--)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "gpg_private_key",
+    "category": "private_keys",
+    "keywords": [
+      "private"
+    ],
+    "regex": "(--BEGIN PGP PRIVATE KEY BLOCK--+(?:[\\r\\n]+((Version|Comment|MessageID|Hash|Charset): [^\\r\\n]+[\\r\\n]+)+[\\r\\n]+)?[a-zA-Z0-9+/=\\s]+--+END PGP PRIVATE KEY BLOCK--)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "ssh_public_key",
+    "category": "private_keys",
+    "keywords": [
+      "public"
+    ],
+    "regex": "(ssh-rsa\\s+[a-zA-Z0-9/\\+=]{20,})(?:\\z|\\s+[a-zA-Z0-9@-]+([\\r\\n]|\\z))",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "django_secret_key",
+    "category": "private_keys",
+    "keywords": [
+      "django",
+      "secret"
+    ],
+    "regex": "(?:(\\b|\\A)SECRET_KEY[ \\t]*=[ \\t]*[\"'])([^\\r\\n\"']+)(?:['\"])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "dotnet_machinekey",
+    "category": "private_keys",
+    "keywords": [
+      "machinekey"
+    ],
+    "regex": "(?:<machineKey\\s+[^>]*(validation|decryption)Key=\")([A-Fa-f0-9]+)(?:\\\")",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "shutterstock_oauth_key",
+    "category": "api_key",
+    "keywords": [
+      "shutterstock"
+    ],
+    "regex": "(?i)(?:shutterstock)(?:.|[\\n\\r]){0,40}\\b(v2/[0-9A-Za-z]{388})\\b",
     "risk": "high",
     "entropy": 3.5
   }

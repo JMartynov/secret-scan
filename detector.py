@@ -70,7 +70,7 @@ class DetectionEngine:
                 rule.setdefault('min_entropy', 3.0)
                 rule.setdefault('entropy_required', False)
 
-            for kw in rule.get('keywords', []):
+            for kw in (rule.get('keywords') or []):
                 kw = kw.lower()
                 if kw not in self.keyword_map:
                     self.keyword_map[kw] = []
@@ -121,7 +121,7 @@ class DetectionEngine:
         line_lower = line.lower()
         
         # Boost confidence if specific keywords from the rule are present
-        for kw in rule.get('keywords', []):
+        for kw in (rule.get('keywords') or []):
             if kw.lower() in line_lower:
                 score = min(1.0, score + 0.1)
         
@@ -192,7 +192,7 @@ class SecretDetector:
             rule_def = self.engine.rules[rule['original_idx']]
             if force_scan_all or not rule_def.get('keywords') or rule['original_idx'] in triggered_indices:
                 for m in rule['regex'].finditer(text):
-                    content = m.group(1) if m.groups() else m.group(0)
+                    content = (m.group(1) if m.groups() else m.group(0)) or ""
                     if rule_def.get('entropy_required'):
                         if self.engine.calculate_entropy(content) < rule_def.get('min_entropy', 3.0):
                             continue
@@ -212,7 +212,7 @@ class SecretDetector:
             rule_def = self.engine.rules[rule['original_idx']]
             if force_scan_all or not rule_def.get('keywords') or rule['original_idx'] in triggered_indices:
                 for m in self.engine.run_safe_legacy_match(rule['regex'], text):
-                    content = m.group(1) if m.groups() else m.group(0)
+                    content = (m.group(1) if m.groups() else m.group(0)) or ""
                     if rule_def.get('entropy_required'):
                         if self.engine.calculate_entropy(content) < rule_def.get('min_entropy', 3.0):
                             continue
@@ -229,7 +229,8 @@ class SecretDetector:
         # 2. Contextual rules
         for regex in self.context_rules:
             for m in regex.finditer(text):
-                all_findings.append(Finding("Contextual Secret (LLM Prompt)", get_line_num(m.start()), "MEDIUM", m.group(1), 0.6, m.start(), m.end()))
+                secret = m.group(1) or ""
+                all_findings.append(Finding("Contextual Secret (LLM Prompt)", get_line_num(m.start()), "MEDIUM", secret, 0.6, m.start(), m.end()))
 
         # 3. Entropy Detection
         for i, start in enumerate(line_offsets):

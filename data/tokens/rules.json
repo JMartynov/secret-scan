@@ -1,5 +1,50 @@
 [
   {
+    "id": "json_token",
+    "category": "api_keys",
+    "keywords": [
+      "json",
+      "with",
+      "encoded"
+    ],
+    "regex": "(?:[{[,][ \\t]*[ \\t\\r\\n]*\"(?i)[a-z_-]*(?:secret|service_pass(wd|word|code|phrase)|pass(?:wd|word|code|phrase)?|key|token)\"[ \\t]*:[ \\t]*\")([0-9a-f]{32}|[0-9a-f]{40}|[0-9a-f]{64})(?:\"[ \\t\\r\\n]*[,}\\]])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "uuidv4_bearer_token",
+    "category": "cloud_credentials",
+    "keywords": [
+      "uuidv4",
+      "bearer",
+      "token"
+    ],
+    "regex": "(?:(\\b|\\A)(?i)Bearer[ ])([a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12})(?:\\b|\\z)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "terraformcloud_api_token",
+    "category": "api_key",
+    "keywords": [
+      "terraformcloud"
+    ],
+    "regex": "\\b([A-Za-z0-9]{14}.atlasv1.[A-Za-z0-9]{67})\\b",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "okta_token_precise",
+    "category": "private_keys",
+    "keywords": [
+      "okta",
+      "precise"
+    ],
+    "regex": "(?:(\\bSSWS\\s{1,5}|(?i)okta[_-]?(api[_-]?)?(token|key|secret)\\s{0,28}([:=]|[=-]>|to|[!=]={1,2}|<>)\\s{0,28}['\"`]?))(0{2}[0-9A-Za-z_-]{40})(?:\\z|[^0-9A-Za-z_+/=-])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
     "id": "asana_access_token",
     "category": "api_key",
     "keywords": [
@@ -66,16 +111,6 @@
       "avaza"
     ],
     "regex": "(?i)(?:avaza)(?:.|[\\n\\r]){0,40}\\b([0-9]+-[0-9a-f]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
-  },
-  {
-    "id": "amazon_mws_auth_token",
-    "category": "api_key",
-    "keywords": [
-      "amazon"
-    ],
-    "regex": "amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
     "risk": "high",
     "entropy": 3.5
   },
@@ -258,16 +293,6 @@
     "entropy": 3.5
   },
   {
-    "id": "shutterstock_oauth_key",
-    "category": "api_key",
-    "keywords": [
-      "shutterstock"
-    ],
-    "regex": "(?i)(?:shutterstock)(?:.|[\\n\\r]){0,40}\\b(v2/[0-9A-Za-z]{388})\\b",
-    "risk": "high",
-    "entropy": 3.5
-  },
-  {
     "id": "slack_token",
     "category": "api_key",
     "keywords": [
@@ -338,22 +363,180 @@
     "entropy": 3.5
   },
   {
-    "id": "youtube/google_oauth_id",
-    "category": "api_key",
-    "keywords": [
-      "youtube/google"
-    ],
-    "regex": "[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com",
-    "risk": "high",
-    "entropy": 3.5
-  },
-  {
     "id": "zendesk_api_token",
     "category": "api_key",
     "keywords": [
       "zendesk"
     ],
     "regex": "(?i)(?:zendesk)(?:.|[\\n\\r]){0,40}([A-Za-z0-9_-]{40})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "jwt",
+    "category": "tokens",
+    "keywords": [],
+    "regex": "(?:[^0-9A-Za-z_.-]|\\A)(e(?:y[IJ]|yL[CD]|yA[JKgi]|w[ko][JKgi])[A-Za-z0-9_-]{10,}(?:fQ|[3HXn]0|[1BFJNRVZdhlpx]9)={0,2}\\.e(?:y[IJ]|yL[CD]|yA[JKgi]|w[ko][JKgi])[A-Za-z0-9_-]{10,}(?:fQ|[3HXn]0|[1BFJNRVZdhlpx]9)={0,2}(?:\\.?[A-Za-z0-9_-]+={0,2})?)(?:[^0-9A-Za-z_.=-]|\\z)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "grafana_api_token",
+    "category": "tokens",
+    "keywords": [
+      "grafana",
+      "token"
+    ],
+    "regex": "(eyJrIjoi[A-Za-z0-9_=-]{42})",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sentry_auth_token",
+    "category": "tokens",
+    "keywords": [
+      "sentry",
+      "auth",
+      "token"
+    ],
+    "regex": "(?:(?:(?:\\A|[\\r\\n])\\[auth\\][^[]*\\ntoken\\s*=|(?:\\A|\\b)SENTRY_AUTH_TOKEN\\s*=|(?:\\A|\\b)sentry-cli [^\\r\\n]*--auth-token |(?:\\A|\\b)auth\\.token\\s*=)\\s*['\"`]?)([a-fA-F0-9]{64})(?:\\z|\\s|['\"`])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sentry_webpack_plugin_token",
+    "category": "tokens",
+    "keywords": [
+      "sentry",
+      "webpack",
+      "plugin"
+    ],
+    "regex": "(?:new SentryPlugin\\(\\s*\\{[^}]*[,\\n \\t]apiKey:\\s*['\"])((?:[a-fA-F0-9]{32}|[a-fA-F0-9]{64}))(?:['\"])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "sentry_terraform_provider_token",
+    "category": "tokens",
+    "keywords": [
+      "sentry",
+      "terraform",
+      "provider"
+    ],
+    "regex": "(?:(?:\\A|[\\r\\n])provider \"sentry\" {[^}]*[\\n \\t]token\\s*=\\s*['\"])([a-fA-F0-9]{64})(?:['\"])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "okta_token",
+    "category": "tokens",
+    "keywords": [
+      "okta",
+      "token"
+    ],
+    "regex": "(?:(\\A|[^0-9A-Za-z_+/-]))((0{2}[0-9A-Za-z_-]{40}))(?:(\\z|[^0-9A-Za-z_+/=-]))",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "flickr_oauth_token",
+    "category": "tokens",
+    "keywords": [
+      "flickr",
+      "oauth",
+      "token"
+    ],
+    "regex": "(?:(\\A|\\b)oauth_token=)([0-9]{17}-[0-9a-f]{16})(?:\\z|\\b)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "browserstack_token_url",
+    "category": "tokens",
+    "keywords": [
+      "browserstack",
+      "token"
+    ],
+    "regex": "(?:https?://)([^:]+:[0-9a-zA-Z]{20})(?:@hub-cloud\\.browserstack\\.com/)",
+    "risk": "high"
+  },
+  {
+    "id": "vercel_access_token_imprecise",
+    "category": "tokens",
+    "keywords": [
+      "vercel",
+      "access",
+      "token"
+    ],
+    "regex": "(?:(\\A|\\b|[_.-])(?i)vercel[_.-]?((access|api)[_.-]?)?token\\s*[=:]\\s*['\"]?)([A-Za-z0-9]{24})(?:\\z|\\s|['\"])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "vercel_access_token",
+    "category": "tokens",
+    "keywords": [
+      "vercel",
+      "access",
+      "token"
+    ],
+    "regex": "(?:(\\A|\\b)(?i)vercel[_.-]?((access|api)[_.-]?)?token\\s*[=:]\\s*['\"]?)([A-Za-z0-9]{24})(?:\\z|\\s|['\"])",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "vercel_cli_token",
+    "category": "tokens",
+    "keywords": [
+      "vercel",
+      "token"
+    ],
+    "regex": "(?:(\\A|\\b)vercel [^\\r\\n]*--token=)([A-Za-z0-9]{24})(?:\\z|\\s)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "jenkins_api_token",
+    "category": "tokens",
+    "keywords": [
+      "jenkins",
+      "token"
+    ],
+    "regex": "(?:(?i)jenkins_?(api[_-]?)?(token|secret|key)['\"`]?(\\s*[\\]\\)])?\\s*([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s*([[{])?['\"`]?)([a-f0-9]{32,64})(?:['\"`\\r\\n,]|\\z)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "circleci_api_token",
+    "category": "tokens",
+    "keywords": [
+      "circleci",
+      "token"
+    ],
+    "regex": "(?:(?i)circle[_-]?(ci[_.-]?)?(api[_.-]?)?(token|key)['\"`]?(\\s*[\\]\\)])?\\s*([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s*([[{])?['\"`]?)([a-f0-9]{40})(?:['\"`\\r\\n,]|\\z)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "yaml_token",
+    "category": "tokens",
+    "keywords": [
+      "yaml",
+      "with",
+      "token"
+    ],
+    "regex": "(?:(?:\\n|\\A)[ \\t]*(?i)[a-z_-]*(?:secret|service_pass(wd|word|code|phrase)|pass(?:wd|word|code|phrase)?|key|token)[ \\t]*:[ \\t]*(['\"]?|[|>]-?[ \\t]*\\n[ \\t]*))([0-9a-f]{32}|[0-9a-f]{40}|[0-9a-f]{64})(?:['\"\\r\\n]|\\z)",
+    "risk": "high",
+    "entropy": 3.5
+  },
+  {
+    "id": "bearer_tokens",
+    "category": "tokens",
+    "keywords": [
+      "bearer",
+      "tokens"
+    ],
+    "regex": "(?:(Authorization: |['\"])([Bb]earer |[Tt]oken (token=)?))([a-zA-Z0-9_.=/+:-]{12,})(?:\\z|[\\s'\"])",
     "risk": "high",
     "entropy": 3.5
   }

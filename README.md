@@ -106,7 +106,7 @@ Combining these methods significantly improves accuracy.
 
 # Secret Types Detected
 
-The scanner detects many classes of sensitive data, including:
+The scanner detects over **180 classes** of sensitive data, including:
 
 ### API Keys
 
@@ -175,7 +175,7 @@ The **LLM Secrets Leak Detector** provides a comprehensive suite of features des
 | | **Regex Matching (Legacy)** | ✅ | Fallback to `regex` (Python) for complex patterns.<br>ReDoS protection. |
 | | **Entropy Analysis** | ✅ | Shannon entropy scoring for random-looking tokens (min 20 chars). |
 | | **Contextual Heuristics** | ✅ | Identifies secrets based on surrounding keywords like `prod`, `password`, `key`. |
-| | **Rule-based Logic** | ✅ | 1600+ rules loaded from `data/rules.json`. |
+| | **Rule-based Logic** | ✅ | 1750+ rules loaded from `data/` (Expanded 2026). |
 | **Input Sources** | **File Scanning** | ✅ | Scans local files with UTF-8 support.<br>Error handling. |
 | | **Stdin / Piped Input** | ✅ | Real-time processing of piped data (e.g., `cat log \| ./run.sh`). |
 | | **Direct Text** | ✅ | Via `--text` flag for quick prompt validation. |

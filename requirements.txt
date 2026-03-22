@@ -7,3 +7,4 @@ exrex
 regexploit
 redoctor
 Faker
+PyYAML

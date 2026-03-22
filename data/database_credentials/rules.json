@@ -70,13 +70,156 @@
     "entropy": 3.5
   },
   {
-    "id": "upcdatabase_api_key",
-    "category": "api_key",
+    "id": "database_connection_string_full",
+    "category": "database_credentials",
     "keywords": [
-      "upcdatabase"
+      "database",
+      "connection",
+      "string"
     ],
-    "regex": "(?i)(?:upcdatabase)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "regex": "(?:\\A|[\"'`]|&quot;|[\\r\\n]|[=:-])([^\"'`\\x00-\\x08\\r\\n|]*([Ss]erver|[Pp]rovider|[Dd]atabase|[Uu]ser [Ii]d|[Dd]ata [Ss]ource|[Ee]ndpoint|[Dd]efault[Ee]nd[Pp]oints[Pp]rotocol|[Aa]ccountName|[Da]ata[Ss]ource|[Aa]uthentication|[Ll]ogin|[Ii]nitial[Cc]atalog|DB|Trusted_Connection|authenticationType|DSN|[Dd]ata[Ss]ource[Nn]ame|[Ii]ntegrated[Ss]ecurity|[Ll]ocation|[Ee]ncrypt|[Ss]ystem|[Pp]rotocol|[Hh]ost|[Pp]ort|SRVR|[Dd]river|Dbq|[Ss]sl[Mm]ode|SSL|[Uu]id|DBNAME|SystemDB|[Pp]ersist [Ss]ecurity [Ii]nfo|[Cc]onnection [Tt]ype|[Dd]ata[Ss]ource[Nn]ame|[Ee]xcel [Ff]ile|[Ss]erver [Nn]ame|URL)=[^\"'`\\x00-\\x08\\r\\n|]*)(?:\\z|[\"'`]|&quot;|[\\r\\n])",
+    "risk": "high"
+  },
+  {
+    "id": "database_connection_string_1",
+    "category": "database_credentials",
+    "keywords": [
+      "database",
+      "connection",
+      "string"
+    ],
+    "regex": "(?:(\"|&quot;)(([Ss]erver|[Pp]rovider|[Dd]atabase|[Uu]ser [Ii]d|[Dd]ata [Ss]ource|[Ee]ndpoint|[Dd]efault[Ee]nd[Pp]oints[Pp]rotocol|[Aa]ccountName|[Da]ata[Ss]ource|[Aa]uthentication|[Ll]ogin|[Ii]nitial[Cc]atalog|DB|Trusted_Connection|authenticationType|DSN|[Dd]ata[Ss]ource[Nn]ame|[Ii]ntegrated[Ss]ecurity|[Ll]ocation|[Ee]ncrypt|[Ss]ystem|[Pp]rotocol|[Hh]ost|[Pp]ort|SRVR|[Dd]river|Dbq|[Ss]sl[Mm]ode|SSL|[Uu]id|DBNAME|SystemDB|[Pp]ersist [Ss]ecurity [Ii]nfo|[Cc]onnection [Tt]ype|[Dd]ata[Ss]ource[Nn]ame|[Ee]xcel [Ff]ile|[Ss]erver [Nn]ame|URL)=[^\"]+;) ?([Pp]assword|[Pp]wd|[Ss]hared[Ss]ecret[Vv]alue|[Aa]ccount[Kk]ey|PW|pw|[Cc]ipher [Kk]ey|OAuth Access Token Secret)=)([^;\"\\x00-\\x08]+)(?:(;|\"|&quot;))",
+    "risk": "high"
+  },
+  {
+    "id": "database_connection_string_2",
+    "category": "database_credentials",
+    "keywords": [
+      "database",
+      "connection",
+      "string"
+    ],
+    "regex": "(?:(?i)(\"|&quot;)([Pp]assword|[Pp]wd|[Ss]hared[Ss]ecret[Vv]alue|[Aa]ccount[Kk]ey|PW|pw|[Cc]ipher [Kk]ey|OAuth Access Token Secret)=)([^;\"\\x00-\\x08]+)(?:;[^\";]* ?([Ss]erver|[Pp]rovider|[Dd]atabase|[Uu]ser [Ii]d|[Dd]ata [Ss]ource|[Ee]ndpoint|[Dd]efault[Ee]nd[Pp]oints[Pp]rotocol|[Aa]ccountName|[Da]ata[Ss]ource|[Aa]uthentication|[Ll]ogin|[Ii]nitial[Cc]atalog|DB|Trusted_Connection|authenticationType|DSN|[Dd]ata[Ss]ource[Nn]ame|[Ii]ntegrated[Ss]ecurity|[Ll]ocation|[Ee]ncrypt|[Ss]ystem|[Pp]rotocol|[Hh]ost|[Pp]ort|SRVR|[Dd]river|Dbq|[Ss]sl[Mm]ode|SSL|[Uu]id|DBNAME|SystemDB|[Pp]ersist [Ss]ecurity [Ii]nfo|[Cc]onnection [Tt]ype|[Dd]ata[Ss]ource[Nn]ame|[Ee]xcel [Ff]ile|[Ss]erver [Nn]ame|URL)=)",
+    "risk": "high"
+  },
+  {
+    "id": "database_connection_string_3",
+    "category": "database_credentials",
+    "keywords": [
+      "database",
+      "connection",
+      "string"
+    ],
+    "regex": "(?:(\\A|\\b)ConnectionStrings__Default=[^\\r\\n]*([Pp]assword|[Pp]wd|[Ss]hared[Ss]ecret[Vv]alue|[Aa]ccount[Kk]ey|PW|pw|[Cc]ipher [Kk]ey|OAuth Access Token Secret)=)([^;\\r\\n\"'\\x00-\\x08]+)(?:([;\\n]|\\z))",
+    "risk": "high"
+  },
+  {
+    "id": "tsql_create_login_or_user",
+    "category": "database_credentials",
+    "keywords": [
+      "tsql",
+      "create",
+      "login"
+    ],
+    "regex": "(?:(\\A|\\b)CREATE\\s+(LOGIN|USER)\\s+[^\\s\\x00-\\x08]+\\s+WITH\\s+PASSWORD\\s+=\\s+N?')([^'\\x00-\\x08]{8,128})(?:\\')",
+    "risk": "high"
+  },
+  {
+    "id": "sqlalchemy_connection_string",
+    "category": "database_credentials",
+    "keywords": [
+      "sqlalchemy",
+      "database",
+      "connection"
+    ],
+    "regex": "(?:(\\A|\\b)mysql\\+[a-z]+://[^/?#:@\\s\\x00-\\x08]*:)([^$/?#@\\s][^/?#@\\s\\x00-\\x08]*)(?:@)",
+    "risk": "high"
+  },
+  {
+    "id": "mongodb_connection_string",
+    "category": "database_credentials",
+    "keywords": [
+      "mongodb",
+      "connection",
+      "string"
+    ],
+    "regex": "(?:\\A|\\b)(mongodb(\\+[a-z]+)?://[^'\"`<>/:@\\s\\x00-\\x08]+:[^'\"`<>/@\\s\\x00-\\x08]+@[^?'\"`\\s\\x00-\\x08]+)(?:\\z|\\s|['\"`?])",
+    "risk": "high"
+  },
+  {
+    "id": "jdbc_connection_string",
+    "category": "database_credentials",
+    "keywords": [
+      "jdbc",
+      "database",
+      "connection"
+    ],
+    "regex": "(?:\\A|\\b)(jdbc:[^:\\x00-\\x08]+:\\/\\/[^\\/\\x00-\\x08]+\\/[^?\\x00-\\x08]+\\?user=[^&\\x00-\\x08]+&password=[^\\s'\"`<{$%*\\x00-\\x08]+)(?:\\z|\\s|['\"`<])",
+    "risk": "high"
+  },
+  {
+    "id": "hardcoded_spring_sql_passwords",
+    "category": "database_credentials",
+    "keywords": [
+      "hardcoded",
+      "spring",
+      "passwords"
+    ],
+    "regex": "(?:(\\A|\\b)(?:spring\\.datasource|jdbc)\\.password[ \\t]*=[ \\t]*['\"]?)([^\\r\\n'\"\\x00-\\x08]+)(?:\\z|['\"\\r\\n])",
+    "risk": "high"
+  },
+  {
+    "id": "hardcoded_internal_emails",
+    "category": "database_credentials",
+    "keywords": [
+      "hardcoded",
+      "internal",
+      "emails"
+    ],
+    "regex": "(?:\\A|[\\s\"'`,;=])([^:@\\r\\n \\t\"'/\\p{Cc}]+@(internal\\.)?example\\.com)(?:\\z|[^a-zA-Z._0-9-])",
+    "risk": "high"
+  },
+  {
+    "id": "hardcoded_internal_urls",
+    "category": "database_credentials",
+    "keywords": [
+      "hardcoded",
+      "internal",
+      "urls"
+    ],
+    "regex": "(?:\\A|[^A-Za-z0-9+_-])([A-Za-z][A-Za-z0-9+_-]*://([^/?#\\s\\p{Cc}]*[.@])?(example\\.com|internal\\.example\\.com)[/?#]?[^\\s\"']*)(?:\\z|[\\s'\"])",
+    "risk": "high"
+  },
+  {
+    "id": "hardcoded_uri_passwords",
+    "category": "database_credentials",
+    "keywords": [
+      "hardcoded",
+      "passwords"
+    ],
+    "regex": "(?:(\\b|\\A)[A-Za-z][A-Za-z0-9+_-]*://[^/?#:@\\s\\x00-\\x08]*:)([^$/?#@\\s][^/?#@\\s\\x00-\\x08]*)(?:@[\\p{L}\\p{N}\\.-]*(?:\\:[0-9]{1,5})?([/?#\\s\"'`]|\\z))",
+    "risk": "high"
+  },
+  {
+    "id": "any_ipv4_addresses",
+    "category": "database_credentials",
+    "keywords": [
+      "routable",
+      "ipv4",
+      "addresses"
+    ],
+    "regex": "(?:\\A|[^v.0-9])((?:(?:25[0-5]|(?:2[0-4]|1[0-9]|[1-9]|)[0-9])\\.){3}(?:25[0-5]|(?:2[0-4]|1[0-9]|[1-9]|)[0-9]))(?:\\z|[^.0-9-])",
+    "risk": "high"
+  },
+  {
+    "id": "ghcr_typos",
+    "category": "database_credentials",
+    "keywords": [
+      "github",
+      "container",
+      "registry"
+    ],
+    "regex": "(?:\\A|[^0-9A-Za-z-])((?:ghrc|gchr|hgcr|ghr|ghc)\\.io)(?:\\z|[^0-9A-Za-z.-])",
+    "risk": "high"
   }
 ]

@@ -54,6 +54,16 @@ class Obfuscator:
             return "ghp_" + self.fake.password(length=36, special_chars=False)
         elif "slack" in st:
             return "xoxb-" + self.fake.bothify(text="############-############-????????????????", letters="abcdefghijklmnopqrstuvwxyz0123456789")
+        elif "stripe" in st:
+            if "publishable" in st:
+                return "pk_test_" + self.fake.bothify(text="????????????????????????", letters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+            return "sk_test_" + self.fake.bothify(text="????????????????????????", letters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+        elif "sendgrid" in st:
+            return "SG." + self.fake.bothify(text="??????????????????????", letters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789") + "." + self.fake.bothify(text="???????????????????????????????????????????", letters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+        elif "twilio" in st:
+            if "sid" in st:
+                return "AC" + self.fake.hexify(text="^" * 32)
+            return self.fake.hexify(text="^" * 32)
         elif "private_key" in st or "ssh" in st:
             return "-----BEGIN PRIVATE KEY-----\n" + self.fake.text(max_nb_chars=original_length) + "\n-----END PRIVATE KEY-----"
         elif "email" in st:

@@ -1,194 +1,148 @@
 {
   "abuseipdb_api": {
     "positives": [
-      "YWJ1c2VpcGRiNgoKCl4KUHgKdTkKIGwwdWFuZGcxZjF4cnU1NWtscXVlemFnNG41dnZvbHdvYWdpZWVtYmY1dXJxMHdzaGR4YmZocGgwYWFtZmZxczA5MWw2amJuem8ybGJ2c2ZxIA==",
-      "YWJ1c2VpcGRiNgp5THIKCjJDSgpSKAoKIGx2cDFwcDdhYTVnbmsyeWsxNW1vMTg1cDM2NWgwYWRmeW1saGJ0dTlpeGN3aXY0eDlqMWJvbGJvN3JxMzNudWdtdW82MTlvcWlvMzFqbmdtIA==",
-      "YWJ1c2VpcGRiTDVFSGVhPi80MSBzZWVzY2Jtd294NXlkdG55cDMwbnh0Ymo2OGlwYWticmdod2RxZGY2dWJ0emh3d3VtOGR5MTVkdXI0c3FhNmU1MWYxaTFocnV0Mnlwem40OSA=",
-      "YWJ1c2VpcGRiIGRtdmh5aHdtMWhwYzBzeXR4bjhqOGxpMnptZHJleTNsb3d5OXVsamZvd2l4eHp3cXFpZ2prYWI0bWNnMWR6YXA0dGtuOXVhMzZyOGl2bzB6IA==",
-      "YWJ1c2VpcGRiMG0KMGkKUyAzbnNnYmNsejdjbHNjNTNwNGFtdzVwYmRwaGFjaHY2YXA0OG0wNXgxa2R0N2I4cTJtNXZiNmJmcTBzNTJzNmdnNzQzaGszdThyYWJlNDJxZyA="
+      "YWJ1c2VpcGRiDQ1venNxdm1tdGIzcG53aXBoNjI1anRkdTBsZHF6enc5NTBwOXpqZDVwcnZkZGVxZzF0ZjY1aDd2ZjNtZ3gxYmQycWtrdWVsc20yNTQ2azZiNQ=="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "bm90LWEtc2VjcmV0LURVTU1ZX0lHTk9SRWFidXNlaXBkYl9hcGk=",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1hYnVzZWlwZGJfYXBp"
     ]
   },
   "getsandbox_api_key": {
     "positives": [
-      "Z2V0c2FuZGJveApLCltpIHR6NXRqaDAwY2R3LWxvbGlhdTEzMGtodGttNGRhd3dlZGNqajgzOWwg",
-      "Z2V0c2FuZGJveGl1VAoKCgoKCi0KIDNqNjhxdm43Z2twZm5vLS0xOGZhdm82OWlrdnM3ZWI4NjVsNnZ3bGsg",
-      "Z2V0c2FuZGJveAogbWVvdXU1ejBmdjA1dmNoM29zYWF5bmkxZzN5NXRsZzJlNmtpM3MybSA=",
-      "Z2V0c2FuZGJveApiCgoKRQpWCgoKClVKIHNrd2VtNDd5ZTYtdmpsdGMyanN0MjF5enpieWY1MWtrb3hjZ3B0NDAg",
-      "Z2V0c2FuZGJveAppCiUKCgoKCgoKCgpTODwKCiB1NGFvcHBpLThvdXVhMzloa2VlY2xmanQ5dHEtNzM5M3JseTBtcW1sIA=="
+      "Z2V0c2FuZGJveHgocGduNDh0MDU5MGo0aGdrLWhza2Rrc3ZtYWh4MDFrYWxzbXRhbmZkeg=="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LWdlRFVNTVlfSUdOT1JFdHNhbmRib3hfYXBpX2tleQ==",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1nZXRzYW5kYm94X2FwaV9rZXk="
     ]
   },
   "ipinfodb_api_key": {
     "positives": [
-      "aXBpbmZvZGJ0IGwyMjZ2eGIxOGk3NjRtaGh6aGl1eHA3bnpjOGhjZmllMGZ1aWQ0NXdyNmxzbXk5YzZid3E1OTl6YTEzODlheXIg",
-      "aXBpbmZvZGJ3ZyBtaTlwNmRrMzQwcGIxdG8yd2V3bW44OXR3dDY3eXd1Yzh5eG02OWNpNmdrc3V5dXd6NXRrdGRmZXFhanB4NmY3IA==",
-      "aXBpbmZvZGIKLwpQCgoKcyBzcjJ3bG5sYXU1Y3owcHFhY2RpeHY1dHY4Ym91Z2ozMTI1OG5zN3gyeWxjbmgzMzh1a3BwajB2ZTI5YWw0OXFjIA==",
-      "aXBpbmZvZGIgazd3MGhkcnU4dzhwdTY3Y212ZDI4bnN3Mjh5aDd4bTR1aGpwNXp4NHU0aDZndWYwdzExbzhxaWppOTU5NWJoMCA=",
-      "aXBpbmZvZGJEcAoKCiUgNnM3eHAxMmpwamlkdXpzc2RpenRxZXAzc2Y4bzhvM283c254bW93OGV5eGo4Zjh1Mm5hZTVqZjFicXdvNTJrYSA="
+      "aXBpbmZvZGJASwoNZnE3NHpnNngxcTZ0bXlqNjRzeHYzYnB3ZXdobzAzbGFxeW5iNDdycGFhNnNyanJucHE4bW95dGc3bWRvaWt5eA=="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "bm90LWEtc2VjcmV0LWlEVU1NWV9JR05PUkVwaW5mb2RiX2FwaV9rZXk=",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1pcGluZm9kYl9hcGlfa2V5"
     ]
   },
   "jdbc_token": {
     "positives": [
-      "amRiYzpteXNxbDovL2xvY2FsaG9zdDozMzA2L2RiP3VzZXI9cm9vdCZwYXNzd29yZD1zZWNyZXRwYXNzd29yZDEyMyA="
+      "amRiYzplw6VTwrxKwrrDgsOeOi8vw5INCQ0LCnBhc3N3b3JkIiI8ezw8PDw8ewsiDA0NJycMCQsLJwoMIiANCQ=="
     ],
     "negatives": [
-      "bm90LWEtc2VjcmV0LWpkYmNfdG9rZW4=",
-      "MDEyMzQ1Njc4OWFiY2RlZg==",
-      "c2FtcGxlLWRhdGEtbGFiZWwtZ2VuZXJpYw==",
-      "VEVTVElOR19QVVJQT1NFU19PTkxZX0lHTk9SRQ==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFCQkJCQkJCQkJCQkJCQkJCQkJCQg=="
+      "aW52YWxpZC1qZGJjX3Rva2Vu"
     ]
   },
   "paymongo_api_key": {
     "positives": [
-      "cGF5bW9uZ288CmA5ZjY5CgoKLwogRGViMlFDYkV1TkpqYlAwNVpMY2l0WjBjUDNINTFxcGkg",
-      "cGF5bW9uZ28KCgoKODt6Cl0KYgoKKApMTlZ1IGtnVnU0VVdNV05pYTJfczB1ZkdfbnAwZGZFQ1N5ajBXIA==",
-      "cGF5bW9uZ29HCgoKWkgKCi8KIFBESUhvb1VoRWtBMUxvWDREa011QkZaNjlHN1lXNkZ1IA==",
-      "cGF5bW9uZ28KCnQ3CgoKSCA4N0lGZlN3QUQxTEpxaHhtbFlBNmwwRTlmUnVHaEl5MCA=",
-      "cGF5bW9uZ28nPWIKCgp3VFhdVXBUCiBEcU0wd0FWbEVtTm1YTnVsV0xtaFlfRXVaNWpNb1gyMiA="
+      "cGF5bW9uZ28KNQpxQThIT3lnRm9RaDNfY2o0SVJmNEZzSHFSTWg3S2FXeA=="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LXBEVU1NWV9JR05PUkVheW1vbmdvX2FwaV9rZXk=",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1wYXltb25nb19hcGlfa2V5"
     ]
   },
   "sendbird_api_key": {
     "positives": [
-      "c2VuZGJpcmRIbDhGaApfUQprCkEyCgogYWFhZDc1NThkY2U2NGMwY2ZkNjg4Y2RjNDU2Nzc2NWIyNDdkYThmNCA=",
-      "c2VuZGJpcmQgYzM4MGVlMDEyM2M5NWZhMDE3OTE2OWRjMTZmMDQxMmJkNWU4ZGFkOSA=",
-      "c2VuZGJpcmQKCnYKMikKCgoKbCBhN2MyNjNlMmMzZDY1NTBhM2M5MmVjZTVhYWM1YjI3OWQwNjcyY2ZmIA==",
-      "c2VuZGJpcmRrJQolCgpSCgo7CnUKCkcKCiAzNDVhZDA4OTJiNDhkZDcxMGJlMGM0NTdiZTMyYjQ2YzVjNDhmYTBkIA==",
-      "c2VuZGJpcmRjCgo1OwoKLEQKCgonIGMwYzlkNjIxZDM1ZjFmOTM4NTU3MmZmZWFjMmZmZjk5MDk5MmUyZTcg"
+      "c2VuZGJpcmQNCll2CjE1NTkzYzVjNGFmODY0NzA4MDgzMzE2YzdlYzE4ZjgxMTE1MTJlZTM="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "bm90LWEtc2VjcmV0LXNEVU1NWV9JR05PUkVlbmRiaXJkX2FwaV9rZXk=",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1zZW5kYmlyZF9hcGlfa2V5"
     ]
   },
   "sendbird_organizational_api_key": {
     "positives": [
-      "c2VuZGJpcmQKdQoKaQonJWgKUiBiNGJkNjNkNTlmNmFjMmNhOGY4NzM1OGYg",
-      "c2VuZGJpcmQKYk5BCgoKClAKZiBhVAo3JAoKIGY5YzU5M2I4YjFhM2Q1ZmZhMGE5Y2Q2ZCA=",
-      "c2VuZGJpcmQjIXAKTlYKCgovCgo9RkYKIDMxN2Q4YjJiYzVkY2Q0MjcyNDUwNWYyNCA=",
-      "c2VuZGJpcmQKWV8KZlRbOyA2Y2RkZTI2YWJhMTgwMTkzOTQ0MWJjNjQg",
-      "c2VuZGJpcmQ9bG8KCgoKUgogMjljZDcwZmJkM2U0NWU3NmY5Njg1MGU5IA=="
+      "c2VuZGJpcmRDXWUzMjc1MzQ5NTA0ODdiMDAzZmYzOGIwOQ=="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LXNlbmRiaXJkX0RVTU1ZX0lHTk9SRW9yZ2FuaXphdGlvbmFsX2FwaV9rZXk=",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1zZW5kYmlyZF9vcmdhbml6YXRpb25hbF9hcGlfa2V5"
     ]
   },
   "database_connection_string_full": {
-    "positives": [
-      "Y29ubmVjdGlvbl9zdHJpbmcgPSAiRGF0YSBTb3VyY2U9ZWVlLDE0MzM7SW5pdGlhbCBDYXRhbG9nPWJiYjtJbnRlZ3JhdGVkIFNlY3VyaXR5PUZhbHNlO1VzZXIgSUQ9Y2NjQGFhYTtQYXNzd29yZD1kZGQ7Ig=="
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC1kYXRhYmFzZV9jb25uZWN0aW9uX3N0cmluZ19mdWxs"
+    ]
   },
   "database_connection_string_1": {
-    "positives": [
-      "Y29ubmVjdGlvbl9zdHJpbmcgPSAiRGF0YSBTb3VyY2U9ZWVlLDE0MzM7SW5pdGlhbCBDYXRhbG9nPWJiYjtJbnRlZ3JhdGVkIFNlY3VyaXR5PUZhbHNlO1VzZXIgSUQ9Y2NjQGFhYTtQYXNzd29yZD1kZGQ7Ig=="
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC1kYXRhYmFzZV9jb25uZWN0aW9uX3N0cmluZ18x"
+    ]
   },
   "database_connection_string_2": {
-    "positives": [
-      "Y29ubmVjdGlvbl9zdHJpbmcgPSAiUGFzc3dvcmQ9ZGRkO0RhdGEgU291cmNlPWVlZSwxNDMzO0luaXRpYWwgQ2F0YWxvZz1iYmI7SW50ZWdyYXRlZCBTZWN1cml0eT1GYWxzZTtVc2VyIElEPWNjY0BhYWE7Ig=="
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC1kYXRhYmFzZV9jb25uZWN0aW9uX3N0cmluZ18y"
+    ]
   },
   "database_connection_string_3": {
-    "positives": [
-      "Q29ubmVjdGlvblN0cmluZ3NfX0RlZmF1bHQ9IkRhdGEgU291cmNlPWVlZSwxNDMzO0luaXRpYWwgQ2F0YWxvZz1iYmI7SW50ZWdyYXRlZCBTZWN1cml0eT1GYWxzZTtVc2VyIElEPWNjY0BhYWE7UGFzc3dvcmQ9ZGRkOyI="
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC1kYXRhYmFzZV9jb25uZWN0aW9uX3N0cmluZ18z"
+    ]
   },
   "tsql_create_login_or_user": {
-    "positives": [
-      "Q1JFQVRFIFVTRVIgcGhvbnkgV0lUSCBQQVNTV09SRCA9ICdteW5ld2NyZWRzJzs="
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC10c3FsX2NyZWF0ZV9sb2dpbl9vcl91c2Vy"
+    ]
   },
   "sqlalchemy_connection_string": {
-    "positives": [
-      "ZW5naW5lID0gY3JlYXRlX2VuZ2luZSgnbXlzcWwrbXlzcWxjb25uZWN0b3I6Ly9zY290dDp0aWdlckBsb2NhbGhvc3QvZm9vJyk="
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC1zcWxhbGNoZW15X2Nvbm5lY3Rpb25fc3RyaW5n"
+    ]
   },
   "mongodb_connection_string": {
-    "positives": [
-      "bW9uZ29kYitzcnY6Ly9mb286YmFyQG1vbmdvZGIuZXhhbXBsZS5pbnZhbGlkLw=="
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC1tb25nb2RiX2Nvbm5lY3Rpb25fc3RyaW5n"
+    ]
   },
   "jdbc_connection_string": {
-    "positives": [
-      "amRiYzpteXNxbDovL2xvY2FsaG9zdDozMzA2L215ZGI/dXNlcj1yb290JnBhc3N3b3JkPXRvb3I="
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC1qZGJjX2Nvbm5lY3Rpb25fc3RyaW5n"
+    ]
   },
   "hardcoded_spring_sql_passwords": {
     "positives": [
-      "c3ByaW5nLmRhdGFzb3VyY2UucGFzc3dvcmQ9cGFzc3dvcmQ="
+      "c3ByaW5nLmRhdGFzb3VyY2UucGFzc3dvcmQJCQkgIAkgICAgIAkJCQk9ICAgCQkgIAkgCSAgCQkJIAkJICIDAQYBAgoABQAGJw=="
     ],
-    "negatives": []
+    "negatives": [
+      "aW52YWxpZC1oYXJkY29kZWRfc3ByaW5nX3NxbF9wYXNzd29yZHM="
+    ]
   },
   "hardcoded_internal_emails": {
-    "positives": [
-      "Zm9vQGludGVybmFsLmV4YW1wbGUuY29t"
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC1oYXJkY29kZWRfaW50ZXJuYWxfZW1haWxz"
+    ]
   },
   "hardcoded_internal_urls": {
-    "positives": [
-      "aHR0cHM6Ly9zb21ldGhpbmdfaW50ZXJuYWwuZXhhbXBsZS5jb20vYS9wYXRoLw=="
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC1oYXJkY29kZWRfaW50ZXJuYWxfdXJscw=="
+    ]
   },
   "hardcoded_uri_passwords": {
-    "positives": [
-      "aHR0cHM6Ly91c2VyOmZvb0BleGFtcGxlLmludmFsaWQv"
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC1oYXJkY29kZWRfdXJpX3Bhc3N3b3Jkcw=="
+    ]
   },
   "any_ipv4_addresses": {
     "positives": [
-      "MTkyLjE2OC4xLjEwMA=="
+      "MjUyLjI1My4yNTIuNQ=="
     ],
-    "negatives": []
+    "negatives": [
+      "aW52YWxpZC1hbnlfaXB2NF9hZGRyZXNzZXM="
+    ]
   },
   "ghcr_typos": {
     "positives": [
-      "Z2hyYy5pbw=="
+      "aGdjci5pbw=="
     ],
-    "negatives": []
+    "negatives": [
+      "aW52YWxpZC1naGNyX3R5cG9z"
+    ]
   }
 }

@@ -1,370 +1,222 @@
 {
   "apimatic_password": {
     "positives": [
-      "YXBpbWF0aWMKd0JMMwoKXG4KCgpyKgogNGdlaHUzbGFpdSA=",
-      "YXBpbWF0aWNIQWM9JF0KWy0xCgoKCjcKCiA0MWRydWJ0emU3ZWZ0empyNmNtIA==",
-      "YXBpbWF0aWMKClAKCgouUiBoNHBvdjV6a3R0emllIA==",
-      "YXBpbWF0aWMKIGs4bjBjYjNrMnI4MTM1dCA=",
-      "YXBpbWF0aWMKCgprCgoKCgogNGp1aXNrcHduYmE1bCA="
+      "YXBpbWF0aWMKDVF5eDY2YXVqNzI="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LWFwRFVNTVlfSUdOT1JFaW1hdGljX3Bhc3N3b3Jk",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1hcGltYXRpY19wYXNzd29yZA=="
     ]
   },
   "autodesk_secret": {
     "positives": [
-      "YXV0b2Rlc2sKClgyCgppJQoKCjsKIFBGMUQyYWhvUFh4ZDdUc2Eg",
-      "YXV0b2Rlc2sKCgoKYSsKcWg8CkVUWApuCisKIEZKSDNkU3JwMFk5WWhtd2kg",
-      "YXV0b2Rlc2tICgoKCgpeQXQKSy4KCgoKTyB1SnBrdGttQ0RIOXpRdnIxIA==",
-      "YXV0b2Rlc2sKCl1vCkkgeHR3bjZrbDN3ckJDQm1lOSA=",
-      "YXV0b2Rlc2tHSwpARGYKa1tgPEEKIEFxWUpPRU9vOUJmbGFNRkog"
+      "YXV0b2Rlc2t6CgoKCmJ6SGxIT1JCRk5hYlB0M0o="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LWFEVU1NWV9JR05PUkV1dG9kZXNrX3NlY3JldA==",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1hdXRvZGVza19zZWNyZXQ="
     ]
   },
   "bitmex_api_secret": {
     "positives": [
-      "Yml0bWV4CnBTNlExCgoKIQoKIGxFTEdKUVZmT2xDSDZUMC1IQURSSmU0dmVRU3VDa1FRODQwNkd6MkdVRERZSXNvOCA=",
-      "Yml0bWV4CgoKYAoKCkxKCiBLUWRkTEdzYmdHUjJmU1RNTUhmcHpaWE1OSE43UUlOZE02amctdGNvYXVhZlJLbVgg",
-      "Yml0bWV4Cgo0CgprCgpVCiwgQXlmdVVSMUk0V3ZmUmQ0Ri1IZzdtZE5ianByMjRxanBEWG9QV3Q4R3h6YllfTGstIA==",
-      "Yml0bWV4agp6CmIhCjM2DXpiamxLZlQtbVY5bHF4MDcwY01hLUJNaWhDYV9nQVNTc05nM1BXanU3dGREMzRNOCA=",
-      "Yml0bWV4LwoKClFoPyMKYApkYUR3bzVrSDRRb2RIWlRfX291dkxPQ1JnS1QtcDEySElHX1pYWFpIUjBBbzdPSUkK"
+      "Yml0bWV4MFkKJnoNXzZIQzZmZDA1THl4dW5ZWTY0VFFSQzR3MGloTTNHMHpxeWE5ZGdoaWVqTmU4dnVGDQ=="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LWJpRFVNTVlfSUdOT1JFdG1leF9hcGlfc2VjcmV0",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1iaXRtZXhfYXBpX3NlY3JldA=="
     ]
   },
   "clockwork_api_secret": {
     "positives": [
-      "dGV4dGFueXdoZXJlCgoKIykKCgo0L2ZgWSBPeTYxMnVFMDlLUzdpWG9MZkFQNTlxa2kg",
-      "Y2xvY2t3b3JrcSBPNVA2V3M1ZXJaWXRwV0VZaVJUcEtSRGgg",
-      "dGV4dGFueXdoZXJlCjQKKCA4TUFiZHJ3c0hxRFVDWFdTNFFSY1owa1Ag",
-      "Y2xvY2t3b3JrTEZNWQoKTwomPgoKYGBhYAoKIEJGc0VFRlB5SFBEdE4zd0J3Ukx5T3gzOCA=",
-      "Y2xvY2t3b3JrLQoKVwo5LwpKbV40IHExYzRpSWNXTklNa0FHN2tnTzVKVkZSMyA="
+      "dGV4dGFueXdoZXJlIwo1eThKZjNwYzg2ZlR5RDZKVkFPalQ2TmI="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LWNsb0RVTU1ZX0lHTk9SRWNrd29ya19hcGlfc2VjcmV0",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1jbG9ja3dvcmtfYXBpX3NlY3JldA=="
     ]
   },
   "confluent_api_secret": {
     "positives": [
-      "Y29uZmx1ZW50MSJNCiBoN0F3S0RERUtGeG0xbzh4ZjFXSW1KWnFtWmNVSkJzZDg1Ykp4TEpTTzZLRWdjMFlPQldZbS01TmFUY2RGa3RwIA==",
-      "Y29uZmx1ZW50CgoKWwo7eQp1CiciIGxtQ1BjRU93bXNCTk1qUG9qYTJ2NjZMdWlBcDUwZkhmV2RCTXpoeEdPYllOODlET3pTWUgzOXViTFFpSVctNk8g",
-      "Y29uZmx1ZW50YCkKdgoKClQgcmdUb2pCRWNyVVZIQmUtUFhxa0dwQXZPT2VuQ3NkUnpMWS16clFYdWJud3pHTndpWEtaaXM2MWFnU0xBMGQxbyA=",
-      "Y29uZmx1ZW50CgoKCgoKCkQKRQoKbkYKL10gM21WZGZNS2dSQlJtNFpiSWZ5d2F6VUtZUTVKZVVjZWdjZ3FzNkJ2UkRvblpFZWJXNXVNZzlwdm5iZjltSlk3ciA=",
-      "Y29uZmx1ZW50ClEKCnBdRSpKL1sKIGFXdDZYWE1Sc0tZcUZpRFdjaVUtWjFmTUVuLUpiaklWV3p2YlM3THFIYWJNZ0RIcU55UjItMnM3MUlZTHEzNmgg"
+      "Y29uZmx1ZW50RCNoSzNJald0VkRsWlRFZGF0T0xWTnJkVldBTG5CdzViTlI0aEdOeDRNSFhKSU1aalVEN2FtbDZacGsxN2VkSzJB"
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LWNvbkRVTU1ZX0lHTk9SRWZsdWVudF9hcGlfc2VjcmV0",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1jb25mbHVlbnRfYXBpX3NlY3JldA=="
     ]
   },
   "dotmailer_password": {
     "positives": [
-      "ZG90bWFpbGVyCnJmCgoKIHlDOUJiaFVJY1QzNm12aFd2c3Ag",
-      "ZG90bWFpbGVyCgouCgohCgogRkdVT1JoWHpNd3Ag",
-      "ZG90bWFpbGVyCgogYklwaWZnd0dhVVJ0NnFXcDFQUkJ3IA==",
-      "ZG90bWFpbGVyUwoKeERHWAogbjVVVFVvRmwg",
-      "ZG90bWFpbGVyPwoiMAo6NgoKTmMKCgoKYXMkIEsxc2NyRDBuM2hUbEkg"
+      "ZG90bWFpbGVyTgoNdFNZV1k1QkZ0M3pxUQ=="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LWRvRFVNTVlfSUdOT1JFdG1haWxlcl9wYXNzd29yZA==",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1kb3RtYWlsZXJfcGFzc3dvcmQ="
     ]
   },
   "mailjet_api_secret": {
     "positives": [
-      "bWFpbGpldApkISBqbE41V0lKRWJVc0RQS05mQjgxaER5bDFCdk9QZVhtaTdTVjhjY1djVTMxRFdmZkM2QjhaTTBwVmFUNEY4ZWlqUFZxek8zVEpJSGQ1TGY5WHNCcVVxWFM9",
-      "bWFpbGpldDFqCiB0M29QOFoyN2w4dXE0S21RR1prRkFhbzVtZnVwNlUyU0J2OVRmbDBnNXIyYU9jNE9uOFBVa0c4MHc4dnIwY08ySGVjSzlGZExONENLb0E0UEgzY05HMFg9",
-      "bWFpbGpldFgxXgpOTksKTAojIEVTMnVTY0ZtcHY2Y1U4T2ZGMTVrakZTZmUwaGw5Ukprd0hRbEpEdHZ0MndvWHlsYzRwNlk1QjZxYzB3Tm9lMm1UM2lMdG9VVUx3MElPanFqOUxJeXNvMj0=",
-      "bWFpbGpldApOCmwgc1JvbUZQMEVOWTFXS1VwMGZCS094bWlERklzczlnQ21kWDc0VUs4R2QzaUpuaU9OOEhXUFpsWTk3N2tlNExMNUh5Sk5mdExScGtwY2VpMmhmTFNsTlNYPQ==",
-      "bWFpbGpldApICkRUCkd0CnkKcQpoJgpYbSA2NExhNmVGaXZTTW9CTjdjbE12UTh4UWV3MzdNdEVyRWZEN3IzbkVCMkVqbERrenZyVmpJSHNnVnAxOENvWnQ3cnRrRHRITVluMWphVUFNNkM4TkN1N0o9"
+      "bWFpbGpldA16V0llbE5wajFVbnRzZ2FxUVE1Tldpd05RRnA1Q2xYM01WT0djZXBINlJzRVd1YTlyRVRxdG55N210SEhZUjNLcVVFcExRakJCQ0hVd3ZyUThveUR2Sks9"
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LW1hRFVNTVlfSUdOT1JFaWxqZXRfYXBpX3NlY3JldA==",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1tYWlsamV0X2FwaV9zZWNyZXQ="
     ]
   },
   "mrticktock_password": {
     "positives": [
-      "bXJ0aWNrdG9ja1VkCgpvVwoKSzd3CiBSRTZyWWYoUXB5RElfY0Zf",
-      "bXJ0aWNrdG9jayB5Xnh2KA==",
-      "bXJ0aWNrdG9jawoKdAonLgoKCgpECl43CiBWQ0xuMlBzWW1odDckQW5xcA==",
-      "bXJ0aWNrdG9ja1AzeWsKCicKMwogZl52dWZST1By",
-      "bXJ0aWNrdG9jawoKUQoKQnQKaFsKXgonZ0JnCm8gIyNXdA=="
+      "bXJ0aWNrdG9jayBWM0o5eA=="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "bm90LWEtc2VjcmV0LW1ydERVTU1ZX0lHTk9SRWlja3RvY2tfcGFzc3dvcmQ=",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1tcnRpY2t0b2NrX3Bhc3N3b3Jk"
     ]
   },
   "nexmo_api_secret": {
     "positives": [
-      "bmV4bW8KCjEKCiBjRjVOQXJ1c3NQeUJ1M2JhIA==",
-      "bmV4bW8tCkwKCgpkUAogZVgyNHc0RUNNRE1sVFc4cyA=",
-      "bmV4bW9uCgprCgpaQmU9CgpsCgogR2c5VVpLekFEZHRGWEpINiA=",
-      "bmV4bW8KRyAyOExSQUhwQkVDOXJteGZZIA==",
-      "bmV4bW8KXQo6SGIKCjh2YiEKCiBiT2RRTDFJYVA5bzdCVTYtIA=="
+      "bmV4bW8tRHd4TDR2d1hzZjc1SnhrNw=="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LW5EVU1NWV9JR05PUkVleG1vX2FwaV9zZWNyZXQ=",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1uZXhtb19hcGlfc2VjcmV0"
     ]
   },
   "onedesk_password": {
     "positives": [
-      "b25lZGVzawoKClEKIDN6MVFCblZKN3V4WWtedGtN",
-      "b25lZGVzawoKdwpvCmoKPwoqLQpKCgogNzF1QVg1I3FsRDNGU2w=",
-      "b25lZGVzawoKCgpVPiIKIQogSjI5VjUyZU4zemshT2M=",
-      "b25lZGVza1AKZwoKCnMwZiAhbkduI3M2R0czaDhi",
-      "b25lZGVzawoKKApnCj1yb2wKCgoqRgoKCkcgOEhuU0BQUVBJIWdoeUtsamVhTXBFeGJwV2Q="
+      "b25lZGVzaw1WK0thbVZ1UDRzYkp4cA=="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LW9EVU1NWV9JR05PUkVuZWRlc2tfcGFzc3dvcmQ=",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1vbmVkZXNrX3Bhc3N3b3Jk"
     ]
   },
   "pusher_api_secret": {
     "positives": [
-      "cHVzaGVyCgoKZQoKIG02b2xnaGFxNmNnOHkwb2NsenFlIA==",
-      "cHVzaGVyClEKSwoKKwogRCkKCgoKCjE5CiBhcG1zY28zY3ZiMHF5bGkxMGNwMSA=",
-      "cHVzaGVyNDogYzJjaTk3OWhsb2MxcGhrZDNlYzUg",
-      "cHVzaGVyNExdCgotCl8Kcgogd2EybjhvZ2o3c2Q3YTU1MjE2enYg",
-      "cHVzaGVyLgoKZT9VSWwKCgogbTRpeHVhaGFxeGViZDJkbjBteHIg"
+      "cHVzaGVyNwo+YQpoeGowanJoZ3VsMGtnYXZnaDI1cA=="
     ],
     "negatives": [
-      "bm90LWEtc2VjcmV0LXB1RFVNTVlfSUdOT1JFc2hlcl9hcGlfc2VjcmV0",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1wdXNoZXJfYXBpX3NlY3JldA=="
     ]
   },
   "razorpay_api_secret": {
     "positives": [
-      "cmF6b3JwYXlfc2VjcmV0IDBxWE1XdmM3VnJGUmxJTEt2VkpNMTJLcQ==",
-      "cmF6b3JwYXlfc2VjcmV0IFJHTHB0VG50ZnAyd2J3S3F1YXBad1l0Yw==",
-      "cmF6b3JwYXlfc2VjcmV0IFhndDJ2VnRtbGdpQUxlSVVsbjB5T3Y4NQ==",
-      "cmF6b3JwYXlfc2VjcmV0IEdHdGxWZFBjZXVGUnZwa3Z6N095MENMWA==",
-      "cmF6b3JwYXlfc2VjcmV0IGpGTWQ3Wlk0V205TnVDUkVqQXdQcXZUQg=="
+      "a2V5TyI9JzVyVVBabWRRdG5uc1lrenVPNVJIR1pDZw=="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LXJhekRVTU1ZX0lHTk9SRW9ycGF5X2FwaV9zZWNyZXQ=",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1yYXpvcnBheV9hcGlfc2VjcmV0"
     ]
   },
   "roaring_api_secret": {
     "positives": [
-      "cm9hcmluZzwKCl1ICgpVMCB6NUwwR1BpbmdDM0t4M0xqOHpIbm5kZHZZWTdUIA==",
-      "cm9hcmluZ00KCnRaClcqIGVPcEJOR0w4c082TlhqOG8yRF9xZnhPVFdBZDMg",
-      "cm9hcmluZzMgU3huZXl5SEhFRlR4WEdPTWlURVFDTDlNeS1kViA=",
-      "cm9hcmluZ2kKZGIKZgoKCgpfZVoKLgoKIEkyb1BHTjNKY1FuNHpMR0FZS2J5SkZoOXh2ckog",
-      "cm9hcmluZwpkClsKCgogNlI5c2VPbmo5aWstY0FKRWJMVWx3NDhfVkNGLSA="
+      "cm9hcmluZy1WM2xPR1JhV3B2N0x6eTVsNVhUM1FkdUJRa0tp"
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LXJvRFVNTVlfSUdOT1JFYXJpbmdfYXBpX3NlY3JldA==",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1yb2FyaW5nX2FwaV9zZWNyZXQ="
     ]
   },
   "rownd_api_secret": {
     "positives": [
-      "cm93bmQKeTwzCgo/CgogenBydWFqamx0M3FoM2d2cWhlOXBkNTB0MTc2OXB6azM3MnE4Z3k2eHB6ZW5zd2c5IA==",
-      "cm93bmQgOHVoZTljYm55aHpqNWF5NWdzODVwOWgzMjFieDlkdTB2eHVsd3YwMjJ5d3d3bmt2IA==",
-      "cm93bmQKYmoKCisKCgoKWQoKCgoKIGdsOHhqcGZqZXZqZ2kxYmFucnFqYW1jamY0dmwwYzZranA1d3BkNWVkMHVvOWNwayA=",
-      "cm93bmQrCgpuMmk9CmwKCiAwMGtscml1ZXhjeHc3MTljY25sdW9sYzd2ZDBiZWJpdHlqY2RraGc0MG5hMWJocWMg",
-      "cm93bmQKCgoKTQoKCmEKeEA+IGFvbDMzc28wcHRoeDA5MHR1YXhweGRjcmpwZG5iZG40MnVwYjFtOWhjcHk1NW04ciA="
+      "cm93bmQNKWVkeXZ2b2pwcWVyYm1jeWgxbWVlbDVpeWZ3eGQyNXcxZXd1bjI2a3o5dmQzNWlsag=="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LXJEVU1NWV9JR05PUkVvd25kX2FwaV9zZWNyZXQ=",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1yb3duZF9hcGlfc2VjcmV0"
     ]
   },
   "satismeter_api_password": {
     "positives": [
-      "c2F0aXNtZXRlclwKUwoKbXcKaE8KCgoKIFVLI2FsaUtwQHBXdGhRJVBzNEJXIQ==",
-      "c2F0aXNtZXRlckIKK1YKIG9eb1RrIU5WU2U3eExMdlJMdjhz",
-      "c2F0aXNtZXRlcgpiOGNjSQpcYworcQoKPFcKCgogSjBAOCFpYUdPM2czdm1jI3ZsMjh0ZmQ=",
-      "c2F0aXNtZXRlcgo5IFAlMiU0TTZkJQ==",
-      "c2F0aXNtZXRlci1DZSwKIGlBcU4kITM9TFRUVA=="
+      "c2F0aXNtZXRlci04aXZyMllXS1FR"
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LXNhdGlzRFVNTVlfSUdOT1JFbWV0ZXJfYXBpX3Bhc3N3b3Jk",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1zYXRpc21ldGVyX2FwaV9wYXNzd29yZA=="
     ]
   },
   "shutterstock_api_secret": {
     "positives": [
-      "c2h1dHRlcnN0b2NrCnkKCgpxLWtIUnpjCgoKCmMKIDRjcjBxeDRyWWhrZ2dZWFEg",
-      "c2h1dHRlcnN0b2NreCEKegoKQSBoaW5YTXViYzJVT04yWkxwIA==",
-      "c2h1dHRlcnN0b2NrCm8hIHIyUTlFWkFCZXFjSFBPS3Mg",
-      "c2h1dHRlcnN0b2NrCgoKWykKSAoKdSB3dkJWZEJHODdOMU5iTExmIA==",
-      "c2h1dHRlcnN0b2NrCiA0S0ViZ2xyTkk1akFSU1NqIA=="
+      "c2h1dHRlcnN0b2NrJm9ocnFTZldab3diVVZqOUE="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LXNodXR0RFVNTVlfSUdOT1JFZXJzdG9ja19hcGlfc2VjcmV0",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1zaHV0dGVyc3RvY2tfYXBpX3NlY3JldA=="
     ]
   },
   "squareapp_api_secret": {
     "positives": [
-      "w7xnw7Ezw7Jac25kw5/DrWfDiDdTZ8Oyw6dzcTBjbHMtVnFsREtfME9VYlFSMllqUFI2N2t5RG45NEZ0U3FsaVQwUTh5WnhHRXhNamk1YlF3ag==",
-      "UMONanloZG/DjsOrw5tiMkTDsFHDq3NxMGN4bi1MeEQxSGloRFdJdmhFSmRITUNRSGZhLWJOUDMyQVUtVWcxc2VBVU5zZnk=",
-      "w6tzcTBjaXotd2NxNFZlcHZ4UUNwcFRCZGI3aTRCdVg3OW9icEZaRm80VEJscThkWmdrTUJtTw==",
-      "w4fDvcKyX2jDqEvDiMOGZ0ZhTVTDpMOtw60xc3EwY3VrLTk0b09yQnpGeDdHZ0U1b2pMOEt5ZWw5b2FjSUVJUjBOUUhaMEVoUmhhVkFG",
-      "YsOrw6FxwrzDoMOgcnRzcTBjZmctTzRfMmItWWxfcjNqbHRhUFJidDY1QXNSU0hVeU5DaE05YUl0eWR5akNUSQ=="
+      "VHNxMGN4ci02OXVGUzBrMGZuTC1IUVBiYWhsdTk2emZmVi1hdmpScmtKbE5XZld4cGg="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LXNxdURVTU1ZX0lHTk9SRWFyZWFwcF9hcGlfc2VjcmV0",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC1zcXVhcmVhcHBfYXBpX3NlY3JldA=="
     ]
   },
   "tru_api_secret": {
     "positives": [
-      "dHJ1KApKYgoKLApcYCMKCjAKCiBnSk92aktDS3JNbVFwU1dfUjg/S0pdR0pRSSA=",
-      "dHJ1UQpoCiBzVDdNOXNDOHRIWU9BdGNYR1hVZltKdUoudSA=",
-      "dHJ1KUQKXEwKeVY1CjgzNApsPEggb255bHhdWW9VWVhXVGU4NlU5aklQQ1k2Rk8g",
-      "dHJ1dgpOCiBKbjBYVlhtO0JZdFFYMFlsVF03OHN0bE9cQCA=",
-      "dHJ1ZAojaDcwPSBBSFwyeHZVaWg2dUNKSXVXQlVDeXo1dkdAZCA="
+      "dHJ1LUh3ZE5oVkFyeUFzWldtUUtKXzZBV3RvQ1Q0"
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LURVTU1ZX0lHTk9SRXRydV9hcGlfc2VjcmV0",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC10cnVfYXBpX3NlY3JldA=="
     ]
   },
   "zipapi_password": {
     "positives": [
-      "emlwYXBpUwoKZlUKCgoKKixqKk4KCiBWeU15c0VpcD1mY0poNVN1UyRFdDdX",
-      "emlwYXBpTGoKLQpUV3RqYy8KQQogXjl0cVRCbkpmI2R1M0h2Mg==",
-      "emlwYXBpJwpfVgoKCiB2UjdIc2gxUjlJMng=",
-      "emlwYXBpCiBDemlmaFF1R1E=",
-      "emlwYXBpLjdzKQogCgoKJikKCgp0VCAgVHkwOElPeVBlZyM1anc="
+      "emlwYXBpCgpUdnJ3eFFrNEQ="
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "bm90LWEtc2VjcmV0LXpEVU1NWV9JR05PUkVpcGFwaV9wYXNzd29yZA==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC16aXBhcGlfcGFzc3dvcmQ="
     ]
   },
   "zipbooks_password": {
     "positives": [
-      "emlwYm9va3MKCiAydDN0PUJNWiM=",
-      "cGFzc3dvcmQgJWRvUGNUSHgza2pQb2ZTRkxj",
-      "emlwYm9va3NzOSBidCEkRDV5QmRPIXhaR280",
-      "cGFzc3dvcmRQCjNbZz8gTgoKTApUCiBlcE1jbHRyJHUyTmQ3YUxvaFRidENwdQ==",
-      "emlwYm9va3MKUAoKLzNJIQoKCgoKUE4KQD4gdW9mWHZeaXhEeWZ2UD0="
+      "cGFzc3dvcmRGDWxPSXgzTk43"
     ],
     "negatives": [
-      "MDEyMzQ1NjdEVU1NWV9JR05PUkU4OWFiY2RlZg==",
-      "QUFBQUFBQUFBQUFBQUFBQUFBQUFEVU1NWV9JR05PUkVCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
-      "VEVTVElOR19QVVJQT1NEVU1NWV9JR05PUkVFU19PTkxZX0lHTk9SRQ==",
-      "bm90LWEtc2VjcmV0LXppRFVNTVlfSUdOT1JFcGJvb2tzX3Bhc3N3b3Jk",
-      "c2FtcGxlLWRhdGEtRFVNTVlfSUdOT1JFbGFiZWwtZ2VuZXJpYw=="
+      "aW52YWxpZC16aXBib29rc19wYXNzd29yZA=="
     ]
   },
   "arc": {
-    "positives": [
-      "eyJpZCI6MiwidGl0bGUiOiJGb28iLCJlbmNyeXB0aW9uIjoiYWVzIiwiY3JlYXRlZF9hdCI6IjIwMjMtMDQtMjhUMTQ6MzM6MDkuODYzMzM3KzAxOjAwIiwidXBkYXRlZF9hdCI6IjIwMjMtMDQtMjhUMTQ6MzM6MDkuODYzMzM3KzAxOjAwIiwiZXhwaXJlZF9hdCI6IjAwMDEtMDEtMDFUMDA6MDA6MDBaIiwicHJ1bmUiOmZhbHNlLCJub3RpZmllZCI6ZmFsc2UsImNvbXByZXNzZWQiOmZhbHNlLCJwaW5uZWQiOmZhbHNlLCJzaXplIjoxOTksIm5leHRfaWQiOjF9"
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC1hcmM="
+    ]
   },
   "generic_passwords": {
     "positives": [
-      "cGFzc3dvcmQ9UGFzc3dvcmQxMjM="
+      "aWI5b3l2ZWs0Z2tleV8zZG5hX2Z0cGlycXc5ajR1MC14YzRtcjJyayAgIAkJCSAgIDogCQkgICAgX2Z8amNUc2dY"
     ],
-    "negatives": []
+    "negatives": [
+      "aW52YWxpZC1nZW5lcmljX3Bhc3N3b3Jkcw=="
+    ]
   },
   "generic_passwords_fewer_fps": {
     "positives": [
-      "cGFzc3dvcmQ9IlBhc3N3b3JkMTIzIg=="
+      "SW1oLWRpYzNmZXczOGFwaXRva2VuLVdwQk80SUVmbE9PVmlpdndNUS1aXyAJIAkJCUFzICAJIAkgICAJICAgCSAgU3RyaW5nIAkgIAkJPT4gCQkgCQkJICAgICAJIAliImZrMmtFTmxvRFh4S2Ei"
     ],
-    "negatives": []
+    "negatives": [
+      "aW52YWxpZC1nZW5lcmljX3Bhc3N3b3Jkc19mZXdlcl9mcHM="
+    ]
   },
   "generic_passwords_hex": {
     "positives": [
-      "cGFzc3dvcmQ9MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWYwMTIzNDU2Nzg5YWJjZGVmMDEyMzQ1Njc4OWFiY2RlZg=="
+      "dTAwZnBhc3NwaHJhc2UtMG1fcjF3bmF0dmh4OTAgICAgIAkJIAk9PSAJCSAgIAkgIAkgICBjZjM3YmMyMTExNzdmYzlhZmM2N2I3YTM2NzNhYWQ5MmVmYTFiZWU3NjZiMWJlOTQ1ODJlNDQwNTAyNWFmNDdiCg=="
     ],
-    "negatives": []
+    "negatives": [
+      "aW52YWxpZC1nZW5lcmljX3Bhc3N3b3Jkc19oZXg="
+    ]
   },
   "generic_passwords_base64": {
     "positives": [
-      "cGFzc3dvcmQ9IkFBQUFBQUFBQUFBYTAwPT0i"
+      "ZmRvaDh2X2ttcG9jc2JkYnBhc3BocmFzZS1mbWJyYzA3LWN6Z28JICAJCSAJQXMJCSAgCVN0cmluZyAJIAkgICAJOgkgCQkgIAkgICAgICA5KzRoQU1uNXNPcjVCYzBITWhrc0FMV3luV09Ra3hNSzJuMVFGd0R0S3cvQlc5PT0="
     ],
-    "negatives": []
+    "negatives": [
+      "aW52YWxpZC1nZW5lcmljX3Bhc3N3b3Jkc19iYXNlNjQ="
+    ]
   },
   "generic_passwords_base64_uri": {
     "positives": [
-      "cGFzc3dvcmQ9IkFBQUFBQUFBQUFBYTAwPT0i"
+      "MXNnb2MxNG15c3Fsc2VjcmV0Xzk2eWJobm5oeGZ3cGk4MDUgCSAJCQlBcwkgCQkgIAkgICAJICAgCSAgICBTdHJpbmcJCQkJICAJCQkJIAkJICAJID09PSAJCSAgCQkgICAgCWtQWVFBczI0T2o4N3ExdGxWLV9nVnFxQUd6UD0K"
     ],
-    "negatives": []
+    "negatives": [
+      "aW52YWxpZC1nZW5lcmljX3Bhc3N3b3Jkc19iYXNlNjRfdXJp"
+    ]
   },
   "uuids": {
     "positives": [
-      "MTAyMDMwNDAtNTA2MC03MDgwLTkwYTAtYjBjMGQwZTBmMDAw"
+      "ODQyNWFjYTUtZTcwYi1iMTAwLTM4NTItMjg2ZGU3MDIwOWNh"
     ],
-    "negatives": []
+    "negatives": [
+      "aW52YWxpZC11dWlkcw=="
+    ]
   },
   "oauth_client_secret": {
-    "positives": [
-      "Y2xpZW50X2lkID0gJzEyMzQ1Njc4OTAnCmNsaWVudF9zZWNyZXQgPSAndGhpc2lzYXZlcnlzZWNyZXRrZXkn"
-    ],
-    "negatives": []
+    "positives": [],
+    "negatives": [
+      "aW52YWxpZC1vYXV0aF9jbGllbnRfc2VjcmV0"
+    ]
   }
 }

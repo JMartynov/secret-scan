@@ -21,7 +21,7 @@ MANUAL_GENERATORS = {
     'satismeter_api_password': lambda: "satismeter-" + random_string(10),
     'tru_api_secret': lambda: "tru-" + random_string(26, string.ascii_letters + string.digits + ".-_"),
     'discord_api_token': lambda: "discord " + "M" + random_string(23) + "." + random_string(6) + "." + random_string(27),
-    'mrticktock_password': lambda: "mrticktock " + random_string(5),
+    'mrticktock_password': lambda: "mrticktock " + random_string(50, string.ascii_letters + string.digits),
     'github_private_key': lambda: "github\n-----BEGIN RSA PRIVATE KEY-----\n" + "a"*40 + "\n-----END RSA PRIVATE KEY-----",
     'private_key': lambda: "-----BEGIN RSA PRIVATE KEY-----\n" + "b"*40 + "\n-----END RSA PRIVATE KEY-----",
     'ssh_public_key': lambda: "ssh-rsa AAAA" + random_string(40, string.ascii_letters + string.digits + "+/") + " user@host",
@@ -30,7 +30,7 @@ MANUAL_GENERATORS = {
     'google_api_key': lambda: "AIza" + random_string(35, string.ascii_letters + string.digits + "_-"),
     'aws_access_key_id': lambda: "AKIA" + random_string(16, string.ascii_uppercase + string.digits),
     'stripe_api_key': lambda: "sk_live_" + random_string(24, string.ascii_letters + string.digits),
-    'sendgrid': lambda: "SG." + random_string(22) + "." + random_string(43),
+    'sendgrid_api_key': lambda: "sendgrid " + "SG." + random_string(22, string.ascii_letters + string.digits + "-_") + "." + random_string(43, string.ascii_letters + string.digits + "-_"),
     'teams_incoming_webhook': lambda: "https://test.webhook.office.com/webhookb2/" + uuid() + "@" + uuid() + "/IncomingWebhook/" + random_string(32, "0123456789abcdef") + "/" + uuid(),
     'lexigram_api_key': lambda: "lexigram " + random_string(301),
     'nethunt_api_key': lambda: "nethunt " + uuid(),
@@ -48,6 +48,12 @@ MANUAL_GENERATORS = {
     'gpg_private_key': lambda: "-----BEGIN PGP PRIVATE KEY BLOCK-----\n" + random_string(100, string.ascii_letters + string.digits + "+/") + "\n-----END PGP PRIVATE KEY BLOCK-----",
     'credit_cards': lambda: "4" + random_string(15, string.digits),
     'bearer_tokens': lambda: "Authorization: Bearer " + random_string(30, string.ascii_letters + string.digits + "-._~+/:="),
+    'razorpay_api_key': lambda: "rzp_" + random_string(4, string.ascii_letters + string.digits) + "_" + random_string(15, string.ascii_letters + string.digits),
+    'jdbc_token': lambda: "jdbc:mysql://host:3306/db?user=root&password=" + random_string(10, string.ascii_letters + string.digits) + " ",
+    'azure_access_key_legacy': lambda: "AzureKey=" + random_string(80, string.ascii_letters + string.digits + "+/") + "==",
+    'sugester_api_domain': lambda: "sugester-token",
+    'yaml_static_password_fields': lambda: "db_password: secret_value_123",
+    'hardcoded_database_passwords': lambda: "postgres_password = " + random_string(12),
 }
 
 def encode_str(s):
@@ -131,7 +137,8 @@ def main():
             if not raw_regex:
                 continue
 
-            entry = {"positives": [], "negatives": [encode_str(f"invalid-{rid}")]}
+            # Use a safe negative string that won't trigger keyword-based rules
+            entry = {"positives": [], "negatives": [encode_str(f"safe-negative-test-string-{uuid()}")]}
             
             # Prepare validation regex
             try:

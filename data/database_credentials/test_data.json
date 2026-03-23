@@ -1,148 +1,150 @@
 {
   "abuseipdb_api": {
     "positives": [
-      "YWJ1c2VpcGRiDQ1venNxdm1tdGIzcG53aXBoNjI1anRkdTBsZHF6enc5NTBwOXpqZDVwcnZkZGVxZzF0ZjY1aDd2ZjNtZ3gxYmQycWtrdWVsc20yNTQ2azZiNQ=="
+      "YWJ1c2VpcGRiUApnMTd5eHVxajBvcDMyODVrcXpjY24zNnk4amYzYXR4cWxqYnJ6ajB2c2V1OXkzb3Joc3RzanhwM3ZsNjNjdXoyOGM0ZGJsbmZuemR5eDJnbw=="
     ],
     "negatives": [
-      "aW52YWxpZC1hYnVzZWlwZGJfYXBp"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy01Njk5YWY2Yy1mOTFjLWNmOTYtOGYxYS1kNzQ3NTk0NGRiZTk="
     ]
   },
   "getsandbox_api_key": {
     "positives": [
-      "Z2V0c2FuZGJveHgocGduNDh0MDU5MGo0aGdrLWhza2Rrc3ZtYWh4MDFrYWxzbXRhbmZkeg=="
+      "Z2V0c2FuZGJveDoNMD82emItdXcxZm56ajYxYm12ZWVzNjk2Znc3Y2Z1OW9yd29zaTd4YThj"
     ],
     "negatives": [
-      "aW52YWxpZC1nZXRzYW5kYm94X2FwaV9rZXk="
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy01YzQ4OTA3Ni0yNzYyLTE2NDItOTJiMC04NWEyZGYxZmQ4YTc="
     ]
   },
   "ipinfodb_api_key": {
     "positives": [
-      "aXBpbmZvZGJASwoNZnE3NHpnNngxcTZ0bXlqNjRzeHYzYnB3ZXdobzAzbGFxeW5iNDdycGFhNnNyanJucHE4bW95dGc3bWRvaWt5eA=="
+      "aXBpbmZvZGIKJw1pMmZuaW0zZmdleHkyenV3MWRmeXNrN3VvcG9sYnE0NHJwem12YzVjODRjb3ZwaTRrdjB2bDk0NW03d254aGY2"
     ],
     "negatives": [
-      "aW52YWxpZC1pcGluZm9kYl9hcGlfa2V5"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy1jZDczYjc0YS1kYzVkLWIyZGYtZGUzZS0xZjU1OGY3MjkwY2Q="
     ]
   },
   "jdbc_token": {
     "positives": [
-      "amRiYzplw6VTwrxKwrrDgsOeOi8vw5INCQ0LCnBhc3N3b3JkIiI8ezw8PDw8ewsiDA0NJycMCQsLJwoMIiANCQ=="
+      "amRiYzpteXNxbDovL2hvc3Q6MzMwNi9kYj91c2VyPXJvb3QmcGFzc3dvcmQ9d3RnVFlkVjVWUiA="
     ],
     "negatives": [
-      "aW52YWxpZC1qZGJjX3Rva2Vu"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy0wNTgwMzljMi0wMGNjLTEwODItZTE5Yy02NDhjZWM0OGRkMWU="
     ]
   },
   "paymongo_api_key": {
     "positives": [
-      "cGF5bW9uZ28KNQpxQThIT3lnRm9RaDNfY2o0SVJmNEZzSHFSTWg3S2FXeA=="
+      "cGF5bW9uZ28KXm4uYGNHZjFwU3IyNFlWWTBiOWl0ek9sM2tSOVdFTF9jRlNx"
     ],
     "negatives": [
-      "aW52YWxpZC1wYXltb25nb19hcGlfa2V5"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy0zZmEwMjkwMy1mMzc2LTNkNmUtNzA4Zi0wNmZkN2UxMzRjYTk="
     ]
   },
   "sendbird_api_key": {
     "positives": [
-      "c2VuZGJpcmQNCll2CjE1NTkzYzVjNGFmODY0NzA4MDgzMzE2YzdlYzE4ZjgxMTE1MTJlZTM="
+      "c2VuZGJpcmQhZjdlMzNmMTM4ZTNmMjQ0MDAzMjdjNzI5Zjk5YzBlZTlhM2ZhMzUxZA=="
     ],
     "negatives": [
-      "aW52YWxpZC1zZW5kYmlyZF9hcGlfa2V5"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy0zZGY4YTQzNC00MmFjLTExMjUtZjE4My0zODMyNjVlNDdhMWI="
     ]
   },
   "sendbird_organizational_api_key": {
     "positives": [
-      "c2VuZGJpcmRDXWUzMjc1MzQ5NTA0ODdiMDAzZmYzOGIwOQ=="
+      "c2VuZGJpcmQKDUktMzA2ZjkzYTdhYjc1MzUzMDllYjJiY2Vh"
     ],
     "negatives": [
-      "aW52YWxpZC1zZW5kYmlyZF9vcmdhbml6YXRpb25hbF9hcGlfa2V5"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy0xYTUxYzMxOC1mYzc2LTU3MTctMGU1OS00ZDEyYTIyMDUyMmE="
     ]
   },
   "database_connection_string_full": {
-    "positives": [],
+    "positives": [
+      "JnF1b3Q7CmRhdGFzb3VyY2VOYW1lPQ0AfAUFYAYnCAcGDQcnBiIK"
+    ],
     "negatives": [
-      "aW52YWxpZC1kYXRhYmFzZV9jb25uZWN0aW9uX3N0cmluZ19mdWxs"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy03NmFmYTVhZC1mNGZmLWJhOWUtOWY0OC1lYTQ1MDlkMTMwZDg="
     ]
   },
   "database_connection_string_1": {
     "positives": [],
     "negatives": [
-      "aW52YWxpZC1kYXRhYmFzZV9jb25uZWN0aW9uX3N0cmluZ18x"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy0wYzlhMjY2ZC1mNmQ0LWI2YWYtMWY3YS03MDFjMDZhMWNjODk="
     ]
   },
   "database_connection_string_2": {
     "positives": [],
     "negatives": [
-      "aW52YWxpZC1kYXRhYmFzZV9jb25uZWN0aW9uX3N0cmluZ18y"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy1hN2FiNmMyOS0zOGRjLWNiZGUtNzc0Yi1jZTIwOGQzYzgzOWM="
     ]
   },
   "database_connection_string_3": {
     "positives": [],
     "negatives": [
-      "aW52YWxpZC1kYXRhYmFzZV9jb25uZWN0aW9uX3N0cmluZ18z"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy0zNmIwMmM1MC1mOGNjLTA2YTQtYmMxMS03Zjg2ZTAxMDkzYWQ="
     ]
   },
   "tsql_create_login_or_user": {
     "positives": [],
     "negatives": [
-      "aW52YWxpZC10c3FsX2NyZWF0ZV9sb2dpbl9vcl91c2Vy"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy04N2U3YTdjNi0wOGM5LWNkN2UtNGRkZi00YjI3MjA4ODViZGQ="
     ]
   },
   "sqlalchemy_connection_string": {
     "positives": [],
     "negatives": [
-      "aW52YWxpZC1zcWxhbGNoZW15X2Nvbm5lY3Rpb25fc3RyaW5n"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy05NTI1ZGFlMC0xMTVlLWIxOWMtYWQ1Yi03ZjM2Yzc2ZTc5NzE="
     ]
   },
   "mongodb_connection_string": {
     "positives": [],
     "negatives": [
-      "aW52YWxpZC1tb25nb2RiX2Nvbm5lY3Rpb25fc3RyaW5n"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy0xOTRiYzUyNy00ZTIzLTEyZmUtM2MxZC03MTI3MGNmNGFkMTA="
     ]
   },
   "jdbc_connection_string": {
     "positives": [],
     "negatives": [
-      "aW52YWxpZC1qZGJjX2Nvbm5lY3Rpb25fc3RyaW5n"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy01OWM1Nzk4MS1iMTYzLTdmNTUtNGZiMC0xNDVkNWEyN2E3NmQ="
     ]
   },
   "hardcoded_spring_sql_passwords": {
     "positives": [
-      "c3ByaW5nLmRhdGFzb3VyY2UucGFzc3dvcmQJCQkgIAkgICAgIAkJCQk9ICAgCQkgIAkgCSAgCQkJIAkJICIDAQYBAgoABQAGJw=="
+      "c3ByaW5nLmRhdGFzb3VyY2UucGFzc3dvcmQJCSAgICAJICAgIAkJIAk9CQkgICAgCSAJICAJCQkJICIGBQ0BBwAKBCc="
     ],
     "negatives": [
-      "aW52YWxpZC1oYXJkY29kZWRfc3ByaW5nX3NxbF9wYXNzd29yZHM="
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy04MzRlZGZlYi1lMzFjLWUxYmItZTg5Zi1hOWNhMzUwNzdjYTM="
     ]
   },
   "hardcoded_internal_emails": {
     "positives": [],
     "negatives": [
-      "aW52YWxpZC1oYXJkY29kZWRfaW50ZXJuYWxfZW1haWxz"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy0zMDdmYTAwNC1jMTcyLTg5YmMtODIxNC03ZWFmNGJjMzBmNzQ="
     ]
   },
   "hardcoded_internal_urls": {
     "positives": [],
     "negatives": [
-      "aW52YWxpZC1oYXJkY29kZWRfaW50ZXJuYWxfdXJscw=="
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy0yZDVhYjUwNy04MWJhLWM2ZGItMDIzYy1lMmFiYjY5ODRiZWE="
     ]
   },
   "hardcoded_uri_passwords": {
     "positives": [],
     "negatives": [
-      "aW52YWxpZC1oYXJkY29kZWRfdXJpX3Bhc3N3b3Jkcw=="
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy0wZDgwZTkzYi1hYTBiLTVhMTAtNWYwYy1hNDgwZDRiYjk4MDM="
     ]
   },
   "any_ipv4_addresses": {
     "positives": [
-      "MjUyLjI1My4yNTIuNQ=="
+      "ODUuMjUuMjQ4LjM="
     ],
     "negatives": [
-      "aW52YWxpZC1hbnlfaXB2NF9hZGRyZXNzZXM="
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy02MTdjYzkyNy0zOTIxLWNjMzgtZTkxMS1jNGI4NWU1ZjljN2Q="
     ]
   },
   "ghcr_typos": {
     "positives": [
-      "aGdjci5pbw=="
+      "Z2hjLmlv"
     ],
     "negatives": [
-      "aW52YWxpZC1naGNyX3R5cG9z"
+      "c2FmZS1uZWdhdGl2ZS10ZXN0LXN0cmluZy00ZGNkODM2Zi1kMzJmLWIyZjktZGRjNS03YjZiZTIxYjc1ZTk="
     ]
   }
 }

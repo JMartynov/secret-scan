@@ -28,8 +28,8 @@ def test_demo_execution():
     assert "Demo Complete" in result.stdout
     
     # Check if redacted content is present in Part 2
-    # We look for ACCA...PM0P string which should be there for AWS key redaction
-    assert "ACCA...PM0P" in result.stdout
+    # We look for ASIA...P68B string which should be there for AWS key redaction
+    assert "ASIA...P68B" in result.stdout
     
     # Ensure no ANSI color codes in Part 4 output
     # This is tricky because Part 4 is just a section of the whole output.

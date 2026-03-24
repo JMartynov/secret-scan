@@ -392,7 +392,9 @@
     ]
   },
   "vercel_oauth_client_secrets": {
-    "positives": [],
+    "positives": [
+      "Y2xpZW50X2lkOiBvYWNfMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0CmNsaWVudF9zZWNyZXQ6IDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNA=="
+    ],
     "negatives": [
       "bmVnYXRpdmUtSTZhaWtYRXhPMlI5ajh2ajB0a1p6MFpEV3E1WWhnbjM="
     ]
@@ -446,7 +448,9 @@
     ]
   },
   "iban_ba": {
-    "positives": [],
+    "positives": [
+      "QkExMjM0NTY3ODkwMTIzNDU2Nzg5"
+    ],
     "negatives": [
       "bmVnYXRpdmUtWXVwT1U4d0FTSHQ5VnRmQzNlTDVOOGh5bWZmeUh3VFU="
     ]
@@ -732,7 +736,9 @@
     ]
   },
   "iban_mr": {
-    "positives": [],
+    "positives": [
+      "TVIxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc="
+    ],
     "negatives": [
       "bmVnYXRpdmUtdkx2dHIybUlJTE1LSXhnNEdzaE5vWjdRaXl3dDZ0QTQ="
     ]

@@ -47,13 +47,23 @@ MANUAL_GENERATORS = {
     'generic_rsa_keys': lambda: "-----BEGIN RSA PRIVATE KEY-----\n" + random_string(100, string.ascii_letters + string.digits + "+/") + "\n-----END RSA PRIVATE KEY-----",
     'gpg_private_key': lambda: "-----BEGIN PGP PRIVATE KEY BLOCK-----\n" + random_string(100, string.ascii_letters + string.digits + "+/") + "\n-----END PGP PRIVATE KEY BLOCK-----",
     'credit_cards': lambda: "4" + random_string(15, string.digits),
-    'bearer_tokens': lambda: "Authorization: Bearer " + random_string(30, string.ascii_letters + string.digits + "-._~+/:="),
+    'bearer_tokens': lambda: "Authorization: Bearer " + random_string(40),
     'razorpay_api_key': lambda: "rzp_" + random_string(4, string.ascii_letters + string.digits) + "_" + random_string(15, string.ascii_letters + string.digits),
     'jdbc_token': lambda: "jdbc:mysql://host:3306/db?user=root&password=" + random_string(10, string.ascii_letters + string.digits) + " ",
     'azure_access_key_legacy': lambda: "AzureKey=" + random_string(80, string.ascii_letters + string.digits + "+/") + "==",
-    'sugester_api_domain': lambda: "sugester-token",
+    'sugester_api_domain': lambda: "sugester-" + random_string(20),
     'yaml_static_password_fields': lambda: "db_password: secret_value_123",
-    'hardcoded_database_passwords': lambda: "postgres_password = " + random_string(12),
+    'hardcoded_database_passwords': lambda: "postgres_password = " + random_string(20),
+    'uri': lambda: "mysql://user:" + random_string(20) + "@localhost:3306/db",
+    'github_actions_sha_checker': lambda: "uses: actions/checkout@" + random_string(40, "0123456789abcdef"),
+    'generic_passwords': lambda: "password = " + random_string(20),
+    'caspio_api_domain': lambda: "caspio = " + "".join(random.sample(string.ascii_lowercase + string.digits, 8)),
+    'yaml_base64': lambda: "db_secret: " + encode_str(random_string(32)),
+    'auth0_api_token': lambda: "auth0: eyJ" + random_string(100),
+    'openstack_password_or_key': lambda: "openstack_password: " + random_string(32, "0123456789abcdef"),
+    'clockwork_api_user_key': lambda: "clockwork: " + random_string(5, string.digits),
+    'azure_sas_token': lambda: "sig=" + random_string(43, string.ascii_letters + string.digits) + "%3d",
+    'browserstack_access_key_imprecise': lambda: "access_key: " + random_string(20),
 }
 
 def encode_str(s):
@@ -69,10 +79,10 @@ def sanitize_regex_for_python(regex):
     if m:
         regex = m.group(1)
 
-    flags = re.VERBOSE | re.IGNORECASE # Default to ignorecase as most rules seem to imply it or use (?i)
+    flags = re.IGNORECASE | re.MULTILINE
     
     # Handle \z (Perl end of string) -> \Z (Python end of string)
-    clean = regex.replace(r'\z', r'\Z')
+    clean = regex.replace('\\z', '\\Z')
     
     # Remove inline flags (?i), (?s), etc. and map to int flags if needed
     clean = re.sub(r'\(\?[imsx]+\)', '', clean)
@@ -138,7 +148,7 @@ def main():
                 continue
 
             # Use a safe negative string that won't trigger keyword-based rules
-            entry = {"positives": [], "negatives": [encode_str(f"safe-negative-test-string-{uuid()}")]}
+            entry = {"positives": [], "negatives": [encode_str(f"negative-{random_string(32)}")]}
             
             # Prepare validation regex
             try:

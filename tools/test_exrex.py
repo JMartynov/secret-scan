@@ -1,5 +1,7 @@
-import exrex
 import re
+
+import exrex
+
 
 def clean_regex_for_exrex(regex):
     clean = regex

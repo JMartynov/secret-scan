@@ -1,11 +1,13 @@
+import base64
 import json
 import os
-import re
-import exrex
-import base64
 import random
+import re
 import string
 import sys
+
+import exrex
+
 
 def random_string(length, chars=string.ascii_letters + string.digits):
     return ''.join(random.choices(chars, k=length))
@@ -80,13 +82,13 @@ def sanitize_regex_for_python(regex):
         regex = m.group(1)
 
     flags = re.IGNORECASE | re.MULTILINE
-    
+
     # Handle \z (Perl end of string) -> \Z (Python end of string)
     clean = regex.replace('\\z', '\\Z')
-    
+
     # Remove inline flags (?i), (?s), etc. and map to int flags if needed
     clean = re.sub(r'\(\?[imsx]+\)', '', clean)
-    
+
     return clean, flags
 
 def simplify_regex_for_exrex(regex):
@@ -95,16 +97,16 @@ def simplify_regex_for_exrex(regex):
     m = re.match(r'^/(.*)/[a-z]*$', regex, re.DOTALL)
     if m:
         regex = m.group(1)
-        
+
     clean = regex.replace(r'\z', r'\Z')
-    
+
     # Strip flags
     clean = re.sub(r'\(\?[imsx]+\)', '', clean)
-    
+
     # Strip anchors - exrex doesn't need them to generate a matching string
     clean = re.sub(r'\\A|\\Z|\^|\$', '', clean)
-    clean = re.sub(r'\\b|\\B', '', clean) 
-    
+    clean = re.sub(r'\\b|\\B', '', clean)
+
     # Limit quantifiers
     clean = re.sub(r'\{(\d+),\}', lambda m: f"{{{m.group(1)},{int(m.group(1))+5}}}", clean)
     def cap_quantifier(m):
@@ -112,7 +114,7 @@ def simplify_regex_for_exrex(regex):
         limit = int(m.group(2))
         return f"{{{n},{min(limit, n+5)}}}"
     clean = re.sub(r'\{(\d+),(\d+)\}', cap_quantifier, clean)
-    
+
     return clean
 
 def strip_lookarounds(regex):
@@ -128,12 +130,15 @@ def main():
     generated_count = 0
     failed_rules = []
 
+    # Process each category directory in the taxonomy
     for cat in os.listdir(data_dir):
         cat_path = os.path.join(data_dir, cat)
-        if not os.path.isdir(cat_path): continue
+        if not os.path.isdir(cat_path):
+            continue
         rules_path = os.path.join(cat_path, 'rules.json')
-        if not os.path.exists(rules_path): continue
-        
+        if not os.path.exists(rules_path):
+            continue
+
         with open(rules_path, 'r') as f:
             rules = json.load(f)
 
@@ -149,7 +154,7 @@ def main():
 
             # Use a safe negative string that won't trigger keyword-based rules
             entry = {"positives": [], "negatives": [encode_str(f"negative-{random_string(32)}")]}
-            
+
             # Prepare validation regex
             try:
                 val_regex, val_flags = sanitize_regex_for_python(raw_regex)
@@ -173,7 +178,7 @@ def main():
             if not sample:
                 try:
                     clean = simplify_regex_for_exrex(raw_regex)
-                    for _ in range(10): 
+                    for _ in range(10):
                         s = exrex.getone(clean)
                         if re.search(val_regex, s, val_flags):
                             sample = s
@@ -181,7 +186,7 @@ def main():
                         if re.search(val_regex, f" {s} ", val_flags):
                             sample = f" {s} "
                             break
-                except Exception as e:
+                except Exception:
                     # 3. Try Exrex (Aggressive Strip)
                     try:
                         clean_stripped = strip_lookarounds(clean)
@@ -190,7 +195,7 @@ def main():
                             if re.search(val_regex, s, val_flags):
                                 sample = s
                                 break
-                    except Exception as e2:
+                    except Exception:
                         pass # Fail silently, logged below
 
             if sample:
@@ -199,7 +204,7 @@ def main():
             else:
                 failed_rules.append(rid)
                 print(f"FAILED to generate for {rid}. Val Regex: {val_regex[:50]}...", file=sys.stderr)
-            
+
             cat_test_data[rid] = entry
 
         with open(os.path.join(cat_path, 'test_data.json'), 'w') as f:

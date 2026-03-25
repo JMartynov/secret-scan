@@ -8,8 +8,9 @@
       "encoded"
     ],
     "regex": "(?:[{[,][ \\t]*[ \\t\\r\\n]*\"(?i)[a-z_-]*(?:secret|service_pass(wd|word|code|phrase)|pass(?:wd|word|code|phrase)?|key|token)\"[ \\t]*:[ \\t]*\")([0-9a-f]{32}|[0-9a-f]{40}|[0-9a-f]{64})(?:\"[ \\t\\r\\n]*[,}\\]])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "uuidv4_bearer_token",
@@ -20,8 +21,9 @@
       "token"
     ],
     "regex": "(?:(\\b|\\A)(?i)Bearer[ ])([a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12})(?:\\b|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "terraformcloud_api_token",
@@ -30,8 +32,9 @@
       "terraformcloud"
     ],
     "regex": "\\b([A-Za-z0-9]{14}.atlasv1.[A-Za-z0-9]{67})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "okta_token_precise",
@@ -41,8 +44,9 @@
       "precise"
     ],
     "regex": "(?:(\\bSSWS\\s{1,5}|(?i)okta[_-]?(api[_-]?)?(token|key|secret)\\s{0,28}([:=]|[=-]>|to|[!=]={1,2}|<>)\\s{0,28}['\"`]?))(0{2}[0-9A-Za-z_-]{40})(?:\\z|[^0-9A-Za-z_+/=-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "asana_access_token",
@@ -51,8 +55,9 @@
       "asana"
     ],
     "regex": "(?i)(?:asana)(?:.|[\\n\\r]){0,40}\\b([0-9]{1,}\\/[0-9]{16,}:[A-Za-z0-9]{32,})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "auth0_api_token",
@@ -61,8 +66,9 @@
       "auth0"
     ],
     "regex": "(?i)(?:auth0)(?:.|[\\n\\r]){0,40}\\b(ey[a-zA-Z0-9._-]+)\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "auth0_domain_url",
@@ -71,8 +77,9 @@
       "auth0"
     ],
     "regex": "([a-zA-Z0-9\\-]{2,16}\\.[a-zA-Z0-9_-]{2,3}\\.auth0\\.com)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "auth0_oauth_client_id",
@@ -81,8 +88,9 @@
       "auth0"
     ],
     "regex": "(?i)(?:auth0)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{32,60})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "auth0_oauth_client_secret",
@@ -91,8 +99,9 @@
       "auth0"
     ],
     "regex": "\\b([a-zA-Z0-9_-]{64,})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "auth0_oauth_domain_url",
@@ -101,8 +110,9 @@
       "auth0"
     ],
     "regex": "\\b([a-zA-Z0-9][a-zA-Z0-9._-]*auth0\\.com)\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "avaza_api_token",
@@ -111,8 +121,9 @@
       "avaza"
     ],
     "regex": "(?i)(?:avaza)(?:.|[\\n\\r]){0,40}\\b([0-9]+-[0-9a-f]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bitly_access_token",
@@ -121,8 +132,9 @@
       "bitly"
     ],
     "regex": "(?i)(?:bitly)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "clickup_personal_token",
@@ -131,8 +143,9 @@
       "clickup"
     ],
     "regex": "(?i)(?:clickup)(?:.|[\\n\\r]){0,40}\\b(pk_[0-9]{8}_[0-9A-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cloudflare_api_token",
@@ -141,8 +154,9 @@
       "cloudflare"
     ],
     "regex": "(?i)(?:cloudflare)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "contentful_api_personal_token",
@@ -151,8 +165,9 @@
       "contentful"
     ],
     "regex": "\\b([CFPAT\\-a-zA-Z-0-9]{49})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "discord_api_token",
@@ -161,7 +176,7 @@
       "discord"
     ],
     "regex": "(?i)(?:discord)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{24}\\.[A-Za-z0-9_-]{6}\\.[A-Za-z0-9_-]{27})\\b",
-    "risk": "high"
+    "severity": "high"
   },
   {
     "id": "facebook_oauth_id",
@@ -170,8 +185,9 @@
       "facebook"
     ],
     "regex": "(?i)(?:facebook)(?:.|[\\n\\r]){0,40}\\b([0-9]{15,18})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "facebook_oauth_secret",
@@ -180,8 +196,9 @@
       "facebook"
     ],
     "regex": "(?i)(?:facebook)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "facebook_access_token",
@@ -190,8 +207,9 @@
       "facebook"
     ],
     "regex": "EAACEdEose0cBA[0-9A-Za-z]+",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fastly_api_token",
@@ -200,8 +218,9 @@
       "fastly"
     ],
     "regex": "(?i)(?:fastly)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "figma_access_token",
@@ -210,8 +229,9 @@
       "figma"
     ],
     "regex": "(?i)(?:figma)(?:.|[\\n\\r]){0,40}\\b([0-9]{6}-[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "github_token",
@@ -220,8 +240,9 @@
       "github"
     ],
     "regex": "\\b((?:ghp|gho|ghu|ghs|ghr)_[a-zA-Z0-9]{36,255})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "jira_token",
@@ -230,16 +251,18 @@
       "jira"
     ],
     "regex": "(?i)(?:jira)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mux_secret_token",
     "category": "api_key",
     "keywords": [],
     "regex": "(?i)(?:mux)(?:.|[\\n\\r]){0,40}([ \\r\\n]{0,1}[0-9A-Za-z\\/\\+]{75}[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "okta_api_token",
@@ -248,8 +271,9 @@
       "okta"
     ],
     "regex": "00[a-zA-Z0-9_-]{40}",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "onelogin_oauth_client_secret",
@@ -258,8 +282,9 @@
       "onelogin"
     ],
     "regex": "(?i)secret[a-zA-Z0-9_' \"=]{0,20}([a-z0-9]{64})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "paypal/braintree_access_token",
@@ -268,8 +293,9 @@
       "paypal/braintree"
     ],
     "regex": "access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "runrunit_api_user_token",
@@ -278,8 +304,9 @@
       "runrunit"
     ],
     "regex": "(?i)(?:runrunit)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{18,20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sentiment_api_token",
@@ -288,8 +315,9 @@
       "sentiment"
     ],
     "regex": "(?i)(?:sentiment)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "slack_token",
@@ -298,8 +326,9 @@
       "slack"
     ],
     "regex": "(?:xoxb|xoxp|xapp|xoxa|xoxr)\\-[0-9]{10,13}\\-[a-zA-Z0-9\\-]*",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "slack_token_v2",
@@ -308,7 +337,7 @@
       "slack"
     ],
     "regex": "xox[baprs]-([0-9a-zA-Z]{10,48})?",
-    "risk": "high"
+    "severity": "high"
   },
   {
     "id": "square_access_token",
@@ -317,8 +346,9 @@
       "square"
     ],
     "regex": "sq0atp-[0-9A-Za-z\\-_]{22}",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "square_oauth_secret",
@@ -327,8 +357,9 @@
       "square"
     ],
     "regex": "sq0csp-[0-9A-Za-z\\-_]{43}",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "teamgate_api_token",
@@ -337,8 +368,9 @@
       "teamgate"
     ],
     "regex": "(?i)(?:teamgate)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "telegram_api_token",
@@ -347,8 +379,9 @@
       "telegram"
     ],
     "regex": "(?i)(?:telegram)(?:.|[\\n\\r]){0,40}\\b([0-9]{8,12}:[a-zA-Z0-9_-]{35})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "twitter_access_token",
@@ -357,8 +390,9 @@
       "twitter"
     ],
     "regex": "(?i)(?:twitter)(?:.|[\\n\\r]){0,40}\\b[1-9][0-9]+-[0-9a-zA-Z]{40}\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zendesk_api_token",
@@ -367,16 +401,18 @@
       "zendesk"
     ],
     "regex": "(?i)(?:zendesk)(?:.|[\\n\\r]){0,40}([A-Za-z0-9_-]{40})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "jwt",
     "category": "tokens",
     "keywords": [],
     "regex": "(?:[^0-9A-Za-z_.-]|\\A)(e(?:y[IJ]|yL[CD]|yA[JKgi]|w[ko][JKgi])[A-Za-z0-9_-]{10,}(?:fQ|[3HXn]0|[1BFJNRVZdhlpx]9)={0,2}\\.e(?:y[IJ]|yL[CD]|yA[JKgi]|w[ko][JKgi])[A-Za-z0-9_-]{10,}(?:fQ|[3HXn]0|[1BFJNRVZdhlpx]9)={0,2}(?:\\.?[A-Za-z0-9_-]+={0,2})?)(?:[^0-9A-Za-z_.=-]|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "grafana_api_token",
@@ -386,8 +422,9 @@
       "token"
     ],
     "regex": "(eyJrIjoi[A-Za-z0-9_=-]{42})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sentry_auth_token",
@@ -398,8 +435,9 @@
       "token"
     ],
     "regex": "(?:(?:(?:\\A|[\\r\\n])\\[auth\\][^[]*\\ntoken\\s*=|(?:\\A|\\b)SENTRY_AUTH_TOKEN\\s*=|(?:\\A|\\b)sentry-cli [^\\r\\n]*--auth-token |(?:\\A|\\b)auth\\.token\\s*=)\\s*['\"`]?)([a-fA-F0-9]{64})(?:\\z|\\s|['\"`])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sentry_webpack_plugin_token",
@@ -410,8 +448,9 @@
       "plugin"
     ],
     "regex": "(?:new SentryPlugin\\(\\s*\\{[^}]*[,\\n \\t]apiKey:\\s*['\"])((?:[a-fA-F0-9]{32}|[a-fA-F0-9]{64}))(?:['\"])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sentry_terraform_provider_token",
@@ -422,8 +461,9 @@
       "provider"
     ],
     "regex": "(?:(?:\\A|[\\r\\n])provider \"sentry\" {[^}]*[\\n \\t]token\\s*=\\s*['\"])([a-fA-F0-9]{64})(?:['\"])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "okta_token",
@@ -433,8 +473,9 @@
       "token"
     ],
     "regex": "(?:(\\A|[^0-9A-Za-z_+/-]))((0{2}[0-9A-Za-z_-]{40}))(?:(\\z|[^0-9A-Za-z_+/=-]))",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "flickr_oauth_token",
@@ -445,8 +486,9 @@
       "token"
     ],
     "regex": "(?:(\\A|\\b)oauth_token=)([0-9]{17}-[0-9a-f]{16})(?:\\z|\\b)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "browserstack_token_url",
@@ -456,7 +498,7 @@
       "token"
     ],
     "regex": "(?:https?://)([^:]+:[0-9a-zA-Z]{20})(?:@hub-cloud\\.browserstack\\.com/)",
-    "risk": "high"
+    "severity": "high"
   },
   {
     "id": "vercel_access_token_imprecise",
@@ -467,8 +509,9 @@
       "token"
     ],
     "regex": "(?:(\\A|\\b|[_.-])(?i)vercel[_.-]?((access|api)[_.-]?)?token\\s*[=:]\\s*['\"]?)([A-Za-z0-9]{24})(?:\\z|\\s|['\"])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "vercel_access_token",
@@ -479,8 +522,9 @@
       "token"
     ],
     "regex": "(?:(\\A|\\b)(?i)vercel[_.-]?((access|api)[_.-]?)?token\\s*[=:]\\s*['\"]?)([A-Za-z0-9]{24})(?:\\z|\\s|['\"])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "vercel_cli_token",
@@ -490,8 +534,9 @@
       "token"
     ],
     "regex": "(?:(\\A|\\b)vercel [^\\r\\n]*--token=)([A-Za-z0-9]{24})(?:\\z|\\s)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "jenkins_api_token",
@@ -501,8 +546,9 @@
       "token"
     ],
     "regex": "(?:(?i)jenkins_?(api[_-]?)?(token|secret|key)['\"`]?(\\s*[\\]\\)])?\\s*([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s*([[{])?['\"`]?)([a-f0-9]{32,64})(?:['\"`\\r\\n,]|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "circleci_api_token",
@@ -512,8 +558,9 @@
       "token"
     ],
     "regex": "(?:(?i)circle[_-]?(ci[_.-]?)?(api[_.-]?)?(token|key)['\"`]?(\\s*[\\]\\)])?\\s*([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s*([[{])?['\"`]?)([a-f0-9]{40})(?:['\"`\\r\\n,]|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "yaml_token",
@@ -524,8 +571,9 @@
       "token"
     ],
     "regex": "(?:(?:\\n|\\A)[ \\t]*(?i)[a-z_-]*(?:secret|service_pass(wd|word|code|phrase)|pass(?:wd|word|code|phrase)?|key|token)[ \\t]*:[ \\t]*(['\"]?|[|>]-?[ \\t]*\\n[ \\t]*))([0-9a-f]{32}|[0-9a-f]{40}|[0-9a-f]{64})(?:['\"\\r\\n]|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bearer_tokens",
@@ -535,7 +583,8 @@
       "tokens"
     ],
     "regex": "(?:(Authorization: |['\"])([Bb]earer |[Tt]oken (token=)?))([a-zA-Z0-9_.=/+:-]{12,})(?:\\z|[\\s'\"])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   }
 ]

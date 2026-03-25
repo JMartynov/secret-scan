@@ -1,5 +1,4 @@
-import pytest
-from report import Finding, format_report, C_RED, C_YELLOW, C_BOLD, C_RESET
+from report import Finding, format_report
 
 def test_finding_redaction():
     # Long secret

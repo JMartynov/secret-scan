@@ -1,6 +1,5 @@
 import subprocess
 import os
-import pytest
 
 def test_demo_execution():
     # Run demo.sh and capture output

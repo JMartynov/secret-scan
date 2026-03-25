@@ -1,4 +1,3 @@
-import pytest
 from obfuscator import Obfuscator
 from report import Finding
 

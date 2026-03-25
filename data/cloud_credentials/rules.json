@@ -6,24 +6,27 @@
       "youtube/google"
     ],
     "regex": "(?i)(?:youtube)(?:.|[\\n\\r]){0,40}\\bAIza[0-9A-Za-z\\-_]{35}\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "aws_api_id",
     "category": "api_key",
     "keywords": [],
     "regex": "\\b((?:AKIA|ABIA|ACCA|ASIA)[0-9A-Z]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "aws_api_secret",
     "category": "api_key",
     "keywords": [],
     "regex": "\\b([A-Za-z0-9+/]{40})[ \\r\\n'\"\\x60]",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "azure_key_id",
@@ -32,8 +35,9 @@
       "azure"
     ],
     "regex": "(?i)(?:azure).{0,20}([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "azure_client_secret",
@@ -42,8 +46,9 @@
       "azure"
     ],
     "regex": "(?:(?i)(client|azure[a-z_.-]{0,10})(key|secret|password|pwd|token)[a-z_.-]{0,9}\\b['\"`]?(\\s{0,5}[\\]\\)])?\\s{0,3}([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s{0,5}([[{])?['\"`]?)([a-zA-Z0-9~_.-]{34})(?:\\z|[\"'`]|\\s)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "digitalocean_api_token",
@@ -52,16 +57,18 @@
       "digitalocean"
     ],
     "regex": "(?i)(?:digitalocean)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "gcp_api_key",
     "category": "api_key",
     "keywords": [],
     "regex": "\\{[^{]+auth_provider_x509_cert_url[^}]+\\}",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "heroku_api_key",
@@ -70,8 +77,9 @@
       "heroku"
     ],
     "regex": "(?i)(?:heroku)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "azure_sql_connection_string",
@@ -82,7 +90,7 @@
       "string"
     ],
     "regex": "((?i)[a-z][a-z0-9-]+\\.database(?:\\.secure)?\\.(?:(?:windows|usgovcloudapi)\\.net|chinacloudapi\\.cn|cloudapi\\.de))",
-    "risk": "high"
+    "severity": "high"
   },
   {
     "id": "google_private_key_id_or_old_api_token",
@@ -93,8 +101,9 @@
       "older"
     ],
     "regex": "(?:(?i)(private_key_id|google_api_key)['\"`]?(\\s*[\\]\\)])?\\s*([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s*([[{])?['\"`]?)([a-fA-F0-9]{40})(?:\\b|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "amazon_mws_auth_token",
@@ -103,8 +112,9 @@
       "amazon"
     ],
     "regex": "amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "aws_s3_presigned_url",
@@ -113,7 +123,7 @@
       "presigned"
     ],
     "regex": "(?:\\b|\\A)(https://[a-z-]+\\.s3\\.amazonaws\\.com/[^?\\s'\"`\\r\\n]+\\?[^\\s'\"`\\r\\n]+&X-Amz-Signature=[^\\s'\"`\\r\\n]+)(?:['\"`\\r\\n,]|\\z)",
-    "risk": "high"
+    "severity": "high"
   },
   {
     "id": "azure_access_key_legacy",
@@ -124,8 +134,9 @@
       "legacy"
     ],
     "regex": "(?:(\\A|\\b)(?i)(AZURE|ACCOUNT)(_?ACCESS|_?STORAGE(_?ACCOUNT)?)?_?KEY['\"`]?(\\s*[\\]\\)])?\\s*([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s*([[{])?['\"`]?)([A-Za-z0-9/+]+==)(?:['\"`\\r\\n,]|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "azure_sas_token",
@@ -136,8 +147,9 @@
       "access"
     ],
     "regex": "(?:\\b|\\A)((https://[^?]+\\?)?[^\\s?/]*\\bsig=([A-Za-z0-9]|%2[bfBF]){43,}%3[dD][^\\s?/]*)(?:\\z|\\s|['\"`])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "aws_key_id_standalone",
@@ -146,8 +158,9 @@
       "standalone"
     ],
     "regex": "(?:\\A|[^0-9A-Za-z+/_-])((?:A3T[A-Z0-9]|A(?:[KBS]I|CC|GP|I[DP]|N[PV]|PK|RO|SC)A)[A-Z2-7]{16})(?:\\z|[^0-9A-Za-z=%+/_-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "azure_generic_key",
@@ -157,8 +170,9 @@
       "generic"
     ],
     "regex": "(?:\\A|[^A-Za-z0-9/+])([A-Za-z0-9]{52}JQQJ99[AB][A-Za-z0-9]AC[A-Za-z0-9]{10}AAA[A-Za-z0-9]{9})(?:\\z|[^A-Za-z0-9/+=])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "azure_generic_key_legacy",
@@ -169,8 +183,9 @@
       "legacy"
     ],
     "regex": "(?:(?i)(?:Ocp-Apim-Subscription-Key: |Ocp-Apim-Subscription-Key=|OcpApimSubscriptionKey=|Subscription-Key=))([a-f0-9]{32})(?:\\z|[^A-Za-z0-9/+=])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "aws_bedrock_api_key",
@@ -179,8 +194,9 @@
       "bedrock"
     ],
     "regex": "(?:\\A|[^A-Za-z0-9/+])(ABSKQmVkcm9ja0FQSUtleS[A-Za-z0-9+/]{2}(?:[A-Za-z0-9+/]{4})+(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?)(?:\\z|[^A-Za-z0-9/+=])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "aws_bedrock_api_key_2",
@@ -189,8 +205,9 @@
       "bedrock"
     ],
     "regex": "(?:\\A|[^A-Za-z0-9/+])(ABSK(?:[A-Za-z0-9+/]{4}){26,}(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?)(?:\\z|[^A-Za-z0-9/+=])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "youtube/google_oauth_id",
@@ -199,7 +216,8 @@
       "youtube/google"
     ],
     "regex": "[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   }
 ]

@@ -1,0 +1,38 @@
+name: Rule Quality & Security
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'data/**'
+      - 'tools/**'
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - 'data/**'
+      - 'tools/**'
+
+jobs:
+  lint-rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-level: '3.11'
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          
+      - name: Run Regex Linter
+        run: python tools/regex_lint.py
+        
+      - name: Check for Duplicate Regex Patterns
+        run: |
+          # We use the test we just created or run the tool in check-only mode if we add one.
+          # For now, let's run the pytest validation.
+          pytest tests/test_rules_duplicates.py

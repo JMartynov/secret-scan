@@ -6,8 +6,9 @@
       "apideck"
     ],
     "regex": "\\b(sk_live_[a-z0-9A-Z-]{93})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "apiflash_key",
@@ -16,8 +17,9 @@
       "apiflash"
     ],
     "regex": "(?i)(?:apiflash)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "apifonica_key",
@@ -26,8 +28,9 @@
       "apifonica"
     ],
     "regex": "(?i)(?:apifonica)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{11}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "apify_key",
@@ -36,8 +39,9 @@
       "apify"
     ],
     "regex": "\\b(apify\\_api\\_[a-zA-Z-0-9]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "apimatic_key",
@@ -46,8 +50,9 @@
       "apimatic"
     ],
     "regex": "(?i)(?:apimatic)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{3,20}@[a-zA-Z0-9]{2,12}.[a-zA-Z0-9]{2,5})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "apiscience_key",
@@ -56,8 +61,9 @@
       "apiscience"
     ],
     "regex": "(?i)(?:apiscience)(?:.|[\\n\\r]){0,40}\\b([a-bA-Z0-9\\S]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "apitemplate_key",
@@ -66,8 +72,9 @@
       "apitemplate"
     ],
     "regex": "(?i)(?:apitemplate)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{39})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "apollo_api_key",
@@ -76,8 +83,9 @@
       "apollo"
     ],
     "regex": "(?i)(?:apollo)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "appcues_api_key",
@@ -86,8 +94,9 @@
       "appcues"
     ],
     "regex": "(?i)(?:appcues)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "appfollow_api_key",
@@ -96,8 +105,9 @@
       "appfollow"
     ],
     "regex": "(?i)(?:appfollow)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "appsynergy_api_key",
@@ -106,8 +116,9 @@
       "appsynergy"
     ],
     "regex": "(?i)(?:appsynergy)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "apptivo_api_key",
@@ -116,8 +127,9 @@
       "apptivo"
     ],
     "regex": "(?i)(?:apptivo)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "artifactory_api_key",
@@ -126,8 +138,9 @@
       "artifactory"
     ],
     "regex": "\\b([a-zA-Z0-9]{73})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "artsy_api_key",
@@ -136,8 +149,9 @@
       "artsy"
     ],
     "regex": "(?i)(?:artsy)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "asana_api_key",
@@ -146,8 +160,9 @@
       "asana"
     ],
     "regex": "(?i)(?:asana)(?:.|[\\n\\r]){0,40}\\b([a-z\\/:0-9]{51})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "assemblyai_api_key",
@@ -156,8 +171,9 @@
       "assemblyai"
     ],
     "regex": "(?i)(?:assemblyai)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "atera_api_key",
@@ -166,8 +182,9 @@
       "atera"
     ],
     "regex": "(?i)(?:atera)(?:.|[\\n\\r]){0,40}\\b([[0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "audd_api_key",
@@ -176,8 +193,9 @@
       "audd"
     ],
     "regex": "(?i)(?:audd)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "autodesk_api_key",
@@ -186,8 +204,9 @@
       "autodesk"
     ],
     "regex": "(?i)(?:autodesk)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "autoklose_api_key",
@@ -196,8 +215,9 @@
       "autoklose"
     ],
     "regex": "(?i)(?:autoklose)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "autopilot_api_key",
@@ -206,8 +226,9 @@
       "autopilot"
     ],
     "regex": "(?i)(?:autopilot)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "aviationstack_api_key",
@@ -216,8 +237,9 @@
       "aviationstack"
     ],
     "regex": "(?i)(?:aviationstack)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "axonaut_api_key",
@@ -226,8 +248,9 @@
       "axonaut"
     ],
     "regex": "(?i)(?:axonaut)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "aylien_api_key",
@@ -236,8 +259,9 @@
       "aylien"
     ],
     "regex": "(?i)(?:aylien)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ayrshare_api_key",
@@ -246,8 +270,9 @@
       "ayrshare"
     ],
     "regex": "(?i)(?:ayrshare)(?:.|[\\n\\r]){0,40}\\b([A-Z]{7}-[A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bannerbear_api_key",
@@ -256,8 +281,9 @@
       "bannerbear"
     ],
     "regex": "(?i)(?:bannerbear)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{22}tt)\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "baremetrics_api_key",
@@ -266,8 +292,9 @@
       "baremetrics"
     ],
     "regex": "(?i)(?:baremetrics)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{25})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "base_api_io_api_key",
@@ -276,8 +303,9 @@
       "base-api"
     ],
     "regex": "(?i)(?:baseapi|base-api)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "beamer_api_key",
@@ -286,8 +314,9 @@
       "beamer"
     ],
     "regex": "(?i)(?:beamer)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_+/]{45}=)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "beebole_api_key",
@@ -296,8 +325,9 @@
       "beebole"
     ],
     "regex": "(?i)(?:beebole)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "besnappy_api_key",
@@ -306,8 +336,9 @@
       "besnappy"
     ],
     "regex": "(?i)(?:besnappy)(?:.|[\\n\\r]){0,40}\\b([a-f0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "besttime_api_key",
@@ -316,8 +347,9 @@
       "besttime"
     ],
     "regex": "(?i)(?:besttime)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "billomat_api_key",
@@ -326,8 +358,9 @@
       "billomat"
     ],
     "regex": "(?i)(?:billomat)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bitbar_api_key",
@@ -336,8 +369,9 @@
       "bitbar"
     ],
     "regex": "(?i)(?:bitbar)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bitcoinaverage_api_key",
@@ -346,8 +380,9 @@
       "bitcoinaverage"
     ],
     "regex": "(?i)(?:bitcoinaverage)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bitfinex_api_key",
@@ -356,8 +391,9 @@
       "bitfinex"
     ],
     "regex": "(?i)(?:bitfinex)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bitmex_api_key",
@@ -366,8 +402,9 @@
       "bitmex"
     ],
     "regex": "(?i)(?:bitmex)(?:.|[\\n\\r]){0,40}([ \\r\\n]{1}[0-9a-zA-Z\\-\\_]{24}[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "blablacar_bus_api_key",
@@ -376,8 +413,9 @@
       "blablacar"
     ],
     "regex": "(?i)(?:blablabus)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "blazemeter_api_key",
@@ -386,8 +424,9 @@
       "blazemeter"
     ],
     "regex": "(?i)(?:blazemeter|runscope)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "blitapp_api_key",
@@ -396,8 +435,9 @@
       "blitapp"
     ],
     "regex": "(?i)(?:blitapp)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{39})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "blogger_api_key",
@@ -406,8 +446,9 @@
       "blogger"
     ],
     "regex": "(?i)(?:blogger)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z-]{39})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bombbomb_api_key",
@@ -416,8 +457,9 @@
       "bombbomb"
     ],
     "regex": "(?i)(?:bombbomb)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-._]{704})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "boostnote_api_key",
@@ -426,8 +468,9 @@
       "boostnote"
     ],
     "regex": "(?i)(?:boostnote)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "borgbase_api_key",
@@ -436,8 +479,9 @@
       "borgbase"
     ],
     "regex": "(?i)(?:borgbase)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9/_.-]{148,152})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "brandfetch_api_key",
@@ -446,8 +490,9 @@
       "brandfetch"
     ],
     "regex": "(?i)(?:brandfetch)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "browserstack_api_key",
@@ -456,8 +501,9 @@
       "browserstack"
     ],
     "regex": "(?i)(?:browserstack)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "browshot_api_key",
@@ -466,8 +512,9 @@
       "browshot"
     ],
     "regex": "(?i)(?:browshot)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{28})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "buddyns_api_key",
@@ -476,8 +523,9 @@
       "buddyns"
     ],
     "regex": "(?i)(?:buddyns)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bugherd_api_key",
@@ -486,8 +534,9 @@
       "bugherd"
     ],
     "regex": "(?i)(?:bugherd)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bugsnag_api_key",
@@ -496,8 +545,9 @@
       "bugsnag"
     ],
     "regex": "(?i)(?:bugsnag)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "buildkite_api_key",
@@ -506,8 +556,9 @@
       "buildkite"
     ],
     "regex": "(?i)(?:buildkite)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bulbul_api_key",
@@ -516,8 +567,9 @@
       "bulbul"
     ],
     "regex": "(?i)(?:bulbul)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bulksms_api_key",
@@ -526,8 +578,9 @@
       "bulksms"
     ],
     "regex": "(?i)(?:bulksms)(?:.|[\\n\\r]){0,40}\\b([a-fA-Z0-9*]{29})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "buttercms_api_key",
@@ -536,8 +589,9 @@
       "buttercms"
     ],
     "regex": "(?i)(?:buttercms)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "caflou_api_key",
@@ -546,8 +600,9 @@
       "caflou"
     ],
     "regex": "(?i)(?:caflou)(?:.|[\\n\\r]){0,40}\\b([a-bA-Z0-9\\S]{155})\\b",
-    "risk": "high",
-    "entropy": 3.0
+    "entropy": 3.0,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "calendarific_api_key",
@@ -556,8 +611,9 @@
       "calendarific"
     ],
     "regex": "(?i)(?:calendarific)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "calendly_api_key",
@@ -566,8 +622,9 @@
       "calendly"
     ],
     "regex": "(?i)(?:calendly)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{20}.[a-zA-Z-0-9]{171}.[a-zA-Z-0-9_]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "calorieninja_api_key",
@@ -576,8 +633,9 @@
       "calorieninja"
     ],
     "regex": "(?i)(?:calorieninja)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "campayn_api_key",
@@ -586,8 +644,9 @@
       "campayn"
     ],
     "regex": "(?i)(?:campayn)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "canny_api_key",
@@ -596,8 +655,9 @@
       "canny"
     ],
     "regex": "(?i)(?:canny)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[0-9]{4}-[a-z0-9]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "capsulecrm_api_key",
@@ -606,8 +666,9 @@
       "capsulecrm"
     ],
     "regex": "(?i)(?:capsulecrm)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-._+=]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "captaindata_api_key",
@@ -616,8 +677,9 @@
       "captaindata"
     ],
     "regex": "(?i)(?:captaindata)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "carboninterface_api_key",
@@ -626,8 +688,9 @@
       "carboninterface"
     ],
     "regex": "(?i)(?:carboninterface)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{21})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cashboard_api_key",
@@ -636,8 +699,9 @@
       "cashboard"
     ],
     "regex": "(?i)(?:cashboard)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{3}-[0-9A-Z]{3}-[0-9A-Z]{3}-[0-9A-Z]{3})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "caspio_api_key",
@@ -646,8 +710,9 @@
       "caspio"
     ],
     "regex": "(?i)(?:caspio)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{50})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "censys_api_key",
@@ -656,8 +721,9 @@
       "censys"
     ],
     "regex": "(?i)(?:censys)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "centralstation_api_key",
@@ -666,8 +732,9 @@
       "centralstation"
     ],
     "regex": "(?i)(?:centralstation)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{30})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cexio_api_key",
@@ -676,8 +743,9 @@
       "cexio"
     ],
     "regex": "(?i)(?:cexio|cex.io)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{24,27})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "chartmogul_api_key",
@@ -686,8 +754,9 @@
       "chartmogul"
     ],
     "regex": "(?i)(?:chartmogul)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "chatbot_api_key",
@@ -696,8 +765,9 @@
       "chatbot"
     ],
     "regex": "(?i)(?:chatbot)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "chatfuel_api_key",
@@ -706,8 +776,9 @@
       "chatfuel"
     ],
     "regex": "(?i)(?:chatfuel)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{128})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "checio_api_key",
@@ -716,8 +787,9 @@
       "checio"
     ],
     "regex": "(?i)(?:checio)(?:.|[\\n\\r]){0,40}\\b(pk_[a-z0-9]{45})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "checklyhq_api_key",
@@ -726,8 +798,9 @@
       "checklyhq"
     ],
     "regex": "(?i)(?:checklyhq)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "checkout_api_key",
@@ -736,8 +809,9 @@
       "checkout"
     ],
     "regex": "(?i)(?:checkout)(?:.|[\\n\\r]){0,40}\\b((sk_|sk_test_)[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "checkvist_api_key",
@@ -746,8 +820,9 @@
       "checkvist"
     ],
     "regex": "(?i)(?:checkvist)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{14})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cicero_api_key",
@@ -756,8 +831,9 @@
       "cicero"
     ],
     "regex": "(?i)(?:cicero)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "circelci_api_key",
@@ -766,8 +842,9 @@
       "circelci"
     ],
     "regex": "(?i)(?:circle)(?:.|[\\n\\r]){0,40}([a-fA-F0-9]{40})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "clarifai_api_key",
@@ -776,8 +853,9 @@
       "clarifai"
     ],
     "regex": "(?i)(?:clarifai)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "clearbit_api_key",
@@ -786,8 +864,9 @@
       "clearbit"
     ],
     "regex": "(?i)(?:clearbit)(?:.|[\\n\\r]){0,40}\\b([0-9a-z_]{35})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "clickhelp_api_key",
@@ -796,8 +875,9 @@
       "clickhelp"
     ],
     "regex": "(?i)(?:clickhelp)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "clicksendsms_api_key",
@@ -806,8 +886,9 @@
       "clicksendsms"
     ],
     "regex": "\\b([0-9A-Z]{8}-[0-9A-Z]{4}-[0-9A-Z]{4}-[0-9A-Z]{4}-[0-9A-Z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cliengo_api_key",
@@ -816,8 +897,9 @@
       "cliengo"
     ],
     "regex": "(?i)(?:cliengo)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "clinchpad_api_key",
@@ -826,8 +908,9 @@
       "clinchpad"
     ],
     "regex": "(?i)(?:clinchpad)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "clockify_api_key",
@@ -836,8 +919,9 @@
       "clockify"
     ],
     "regex": "(?i)(?:clockify)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{48})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "clockwork_api_user_key",
@@ -846,8 +930,9 @@
       "clockwork"
     ],
     "regex": "(?i)(?:clockwork|textanywhere)(?:.|[\\n\\r]){0,40}\\b([0-9]{5})\\b",
-    "risk": "high",
-    "entropy": 1.5
+    "entropy": 1.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "closecrm_api_key",
@@ -856,8 +941,9 @@
       "closecrm"
     ],
     "regex": "\\b(api_[a-z0-9A-Z.]{45})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cloudelements_api_key",
@@ -866,8 +952,9 @@
       "cloudelements"
     ],
     "regex": "(?i)(?:cloudelements)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cloudflare_api_key",
@@ -876,8 +963,9 @@
       "cloudflare"
     ],
     "regex": "(?i)(?:cloudflare)(?:.|[\\n\\r]){0,40}([A-Za-z0-9_-]{37})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cloudimage_api_key",
@@ -886,8 +974,9 @@
       "cloudimage"
     ],
     "regex": "(?i)(?:cloudimage)(?:.|[\\n\\r]){0,40}\\b([a-z0-9_]{30})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cloudmersive_api_key",
@@ -896,8 +985,9 @@
       "cloudmersive"
     ],
     "regex": "(?i)(?:cloudmersive)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cloudplan_api_key",
@@ -906,8 +996,9 @@
       "cloudplan"
     ],
     "regex": "(?i)(?:cloudplan)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9-]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cloudsmith_api_key",
@@ -916,8 +1007,9 @@
       "cloudsmith"
     ],
     "regex": "(?i)(?:cloudsmith)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cloverly_api_key",
@@ -926,8 +1018,9 @@
       "cloverly"
     ],
     "regex": "(?i)(?:cloverly)(?:.|[\\n\\r]){0,40}\\b([a-z0-9:_]{28})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cloze_api_key",
@@ -936,8 +1029,9 @@
       "cloze"
     ],
     "regex": "(?i)(?:cloze)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "clustdoc_api_key",
@@ -946,8 +1040,9 @@
       "clustdoc"
     ],
     "regex": "(?i)(?:clustdoc)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{60})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "codacy_api_key",
@@ -956,8 +1051,9 @@
       "codacy"
     ],
     "regex": "(?i)(?:codacy)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "codequiry_api_key",
@@ -966,8 +1062,9 @@
       "codequiry"
     ],
     "regex": "(?i)(?:codequiry)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "coin_api_key",
@@ -976,8 +1073,9 @@
       "coin"
     ],
     "regex": "(?i)(?:coinapi)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "coinbase_api_key",
@@ -986,8 +1084,9 @@
       "coinbase"
     ],
     "regex": "(?i)(?:coinbase)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "coinlayer_api_key",
@@ -996,8 +1095,9 @@
       "coinlayer"
     ],
     "regex": "(?i)(?:coinlayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "coinlib_api_key",
@@ -1006,8 +1106,9 @@
       "coinlib"
     ],
     "regex": "(?i)(?:coinlib)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "collect2_api_key",
@@ -1016,8 +1117,9 @@
       "collect2"
     ],
     "regex": "(?i)(?:collect2)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "column_api_key",
@@ -1026,8 +1128,9 @@
       "column"
     ],
     "regex": "(?i)(?:column)(?:.|[\\n\\r]){0,40}\\b((?:test|live)_[a-zA-Z0-9]{27})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "commercejs_api_key",
@@ -1036,8 +1139,9 @@
       "commercejs"
     ],
     "regex": "(?i)(?:commercejs)(?:.|[\\n\\r]){0,40}\\b([a-z0-9_]{48})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "commodities_api_key",
@@ -1046,8 +1150,9 @@
       "commodities"
     ],
     "regex": "(?i)(?:commodities)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{60})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "companyhub_api_key",
@@ -1056,8 +1161,9 @@
       "companyhub"
     ],
     "regex": "(?i)(?:companyhub)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "confluent_api_key",
@@ -1066,8 +1172,9 @@
       "confluent"
     ],
     "regex": "(?i)(?:confluent)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "conversiontools_api_key",
@@ -1076,8 +1183,9 @@
       "conversiontools"
     ],
     "regex": "(?i)(?:conversiontools)(?:.|[\\n\\r]){0,40}\\b(ey[a-zA-Z0-9_.]{157,165})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "convertapi_key",
@@ -1086,8 +1194,9 @@
       "convertapi"
     ],
     "regex": "(?i)(?:convertapi)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "convertkit_api_key",
@@ -1096,8 +1205,9 @@
       "convertkit"
     ],
     "regex": "(?i)(?:convertkit)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z_]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "convier_api_key",
@@ -1106,8 +1216,9 @@
       "convier"
     ],
     "regex": "(?i)(?:convier)(?:.|[\\n\\r]){0,40}\\b([0-9]{2}\\|[a-zA-Z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "copper_api_key",
@@ -1116,8 +1227,9 @@
       "copper"
     ],
     "regex": "(?i)(?:copper)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "countrylayer_api_key",
@@ -1126,8 +1238,9 @@
       "countrylayer"
     ],
     "regex": "(?i)(?:countrylayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "courier_api_key",
@@ -1136,8 +1249,9 @@
       "courier"
     ],
     "regex": "(?i)(?:courier)(?:.|[\\n\\r]){0,40}\\b(pk\\_[a-zA-Z0-9]{1,}\\_[a-zA-Z0-9]{28})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "coveralls_api_key",
@@ -1146,8 +1260,9 @@
       "coveralls"
     ],
     "regex": "(?i)(?:coveralls)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{37})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "craftmypdf_api_key",
@@ -1156,8 +1271,9 @@
       "craftmypdf"
     ],
     "regex": "(?i)(?:craftmypdf)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{35})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "crossbrowsertesting_api_key",
@@ -1166,8 +1282,9 @@
       "crossbrowsertesting"
     ],
     "regex": "(?i)(?:crossbrowsertesting)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "crowdin_api_key",
@@ -1176,8 +1293,9 @@
       "crowdin"
     ],
     "regex": "(?i)(?:crowdin)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{80})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cryptocompare_api_key",
@@ -1186,8 +1304,9 @@
       "cryptocompare"
     ],
     "regex": "(?i)(?:cryptocompare)(?:.|[\\n\\r]){0,40}\\b([a-z-0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "currencycloud_api_key",
@@ -1196,8 +1315,9 @@
       "currencycloud"
     ],
     "regex": "(?i)(?:currencycloud)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "currencyfreaks_api_key",
@@ -1206,8 +1326,9 @@
       "currencyfreaks"
     ],
     "regex": "(?i)(?:currencyfreaks)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "currencylayer_api_key",
@@ -1216,8 +1337,9 @@
       "currencylayer"
     ],
     "regex": "(?i)(?:currencylayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "currencyscoop_api_key",
@@ -1226,8 +1348,9 @@
       "currencyscoop"
     ],
     "regex": "(?i)(?:currencyscoop)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "currents_api_key",
@@ -1236,8 +1359,9 @@
       "currents"
     ],
     "regex": "(?i)(?:currentsapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{48})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "customguru_api_key",
@@ -1246,8 +1370,9 @@
       "customguru"
     ],
     "regex": "(?i)(?:guru)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{30})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "customerio_api_key",
@@ -1256,8 +1381,9 @@
       "customerio"
     ],
     "regex": "(?i)(?:customer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "d7network_api_key",
@@ -1266,8 +1392,9 @@
       "d7network"
     ],
     "regex": "(?i)(?:d7network)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\W\\S]{23}\\=)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dailyco_api_key",
@@ -1276,8 +1403,9 @@
       "dailyco"
     ],
     "regex": "(?i)(?:daily)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dandelion_api_key",
@@ -1286,8 +1414,9 @@
       "dandelion"
     ],
     "regex": "(?i)(?:dandelion)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dareboost_api_key",
@@ -1296,8 +1425,9 @@
       "dareboost"
     ],
     "regex": "(?i)(?:dareboost)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{60})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "datadog_api_key",
@@ -1306,8 +1436,9 @@
       "datadog"
     ],
     "regex": "(?:(\\A|\\b)(((?i)(DD|DATADOG)_API_KEY)['\"]?\\s*(value)?[=:,]\\s*['\"]?|new DataDogWinston\\({[^}]*apiKey:\\s*'|terraformer import datadog [^\\n]*--api-key=|provider \"datadog\" {[^}]*api_key\\s*=\\s*\"))([a-f0-9]{32})(?:\\z|\\b)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "datafire_api_key",
@@ -1316,8 +1447,9 @@
       "datafire"
     ],
     "regex": "(?i)(?:datafire)(?:.|[\\n\\r]){0,40}\\b([a-z0-9\\S]{175,190})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "usda_gov_api_key",
@@ -1326,8 +1458,9 @@
       "usda"
     ],
     "regex": "(?i)(?:data.gov)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "debounce_api_key",
@@ -1336,8 +1469,9 @@
       "debounce"
     ],
     "regex": "(?i)(?:debounce)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{13})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "deepai_api_key",
@@ -1346,8 +1480,9 @@
       "deepai"
     ],
     "regex": "(?i)(?:deepai)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "deepgram_api_key",
@@ -1356,8 +1491,9 @@
       "deepgram"
     ],
     "regex": "(?i)(?:deepgram)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "delighted_api_key",
@@ -1366,8 +1502,9 @@
       "delighted"
     ],
     "regex": "(?i)(?:delighted)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "deputy_api_key",
@@ -1376,8 +1513,9 @@
       "deputy"
     ],
     "regex": "(?i)(?:deputy)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "detectify_api_key",
@@ -1386,8 +1524,9 @@
       "detectify"
     ],
     "regex": "(?i)(?:detectify)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "detectlanguage_api_key",
@@ -1396,8 +1535,9 @@
       "detectlanguage"
     ],
     "regex": "(?i)(?:detectlanguage)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dfuse_api_key",
@@ -1406,8 +1546,9 @@
       "dfuse"
     ],
     "regex": "\\b(web\\_[0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "diffbot_api_key",
@@ -1416,8 +1557,9 @@
       "diffbot"
     ],
     "regex": "(?i)(?:diffbot)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "diggernaut_api_key",
@@ -1426,8 +1568,9 @@
       "diggernaut"
     ],
     "regex": "(?i)(?:diggernaut)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "disqus_api_key",
@@ -1436,8 +1579,9 @@
       "disqus"
     ],
     "regex": "(?i)(?:disqus)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ditto_api_key",
@@ -1446,8 +1590,9 @@
       "ditto"
     ],
     "regex": "(?i)(?:ditto)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{12}\\.[a-z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dnscheck_api_key",
@@ -1456,8 +1601,9 @@
       "dnscheck"
     ],
     "regex": "(?i)(?:dnscheck)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "documo_api_key",
@@ -1466,8 +1612,9 @@
       "documo"
     ],
     "regex": "\\b(ey[a-zA-Z0-9]{34}.ey[a-zA-Z0-9]{154}.[a-zA-Z0-9_-]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "doppler_api_key",
@@ -1476,8 +1623,9 @@
       "doppler"
     ],
     "regex": "\\b(dp\\.pt\\.[a-zA-Z0-9]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dotmailer_api_key",
@@ -1486,8 +1634,9 @@
       "dotmailer"
     ],
     "regex": "(?i)(?:dotmailer)(?:.|[\\n\\r]){0,40}\\b(apiuser-[a-z0-9]{12}@apiconnector.com)\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dovico_api_key",
@@ -1496,8 +1645,9 @@
       "dovico"
     ],
     "regex": "(?i)(?:dovico)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32}\\.[0-9a-z]{1,}\\b)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dronahq_api_key",
@@ -1506,8 +1656,9 @@
       "dronahq"
     ],
     "regex": "(?i)(?:dronahq)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{50})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "droneci_api_key",
@@ -1516,8 +1667,9 @@
       "droneci"
     ],
     "regex": "(?i)(?:droneci)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dropbox_api_key",
@@ -1526,8 +1678,9 @@
       "dropbox"
     ],
     "regex": "\\b(sl\\.[A-Za-z0-9\\-\\_]{130,140})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dwolla_api_key",
@@ -1536,8 +1689,9 @@
       "dwolla"
     ],
     "regex": "(?i)(?:dwolla)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{50})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dynalist_api_key",
@@ -1546,8 +1700,9 @@
       "dynalist"
     ],
     "regex": "(?i)(?:dynalist)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-_]{128})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dyspatch_api_key",
@@ -1556,8 +1711,9 @@
       "dyspatch"
     ],
     "regex": "(?i)(?:dyspatch)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{52})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "eagleeyenetworks_api_key",
@@ -1566,8 +1722,9 @@
       "eagleeyenetworks"
     ],
     "regex": "(?i)(?:eagleeyenetworks)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{15})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "easyinsight_api_key",
@@ -1576,8 +1733,9 @@
       "easyinsight"
     ],
     "regex": "(?i)(?:easyinsight)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-zA-Z]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "edamam_api_key",
@@ -1586,8 +1744,9 @@
       "edamam"
     ],
     "regex": "(?i)(?:edamam)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "edenai_api_key",
@@ -1596,8 +1755,9 @@
       "edenai"
     ],
     "regex": "(?i)(?:edenai)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{36}.[a-zA-Z0-9]{92}.[a-zA-Z0-9_]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "eightxeight_api_key",
@@ -1606,8 +1766,9 @@
       "eightxeight"
     ],
     "regex": "(?i)(?:8x8)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "elastic_api_key",
@@ -1616,8 +1777,9 @@
       "elastic"
     ],
     "regex": "(?i)(?:elastic)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{96})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "enablex_api_key",
@@ -1626,8 +1788,9 @@
       "enablex"
     ],
     "regex": "(?i)(?:enablex)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "enigma_api_key",
@@ -1636,8 +1799,9 @@
       "enigma"
     ],
     "regex": "(?i)(?:enigma)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ethplorer_api_key",
@@ -1646,8 +1810,9 @@
       "ethplorer"
     ],
     "regex": "(?i)(?:ethplorer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "etsy_api_key",
@@ -1656,8 +1821,9 @@
       "etsy"
     ],
     "regex": "(?i)(?:etsy)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "everhour_api_key",
@@ -1666,8 +1832,9 @@
       "everhour"
     ],
     "regex": "(?i)(?:everhour)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-f]{4}-[0-9a-f]{4}-[0-9a-f]{6}-[0-9a-f]{6}-[0-9a-f]{8})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "exchangerate_api_key",
@@ -1676,8 +1843,9 @@
       "exchangerate"
     ],
     "regex": "(?i)(?:exchangerate)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "exchangerates_api_key",
@@ -1686,8 +1854,9 @@
       "exchangerates"
     ],
     "regex": "(?i)(?:exchangerates)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "exportsdk_api_key",
@@ -1696,8 +1865,9 @@
       "exportsdk"
     ],
     "regex": "(?i)(?:exportsdk)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{5,15}_[0-9a-z-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "extractor_api_key",
@@ -1706,8 +1876,9 @@
       "extractor"
     ],
     "regex": "(?i)(?:extractorapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "faceplusplus_api_key",
@@ -1716,8 +1887,9 @@
       "faceplusplus"
     ],
     "regex": "(?i)(?:faceplusplus)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z_-]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fakejson_api_key",
@@ -1726,8 +1898,9 @@
       "fakejson"
     ],
     "regex": "(?i)(?:fakejson)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fastforex_api_key",
@@ -1736,8 +1909,9 @@
       "fastforex"
     ],
     "regex": "(?i)(?:fastforex)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{28})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "feedier_api_key",
@@ -1746,8 +1920,9 @@
       "feedier"
     ],
     "regex": "(?i)(?:feedier)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fetchrss_api_key",
@@ -1756,8 +1931,9 @@
       "fetchrss"
     ],
     "regex": "(?i)(?:fetchrss)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z.]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fibery_api_key",
@@ -1766,8 +1942,9 @@
       "fibery"
     ],
     "regex": "(?i)(?:fibery)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}.[0-9a-f]{35})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fileio_api_key",
@@ -1776,8 +1953,9 @@
       "fileio"
     ],
     "regex": "(?i)(?:fileio)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9.-]{39})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "finage_api_key",
@@ -1786,8 +1964,9 @@
       "finage"
     ],
     "regex": "\\b(API_KEY[0-9A-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "financialmodelingprep_api_key",
@@ -1796,8 +1975,9 @@
       "financialmodelingprep"
     ],
     "regex": "(?i)(?:financialmodelingprep)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "findl_api_key",
@@ -1806,8 +1986,9 @@
       "findl"
     ],
     "regex": "(?i)(?:findl)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "finnhub_api_key",
@@ -1816,8 +1997,9 @@
       "finnhub"
     ],
     "regex": "(?i)(?:finnhub)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fixer_api_key",
@@ -1826,8 +2008,9 @@
       "fixer"
     ],
     "regex": "(?i)(?:fixer)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "flatio_api_key",
@@ -1836,8 +2019,9 @@
       "flatio"
     ],
     "regex": "(?i)(?:flat)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{128})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fleetbase_api_key",
@@ -1846,8 +2030,9 @@
       "fleetbase"
     ],
     "regex": "\\b(flb_live_[0-9a-zA-Z]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "flickr_api_key",
@@ -1856,8 +2041,9 @@
       "flickr"
     ],
     "regex": "(?:https:\\/\\/api\\.flickr\\.com\\/services\\/rest\\/?([^ ]+&)?api_key=)([0-9a-f]{32})(?:\\z|\\b)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "flight_api_key",
@@ -1866,8 +2052,9 @@
       "flight"
     ],
     "regex": "(?i)(?:flightapi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "flight_stats_api_key",
@@ -1876,8 +2063,9 @@
       "flight"
     ],
     "regex": "(?i)(?:flightstats)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "float_api_key",
@@ -1886,8 +2074,9 @@
       "float"
     ],
     "regex": "(?i)(?:float)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-._+=]{59,60})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "flowdash_api_key",
@@ -1896,8 +2085,9 @@
       "flowdash"
     ],
     "regex": "(?i)(?:flowdash)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "flowdock_api_key",
@@ -1906,8 +2096,9 @@
       "flowdock"
     ],
     "regex": "(?i)(?:flowdock)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "flowflu_api_key",
@@ -1916,8 +2107,9 @@
       "flowflu"
     ],
     "regex": "(?i)(?:flowflu)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{51})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "flutterwave_api_key",
@@ -1926,8 +2118,9 @@
       "flutterwave"
     ],
     "regex": "\\b(FLWSECK-[0-9a-z]{32}-X)\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fmfw_api_key",
@@ -1936,8 +2129,9 @@
       "fmfw"
     ],
     "regex": "(?i)(?:fmfw)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "formbucket_api_key",
@@ -1946,8 +2140,9 @@
       "formbucket"
     ],
     "regex": "(?i)(?:formbucket)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{1,}.[0-9A-Za-z]{1,}\\.[0-9A-Z-a-z\\-_]{1,})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "formcraft_api_key",
@@ -1956,8 +2151,9 @@
       "formcraft"
     ],
     "regex": "(?i)(?:formcraft)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "formio_api_key",
@@ -1966,8 +2162,9 @@
       "formio"
     ],
     "regex": "(?i)(?:formio)(?:.|[\\n\\r]){0,40}\\b(eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\\.[0-9A-Za-z]{310}\\.[0-9A-Z-a-z\\-_]{43}[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "foursquare_api_key",
@@ -1976,8 +2173,9 @@
       "foursquare"
     ],
     "regex": "(?i)(?:foursquare)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{48})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "frameio_api_key",
@@ -1986,8 +2184,9 @@
       "frameio"
     ],
     "regex": "\\b(fio-u-[0-9a-zA-Z_-]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "freshbooks_api_key",
@@ -1996,8 +2195,9 @@
       "freshbooks"
     ],
     "regex": "(?i)(?:freshbooks)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "freshdesk_api_key",
@@ -2006,8 +2206,9 @@
       "freshdesk"
     ],
     "regex": "(?i)(?:freshdesk)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "frontapp_api_key",
@@ -2016,8 +2217,9 @@
       "frontapp"
     ],
     "regex": "(?i)(?:front)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{36}.[0-9a-zA-Z\\.\\-\\_]{188,244})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fulcrum_api_key",
@@ -2026,8 +2228,9 @@
       "fulcrum"
     ],
     "regex": "(?i)(?:fulcrum)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{80})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fullstory_api_key",
@@ -2036,8 +2239,9 @@
       "fullstory"
     ],
     "regex": "(?i)(?:fullstory)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9/+]{88})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fusebill_api_key",
@@ -2046,8 +2250,9 @@
       "fusebill"
     ],
     "regex": "(?i)(?:fusebill)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{88})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "fxmarket_api_key",
@@ -2056,8 +2261,9 @@
       "fxmarket"
     ],
     "regex": "(?i)(?:fxmarket)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-zA-Z-_=]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "geckoboard_api_key",
@@ -2066,8 +2272,9 @@
       "geckoboard"
     ],
     "regex": "(?i)(?:geckoboard)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{44})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "gengo_api_key",
@@ -2076,8 +2283,9 @@
       "gengo"
     ],
     "regex": "(?i)(?:gengo)(?:.|[\\n\\r]){0,40}([ ]{0,1}[0-9a-zA-Z\\[\\]\\-\\(\\)\\{\\}|_^@$=~]{64}[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "geoapify_api_key",
@@ -2086,8 +2294,9 @@
       "geoapify"
     ],
     "regex": "(?i)(?:geoapify)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "geocode_api_key",
@@ -2096,8 +2305,9 @@
       "geocode"
     ],
     "regex": "(?i)(?:geocode)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{28})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "geocodify_api_key",
@@ -2106,8 +2316,9 @@
       "geocodify"
     ],
     "regex": "(?i)(?:geocodify)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "geocodeio_api_key",
@@ -2116,8 +2327,9 @@
       "geocodeio"
     ],
     "regex": "(?i)(?:geocod)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{39})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "geoipifi_api_key",
@@ -2126,8 +2338,9 @@
       "geoipifi"
     ],
     "regex": "(?i)(?:ipifi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z_]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "getemail_api_key",
@@ -2136,8 +2349,9 @@
       "getemail"
     ],
     "regex": "(?i)(?:getemail)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "getemails_api_key",
@@ -2146,8 +2360,9 @@
       "getemails"
     ],
     "regex": "(?i)(?:getemails)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{26})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "getgeoa_api_key",
@@ -2156,8 +2371,9 @@
       "getgeoa"
     ],
     "regex": "(?i)(?:getgeoapi)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "getgist_api_key",
@@ -2166,8 +2382,9 @@
       "getgist"
     ],
     "regex": "(?i)(?:getgist)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z+=]{68})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "gitlab_api_key",
@@ -2176,8 +2393,9 @@
       "gitlab"
     ],
     "regex": "(?i)(?:gitlab)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\-=_]{20,22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "gitlab_api_key_v2",
@@ -2186,8 +2404,9 @@
       "gitlab"
     ],
     "regex": "\\b(glpat-[a-zA-Z0-9\\-=_]{20,22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "gitter_api_key",
@@ -2196,8 +2415,9 @@
       "gitter"
     ],
     "regex": "(?i)(?:gitter)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "glassnode_api_key",
@@ -2206,8 +2426,9 @@
       "glassnode"
     ],
     "regex": "(?i)(?:glassnode)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{27})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "glitterly_api_key",
@@ -2216,8 +2437,9 @@
       "glitterly"
     ],
     "regex": "(?i)(?:glitterlyapi)(?:.|[\\n\\r]){0,40}\\b([0-9a-z-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "gocanvas_api_key",
@@ -2226,8 +2448,9 @@
       "gocanvas"
     ],
     "regex": "(?i)(?:gocanvas)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z/+]{43}=[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "gocardless_api_key",
@@ -2236,8 +2459,9 @@
       "gocardless"
     ],
     "regex": "\\b(live_[0-9A-Za-z\\_\\-]{40}[ \"'\\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "goodday_api_key",
@@ -2246,8 +2470,9 @@
       "goodday"
     ],
     "regex": "(?i)(?:goodday)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "graphcms_api_key",
@@ -2256,8 +2481,9 @@
       "graphcms"
     ],
     "regex": "\\b(ey[a-zA-Z0-9]{73}.ey[a-zA-Z0-9]{365}.[a-zA-Z0-9_-]{683})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "graphhopper_api_key",
@@ -2266,8 +2492,9 @@
       "graphhopper"
     ],
     "regex": "(?i)(?:graphhopper)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "groove_api_key",
@@ -2276,8 +2503,9 @@
       "groove"
     ],
     "regex": "(?i)(?:groove)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{64})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "guardian_api_key",
@@ -2286,8 +2514,9 @@
       "guardian"
     ],
     "regex": "\\b([0-9Aa-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "gumroad_api_key",
@@ -2296,8 +2525,9 @@
       "gumroad"
     ],
     "regex": "(?i)(?:gumroad)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "guru_api_key",
@@ -2306,8 +2536,9 @@
       "guru"
     ],
     "regex": "(?i)(?:guru)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "gyazo_api_key",
@@ -2316,8 +2547,9 @@
       "gyazo"
     ],
     "regex": "(?i)(?:gyazo)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z-]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "happi_api_key",
@@ -2326,8 +2558,9 @@
       "happi"
     ],
     "regex": "(?i)(?:happi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{56})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "happyscribe_api_key",
@@ -2336,8 +2569,9 @@
       "happyscribe"
     ],
     "regex": "(?i)(?:happyscribe)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "harvest_api_key",
@@ -2346,8 +2580,9 @@
       "harvest"
     ],
     "regex": "(?i)(?:harvest)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z._]{97})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "hellosign_api_key",
@@ -2356,8 +2591,9 @@
       "hellosign"
     ],
     "regex": "(?i)(?:hellosign)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9/+]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "helpcrunch_api_key",
@@ -2366,8 +2602,9 @@
       "helpcrunch"
     ],
     "regex": "(?i)(?:helpcrunch)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9+/=]{328})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "helpscout_api_key",
@@ -2376,8 +2613,9 @@
       "helpscout"
     ],
     "regex": "(?i)(?:helpscout)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{56})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "hereapi_key",
@@ -2386,8 +2624,9 @@
       "hereapi"
     ],
     "regex": "(?i)(?:hereapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "hive_api_key",
@@ -2396,8 +2635,9 @@
       "hive"
     ],
     "regex": "(?i)(?:hive)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "hiveage_api_key",
@@ -2406,8 +2646,9 @@
       "hiveage"
     ],
     "regex": "(?i)(?:hiveage)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z\\_\\-]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "holidayapi_key",
@@ -2416,8 +2657,9 @@
       "holidayapi"
     ],
     "regex": "(?i)(?:holidayapi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "host_api_key",
@@ -2426,8 +2668,9 @@
       "host"
     ],
     "regex": "(?i)(?:host)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{14})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "html2pdf_api_key",
@@ -2436,8 +2679,9 @@
       "html2pdf"
     ],
     "regex": "(?i)(?:html2pdf)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "hubspot_api_key",
@@ -2446,8 +2690,9 @@
       "hubspot"
     ],
     "regex": "(?i)(?:hubspot)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{8}\\-[A-Za-z0-9]{4}\\-[A-Za-z0-9]{4}\\-[A-Za-z0-9]{4}\\-[A-Za-z0-9]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "humanity_api_key",
@@ -2456,8 +2701,9 @@
       "humanity"
     ],
     "regex": "(?i)(?:humanity)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "hunter_api_key",
@@ -2466,8 +2712,9 @@
       "hunter"
     ],
     "regex": "(?i)(?:hunter)(?:.|[\\n\\r]){0,40}\\b([a-z0-9_-]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "hybiscus_api_key",
@@ -2476,8 +2723,9 @@
       "hybiscus"
     ],
     "regex": "(?i)(?:hybiscus)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "hypertrack_api_key",
@@ -2486,16 +2734,18 @@
       "hypertrack"
     ],
     "regex": "(?i)(?:hypertrack)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z\\_\\-]{54})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ibm_api_key",
     "category": "api_key",
     "keywords": [],
     "regex": "(?i)(?:ibm)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{44})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iconfinder_api_key",
@@ -2504,8 +2754,9 @@
       "iconfinder"
     ],
     "regex": "(?i)(?:iconfinder)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iexapis_api_key",
@@ -2514,8 +2765,9 @@
       "iexapis"
     ],
     "regex": "(?i)(?:iexapis)(?:.|[\\n\\r]){0,40}\\b(sk_[a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iexcloud_api_key",
@@ -2524,8 +2776,9 @@
       "iexcloud"
     ],
     "regex": "(?i)(?:iexcloud)(?:.|[\\n\\r]){0,40}\\b([a-z0-9_]{35})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "image4_api_key",
@@ -2534,8 +2787,9 @@
       "image4"
     ],
     "regex": "(?i)(?:image4)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{22}[0-9a-zA-Z\\=]{2})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "imagekit_api_key",
@@ -2544,8 +2798,9 @@
       "imagekit"
     ],
     "regex": "(?i)(?:imagekit)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_=]{36})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "imagga_api_key",
@@ -2554,8 +2809,9 @@
       "imagga"
     ],
     "regex": "(?i)(?:imagga)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z=]{72})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "impala_api_key",
@@ -2564,8 +2820,9 @@
       "impala"
     ],
     "regex": "(?i)(?:impala)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_]{46})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "insightly_api_key",
@@ -2574,8 +2831,9 @@
       "insightly"
     ],
     "regex": "(?i)(?:insightly)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "instabot_api_key",
@@ -2584,8 +2842,9 @@
       "instabot"
     ],
     "regex": "(?i)(?:instabot)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z=+\\/]{43}[0-9a-zA-Z+\\/=]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "integromat_api_key",
@@ -2594,8 +2853,9 @@
       "integromat"
     ],
     "regex": "(?i)(?:integromat)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "intercom_api_key",
@@ -2604,8 +2864,9 @@
       "intercom"
     ],
     "regex": "(?i)(?:intercom)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\W\\S]{59}\\=)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "interseller_api_key",
@@ -2614,8 +2875,9 @@
       "interseller"
     ],
     "regex": "(?i)(?:interseller)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "intrinio_api_key",
@@ -2624,8 +2886,9 @@
       "intrinio"
     ],
     "regex": "(?i)(?:intrinio)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{44})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "invoiceocean_api_key",
@@ -2634,8 +2897,9 @@
       "invoiceocean"
     ],
     "regex": "(?i)(?:invoiceocean)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ipapi_key",
@@ -2644,8 +2908,9 @@
       "ipapi"
     ],
     "regex": "(?i)(?:ipapi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ipgeolocation_api_key",
@@ -2654,8 +2919,9 @@
       "ipgeolocation"
     ],
     "regex": "(?i)(?:ipgeolocation)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ipify_api_key",
@@ -2664,8 +2930,9 @@
       "ipify"
     ],
     "regex": "(?i)(?:ipify)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ipquality_api_key",
@@ -2674,8 +2941,9 @@
       "ipquality"
     ],
     "regex": "(?i)(?:ipquality)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ipstack_api_key",
@@ -2684,8 +2952,9 @@
       "ipstack"
     ],
     "regex": "(?i)(?:ipstack)(?:.|[\\n\\r]){0,40}\\b([a-fA-f0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "jotfrom_api_key",
@@ -2694,8 +2963,9 @@
       "jotfrom"
     ],
     "regex": "(?i)(?:jotform)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "jumpcloud_api_key",
@@ -2704,8 +2974,9 @@
       "jumpcloud"
     ],
     "regex": "(?i)(?:jumpcloud)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "juro_api_key",
@@ -2714,8 +2985,9 @@
       "juro"
     ],
     "regex": "(?i)(?:juro)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "kanban_api_key",
@@ -2724,8 +2996,9 @@
       "kanban"
     ],
     "regex": "(?i)(?:kanban)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "karmaacrm_api_key",
@@ -2734,8 +3007,9 @@
       "karmaacrm"
     ],
     "regex": "(?i)(?:karma)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "keenio_api_key",
@@ -2744,8 +3018,9 @@
       "keenio"
     ],
     "regex": "(?i)(?:keen)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "kickbox_api_key",
@@ -2754,8 +3029,9 @@
       "kickbox"
     ],
     "regex": "(?i)(?:kickbox)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]+[a-zA-Z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "klipfolio_api_key",
@@ -2764,8 +3040,9 @@
       "klipfolio"
     ],
     "regex": "(?i)(?:klipfolio)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "knapsackpro_api_key",
@@ -2774,8 +3051,9 @@
       "knapsackpro"
     ],
     "regex": "(?i)(?:knapsackpro)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "kontent_api_key",
@@ -2784,8 +3062,9 @@
       "kontent"
     ],
     "regex": "(?i)(?:kontent)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "kraken_api_key",
@@ -2794,8 +3073,9 @@
       "kraken"
     ],
     "regex": "(?i)(?:kraken)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z\\/\\+=]{56}[ \"'\\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "kucoin_api_key",
@@ -2804,8 +3084,9 @@
       "kucoin"
     ],
     "regex": "(?i)(?:kucoin)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "kylas_api_key",
@@ -2814,8 +3095,9 @@
       "kylas"
     ],
     "regex": "(?i)(?:kylas)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "languagelayer_api_key",
@@ -2824,8 +3106,9 @@
       "languagelayer"
     ],
     "regex": "(?i)(?:languagelayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "lastfm_api_key",
@@ -2834,8 +3117,9 @@
       "lastfm"
     ],
     "regex": "(?i)(?:lastfm)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "launchdarkly_api_key",
@@ -2844,8 +3128,9 @@
       "launchdarkly"
     ],
     "regex": "(?:\\A|\\b)((api|sdk)-[a-f0-9-]{8}-[a-f0-9-]{4}-[a-f0-9-]{4}-[a-f0-9-]{4}-[a-f0-9-]{12})(?:\\z|\\b)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "leadfeeder_api_key",
@@ -2854,8 +3139,9 @@
       "leadfeeder"
     ],
     "regex": "(?i)(?:leadfeeder)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "lendflow_api_key",
@@ -2864,8 +3150,9 @@
       "lendflow"
     ],
     "regex": "(?i)(?:lendflow)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{36}\\.[a-zA-Z0-9]{235}\\.[a-zA-Z0-9]{32}\\-[a-zA-Z0-9]{47}\\-[a-zA-Z0-9_]{162}\\-[a-zA-Z0-9]{42}\\-[a-zA-Z0-9_]{40}\\-[a-zA-Z0-9_]{66}\\-[a-zA-Z0-9_]{59}\\-[a-zA-Z0-9]{7}\\-[a-zA-Z0-9_]{220})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "lessannoyingcrm_api_key",
@@ -2874,8 +3161,9 @@
       "lessannoyingcrm"
     ],
     "regex": "(?i)(?:less)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{57})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "lexigram_api_key",
@@ -2884,8 +3172,9 @@
       "lexigram"
     ],
     "regex": "(?i)(?:lexigram)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{301})\\b",
-    "risk": "high",
-    "entropy": 3.0
+    "entropy": 3.0,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "linearapi_key",
@@ -2894,8 +3183,9 @@
       "linearapi"
     ],
     "regex": "\\b(lin_api_[0-9A-Za-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "linemessaging_api_key",
@@ -2904,8 +3194,9 @@
       "linemessaging"
     ],
     "regex": "(?i)(?:line)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9+/]{171,172})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "linenotify_api_key",
@@ -2914,8 +3205,9 @@
       "linenotify"
     ],
     "regex": "(?i)(?:linenotify)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "linkpreview_api_key",
@@ -2924,8 +3216,9 @@
       "linkpreview"
     ],
     "regex": "(?i)(?:linkpreview)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "liveagent_api_key",
@@ -2934,8 +3227,9 @@
       "liveagent"
     ],
     "regex": "(?i)(?:liveagent)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "livestorm_api_key",
@@ -2944,8 +3238,9 @@
       "livestorm"
     ],
     "regex": "(?i)(?:livestorm)(?:.|[\\n\\r]){0,40}\\b(eyJhbGciOiJIUzI1NiJ9\\.eyJhdWQiOiJhcGkubGl2ZXN0b3JtLmNvIiwianRpIjoi[0-9A-Z-a-z]{134}\\.[0-9A-Za-z\\-\\_]{43}[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "loadmill_api_key",
@@ -2954,16 +3249,18 @@
       "loadmill"
     ],
     "regex": "(?i)(?:loadmill)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "lob_api_key",
     "category": "api_key",
     "keywords": [],
     "regex": "(?i)(?:lob)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "locationiq_api_key",
@@ -2972,8 +3269,9 @@
       "locationiq"
     ],
     "regex": "\\b(pk\\.[a-zA-Z-0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "loginradius_api_key",
@@ -2982,8 +3280,9 @@
       "loginradius"
     ],
     "regex": "(?i)(?:loginradius)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "lokalise_api_key",
@@ -2992,8 +3291,9 @@
       "lokalise"
     ],
     "regex": "(?i)(?:lokalise)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "loyverse_api_key",
@@ -3002,8 +3302,9 @@
       "loyverse"
     ],
     "regex": "(?i)(?:loyverse)(?:.|[\\n\\r]){0,40}\\b([0-9-a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "lunchmoney_api_key",
@@ -3012,8 +3313,9 @@
       "lunchmoney"
     ],
     "regex": "(?i)(?:lunchmoney)(?:.|[\\n\\r]){0,40}\\b([a-f0-9]{50})\\b",
-    "risk": "high",
-    "entropy": 3.0
+    "entropy": 3.0,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "luno_api_key",
@@ -3022,16 +3324,18 @@
       "luno"
     ],
     "regex": "(?i)(?:luno)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "m3o_api_key",
     "category": "api_key",
     "keywords": [],
     "regex": "(?i)(?:m3o)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{48})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "macaddress_api_key",
@@ -3040,8 +3344,9 @@
       "macaddress"
     ],
     "regex": "(?i)(?:macaddress)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "madkudu_api_key",
@@ -3050,8 +3355,9 @@
       "madkudu"
     ],
     "regex": "(?i)(?:madkudu)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "magicbell_api_key",
@@ -3060,8 +3366,9 @@
       "magicbell"
     ],
     "regex": "(?i)(?:magicbell)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "magnetic_api_key",
@@ -3070,8 +3377,9 @@
       "magnetic"
     ],
     "regex": "(?i)(?:magnetic)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mailboxlayer_api_key",
@@ -3080,8 +3388,9 @@
       "mailboxlayer"
     ],
     "regex": "(?i)(?:mailboxlayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mailchimp_api_key",
@@ -3090,8 +3399,9 @@
       "mailchimp"
     ],
     "regex": "[0-9a-f]{32}-us[0-9]{1,2}",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mailerlite_api_key",
@@ -3100,8 +3410,9 @@
       "mailerlite"
     ],
     "regex": "(?i)(?:mailerlite)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mailgun_api_key",
@@ -3110,8 +3421,9 @@
       "mailgun"
     ],
     "regex": "(?i)(?:mailgun)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{72})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mailjet_api_key",
@@ -3120,8 +3432,9 @@
       "mailjet"
     ],
     "regex": "(?i)(?:mailjet)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mailmodo_api_key",
@@ -3130,8 +3443,9 @@
       "mailmodo"
     ],
     "regex": "(?i)(?:mailmodo)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mailsac_api_key",
@@ -3140,8 +3454,9 @@
       "mailsac"
     ],
     "regex": "(?i)(?:mailsac)(?:.|[\\n\\r]){0,40}\\b(k_[0-9A-Za-z]{36,})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mandrill_api_key",
@@ -3150,8 +3465,9 @@
       "mandrill"
     ],
     "regex": "(?i)(?:mandrill)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "manifest_api_key",
@@ -3160,8 +3476,9 @@
       "manifest"
     ],
     "regex": "(?i)(?:manifest)(?:.|[\\n\\r]){0,40}\\b([a-zA-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mapbox_api_key",
@@ -3170,8 +3487,9 @@
       "mapbox"
     ],
     "regex": "\\b(sk\\.[a-zA-Z-0-9\\.]{80,240})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mapquest_api_key",
@@ -3180,8 +3498,9 @@
       "mapquest"
     ],
     "regex": "(?i)(?:mapquest)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "marketstack_api_key",
@@ -3190,8 +3509,9 @@
       "marketstack"
     ],
     "regex": "(?i)(?:marketstack)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mattermost_api_key",
@@ -3200,8 +3520,9 @@
       "mattermost"
     ],
     "regex": "(?i)(?:mattermost)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{26})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mavenlink_api_key",
@@ -3210,8 +3531,9 @@
       "mavenlink"
     ],
     "regex": "(?i)(?:mavenlink)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "maxmind_api_key",
@@ -3220,8 +3542,9 @@
       "maxmind"
     ],
     "regex": "(?i)(?:maxmind|geoip)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "meaningcloud_api_key",
@@ -3230,8 +3553,9 @@
       "meaningcloud"
     ],
     "regex": "(?i)(?:meaningcloud)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mediastack_api_key",
@@ -3240,8 +3564,9 @@
       "mediastack"
     ],
     "regex": "(?i)(?:mediastack)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "meistertask_api_key",
@@ -3250,8 +3575,9 @@
       "meistertask"
     ],
     "regex": "(?i)(?:meistertask)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mesibo_api_key",
@@ -3260,8 +3586,9 @@
       "mesibo"
     ],
     "regex": "(?i)(?:mesibo)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "messagebird_api_key",
@@ -3270,8 +3597,9 @@
       "messagebird"
     ],
     "regex": "(?i)(?:messagebird)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{25})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "metaapi_key",
@@ -3280,8 +3608,9 @@
       "metaapi"
     ],
     "regex": "(?i)(?:metaapi|meta-api)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "metrilo_api_key",
@@ -3290,8 +3619,9 @@
       "metrilo"
     ],
     "regex": "(?i)(?:metrilo)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "midise_api_key",
@@ -3300,8 +3630,9 @@
       "midise"
     ],
     "regex": "midi-662b69edd2[a-zA-Z0-9]{54}",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mindmeister_api_key",
@@ -3310,8 +3641,9 @@
       "mindmeister"
     ],
     "regex": "(?i)(?:mindmeister)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "miro_api_key",
@@ -3320,8 +3652,9 @@
       "miro"
     ],
     "regex": "(?i)(?:miro)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{27})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mite_api_key",
@@ -3330,8 +3663,9 @@
       "mite"
     ],
     "regex": "(?i)(?:mite)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mixmax_api_key",
@@ -3340,8 +3674,9 @@
       "mixmax"
     ],
     "regex": "(?i)(?:mixmax)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mixpanel_api_key",
@@ -3350,8 +3685,9 @@
       "mixpanel"
     ],
     "regex": "(?i)(?:mixpanel)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mockaroo_api_key",
@@ -3360,8 +3696,9 @@
       "mockaroo"
     ],
     "regex": "(?i)(?:mockaroo)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8})\\b",
-    "risk": "high",
-    "entropy": 2.5
+    "entropy": 2.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "moderation_api_key",
@@ -3370,8 +3707,9 @@
       "moderation"
     ],
     "regex": "(?i)(?:moderation)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{36}\\.[a-zA-Z0-9]{115}\\.[a-zA-Z0-9_]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "monday_api_key",
@@ -3380,8 +3718,9 @@
       "monday"
     ],
     "regex": "(?i)(?:monday)(?:.|[\\n\\r]){0,40}\\b(ey[a-zA-Z0-9_.]{210,225})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "moonclerk_api_key",
@@ -3390,8 +3729,9 @@
       "moonclerk"
     ],
     "regex": "(?i)(?:moonclerk)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "moosend_api_key",
@@ -3400,16 +3740,18 @@
       "moosend"
     ],
     "regex": "(?i)(?:moosend)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mux_api_key",
     "category": "api_key",
     "keywords": [],
     "regex": "(?i)(?:mux)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "freshworks_api_key",
@@ -3418,8 +3760,9 @@
       "freshworks"
     ],
     "regex": "(?i)(?:freshworks)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "myintervals_api_key",
@@ -3428,8 +3771,9 @@
       "myintervals"
     ],
     "regex": "(?i)(?:myintervals)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{11})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nasdaqdatalink_api_key",
@@ -3438,8 +3782,9 @@
       "nasdaqdatalink"
     ],
     "regex": "(?i)(?:nasdaq)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nethunt_api_key",
@@ -3448,8 +3793,9 @@
       "nethunt"
     ],
     "regex": "(?i)(?:nethunt)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-\\S]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "netlify_api_key",
@@ -3458,8 +3804,9 @@
       "netlify"
     ],
     "regex": "(?i)(?:netlify)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{43,45})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "neutrino_api_key",
@@ -3468,8 +3815,9 @@
       "neutrino"
     ],
     "regex": "(?i)(?:neutrinoapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{48})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "newrelic_api_key",
@@ -3478,8 +3826,9 @@
       "newrelic"
     ],
     "regex": "(?i)(?:newrelic)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_\\.]{4}-[A-Za-z0-9_\\.]{42})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "newsapi_key",
@@ -3488,8 +3837,9 @@
       "newsapi"
     ],
     "regex": "(?i)(?:newsapi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "newscatcher_api_key",
@@ -3498,8 +3848,9 @@
       "newscatcher"
     ],
     "regex": "(?i)(?:newscatcher)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nexmo_api_key",
@@ -3508,8 +3859,9 @@
       "nexmo"
     ],
     "regex": "(?i)(?:nexmo)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{8})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nftport_api_key",
@@ -3518,8 +3870,9 @@
       "nftport"
     ],
     "regex": "(?i)(?:nftport)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nicereply_api_key",
@@ -3528,8 +3881,9 @@
       "nicereply"
     ],
     "regex": "(?i)(?:nicereply)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nightfall_api_key",
@@ -3538,8 +3892,9 @@
       "nightfall"
     ],
     "regex": "\\b(NF\\-[a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nimble_api_key",
@@ -3548,8 +3903,9 @@
       "nimble"
     ],
     "regex": "(?i)(?:nimble)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{30})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nitro_api_key",
@@ -3558,8 +3914,9 @@
       "nitro"
     ],
     "regex": "(?i)(?:nitro)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "noticeable_api_key",
@@ -3568,8 +3925,9 @@
       "noticeable"
     ],
     "regex": "(?i)(?:noticeable)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "notion_api_key",
@@ -3578,8 +3936,9 @@
       "notion"
     ],
     "regex": "\\b(secret_[A-Za-z0-9]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nozbeteams_api_key",
@@ -3588,8 +3947,9 @@
       "nozbeteams"
     ],
     "regex": "(?i)(?:nozbe|nozbeteams)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{16}_[0-9A-Za-z\\-_]{64}[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "numverify_api_key",
@@ -3598,8 +3958,9 @@
       "numverify"
     ],
     "regex": "(?i)(?:numverify)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nutritionix_api_key",
@@ -3608,8 +3969,9 @@
       "nutritionix"
     ],
     "regex": "(?i)(?:nutritionix)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nylas_api_key",
@@ -3618,8 +3980,9 @@
       "nylas"
     ],
     "regex": "(?i)(?:nylas)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{30})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nytimes_api_key",
@@ -3628,8 +3991,9 @@
       "nytimes"
     ],
     "regex": "(?i)(?:nytimes)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "oanda_api_key",
@@ -3638,8 +4002,9 @@
       "oanda"
     ],
     "regex": "(?i)(?:oanda)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "omnisend_api_key",
@@ -3648,8 +4013,9 @@
       "omnisend"
     ],
     "regex": "(?i)(?:omnisend)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-]{75})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "onepagecrm_api_key",
@@ -3658,8 +4024,9 @@
       "onepagecrm"
     ],
     "regex": "(?i)(?:onepagecrm)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9=]{44})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "onesignal_api_key_uuid",
@@ -3668,8 +4035,9 @@
       "onesignal"
     ],
     "regex": "(?i)(?:onesignal)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "onwater_api_key",
@@ -3678,8 +4046,9 @@
       "onwater"
     ],
     "regex": "(?i)(?:onwater)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "oopspam_api_key",
@@ -3688,8 +4057,9 @@
       "oopspam"
     ],
     "regex": "(?i)(?:oopspam)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "opencagedata_api_key",
@@ -3698,8 +4068,9 @@
       "opencagedata"
     ],
     "regex": "(?i)(?:opencagedata)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "opengraphr_api_key",
@@ -3708,8 +4079,9 @@
       "opengraphr"
     ],
     "regex": "(?i)(?:opengraphr)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-zA-Z]{80})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "openuv_api_key",
@@ -3718,8 +4090,9 @@
       "openuv"
     ],
     "regex": "(?i)(?:openuv)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "openweather_api_key",
@@ -3728,8 +4101,9 @@
       "openweather"
     ],
     "regex": "(?i)(?:openweather)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "optimizely_api_key",
@@ -3738,8 +4112,9 @@
       "optimizely"
     ],
     "regex": "(?i)(?:optimizely)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z-:]{54})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "owlbot_api_key",
@@ -3748,8 +4123,9 @@
       "owlbot"
     ],
     "regex": "(?i)(?:owlbot)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "packagecloud_api_key",
@@ -3758,8 +4134,9 @@
       "packagecloud"
     ],
     "regex": "(?i)(?:packagecloud)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{48})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pagerduty_api_key",
@@ -3769,8 +4146,9 @@
       "service"
     ],
     "regex": "(?:(\\A|\\b)(?i)((pd|pagerduty)_(service|api)_key['\"`]?\\s*([:=]|[?:]=|[=-]>)\\s*['\"`]?|Token token=))([A-Za-z0-9_-]{20})(?:\\z|\\b)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pandadoc_api_key",
@@ -3779,8 +4157,9 @@
       "pandadoc"
     ],
     "regex": "(?i)(?:pandadoc)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pandascore_api_key",
@@ -3789,8 +4168,9 @@
       "pandascore"
     ],
     "regex": "(?i)(?:pandascore)(?:.|[\\n\\r]){0,40}([ \\r\\n]{0,1}[0-9A-Za-z\\-\\_]{51}[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "paperform_api_key",
@@ -3799,8 +4179,9 @@
       "paperform"
     ],
     "regex": "(?i)(?:paperform)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-._]{850,1000})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "paralleldots_api_key",
@@ -3809,8 +4190,9 @@
       "paralleldots"
     ],
     "regex": "(?i)(?:paralleldots)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "parsehub_api_key",
@@ -3819,8 +4201,9 @@
       "parsehub"
     ],
     "regex": "(?i)(?:parsehub)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "parsers_api_key",
@@ -3829,8 +4212,9 @@
       "parsers"
     ],
     "regex": "(?i)(?:parsers)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "partnerstack_api_key",
@@ -3839,8 +4223,9 @@
       "partnerstack"
     ],
     "regex": "(?i)(?:partnerstack)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "passbase_api_key",
@@ -3849,8 +4234,9 @@
       "passbase"
     ],
     "regex": "(?i)(?:passbase)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{128})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pastebin_api_key",
@@ -3859,8 +4245,9 @@
       "pastebin"
     ],
     "regex": "(?i)(?:pastebin)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "paydirtapp_api_key",
@@ -3869,8 +4256,9 @@
       "paydirtapp"
     ],
     "regex": "(?i)(?:paydirtapp)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "paymoapp_api_key",
@@ -3879,8 +4267,9 @@
       "paymoapp"
     ],
     "regex": "(?i)(?:paymoapp)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{44})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "paypal_api_key",
@@ -3889,8 +4278,9 @@
       "paypal"
     ],
     "regex": "\\b([A-Za-z0-9_\\.]{69}-[A-Za-z0-9_\\.]{10})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "paystack_api_key",
@@ -3899,8 +4289,9 @@
       "paystack"
     ],
     "regex": "\\b(sk\\_[a-z]{1,}\\_[A-Za-z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pdflayer_api_key",
@@ -3909,8 +4300,9 @@
       "pdflayer"
     ],
     "regex": "(?i)(?:pdflayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pdfshift_api_key",
@@ -3919,8 +4311,9 @@
       "pdfshift"
     ],
     "regex": "(?i)(?:pdfshift)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "peopledatalabs_api_key",
@@ -3929,8 +4322,9 @@
       "peopledatalabs"
     ],
     "regex": "(?i)(?:peopledatalabs)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pepipost_api_key",
@@ -3939,8 +4333,9 @@
       "pepipost"
     ],
     "regex": "(?i)(?:pepipost|netcore)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "picatic_api_key",
@@ -3949,8 +4344,9 @@
       "picatic"
     ],
     "regex": "sk_live_[0-9a-z]{32}",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pinata_api_key",
@@ -3959,8 +4355,9 @@
       "pinata"
     ],
     "regex": "(?i)(?:pinata)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pipedream_api_key",
@@ -3969,8 +4366,9 @@
       "pipedream"
     ],
     "regex": "(?i)(?:pipedream)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pipedrive_api_key",
@@ -3979,8 +4377,9 @@
       "pipedrive"
     ],
     "regex": "(?i)(?:pipedrive)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pivotaltracker_api_key",
@@ -3989,8 +4388,9 @@
       "pivotaltracker"
     ],
     "regex": "(?i)(?:pivotal)(?:.|[\\n\\r]){0,40}([a-z0-9]{32})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pixabay_api_key",
@@ -3999,8 +4399,9 @@
       "pixabay"
     ],
     "regex": "(?i)(?:pixabay)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{34})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "plaid_api_key",
@@ -4009,8 +4410,9 @@
       "plaid"
     ],
     "regex": "(?i)(?:plaid)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{30})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "planviewleankit_api_key",
@@ -4019,8 +4421,9 @@
       "planviewleankit"
     ],
     "regex": "(?i)(?:planviewleankit|planview)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{128})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "planyo_api_key",
@@ -4029,8 +4432,9 @@
       "planyo"
     ],
     "regex": "(?i)(?:planyo)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{62})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "plivo_api_key",
@@ -4039,8 +4443,9 @@
       "plivo"
     ],
     "regex": "(?i)(?:plivo)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "podio_api_key",
@@ -4049,8 +4454,9 @@
       "podio"
     ],
     "regex": "(?i)(?:podio)(?:.|[\\n\\r]){0,40}\\b([[0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pollsapi_key",
@@ -4059,8 +4465,9 @@
       "pollsapi"
     ],
     "regex": "(?i)(?:pollsapi)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{28})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "poloniex_api_key",
@@ -4069,8 +4476,9 @@
       "poloniex"
     ],
     "regex": "(?i)(?:poloniex)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{8}-[0-9A-Z]{8}-[0-9A-Z]{8}-[0-9A-Z]{8})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "polygon_api_key",
@@ -4079,8 +4487,9 @@
       "polygon"
     ],
     "regex": "(?i)(?:polygon)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "positionstack_api_key",
@@ -4089,8 +4498,9 @@
       "positionstack"
     ],
     "regex": "(?i)(?:positionstack)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "postageapp_api_key",
@@ -4099,8 +4509,9 @@
       "postageapp"
     ],
     "regex": "(?i)(?:postageapp)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "postbacks_api_key",
@@ -4109,8 +4520,9 @@
       "postbacks"
     ],
     "regex": "(?i)(?:postbacks)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "posthog_api_key",
@@ -4119,8 +4531,9 @@
       "posthog"
     ],
     "regex": "\\b(phc_[a-zA-Z0-9_]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "postman_api_key",
@@ -4129,8 +4542,9 @@
       "postman"
     ],
     "regex": "\\b(PMAK-[a-zA-Z-0-9]{59})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "postmark_api_key",
@@ -4139,8 +4553,9 @@
       "postmark"
     ],
     "regex": "(?i)(?:postmark)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "powrbot_api_key",
@@ -4149,8 +4564,9 @@
       "powrbot"
     ],
     "regex": "(?i)(?:powrbot)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "prospectcrm_api_key",
@@ -4159,8 +4575,9 @@
       "prospectcrm"
     ],
     "regex": "(?i)(?:prospect)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "prospectio_api_key",
@@ -4169,8 +4586,9 @@
       "prospectio"
     ],
     "regex": "(?i)(?:prospect)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z-]{50})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "protocolsio_api_key",
@@ -4179,8 +4597,9 @@
       "protocolsio"
     ],
     "regex": "(?i)(?:protocols)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "proxycrawl_api_key",
@@ -4189,8 +4608,9 @@
       "proxycrawl"
     ],
     "regex": "(?i)(?:proxycrawl)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pubnubpublish_key",
@@ -4199,8 +4619,9 @@
       "pubnubpublish"
     ],
     "regex": "\\b(pub-c-[0-9a-z]{8}-[0-9a-z]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pubnub_subscription_key",
@@ -4209,8 +4630,9 @@
       "pubnub"
     ],
     "regex": "\\b(sub-c-[0-9a-z]{8}-[a-z]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "purestake_api_key",
@@ -4219,8 +4641,9 @@
       "purestake"
     ],
     "regex": "(?i)(?:purestake)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pushbullet_api_key",
@@ -4229,8 +4652,9 @@
       "pushbullet"
     ],
     "regex": "(?i)(?:pushbullet)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_\\.]{34})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "qase_api_key",
@@ -4239,8 +4663,9 @@
       "qase"
     ],
     "regex": "(?i)(?:qase)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "qualaroo_api_key",
@@ -4249,8 +4674,9 @@
       "qualaroo"
     ],
     "regex": "(?i)(?:qualaroo)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z=]{64})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "qubole_api_key",
@@ -4259,8 +4685,9 @@
       "qubole"
     ],
     "regex": "(?i)(?:qubole)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "quickmetrics_api_key",
@@ -4269,8 +4696,9 @@
       "quickmetrics"
     ],
     "regex": "(?i)(?:quickmetrics)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "rapidapi_key",
@@ -4279,8 +4707,9 @@
       "rapidapi"
     ],
     "regex": "(?i)(?:rapidapi)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{50})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "raven_api_key",
@@ -4289,8 +4718,9 @@
       "raven"
     ],
     "regex": "(?i)(?:raven)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9-]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "rawg_api_key",
@@ -4299,8 +4729,9 @@
       "rawg"
     ],
     "regex": "(?i)(?:rawg)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "razorpay_api_key",
@@ -4309,8 +4740,9 @@
       "razorpay"
     ],
     "regex": "(?i)\\brzp_\\w{2,6}_\\w{10,20}\\b",
-    "risk": "high",
-    "entropy": 3.0
+    "entropy": 3.0,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "reachmail_api_key",
@@ -4319,8 +4751,9 @@
       "reachmail"
     ],
     "regex": "(?i)(?:reachmail)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-_]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "readme_api_key",
@@ -4329,8 +4762,9 @@
       "readme"
     ],
     "regex": "(?i)(?:readme)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "reallysimplesystem_api_key",
@@ -4339,8 +4773,9 @@
       "reallysimplesystem"
     ],
     "regex": "\\b(ey[a-zA-Z0-9-._]{153}.ey[a-zA-Z0-9-._]{916,1000})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "rebrandly_api_key",
@@ -4349,8 +4784,9 @@
       "rebrandly"
     ],
     "regex": "(?i)(?:rebrandly)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "refiner_api_key",
@@ -4359,8 +4795,9 @@
       "refiner"
     ],
     "regex": "(?i)(?:refiner)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "rentman_api_key",
@@ -4369,8 +4806,9 @@
       "rentman"
     ],
     "regex": "(?i)(?:rentman)(?:.|[\\n\\r]){0,40}\\b(ey[a-zA-Z0-9]{34}.ey[a-zA-Z0-9._-]{250,300})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "repairshopr_api_key",
@@ -4379,8 +4817,9 @@
       "repairshopr"
     ],
     "regex": "(?i)(?:repairshopr)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{51})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "restpack_api_key",
@@ -4389,24 +4828,27 @@
       "restpack"
     ],
     "regex": "(?i)(?:restpack)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{48})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "rev_api_user_key",
     "category": "api_key",
     "keywords": [],
     "regex": "(?i)(?:rev)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z\\/\\+]{27}\\=[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "rev_api_client_key",
     "category": "api_key",
     "keywords": [],
     "regex": "(?i)(?:rev)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z\\-]{27}[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "revamp_api_key",
@@ -4415,8 +4857,9 @@
       "revamp"
     ],
     "regex": "(?i)(?:revamp)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40}\\b)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ringcentral_api_key",
@@ -4425,8 +4868,9 @@
       "ringcentral"
     ],
     "regex": "(?i)(?:ringcentral)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_-]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ritekit_api_key",
@@ -4435,8 +4879,9 @@
       "ritekit"
     ],
     "regex": "(?i)(?:ritekit)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{44})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "rocketreach_api_key",
@@ -4445,8 +4890,9 @@
       "rocketreach"
     ],
     "regex": "(?i)(?:rocketreach)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{39})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "rockset_api_key",
@@ -4455,8 +4901,9 @@
       "rockset"
     ],
     "regex": "(?i)(?:rockset)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ronin_api_key",
@@ -4465,8 +4912,9 @@
       "ronin"
     ],
     "regex": "(?i)(?:ronin)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{26})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "route4me_api_key",
@@ -4475,8 +4923,9 @@
       "route4me"
     ],
     "regex": "(?i)(?:route4me)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "rownd_api_key",
@@ -4485,8 +4934,9 @@
       "rownd"
     ],
     "regex": "(?i)(?:rownd)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "rubygems_api_key",
@@ -4495,8 +4945,9 @@
       "rubygems"
     ],
     "regex": "\\b(rubygems_[a-zA0-9]{48})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "runrunit_api_key",
@@ -4505,8 +4956,9 @@
       "runrunit"
     ],
     "regex": "(?i)(?:runrunit)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "salesblink_api_key",
@@ -4515,8 +4967,9 @@
       "salesblink"
     ],
     "regex": "(?i)(?:salesblink)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "salescookie_api_key",
@@ -4525,8 +4978,9 @@
       "salescookie"
     ],
     "regex": "(?i)(?:salescookie)(?:.|[\\n\\r]){0,40}\\b([a-zA-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "salesflare_api_key",
@@ -4535,8 +4989,9 @@
       "salesflare"
     ],
     "regex": "(?i)(?:salesflare)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{45})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "satismeter_api_key",
@@ -4545,8 +5000,9 @@
       "satismeter"
     ],
     "regex": "(?i)(?:satismeter)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "saucelabs_api_key",
@@ -4555,8 +5011,9 @@
       "saucelabs"
     ],
     "regex": "(?i)(?:saucelabs)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{4}\\-[a-z0-9]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "scaleway_api_key",
@@ -4565,8 +5022,9 @@
       "scaleway"
     ],
     "regex": "(?i)(?:scaleway)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "scrapeowl_api_key",
@@ -4575,8 +5033,9 @@
       "scrapeowl"
     ],
     "regex": "(?i)(?:scrapeowl)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{30})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "scrapperapi_key",
@@ -4585,8 +5044,9 @@
       "scrapperapi"
     ],
     "regex": "(?i)(?:scraperapi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "scraperbox_api_key",
@@ -4595,8 +5055,9 @@
       "scraperbox"
     ],
     "regex": "(?i)(?:scraperbox)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "scrapersite_api_key",
@@ -4605,8 +5066,9 @@
       "scrapersite"
     ],
     "regex": "(?i)(?:scrapersite)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{45})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "scraperstack_api_key",
@@ -4615,8 +5077,9 @@
       "scraperstack"
     ],
     "regex": "(?i)(?:scrapestack)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "scrapfly_api_key",
@@ -4625,8 +5088,9 @@
       "scrapfly"
     ],
     "regex": "(?i)(?:scrapfly)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "scrapingant_api_key",
@@ -4635,8 +5099,9 @@
       "scrapingant"
     ],
     "regex": "(?i)(?:scrapingant)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "scrapingbee_api_key",
@@ -4645,8 +5110,9 @@
       "scrapingbee"
     ],
     "regex": "(?i)(?:scrapingbee)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{80})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "screenshotapi_key",
@@ -4655,8 +5121,9 @@
       "screenshotapi"
     ],
     "regex": "(?i)(?:screenshotapi)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{7}\\-[0-9A-Z]{7}\\-[0-9A-Z]{7}\\-[0-9A-Z]{7})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "screenshotlayer_api_key",
@@ -4665,8 +5132,9 @@
       "screenshotlayer"
     ],
     "regex": "(?i)(?:screenshotlayer)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "scrutinizer_api_key",
@@ -4675,8 +5143,9 @@
       "scrutinizer"
     ],
     "regex": "(?i)(?:scrutinizer)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "securitytrails_api_key",
@@ -4685,8 +5154,9 @@
       "securitytrails"
     ],
     "regex": "(?i)(?:securitytrails)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "segment_api_key",
@@ -4695,8 +5165,9 @@
       "segment"
     ],
     "regex": "(?i)(?:segment)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_\\-a-zA-Z]{43}\\.[A-Za-z0-9_\\-a-zA-Z]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "selectpdf_api_key",
@@ -4705,8 +5176,9 @@
       "selectpdf"
     ],
     "regex": "(?i)(?:selectpdf)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "semaphore_api_key",
@@ -4715,8 +5187,9 @@
       "semaphore"
     ],
     "regex": "(?i)(?:semaphore)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sendgrid_api_key",
@@ -4725,8 +5198,9 @@
       "sendgrid"
     ],
     "regex": "(?i)(?:sendgrid)(?:.|[\\n\\r]){0,40}(SG\\.[\\w\\-_]{20,24}\\.[\\w\\-_]{39,50})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sendinblue_api_key",
@@ -4735,8 +5209,9 @@
       "sendinblue"
     ],
     "regex": "\\b(xkeysib\\-[A-Za-z0-9_-]{81})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sentiment_api_key",
@@ -4745,8 +5220,9 @@
       "sentiment"
     ],
     "regex": "(?i)(?:sentiment)(?:.|[\\n\\r]){0,40}\\b([0-9]{17})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sentry_api_key",
@@ -4755,8 +5231,9 @@
       "sentry"
     ],
     "regex": "(?:(?:(?:\\A|[\\r\\n])\\[auth\\][^[]*\\napi_key\\s*=|(?:\\A|\\b)SENTRY_API_KEY\\s*=|(?:\\A|\\b)sentry-cli [^\\r\\n]*--api-key |(?:\\A|\\b)auth\\.api_key\\s*=)\\s*['\"`]?)([a-fA-F0-9]{32})(?:\\z|\\s|['\"`])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "serphouse_api_key",
@@ -4765,8 +5242,9 @@
       "serphouse"
     ],
     "regex": "(?i)(?:serphouse)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{60})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "serpstack_api_key",
@@ -4775,8 +5253,9 @@
       "serpstack"
     ],
     "regex": "(?i)(?:serpstack)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sheety_api_key",
@@ -4785,8 +5264,9 @@
       "sheety"
     ],
     "regex": "(?i)(?:sheety)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sherpadesk_api_key",
@@ -4795,8 +5275,9 @@
       "sherpadesk"
     ],
     "regex": "(?i)(?:sherpadesk)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "shipday_api_key",
@@ -4805,8 +5286,9 @@
       "shipday"
     ],
     "regex": "(?i)(?:shipday)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9.]{11}[a-zA-Z0-9]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "shodan_api_key",
@@ -4815,8 +5297,9 @@
       "shodan"
     ],
     "regex": "(?i)(?:shodan)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "shortcut_api_key",
@@ -4825,8 +5308,9 @@
       "shortcut"
     ],
     "regex": "(?i)(?:shortcut)(?:.|[\\n\\r]){0,40}\\b([0-9a-f-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "shortstack_api_key",
@@ -4835,8 +5319,9 @@
       "shortstack"
     ],
     "regex": "(?i)(?:shotstack)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "shutterstock_api_key",
@@ -4845,8 +5330,9 @@
       "shutterstock"
     ],
     "regex": "(?i)(?:shutterstock)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "signable_api_key",
@@ -4855,8 +5341,9 @@
       "signable"
     ],
     "regex": "(?i)(?:signable)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "signalwire_api_key",
@@ -4865,8 +5352,9 @@
       "signalwire"
     ],
     "regex": "(?i)(?:signalwire)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{50})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "signaturit_api_key",
@@ -4875,8 +5363,9 @@
       "signaturit"
     ],
     "regex": "(?i)(?:signaturit)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{86})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "signupgenius_api_key",
@@ -4885,8 +5374,9 @@
       "signupgenius"
     ],
     "regex": "(?i)(?:signupgenius)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sigopt_api_key",
@@ -4895,8 +5385,9 @@
       "sigopt"
     ],
     "regex": "(?i)(?:sigopt)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{48})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "simfin_api_key",
@@ -4905,8 +5396,9 @@
       "simfin"
     ],
     "regex": "(?i)(?:simfin)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "simplesat_api_key",
@@ -4915,8 +5407,9 @@
       "simplesat"
     ],
     "regex": "(?i)(?:simplesat)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{40})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "simplynoted_api_key",
@@ -4925,8 +5418,9 @@
       "simplynoted"
     ],
     "regex": "(?i)(?:simplynoted)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{340,360})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "simvoly_api_key",
@@ -4935,8 +5429,9 @@
       "simvoly"
     ],
     "regex": "(?i)(?:simvoly)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{33})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sinch_api_key",
@@ -4945,8 +5440,9 @@
       "sinch"
     ],
     "regex": "(?i)(?:sinch)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sirv_api_key",
@@ -4955,8 +5451,9 @@
       "sirv"
     ],
     "regex": "(?i)(?:sirv)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{88})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "siteleaf_api_key",
@@ -4965,8 +5462,9 @@
       "siteleaf"
     ],
     "regex": "(?i)(?:siteleaf)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "skrapp_api_key",
@@ -4975,8 +5473,9 @@
       "skrapp"
     ],
     "regex": "(?i)(?:skrapp)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{42})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "skybiometry_api_key",
@@ -4985,8 +5484,9 @@
       "skybiometry"
     ],
     "regex": "(?i)(?:skybiometry)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{25,26})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "smartsheets_api_key",
@@ -4995,8 +5495,9 @@
       "smartsheets"
     ],
     "regex": "(?i)(?:smartsheets)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{37})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "smartystreets_api_key",
@@ -5005,8 +5506,9 @@
       "smartystreets"
     ],
     "regex": "(?i)(?:smartystreets)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "smooch_api_key",
@@ -5015,8 +5517,9 @@
       "smooch"
     ],
     "regex": "(?i)(?:smooch)(?:.|[\\n\\r]){0,40}\\b(act_[0-9a-z]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "snipcart_api_key",
@@ -5025,8 +5528,9 @@
       "snipcart"
     ],
     "regex": "(?i)(?:snipcart)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_]{75})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "synk_api_key",
@@ -5035,8 +5539,9 @@
       "synk"
     ],
     "regex": "(?i)(?:snyk)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sonarcloud_api_key",
@@ -5045,8 +5550,9 @@
       "sonarcloud"
     ],
     "regex": "(?i)(?:sonarcloud)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sparkpost_api_key",
@@ -5055,8 +5561,9 @@
       "sparkpost"
     ],
     "regex": "\\b([a-zA-Z0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "splunk_api_key",
@@ -5065,8 +5572,9 @@
       "splunk"
     ],
     "regex": "(?i)(?:splunk)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "spoonacular_api_key",
@@ -5075,8 +5583,9 @@
       "spoonacular"
     ],
     "regex": "(?i)(?:spoonacular)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sportradar_api_key",
@@ -5085,8 +5594,9 @@
       "sportradar"
     ],
     "regex": "(?i)(?:sportradar)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sportsmonk_api_key",
@@ -5095,8 +5605,9 @@
       "sportsmonk"
     ],
     "regex": "(?i)(?:sportsmonk)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{60})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "spotify_api_key",
@@ -5105,8 +5616,9 @@
       "spotify"
     ],
     "regex": "(?i)(?:secret|key)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "square_api_key",
@@ -5115,8 +5627,9 @@
       "square"
     ],
     "regex": "(?i)(?:square)(?:.|[\\n\\r]){0,40}(EAAA[a-zA-Z0-9\\-\\+\\=]{60})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "squareapp_api_key",
@@ -5125,8 +5638,9 @@
       "squareapp"
     ],
     "regex": "[\\w\\-]*sq0i[a-z]{2}-[0-9A-Za-z\\-_]{22,43}",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "squarespace_api_key",
@@ -5135,8 +5649,9 @@
       "squarespace"
     ],
     "regex": "(?i)(?:squarespace)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "squareup_api_key",
@@ -5145,8 +5660,9 @@
       "squareup"
     ],
     "regex": "\\b(sq0idp-[0-9A-Za-z]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sslmate_api_key",
@@ -5155,8 +5671,9 @@
       "sslmate"
     ],
     "regex": "(?i)(?:sslmate)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "statuscake_api_key",
@@ -5165,8 +5682,9 @@
       "statuscake"
     ],
     "regex": "(?i)(?:statuscake)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "statuspage_api_key",
@@ -5175,8 +5693,9 @@
       "statuspage"
     ],
     "regex": "(?i)(?:statuspage)(?:.|[\\n\\r]){0,40}\\b([0-9a-z-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "statuspal_api_key",
@@ -5185,8 +5704,9 @@
       "statuspal"
     ],
     "regex": "(?i)(?:statuspal)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "stitchdata_api_key",
@@ -5195,8 +5715,9 @@
       "stitchdata"
     ],
     "regex": "(?i)(?:stitchdata)(?:.|[\\n\\r]){0,40}\\b([0-9a-z_]{35})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "stockdata_api_key",
@@ -5205,8 +5726,9 @@
       "stockdata"
     ],
     "regex": "(?i)(?:stockdata)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "storecove_api_key",
@@ -5215,8 +5737,9 @@
       "storecove"
     ],
     "regex": "(?i)(?:storecove)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_-]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "stormboard_api_key",
@@ -5225,8 +5748,9 @@
       "stormboard"
     ],
     "regex": "(?i)(?:stormboard)(?:.|[\\n\\r]){0,40}\\b([a-f0-9]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "stormglass_api_key",
@@ -5235,8 +5759,9 @@
       "stormglass"
     ],
     "regex": "(?i)(?:stormglass)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z-]{73})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "storyblok_api_key",
@@ -5245,8 +5770,9 @@
       "storyblok"
     ],
     "regex": "(?i)(?:storyblok)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{22}t{2})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "storychief_api_key",
@@ -5255,8 +5781,9 @@
       "storychief"
     ],
     "regex": "(?i)(?:storychief)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_\\-.]{940,1000})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "strava_api_key",
@@ -5265,8 +5792,9 @@
       "strava"
     ],
     "regex": "(?i)(?:strava)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "streak_api_key",
@@ -5275,8 +5803,9 @@
       "streak"
     ],
     "regex": "(?i)(?:streak)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-f]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "stripe_api_key",
@@ -5285,8 +5814,9 @@
       "stripe"
     ],
     "regex": "[rs]k_live_[a-zA-Z0-9]{20,30}",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "stytch_api_key",
@@ -5295,8 +5825,9 @@
       "stytch"
     ],
     "regex": "(?i)(?:stytch)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-_]{47}=)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sugester_api_key",
@@ -5305,8 +5836,9 @@
       "sugester"
     ],
     "regex": "(?i)(?:sugester)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sumo_api_key",
@@ -5315,8 +5847,9 @@
       "sumo"
     ],
     "regex": "(?i)(?:sumo)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "supernotes_api_key",
@@ -5325,8 +5858,9 @@
       "supernotes"
     ],
     "regex": "(?i)(?:supernotes)(?:.|[\\n\\r]){0,40}([ \\r\\n]{0,1}[0-9A-Za-z\\-_]{43}[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "survey_api_key",
@@ -5335,8 +5869,9 @@
       "survey"
     ],
     "regex": "(?i)(?:survey)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "surveybot_api_key",
@@ -5345,8 +5880,9 @@
       "surveybot"
     ],
     "regex": "(?i)(?:surveybot)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9-]{80})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "surveysparrow_api_key",
@@ -5355,8 +5891,9 @@
       "surveysparrow"
     ],
     "regex": "(?i)(?:surveysparrow)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-_]{88})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "survicate_api_key",
@@ -5365,8 +5902,9 @@
       "survicate"
     ],
     "regex": "(?i)(?:survicate)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "swell_api_key",
@@ -5375,8 +5913,9 @@
       "swell"
     ],
     "regex": "(?i)(?:swell)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "swiftype_api_key",
@@ -5385,8 +5924,9 @@
       "swiftype"
     ],
     "regex": "(?i)(?:swiftype)(?:.|[\\n\\r]){0,40}\\b([a-zA-z-0-9]{6}\\_[a-zA-z-0-9]{6}\\-[a-zA-z-0-9]{6})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tallyfy_api_key",
@@ -5395,8 +5935,9 @@
       "tallyfy"
     ],
     "regex": "(?i)(?:tallyfy)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{36}\\.[0-9A-Za-z]{264}\\.[0-9A-Za-z\\-\\_]{683})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tatum_api_key",
@@ -5405,8 +5946,9 @@
       "tatum"
     ],
     "regex": "(?i)(?:tatum)(?:.|[\\n\\r]){0,40}\\b([0-9a-z-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "taxjar_api_key",
@@ -5415,8 +5957,9 @@
       "taxjar"
     ],
     "regex": "(?i)(?:taxjar)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "teamgate_api_key",
@@ -5425,8 +5968,9 @@
       "teamgate"
     ],
     "regex": "(?i)(?:teamgate)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{80})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "teamworkcrm_api_key",
@@ -5435,8 +5979,9 @@
       "teamworkcrm"
     ],
     "regex": "(?i)(?:teamwork|teamworkcrm|teamworkdesk|teamworkspaces)(?:.|[\\n\\r]){0,40}\\b(tkn\\.v1_[0-9A-Za-z]{71}=[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "technicalanalysisapi_key",
@@ -5445,8 +5990,9 @@
       "technicalanalysisapi"
     ],
     "regex": "(?i)(?:technicalanalysisapi)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{48})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tefter_api_key",
@@ -5455,8 +6001,9 @@
       "tefter"
     ],
     "regex": "(?i)(?:tefter)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "teletype_api_key",
@@ -5465,8 +6012,9 @@
       "teletype"
     ],
     "regex": "(?i)(?:teletype)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z-]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "telenyx_api_key",
@@ -5475,8 +6023,9 @@
       "telenyx"
     ],
     "regex": "(?i)(?:telnyx)(?:.|[\\n\\r]){0,40}\\b(KEY[0-9A-Za-z_-]{55})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "testingbot_api_key",
@@ -5485,8 +6034,9 @@
       "testingbot"
     ],
     "regex": "(?i)(?:testingbot)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "text2data_api_key",
@@ -5495,8 +6045,9 @@
       "text2data"
     ],
     "regex": "(?i)(?:text2data)(?:.|[\\n\\r]){0,40}\\b([0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "textmagic_api_key",
@@ -5505,8 +6056,9 @@
       "textmagic"
     ],
     "regex": "(?i)(?:textmagic)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{30})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "thinkific_api_key",
@@ -5515,8 +6067,9 @@
       "thinkific"
     ],
     "regex": "(?i)(?:thinkific)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "thousandeyes_api_key",
@@ -5525,8 +6078,9 @@
       "thousandeyes"
     ],
     "regex": "(?i)(?:thousandeyes)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ticketmaster_api_key",
@@ -5535,8 +6089,9 @@
       "ticketmaster"
     ],
     "regex": "(?i)(?:ticketmaster)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tickettailor_api_key",
@@ -5545,8 +6100,9 @@
       "tickettailor"
     ],
     "regex": "(?i)(?:tickettailor)(?:.|[\\n\\r]){0,40}\\b(sk[a-fA-Z0-9_]{45})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tiingo_api_key",
@@ -5555,8 +6111,9 @@
       "tiingo"
     ],
     "regex": "(?i)(?:tiingo)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "timecamp_api_key",
@@ -5565,8 +6122,9 @@
       "timecamp"
     ],
     "regex": "(?i)(?:timecamp)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{26})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "timezone_api_key",
@@ -5575,16 +6133,18 @@
       "timezone"
     ],
     "regex": "(?i)(?:timezoneapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tly_api_key",
     "category": "api_key",
     "keywords": [],
     "regex": "(?i)(?:tly)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{60})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tmetric_api_key",
@@ -5593,8 +6153,9 @@
       "tmetric"
     ],
     "regex": "(?i)(?:tmetric)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "todoist_api_key",
@@ -5603,8 +6164,9 @@
       "todoist"
     ],
     "regex": "(?i)(?:todoist)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "toggltrack_api_key",
@@ -5613,8 +6175,9 @@
       "toggltrack"
     ],
     "regex": "(?i)(?:toggl)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tomorrow_api_key",
@@ -5623,8 +6186,9 @@
       "tomorrow"
     ],
     "regex": "(?i)(?:tomorrow)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tomtom_api_key",
@@ -5633,8 +6197,9 @@
       "tomtom"
     ],
     "regex": "(?i)(?:tomtom)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-zA-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tradier_api_key",
@@ -5643,8 +6208,9 @@
       "tradier"
     ],
     "regex": "(?i)(?:tradier)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{28})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "travelpayouts_api_key",
@@ -5653,8 +6219,9 @@
       "travelpayouts"
     ],
     "regex": "(?i)(?:travelpayouts)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "travisci_api_key",
@@ -5663,8 +6230,9 @@
       "travisci"
     ],
     "regex": "(?i)(?:travis)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9A-Z_]{22})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "trello_api_key",
@@ -5673,16 +6241,18 @@
       "trello"
     ],
     "regex": "(?i)(?:trello)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tru_api_key",
     "category": "api_key",
     "keywords": [],
     "regex": "(?i)(?:tru)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "twelvedata_api_key",
@@ -5691,8 +6261,9 @@
       "twelvedata"
     ],
     "regex": "(?i)(?:twelvedata)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "twillo_api_key",
@@ -5701,8 +6272,9 @@
       "twillo"
     ],
     "regex": "(?i)(?:twillo)(?:.|[\\n\\r]){0,40}\\bSK[0-9a-fA-F]{32}\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "twitch_api_key",
@@ -5711,8 +6283,9 @@
       "twitch"
     ],
     "regex": "(?i)(?:twitch)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{30})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "twitter_api_key",
@@ -5721,8 +6294,9 @@
       "twitter"
     ],
     "regex": "(?i)(?:twitter)(?:.|[\\n\\r]){0,40}\\b([A-Z]{22}%[a-zA-Z-0-9]{23}%[a-zA-Z-0-9]{6}%[a-zA-Z-0-9]{3}%[a-zA-Z-0-9]{9}%[a-zA-Z-0-9]{52})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tyntec_api_key",
@@ -5731,8 +6305,9 @@
       "tyntec"
     ],
     "regex": "(?i)(?:tyntec)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "typeform_api_key",
@@ -5741,8 +6316,9 @@
       "typeform"
     ],
     "regex": "(?i)(?:typeform)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{44})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "typetalk_api_key",
@@ -5751,8 +6327,9 @@
       "typetalk"
     ],
     "regex": "(?i)(?:typetalk)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ubidots_api_key",
@@ -5761,8 +6338,9 @@
       "ubidots"
     ],
     "regex": "\\b(BBFF-[0-9a-zA-Z]{30})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "uclassify_api_key",
@@ -5771,8 +6349,9 @@
       "uclassify"
     ],
     "regex": "(?i)(?:uclassify)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "unify_api_key",
@@ -5781,8 +6360,9 @@
       "unify"
     ],
     "regex": "(?i)(?:unify)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_=-]{44})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "unplugg_api_key",
@@ -5791,8 +6371,9 @@
       "unplugg"
     ],
     "regex": "(?i)(?:unplu)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "unsplash_api_key",
@@ -5801,8 +6382,9 @@
       "unsplash"
     ],
     "regex": "(?i)(?:unsplash)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "uplead_api_key",
@@ -5811,8 +6393,9 @@
       "uplead"
     ],
     "regex": "(?i)(?:uplead)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "uploadcare_api_key",
@@ -5821,8 +6404,9 @@
       "uploadcare"
     ],
     "regex": "(?i)(?:uploadcare)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "uptimerobot_api_key",
@@ -5831,8 +6415,9 @@
       "uptimerobot"
     ],
     "regex": "(?i)(?:uptimerobot)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{9}-[a-zA-Z0-9]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "upwave_api_key",
@@ -5841,8 +6426,9 @@
       "upwave"
     ],
     "regex": "(?i)(?:upwave)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "urlscan_api_key",
@@ -5851,8 +6437,9 @@
       "urlscan"
     ],
     "regex": "(?i)(?:urlscan)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "userflow_api_key",
@@ -5861,8 +6448,9 @@
       "userflow"
     ],
     "regex": "(?i)(?:userflow)(?:.|[\\n\\r]){0,40}\\b([0-9a-z_]{29})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "userstack_api_key",
@@ -5871,8 +6459,9 @@
       "userstack"
     ],
     "regex": "(?i)(?:userstack)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "vatlayer_api_key",
@@ -5881,8 +6470,9 @@
       "vatlayer"
     ],
     "regex": "(?i)(?:vatlayer)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "vbout_api_key",
@@ -5891,8 +6481,9 @@
       "vbout"
     ],
     "regex": "(?i)(?:vbout)(?:.|[\\n\\r]){0,40}\\b([0-9]{25})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "vercel_api_key",
@@ -5901,8 +6492,9 @@
       "vercel"
     ],
     "regex": "(?i)(?:vercel)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "verifier_api_key",
@@ -5911,8 +6503,9 @@
       "verifier"
     ],
     "regex": "(?i)(?:verifier)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{96})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "verimail_api_key",
@@ -5921,8 +6514,9 @@
       "verimail"
     ],
     "regex": "(?i)(?:verimail)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "veriphone_api_key",
@@ -5931,8 +6525,9 @@
       "veriphone"
     ],
     "regex": "(?i)(?:veriphone)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "versioneye_api_key",
@@ -5941,8 +6536,9 @@
       "versioneye"
     ],
     "regex": "(?i)(?:versioneye)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "viewneo_api_key",
@@ -5951,8 +6547,9 @@
       "viewneo"
     ],
     "regex": "(?i)(?:viewneo)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{120,300}.[a-z0-9A-Z]{150,300}.[a-z0-9A-Z-_]{600,800})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "virustotal_api_key",
@@ -5961,8 +6558,9 @@
       "virustotal"
     ],
     "regex": "(?i)(?:virustotal)(?:.|[\\n\\r]){0,40}\\b([a-f0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "visualcrossing_api_key",
@@ -5971,8 +6569,9 @@
       "visualcrossing"
     ],
     "regex": "(?i)(?:visualcrossing)(?:.|[\\n\\r]){0,40}\\b([0-9A-Z]{25})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "voiceagain_api_key",
@@ -5981,8 +6580,9 @@
       "voiceagain"
     ],
     "regex": "(?i)(?:voicegain)(?:.|[\\n\\r]){0,40}\\b(ey[0-9a-zA-Z_-]{34}.ey[0-9a-zA-Z_-]{108}.[0-9a-zA-Z_-]{43})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "voodoosms_api_key",
@@ -5991,8 +6591,9 @@
       "voodoosms"
     ],
     "regex": "(?i)(?:voodoosms)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{46})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "vouchery_api_key",
@@ -6001,8 +6602,9 @@
       "vouchery"
     ],
     "regex": "(?i)(?:vouchery)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "vpnapi_key",
@@ -6011,8 +6613,9 @@
       "vpnapi"
     ],
     "regex": "(?i)(?:vpnapi)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "vultr_api_key",
@@ -6021,8 +6624,9 @@
       "vultr"
     ],
     "regex": "(?i)(?:vultr)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "vyte_api_key",
@@ -6031,8 +6635,9 @@
       "vyte"
     ],
     "regex": "(?i)(?:vyte)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{50})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "walkscore_api_key",
@@ -6041,8 +6646,9 @@
       "walkscore"
     ],
     "regex": "(?i)(?:walkscore)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "weatherbit_api_key",
@@ -6051,8 +6657,9 @@
       "weatherbit"
     ],
     "regex": "(?i)(?:weatherbit)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "weatherstack_api_key",
@@ -6061,8 +6668,9 @@
       "weatherstack"
     ],
     "regex": "(?i)(?:weatherstack)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "webex_api_key",
@@ -6071,8 +6679,9 @@
       "webex"
     ],
     "regex": "(?i)(?:webex)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "webflow_api_key",
@@ -6081,8 +6690,9 @@
       "webflow"
     ],
     "regex": "(?i)(?:webflow)(?:.|[\\n\\r]){0,40}\\b([a-zA0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "webscraper_api_key",
@@ -6091,8 +6701,9 @@
       "webscraper"
     ],
     "regex": "(?i)(?:webscraper)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{60})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "webscraping_api_key",
@@ -6101,8 +6712,9 @@
       "webscraping"
     ],
     "regex": "(?i)(?:webscraping)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "wepay_api_key",
@@ -6111,8 +6723,9 @@
       "wepay"
     ],
     "regex": "(?i)(?:wepay)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_?]{62})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "whoxy_api_key",
@@ -6121,8 +6734,9 @@
       "whoxy"
     ],
     "regex": "(?i)(?:whoxy)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{33})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "wistia_api_key",
@@ -6131,16 +6745,18 @@
       "wistia"
     ],
     "regex": "(?i)(?:wistia)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "wit_api_key",
     "category": "api_key",
     "keywords": [],
     "regex": "(?i)(?:wit)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "worksnaps_api_key",
@@ -6149,8 +6765,9 @@
       "worksnaps"
     ],
     "regex": "(?i)(?:worksnaps)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "workstack_api_key",
@@ -6159,8 +6776,9 @@
       "workstack"
     ],
     "regex": "(?i)(?:workstack)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-zA-Z]{60})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "worldcoinindex_api_key",
@@ -6169,8 +6787,9 @@
       "worldcoinindex"
     ],
     "regex": "(?i)(?:worldcoinindex)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{35})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "worlweather_api_key",
@@ -6179,8 +6798,9 @@
       "worlweather"
     ],
     "regex": "(?i)(?:worldweather)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{31})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "wrike_api_key",
@@ -6189,8 +6809,9 @@
       "wrike"
     ],
     "regex": "(?i)(?:wrike)(?:.|[\\n\\r]){0,40}\\b(ey[a-zA-Z0-9-._]{333})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "yandex_api_key",
@@ -6199,8 +6820,9 @@
       "yandex"
     ],
     "regex": "(?i)(?:yandex)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z.]{83})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "yelp_api_key",
@@ -6209,8 +6831,9 @@
       "yelp"
     ],
     "regex": "(?i)(?:yelp)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_\\\\=\\.\\-]{128})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "youneedabudget_api_key",
@@ -6219,8 +6842,9 @@
       "youneedabudget"
     ],
     "regex": "(?i)(?:youneedabudget)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "yousign_api_key",
@@ -6229,8 +6853,9 @@
       "yousign"
     ],
     "regex": "(?i)(?:yousign)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zenkit_api_key",
@@ -6239,8 +6864,9 @@
       "zenkit"
     ],
     "regex": "(?i)(?:zenkit)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{8}\\-[0-9A-Za-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zenrows_api_key",
@@ -6249,8 +6875,9 @@
       "zenrows"
     ],
     "regex": "(?i)(?:zenrows)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zenscrape_api_key",
@@ -6259,8 +6886,9 @@
       "zenscrape"
     ],
     "regex": "(?i)(?:zenscrape)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zenserp_api_key",
@@ -6269,8 +6897,9 @@
       "zenserp"
     ],
     "regex": "(?i)(?:zenserp)(?:.|[\\n\\r]){0,40}\\b([0-9a-z-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zeplin_api_key",
@@ -6279,8 +6908,9 @@
       "zeplin"
     ],
     "regex": "(?i)(?:zeplin)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-.]{350,400})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zerobounce_api_key",
@@ -6289,8 +6919,9 @@
       "zerobounce"
     ],
     "regex": "(?i)(?:zerobounce)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zipapi_key",
@@ -6299,8 +6930,9 @@
       "zipapi"
     ],
     "regex": "(?i)(?:zipapi)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zipcode_api_key",
@@ -6309,8 +6941,9 @@
       "zipcode"
     ],
     "regex": "(?i)(?:zipcodeapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zipcodebase_api_key",
@@ -6319,8 +6952,9 @@
       "zipcodebase"
     ],
     "regex": "(?i)(?:zipcodebase)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zonka_api_key",
@@ -6329,8 +6963,9 @@
       "zonka"
     ],
     "regex": "(?i)(?:zonka)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "usersecretscanner_api_key",
@@ -6339,8 +6974,9 @@
       "usersecretscanner"
     ],
     "regex": "(?i)(?:user)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9-._+=]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "cloudflare_certificate_key",
@@ -6349,8 +6985,9 @@
       "cloudflare"
     ],
     "regex": "(?i)(?:cloudflare)(?:.|[\\n\\r]){0,40}\\b(v[A-Za-z0-9._-]{173,})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "upcdatabase_api_key",
@@ -6359,8 +6996,9 @@
       "upcdatabase"
     ],
     "regex": "(?i)(?:upcdatabase)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "github_private_key",
@@ -6369,8 +7007,9 @@
       "github"
     ],
     "regex": "(?i)(?:github)(?:.|[\\n\\r]){0,40}(-----BEGIN RSA PRIVATE KEY-----\\s[A-Za-z0-9+\\/\\s]*\\s-----END RSA PRIVATE KEY-----)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "kraken_api_private_key",
@@ -6379,8 +7018,9 @@
       "kraken"
     ],
     "regex": "(?i)(?:kraken)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z\\/\\+=]{86,88}[ \"'\\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "private_key",
@@ -6389,8 +7029,9 @@
       "private"
     ],
     "regex": "/(?i)-----\\s*?BEGIN[ A-Z0-9_-]*?PRIVATE KEY\\s*?-----[\\s\\S]*?----\\s*?END[ A-Z0-9_-]*? PRIVATE KEY\\s*?-----/gm",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "theoddsapi_key",
@@ -6399,8 +7040,9 @@
       "theoddsapi"
     ],
     "regex": "(?i)(?:theoddsapi|the-odds-api)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "test_django_secret_key_test",
@@ -6410,8 +7052,9 @@
       "secret"
     ],
     "regex": "(?:(?:\\A|[^0-9A-Za-z])SECRET_KEY\\s*=\\s*[\"']?)([^\\s\"'(${{)][^\\r\\n'\"]*)(?:\\z|[\\r\\n'\"])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "datadog_app_key",
@@ -6420,8 +7063,9 @@
       "datadog"
     ],
     "regex": "(?:(\\A|\\b)(((?i)(DD|DATADOG)_APP(LICATION)?_KEY)['\"]?\\s*(value)?[=:,]\\s*['\"]?|new DataDogWinston\\({[^}]*apiKey:\\s*'|terraformer import datadog [^\\n]*--api-key=|provider \"datadog\" {[^}]*api_key\\s*=\\s*\"))([a-f0-9]{40})(?:\\z|\\b)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "browserstack_access_key",
@@ -6431,8 +7075,9 @@
       "access"
     ],
     "regex": "(?:(\\A|\\b)(?i)_?(browserstack|bs|automate)_?\\.?((Access|Auth)_?Key|Password)['\"`]?\\s*([:=]|[?:]=|[=-]>|,)\\s*['\"`]?)([0-9a-zA-Z]{20})(?:\\z|[^a-zA-Z0-9/+_-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "browserstack_access_key_imprecise",
@@ -6443,8 +7088,9 @@
       "imprecise"
     ],
     "regex": "(?:(\\A|\\b)(?i)_?(Access|Auth)_?Key['\"`]?\\s*([:=]|[?:]=|[=-]>|,)\\s*['\"`]?)([0-9a-zA-Z]{20})(?:\\z|[^a-zA-Z0-9/+_-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "openstack_password_or_key",
@@ -6454,8 +7100,9 @@
       "password"
     ],
     "regex": "(?:(?i)OPEN_?STACK_(PASSWORD|API_?KEY)[_A-Z]*['\"`]?(\\s*[\\]\\)])?\\s*([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s*([[{])?['\"`]?)([^'\",\\r\\n \\t\\x00-\\x08]+)(?:['\"\\r\\n,]|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "alienvault_otx_api_key",
@@ -6464,8 +7111,9 @@
       "alienvault"
     ],
     "regex": "(?:(?i)ALIENVAULT(_?OTX)?(_?API)?_?KEY['\"`]?(\\s*[\\]\\)])?\\s*([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s*([[{])?['\"`]?)([a-f0-9]{64}|[a-f0-9]{40})(?:['\"`\\r\\n,]|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "apollo_io_api_key",
@@ -6474,8 +7122,9 @@
       "apollo"
     ],
     "regex": "(?:(?i)key['\"`]?(\\s*[\\]\\)])?\\s*([:,=]|[=-]>|to|[!=]={1,2}|<>)?\\s*([[{])?['\"`]?)(service:[A-Za-z0-9-]+:[^\\s'\"`,\\x00-\\x08\\x7f-\\xff]+)(?:['\"`,]|\\z|\\s)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "clickup_api_key",
@@ -6484,8 +7133,9 @@
       "clickup"
     ],
     "regex": "(?:\\b|\\A)(pk_[0-9]{6,8}_[A-Z0-9]{32})(?:\\b|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_tr",
@@ -6495,8 +7145,9 @@
       "turkey"
     ],
     "regex": "(?:\\A|[^A-Za-z0-9-])(TR(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){15}(?:[0-9A-Z][ -]?){3})(?:\\z|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "generic_rsa_keys",
@@ -6506,8 +7157,9 @@
       "keys"
     ],
     "regex": "(--BEGIN (?:[A-Z]+ )?PRIVATE KEY--+(\\\\[nr]|[\\r\\n])+([a-zA-Z0-9+/=\\s]|\\\\[rn])+(\\\\[rn]|[\\r\\n])+--+END (?:[A-Z]+ )?PRIVATE KEY--)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ssh_private_keys",
@@ -6517,8 +7169,9 @@
       "keys"
     ],
     "regex": "(--BEGIN OPENSSH PRIVATE KEY--+[a-zA-Z0-9+/=\\s]+--+END OPENSSH PRIVATE KEY--)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "gpg_private_key",
@@ -6527,8 +7180,9 @@
       "private"
     ],
     "regex": "(--BEGIN PGP PRIVATE KEY BLOCK--+(?:[\\r\\n]+((Version|Comment|MessageID|Hash|Charset): [^\\r\\n]+[\\r\\n]+)+[\\r\\n]+)?[a-zA-Z0-9+/=\\s]+--+END PGP PRIVATE KEY BLOCK--)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ssh_public_key",
@@ -6537,8 +7191,9 @@
       "public"
     ],
     "regex": "(ssh-rsa\\s+[a-zA-Z0-9/\\+=]{20,})(?:\\z|\\s+[a-zA-Z0-9@-]+([\\r\\n]|\\z))",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "django_secret_key",
@@ -6548,8 +7203,9 @@
       "secret"
     ],
     "regex": "(?:(\\b|\\A)SECRET_KEY[ \\t]*=[ \\t]*[\"'])([^\\r\\n\"']+)(?:['\"])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dotnet_machinekey",
@@ -6558,8 +7214,9 @@
       "machinekey"
     ],
     "regex": "(?:<machineKey\\s+[^>]*(validation|decryption)Key=\")([A-Fa-f0-9]+)(?:\\\")",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "shutterstock_oauth_key",
@@ -6568,7 +7225,8 @@
       "shutterstock"
     ],
     "regex": "(?i)(?:shutterstock)(?:.|[\\n\\r]){0,40}\\b(v2/[0-9A-Za-z]{388})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   }
 ]

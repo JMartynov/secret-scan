@@ -1,5 +1,3 @@
-import pytest
-import os
 from detector import SecretDetector, DetectionEngine
 from obfuscator import Obfuscator
 
@@ -79,11 +77,12 @@ def test_obfuscator_decoding():
 def test_synthetic_generation_taxonomy():
     obfuscator = Obfuscator(mode="synthetic")
     
-    aws_id = obfuscator._generate_synthetic("aws_api_id", 20)
+    # Passing category, secret_type, length
+    aws_id = obfuscator._generate_synthetic("cloud_credentials", "aws_api_id", 20)
     assert aws_id.startswith("AKIA")
     
-    github_token = obfuscator._generate_synthetic("github_token", 40)
+    github_token = obfuscator._generate_synthetic("api_keys", "github_token", 40)
     assert github_token.startswith("ghp_")
     
-    slack_token = obfuscator._generate_synthetic("slack_token", 50)
+    slack_token = obfuscator._generate_synthetic("api_keys", "slack_token", 50)
     assert slack_token.startswith("xoxb-")

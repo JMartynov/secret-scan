@@ -25,6 +25,7 @@ class Finding:
     confidence: float = 0.0
     start: int = -1
     end: int = -1
+    category: str = "generic"
 
     @property
     def redacted_value(self) -> str:
@@ -39,20 +40,20 @@ class Finding:
 def format_report(findings: List[Finding], show_full: bool = False, show_short: bool = False, no_colors: bool = False) -> str:
     if not findings:
         return colorize("✅ No secrets detected.", C_GREEN, no_colors)
-    
+
     # Sort and deduplicate findings
     unique = {}
     for f in findings:
         key = (f.location, f.content)
         if key not in unique or f.confidence > unique[key].confidence:
             unique[key] = f
-    
+
     final = sorted(unique.values(), key=lambda x: (x.location, x.secret_type))
-    
+
     # Summary Generation
     severity_order = {"HIGH": 0, "MEDIUM": 1, "LOW": 2}
     severity_colors = {"HIGH": C_RED, "MEDIUM": C_YELLOW, "LOW": C_BLUE}
-    
+
     header = colorize(f"⚠ Secrets detected: {len(final)}", C_BOLD, no_colors)
     summary_hdr = colorize("--- Summary ---", C_BOLD, no_colors)
     details_hdr = colorize("--- Details ---", C_BOLD, no_colors)
@@ -62,7 +63,7 @@ def format_report(findings: List[Finding], show_full: bool = False, show_short: 
         severity_counts = {}
         for f in final:
             severity_counts[f.risk] = severity_counts.get(f.risk, 0) + 1
-        
+
         report = f"{header}\n"
         report += f"{summary_hdr}\n"
         for risk in sorted(severity_counts.keys(), key=lambda x: severity_order.get(x, 99)):
@@ -74,7 +75,7 @@ def format_report(findings: List[Finding], show_full: bool = False, show_short: 
         for f in final:
             k = (f.secret_type, f.risk)
             summary_data[k] = summary_data.get(k, 0) + 1
-            
+
         sorted_summary = sorted(summary_data.items(), key=lambda x: (severity_order.get(x[0][1], 99), -x[1], x[0][0]))
 
         report = f"{header}\n"
@@ -82,7 +83,7 @@ def format_report(findings: List[Finding], show_full: bool = False, show_short: 
         for (stype, srisk), count in sorted_summary:
             colored_risk = colorize(f"[{srisk}]", severity_colors.get(srisk, C_RESET), no_colors)
             report += f"{colored_risk} {stype}: {count}\n"
-        
+
         report += f"\n{details_hdr}\n"
         for f in final:
             colored_risk = colorize(f.risk, severity_colors.get(f.risk, C_RESET), no_colors)
@@ -93,5 +94,5 @@ def format_report(findings: List[Finding], show_full: bool = False, show_short: 
                 report += f"Content: {f.content}\n\n"
             else:
                 report += f"Content: {f.redacted_value} (redacted)\n\n"
-        
+
     return report.strip()

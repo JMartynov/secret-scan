@@ -1,8 +1,10 @@
 import argparse
 import sys
+
 from detector import SecretDetector
-from report import format_report
 from obfuscator import Obfuscator
+from report import format_report
+
 
 def main():
     parser = argparse.ArgumentParser(description="LLM Secrets Leak Detector CLI")
@@ -17,9 +19,9 @@ def main():
     parser.add_argument("--force-scan-all", action="store_true", help="Force scan all lines, ignoring keyword search.")
 
     args = parser.parse_args()
-    
+
     detector = SecretDetector(entropy_threshold=args.threshold)
-    
+
     input_source = None
     if args.text:
         from io import StringIO
@@ -47,7 +49,7 @@ def main():
         stream_iterator = detector.scan_stream(input_source, force_scan_all=args.force_scan_all)
         for _, findings in stream_iterator:
             all_findings.extend(findings)
-        
+
         print(format_report(all_findings, show_full=args.full, show_short=args.short, no_colors=args.nocolors))
 
     if input_source and input_source is not sys.stdin:

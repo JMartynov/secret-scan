@@ -1,6 +1,8 @@
 import json
 import sys
+
 from redoctor import check
+
 
 def main():
     try:
@@ -11,9 +13,9 @@ def main():
         sys.exit(1)
 
     print(f"Scanning {len(rules)} rules for ReDoS using redoctor library...\n")
-    
+
     vulnerable_rules = []
-    
+
     for rule in rules:
         try:
             pattern = rule['regex']
@@ -21,7 +23,7 @@ def main():
             clean_pattern = pattern
             if pattern.startswith('(?i)'):
                 clean_pattern = pattern[4:]
-                
+
             result = check(clean_pattern)
             if result.is_vulnerable:
                 vulnerable_rules.append((rule['id'], pattern, result.complexity, result.attack))

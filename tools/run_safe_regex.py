@@ -1,5 +1,6 @@
 import json
 import sys
+
 try:
     from safe_regex import is_safe
 except ImportError:
@@ -18,9 +19,9 @@ def main():
         sys.exit(1)
 
     print(f"Scanning {len(rules)} rules for exponential backtracking using safe-regex library...\n")
-    
+
     vulnerable_rules = []
-    
+
     for rule in rules:
         try:
             pattern = rule['regex']

@@ -6,8 +6,9 @@
       "apimatic"
     ],
     "regex": "(?i)(?:apimatic)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-\\S]{8,32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "autodesk_secret",
@@ -16,8 +17,9 @@
       "autodesk"
     ],
     "regex": "(?i)(?:autodesk)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "bitmex_api_secret",
@@ -26,8 +28,9 @@
       "bitmex"
     ],
     "regex": "(?i)(?:bitmex)(?:.|[\\n\\r]){0,40}([ \\r\\n]{1}[0-9a-zA-Z\\-\\_]{48}[ \\r\\n]{1})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "clockwork_api_secret",
@@ -36,8 +39,9 @@
       "clockwork"
     ],
     "regex": "(?i)(?:clockwork|textanywhere)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "confluent_api_secret",
@@ -46,8 +50,9 @@
       "confluent"
     ],
     "regex": "(?i)(?:confluent)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dotmailer_password",
@@ -56,8 +61,9 @@
       "dotmailer"
     ],
     "regex": "(?i)(?:dotmailer)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{8,24})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mailjet_api_secret",
@@ -66,8 +72,9 @@
       "mailjet"
     ],
     "regex": "(?i)(?:mailjet)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9]{87}\\=)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "mrticktock_password",
@@ -76,8 +83,9 @@
       "mrticktock"
     ],
     "regex": "(?i)(?:mrticktock)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9!=@#$%()_^]{1,50})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "nexmo_api_secret",
@@ -86,8 +94,9 @@
       "nexmo"
     ],
     "regex": "(?i)(?:nexmo)(?:.|[\\n\\r]){0,40}\\b([A-Za-z0-9_-]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "onedesk_password",
@@ -96,8 +105,9 @@
       "onedesk"
     ],
     "regex": "(?i)(?:onedesk)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9!=@#$%^]{8,64})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "pusher_api_secret",
@@ -106,8 +116,9 @@
       "pusher"
     ],
     "regex": "(?i)(?:pusher)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "razorpay_api_secret",
@@ -116,8 +127,9 @@
       "razorpay"
     ],
     "regex": "(?:razor|secret|rzp|key)[-\\w]*[\\\" :=']*([A-Za-z0-9]{20,50})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "roaring_api_secret",
@@ -126,8 +138,9 @@
       "roaring"
     ],
     "regex": "(?i)(?:roaring)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z_-]{28})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "rownd_api_secret",
@@ -136,8 +149,9 @@
       "rownd"
     ],
     "regex": "(?i)(?:rownd)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{48})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "satismeter_api_password",
@@ -146,8 +160,9 @@
       "satismeter"
     ],
     "regex": "(?i)(?:satismeter)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9!=@#$%^]{6,32})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "shutterstock_api_secret",
@@ -156,8 +171,9 @@
       "shutterstock"
     ],
     "regex": "(?i)(?:shutterstock)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "squareapp_api_secret",
@@ -166,16 +182,18 @@
       "squareapp"
     ],
     "regex": "[\\w\\-]*sq0c[a-z]{2}-[0-9A-Za-z\\-_]{40,50}",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "tru_api_secret",
     "category": "api_key",
     "keywords": [],
     "regex": "(?i)(?:tru)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z.-_]{26})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zipapi_password",
@@ -184,8 +202,9 @@
       "zipapi"
     ],
     "regex": "(?i)(?:zipapi)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9!=@#$%^]{7,})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zipbooks_password",
@@ -194,16 +213,18 @@
       "zipbooks"
     ],
     "regex": "(?i)(?:zipbooks|password)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9!=@#$%^]{8,})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "arc",
     "category": "authentication",
     "keywords": [],
     "regex": "(?:\\A|\\x00)({\"id\":[0-9]+,\"title\":\"[^\"]+\",\"encryption\":\"[^\"]+\",\"created_at\":\"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{6}(Z|[+-][0-9]{2}:[0-9]{2})\",\"updated_at\":\"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{6}(Z|[+-][0-9]{2}:[0-9]{2})\",\"expired_at\":\"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]{6})?(Z|[+-][0-9]{2}:[0-9]{2})\",\"prune\":(true|false),\"notified\":(true|false),\"compressed\":(true|false),\"pinned\":(true|false),\"size\":[0-9]+,\"next_id\":[0-9]+})(?:\\n?\\z|\\x00)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "generic_passwords",
@@ -213,8 +234,9 @@
       "passwords"
     ],
     "regex": "(?:(?:\\A|[^a-zA-Z0-9])(?i)[a-z0-9_.-]*(?:api|auth[a-z]+|jwt|mysql|db)?[_.-]?(?:pass?(?:wo?r?d|code|phrase)|secret|key|token)([_-][a-z0-9]+){0,3}([ \\t]+As[ \\t]+String)?[\\t ]*(={1,3}|:)[\\t ]*(?:[\"']|b[\"'])?)([a-zA-Z0-9!.,$%&*+?^_`{|}()[\\]\\\\/~-][a-zA-Z0-9\\t !.,$%&*+?^_`{|}()[\\]\\\\/~-]*)(?:(\\z|[\\r\\n'\"]))",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "generic_passwords_fewer_fps",
@@ -225,8 +247,9 @@
       "fewer"
     ],
     "regex": "(?:\\A|[^0-9A-Za-z])(((?i)[a-z0-9_.-]*(api|auth[a-z]*|jwt|mysql|db)[_.-]?)?((?i)pass?(wo?r?d|code|phrase)|secret|token|key)([_-][A-Za-z0-9]+){0,4}_{0,2}([\"'`]|[ \\t]+As[ \\t]+String)?[\\t ]*(?:=|>|:{1,3}=|\\|\\|:|<=|=>|:|\\?=)[\\t ]*([br]?\"[A-Za-z0-9_/+.!-]+\"|[br]?'[A-Za-z0-9_/+.!-]+'))(?:\\z|[^A-Za-z0-9])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "generic_passwords_hex",
@@ -237,8 +260,9 @@
       "with"
     ],
     "regex": "(?:(?:\\A|[^a-zA-Z0-9])(?i)[a-z0-9._-]*(?:api|auth[a-z]+|jwt|mysql|db)?[_.-]?(?:pass?(?:wo?r?d|code|phrase)|secret|key|token)([_-][a-z0-9]+){0,3}([ \\t]+As[ \\t]+String)?[\\t ]*(={1,3}|:)[\\t ]*(?:[\"']|b[\"'])?)([0-9a-f]{32}|[0-9a-f]{40}|[0-9a-f]{64})(?:(\\z|[\\r\\n'\"]))",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "generic_passwords_base64",
@@ -249,8 +273,9 @@
       "with"
     ],
     "regex": "(?:(?:\\A|[^a-zA-Z0-9])(?i)[a-z0-9._-]*(?:api|auth[a-z]+|jwt|mysql|db)?[_.-]?(?:pass?(?:wo?r?d|code|phrase)|secret|key|token)([_-][a-z0-9]+){0,3}([ \\t]+As[ \\t]+String)?[\\t ]*(={1,3}|:)[\\t ]*(?:[\"']|b[\"'])?)((([A-Za-z0-9+/]){4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==))(?:(\\z|[\\r\\n'\"]))",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "generic_passwords_base64_uri",
@@ -261,7 +286,7 @@
       "with"
     ],
     "regex": "(?:(?:\\A|[^a-zA-Z0-9])(?i)[a-z0-9._-]*(?:api|auth[a-z]+|jwt|mysql|db)?[_.-]?(?:pass?(?:wo?r?d|code|phrase)|secret|key|token)([_-][a-z0-9]+){0,3}([ \\t]+As[ \\t]+String)?[\\t ]*(={1,3}|:)[\\t ]*(?:[\"']|b[\"'])?)((([A-Za-z0-9_-]){4})*([A-Za-z0-9_-]{4}|[A-Za-z0-9_-]{3}=|[A-Za-z0-9_-]{2}==))(?:(\\z|[\\r\\n'\"]))",
-    "risk": "high"
+    "severity": "high"
   },
   {
     "id": "uuids",
@@ -270,8 +295,9 @@
       "uuids"
     ],
     "regex": "(?:\\A|[^0-9A-Fa-f-])((?i)[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})(?:\\z|[^0-9A-Fa-f-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "oauth_client_secret",
@@ -282,7 +308,8 @@
       "secret"
     ],
     "regex": "(?:\\A|\\b)((?i)client[_.-]?Id\\s*([:=]|[=-]>|to|[!=]={1,2}|<>)\\s*['\"`]?[^\\s'\"`[\\]{}()<>]+['\"`]?\\s*[,\\r\\n]\\s*\\bclient[_.-]?Secret\\s*([:=]|[=-]>|to|[!=]={1,2}|<>)\\s*['\"`]?[^\\s'\"`[\\]{}()<>]+['\"`]?)(?:\\z|\\b)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   }
 ]

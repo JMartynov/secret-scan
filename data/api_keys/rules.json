@@ -6,8 +6,9 @@
       "abbysale"
     ],
     "regex": "(?i)(?:abbysale)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "abstract_api",
@@ -16,8 +17,9 @@
       "abstract"
     ],
     "regex": "(?i)(?:abstract)(?:.|[\\n\\r]){0,40}\\b([0-9a-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "accuweather_api",
@@ -26,8 +28,9 @@
       "accuweather"
     ],
     "regex": "(?i)(?:accuweather)(?:.|[\\n\\r]){0,40}([a-z0-9A-Z\\%]{35})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "adafruit_api",
@@ -36,8 +39,9 @@
       "adafruit"
     ],
     "regex": "\\b(aio\\_[a-zA-Z0-9]{28})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "adobe_stock_api",
@@ -46,8 +50,9 @@
       "adobe"
     ],
     "regex": "(?i)(?:adobe)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "adzuna_api",
@@ -56,8 +61,9 @@
       "adzuna"
     ],
     "regex": "(?i)(?:adzuna)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "aero_api",
@@ -66,8 +72,9 @@
       "aero"
     ],
     "regex": "(?i)(?:aeroworkflow)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9^!]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "agora_api",
@@ -76,16 +83,18 @@
       "agora"
     ],
     "regex": "(?i)(?:agora)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "aha_api",
     "category": "api_key",
     "keywords": [],
     "regex": "(?i)(?:aha)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "airbrake_api",
@@ -94,8 +103,9 @@
       "airbrake"
     ],
     "regex": "(?i)(?:airbrake)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "airship_api",
@@ -104,8 +114,9 @@
       "airship"
     ],
     "regex": "(?i)(?:airship)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-zA-Z]{91})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "airtable_api",
@@ -114,8 +125,9 @@
       "airtable"
     ],
     "regex": "\\b(key[a-zA-Z0-9_-]{14})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "airvisual_api",
@@ -124,8 +136,9 @@
       "airvisual"
     ],
     "regex": "(?i)(?:airvisual)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "alconost_api",
@@ -134,8 +147,9 @@
       "alconost"
     ],
     "regex": "(?i)(?:alconost)(?:.|[\\n\\r]){0,40}\\b([0-9Aa-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "alegra_api",
@@ -144,8 +158,9 @@
       "alegra"
     ],
     "regex": "(?i)(?:alegra)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{20})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "aletheia_api",
@@ -154,8 +169,9 @@
       "aletheia"
     ],
     "regex": "(?i)(?:aletheiaapi)(?:.|[\\n\\r]){0,40}\\b([A-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "algolia_api",
@@ -164,8 +180,9 @@
       "algolia"
     ],
     "regex": "(?i)(?:algolia)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "alibaba_api",
@@ -174,8 +191,9 @@
       "alibaba"
     ],
     "regex": "\\b([a-zA-Z0-9]{30})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "allsports_api",
@@ -184,8 +202,9 @@
       "allsports"
     ],
     "regex": "(?i)(?:allsports)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "amadeus_api",
@@ -194,8 +213,9 @@
       "amadeus"
     ],
     "regex": "(?i)(?:amadeus)(?:.|[\\n\\r]){0,40}\\b([0-9A-Za-z]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "ambee_api",
@@ -204,8 +224,9 @@
       "ambee"
     ],
     "regex": "(?i)(?:ambee)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{64})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "amplitude_api",
@@ -214,8 +235,9 @@
       "amplitude"
     ],
     "regex": "(?i)(?:amplitude)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "anypoint_api",
@@ -224,8 +246,9 @@
       "anypoint"
     ],
     "regex": "\\b([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "apacta_api",
@@ -234,8 +257,9 @@
       "apacta"
     ],
     "regex": "(?i)(?:apacta)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{36})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "api2cart_api",
@@ -244,8 +268,9 @@
       "api2cart"
     ],
     "regex": "(?i)(?:api2cart)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "apideck_id",
@@ -254,8 +279,9 @@
       "apideck"
     ],
     "regex": "(?i)(?:apideck)(?:.|[\\n\\r]){0,40}\\b([a-z0-9A-Z]{40})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "apiflash_url",
@@ -264,8 +290,9 @@
       "apiflash"
     ],
     "regex": "(?i)(?:apiflash)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9\\S]{21,30})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "appcues_api_user",
@@ -274,8 +301,9 @@
       "appcues"
     ],
     "regex": "(?i)(?:appcues)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{39})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "appcues_api_id",
@@ -284,8 +312,9 @@
       "appcues"
     ],
     "regex": "(?i)(?:appcues)(?:.|[\\n\\r]){0,40}\\b([0-9]{5})\\b",
-    "risk": "high",
-    "entropy": 1.5
+    "entropy": 1.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "artifactory_api_url",
@@ -294,8 +323,9 @@
       "artifactory"
     ],
     "regex": "\\b([A-Za-z0-9](?:[A-Za-z0-9\\-]{0,61}[A-Za-z0-9])\\.jfrog\\.io)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "browserstack_user_id",
@@ -304,8 +334,9 @@
       "browserstack"
     ],
     "regex": "(?i)(?:browserstack)(?:.|[\\n\\r]){0,40}\\b([0-9a-zA-Z]{3,10}_[0-9a-zA-Z]{6})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "captaindata_api_project_id",
@@ -314,8 +345,9 @@
       "captaindata"
     ],
     "regex": "(?i)(?:captaindata)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{8}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{4}\\-[0-9a-f]{12})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "caspio_api_domain",
@@ -324,8 +356,9 @@
       "caspio"
     ],
     "regex": "(?i)(?:caspio)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{8})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "checkout_api_id",
@@ -334,8 +367,9 @@
       "checkout"
     ],
     "regex": "(?i)(?:checkout)(?:.|[\\n\\r]){0,40}\\b(cus_[0-9a-zA-Z]{26})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "clickhelp_server_url",
@@ -344,8 +378,9 @@
       "clickhelp"
     ],
     "regex": "\\b([0-9A-Za-z]{3,20}.try.clickhelp.co)\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "discord_web_hook",
@@ -354,8 +389,9 @@
       "discord"
     ],
     "regex": "(https:\\/\\/discord\\.com\\/api\\/webhooks\\/[0-9]{18}\\/[0-9a-zA-Z-]{68})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "freshbooks_api_url",
@@ -364,8 +400,9 @@
       "freshbooks"
     ],
     "regex": "(?i)(?:freshbooks)(?:.|[\\n\\r]){0,40}\\b(https://www.[0-9A-Za-z_-]{1,}.com)\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "generic_pattern",
@@ -374,8 +411,9 @@
       "generic"
     ],
     "regex": "(?i)(?:pass|token|cred|secret|key)(?:.|[\\n\\r]){0,40}(\\b[\\x21-\\x7e]{16,64}\\b)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "jira_domain_url",
@@ -384,8 +422,9 @@
       "jira"
     ],
     "regex": "(?i)(?:jira)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z-0-9]{5,24}\\.[a-zA-Z-0-9]{3,16}\\.[a-zA-Z-0-9]{3,16})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "msteams_webhook",
@@ -394,8 +433,9 @@
       "msteams"
     ],
     "regex": "(https:\\/\\/[a-zA-Z-0-9]+\\.webhook\\.office\\.com\\/webhookb2\\/[a-zA-Z-0-9]{8}-[a-zA-Z-0-9]{4}-[a-zA-Z-0-9]{4}-[a-zA-Z-0-9]{4}-[a-zA-Z-0-9]{12}\\@[a-zA-Z-0-9]{8}-[a-zA-Z-0-9]{4}-[a-zA-Z-0-9]{4}-[a-zA-Z-0-9]{4}-[a-zA-Z-0-9]{12}\\/IncomingWebhook\\/[a-zA-Z-0-9]{32}\\/[a-zA-Z-0-9]{8}-[a-zA-Z-0-9]{4}-[a-zA-Z-0-9]{4}-[a-zA-Z-0-9]{4}-[a-zA-Z-0-9]{12})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "okta_api_domain_url",
@@ -404,8 +444,9 @@
       "okta"
     ],
     "regex": "\\[a-z0-9-]{1,40}\\.okta(?:preview|-emea){0,1}\\.com",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "planviewleankit_api_subdomain",
@@ -414,8 +455,9 @@
       "planviewleankit"
     ],
     "regex": "(?i)(?:planviewleankit|planview)(?:.|[\\n\\r]){0,40}(?:subdomain).\\b([a-zA-Z][a-zA-Z0-9.-]{1,23}[a-zA-Z0-9])\\b",
-    "risk": "high",
-    "entropy": 2.5
+    "entropy": 2.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "slack_webhook",
@@ -424,8 +466,9 @@
       "slack"
     ],
     "regex": "(https:\\/\\/hooks\\.slack\\.com\\/services\\/[A-Za-z0-9+\\/]{44,46})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sugester_api_domain",
@@ -434,16 +477,18 @@
       "sugester"
     ],
     "regex": "(?i)(?:sugester)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_.!+$#^*%]{3,32})\\b",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "uri",
     "category": "api_key",
     "keywords": [],
     "regex": "\\b[a-zA-Z]{1,10}:?\\/\\/[-.%\\w{}]{1,50}:([-.%\\S]{3,50})@[-.%\\w\\/:]+\\b",
-    "risk": "high",
-    "entropy": 3.0
+    "entropy": 3.0,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "zapier_webhook",
@@ -452,8 +497,9 @@
       "zapier"
     ],
     "regex": "(https:\\/\\/hooks\\.zapier\\.com\\/hooks\\/catch\\/[A-Za-z0-9\\/]{16})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sendgrid",
@@ -463,8 +509,9 @@
       "deprecated"
     ],
     "regex": "(SG\\.[a-zA-Z0-9-]{5,}\\.[a-zA-Z0-9-]{5,})(?:\\z|[^a-zA-Z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "sentry_dsn_secret",
@@ -474,8 +521,9 @@
       "secret"
     ],
     "regex": "(?:https://[a-fA-F0-9]{32}:)([a-fA-F0-9]{32})(?:@([a-z0-9-.]+\\.)?sentry\\.io(?:/[^?#]*)?/\\d+)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "teams_incoming_webhook",
@@ -486,8 +534,9 @@
       "incoming"
     ],
     "regex": "(?:\\A|\\b)(https://[a-z-]+\\.webhook\\.office\\.com/webhookb2/[a-fA-F0-9]{8}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12}@[a-fA-F0-9]{8}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12}/[^/]+/[a-fA-F0-9]{32}/[a-fA-F0-9]{8}-([a-fA-F0-9]{4}-){3}[a-fA-F0-9]{12})(?:\\z|\\b)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "vercel_oauth_client_secrets",
@@ -498,8 +547,9 @@
       "client"
     ],
     "regex": "(?i)client[._]?Id[:=][ ]*oac_[A-Za-z0-9]{24}[\\n\\r]+[\\s]*client[._]?Secret[ ]*[:=][ ]*([A-Za-z0-9]{24})",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_al",
@@ -509,8 +559,9 @@
       "albania"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(AL(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){17}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_ad",
@@ -520,8 +571,9 @@
       "andorra"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(AD(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){13}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_at",
@@ -531,8 +583,9 @@
       "austria"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(AT(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){9}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_az",
@@ -542,8 +595,9 @@
       "azerbaijan"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(AZ(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){17}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_bh",
@@ -553,8 +607,9 @@
       "bahrain"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(BH(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){11}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_be",
@@ -564,8 +619,9 @@
       "belgium"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(BE(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){5}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_ba",
@@ -576,8 +632,9 @@
       "herzegovina"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(BA(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){10}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_br",
@@ -587,8 +644,9 @@
       "brazil"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(BR(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){18}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_bg",
@@ -598,8 +656,9 @@
       "bulgaria"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(BG(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){11}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_cr",
@@ -610,8 +669,9 @@
       "rica"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(CR(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){11}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_hr",
@@ -621,8 +681,9 @@
       "croatia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(HR(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){10}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_cy",
@@ -632,8 +693,9 @@
       "cyprus"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(CY(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){17}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_cz",
@@ -644,8 +706,9 @@
       "republic"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(CZ(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){13}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_fo",
@@ -656,8 +719,9 @@
       "islands"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(FO(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){7}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_gl",
@@ -667,8 +731,9 @@
       "greenland"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(GL(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){7}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_dk",
@@ -678,8 +743,9 @@
       "denmark"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(DK(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){7}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_do",
@@ -690,8 +756,9 @@
       "republic"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(DO(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){17}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_ee",
@@ -701,8 +768,9 @@
       "estonia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(EE(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){9}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_eg",
@@ -712,8 +780,9 @@
       "egypt"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(EG(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){18}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_fi",
@@ -723,8 +792,9 @@
       "finland"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(FI(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){7}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_fr",
@@ -734,8 +804,9 @@
       "france"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(FR(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){16}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_ge",
@@ -745,8 +816,9 @@
       "georgia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(GE(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){11}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_de",
@@ -756,8 +828,9 @@
       "germany"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(DE(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){11}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_gi",
@@ -767,8 +840,9 @@
       "gibraltar"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(GI(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){12}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_gr",
@@ -778,8 +852,9 @@
       "greece"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(GR(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){16}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_gt",
@@ -789,8 +864,9 @@
       "guatemala"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(GT(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){17}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_hu",
@@ -800,8 +876,9 @@
       "hungary"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(HU(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){17}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_is",
@@ -811,8 +888,9 @@
       "iceland"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(IS(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){15}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_ie",
@@ -822,8 +900,9 @@
       "ireland"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(IE(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){11}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_il",
@@ -833,8 +912,9 @@
       "israel"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(IL(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){12}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_it",
@@ -844,8 +924,9 @@
       "italy"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(IT(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){16}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_jo",
@@ -855,8 +936,9 @@
       "jordan"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(JO(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){19}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_kz",
@@ -866,8 +948,9 @@
       "kazakhstan"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(KZ(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){9}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_xk",
@@ -877,8 +960,9 @@
       "kosovo"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(XK(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){9}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_kw",
@@ -888,8 +972,9 @@
       "kuwait"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(KW(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){19}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_lv",
@@ -899,8 +984,9 @@
       "latvia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(LV(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){10}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_lb",
@@ -910,8 +996,9 @@
       "lebanon"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(LB(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){17}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_li",
@@ -921,8 +1008,9 @@
       "liechtenstein"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(LI(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){10}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_lt",
@@ -932,8 +1020,9 @@
       "lithuania"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(LT(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){9}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_lu",
@@ -943,8 +1032,9 @@
       "luxembourg"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(LU(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){9}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_mk",
@@ -955,8 +1045,9 @@
       "macedonia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(MK(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){8}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_mt",
@@ -966,8 +1057,9 @@
       "malta"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(MT(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){20}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_mr",
@@ -977,8 +1069,9 @@
       "mauritania"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(MR(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){16}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_mu",
@@ -988,8 +1081,9 @@
       "mauritius"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(MU(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){19}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_md",
@@ -999,8 +1093,9 @@
       "moldova"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(MD(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){13}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_mc",
@@ -1010,8 +1105,9 @@
       "monaco"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(MC(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){16}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_me",
@@ -1021,8 +1117,9 @@
       "montenegro"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(ME(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){11}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_nl",
@@ -1032,8 +1129,9 @@
       "netherlands"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(NL(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){7}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_no",
@@ -1043,8 +1141,9 @@
       "norway"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(NO(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){4}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_pk",
@@ -1054,8 +1153,9 @@
       "pakistan"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(PK(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){13}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_ps",
@@ -1065,8 +1165,9 @@
       "palestine"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(PS(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){18}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_pl",
@@ -1076,8 +1177,9 @@
       "poland"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(PL(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){17}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_pt",
@@ -1087,8 +1189,9 @@
       "portugal"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(PT(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){14}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_qa",
@@ -1098,8 +1201,9 @@
       "qatar"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(QA(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){18}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_ro",
@@ -1109,8 +1213,9 @@
       "romania"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(RO(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){13}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_sm",
@@ -1120,8 +1225,9 @@
       "marino"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(SM(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){16}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_lc",
@@ -1132,8 +1238,9 @@
       "lucia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(LC(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){21}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_st",
@@ -1144,8 +1251,9 @@
       "principe"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(ST(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){14}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_sa",
@@ -1156,8 +1264,9 @@
       "arabia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(SA(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){13}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_rs",
@@ -1167,8 +1276,9 @@
       "serbia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(RS(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){11}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_sk",
@@ -1178,8 +1288,9 @@
       "slovakia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(SK(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){13}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_si",
@@ -1189,8 +1300,9 @@
       "slovenia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(SI(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){8}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_es",
@@ -1200,8 +1312,9 @@
       "spain"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(ES(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){13}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_se",
@@ -1211,8 +1324,9 @@
       "sweden"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(SE(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){13}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_ch",
@@ -1222,8 +1336,9 @@
       "switzerland"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(CH(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){10}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_tl",
@@ -1234,8 +1349,9 @@
       "leste"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(TL(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){12}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_tn",
@@ -1245,8 +1361,9 @@
       "tunisia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(TN(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){13}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_ae",
@@ -1257,8 +1374,9 @@
       "arab"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(AE(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){12}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_gb",
@@ -1269,8 +1387,9 @@
       "kingdom"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(GB(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){11}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_va",
@@ -1280,8 +1399,9 @@
       "holy"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(VA(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){11}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_vg",
@@ -1292,8 +1412,9 @@
       "islands"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(VG(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){13}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_ua",
@@ -1303,8 +1424,9 @@
       "ukraine"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(UA(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){18}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_sc",
@@ -1314,8 +1436,9 @@
       "seychelles"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(SC(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){20}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_iq",
@@ -1325,8 +1448,9 @@
       "iraq"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(IQ(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){12}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_by",
@@ -1336,8 +1460,9 @@
       "belarus"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(BY(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){17}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_sv",
@@ -1347,8 +1472,9 @@
       "salvador"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(SV(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){17}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_ly",
@@ -1358,8 +1484,9 @@
       "libya"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(LY(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){14}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_sd",
@@ -1369,8 +1496,9 @@
       "sudan"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(SD(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){7}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_bi",
@@ -1380,8 +1508,9 @@
       "burundi"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(BI(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){16}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_dj",
@@ -1391,8 +1520,9 @@
       "djibouti"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(DJ(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){16}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_ru",
@@ -1402,8 +1532,9 @@
       "russia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(RU(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){22}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "iban_so",
@@ -1413,8 +1544,9 @@
       "somalia"
     ],
     "regex": "(?:^|[^A-Za-z0-9-])(SO(?:[0-9][ -]?){2}(?:[0-9A-Z][ -]?){4}(?:[0-9][ -]?){12}(?:[0-9A-Z][ -]?){3})(?:$|[^A-Za-z0-9-])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "common_passwords_shortlist",
@@ -1425,7 +1557,7 @@
       "shortlist"
     ],
     "regex": "(?:(\\b|\\A)[a-zA-z][a-zA-Z0-9_-]+[A-Za-z][\\t ]*(={1,3}|:)[\\t ]*(b?[\"'])?)((?i)[!?%$@.*+_#-]*(1234?)?(p[@a][s5]{2}w[o0]rd|[a3@]dm[i1!]n|t[e3]mp(ora(ry|l))|[a4@]m[e3]r[i1!l]c[a4@]|[i1!]nd[i1!][a4@]|mumb[a4@][i1!]|123456(7|78|789|7890|78910)|((?-i)((abcd?e?f?|123|456|xyz|321|654|1?[qg]az|2?wsx|3?edc|4?rfv|5?tgb|6?yhn|za[qg]1?|xsw2?|cde3?|vfr4?|bgt5?|nhy6?|[qg]wer?|asdf?|zxcv?|1[qg]2w|3e4r|dog|ca[tr]|red|lol|azer?|qqq|www|zzz|xxx|yyy)[!?%$@.*+_#'-]?)+)|([qg][uw]|az)erty(uiop)?|m[o0]nk[e3][yi]|l[e3]tm[e3][i1!]n|dr[a4@]g[o0]n|0{6}|1{6}|2{6}|3{6}|4{6}|5{6}|6{6}|7{6}|8{6}|9{6}|b[a4@][s5$]k?[e3]t?b[a4@][l1!]{1,2}|[s5][o0]cc[e3@]r|[i1!]?l[o0]v[e3](y[o0]u|u|m[e3])?|tru[s5$]tn[o0](1|!|one)|[s5$]un[s5$]h[i1!]n[e3]|m[a4@][s5$]t[e3]r|w[e3][l1!]c[o0]m[e3]|[s5$]h[a4@]d[o0]w|[a4@][s5$]hl[e3]y|f[o0]{1,2}tb[a4@]l{1,2}|j[e3][s5$]u[s5$]|m[i1!]ch[a4@][e@]l|n[i1!]nj[a4@]|mu[s5$]t[a@]ng|chrys[l1!][e3@]r|t[o0]y[o0]t[a4@]|w[i1!]nt[e3]r|spr[i1!]ng|summ[e3]r|f[a4@]ll|[a4@]utumn)[!?%$@.*+_#-]*\\d*[!?%$]*)(?:\\z|[\\r\\n'\"])",
-    "risk": "high"
+    "severity": "high"
   },
   {
     "id": "hardcoded_database_passwords",
@@ -1436,8 +1568,9 @@
       "passwords"
     ],
     "regex": "(?:(?:[^0-9A-Za-z]|\\A)(?i)(?:postgres|mysql|mysql_root)_password[\\t ]*[=:][\\t ]*['\"]?)([^\\r\\n\\x00-\\x08]+)(?:\\z|[\\r\\n'\"])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "yaml_static_password_fields",
@@ -1448,8 +1581,9 @@
       "password"
     ],
     "regex": "(?:(?:\\n|\\A)[ \\t]*(?i)[a-z_-]*(?:secret|service_pass(wd|word|code|phrase)|pass(?:wd|word|code|phrase)?|key|token)[ \\t]*:[ \\t]*['\"]?)([^\\r\\n`'\"\\x00-\\x08]+)(?:['\"\\r\\n]|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "yaml_passwords_plain",
@@ -1460,8 +1594,9 @@
       "passwords"
     ],
     "regex": "(?:(?:\\n|\\A)[ \\t]*(?i)[a-z_-]*(?:secret|service_pass(wd|word|code|phrase)|pass(?:wd|word|code|phrase)?|key|token)[ \\t]*:[ \\t]*)([^\\r\\n`'\"\\x00-\\x08]+)(?:[\\r\\n]|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "yaml_passwords_single_quoted",
@@ -1472,8 +1607,9 @@
       "passwords"
     ],
     "regex": "(?:(?:\\n|\\A)[ \\t]*(?i)[a-z_-]*(?:secret|service_pass(wd|word|code|phrase)|pass(?:wd|word|code|phrase)?|key|token)[ \\t]*:[ \\t]*\")([^\\r\\n\"\\x00-\\x08]+)(?:\"([ \\t]*[\\r\\n]|\\z))",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "yaml_passwords_multiline",
@@ -1484,8 +1620,9 @@
       "passwords"
     ],
     "regex": "(?:(?:\\n|\\A)[ \\t]*(?i)[a-z_-]*(?:secret|service_pass(wd|word|code|phrase)|pass(?:wd|word|code|phrase)?|key|token)[ \\t]*:[ \\t]*[|>][+-]?[ \\t]*(\\n|\\r\\n)[ \\t]+)([^\\x00-\\x08]+?)(?:\\n\\n|\\r\\n\\r\\n|(\\n|\\r\\n)[ \\t]+\\S+:|(\\n|\\r\\n)\\.\\.\\.[ \\t\\n\\r]|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "github_actions_sha_checker",
@@ -1496,8 +1633,9 @@
       "checker"
     ],
     "regex": "(?:\\buses:[ \\t]{1,5})([a-z0-9_-]{1,39}\\/[a-z0-9_-]{1,100}@[a-z0-9._-]{1,39})(?:\\s|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "dotnet_configuration",
@@ -1507,8 +1645,9 @@
       "file"
     ],
     "regex": "(?:<add\\s+key=\"[^\"]*(?i)(password|secret|pass(?:wd|word|code|phrase)?|key|token)\"\\s+value=\")([^\"\\x00\\x08]+)(?:\\\")",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "env_passwords",
@@ -1519,8 +1658,9 @@
       "secrets"
     ],
     "regex": "(?:(?:\\n|\\A)((export|ENV|ARG) )?[A-Z_]*(?:SECRET|PASS(?:WD|WOR[TD]|CODE|PHRASE)?|KEY|TOKEN)=['\"]?)([^\\r\\n\\x00-\\x08'\"#]{8,})(?:[\\r\\n#]|['\"]\\s*[\\r\\n]|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "yaml_base64",
@@ -1531,8 +1671,9 @@
       "base64"
     ],
     "regex": "(?:(?:\\n|\\A)[ \\t]*(?i)[a-z_-]*(?:secret|service_pass(wd|word|code|phrase)|pass(?:wd|word|code|phrase)?|key|token)[ \\t]*:[ \\t]*(['\"]?|[|>]-?[ \\t]*\\n[ \\t]*))((([A-Za-z0-9+/]){4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==))(?:['\"\\r\\n]|\\z)",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "yaml_base64_uri",
@@ -1543,7 +1684,7 @@
       "safe"
     ],
     "regex": "(?:(?:\\n|\\A)[ \\t]*(?i)[a-z_-]*(?:secret|service_pass(wd|word|code|phrase)|pass(?:wd|word|code|phrase)?|key|token)[ \\t]*:[ \\t]*(['\"]?|[|>]-?[ \\t]*\\n[ \\t]*))((([A-Za-z0-9_-]){4})*([A-Za-z0-9_-]{4}|[A-Za-z0-9_-]{3}=|[A-Za-z0-9_-]{2}==))(?:['\"\\r\\n]|\\z)",
-    "risk": "high"
+    "severity": "high"
   },
   {
     "id": "json_base64",
@@ -1554,8 +1695,9 @@
       "base64"
     ],
     "regex": "(?:[{[,][ \\t]*[ \\t\\r\\n]*\"(?i)[a-z_.-]*(?:secret|service_pass(wd|word|code|phrase)|pass(?:wd|word|code|phrase)?|key|token)\"[ \\t]*:[ \\t]*\")((([A-Za-z0-9+/]){4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==))(?:\"[ \\t\\r\\n]*[,}\\]])",
-    "risk": "high",
-    "entropy": 3.5
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7
   },
   {
     "id": "json_base64_uri",
@@ -1566,6 +1708,6 @@
       "safe"
     ],
     "regex": "(?:[{[,][ \\t]*[ \\t\\r\\n]*\"(?i)[a-z_.-]*(?:secret|service_pass(wd|word|code|phrase)|pass(?:wd|word|code|phrase)?|key|token)\"[ \\t]*:[ \\t]*\")((([A-Za-z0-9_-]){4})*([A-Za-z0-9_-]{4}|[A-Za-z0-9_-]{3}=|[A-Za-z0-9_-]{2}==))(?:\"[ \\t\\r\\n]*[,}\\]])",
-    "risk": "high"
+    "severity": "high"
   }
 ]

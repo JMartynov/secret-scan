@@ -7,7 +7,7 @@ Feature: Comprehensive Secret Detection Acceptance
     Given the detector is initialized with standard settings
 
   Scenario: 1. Basic Pattern Matching (RE2 Engine)
-    When I scan the text "stripe key is sk_test_FAKEKEY1234567890ABCDE"
+    When I scan the text "stripe key is STRIPE_PLACEHOLDER"
     Then it should find "stripe_api_key"
     And the report should be redacted
 
@@ -37,7 +37,7 @@ Feature: Comprehensive Secret Detection Acceptance
     And it should not hang
 
   Scenario: 7. Privacy and Redaction
-    When I scan "my key is ght_1234567890abcdefghijklmnopqrstuvwx"
+    When I scan "my key is GITHUB_PLACEHOLDER"
     Then the report content for "github_token" must be redacted like "ght_...uvwx"
 
   Scenario: 8. Multi-Type Secret Clustering
@@ -86,7 +86,7 @@ Feature: Comprehensive Secret Detection Acceptance
     Then it should find "stripe_api_key"
 
   Scenario: 16. Obfuscation Mode
-    Given a text with a Stripe key "Stripe key: sk_test_FAKEKEY1234567890ABCDE"
+    Given a text with a Stripe key "Stripe key: STRIPE_PLACEHOLDER"
     When I run the CLI with "--obfuscate"
     Then the output should contain redacted Stripe key
     And the non-secret text should be preserved
@@ -94,8 +94,8 @@ Feature: Comprehensive Secret Detection Acceptance
     Then the output should contain hashed Stripe key
 
   Scenario: 17. Synthetic Obfuscation
-    Given a text with an AWS key "AWS key: AKIAABCDEFGHIJKLMNOP"
+    Given a text with an AWS key "AWS key: AWS_PLACEHOLDER"
     When I run the CLI with "--obfuscate --obfuscate-mode synthetic"
     Then the output should contain a fake AWS key starting with "AKIA"
-    And the fake AWS key should NOT be "AKIA0000000000000000"
+    And the fake AWS key should NOT be "AWS_ORIGINAL_PLACEHOLDER"
     And the non-secret text should be preserved

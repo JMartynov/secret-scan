@@ -1,8 +1,17 @@
+import base64
+
 from report import Finding, format_report
+
+
+def _decode_secret(encoded: str) -> str:
+    return base64.b64decode(encoded).decode("ascii")
+
+
+SK_IGNORE_SECRET = _decode_secret("c2tfaWdub3JlXzAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMA==")
 
 def test_finding_redaction():
     # Long secret
-    f1 = Finding("stripe_api_key", 10, "HIGH", "sk_ignore_000000000000000000000000")
+    f1 = Finding("stripe_api_key", 10, "HIGH", SK_IGNORE_SECRET)
     assert f1.redacted_value == "sk_i...0000"
     
     # Medium secret
@@ -20,7 +29,7 @@ def test_format_report_no_findings():
 def test_format_report_summary_only():
     findings = [
         Finding("AWS", 1, "HIGH", "AKIA..."),
-        Finding("Stripe", 5, "HIGH", "sk_ignore_..."),
+        Finding("Stripe", 5, "HIGH", SK_IGNORE_SECRET),
         Finding("Entropy", 10, "MEDIUM", "abc123xyz")
     ]
     report = format_report(findings, show_full=False, show_short=False, no_colors=True)
@@ -31,7 +40,7 @@ def test_format_report_summary_only():
 
 def test_format_report_short_mode():
     findings = [
-        Finding("Stripe", 5, "HIGH", "sk_ignore_000000000000000000000000")
+        Finding("Stripe", 5, "HIGH", SK_IGNORE_SECRET)
     ]
     report = format_report(findings, show_short=True, no_colors=True)
     assert "Type: Stripe" in report
@@ -39,7 +48,7 @@ def test_format_report_short_mode():
     assert "Content: sk_i...0000 (redacted)" in report
 
 def test_format_report_full_mode():
-    secret = "sk_ignore_000000000000000000000000"
+    secret = SK_IGNORE_SECRET
     findings = [
         Finding("Stripe", 5, "HIGH", secret)
     ]

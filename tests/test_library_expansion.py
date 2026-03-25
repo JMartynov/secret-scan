@@ -82,7 +82,7 @@ def test_synthetic_generation_taxonomy():
     assert aws_id.startswith("AKIA")
     
     github_token = obfuscator._generate_synthetic("api_keys", "github_token", 40)
-    assert github_token.startswith("ghp_")
+    assert github_token.startswith("ght_")
     
     slack_token = obfuscator._generate_synthetic("api_keys", "slack_token", 50)
     assert slack_token.startswith("xoxb-")

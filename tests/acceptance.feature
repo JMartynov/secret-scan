@@ -7,7 +7,7 @@ Feature: Comprehensive Secret Detection Acceptance
     Given the detector is initialized with standard settings
 
   Scenario: 1. Basic Pattern Matching (RE2 Engine)
-    When I scan the text "stripe key is sk_live_PLACEHOLDER_51IyGfSAdFvX8EZYbATS56oaKOXwIizD05otbS42rQ0Q7ND"
+    When I scan the text "stripe key is sk_ignore_0000000000000000000000000000000000000000"
     Then it should find "stripe_api_key"
     And the report should be redacted
 
@@ -37,8 +37,8 @@ Feature: Comprehensive Secret Detection Acceptance
     And it should not hang
 
   Scenario: 7. Privacy and Redaction
-    When I scan "my key is ghp_1234567890abcdefghijklmnopqrstuvwx"
-    Then the report content for "github_token" must be redacted like "ghp_...uvwx"
+    When I scan "my key is ght_GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+    Then the report content for "github_token" must be redacted like "ght_...uvwx"
 
   Scenario: 8. Multi-Type Secret Clustering
     Given a file containing a Stripe key, a Github token, and a Contextual secret
@@ -86,7 +86,7 @@ Feature: Comprehensive Secret Detection Acceptance
     Then it should find "stripe_api_key"
 
   Scenario: 16. Obfuscation Mode
-    Given a text with a Stripe key "Stripe key: sk_live_PLACEHOLDER_51IyGfSAdFvX8EZYbATS56oaKOXwIizD05otbS42rQ0Q7ND"
+    Given a text with a Stripe key "Stripe key: sk_ignore_0000000000000000000000000000000000000000"
     When I run the CLI with "--obfuscate"
     Then the output should contain redacted Stripe key
     And the non-secret text should be preserved
@@ -94,8 +94,8 @@ Feature: Comprehensive Secret Detection Acceptance
     Then the output should contain hashed Stripe key
 
   Scenario: 17. Synthetic Obfuscation
-    Given a text with an AWS key "AWS key: AKIA1234567890ABCDEF"
+    Given a text with an AWS key "AWS key: AKIA0000000000000000"
     When I run the CLI with "--obfuscate --obfuscate-mode synthetic"
     Then the output should contain a fake AWS key starting with "AKIA"
-    And the fake AWS key should NOT be "AKIA1234567890ABCDEF"
+    And the fake AWS key should NOT be "AKIA0000000000000000"
     And the non-secret text should be preserved

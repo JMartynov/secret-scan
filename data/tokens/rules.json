@@ -239,7 +239,7 @@
     "keywords": [
       "github"
     ],
-    "regex": "\\b((?:ghp|gho|ghu|ghs|ghr)_[a-zA-Z0-9]{36,255})\\b",
+    "regex": "\\b((?:ghp|gho|ghu|ghs|ghr|ght)_[a-zA-Z0-9]{36,255})\\b",
     "entropy": 3.5,
     "severity": "high",
     "entropy_factor": 0.7

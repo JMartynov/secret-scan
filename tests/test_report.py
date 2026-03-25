@@ -2,7 +2,7 @@ from report import Finding, format_report
 
 def test_finding_redaction():
     # Long secret
-    f1 = Finding("stripe_api_key", 10, "HIGH", "sk_live_abc123def456ghi789j012")
+    f1 = Finding("stripe_api_key", 10, "HIGH", "sk_ignore_000000000000000000000000")
     assert f1.redacted_value == "sk_l...j012"
     
     # Medium secret
@@ -20,7 +20,7 @@ def test_format_report_no_findings():
 def test_format_report_summary_only():
     findings = [
         Finding("AWS", 1, "HIGH", "AKIA..."),
-        Finding("Stripe", 5, "HIGH", "sk_live_..."),
+        Finding("Stripe", 5, "HIGH", "sk_ignore_..."),
         Finding("Entropy", 10, "MEDIUM", "abc123xyz")
     ]
     report = format_report(findings, show_full=False, show_short=False, no_colors=True)
@@ -31,7 +31,7 @@ def test_format_report_summary_only():
 
 def test_format_report_short_mode():
     findings = [
-        Finding("Stripe", 5, "HIGH", "sk_live_abc123def456ghi789j012")
+        Finding("Stripe", 5, "HIGH", "sk_ignore_000000000000000000000000")
     ]
     report = format_report(findings, show_short=True, no_colors=True)
     assert "Type: Stripe" in report
@@ -39,7 +39,7 @@ def test_format_report_short_mode():
     assert "Content: sk_l...j012 (redacted)" in report
 
 def test_format_report_full_mode():
-    secret = "sk_live_abc123def456ghi789j012"
+    secret = "sk_ignore_000000000000000000000000"
     findings = [
         Finding("Stripe", 5, "HIGH", secret)
     ]

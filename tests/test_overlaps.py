@@ -9,8 +9,8 @@ def test_overlap_resolution_entropy_vs_structured():
     detector = SecretDetector()
     
     # Simulate findings on the same range [10, 30]
-    f1 = Finding("High Entropy String", 1, "MEDIUM", "AKIA1234567890EXAMPLE", 0.4, 10, 30)
-    f2 = Finding("aws-access-key", 1, "HIGH", "AKIA1234567890EXAMPLE", 0.8, 10, 30)
+    f1 = Finding("High Entropy String", 1, "MEDIUM", "AKIA0000000000000000", 0.4, 10, 30)
+    f2 = Finding("aws-access-key", 1, "HIGH", "AKIA0000000000000000", 0.8, 10, 30)
     
     resolved = detector._resolve_overlaps([f1, f2])
     assert len(resolved) == 1

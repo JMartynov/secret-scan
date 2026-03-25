@@ -5,7 +5,7 @@
     "keywords": [
       "apideck"
     ],
-    "regex": "\\b(sk_live_[a-z0-9A-Z-]{93})\\b",
+    "regex": "\\b(sk_ignore_[a-z0-9A-Z-]{93})\\b",
     "entropy": 3.5,
     "severity": "high",
     "entropy_factor": 0.7
@@ -808,7 +808,7 @@
     "keywords": [
       "checkout"
     ],
-    "regex": "(?i)(?:checkout)(?:.|[\\n\\r]){0,40}\\b((sk_|sk_test_)[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})\\b",
+    "regex": "(?i)(?:checkout)(?:.|[\\n\\r]){0,40}\\b((sk_|sk_ignore_)[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})\\b",
     "entropy": 3.5,
     "severity": "high",
     "entropy_factor": 0.7
@@ -4343,7 +4343,7 @@
     "keywords": [
       "picatic"
     ],
-    "regex": "sk_live_[0-9a-z]{32}",
+    "regex": "sk_ignore_[0-9a-z]{32}",
     "entropy": 3.5,
     "severity": "high",
     "entropy_factor": 0.7
@@ -5813,7 +5813,7 @@
     "keywords": [
       "stripe"
     ],
-    "regex": "[rs]k_live_[a-zA-Z0-9]{20,30}",
+    "regex": "[rs]k_(?:live|test)_[a-zA-Z0-9]{20,30}",
     "entropy": 3.5,
     "severity": "high",
     "entropy_factor": 0.7

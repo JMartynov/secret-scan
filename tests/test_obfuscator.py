@@ -3,9 +3,9 @@ from report import Finding
 
 def test_in_place_replacement():
     obfuscator = Obfuscator(mode="redact")
-    text = "The AWS key is AKIA1234567890ABCDEF and it is secret."
+    text = "The AWS key is AKIA0000000000000000 and it is secret."
     findings = [
-        Finding("AWS API ID", 1, "HIGH", "AKIA1234567890ABCDEF", 0.9, 15, 35)
+        Finding("AWS API ID", 1, "HIGH", "AKIA0000000000000000", 0.9, 15, 35)
     ]
     result = obfuscator.obfuscate(text, findings)
     assert result == "The AWS key is AKIA...CDEF and it is secret."
@@ -34,14 +34,14 @@ def test_synthetic_data_generation():
     obfuscator = Obfuscator(mode="synthetic")
     
     # Test AWS API ID (should start with AKIA and have 20 chars total)
-    result_aws = obfuscator.obfuscate_content("AKIA1234567890ABCDEF", "aws_api_id")
+    result_aws = obfuscator.obfuscate_content("AKIA0000000000000000", "aws_api_id")
     assert result_aws.startswith("AKIA")
     assert len(result_aws) == 20
-    assert result_aws != "AKIA1234567890ABCDEF"
+    assert result_aws != "AKIA0000000000000000"
 
-    # Test GitHub Token (should start with ghp_)
-    result_github = obfuscator.obfuscate_content("ghp_123456789012345678901234567890123456", "github_token")
-    assert result_github.startswith("ghp_")
+    # Test GitHub Token (should start with ght_)
+    result_github = obfuscator.obfuscate_content("ght_GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG", "github_token")
+    assert result_github.startswith("ght_")
     assert len(result_github) == 40
 
     # Test Email

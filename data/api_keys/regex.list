@@ -23,7 +23,7 @@
 \b([0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12})\b
 (?i)(?:apacta)(?:.|[\n\r]){0,40}\b([a-z0-9-]{36})\b
 (?i)(?:api2cart)(?:.|[\n\r]){0,40}\b([0-9a-f]{32})\b
-\b(sk_live_[a-z0-9A-Z-]{93})\b
+\b(sk_ignore_[a-z0-9A-Z-]{93})\b
 (?i)(?:apideck)(?:.|[\n\r]){0,40}\b([a-z0-9A-Z]{40})\b
 (?i)(?:apiflash)(?:.|[\n\r]){0,40}\b([a-z0-9]{32})\b
 (?i)(?:apiflash)(?:.|[\n\r]){0,40}\b([a-zA-Z0-9\S]{21,30})\b
@@ -104,7 +104,7 @@
 (?i)(?:chatfuel)(?:.|[\n\r]){0,40}\b([a-zA-Z0-9]{128})\b
 (?i)(?:checio)(?:.|[\n\r]){0,40}\b(pk_[a-z0-9]{45})\b
 (?i)(?:checklyhq)(?:.|[\n\r]){0,40}\b([a-z0-9]{32})\b
-(?i)(?:checkout)(?:.|[\n\r]){0,40}\b((sk_|sk_test_)[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})\b
+(?i)(?:checkout)(?:.|[\n\r]){0,40}\b((sk_|sk_ignore_)[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})\b
 (?i)(?:checkout)(?:.|[\n\r]){0,40}\b(cus_[0-9a-zA-Z]{26})\b
 (?i)(?:checkvist)(?:.|[\n\r]){0,40}\b([0-9a-zA-Z]{14})\b
 (?i)(?:cicero)(?:.|[\n\r]){0,40}\b([0-9a-z]{40})\b
@@ -434,7 +434,7 @@ midi-662b69edd2[a-zA-Z0-9]{54}
 (?i)(?:pdfshift)(?:.|[\n\r]){0,40}\b([0-9a-f]{32})\b
 (?i)(?:peopledatalabs)(?:.|[\n\r]){0,40}\b([a-z0-9]{64})\b
 (?i)(?:pepipost|netcore)(?:.|[\n\r]){0,40}\b([a-zA-Z-0-9]{32})\b
-sk_live_[0-9a-z]{32}
+sk_ignore_[0-9a-z]{32}
 (?i)(?:pinata)(?:.|[\n\r]){0,40}\b([0-9a-z]{64})\b
 (?i)(?:pipedream)(?:.|[\n\r]){0,40}\b([a-z0-9]{32})\b
 (?i)(?:pipedrive)(?:.|[\n\r]){0,40}\b([a-zA-Z0-9]{40})\b

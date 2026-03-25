@@ -5,7 +5,7 @@ def test_dynamic_synthetic_mapping():
     obf = Obfuscator(mode="synthetic")
     
     # Test AWS ID
-    f_aws = Finding("aws-id", 1, "HIGH", "AKIA1234567890123456", 1.0, 0, 20, "cloud_credentials")
+    f_aws = Finding("aws-id", 1, "HIGH", "AKIA0000000000000000", 1.0, 0, 20, "cloud_credentials")
     res_aws = obf.obfuscate_content(f_aws.content, f_aws.secret_type, f_aws.category)
     assert res_aws.startswith("AKIA")
     assert res_aws != f_aws.content
@@ -23,15 +23,15 @@ def test_dynamic_synthetic_mapping():
 
 def test_obfuscate_with_categories():
     obf = Obfuscator(mode="synthetic")
-    text = "My AWS key is AKIA1234567890123456 and my email is test@example.com"
+    text = "My AWS key is AKIA0000000000000000 and my email is test@example.com"
     
     findings = [
-        Finding("aws-id", 1, "HIGH", "AKIA1234567890123456", 1.0, 14, 34, "cloud_credentials"),
+        Finding("aws-id", 1, "HIGH", "AKIA0000000000000000", 1.0, 14, 34, "cloud_credentials"),
         Finding("email", 1, "LOW", "test@example.com", 0.5, 51, 67, "authentication")
     ]
     
     result = obf.obfuscate(text, findings)
     assert "AKIA" in result
     assert "@" in result
-    assert "AKIA1234567890123456" not in result
+    assert "AKIA0000000000000000" not in result
     assert "test@example.com" not in result

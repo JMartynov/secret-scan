@@ -8,7 +8,7 @@ def test_in_place_replacement():
         Finding("AWS API ID", 1, "HIGH", "AKIA0000000000000000", 0.9, 15, 35)
     ]
     result = obfuscator.obfuscate(text, findings)
-    assert result == "The AWS key is AKIA...CDEF and it is secret."
+    assert result == "The AWS key is AKIA...0000 and it is secret."
 
 def test_overlapping_matches_handling():
     obfuscator = Obfuscator(mode="redact")

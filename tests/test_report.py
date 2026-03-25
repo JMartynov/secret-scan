@@ -3,7 +3,7 @@ from report import Finding, format_report
 def test_finding_redaction():
     # Long secret
     f1 = Finding("stripe_api_key", 10, "HIGH", "sk_ignore_000000000000000000000000")
-    assert f1.redacted_value == "sk_l...j012"
+    assert f1.redacted_value == "sk_i...0000"
     
     # Medium secret
     f2 = Finding("generic", 1, "LOW", "12345678")
@@ -36,7 +36,7 @@ def test_format_report_short_mode():
     report = format_report(findings, show_short=True, no_colors=True)
     assert "Type: Stripe" in report
     assert "Location: line 5" in report
-    assert "Content: sk_l...j012 (redacted)" in report
+    assert "Content: sk_i...0000 (redacted)" in report
 
 def test_format_report_full_mode():
     secret = "sk_ignore_000000000000000000000000"

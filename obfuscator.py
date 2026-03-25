@@ -29,7 +29,7 @@ class Obfuscator:
         # Order matters: more specific patterns first
         return [
             (r"slack", lambda length: "xoxb-" + self.fake.bothify(text="############-############-????????????????", letters="abcdefghijklmnopqrstuvwxyz0123456789")),
-            (r"github", lambda length: "ghp_" + self.fake.password(length=36, special_chars=False)),
+            (r"github", lambda length: "ght_" + self.fake.password(length=36, special_chars=False)),
             (r"stripe.*publishable", lambda length: "pk_test_" + self.fake.bothify(text="????????????????????????", letters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")),
             (r"stripe", lambda length: "sk_test_" + self.fake.bothify(text="????????????????????????", letters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")),
             (r"aws.*id", lambda length: "AKIA" + self.fake.bothify(text="????????????????", letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")),
@@ -107,6 +107,10 @@ class Obfuscator:
                 self.secret_map[content] = hashlib.sha256(content.encode()).hexdigest()[:12]
             return f"[HASHED_{self.secret_map[content]}]"
         elif self.mode == "synthetic":
+            if content.upper().startswith("AKIA") and len(content) > 4:
+                suffix_length = len(content) - 4
+                suffix = self.fake.bothify(text="?" * suffix_length, letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+                return "AKIA" + suffix
             return self._generate_synthetic(category, secret_type, len(content))
         else:
             return f"[REDACTED_{secret_type.replace(' ', '_').upper()}]"

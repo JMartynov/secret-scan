@@ -1,7 +1,7 @@
 # Release Notes — Extended Infrastructure Mode
 
 **Date:** 2026-03-26  
-**Branch:** `feature/extended_infrastructure_mode`
+**Version:** v2.0.0
 
 ## Summary
 

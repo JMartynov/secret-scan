@@ -46,6 +46,10 @@ The pattern library is the heart of the detector—every new rule flows through 
     * new CLI options like `--force-scan-all` and `--obfuscate-mode synthetic`.
     * new coverage areas (infrastructure, PII, dedup/resolution).
     * tooling notes for `tools/deduplicate_rules.py`, `tools/generate_test_data.py`, etc.
+4.  For manual verification, use:
+    ```bash
+    python3 cli.py --force-scan-all <target_path>
+    ```
 
 ## 6. Final Checks
 

@@ -1,11 +1,12 @@
+import base64
 import io
 
 from detector import SecretDetector
 
 
 def _build_stripe_secret() -> str:
-    codes = [115, 107, 95, 116, 101, 115, 116, 95, 70, 65, 75, 69, 75, 69, 89, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 65, 66, 67, 68, 69]
-    return "".join(chr(c) for c in codes)
+    encoded = "c2tfdGVzdF9GQUtFS0VZMTIzNDU2Nzg5MEFCQ0RF"
+    return base64.b64decode(encoded).decode()
 
 
 STRIPE_SECRET = _build_stripe_secret()

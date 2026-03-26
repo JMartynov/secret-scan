@@ -343,7 +343,12 @@ class SecretDetector:
                 # Heuristic 2: Penalize "generic", "common", or "Contextual" rules over specific ones
                 is_curr_generic = any(x in current.secret_type.lower() for x in ["generic", "common", "contextual"])
                 is_next_generic = any(x in next_f.secret_type.lower() for x in ["generic", "common", "contextual"])
-                
+
+                # Prefer explicit secrets when overlapping with generic heuristics
+                if is_curr_generic and not is_next_generic:
+                    current = next_f
+                    continue
+
                 if is_curr_generic and not is_next_generic:
                     next_weight *= 2.0
                 elif not is_curr_generic and is_next_generic:

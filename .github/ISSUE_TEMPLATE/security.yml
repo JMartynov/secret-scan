@@ -1,0 +1,13 @@
+name: Security Issue
+description: Report vulnerability
+title: "[SECURITY] "
+labels: ["security"]
+
+body:
+  - type: textarea
+    attributes:
+      label: Vulnerability description
+
+  - type: textarea
+    attributes:
+      label: Impact

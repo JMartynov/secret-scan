@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+
+      - name: Setup Python
+        uses: actions/setup-python@c9f0c7e3c1c5a9d5f9c8a1b5b6a4e9f5a2c7b8c1
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest
+
+      - name: Lint regex
+        run: python tools/regex_lint.py
+
+      - name: Safe regex
+        run: python tools/run_safe_regex.py
+
+      - name: ReDoS protection
+        run: python tools/run_redoctor.py

@@ -8,3 +8,4 @@ regexploit
 redoctor
 Faker
 PyYAML
+pytest-bdd

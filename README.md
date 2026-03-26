@@ -187,12 +187,34 @@ The **LLM Secrets Leak Detector** provides a comprehensive suite of features des
 | | **ReDoS Protection** | ✅ | `SIGALRM` timeouts (1s) for non-RE2 regex execution. |
 | | **Input Truncation** | ✅ | Blocks capped at 100,000 characters to prevent memory exhaustion. |
 | | **Deduplication** | ✅ | Merges overlapping findings.<br>Prioritizes longest matches. |
+| | **Force All Scan** | ✅ | `--force-scan-all` bypasses keyword filters so every line is scored. |
 | **Reporting & UI** | **Colorized Output** | ✅ | ANSI colors for risk levels (Red=High, Yellow=Medium, Blue=Low). |
 | | **Report Formats** | ✅ | `Summary` (counts only).<br>`Short` (redacted).<br>`Full` (raw secrets). |
 | | **CI/CD Friendly** | ✅ | `--nocolors` flag.<br>Standard exit codes for automation. |
-| **Testing & Dev** | **BDD Acceptance** | ✅ | 17 scenarios in `acceptance.feature` using `pytest-bdd`. |
+| **Testing & Dev** | **BDD Acceptance** | ✅ | 18 scenarios in `acceptance.feature` (including the keywordless force-scan mode) using `pytest-bdd`. |
 | | **Unit Testing** | ✅ | Comprehensive suite for core logic (detector, obfuscator, cli). |
 | | **Synthetic Corpus** | ✅ | `generate_test_data.py` creates a balanced test set from rules. |
+| | **Rule Deduplication** | ✅ | `tools/deduplicate_rules.py` keeps the catalog clean before release. |
+
+## Extended Infrastructure Mode
+
+The latest feature expansion brings the infrastructure-focused taxonomy front and center:
+
+* `data/infrastructure` now houses rules for credit cards, IBANs/SEPA references, national ID numbers, and other high-risk identifiers.
+* Entropy-aware scoring plus overlap resolution lets structured infrastructure matches win over generic keywords or high-entropy heuristics.
+* The CLI `--force-scan-all` option ensures legacy logs that omit keywords still get evaluated (see the new acceptance scenario for this mode).
+* Dedicated tests cover deduped rules, synthetic obfuscation, and the expanded dataset to ensure the library stays precise.
+
+## Development Utilities
+
+Keep the catalog healthy with the accompanying tools:
+
+* `tools/migrate_patterns.py` normalizes schema fields, adds entropy defaults, and maps external categories to the in-tree taxonomy.
+* `tools/generate_test_data.py` rebuilds the base64-encoded `data/*/test_data.json` files from regexes so every rule ships with reproducible samples.
+* `tools/deduplicate_rules.py` merges duplicate patterns across categories before rules ship.
+* Use `tools/regex_lint.py`, `tools/run_safe_regex.py`, and `tools/run_redoctor.py` to guard against ReDoS, syntax drift, and schema regressions.
+
+Run `pytest tests/test_acceptance.py::test_force_scan_keywordless` before releasing to exercise the keywordless mode.
 
 ---
 

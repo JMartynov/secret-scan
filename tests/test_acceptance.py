@@ -83,6 +83,9 @@ def test_obfuscation_mode(): pass
 @scenario('acceptance.feature', '17. Synthetic Obfuscation')
 def test_synthetic_obfuscation(): pass
 
+@scenario('acceptance.feature', '18. Force-scan Keywordless Detection')
+def test_force_scan_keywordless(): pass
+
 
 # --- Steps ---
 
@@ -128,6 +131,14 @@ def scan_text_alt(detector, ctx, text):
         text = "Github " + text
     ctx["text"] = text
     ctx["findings"] = detector.scan(text)
+    ctx["report"] = detector.format_report(ctx["findings"], show_short=True)
+
+@when(parsers.parse('I force-scan the string "{text}" without keywords'))
+def force_scan_without_keywords(detector, ctx, text):
+    if STRIPE_PLACEHOLDER in text:
+        text = text.replace(STRIPE_PLACEHOLDER, O_STRIPE)
+    ctx["text"] = text
+    ctx["findings"] = detector.scan(text, force_scan_all=True)
     ctx["report"] = detector.format_report(ctx["findings"], show_short=True)
 
 @when(parsers.parse('I scan a standalone hash "{hash_val}"'))

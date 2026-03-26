@@ -107,6 +107,20 @@ echo ">>> cat combined_small.txt | ./run.sh --obfuscate --obfuscate-mode hash"
 cat "$COMBINED" | ./run.sh --obfuscate --obfuscate-mode hash
 echo "----------------------------------------------------"
 
+FORCE_STRIPE_SECRET=$(python3 - <<'PY'
+import json, base64
+with open('data/private_keys/test_data.json') as f:
+    data = json.load(f)
+entry = data['stripe_api_key']['positives'][0]
+print(base64.b64decode(entry).decode('utf-8', errors='ignore'))
+PY
+)
+
+echo -e "\n--- Part 9: Force-scan Keywordless Input ---"
+echo ">>> echo \"$FORCE_STRIPE_SECRET\" | ./run.sh --force-scan-all"
+printf "%s\n" "$FORCE_STRIPE_SECRET" | ./run.sh --force-scan-all
+echo "----------------------------------------------------"
+
 # 4. Cleanup
 rm -rf "$DEMO_DIR"
 echo -e "\n--- Demo Complete ---"

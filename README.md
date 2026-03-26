@@ -369,7 +369,11 @@ pip install -r requirements.txt
 
 Or scan text directly:
 ```bash
+# Standard scan
 python3 cli.py --text "My API key is AIzaSy-12345"
+
+# Force scan all lines (bypasses keyword filters)
+python3 cli.py --force-scan-all .
 ```
 
 ### Data Obfuscation & Masking

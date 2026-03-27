@@ -66,3 +66,21 @@ Noise"""
     stripe_finding = next((f for f in findings if "stripe" in f.secret_type.lower()), None)
     assert stripe_finding is not None
     assert stripe_finding.location == 3
+
+def test_binary_data_scan_robustness():
+    detector = SecretDetector(force_scan_all=True)
+    # Simulate binary data read with surrogateescape
+    binary_data_with_secret = b"\x80\x81\x82 " + STRIPE_SECRET.encode("utf-8") + b" \x83\x84\x85"
+    text = binary_data_with_secret.decode("utf-8", "surrogateescape")
+    
+    # This should not raise UnicodeEncodeError even with re2
+    findings = detector.scan(text)
+    
+    # Debug: print findings
+    for f in findings:
+        print(f"Found: {f.secret_type} with confidence {f.confidence} at {f.location}")
+
+    # Should find the secret despite binary noise
+    stripe_finding = next((f for f in findings if "stripe" in f.secret_type.lower()), None)
+    assert stripe_finding is not None
+    assert STRIPE_SECRET in stripe_finding.content

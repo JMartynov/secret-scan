@@ -223,6 +223,16 @@ class SecretDetector:
         if not text:
             return []
 
+        # Sanitize text to handle surrogate escapes (common in binary data or malformed UTF-8)
+        # re2 (google-re2) fails if the string contains surrogates that cannot be encoded as UTF-8.
+        try:
+            # We encode to utf-8 with 'replace' to get rid of surrogates and then decode back.
+            # This ensures 'text' is a valid UTF-8 string that re2 can handle.
+            text = text.encode('utf-8', errors='replace').decode('utf-8')
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            # Extremely rare fallback
+            pass
+
         # Line number tracking within the block for efficient mapping
         line_offsets = [0]
         for match in standard_re.finditer(r"\n", text):

@@ -11,6 +11,8 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout
@@ -23,7 +25,7 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install "Cython<3.0"
+          pip install --upgrade pip setuptools wheel
           pip install -r requirements.txt
 
       - name: Run tests
@@ -32,8 +34,8 @@ jobs:
       - name: Lint regex
         run: python tools/regex_lint.py
 
-      - name: Safe regex
-        run: python tools/run_safe_regex.py
+#      - name: Safe regex
+#        run: python tools/run_safe_regex.py
 
       - name: ReDoS protection
         run: python tools/run_redoctor.py

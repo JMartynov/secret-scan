@@ -9,3 +9,4 @@ faker
 exrex
 pydantic<2.0
 pyyaml==6.0.1
+ruamel.yaml

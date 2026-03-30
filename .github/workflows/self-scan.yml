@@ -11,8 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
       - name: Install deps
-        run: pip install -r requirements.txt
+        run: |
+          pip install "Cython<3.0"
+          pip install -r requirements.txt
 
       - name: Run detector
         run: find . -type f -print0 | xargs -0 -I {} sh -c 'cat "{}" | python cli.py --force-scan-all -'

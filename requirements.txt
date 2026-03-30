@@ -9,4 +9,4 @@ faker
 exrex
 pydantic<2.0
 ruamel.yaml
-safe-regex
+

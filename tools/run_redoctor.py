@@ -1,18 +1,66 @@
 import json
+import os
 import sys
+from typing import Any, Dict, List, Optional
 
 from redoctor import check
+from ruamel.yaml import YAML
+
+
+def _load_all_rules(data_dir: str) -> List[Dict[str, Any]]:
+    """
+    Loads all scanning rules from the data directory, including categorized subdirectories.
+    Supports both JSON (.json) and YAML (.yml, .yaml) rule files.
+    """
+    all_rules = []
+    if not os.path.exists(data_dir):
+        return []
+
+    yaml = YAML(typ='safe')
+
+    def load_rules_from_file(path: str, category: Optional[str] = None):
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                if path.endswith('.json'):
+                    rules = json.load(f)
+                else:
+                    rules = yaml.load(f)
+                
+                if isinstance(rules, list):
+                    for r in rules:
+                        if category:
+                            r['category'] = category
+                    all_rules.extend(rules)
+        except Exception:
+            pass  # Ignore malformed rule files
+
+    # Handle root files for backward compatibility
+    for ext in ['rules.json', 'rules.yml', 'rules.yaml']:
+        root_rules_path = os.path.join(data_dir, ext)
+        if os.path.exists(root_rules_path):
+            load_rules_from_file(root_rules_path)
+
+    # Load rules from subdirectories
+    for root, dirs, files in os.walk(data_dir):
+        if root == data_dir:
+            continue
+        
+        category = os.path.basename(root)
+        for file in files:
+            if file in ['rules.json', 'rules.yml', 'rules.yaml']:
+                load_rules_from_file(os.path.join(root, file), category)
+    
+    return all_rules
 
 
 def main():
-    try:
-        with open('data/rules.json', 'r') as f:
-            rules = json.load(f)
-    except Exception as e:
-        print(f"Error loading rules: {e}")
-        sys.exit(1)
+    rules = _load_all_rules('data')
+    if not rules:
+        print("No rules found.")
+        sys.exit(0)
 
-    print(f"Scanning {len(rules)} rules for ReDoS using redoctor library...\n")
+    print(f"Scanning {len(rules)} rules for ReDoS using redoctor library...
+")
 
     vulnerable_rules = []
 

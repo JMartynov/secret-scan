@@ -19,9 +19,10 @@ def get_all_test_data():
                         all_tests.append((rule_id, cat, neg, False))
     return all_tests
 
+detector = SecretDetector(data_dir='data', force_scan_all=True)
+
 @pytest.mark.parametrize("rule_id, category, b64_data, should_match", get_all_test_data())
 def test_rule_detection(rule_id, category, b64_data, should_match):
-    detector = SecretDetector(data_dir='data', force_scan_all=True)
     text = base64.b64decode(b64_data).decode('utf-8', errors='ignore')
     
     findings = detector.scan(text)

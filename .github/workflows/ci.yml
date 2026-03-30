@@ -34,8 +34,8 @@ jobs:
       - name: Lint regex
         run: python tools/regex_lint.py
 
-#      - name: Safe regex
-#        run: python tools/run_safe_regex.py
+      - name: Safe regex
+        run: python tools/run_safe_regex.py
 
       - name: ReDoS protection
         run: python tools/run_redoctor.py

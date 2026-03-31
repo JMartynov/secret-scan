@@ -14,16 +14,23 @@ This file gives AI coding agents the context they need to work safely and effect
 - **Privacy by Design**: All processing is local. Obfuscation (Redact, Hash, Synthetic) allows safe data sharing.
 - **Streaming Support**: Optimized for line-by-line processing of large logs and real-time streams.
 
-## 🛡️ Code Health & Safeguards (Mandatory)
-- **ReDoS Protection**: Any new regex MUST be validated with `tools/run_redoctor.py` and `tools/run_safe_regex.py`.
-- **Schema Validation**: Run `tools/regex_lint.py` to ensure rules in `data/` match the required schema.
-- **Deduplication**: Run `tools/deduplicate_rules.py` before adding many new patterns to avoid redundancy.
-- **Code Health**: If CodeScene is configured, target a Code Health score of 10.0 and run safeguards before proposing commits.
+## 🛡️ Mandatory Workflows & Mandates
 
-## 🛠️ Expert Best Practices
+### 🌐 Global Obligatory Steps (Every Task)
+Before concluding any task, you MUST:
+0.  **Linting**: Run `python tools/regex_lint.py` (for rules) and any available Python linters (e.g., `ruff`, `flake8`) to ensure code quality.
+1.  **Agentic Review**: Perform a self-review of your changes using `git diff main`. Analyze the architecture, logic, and style. Fix any issues identified during this review before proceeding.
+2.  **Add pytest tests and acceptance** if feature/fix implemented
+3.  **Test Validation**: Run `pytest` and ensure ALL tests pass. Never suggest a change that breaks the existing suite.
+4.  **Documentation**: Update `README.md`, `RELEASE_NOTES.md`, and `INSTRUCTIONS.md` to reflect changes in features, rules, or workflows.
+5.  **Demo Verification**: Run `./demo.sh` to ensure the end-to-end user experience (streaming, obfuscation, etc.) is still functional and reflects your changes if appropriate.
+
+### 1. Adding New Scanning Rules
+... (rest of the sections)
 - **Regex Patterns**: Use non-capturing groups where possible. Avoid backreferences (not supported by RE2).
 - **Keyword Filtering**: Every rule should have relevant keywords to benefit from the Aho-Corasick optimization.
 - **Obfuscation**: Use `obfuscator.py` for all masking logic. Synthetic mode uses the `Faker` library.
+- **Do not publish secrets** use obfuscated keys in test and in code, otherwise git blocks commit
 - **Entropy**: Entropy thresholds should be balanced using `tools/migrate_entropy_factor.py`.
 
 ## 🧪 Testing Guidelines

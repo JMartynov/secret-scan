@@ -59,8 +59,7 @@ def main():
         print("No rules found.")
         sys.exit(0)
 
-    print(f"Scanning {len(rules)} rules for ReDoS using redoctor library...
-")
+    print(f"Scanning {len(rules)} rules for ReDoS using redoctor library...")
 
     vulnerable_rules = []
 

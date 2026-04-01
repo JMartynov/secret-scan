@@ -1,75 +1,46 @@
-# PLAN: Advanced Risk Scoring System
+# Task: Advanced Risk Scoring System
 
-## 1. Objective
-Move from categorical risk levels (HIGH/MEDIUM) to a weighted heuristic score (0-100) for more nuanced security reporting.
+## 1. Objective & Context
+*   **Goal**: Replace categorical risk levels (HIGH/MEDIUM/LOW) with a weighted heuristic score (0-100).
+*   **Rationale**: Provides more granular control for security teams and reduces alert fatigue by ranking findings by "likeliness".
+*   **Files Affected**:
+    *   `report.py`: Update `Finding` dataclass to include `score`.
+    *   `detector.py`: Update `DetectionEngine.calculate_confidence` and `SecretDetector._resolve_overlaps`.
+    *   `cli.py`: Add `--min-score` flag.
 
-## 2. Analogs & Research
-- **GitGuardian**: Uses a proprietary scoring engine based on proximity and secret validity.
-- **Bayesian Filtering**: Common in spam detection, can be adapted for "secret-likeliness".
+## 2. Research & Strategy
+*   **Formula**: `Score = (Base_Weight * Confidence) + Context_Bonus + Entropy_Adjustment - FP_Penalty`.
+*   **Weights**: Tier 1 (Structured): 70; Tier 2 (Infrastructure): 40; Context: +20; High Entropy (>4.5): +15; Verified: +30; Test Marker: -50.
+*   **Engine Choice**: Heuristic scoring engine implemented in Python.
 
-## 3. Implementation Details
+## 3. Implementation Checklist
+- [ ] **Finding Dataclass**: Add `score: float` to `Finding` and update `redacted_value` logic if needed.
+- [ ] **Scoring Logic**: Implement the new weighted formula in `DetectionEngine.calculate_confidence`.
+- [ ] **Proximity Decay**: Add a decay function so context bonuses decrease as distance from the secret increases.
+- [ ] **CLI Filter**: Update `cli.py` to support `--min-score` (default 0).
+- [ ] **Report Formatting**: Update `format_report` to display the numeric score alongside the risk level.
 
-### 3.1 Scoring Formula
-`Score = (Base_Regex_Weight * Confidence) + Context_Bonus + Entropy_Adjustment - False_Positive_Penalty`
+## 4. Testing & Verification (Mandatory)
+### 4.1 Unit Testing
+- [ ] `test_scoring_formula`: Assert score matches expected values for various combinations of signals.
+- [ ] `test_proximity_decay`: Verify context bonus drops as distance increases.
+- [ ] `test_score_clamping`: Ensure scores never exceed 100 or drop below 0.
 
-| Component | Weight/Value | Description |
-| :--- | :--- | :--- |
-| **Tier 1 Match** | 70 | High-confidence structured pattern. |
-| **Tier 2 Match** | 40 | Infrastructure/DB pattern. |
-| **Context Bonus** | +20 | Keyword found within 50 characters. |
-| **High Entropy** | +15 | Shannon Entropy > 4.5. |
-| **Verified Valid** | +30 | If validation layer confirms the secret is live. |
-| **Test Data Marker** | -50 | Pattern matches known test formats (e.g., `EXAMPLE_KEY`). |
+### 4.2 Acceptance Testing (BDD)
+- [ ] **Scenario**: Score-Based Filtering using `--min-score 70`.
+- [ ] **Scenario**: Multi-Signal Boosting (Structured + Context + Entropy > 90).
+- [ ] **Scenario**: Test Data Penalty (Lowering score for "EXAMPLE_KEY").
 
-### 3.2 Thresholds
-- **90+ (CRITICAL)**: Verified valid or extremely high-confidence structured secret.
-- **70-89 (HIGH)**: Clear structured match or infrastructure match with context.
-- **40-69 (MEDIUM)**: High entropy string with weak context.
-- **<40 (LOW)**: Possible PII or generic random string.
+### 4.3 Test Data Obfuscation
+- [ ] Ensure `data/rules.json` has updated `base_weight` or similar metadata if required.
+- [ ] Verify `test_data.json` outputs include the new scores.
 
-### 3.3 Implementation Task
-- Modify `Finding` dataclass to include a `score: float` field.
-- Update `detector.py` to calculate this score during the `_scan_block` phase.
-- Update `report.py` to allow filtering by score (e.g., `--min-score 70`).
+## 5. Demo & Documentation
+- [ ] **`demo.sh`**: Add "Risk Scoring" section showing how low-score noise is filtered.
+- [ ] **`README.md`**: Document the scoring formula and the `--min-score` flag.
+- [ ] **CLI Help**: Update `--threshold` help text to clarify its relationship with entropy vs. the new risk score.
 
-## 4. Best Practices
-- **Proximity Weighting**: Use a decay function for context. A keyword right next to the secret is worth more than one 10 lines away.
-- **Multi-Factor Verification**: If a string matches a regex AND has high entropy AND has context, the score should exceed 100 but be capped.
-
----
-
-## 5. Testing Strategy
-
-### 5.1 Unit Tests (`pytest`)
-- **`test_scoring_weights`**: Verify that `Finding.score` accurately reflects the formula with mocked inputs.
-- **`test_context_decay`**: Assert that context bonus decreases as distance between secret and keyword increases.
-- **`test_score_capping`**: Ensure that no `Finding.score` exceeds 100, even with multiple bonuses.
-- **`test_negative_scoring`**: Verify that "Test Data Markers" correctly penalize/lower the score.
-
-### 5.2 Acceptance Tests (BDD)
-- **Scenario: Score-Based Filtering**
-  - Given the detector has found 5 findings with scores [20, 50, 65, 80, 95]
-  - When I run the report with `--min-score 70`
-  - Then only 2 findings should be visible in the output
-- **Scenario: Proximity Bonus Impact**
-  - Given a text "password is: abc123random" (High Proximity)
-  - And a text "The system has a password. Somewhere below it uses: abc123random" (Low Proximity)
-  - When I scan both
-  - Then the score for the first should be significantly higher than the second
-- **Scenario: Multi-Signal Boosting**
-  - When I scan "My AWS key: AKIA..." (Structured + Context + High Entropy)
-  - Then the finding should have a score > 90
-
----
-
-## 6. Demo Update
-Update `demo.sh` to include a section for "Advanced Risk Scoring":
-- Display the new numeric scores in the `--short` and `--full` report sections.
-- Demonstrate how `--min-score` filters out low-confidence noise.
-
----
-
-## 7. Documentation Update
-Update `README.md`:
-- Update the "Reporting System" section to explain the new numeric risk scoring (0-100).
-- Document the `--min-score` flag and how users can tune sensitivity.
+## 6. Engineering Standards
+*   **Tone**: Senior Engineer, direct.
+*   **Perf**: Maintain throughput by caching context analysis results during scoring.
+*   **Security**: Never expose the raw secret in the scoring logs.

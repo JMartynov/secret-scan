@@ -1,74 +1,46 @@
-# PLAN: Secret Validation Layer
+# Task: Secret Validation Layer
 
-## 1. Objective
-Add an optional verification step to check if detected secrets are active, significantly reducing false positive noise for security teams.
+## 1. Objective & Context
+*   **Goal**: Implement an optional verification step to check if detected secrets are live/active via external APIs.
+*   **Rationale**: Eliminates false positives by confirming if a match is a real, functional credential.
+*   **Files Affected**:
+    *   `app/services/validation_manager.py`: New service to orchestrate checks.
+    *   `app/validators/`: New directory for provider-specific logic (github, aws, stripe).
+    *   `detector.py`: Hook into `SecretDetector` to trigger validation.
+    *   `cli.py`: Add `--verify` flag.
 
-## 2. Analogs & Research
-- **TruffleHog (Verified)**: The gold standard for validation.
-- **Gitleaks**: Added verification in recent versions via `--verify`.
+## 2. Research & Strategy
+*   **Mechanism**: Async HTTP calls to provider endpoints (e.g., GitHub `/user`, AWS `sts:GetCallerIdentity`).
+*   **Security**: No-persistence policy for validated secrets; use hashing for caching.
+*   **Engine Choice**: I/O-bound validation runs in a separate thread/process pool.
 
-## 3. Implementation Details
+## 3. Implementation Checklist
+- [ ] **Validator Base**: Create `validators/base.py` with the standard interface.
+- [ ] **Provider Logic**: Implement initial validators for GitHub, AWS, and Stripe.
+- [ ] **Validation Manager**: Implement `ValidationManager` with timeouts, backoff, and caching (hashed secrets).
+- [ ] **Detector Hook**: Modify `SecretDetector` to pass high-confidence findings to the manager if `--verify` is set.
+- [ ] **Status Reporting**: Update `report.py` to include a `VERIFIED` status in the output.
 
-### 3.1 Architecture
-- `validators/` directory containing modules for major providers:
-    - `github.py`: Calls `/user` with the token.
-    - `aws.py`: Calls `sts.get_caller_identity`.
-    - `stripe.py`: Calls `/v1/account`.
-- `ValidationManager`: Orchestrates calls, handles timeouts, and implements backoff.
+## 4. Testing & Verification (Mandatory)
+### 4.1 Unit Testing
+- [ ] `test_validator_mocks`: Use `responses` to simulate API success/failure (401, 403, 429).
+- [ ] `test_validation_cache`: Assert that identical secrets are only checked once per session.
+- [ ] `test_validation_timeout`: Ensure slow APIs don't hang the scanner.
 
-### 3.2 Security Requirements
-- **No Persistence**: Never store the secrets being verified.
-- **Proxy Support**: Allow routing validation calls through a proxy for corporate environments.
-- **User-Agent**: Use a custom User-Agent identifying the tool.
-- **Minimal Scope**: Only request the most basic identity info to avoid triggering security alerts on the target account.
+### 4.2 Acceptance Testing (BDD)
+- [ ] **Scenario**: Successful Secret Verification (Marked as VERIFIED, Score boosted to 100).
+- [ ] **Scenario**: Invalid Secret Reporting (No verification tag).
+- [ ] **Scenario**: Rate Limit Handling (Graceful degradation).
 
-### 3.3 Workflow
-1. Detector finds a match.
-2. If `Finding.score > 60` and `--verify` is set:
-    3. Pass to `ValidationManager`.
-    4. Update `Finding.is_verified = True` if successful.
-    5. Boost `Finding.score` to 100.
+### 4.3 Test Data Obfuscation
+- [ ] **CRITICAL**: Never use real secrets for testing. Use mocked API responses and synthetic data.
 
-## 4. Best Practices
-- **Rate Limiting**: Strictly respect provider rate limits to avoid getting the scanning IP blocked.
-- **Caching**: Cache validation results (hashed) for the duration of the scan to avoid redundant network calls for duplicate secrets.
-- **Parallelism**: Run validation calls in a thread pool as they are I/O bound.
+## 5. Demo & Documentation
+- [ ] **`demo.sh`**: Add a "Verified Secrets" part using a mock-verify mode.
+- [ ] **`README.md`**: Document supported providers and security implications of `--verify`.
+- [ ] **CLI Help**: Highlight that `--verify` requires network access.
 
----
-
-## 5. Testing Strategy
-
-### 5.1 Unit Tests (`pytest`)
-- **`test_validator_mock_api`**: Use `responses` or `unittest.mock` to simulate successful and failed (401, 403, 429) API calls for each provider.
-- **`test_validation_manager_timeout`**: Ensure the manager correctly skips validation if the API doesn't respond within the configured timeout.
-- **`test_backoff_logic`**: Verify that the manager waits between retries for 429 errors.
-- **`test_validation_caching`**: Assert that `ValidationManager` only calls the external API once for identical secrets within a session.
-
-### 5.2 Acceptance Tests (BDD)
-- **Scenario: Successful Verification Reporting**
-  - Given a real GitHub token is detected (mocked API returns 200)
-  - When I run the scan with `--verify`
-  - Then the finding should be marked as "VERIFIED" and have a score of 100
-- **Scenario: Invalid Secret Reporting**
-  - Given an invalid Stripe key is detected (mocked API returns 401)
-  - When I run the scan with `--verify`
-  - Then the finding should NOT be marked as "VERIFIED"
-- **Scenario: Handling Rate Limits**
-  - Given the provider returns a "429 Too Many Requests"
-  - When I run the scan
-  - Then the tool should gracefully report the finding without verification status and continue.
-
----
-
-## 6. Demo Update
-Update `demo.sh` to include a section for "Secret Verification":
-- Show how a verified secret is highlighted in the report.
-- Use a mock verification mode to demonstrate the difference between a "Detected" and "Verified" secret.
-
----
-
-## 7. Documentation Update
-Update `README.md`:
-- Add a section on "Secret Verification".
-- Document the `--verify` flag and list supported providers (AWS, GitHub, Stripe).
-- Include safety warnings about using verification in CI/CD environments.
+## 6. Engineering Standards
+*   **Tone**: Senior Engineer, safety-conscious.
+*   **Perf**: Validation is slow; ensure it doesn't block the main scanning loop.
+*   **Security**: Strictly adhere to the "no persistence" rule for sensitive data during validation.

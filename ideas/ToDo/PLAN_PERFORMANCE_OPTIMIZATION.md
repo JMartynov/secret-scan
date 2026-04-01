@@ -1,65 +1,46 @@
-# PLAN: Performance & Scalability Optimization
+# Task: Performance & Scalability Optimization
 
-## 1. Objective
-Achieve 20MB/s+ scanning throughput on modern hardware while supporting large-scale streaming and multi-file batches.
+## 1. Objective & Context
+*   **Goal**: Achieve 20MB/s+ scanning throughput by leveraging parallel processing and advanced regex engines.
+*   **Rationale**: To handle large-scale LLM logs and real-time streams without becoming a bottleneck in the pipeline.
+*   **Files Affected**:
+    *   `detector.py`: Implement `RE2.Set` support in `DetectionEngine`.
+    *   `cli.py`: Optimize `ProcessPoolExecutor` usage and chunking logic.
+    *   `tools/benchmark_report.py`: New tool for tracking performance gains.
 
-## 2. Analogs & Research
-- **Ripgrep (rg)**: Uses the Rust `regex` crate and memory-mapped files.
-- **Hyperscan**: Intel's library for high-speed multi-pattern matching.
+## 2. Research & Strategy
+*   **Mechanism**: Use `re2.Set` for one-pass matching of multiple structured patterns.
+*   **Parallelism**: Process multi-file batches using `ProcessPoolExecutor` with optimized chunk sizes (1MB chunks / 4KB overlaps).
+*   **Memory**: Utilize `mmap` for reading large files to reduce buffer allocation overhead.
+*   **Engine Choice**: `re2.Set` (C++) for structured rules; SIMD-optimized Aho-Corasick.
 
-## 3. Implementation Details
+## 3. Implementation Checklist
+- [ ] **RE2.Set Integration**: Refactor `DetectionEngine._initialize_rules` to group structured patterns into a `re2.Set`.
+- [ ] **Zero-Copy Scanning**: Modify `SecretDetector._scan_block` to work with memory-mapped buffers.
+- [ ] **Parallel Chunking**: Implement a more robust chunking strategy in `cli.py` that maintains line-number integrity across worker processes.
+- [ ] **SIMD Optimization**: Ensure `ahocorasick_rs` is used if available for even faster keyword filtering.
+- [ ] **Bottleneck Analysis**: Use `cProfile` and `line_profiler` to identify and eliminate hotspots in `_resolve_overlaps`.
 
-### 3.1 Parallel Scanning
-- Use `concurrent.futures.ProcessPoolExecutor` in `cli.py`.
-- For directories: Assign one file per worker.
-- For single massive files: Split into chunks and assign to workers (ensuring overlap buffers are maintained).
+## 4. Testing & Verification (Mandatory)
+### 4.1 Unit Testing
+- [ ] `test_chunk_boundary_overlap`: Verify secrets split across 1MB chunks are correctly detected.
+- [ ] `test_re2_set_parity`: Assert `re2.Set` matches exactly what individual `re2` patterns match.
+- [ ] `test_parallel_merge_integrity`: Ensure findings from different workers are merged correctly without duplicates.
 
-### 3.2 Advanced Engines
-- **RE2.Set**: Implement a transition from `ahocorasick` -> `re2.finditer` to a single `re2.Set` pass for structured rules. `re2.Set` matches multiple patterns in one NFA/DFA pass.
-- **Hyperscan Backend (Optional)**: If rule count exceeds 2000, provide an optional backend using `python-hyperscan`. This requires `libhyperscan` but offers Gbit/s performance.
+### 4.2 Acceptance Testing (BDD)
+- [ ] **Scenario**: Bulk Scan Performance (100MB of logs scanned in < 5 seconds).
+- [ ] **Scenario**: Large File Streaming (Accurate line numbers for secrets at the end of a 1GB file).
+- [ ] **Scenario**: Consistency Check (Parallel vs. Serial results must be identical).
 
-### 3.3 Memory Optimization
-- Use `mmap` for file reading to avoid large buffer allocations.
-- Implement "Zero-Copy" reporting where findings store offsets rather than string copies until the final report generation.
+### 4.3 Test Data Obfuscation
+- [ ] Use a standardized 10MB "Performance Test Set" in `tests/data/perf_data.json`.
 
-## 4. Best Practices
-- **SIMD**: Ensure `pyahocorasick` or `ahocorasick_rs` is compiled with SIMD support (SSE4.2/AVX2).
-- **Chunking**: Use 1MB chunks with 4KB overlaps for streaming to balance memory use and detection accuracy.
-- **Profiling**: Use `cProfile` and `line_profiler` to identify bottlenecks in the `DetectionEngine`.
+## 5. Demo & Documentation
+- [ ] **`demo.sh`**: Include a performance benchmark section that prints MB/s throughput.
+- [ ] **`README.md`**: Update "Performance" section with new benchmarks on standard hardware.
+- [ ] **`docs/ARCHITECTURE.md`**: Document the parallel scanning and `re2.Set` implementation.
 
----
-
-## 5. Testing Strategy
-
-### 5.1 Unit Tests (`pytest`)
-- **`test_chunking_boundary_integrity`**: Verify that a secret split exactly at a 1MB boundary is detected correctly using the overlap buffer.
-- **`test_parallel_result_merging`**: Assert that `cli.py` correctly consolidates and deduplicates findings from multiple worker processes.
-- **`test_re2_set_functional_parity`**: Ensure `RE2.Set` matches exactly the same strings as individual `RE2` regex calls.
-- **`test_mmap_handling`**: Assert that `detector.py` can read from memory-mapped files without errors.
-
-### 5.2 Acceptance Tests (BDD)
-- **Scenario: Bulk Scan Performance**
-  - Given a directory of 100 files (10MB total) with 10 hidden secrets
-  - When I run a bulk scan
-  - Then the scan should complete in less than 2 seconds
-- **Scenario: Large File Streaming**
-  - Given a single 100MB file with a secret at the 50MB and 99.9MB positions
-  - When I scan the file via pipe
-  - Then both secrets should be reported with accurate line numbers
-- **Scenario: Parallel vs. Serial Consistency**
-  - When I scan the same directory in serial mode and parallel mode
-  - Then both reports must have identical findings
-
----
-
-## 6. Demo Update
-Update `demo.sh` to include a section for "High-Performance Scanning":
-- Increase the size of the performance benchmark file.
-- Add a summary of the scanning speed (MB/s) to the demo output to showcase optimization gains.
-
----
-
-## 7. Documentation Update
-Update `README.md`:
-- Update the "Performance" section with new benchmarks.
-- Briefly mention the high-performance backends (RE2/Hyperscan) and parallel scanning support.
+## 6. Engineering Standards
+*   **Tone**: Senior Engineer, data-driven.
+*   **Perf**: Target: 20MB/s+ on a 4-core machine.
+*   **Security**: Ensure parallel processing doesn't leak sensitive data into IPC channels; keep content redacted until the final report.

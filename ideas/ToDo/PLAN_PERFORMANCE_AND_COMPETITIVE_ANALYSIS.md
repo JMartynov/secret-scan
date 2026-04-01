@@ -1,39 +1,42 @@
 # Task: Performance Benchmarking & Competitive Analysis
 
 ## 1. Objective & Context
-*   **Goal**: Establish a comprehensive performance benchmarking suite and compare the tool against industry competitors (Gitleaks, TruffleHog).
-*   **Rationale**: To validate the "10-20 MB/s" target and provide empirical data for marketing and technical optimization.
+*   **Goal**: Establish a continuous benchmarking suite to compare the engine's speed and accuracy against industry competitors.
+*   **Rationale**: To validate our performance claims (10-20 MB/s) and ensure we maintain a technical advantage over tools like Gitleaks and TruffleHog.
 *   **Files Affected**:
-    *   `tests/test_performance.py` (Benchmark suite)
-    *   `tools/benchmark_report.py` (Report generation)
-    *   `docs/benchmarks.md` (Public data)
+    *   `tests/test_performance.py`: Benchmark runner.
+    *   `tools/benchmark_report.py`: Report and chart generator.
+    *   `docs/BENCHMARKS.md`: Public-facing results.
 
 ## 2. Research & Strategy
-*   **Dataset**: Use a mix of large logs (100MB+), diverse codebases, and synthetic data with hidden secrets.
-*   **Competitors**: Benchmark against `gitleaks` and `trufflehog` on the same hardware and datasets.
-*   **Metrics**: Throughput (MB/s), CPU/Memory usage, Precision/Recall (F1 Score).
+*   **Competitors**: Gitleaks, TruffleHog, Ripgrep (as speed baseline).
+*   **Datasets**: 1GB of mixed logs, 500MB of diverse source code, and 100MB of synthetic data with hidden secrets.
+*   **Metrics**: Throughput (MB/s), Memory usage (RSS), Precision/Recall, and False Positive rate.
 
 ## 3. Implementation Checklist
-- [ ] **Benchmarking Harness**: Build a script that runs the detector against standardized datasets multiple times.
-- [ ] **Adversary Utility Integration**: Script the execution of competitor tools to ensure fair comparison settings.
-- [ ] **Automated Reporting**: Generate Markdown/HTML reports with charts comparing speed and accuracy.
-- [ ] **Profiling Integration**: Connect `cProfile` and `py-spy` to the benchmark run to identify current bottlenecks.
-- [ ] **Whitepaper/Article**: Draft a technical article titled "Methods of Fast Secret Scanning: Engineering a 20MB/s Engine".
+- [ ] **Benchmark Runner**: Implement a standardized script that executes all tools under identical conditions.
+- [ ] **Adversary Utility Harness**: Create wrappers for competitor tools to run them with "Balanced" settings.
+- [ ] **Automated Charting**: Use `matplotlib` or `plotly` to generate visual comparisons of throughput and memory efficiency.
+- [ ] **Regression Detection**: Integrate benchmarks into the CI/CD pipeline to flag any commit that drops performance by > 5%.
+- [ ] **Technical Article**: Draft a whitepaper on "The Engineering of High-Speed Secret Detection: RE2 vs. Standard Engines".
 
 ## 4. Testing & Verification (Mandatory)
 ### 4.1 Unit Testing
-- [ ] Verify that the benchmark script correctly records timing and resource usage.
-- [ ] Test the report generator with sample data.
+- [ ] `test_benchmark_accuracy`: Verify that the runner correctly records timing and resource metrics.
+- [ ] `test_competitor_execution`: Assert that competitor tools are being called with the intended configuration.
 
 ### 4.2 Acceptance Testing (BDD)
-- [ ] **Scenario**: Running the benchmark suite produces a detailed comparison table.
-- [ ] **Scenario**: A performance regression is detected and fails the CI build.
-- [ ] **Scenario**: The comparison report proves the tool's performance advantage in streaming modes.
+- [ ] **Scenario**: Performance Report (System generates a detailed PDF report comparing the latest build to competitors).
+- [ ] **Scenario**: Speed Regression (CI build fails after a complex rule addition drops throughput below the 10 MB/s floor).
+
+### 4.3 Test Data Obfuscation
+- [ ] All datasets used for public benchmarks must be entirely synthetic.
 
 ## 5. Demo & Documentation
-- [ ] **README.md**: Add a "Benchmarks" section with the latest results.
-- [ ] **CLI**: Add a `--benchmark` flag to run a quick local performance test.
+- [ ] **`README.md`**: Add a badge showing current throughput (e.g., "Scanning Speed: 18.4 MB/s").
+- [ ] **`docs/BENCHMARKS.md`**: Publish regularly updated comparison tables.
 
 ## 6. Engineering Standards
-*   **Objectivity**: Benchmarks must be reproducible and use "apples-to-apples" configurations for all tools.
-*   **Transparency**: Publish the datasets and methodology used for the public benchmarks.
+*   **Tone**: Senior Engineer, data-driven.
+*   **Ethics**: Benchmarks must be fair, transparent, and reproducible by third parties.
+*   **Perf**: The benchmark runner itself must have minimal overhead on the system being tested.

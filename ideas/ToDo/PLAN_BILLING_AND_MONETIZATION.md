@@ -2,39 +2,43 @@
 
 ## 1. Objective & Context
 *   **Goal**: Integrate Stripe for usage-based billing and subscription management.
-*   **Rationale**: To generate revenue and provide a sustainable commercial model for the SaaS platform.
+*   **Rationale**: Ensures the project has a sustainable commercial model and allows users to pay for increased scan limits and premium features.
 *   **Files Affected**:
-    *   `app/api/billing.py` (Stripe webhooks and endpoints)
-    *   `app/services/billing_service.py` (Usage tracking)
-    *   `frontend/pages/pricing.tsx` (Subscription UI)
+    *   `app/api/billing.py`: Webhook handler and subscription endpoints.
+    *   `app/services/usage_service.py`: Logic for tracking scan volume and reporting to Stripe.
+    *   `frontend/pages/billing.tsx`: Billing management UI.
 
 ## 2. Research & Strategy
 *   **Provider**: Stripe (Subscriptions + Metered Billing).
-*   **Tiers**: Free (1k scans), Pro ($29/mo), Team ($99/mo), Enterprise (Custom).
-*   **Tracking**: Record scan volume in PostgreSQL/Redis and report to Stripe daily.
+*   **Logic**: Associate every Organization with a Stripe Customer; track scans as usage events.
+*   **Pricing**: Free (1k scans), Pro ($29/mo), Team ($99/mo), Enterprise (Metered).
 
 ## 3. Implementation Checklist
-- [ ] **Stripe Account Setup**: Configure products and price points in the Stripe dashboard.
-- [ ] **Billing Portal**: Integrate Stripe Customer Portal for self-service management.
-- [ ] **Usage Metering**: Implement logic to increment Stripe's usage meter on every successful scan.
-- [ ] **Webhook Handler**: Handle `invoice.paid`, `customer.subscription.deleted`, and `checkout.session.completed` events.
-- [ ] **Pricing Page**: Build a responsive pricing table in the Next.js frontend.
-- [ ] **Feature Gating**: Implement middleware to block scans if a user exceeds their tier's limit.
+- [ ] **Stripe Account Setup**: Define products, prices, and tax rules in the Stripe Dashboard.
+- [ ] **Checkout Integration**: Implement Stripe Checkout for seamless subscription onboarding.
+- [ ] **Usage Metering**: Add logic to `detector_service.py` to record a usage event for every successful scan.
+- [ ] **Webhook Processor**: Handle `invoice.paid`, `customer.subscription.deleted`, and `checkout.session.completed` events.
+- [ ] **Tier Enforcement**: Implement middleware that blocks scans if the organization has exceeded its quota or has a failed payment status.
+- [ ] **Billing Portal**: Integrate Stripe Customer Portal for managing payment methods and invoices.
 
 ## 4. Testing & Verification (Mandatory)
 ### 4.1 Unit Testing
-- [ ] Test the webhook handler with mocked Stripe signatures.
-- [ ] Verify usage reporting logic correctly handles API failures (retries).
+- [ ] `test_usage_reporting`: Verify that scan counts are correctly totaled and sent to Stripe.
+- [ ] `test_webhook_signature`: Assert that only valid Stripe webhooks are processed.
 
 ### 4.2 Acceptance Testing (BDD)
-- [ ] **Scenario**: User upgrades to Pro and their scan limit is instantly increased.
-- [ ] **Scenario**: A user on the Free tier is blocked after 1,000 scans.
-- [ ] **Scenario**: Payment failure results in the subscription being marked as "past_due".
+- [ ] **Scenario**: User upgrades to Pro (Quota is instantly increased).
+- [ ] **Scenario**: Payment Fails (Access to deep scanning is restricted).
+- [ ] **Scenario**: Usage Limit Reached (System prevents further scans and prompts for an upgrade).
+
+### 4.3 Test Data Obfuscation
+- [ ] Use standard Stripe Test Cards and synthetic customer IDs.
 
 ## 5. Demo & Documentation
-- [ ] **README.md**: Document the billing architecture and tier limits.
-- [ ] **Dashboard UI**: Add a "Billing" tab showing current usage and invoice history.
+- [ ] **Pricing Page**: Build a clear pricing table in the frontend.
+- [ ] **README.md**: Document the available plans and limits.
 
 ## 6. Engineering Standards
-*   **Compliance**: Ensure PCI-DSS compliance by never handling raw credit card data on our servers.
-*   **Reliability**: Usage reporting must be idempotent to avoid double-charging.
+*   **Tone**: Senior Engineer, business-aligned.
+*   **Perf**: Usage tracking must be asynchronous to avoid slowing down the scanning process.
+*   **Security**: Never store credit card data; strictly use Stripe's secure tokens and hosted elements.

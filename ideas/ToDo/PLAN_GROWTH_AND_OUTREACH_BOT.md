@@ -1,38 +1,42 @@
 # Task: Growth & Outreach Bot (Autonomous Discovery)
 
 ## 1. Objective & Context
-*   **Goal**: Build a bot to autonomously scan public GitHub repositories for leaks and notify owners.
-*   **Rationale**: This serves as a powerful organic acquisition engine by showing direct value to potential users.
+*   **Goal**: Build a bot to autonomously scan public GitHub repositories for leaks and notify owners via issues/PRs.
+*   **Rationale**: Serves as an organic acquisition engine by providing immediate value to developers who have already leaked data.
 *   **Files Affected**:
-    *   `tools/outreach_bot.py` (Bot logic)
-    *   `data/outreach_templates.json` (Message variants)
+    *   `tools/outreach_bot.py`: Main bot logic and GitHub API client.
+    *   `data/outreach_templates.json`: Multi-lingual, polite notification templates.
 
 ## 2. Research & Strategy
-*   **Discovery**: Use GitHub Search API to find new commits/repos matching high-risk keywords.
-*   **Action**: Create a GitHub Issue or PR comment with a polite warning and a link to the tool.
-*   **Compliance**: Strictly follow GitHub's API rate limits and Terms of Service to avoid being flagged as spam.
+*   **Discovery**: Use GitHub Search API to find new commits matching high-risk keywords (e.g., `sk-`, `AKIA`).
+*   **Safety**: Only notify on 100% verified secrets or extremely high-confidence matches.
+*   **Policy**: Strictly follow GitHub's Anti-Spam and API guidelines.
 
 ## 3. Implementation Checklist
-- [ ] **Search Engine**: Implement logic to find repos using queries like `openai api_key` or `db_password`.
-- [ ] **Confidence Filter**: Only act on "CRITICAL" (Verified) or "HIGH" confidence findings.
-- [ ] **Deduplication**: Ensure the bot never notifies the same repository twice for the same leak.
-- [ ] **Issue Generator**: Create personalized, non-alarmist issue templates.
-- [ ] **Analytics**: Track "Click-through Rate" from GitHub issues to the landing page.
+- [ ] **Search Engine**: Implement logic to crawl recent GitHub activity for common secret patterns.
+- [ ] **Confidence Filter**: Add a strict gate that only allows "CRITICAL" risk findings to trigger an outreach event.
+- [ ] **Deduplication Database**: Maintain a persistent store of notified repositories to avoid repeated alerts.
+- [ ] **Polite Templates**: Draft non-alarmist, helpful issue templates that explain the risk and provide a link to the tool.
+- [ ] **Analytics Tracking**: Add tracking parameters to links to measure conversion from "Issue" to "Tool Install".
 
 ## 4. Testing & Verification (Mandatory)
 ### 4.1 Unit Testing
-- [ ] Test the search query builder with various keyword combinations.
-- [ ] Verify deduplication logic using a mock database.
+- [ ] `test_search_query_builder`: Verify that search queries are optimized for high-yield results.
+- [ ] `test_deduplication`: Assert that the bot never notifies the same repo twice.
 
 ### 4.2 Acceptance Testing (BDD)
-- [ ] **Scenario**: Bot finds a public repo with a clear leak and generates a draft issue.
-- [ ] **Scenario**: Bot skips a repository it has already processed.
-- [ ] **Scenario**: Bot pauses execution after reaching the GitHub API rate limit.
+- [ ] **Scenario**: Bot finds a clear leak (Drafts a high-quality issue report).
+- [ ] **Scenario**: Bot hits rate limit (Gracefully pauses and schedules a resume).
+- [ ] **Scenario**: Low-confidence match (Bot ignores and logs the finding).
+
+### 4.3 Test Data Obfuscation
+- [ ] **CRITICAL**: The bot must NEVER post raw secrets in public issues. Always redact.
 
 ## 5. Demo & Documentation
-- [ ] **Internal Guide**: Document the bot's operating parameters and "Rules of Engagement".
-- [ ] **Dashboard**: Add a "Growth Stats" section showing bot activity and conversions.
+- [ ] **Internal Guide**: "Rules of Engagement" for the outreach bot.
+- [ ] **Growth Dashboard**: Visual stats on issues opened vs. users acquired.
 
 ## 6. Engineering Standards
-*   **Ethics**: The goal is to help, not to shame. Use professional, helpful language.
-*   **Safety**: Never post the actual secret in the public issue; refer to the line number and redacted version.
+*   **Tone**: Senior Engineer, helpful peer.
+*   **Ethics**: The mission is "Help and Protect", not "Shame and Blame".
+*   **Security**: Ensure the bot's own API keys are rigorously protected.

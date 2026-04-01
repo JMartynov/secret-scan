@@ -1,73 +1,47 @@
-# PLAN: Multi-Tier Rule Categorization & PII Layer
+# Task: Multi-Tier Rule Categorization & PII Layer
 
-## 1. Objective
-Evolve the flat rule structure into a multi-tier system that supports different detection strategies and extends coverage to Personal Identifiable Information (PII).
+## 1. Objective & Context
+*   **Goal**: Implement a 4-tier rule taxonomy and add a dedicated layer for Personal Identifiable Information (PII).
+*   **Rationale**: Better organization of rules improves engine optimization (shadowing) and expands the tool's utility to privacy compliance.
+*   **Files Affected**:
+    *   `detector.py`: Update `DetectionEngine` to handle tiered logic and PII loading.
+    *   `data/`: Refactor directory structure to match tiers.
+    *   `data/pii/`: New directory for PII rules.
+    *   `cli.py`: Add `--pii` and `--pii-region` flags.
 
-## 2. Analogs & Research
-- **Microsoft Presidio**: Uses "Recognizers" categorized by entity type.
-- **Google Cloud DLP**: Categorizes by "InfoTypes" (Global vs. Regional).
-- **GitGuardian**: Separates "Secrets" from "Sensitive Information".
+## 2. Research & Strategy
+*   **Tiers**: 1: Structured (AWS); 2: Infrastructure (DB URL); 3: Contextual; 4: Entropy.
+*   **PII Rules**: Emails, SSNs, Credit Cards (Regex + Luhn), Phone numbers.
+*   **Engine Choice**: Aho-Corasick for combined keyword search across both Secrets and PII.
 
-## 3. Implementation Details
+## 3. Implementation Checklist
+- [ ] **Taxonomy Refactor**: Move rules into `data/{tier_name}/rules.json` and update `_load_all_rules`.
+- [ ] **PII Implementation**: Add `data/pii/rules.json` with basic patterns.
+- [ ] **Luhn Validator**: Implement `validators/luhn.py` for credit card verification.
+- [ ] **Tier Shadowing**: Modify `SecretDetector._resolve_overlaps` to ensure Tier 1 matches suppress Tier 4 (entropy) hits on the same text.
+- [ ] **Regional Scoping**: Add logic to filter PII rules by region (e.g., US SSN vs. UK National Insurance).
 
-### 3.1 Tiered Structure
-Refactor `data/rules.json` to include a `tier` field:
-- **Tier 1 (Structured)**: High-confidence, fixed-format tokens (AWS, Stripe). Match = Immediate High Risk.
-- **Tier 2 (Infrastructure)**: Semi-structured credentials (DB URLs, SSH Keys). Requires keyword confirmation.
-- **Tier 3 (Contextual)**: Soft patterns (Passwords in comments, prompts). Heavy reliance on surrounding text.
-- **Tier 4 (Entropy)**: Fallback for random strings. Lowest confidence without context.
+## 4. Testing & Verification (Mandatory)
+### 4.1 Unit Testing
+- [ ] `test_tier_loading`: Verify rules are correctly categorized during initialization.
+- [ ] `test_luhn_check`: Test with valid and invalid credit card numbers.
+- [ ] `test_tier_shadowing`: Assert that an AWS key isn't also reported as "High Entropy String".
 
-### 3.2 PII Layer
-Add a new rule file `data/pii_rules.json`:
-- **Financial**: Credit Cards (Regex + Luhn Check), Bank Account numbers.
-- **Identity**: SSNs, Passport numbers, Driver's Licenses (Regional patterns).
-- **Contact**: Emails, Phone numbers, Physical addresses.
-- **Healthcare**: HIPAA-related identifiers.
+### 4.2 Acceptance Testing (BDD)
+- [ ] **Scenario**: PII Detection (e.g., scanning for emails/phones with `--pii`).
+- [ ] **Scenario**: Financial Data Validation (Luhn check).
+- [ ] **Scenario**: Regional Filtering (US-only SSN scan).
 
-### 3.3 Engine Integration
-- Implement `SecretDetector(include_pii=True)`.
-- Use `ahocorasick` to load both secret and PII keywords into a single automaton pass.
-- **Optimization**: Structured rules (Tier 1) should "shadow" lower tiers. If an AWS key is found, don't run a generic entropy check on the same string.
+### 4.3 Test Data Obfuscation
+- [ ] Run `python3 tools/generate_test_data.py`.
+- [ ] **Security**: Ensure PII samples in `test_data.json` are synthetic and pass GitHub checks.
 
-## 4. Best Practices
-- **Luhn Algorithm**: Mandatory for Credit Card validation to reduce false positives.
-- **Regional Scoping**: Allow users to specify country codes to limit PII scanning (e.g., `--pii-region US,UK`).
-- **Checksums**: Many ID formats (like SSNs) have internal checksums; implement these in Python `validators/` to filter regex noise.
+## 5. Demo & Documentation
+- [ ] **`demo.sh`**: Add "PII and Tiered Detection" section.
+- [ ] **`README.md`**: List supported PII types and explain the tier system.
+- [ ] **CLI Help**: Document the new `--pii` and `--pii-region` flags.
 
----
-
-## 5. Testing Strategy
-
-### 5.1 Unit Tests (`pytest`)
-- **`test_rule_tier_loading`**: Verify `DetectionEngine` correctly parses and assigns tiers from `rules.json`.
-- **`test_luhn_validator`**: Test `validators.luhn_check` with valid/invalid credit card numbers (VISA, Mastercard).
-- **`test_pii_regex_boundaries`**: Test email/phone regex with edge cases (e.g., `user+tag@domain.co.uk`, `+1-555-0100`).
-- **`test_tier_shadowing`**: Provide a string that matches both a Tier 1 rule (AWS) and Tier 4 (Entropy). Assert only Tier 1 is reported.
-
-### 5.2 Acceptance Tests (BDD)
-- **Scenario: PII Detection Toggle**
-  - Given the detector is initialized with `--pii`
-  - When I scan "My email is test@example.com"
-  - Then it should find "email_address"
-- **Scenario: Regional PII Filtering**
-  - Given PII scanning is enabled for region "UK"
-  - When I scan a US-formatted phone number "(555) 123-4567"
-  - Then it should NOT report any findings
-- **Scenario: Financial Data Validation**
-  - When I scan a 16-digit random number that FAILS Luhn check
-  - Then it should NOT report a "credit_card" finding
-
----
-
-## 6. Demo Update
-Update `demo.sh` to include a section for "PII Detection":
-- Add sample emails, phone numbers, and (valid/invalid) credit card numbers.
-- Show how the tool distinguishes between these categories using the new tiered reporting.
-
----
-
-## 7. Documentation Update
-Update `README.md`:
-- Add a new section for "PII Detection".
-- Document the `--pii` flag and list the types of PII detected (emails, phones, credit cards).
-- Explain the new multi-tier categorization of findings.
+## 6. Engineering Standards
+*   **Tone**: Senior Engineer.
+*   **Perf**: Ensure PII rules don't increase the keyword automaton size excessively.
+*   **Security**: PII is highly sensitive; ensure redaction is strictly applied.

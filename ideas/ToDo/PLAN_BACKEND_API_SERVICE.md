@@ -2,43 +2,44 @@
 
 ## 1. Objective & Context
 *   **Goal**: Build a production-grade FastAPI backend to provide secret scanning as a service.
-*   **Rationale**: To transition from a CLI-only tool to a scalable SaaS platform with centralized management and multi-user support.
+*   **Rationale**: Transitions from a CLI-only tool to a scalable SaaS platform with centralized management.
 *   **Files Affected**:
-    *   `app/main.py` (Entry point)
-    *   `app/api/scan.py` (Scanning endpoints)
-    *   `app/api/auth.py` (JWT Authentication)
-    *   `app/models/` (DB Schemas: Users, Scans, Findings)
-    *   `app/services/detector_service.py` (Engine wrapper)
+    *   `app/main.py`: API Entry point.
+    *   `app/api/scan.py`: Scanning endpoints (`/scan`, `/scan-stream`).
+    *   `app/services/detector_service.py`: Wrapper for `SecretDetector`.
+    *   `app/models/`: SQLModel/Tortoise definitions for `ScanResult` and `Organization`.
 
 ## 2. Research & Strategy
-*   **Tech Stack**: FastAPI (Async), PostgreSQL (SQLAlchemy/Tortoise), Redis (Rate limiting).
-*   **Auth**: JWT-based authentication with organization-level scoping.
-*   **Engine Choice**: Integration with existing `detector.py` and `obfuscator.py`.
+*   **Stack**: FastAPI (Async), PostgreSQL (SQLModel), Redis (Rate Limiting).
+*   **Logic**: Expose core `detector.py` functionality via a RESTful API.
+*   **Auth**: JWT-based authentication with per-organization scoping.
 
 ## 3. Implementation Checklist
-- [ ] **FastAPI Scaffolding**: Setup the project structure with dependency injection.
-- [ ] **DB Schema Design**: Implement PostgreSQL tables for Users, Orgs, Scans, and Findings.
-- [ ] **Auth Layer**: Implement login, register, and JWT verification middleware.
-- [ ] **Scanning Endpoint**: Create `POST /scan` that accepts text/files and returns a risk report.
-- [ ] **Streaming Support**: Implement `POST /scan-stream` for real-time log analysis.
-- [ ] **Rate Limiting**: Integrate Redis to prevent API abuse.
+- [ ] **FastAPI Setup**: Implement basic project structure with `pydantic` schemas for request/response.
+- [ ] **Engine Integration**: Create a thread-safe `DetectorService` that manages a pool of `SecretDetector` instances.
+- [ ] **Async Streaming**: Implement a streaming endpoint that accepts `multipart/form-data` and yields results as they are found.
+- [ ] **Scan History**: Implement PostgreSQL storage for anonymized scan metadata (time, file count, severity counts).
+- [ ] **Rate Limiting**: Integrate `fastapi-limiter` with Redis to prevent API abuse.
 
 ## 4. Testing & Verification (Mandatory)
 ### 4.1 Unit Testing
-- [ ] Test API endpoints using `httpx.AsyncClient`.
-- [ ] Verify JWT token generation and validation.
-- [ ] Test DB CRUD operations for scan history.
+- [ ] `test_scan_endpoint`: Verify JSON responses match the `Finding` schema.
+- [ ] `test_auth_middleware`: Assert that invalid tokens are rejected.
+- [ ] `test_concurrent_scans`: Verify API remains responsive under multiple simultaneous requests.
 
 ### 4.2 Acceptance Testing (BDD)
-- [ ] **Scenario**: Authenticated user scans a secret and sees it in their history.
-- [ ] **Scenario**: Unauthorized request is blocked by the auth middleware.
-- [ ] **Scenario**: Rate limit is triggered after exceeding the configured threshold.
+- [ ] **Scenario**: Authenticated user scans a secret and it appears in their scan history.
+- [ ] **Scenario**: Unauthorized request is blocked.
+- [ ] **Scenario**: Rate limit is triggered after exceeding the tier threshold.
+
+### 4.3 Test Data Obfuscation
+- [ ] Ensure API responses in tests use `redacted_value` by default.
 
 ## 5. Demo & Documentation
-- [ ] **API Documentation**: Ensure Swagger/OpenAPI docs are correctly generated at `/docs`.
-- [ ] **README.md**: Add a "Server Mode" section with setup instructions.
-- [ ] **Postman Collection**: Create a sample collection for testing the API.
+- [ ] **OpenAPI**: Ensure `/docs` (Swagger) is fully documented with request/response examples.
+- [ ] **Postman Collection**: Create a collection for easy onboarding of external developers.
 
 ## 6. Engineering Standards
-*   **Perf**: Maintain sub-100ms latency for small text scans.
-*   **Security**: Ensure secrets are NEVER stored in plain text in the database; only store metadata and redacted snippets.
+*   **Tone**: Senior Engineer, high-signal.
+*   **Perf**: Target < 100ms latency for small text scans (excluding network).
+*   **Security**: Strictly enforce SSL/TLS; never log the `text` field of incoming scan requests.

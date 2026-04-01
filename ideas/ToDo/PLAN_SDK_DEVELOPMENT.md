@@ -1,39 +1,43 @@
 # Task: SDK Development (Python & JS)
 
 ## 1. Objective & Context
-*   **Goal**: Create developer-friendly SDKs for Python and JavaScript to integrate scanning into any application.
-*   **Rationale**: To increase adoption by making it easy for developers to add security checks to their own AI workflows.
+*   **Goal**: Create developer-friendly SDKs for Python and JavaScript to integrate scanning into any application or AI pipeline.
+*   **Rationale**: To increase adoption by making it easy for developers to add security layers to their custom LLM implementations.
 *   **Files Affected**:
-    *   `sdks/python/` (New package)
-    *   `sdks/js/` (New package)
-    *   `examples/` (Usage examples)
+    *   `sdks/python/`: New package `llm-guard-python`.
+    *   `sdks/javascript/`: New package `@llm-guard/sdk`.
+    *   `examples/`: Sample integrations with LangChain, OpenAI, and FastAPI.
 
 ## 2. Research & Strategy
 *   **Design**: Simple, promise-based (JS) and sync/async (Python) interfaces.
-*   **Features**: Scan text, scan files, and "Wrap" LLM calls.
+*   **Logic**: Primarily a thin wrapper around the Backend API, with an optional "Local Mode" for Python.
 *   **Distribution**: Publish to PyPI and NPM.
 
 ## 3. Implementation Checklist
-- [ ] **Python SDK**: Implement `llm-guard-py` with `scan()` and `redact()` functions.
-- [ ] **JavaScript SDK**: Implement `@llm-guard/sdk` for Node.js and Browser.
-- [ ] **LLM Wrappers**: Add helper decorators/functions to automatically scan LangChain or OpenAI inputs.
-- [ ] **Local Mode**: Allow the SDK to run the detection engine locally (RE2) or via the SaaS API.
-- [ ] **Documentation**: Generate API reference docs for both languages.
+- [ ] **Python SDK**: Implement `Scanner` class with `scan(text)` and `redact(text)` methods.
+- [ ] **JavaScript SDK**: Implement a lightweight Node.js/Browser compatible client.
+- [ ] **LLM Wrappers**: Add helper decorators (Python) or middleware (JS) to automatically scrub inputs to `openai.ChatCompletion`.
+- [ ] **Configuration**: Support environment variable based configuration for API keys and endpoints.
+- [ ] **Error Handling**: Implement robust retries and graceful degradation if the Backend API is unreachable.
 
 ## 4. Testing & Verification (Mandatory)
 ### 4.1 Unit Testing
-- [ ] Test SDK functions against both local engine and mock API responses.
-- [ ] Verify error handling for network timeouts and invalid API keys.
+- [ ] `test_sdk_api_client`: Verify correct headers and JSON serialization in API requests.
+- [ ] `test_redaction_helper`: Assert that the SDK's local redaction logic matches the engine's output.
 
 ### 4.2 Acceptance Testing (BDD)
-- [ ] **Scenario**: A Python developer imports the SDK and scans a string in 3 lines of code.
-- [ ] **Scenario**: A JS developer uses the SDK to redact a prompt before sending it to a model.
-- [ ] **Scenario**: The SDK correctly handles rate limit errors from the SaaS API.
+- [ ] **Scenario**: Python integration in 3 lines (Import -> Initialize -> Scan).
+- [ ] **Scenario**: JS middleware in Express (Scrubbing prompts before they hit the controller).
+- [ ] **Scenario**: LangChain Wrapper (Automatically redacting secrets in a chain).
+
+### 4.3 Test Data Obfuscation
+- [ ] SDK examples must use synthetic secrets and standard `[REDACTED]` placeholders.
 
 ## 5. Demo & Documentation
-- [ ] **Getting Started**: Create a "Quickstart" guide for each language.
-- [ ] **Examples**: Provide sample code for common frameworks (Django, Express, FastAPI).
+- [ ] **Quickstart Guides**: 2-minute setup guides for both Python and JS.
+- [ ] **API Reference**: Auto-generated documentation (Sphinx for Python, TypeDoc for JS).
 
 ## 6. Engineering Standards
-*   **Idiomatic Code**: Ensure the SDK follows the conventions of its respective language (e.g., PEP 8 for Python, CamelCase for JS).
-*   **Zero Dependencies**: Keep the JS SDK lightweight to avoid bloating client-side bundles.
+*   **Tone**: Senior Engineer, developer-focused.
+*   **Perf**: Minimal overhead (< 5ms) for the SDK wrapper itself.
+*   **Security**: Ensure API keys used by the SDK are never logged or exposed in stack traces.

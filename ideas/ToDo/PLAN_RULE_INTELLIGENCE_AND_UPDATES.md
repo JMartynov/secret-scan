@@ -1,39 +1,43 @@
 # Task: Automated Rule Intelligence & Updates
 
 ## 1. Objective & Context
-*   **Goal**: Implement a system to automatically pull and update scanning rules from public and proprietary sources.
-*   **Rationale**: The threat landscape changes rapidly; manual rule updates are insufficient for a production security tool.
+*   **Goal**: Implement a system to automatically pull, normalize, and update scanning rules from public and proprietary feeds.
+*   **Rationale**: Keeps the detection engine effective against new secret formats without requiring manual intervention from the core team.
 *   **Files Affected**:
-    *   `tools/rule_sync.py` (Sync logic)
-    *   `data/rules.json` (Target for updates)
-    *   `tools/migrate_patterns.py` (Normalization)
+    *   `tools/rule_sync.py`: Logic for fetching and syncing rules.
+    *   `tools/migrate_patterns.py`: Normalization helper.
+    *   `data/`: Rule target directories.
 
 ## 2. Research & Strategy
-*   **Sources**: GitHub Public Secrets, Gitleaks, TruffleHog (Open source parts), and specialized security feeds.
-*   **Normalization**: Use `migrate_patterns.py` to convert various formats into the project's RE2-compatible schema.
-*   **Validation**: Every auto-updated rule MUST pass `tools/regex_lint.py` and `tools/run_regexploit.py`.
+*   **Sources**: GitHub Public Secrets, Gitleaks, and proprietary security intelligence feeds.
+*   **Normalization**: Convert all patterns to RE2-compatible regex and assign default metadata (Risk, Confidence).
+*   **Safety**: All updated rules must pass the internal linting and ReDoS protection suite.
 
 ## 3. Implementation Checklist
-- [ ] **Feed Aggregator**: Implement a script to fetch rule updates from configured Git repositories/APIs.
-- [ ] **Automated Linting**: Integrate the linting suite into the sync process to block dangerous regex.
-- [ ] **Versioned Rules**: Implement a versioning system for `rules.json` to allow rollbacks.
-- [ ] **Dynamic Loading**: Update the `DetectionEngine` to support reloading rules without a restart.
-- [ ] **Feedback Loop**: Implement a mechanism to mark rules as "noisy" or "false positive" to adjust thresholds automatically.
+- [ ] **Rule Fetcher**: Implement a service to monitor and pull updates from configured rule repositories.
+- [ ] **Pattern Normalizer**: Refine `migrate_patterns.py` to handle advanced regex features (like lookaheads) by converting them to safe RE2 equivalents where possible.
+- [ ] **Automated CI for Rules**: Setup a GitHub Action that runs `tools/regex_lint.py` and `tools/run_regexploit.py` on every rule update.
+- [ ] **Staging Layer**: Implement a "Rule Staging" process where new rules are tested against a baseline before being promoted to the "Stable" rule-set.
+- [ ] **Dynamic Engine Reload**: Modify `DetectionEngine` to reload rules from disk without requiring a process restart.
 
 ## 4. Testing & Verification (Mandatory)
 ### 4.1 Unit Testing
-- [ ] Test the sync script with mocked external rule feeds.
-- [ ] Verify that invalid regex from a feed is correctly identified and rejected.
+- [ ] `test_rule_normalization`: Verify that complex patterns are correctly converted to the internal schema.
+- [ ] `test_lint_rejection`: Assert that a rule with a known ReDoS vulnerability is blocked from syncing.
 
 ### 4.2 Acceptance Testing (BDD)
-- [ ] **Scenario**: A new rule is added to a public source; the tool syncs and detects the new secret type within 24 hours.
-- [ ] **Scenario**: A malicious/broken regex is pushed to a feed; the tool's linting blocks it from being deployed.
-- [ ] **Scenario**: Admin rolls back the rule set to a previous version after a spike in false positives.
+- [ ] **Scenario**: New Rule Sync (Tool automatically picks up a new pattern for a recently launched cloud provider).
+- [ ] **Scenario**: Safe Rollback (Admin reverts to a previous rule-set after a new rule causes excessive false positives).
+- [ ] **Scenario**: Hot Reload (Rules are updated while a long-running scan is in progress).
+
+### 4.3 Test Data Obfuscation
+- [ ] Auto-generate matching test data for new rules using `tools/generate_test_data.py`.
 
 ## 5. Demo & Documentation
-- [ ] **README.md**: Add a section on "Rule Intelligence" and how to contribute new feeds.
-- Task completion will be visible in the "Rule Management" section of the SaaS dashboard.
+- [ ] **README.md**: Document the "Rule Intelligence" sources and sync frequency.
+- [ ] **Dashboard**: Show a "Last Rule Update" timestamp and a changelog of new detection patterns.
 
 ## 6. Engineering Standards
-*   **Security**: Ensure rule feeds are fetched over HTTPS and verified (e.g., via GPG signatures or checksums).
-*   **Safety**: Never auto-deploy rules to production without passing the automated security suite.
+*   **Tone**: Senior Engineer, high-signal.
+*   **Perf**: Sync should be lightweight and run during off-peak hours.
+*   **Security**: Verify the integrity of rule feeds using GPG signatures or checksums.

@@ -2,39 +2,40 @@
 
 ## 1. Objective & Context
 *   **Goal**: Define the production infrastructure as code for scalable, secure deployment on AWS/GCP.
-*   **Rationale**: To ensure consistent, reproducible environments and support enterprise-grade availability.
+*   **Rationale**: Ensures consistent environments, automated scaling, and reliable disaster recovery for the SaaS platform.
 *   **Files Affected**:
-    *   `Dockerfile` (Containerization)
-    *   `docker-compose.yml` (Local dev)
-    *   `infra/terraform/` (IaC definitions)
-    *   `.github/workflows/deploy.yml` (CI/CD)
+    *   `Dockerfile`: Optimized multi-stage production build.
+    *   `infra/terraform/`: AWS/GCP resource definitions.
+    *   `.github/workflows/deploy.yml`: CD pipeline for automated infrastructure updates.
 
 ## 2. Research & Strategy
 *   **Cloud**: AWS (ECS Fargate/RDS) or GCP (Cloud Run/Cloud SQL).
-*   **Security**: Private subnets, VPC isolation, and encrypted DB volumes.
-*   **Scaling**: Autoscaling based on CPU/Request count.
+*   **Security**: Private subnets, VPC peering, and encrypted data volumes.
+*   **IaC**: Terraform for resource provisioning; Helm (if using K8s).
 
 ## 3. Implementation Checklist
-- [ ] **Production Dockerfile**: Optimized, multi-stage build for the FastAPI app.
-- [ ] **Terraform Modules**: Define VPC, ECS Cluster, RDS Instance, and Redis Cache.
-- [ ] **CI/CD Pipeline**: Automate image building, pushing to ECR/GCR, and updating ECS/Cloud Run.
-- [ ] **Monitoring**: Setup CloudWatch/Stackdriver alerts for system health.
-- [ ] **Secret Management**: Use AWS Secrets Manager or GCP Secret Manager for API keys and DB creds.
+- [ ] **Production Dockerfile**: Build a slim, secure image with non-root user execution.
+- [ ] **VPC & Networking**: Define public/private subnets and load balancer configuration.
+- [ ] **Database Provisioning**: Setup RDS/Cloud SQL with automated backups and encryption.
+- [ ] **App Service**: Configure ECS Fargate or Cloud Run with autoscaling rules based on CPU/Memory.
+- [ ] **Secrets Management**: Integrate AWS Secrets Manager or GCP Secret Manager for API keys and DB credentials.
+- [ ] **Monitoring**: Setup CloudWatch/Stackdriver dashboards and alerting for service health.
 
 ## 4. Testing & Verification (Mandatory)
 ### 4.1 Infrastructure Testing
-- [ ] Run `terraform plan` to verify resource creation.
-- [ ] Perform a "Dry Run" deployment in a staging environment.
+- [ ] `terraform plan`: Verify resource changes before application.
+- [ ] `checkov`: Run static analysis on Terraform files for security best practices.
 
 ### 4.2 Acceptance Testing (BDD)
-- [ ] **Scenario**: The API service is reachable via a load balancer over HTTPS.
-- [ ] **Scenario**: The system automatically scales up during a high-volume scanning load.
-- [ ] **Scenario**: Database failover works as expected without data loss.
+- [ ] **Scenario**: Automated Failover (Service remains available if one availability zone goes down).
+- [ ] **Scenario**: Scaling Policy (System adds instances during high-traffic load).
+- [ ] **Scenario**: Clean Tear-down (Verify all resources are correctly destroyed without leaving orphan costs).
 
 ## 5. Demo & Documentation
-- [ ] **Deployment Guide**: Internal documentation on how to rotate secrets and update infrastructure.
-- [ ] **Architecture Diagram**: Visual representation of the cloud stack.
+- [ ] **Architecture Diagram**: Provide a visual representation of the cloud infrastructure.
+- [ ] **Deployment Guide**: Internal documentation for the DevOps team.
 
 ## 6. Engineering Standards
-*   **Principle of Least Privilege**: Ensure IAM roles have the minimum permissions required.
-*   **Cost Efficiency**: Use Fargate/Cloud Run to avoid paying for idle compute.
+*   **Least Privilege**: IAM roles must have the minimum permissions required to operate.
+*   **Immutable Infra**: Never make manual changes to production resources; always use Terraform.
+*   **Cost Management**: Tag all resources for cost tracking and implement budget alerts.

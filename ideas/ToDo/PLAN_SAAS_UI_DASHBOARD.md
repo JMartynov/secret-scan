@@ -1,42 +1,41 @@
 # Task: SaaS UI Dashboard
 
 ## 1. Objective & Context
-*   **Goal**: Create a modern, high-performance web dashboard for managing secret scans and organization security.
-*   **Rationale**: Users need a visual interface to track leaks, manage team access, and view security trends across their projects.
+*   **Goal**: Create a modern, high-performance web dashboard for managing secret scans and security policies.
+*   **Rationale**: Provides a visual interface for security admins to monitor trends, review findings, and manage team access.
 *   **Files Affected**:
-    *   `frontend/` (New Next.js project)
-    *   `frontend/pages/dashboard.tsx` (Overview)
-    *   `frontend/components/ScanTable.tsx` (Finding list)
-    *   `frontend/components/RiskChart.tsx` (Analytics)
+    *   `frontend/`: New Next.js project.
+    *   `frontend/components/findings/`: Reusable finding components.
+    *   `frontend/services/api.ts`: API client for the Backend service.
 
 ## 2. Research & Strategy
-*   **Tech Stack**: Next.js (App Router), Tailwind CSS, shadcn/ui, Recharts.
-*   **Style**: Minimalist, high-contrast, "Linear-style" UI.
-*   **Interactions**: Real-time updates via WebSockets or polling for active scans.
+*   **Stack**: Next.js (App Router), Tailwind CSS, shadcn/ui, Recharts.
+*   **Design**: Minimalist "Security Dashboard" aesthetic (Linear-style).
+*   **Interaction**: Real-time finding alerts via WebSockets or SSE.
 
 ## 3. Implementation Checklist
-- [ ] **Frontend Scaffolding**: Initialize Next.js with TypeScript and Tailwind.
-- [ ] **Auth Integration**: Connect to Backend API JWT auth.
-- [ ] **Overview Page**: Implement metrics for Total Scans, Secrets Found, and Risk Score.
-- [ ] **Findings Explorer**: Create a searchable/filterable table of detected leaks.
-- [ ] **Analytics Dashboard**: Implement charts showing secret leak trends over time.
-- [ ] **Settings Page**: UI for managing API keys and organization members.
+- [ ] **Frontend Scaffold**: Initialize Next.js with TypeScript and Tailwind.
+- [ ] **Dashboard Overview**: Implement high-level metrics (Scans, Leaks, Risk Score) with interactive charts.
+- [ ] **Finding Explorer**: Build a filterable/searchable table of all detected leaks across the organization.
+- [ ] **Policy Editor**: Create a UI for toggling rules and adjusting sensitivity thresholds.
+- [ ] **Auth Flow**: Implement Login/SSO integration and persistent session management.
+- [ ] **Team Management**: UI for inviting members and assigning roles (RBAC).
 
 ## 4. Testing & Verification (Mandatory)
 ### 4.1 Unit Testing
-- [ ] Test UI components with Jest and React Testing Library.
-- [ ] Verify data fetching and error handling states.
+- [ ] `test_findings_table`: Assert correct filtering of severity levels.
+- [ ] `test_risk_chart`: Verify chart rendering with various data points.
 
 ### 4.2 Acceptance Testing (BDD)
-- [ ] **Scenario**: User logs in and sees their scan history chart.
-- [ ] **Scenario**: User filters findings by "CRITICAL" severity.
-- [ ] **Scenario**: Real-time scan updates the dashboard without a page refresh.
+- [ ] **Scenario**: Admin filters findings to show only "HIGH" risk items from the last 24 hours.
+- [ ] **Scenario**: User toggles a rule off in the dashboard and confirms it's reflected in API scans.
+- [ ] **Scenario**: Real-time notification appears when a new leak is detected via a background CI job.
 
 ## 5. Demo & Documentation
-- [ ] **Component Library**: Document custom UI components.
-- [ ] **Deployment**: Setup Vercel or Netlify for automated frontend deployments.
+- [ ] **Product Tour**: Create a "Quick Tour" onboarding for new users.
+- [ ] **Storybook**: (Optional) Implement Storybook for UI component consistency.
 
 ## 6. Engineering Standards
-*   **Tone**: Polished, professional, and developer-friendly.
-*   **Aesthetics**: Ensure consistent spacing, typography, and interactive feedback.
-*   **Security**: Implement CSRF protection and ensure no raw secrets are ever exposed to the client-side state.
+*   **Aesthetics**: Ensure consistent spacing, polished typography, and interactive hover states.
+*   **Accessibility**: Maintain WCAG compliance for dashboard accessibility.
+*   **Security**: Implement strict Content Security Policy (CSP) and CSRF protection.

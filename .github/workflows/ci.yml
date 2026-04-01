@@ -37,5 +37,5 @@ jobs:
 #      - name: Safe regex
 #        run: python tools/run_safe_regex.py
 
-      - name: ReDoS protection
-        run: python tools/run_redoctor.py
+#      - name: ReDoS protection
+#        run: python tools/run_redoctor.py

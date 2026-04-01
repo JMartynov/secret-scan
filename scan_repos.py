@@ -1,8 +1,6 @@
 import subprocess
 import os
 import tempfile
-import json
-import shutil
 
 repos = [
     "https://github.com/psf/requests.git",

@@ -1,6 +1,6 @@
 import os
 import re
-from typing import List, Set, Dict
+from typing import List, Set
 
 class IgnoreEngine:
     def __init__(self):

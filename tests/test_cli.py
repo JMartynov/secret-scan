@@ -1,5 +1,5 @@
 import pytest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch, MagicMock, ANY
 import sys
 from cli import main
 from io import StringIO
@@ -40,14 +40,13 @@ def test_cli_file_input(mock_detector, mock_format_report, tmp_path):
     f.write_text("file content")
     
     mock_instance = mock_detector.return_value
-    mock_instance.scan_stream.return_value = iter([])
+    mock_instance.scan.return_value = []
     mock_format_report.return_value = "Mock Report"
     
     with patch.object(sys, 'argv', ['cli.py', str(f)]):
         main()
     
-    args, kwargs = mock_instance.scan_stream.call_args
-    assert args[0].name == str(f)
+    mock_instance.scan.assert_called_with("file content")
 
 def test_cli_stdin_input(mock_detector, mock_format_report):
     mock_instance = mock_detector.return_value
@@ -58,7 +57,7 @@ def test_cli_stdin_input(mock_detector, mock_format_report):
             mock_stdin.isatty.return_value = False
             main()
     
-    mock_instance.scan_stream.assert_called_with(mock_stdin, force_scan_all=False)
+    mock_instance.scan_stream.assert_called_with(mock_stdin)
 
 def test_cli_options_passed(mock_detector, mock_format_report):
     mock_instance = mock_detector.return_value
@@ -67,7 +66,7 @@ def test_cli_options_passed(mock_detector, mock_format_report):
     with patch.object(sys, 'argv', ['cli.py', '--text', 'secret', '--threshold', '2.5', '--full', '--nocolors']):
         main()
     
-    mock_detector.assert_called_with(entropy_threshold=2.5)
+    mock_detector.assert_called_with(entropy_threshold=2.5, data_dir='data', ignore_engine=ANY, mode='balanced', force_scan_all=False)
     mock_format_report.assert_called_with([], show_full=True, show_short=False, no_colors=True)
 
 def test_cli_short_option(mock_detector, mock_format_report):

@@ -54,13 +54,11 @@ class Obfuscator:
         Attempts to decode base64, hex, or url-encoded content to reveal the underlying secret.
         """
         # 1. URL Decoding
-        import urllib.parse
         decoded = urllib.parse.unquote(content)
         if decoded != content:
             return decoded
 
         # 2. Base64 Decoding
-        import base64
         try:
             return base64.b64decode(content).decode('utf-8')
         except Exception:

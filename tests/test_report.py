@@ -49,11 +49,13 @@ def test_format_report_short_mode():
 
 def test_format_report_full_mode():
     secret = SK_IGNORE_SECRET
+    context = f"Here is my secret: {secret}"
     findings = [
-        Finding("Stripe", 5, "HIGH", secret)
+        Finding("Stripe", 5, "HIGH", secret, context_line=context)
     ]
     report = format_report(findings, show_full=True, no_colors=True)
-    assert f"Content: {secret}" in report
+    # When no_colors=True, highlighted_context returns context with no ANSI
+    assert f"Context: {context}" in report
 
 def test_format_report_sorting_and_deduplication():
     findings = [

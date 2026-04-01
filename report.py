@@ -9,6 +9,8 @@ C_BLUE = "\033[94m"
 C_GREEN = "\033[92m"
 C_BOLD = "\033[1m"
 C_RESET = "\033[0m"
+C_BG_RED = "\033[41m"
+C_WHITE = "\033[97m"
 
 def colorize(text: str, color: str, no_colors: bool = False) -> str:
     # Only colorize if output is a terminal and colors are not explicitly disabled
@@ -26,6 +28,26 @@ class Finding:
     start: int = -1
     end: int = -1
     category: str = "generic"
+    suggestion: str = ""
+    filepath: str = ""
+    context_line: str = ""
+
+    @property
+    def highlighted_context(self) -> str:
+        """Returns the context line with the secret highlighted using ANSI codes."""
+        return self.get_highlighted_context()
+
+    def get_highlighted_context(self, no_colors: bool = False) -> str:
+        """Returns the context line with the secret optionally highlighted."""
+        if not self.context_line or not self.content:
+            return self.redacted_value
+        
+        if no_colors:
+            return self.context_line
+
+        # Surgical highlighting: red background, white text for the secret
+        highlight = f"{C_BG_RED}{C_WHITE}{self.content}{C_RESET}"
+        return self.context_line.replace(self.content, highlight)
 
     @property
     def redacted_value(self) -> str:
@@ -36,6 +58,47 @@ class Finding:
             return f"{c[0]}...{c[-1]}"
         else:
             return "****"
+
+def format_sarif(findings: List[Finding]) -> str:
+    import json
+    results = []
+    for f in findings:
+        results.append({
+            "ruleId": f.secret_type,
+            "level": "error" if f.risk == "HIGH" else "warning",
+            "message": {
+                "text": f"Detected {f.secret_type}. {f.suggestion}"
+            },
+            "locations": [
+                {
+                    "physicalLocation": {
+                        "artifactLocation": {
+                            "uri": f.filepath or "unknown"
+                        },
+                        "region": {
+                            "startLine": f.location
+                        }
+                    }
+                }
+            ]
+        })
+
+    sarif = {
+        "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+        "version": "2.1.0",
+        "runs": [
+            {
+                "tool": {
+                    "driver": {
+                        "name": "LLM Secrets Leak Detector",
+                        "rules": []
+                    }
+                },
+                "results": results
+            }
+        ]
+    }
+    return json.dumps(sarif, indent=2)
 
 def format_report(findings: List[Finding], show_full: bool = False, show_short: bool = False, no_colors: bool = False) -> str:
     if not findings:
@@ -90,8 +153,10 @@ def format_report(findings: List[Finding], show_full: bool = False, show_short: 
             report += f"Type: {f.secret_type}\n"
             report += f"Location: line {f.location}\n"
             report += f"Risk: {colored_risk}\n"
+            if f.suggestion:
+                report += f"Suggestion: {f.suggestion}\n"
             if show_full:
-                report += f"Content: {f.content}\n\n"
+                report += f"Context: {f.get_highlighted_context(no_colors)}\n\n"
             else:
                 report += f"Content: {f.redacted_value} (redacted)\n\n"
 

@@ -103,3 +103,50 @@ Scenario: 16. Obfuscation Mode
 Scenario: 18. Force-scan Keywordless Detection
   When I force-scan the string "STRIPE_PLACEHOLDER" without keywords
   Then it should find "stripe_api_key"
+
+Scenario: 19. Git Staged Scan - All 10 Types
+  Given a temporary git repository
+  And I stage a "kitchen sink" file with 10 obfuscated secret types
+  When I run the git-staged scan
+  Then it should find all 10 distinct secret types
+  And the report should include remediation suggestions for each
+
+Scenario: 20. Git Working Directory Scan - Dirty Tree
+  Given a temporary git repository
+  And I have 10 unstaged files, each with a unique obfuscated secret type
+  When I run the git-working scan
+  Then it should find all 10 distinct secret types
+
+Scenario: 21. Git Branch Diff - Pull Request Audit
+  Given a temporary git repository
+  And a branch "feature-leak" with a commit containing 10 obfuscated secrets
+  When I run the git-branch scan against "main"
+  Then it should find all 10 distinct secret types
+
+Scenario: 22. Git History Audit - Deep Scan
+  Given a temporary git repository
+  And a git history with 10 commits, each leaking a different obfuscated secret type
+  When I run the git-history scan
+  Then it should find all 10 distinct secret types spanning 10 different commits
+
+Scenario: 23. Git Ignore and Inline Suppression
+  Given a temporary git repository
+  And a file "ignored_path/secret.txt" with an obfuscated Stripe key
+  And a file "src/app.py" with an obfuscated GitHub token and a "# secretscan:ignore github_token" comment
+  When I run the git-working scan
+  Then it should find 0 secrets
+
+Scenario: 24. Git Multi-line Reconstruction
+  Given a temporary git repository
+  And a staged diff containing a "Private Key" split across 5 contiguous "+" lines
+  When I run the git-staged scan
+  Then it should detect the "private_key" as a single finding
+  And the location should point to the start of the block
+
+Scenario: 25. Binary File Handling with Embedded Secrets
+  Given a temporary git repository
+  And a binary file "assets/icon.png" containing an embedded obfuscated AWS key
+  And a text file "src/main.py" with an obfuscated AWS key
+  When I run the git-working scan
+  Then it should detect the secret in "src/main.py"
+  And it should NOT crash on "assets/icon.png"

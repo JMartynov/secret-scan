@@ -121,6 +121,21 @@ echo ">>> echo \"$FORCE_STRIPE_SECRET\" | ./run.sh --force-scan-all"
 printf "%s\n" "$FORCE_STRIPE_SECRET" | ./run.sh --force-scan-all
 echo "----------------------------------------------------"
 
+echo -e "\n--- Part 10: Git Integration (Staged Changes) ---"
+echo "Adding a secret to a new file and staging it..."
+echo "API_KEY=sk_test_51MzS2eL2C6p8o9r0T" > staged_secret.txt
+git add staged_secret.txt
+echo ">>> ./run.sh --git-staged --mode fast"
+./run.sh --git-staged --mode fast
+git reset staged_secret.txt
+rm staged_secret.txt
+echo "----------------------------------------------------"
+
+echo -e "\n--- Part 11: Git History Scan ---"
+echo ">>> ./run.sh --history --max-commits 3"
+./run.sh --history --max-commits 3
+echo "----------------------------------------------------"
+
 # 4. Cleanup
 rm -rf "$DEMO_DIR"
 echo -e "\n--- Demo Complete ---"

@@ -184,17 +184,69 @@ The **LLM Secrets Leak Detector** provides a comprehensive suite of features des
 | | **Hash** | ✅ | Consistent SHA-256 hashing (first 12 chars) for safe debugging. |
 | | **Synthetic** | ✅ | [NEW] Realistic fake data generation (AWS, GitHub, Emails) using `Faker`. |
 | **Safety & Performance** | **Keyword Filtering** | ✅ | Uses `Aho-Corasick` automaton to skip rules missing their required keywords. |
+| | **Parallel Scanning** | ✅ | [NEW] Utilizes `ProcessPoolExecutor` for high-speed historical audits. |
+| | **Commit Caching** | ✅ | [NEW] Incremental scanning using `.secretscan_cache` to skip verified SHAs. |
 | | **ReDoS Protection** | ✅ | `SIGALRM` timeouts (1s) for non-RE2 regex execution. |
 | | **Input Truncation** | ✅ | Blocks capped at 100,000 characters to prevent memory exhaustion. |
 | | **Deduplication** | ✅ | Merges overlapping findings.<br>Prioritizes longest matches. |
 | | **Force All Scan** | ✅ | `--force-scan-all` bypasses keyword filters so every line is scored. |
-| **Reporting & UI** | **Colorized Output** | ✅ | ANSI colors for risk levels (Red=High, Yellow=Medium, Blue=Low). |
-| | **Report Formats** | ✅ | `Summary` (counts only).<br>`Short` (redacted).<br>`Full` (raw secrets). |
+| **Reporting & UI** | **Surgical Highlighting** | ✅ | [NEW] ANSI-colored context lines with the secret highlighted in red. |
+| | **Remediation Hints** | ✅ | [NEW] Actionable advice with links to official provider documentation. |
+| | **Colorized Output** | ✅ | ANSI colors for risk levels (Red=High, Yellow=Medium, Blue=Low). |
+| | **Report Formats** | ✅ | `Summary` (counts only).<br>`Short` (redacted).<br>`Full` (raw secrets + context).<br>`SARIF` (GitHub Code Scanning). |
 | | **CI/CD Friendly** | ✅ | `--nocolors` flag.<br>Standard exit codes for automation. |
-| **Testing & Dev** | **BDD Acceptance** | ✅ | 18 scenarios in `acceptance.feature` (including the keywordless force-scan mode) using `pytest-bdd`. |
+| **Testing & Dev** | **BDD Acceptance** | ✅ | 25 scenarios in `acceptance.feature` (including Git workflows) using `pytest-bdd`. |
+| | **Performance Bench** | ✅ | [NEW] Automated suite to verify caching and parallelization gains. |
 | | **Unit Testing** | ✅ | Comprehensive suite for core logic (detector, obfuscator, cli). |
 | | **Synthetic Corpus** | ✅ | `generate_test_data.py` creates a balanced test set from rules. |
 | | **Rule Deduplication** | ✅ | `tools/deduplicate_rules.py` keeps the catalog clean before release. |
+
+## Git & CI/CD Integration
+
+The detector is now natively aware of Git lifecycles, allowing for surgical scans of changes rather than entire files.
+
+### 🛠 Git Scanning Modes
+
+```bash
+# Scan staged changes (perfect for pre-commit hooks)
+./run.sh --git-staged --mode fast
+
+# Scan unstaged changes in the working directory
+./run.sh --git-working
+
+# Scan the diff between a feature branch and main (PR audits)
+./run.sh --git-branch origin/main --format sarif
+
+# Deep audit of repository history (Parallelized & Cached)
+./run.sh --history --since "1 month ago" --max-commits 100
+```
+
+### 🏎 Performance & Scalability
+
+- **Parallel Execution**: Large-scale historical audits automatically utilize multiple CPU cores for regex and entropy analysis.
+- **Commit Caching**: The engine maintains a `.secretscan_cache` to track verified "clean" commits, reducing redundant scan times by up to 90% in incremental audits.
+- **Modes**: Choose between `fast` (optimized for <1s hooks), `balanced` (standard dev), and `deep` (thorough CI audits).
+
+---
+
+## Surgical Highlighting & Remediation
+
+When a secret is detected, the terminal output provides immediate visual context and actionable fix instructions.
+
+```text
+⚠ Secrets detected: 1
+- HIGH: 1
+
+Type: stripe_api_key
+Location: line 1
+Risk: HIGH
+Suggestion: Rotate this Stripe API key immediately in your dashboard. See: https://stripe.com/docs/keys#api-key-rotation
+Context: config process result Stripe secret: [SECRET_HIGHLIGHTED_IN_RED]
+```
+
+Remediation hints now include direct links to official security guides for AWS, GitHub, Stripe, and Google Cloud to guide developers through the revocation and rotation process.
+
+---
 
 ## Extended Infrastructure Mode
 

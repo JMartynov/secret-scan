@@ -11,8 +11,11 @@ import regex as standard_re
 
 from report import Finding, format_report
 
+from suggestions import get_suggestion
+
 # Design rule #4: Limit input size for single-block scanning
 MAX_BLOCK_SIZE = 100_000
+MAX_BLOCK_SIZE_FAST = 10_000
 
 class TimeoutError(Exception):
     """Exception raised when a regex match exceeds the allowed time limit."""
@@ -207,9 +210,11 @@ class SecretDetector:
     Main entry point for secret detection. Manages the detection engine and additional
     contextual/LLM-style heuristic rules.
     """
-    def __init__(self, entropy_threshold: float = 4.0, data_dir: str = 'data', force_scan_all: bool = False):
+    def __init__(self, entropy_threshold: float = 4.0, data_dir: str = 'data', force_scan_all: bool = False, ignore_engine=None, mode: str = 'balanced'):
         self.engine = DetectionEngine(entropy_threshold, data_dir)
         self.force_scan_all = force_scan_all
+        self.ignore_engine = ignore_engine
+        self.mode = mode
         # Lightweight rules to catch common secret-declaring patterns
         self.context_rules = [
             re2.compile(r"(?is)(?:my|here is|prod|our).*?(?:api|token|secret|password|key)\s*[:=]\s*(\S+)"),
@@ -222,6 +227,9 @@ class SecretDetector:
         """
         if not text:
             return []
+
+        if self.mode == 'fast' and len(text) > MAX_BLOCK_SIZE_FAST:
+            text = text[:MAX_BLOCK_SIZE_FAST]
 
         # Sanitize text to handle surrogate escapes (common in binary data or malformed UTF-8)
         # re2 (google-re2) fails if the string contains surrogates that cannot be encoded as UTF-8.
@@ -242,6 +250,13 @@ class SecretDetector:
             """Converts absolute byte position to a 1-based line number."""
             idx = bisect.bisect_right(line_offsets, pos)
             return base_line + max(0, idx - 1)
+
+        def get_line_content(pos):
+            line_start = line_offsets[max(0, bisect.bisect_right(line_offsets, pos) - 1)]
+            line_end = text.find('\n', pos)
+            if line_end == -1:
+                line_end = len(text)
+            return text[line_start:line_end]
 
         all_findings = []
         triggered_indices = set()
@@ -271,54 +286,106 @@ class SecretDetector:
             if force_scan_all or not rule_def.get('keywords') or rule['original_idx'] in triggered_indices:
                 for m in rule['regex'].finditer(text):
                     content = extract_content(m)
+                    
+                    if self.ignore_engine and self.ignore_engine.is_in_baseline(content):
+                        continue
+
                     # Optional entropy filter to reduce false positives on short/static strings
                     if rule_def.get('entropy_required'):
                         if self.engine.calculate_entropy(content) < rule_def.get('min_entropy', 3.0):
                             continue
 
-                    line_num = get_line_num(m.start())
-                    # Extract line content for contextual scoring
-                    line_start = line_offsets[max(0, bisect.bisect_right(line_offsets, m.start()) - 1)]
-                    line_end = text.find('\n', m.start())
-                    if line_end == -1:
-                        line_end = len(text)
-                    line_content = text[line_start:line_end]
+                    line_content = get_line_content(m.start())
+                    if self.ignore_engine and self.ignore_engine.is_ignored_line(line_content, rule['id']):
+                        continue
 
+                    line_num = get_line_num(m.start())
                     confidence = self.engine.calculate_confidence(0.8, line_content, rule_def)
-                    all_findings.append(Finding(rule['id'], line_num, rule['severity'].upper(), content, confidence, m.start(), m.end(), rule_def.get('category', 'generic')))
+                    all_findings.append(Finding(
+                        rule['id'], 
+                        line_num, 
+                        rule['severity'].upper(), 
+                        content, 
+                        confidence, 
+                        m.start(), 
+                        m.end(), 
+                        rule_def.get('category', 'generic'), 
+                        get_suggestion(rule['id'], rule_def.get('category', 'generic')),
+                        context_line=line_content
+                    ))
 
         # 2. Regex Matching (Legacy - Fallback with timeout)
-        for rule in self.engine.legacy_rules:
-            rule_def = self.engine.rules[rule['original_idx']]
-            if force_scan_all or not rule_def.get('keywords') or rule['original_idx'] in triggered_indices:
-                for m in self.engine.run_safe_legacy_match(rule['regex'], text):
-                    content = extract_content(m)
-                    if rule_def.get('entropy_required'):
-                        if self.engine.calculate_entropy(content) < rule_def.get('min_entropy', 3.0):
+        if self.mode != 'fast':
+            for rule in self.engine.legacy_rules:
+                rule_def = self.engine.rules[rule['original_idx']]
+                if force_scan_all or not rule_def.get('keywords') or rule['original_idx'] in triggered_indices:
+                    for m in self.engine.run_safe_legacy_match(rule['regex'], text):
+                        content = extract_content(m)
+                        
+                        if self.ignore_engine and self.ignore_engine.is_in_baseline(content):
                             continue
 
-                    line_num = get_line_num(m.start())
-                    line_start = line_offsets[max(0, bisect.bisect_right(line_offsets, m.start()) - 1)]
-                    line_end = text.find('\n', m.start())
-                    if line_end == -1:
-                        line_end = len(text)
-                    line_content = text[line_start:line_end]
+                        if rule_def.get('entropy_required'):
+                            if self.engine.calculate_entropy(content) < rule_def.get('min_entropy', 3.0):
+                                continue
 
-                    confidence = self.engine.calculate_confidence(0.7, line_content, rule_def)
-                    all_findings.append(Finding(rule['id'], line_num, rule['severity'].upper(), content, confidence, m.start(), m.end(), rule_def.get('category', 'generic')))
+                        line_content = get_line_content(m.start())
+                        if self.ignore_engine and self.ignore_engine.is_ignored_line(line_content, rule['id']):
+                            continue
 
-        # 2. Contextual rules (Heuristic matches for likely secret declarations)
+                        line_num = get_line_num(m.start())
+                        confidence = self.engine.calculate_confidence(0.7, line_content, rule_def)
+                        all_findings.append(Finding(
+                            rule['id'], 
+                            line_num, 
+                            rule['severity'].upper(), 
+                            content, 
+                            confidence, 
+                            m.start(), 
+                            m.end(), 
+                            rule_def.get('category', 'generic'), 
+                            get_suggestion(rule['id'], rule_def.get('category', 'generic')),
+                            context_line=line_content
+                        ))
+
+        # 3. Contextual rules (Heuristic matches for likely secret declarations)
         for regex in self.context_rules:
             for m in regex.finditer(text):
                 secret = m.group(1) or ""
-                all_findings.append(Finding("Contextual Secret (LLM Prompt)", get_line_num(m.start()), "MEDIUM", secret, 0.6, m.start(), m.end(), "authentication"))
+                if self.ignore_engine and self.ignore_engine.is_in_baseline(secret):
+                    continue
+                
+                line_content = get_line_content(m.start())
+                if self.ignore_engine and self.ignore_engine.is_ignored_line(line_content, "Contextual Secret (LLM Prompt)"):
+                    continue
 
-        # 3. Entropy Detection (Generic catch-all)
-        for i, start in enumerate(line_offsets):
-            end = line_offsets[i+1] if i+1 < len(line_offsets) else len(text)
-            line = text[start:end].rstrip('\r\n')
-            line_findings = self.engine.run_entropy_detection(line, base_line + i, all_findings, start)
-            all_findings.extend(line_findings)
+                all_findings.append(Finding(
+                    "Contextual Secret (LLM Prompt)", 
+                    get_line_num(m.start()), 
+                    "MEDIUM", 
+                    secret, 
+                    0.6, 
+                    m.start(), 
+                    m.end(), 
+                    "authentication", 
+                    get_suggestion("contextual secret", "authentication"),
+                    context_line=line_content
+                ))
+
+        # 4. Entropy Detection (Generic catch-all)
+        if self.mode in ['balanced', 'deep']:
+            for i, start in enumerate(line_offsets):
+                end = line_offsets[i+1] if i+1 < len(line_offsets) else len(text)
+                line = text[start:end].rstrip('\r\n')
+                line_findings = self.engine.run_entropy_detection(line, base_line + i, all_findings, start)
+                if self.ignore_engine:
+                    line_findings = [f for f in line_findings if not self.ignore_engine.is_in_baseline(f.content)]
+                
+                # Populate context_line for entropy findings
+                for f in line_findings:
+                    f.context_line = line
+                
+                all_findings.extend(line_findings)
 
         return self._resolve_overlaps(all_findings)
 

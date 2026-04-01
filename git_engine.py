@@ -1,6 +1,6 @@
 import subprocess
 import re
-from typing import List, Dict, Optional
+from typing import List, Dict
 from dataclasses import dataclass
 
 @dataclass
@@ -8,6 +8,7 @@ class DiffBlock:
     filepath: str
     start_line: int
     content: str
+    commit_sha: str = ""
 
 class GitEngine:
     def __init__(self):
@@ -18,11 +19,11 @@ class GitEngine:
             result = subprocess.run(
                 ["git"] + args,
                 capture_output=True,
-                text=True,
+                text=False,
                 check=True
             )
-            return result.stdout
-        except subprocess.CalledProcessError as e:
+            return result.stdout.decode('utf-8', errors='replace')
+        except subprocess.CalledProcessError:
             return ""
 
     def get_staged_files(self) -> List[Dict[str, str]]:
@@ -70,11 +71,14 @@ class GitEngine:
         current_block_lines = []
         current_start_line = 0
         current_line_offset = 0
+        current_sha = ""
 
         for line in diff_text.splitlines():
-            if line.startswith('diff --git'):
+            if line.startswith('commit '):
+                current_sha = line.split(' ')[1]
+            elif line.startswith('diff --git'):
                 if current_file and current_block_lines:
-                    blocks.append(DiffBlock(current_file, current_start_line + current_line_offset - len(current_block_lines), '\n'.join(current_block_lines)))
+                    blocks.append(DiffBlock(current_file, current_start_line + current_line_offset - len(current_block_lines), '\n'.join(current_block_lines), current_sha))
                     current_block_lines = []
                 # Extract new filepath
                 # diff --git a/file b/file
@@ -83,7 +87,7 @@ class GitEngine:
                     current_file = match.group(1)
             elif line.startswith('@@'):
                 if current_file and current_block_lines:
-                    blocks.append(DiffBlock(current_file, current_start_line + current_line_offset - len(current_block_lines), '\n'.join(current_block_lines)))
+                    blocks.append(DiffBlock(current_file, current_start_line + current_line_offset - len(current_block_lines), '\n'.join(current_block_lines), current_sha))
                     current_block_lines = []
 
                 # @@ -1,3 +1,4 @@
@@ -97,7 +101,7 @@ class GitEngine:
                     current_line_offset += 1
             elif line.startswith(' '):
                 if current_block_lines:
-                    blocks.append(DiffBlock(current_file, current_start_line + current_line_offset - len(current_block_lines), '\n'.join(current_block_lines)))
+                    blocks.append(DiffBlock(current_file, current_start_line + current_line_offset - len(current_block_lines), '\n'.join(current_block_lines), current_sha))
                     current_block_lines = []
                 current_line_offset += 1
             elif line.startswith('-'):
@@ -108,6 +112,6 @@ class GitEngine:
                 pass
 
         if current_file and current_block_lines:
-            blocks.append(DiffBlock(current_file, current_start_line + current_line_offset - len(current_block_lines), '\n'.join(current_block_lines)))
+            blocks.append(DiffBlock(current_file, current_start_line + current_line_offset - len(current_block_lines), '\n'.join(current_block_lines), current_sha))
 
         return blocks

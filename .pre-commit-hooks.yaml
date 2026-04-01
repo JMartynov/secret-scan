@@ -1,0 +1,7 @@
+- id: secret-scan
+  name: Secret Scan
+  description: Scans staged changes for leaked secrets
+  entry: ./run.sh --git-staged --mode fast --fail-on-risk HIGH
+  language: script
+  pass_filenames: false
+  stages: [commit]

@@ -1,0 +1,60 @@
+[
+  {
+    "id": "credit_card",
+    "category": "financial",
+    "tier": 1,
+    "keywords": ["visa", "mastercard", "amex", "discover", "card", "cc"],
+    "regex": "\\b(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\\d{3})\\d{11})\\b",
+    "severity": "high",
+    "engine": "re2"
+  },
+  {
+    "id": "email_address",
+    "category": "contact",
+    "tier": 2,
+    "keywords": ["email", "e-mail", "@"],
+    "regex": "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b",
+    "severity": "medium",
+    "engine": "re2"
+  },
+  {
+    "id": "phone_number_us",
+    "category": "contact",
+    "tier": 3,
+    "region": "US",
+    "keywords": ["phone", "tel", "mobile", "cell", "fax"],
+    "regex": "\\b(?:\\+?1[-. ]?)?\\(?[2-9][0-8][0-9]\\)?[-. ]?[2-9][0-9]{2}[-. ]?[0-9]{4}\\b",
+    "severity": "medium",
+    "engine": "re2"
+  },
+  {
+    "id": "phone_number_uk",
+    "category": "contact",
+    "tier": 3,
+    "region": "UK",
+    "keywords": ["phone", "tel", "mobile", "cell", "fax"],
+    "regex": "(?:\\b|\\+)(?:44|0)7[0-9]{3}[\\s]?[0-9]{6}\\b",
+    "severity": "medium",
+    "engine": "re2"
+  },
+  {
+    "id": "ssn_us",
+    "category": "identity",
+    "tier": 1,
+    "region": "US",
+    "keywords": ["ssn", "social security", "social"],
+    "regex": "\\b(?!000|666|9\\d{2})\\d{3}-(?!00)\\d{2}-(?!0000)\\d{4}\\b",
+    "severity": "high",
+    "engine": "legacy"
+  },
+  {
+    "id": "npi_number",
+    "category": "healthcare",
+    "tier": 1,
+    "region": "US",
+    "keywords": ["npi", "provider", "medicare"],
+    "regex": "\\b(?:1|2)\\d{9}\\b",
+    "severity": "high",
+    "engine": "re2"
+  }
+]

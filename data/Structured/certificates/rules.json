@@ -8,6 +8,7 @@
     "regex": "(?is)-----BEGIN CERTIFICATE-----.*?-----END CERTIFICATE-----",
     "entropy": 3.0,
     "severity": "high",
-    "entropy_factor": 0.7
+    "entropy_factor": 0.7,
+    "tier": 1
   }
 ]

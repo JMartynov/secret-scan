@@ -10,10 +10,10 @@ from ignore_engine import IgnoreEngine
 from cache_engine import load_cache, save_cache, is_commit_clean, mark_commit_clean
 from concurrent.futures import ProcessPoolExecutor
 
-def scan_block_worker(block, data_dir, threshold, mode, force_scan_all):
+def scan_block_worker(block, data_dir, threshold, mode, force_scan_all, include_pii, pii_regions):
     # Re-initialize detector in each process to avoid serialization issues
     # and to ensure rules are loaded.
-    detector = SecretDetector(entropy_threshold=threshold, data_dir=data_dir, mode=mode, force_scan_all=force_scan_all)
+    detector = SecretDetector(entropy_threshold=threshold, data_dir=data_dir, mode=mode, force_scan_all=force_scan_all, include_pii=include_pii, pii_regions=pii_regions)
     findings = detector.scan(block.content)
     for f in findings:
         f.filepath = block.filepath
@@ -47,13 +47,19 @@ def main():
     parser.add_argument("--fail-on-risk", choices=["HIGH", "MEDIUM", "LOW"], help="Fail if secrets with given risk or higher are found")
     parser.add_argument("--data-dir", default="data", help="Path to data directory for rules")
 
+    # PII Flags
+    parser.add_argument("--pii", action="store_true", help="Enable PII detection (emails, phones, etc.)")
+    parser.add_argument("--pii-region", help="Comma-separated list of regions to limit PII scanning (e.g., US,UK)")
+
     args = parser.parse_args()
 
     ignore_engine = IgnoreEngine()
     if args.baseline:
         ignore_engine.load_baseline(args.baseline)
 
-    detector = SecretDetector(entropy_threshold=args.threshold, data_dir=args.data_dir, ignore_engine=ignore_engine, mode=args.mode, force_scan_all=args.force_scan_all)
+    pii_regions = args.pii_region.split(',') if args.pii_region else []
+
+    detector = SecretDetector(entropy_threshold=args.threshold, data_dir=args.data_dir, ignore_engine=ignore_engine, mode=args.mode, force_scan_all=args.force_scan_all, include_pii=args.pii, pii_regions=pii_regions)
     git_engine = GitEngine()
     cache = load_cache()
 
@@ -106,7 +112,7 @@ def main():
             # Parallel scan
             dirty_commits = set()
             with ProcessPoolExecutor() as executor:
-                futures = [executor.submit(scan_block_worker, b, args.data_dir, args.threshold, args.mode, args.force_scan_all) for b in uncached_blocks]
+                futures = [executor.submit(scan_block_worker, b, args.data_dir, args.threshold, args.mode, args.force_scan_all, args.pii, pii_regions) for b in uncached_blocks]
                 for future in futures:
                     findings, sha = future.result()
                     if findings:

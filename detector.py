@@ -12,6 +12,7 @@ import regex as standard_re
 from report import Finding, format_report
 
 from suggestions import get_suggestion
+from src.validators import validate_finding
 
 # Design rule #4: Limit input size for single-block scanning
 MAX_BLOCK_SIZE = 100_000
@@ -26,8 +27,10 @@ def timeout_handler(signum, frame):
     raise TimeoutError()
 
 class DetectionEngine:
-    def __init__(self, entropy_threshold: float = 4.0, data_dir: str = 'data'):
+    def __init__(self, entropy_threshold: float = 4.0, data_dir: str = 'data', include_pii: bool = False, pii_regions: List[str] = None):
         self.entropy_threshold = entropy_threshold
+        self.include_pii = include_pii
+        self.pii_regions = [r.lower() for r in pii_regions] if pii_regions else []
         self.rules = self._load_all_rules(data_dir)
         self.keyword_map = {}
         self.automaton = ahocorasick.Automaton()
@@ -59,12 +62,24 @@ class DetectionEngine:
             if root == data_dir:
                 # Skip root as it was handled above for legacy support
                 continue
+
+            # Skip PII rules if not requested
+            if not self.include_pii and os.path.basename(root) == 'pii':
+                continue
+
             for file in files:
                 if file == 'rules.json':
                     try:
                         with open(os.path.join(root, file), 'r', encoding='utf-8') as f:
                             rules = json.load(f)
                             for r in rules:
+                                # Regional filtering for PII
+                                if self.include_pii and os.path.basename(root) == 'pii' and self.pii_regions:
+                                    region = r.get('region', '').lower()
+                                    # If rule has a region, and it's not in the requested regions, skip it
+                                    if region and region not in self.pii_regions:
+                                        continue
+
                                 # Standardize category based on directory structure
                                 r['category'] = os.path.basename(root)
                                 all_rules.append(r)
@@ -83,6 +98,7 @@ class DetectionEngine:
             rule.setdefault('engine', 're2')
             rule.setdefault('severity', rule.get('risk', 'medium').lower())
             rule.setdefault('confidence', 'medium')
+            rule.setdefault('tier', 2) # Default to Infrastructure tier for legacy rules
 
             # If original rules had 'entropy' field, use it as 'min_entropy'
             # but apply a leniency factor (defaults to 0.7 for backward compatibility,
@@ -189,6 +205,7 @@ class DetectionEngine:
         for match in standard_re.finditer(r"\b[a-zA-Z0-9]{20,}\b", line):
             token = match.group(0)
             # Skip tokens already identified by structured rules to avoid duplication
+            # This is an initial fast-path check. Proper shadowing is done in _resolve_overlaps.
             if any(token in f.content for f in existing_findings):
                 continue
 
@@ -199,10 +216,16 @@ class DetectionEngine:
                 start = line_offset + match.start()
                 end = line_offset + match.end()
                 # Use contextual heuristics to boost confidence for generic entropy hits
+                # Entropy matches are assigned Tier 4
+                finding = Finding("High Entropy String", line_num, "MEDIUM", token, 0.3, start, end, "entropy")
+                finding.tier = 4
+
                 if standard_re.search(r"(?i)(key|secret|token|password|auth|api|cred|prod)", line):
-                    findings.append(Finding("Potential Secret (High Entropy + Context)", line_num, "HIGH", token, 0.7, start, end, "entropy"))
-                else:
-                    findings.append(Finding("High Entropy String", line_num, "MEDIUM", token, 0.3, start, end, "entropy"))
+                    finding.secret_type = "Potential Secret (High Entropy + Context)"
+                    finding.severity = "HIGH"
+                    finding.confidence = 0.7
+
+                findings.append(finding)
         return findings
 
 class SecretDetector:
@@ -210,8 +233,8 @@ class SecretDetector:
     Main entry point for secret detection. Manages the detection engine and additional
     contextual/LLM-style heuristic rules.
     """
-    def __init__(self, entropy_threshold: float = 4.0, data_dir: str = 'data', force_scan_all: bool = False, ignore_engine=None, mode: str = 'balanced'):
-        self.engine = DetectionEngine(entropy_threshold, data_dir)
+    def __init__(self, entropy_threshold: float = 4.0, data_dir: str = 'data', force_scan_all: bool = False, ignore_engine=None, mode: str = 'balanced', include_pii: bool = False, pii_regions: List[str] = None):
+        self.engine = DetectionEngine(entropy_threshold, data_dir, include_pii, pii_regions)
         self.force_scan_all = force_scan_all
         self.ignore_engine = ignore_engine
         self.mode = mode
@@ -287,6 +310,9 @@ class SecretDetector:
                 for m in rule['regex'].finditer(text):
                     content = extract_content(m)
                     
+                    if not validate_finding(rule['id'], content):
+                        continue
+
                     if self.ignore_engine and self.ignore_engine.is_in_baseline(content):
                         continue
 
@@ -301,7 +327,7 @@ class SecretDetector:
 
                     line_num = get_line_num(m.start())
                     confidence = self.engine.calculate_confidence(0.8, line_content, rule_def)
-                    all_findings.append(Finding(
+                    finding = Finding(
                         rule['id'], 
                         line_num, 
                         rule['severity'].upper(), 
@@ -312,7 +338,9 @@ class SecretDetector:
                         rule_def.get('category', 'generic'), 
                         get_suggestion(rule['id'], rule_def.get('category', 'generic')),
                         context_line=line_content
-                    ))
+                    )
+                    finding.tier = rule_def.get('tier', 2)
+                    all_findings.append(finding)
 
         # 2. Regex Matching (Legacy - Fallback with timeout)
         if self.mode != 'fast':
@@ -321,6 +349,9 @@ class SecretDetector:
                 if force_scan_all or not rule_def.get('keywords') or rule['original_idx'] in triggered_indices:
                     for m in self.engine.run_safe_legacy_match(rule['regex'], text):
                         content = extract_content(m)
+
+                        if not validate_finding(rule['id'], content):
+                            continue
                         
                         if self.ignore_engine and self.ignore_engine.is_in_baseline(content):
                             continue
@@ -335,7 +366,7 @@ class SecretDetector:
 
                         line_num = get_line_num(m.start())
                         confidence = self.engine.calculate_confidence(0.7, line_content, rule_def)
-                        all_findings.append(Finding(
+                        finding = Finding(
                             rule['id'], 
                             line_num, 
                             rule['severity'].upper(), 
@@ -346,7 +377,9 @@ class SecretDetector:
                             rule_def.get('category', 'generic'), 
                             get_suggestion(rule['id'], rule_def.get('category', 'generic')),
                             context_line=line_content
-                        ))
+                        )
+                        finding.tier = rule_def.get('tier', 2)
+                        all_findings.append(finding)
 
         # 3. Contextual rules (Heuristic matches for likely secret declarations)
         for regex in self.context_rules:
@@ -359,7 +392,7 @@ class SecretDetector:
                 if self.ignore_engine and self.ignore_engine.is_ignored_line(line_content, "Contextual Secret (LLM Prompt)"):
                     continue
 
-                all_findings.append(Finding(
+                finding = Finding(
                     "Contextual Secret (LLM Prompt)", 
                     get_line_num(m.start()), 
                     "MEDIUM", 
@@ -370,7 +403,9 @@ class SecretDetector:
                     "authentication", 
                     get_suggestion("contextual secret", "authentication"),
                     context_line=line_content
-                ))
+                )
+                finding.tier = 3 # Contextual rules are Tier 3
+                all_findings.append(finding)
 
         # 4. Entropy Detection (Generic catch-all)
         if self.mode in ['balanced', 'deep']:
@@ -411,28 +446,37 @@ class SecretDetector:
                 current_weight = (current.end - current.start) * current.confidence
                 next_weight = (next_f.end - next_f.start) * next_f.confidence
 
-                # Heuristic 1: Boost structured rules over generic entropy hits
-                if "Entropy" in current.secret_type and "Entropy" not in next_f.secret_type:
-                    next_weight *= 2.0
-                elif "Entropy" not in current.secret_type and "Entropy" in next_f.secret_type:
-                    current_weight *= 2.0
-
-                # Heuristic 2: Penalize "generic", "common", or "Contextual" rules over specific ones
-                is_curr_generic = any(x in current.secret_type.lower() for x in ["generic", "common", "contextual"])
-                is_next_generic = any(x in next_f.secret_type.lower() for x in ["generic", "common", "contextual"])
-
-                # Prefer explicit secrets when overlapping with generic heuristics
-                if is_curr_generic and not is_next_generic:
+                # Heuristic 0: Tier Shadowing
+                # Lower tier number means higher confidence (Tier 1 > Tier 2 > Tier 3 > Tier 4)
+                if current.tier < next_f.tier:
+                    # Current tier shadows next
+                    pass
+                elif next_f.tier < current.tier:
+                    # Next tier shadows current
                     current = next_f
-                    continue
+                else:
+                    # Heuristic 1: Boost structured rules over generic entropy hits
+                    if "Entropy" in current.secret_type and "Entropy" not in next_f.secret_type:
+                        next_weight *= 2.0
+                    elif "Entropy" not in current.secret_type and "Entropy" in next_f.secret_type:
+                        current_weight *= 2.0
 
-                if is_curr_generic and not is_next_generic:
-                    next_weight *= 2.0
-                elif not is_curr_generic and is_next_generic:
-                    current_weight *= 2.0
+                    # Heuristic 2: Penalize "generic", "common", or "Contextual" rules over specific ones
+                    is_curr_generic = any(x in current.secret_type.lower() for x in ["generic", "common", "contextual"])
+                    is_next_generic = any(x in next_f.secret_type.lower() for x in ["generic", "common", "contextual"])
 
-                if next_weight > current_weight:
-                    current = next_f
+                    # Prefer explicit secrets when overlapping with generic heuristics
+                    if is_curr_generic and not is_next_generic:
+                        current = next_f
+                        continue
+
+                    if is_curr_generic and not is_next_generic:
+                        next_weight *= 2.0
+                    elif not is_curr_generic and is_next_generic:
+                        current_weight *= 2.0
+
+                    if next_weight > current_weight:
+                        current = next_f
             else:
                 resolved.append(current)
                 current = next_f

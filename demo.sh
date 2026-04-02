@@ -22,8 +22,10 @@ def get_noise(length=50):
     return " ".join(random.choices(words, k=length // 8)) + " "
 
 # Load all test data from categorized files
-categories = ['api_keys', 'authentication', 'certificates', 'cloud_credentials',
-              'database_credentials', 'infrastructure', 'private_keys', 'tokens']
+categories = [
+    'Structured/api_keys', 'Infrastructure/authentication', 'Structured/certificates', 'Structured/cloud_credentials',
+    'Infrastructure/database_credentials', 'Infrastructure/infrastructure', 'Structured/private_keys', 'Structured/tokens'
+]
 all_test_data = {}
 for cat in categories:
     test_file_path = f'data/{cat}/test_data.json'
@@ -109,7 +111,7 @@ echo "----------------------------------------------------"
 
 FORCE_STRIPE_SECRET=$(python3 - <<'PY'
 import json, base64
-with open('data/private_keys/test_data.json') as f:
+with open('data/Structured/private_keys/test_data.json') as f:
     data = json.load(f)
 entry = data['stripe_api_key']['positives'][0]
 print(base64.b64decode(entry).decode('utf-8', errors='ignore'))
@@ -134,6 +136,12 @@ echo "----------------------------------------------------"
 echo -e "\n--- Part 11: Git History Scan ---"
 echo ">>> ./run.sh --history --max-commits 3"
 ./run.sh --history --max-commits 3
+echo "----------------------------------------------------"
+
+echo -e "\n--- Part 12: PII Detection ---"
+PII_SAMPLE="Contact me at support@example.com or call 555-0199. Here is my CC: 4111111111111111"
+echo ">>> echo \"$PII_SAMPLE\" | ./run.sh --pii"
+printf "%s\n" "$PII_SAMPLE" | ./run.sh --pii
 echo "----------------------------------------------------"
 
 # 4. Cleanup

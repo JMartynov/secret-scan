@@ -8,7 +8,8 @@
     "regex": "(?i)(?:abuseipdb)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{80})\\b",
     "entropy": 3.5,
     "severity": "high",
-    "entropy_factor": 0.7
+    "entropy_factor": 0.7,
+    "tier": 2
   },
   {
     "id": "getsandbox_api_key",
@@ -19,7 +20,8 @@
     "regex": "(?i)(?:getsandbox)(?:.|[\\n\\r]){0,40}\\b([a-z0-9-]{40})\\b",
     "entropy": 3.5,
     "severity": "high",
-    "entropy_factor": 0.7
+    "entropy_factor": 0.7,
+    "tier": 2
   },
   {
     "id": "ipinfodb_api_key",
@@ -30,7 +32,8 @@
     "regex": "(?i)(?:ipinfodb)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
     "entropy": 3.5,
     "severity": "high",
-    "entropy_factor": 0.7
+    "entropy_factor": 0.7,
+    "tier": 2
   },
   {
     "id": "jdbc_token",
@@ -41,7 +44,8 @@
     "regex": "(?i)jdbc:[\\w]{3,10}:\\/\\/\\w[\\s\\S]{0,512}?password[=: \\\"']+(?P<pass>[^<{($]*?)[ \\s'\\\"]+",
     "entropy": 3.5,
     "severity": "high",
-    "entropy_factor": 0.7
+    "entropy_factor": 0.7,
+    "tier": 2
   },
   {
     "id": "paymongo_api_key",
@@ -52,7 +56,8 @@
     "regex": "(?i)(?:paymongo)(?:.|[\\n\\r]){0,40}\\b([a-zA-Z0-9_]{32})\\b",
     "entropy": 3.5,
     "severity": "high",
-    "entropy_factor": 0.7
+    "entropy_factor": 0.7,
+    "tier": 2
   },
   {
     "id": "sendbird_api_key",
@@ -63,7 +68,8 @@
     "regex": "(?i)(?:sendbird)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{40})\\b",
     "entropy": 3.5,
     "severity": "high",
-    "entropy_factor": 0.7
+    "entropy_factor": 0.7,
+    "tier": 2
   },
   {
     "id": "sendbird_organizational_api_key",
@@ -74,7 +80,8 @@
     "regex": "(?i)(?:sendbird)(?:.|[\\n\\r]){0,40}\\b([0-9a-f]{24})\\b",
     "entropy": 3.5,
     "severity": "high",
-    "entropy_factor": 0.7
+    "entropy_factor": 0.7,
+    "tier": 2
   },
   {
     "id": "database_connection_string_full",
@@ -85,7 +92,8 @@
       "string"
     ],
     "regex": "(?:\\A|[\"'`]|&quot;|[\\r\\n]|[=:-])([^\"'`\\x00-\\x08\\r\\n|]*([Ss]erver|[Pp]rovider|[Dd]atabase|[Uu]ser [Ii]d|[Dd]ata [Ss]ource|[Ee]ndpoint|[Dd]efault[Ee]nd[Pp]oints[Pp]rotocol|[Aa]ccountName|[Da]ata[Ss]ource|[Aa]uthentication|[Ll]ogin|[Ii]nitial[Cc]atalog|DB|Trusted_Connection|authenticationType|DSN|[Dd]ata[Ss]ource[Nn]ame|[Ii]ntegrated[Ss]ecurity|[Ll]ocation|[Ee]ncrypt|[Ss]ystem|[Pp]rotocol|[Hh]ost|[Pp]ort|SRVR|[Dd]river|Dbq|[Ss]sl[Mm]ode|SSL|[Uu]id|DBNAME|SystemDB|[Pp]ersist [Ss]ecurity [Ii]nfo|[Cc]onnection [Tt]ype|[Dd]ata[Ss]ource[Nn]ame|[Ee]xcel [Ff]ile|[Ss]erver [Nn]ame|URL)=[^\"'`\\x00-\\x08\\r\\n|]*)(?:\\z|[\"'`]|&quot;|[\\r\\n])",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "database_connection_string_1",
@@ -96,7 +104,8 @@
       "string"
     ],
     "regex": "(?:(\"|&quot;)(([Ss]erver|[Pp]rovider|[Dd]atabase|[Uu]ser [Ii]d|[Dd]ata [Ss]ource|[Ee]ndpoint|[Dd]efault[Ee]nd[Pp]oints[Pp]rotocol|[Aa]ccountName|[Da]ata[Ss]ource|[Aa]uthentication|[Ll]ogin|[Ii]nitial[Cc]atalog|DB|Trusted_Connection|authenticationType|DSN|[Dd]ata[Ss]ource[Nn]ame|[Ii]ntegrated[Ss]ecurity|[Ll]ocation|[Ee]ncrypt|[Ss]ystem|[Pp]rotocol|[Hh]ost|[Pp]ort|SRVR|[Dd]river|Dbq|[Ss]sl[Mm]ode|SSL|[Uu]id|DBNAME|SystemDB|[Pp]ersist [Ss]ecurity [Ii]nfo|[Cc]onnection [Tt]ype|[Dd]ata[Ss]ource[Nn]ame|[Ee]xcel [Ff]ile|[Ss]erver [Nn]ame|URL)=[^\"]+;) ?([Pp]assword|[Pp]wd|[Ss]hared[Ss]ecret[Vv]alue|[Aa]ccount[Kk]ey|PW|pw|[Cc]ipher [Kk]ey|OAuth Access Token Secret)=)([^;\"\\x00-\\x08]+)(?:(;|\"|&quot;))",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "database_connection_string_2",
@@ -107,7 +116,8 @@
       "string"
     ],
     "regex": "(?:(?i)(\"|&quot;)([Pp]assword|[Pp]wd|[Ss]hared[Ss]ecret[Vv]alue|[Aa]ccount[Kk]ey|PW|pw|[Cc]ipher [Kk]ey|OAuth Access Token Secret)=)([^;\"\\x00-\\x08]+)(?:;[^\";]* ?([Ss]erver|[Pp]rovider|[Dd]atabase|[Uu]ser [Ii]d|[Dd]ata [Ss]ource|[Ee]ndpoint|[Dd]efault[Ee]nd[Pp]oints[Pp]rotocol|[Aa]ccountName|[Da]ata[Ss]ource|[Aa]uthentication|[Ll]ogin|[Ii]nitial[Cc]atalog|DB|Trusted_Connection|authenticationType|DSN|[Dd]ata[Ss]ource[Nn]ame|[Ii]ntegrated[Ss]ecurity|[Ll]ocation|[Ee]ncrypt|[Ss]ystem|[Pp]rotocol|[Hh]ost|[Pp]ort|SRVR|[Dd]river|Dbq|[Ss]sl[Mm]ode|SSL|[Uu]id|DBNAME|SystemDB|[Pp]ersist [Ss]ecurity [Ii]nfo|[Cc]onnection [Tt]ype|[Dd]ata[Ss]ource[Nn]ame|[Ee]xcel [Ff]ile|[Ss]erver [Nn]ame|URL)=)",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "database_connection_string_3",
@@ -118,7 +128,8 @@
       "string"
     ],
     "regex": "(?:(\\A|\\b)ConnectionStrings__Default=[^\\r\\n]*([Pp]assword|[Pp]wd|[Ss]hared[Ss]ecret[Vv]alue|[Aa]ccount[Kk]ey|PW|pw|[Cc]ipher [Kk]ey|OAuth Access Token Secret)=)([^;\\r\\n\"'\\x00-\\x08]+)(?:([;\\n]|\\z))",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "tsql_create_login_or_user",
@@ -129,7 +140,8 @@
       "login"
     ],
     "regex": "(?:(\\A|\\b)CREATE\\s+(LOGIN|USER)\\s+[^\\s\\x00-\\x08]+\\s+WITH\\s+PASSWORD\\s+=\\s+N?')([^'\\x00-\\x08]{8,128})(?:\\')",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "sqlalchemy_connection_string",
@@ -140,7 +152,8 @@
       "connection"
     ],
     "regex": "(?:(\\A|\\b)mysql\\+[a-z]+://[^/?#:@\\s\\x00-\\x08]*:)([^$/?#@\\s][^/?#@\\s\\x00-\\x08]*)(?:@)",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "mongodb_connection_string",
@@ -151,7 +164,8 @@
       "string"
     ],
     "regex": "(?:\\A|\\b)(mongodb(\\+[a-z]+)?://[^'\"`<>/:@\\s\\x00-\\x08]+:[^'\"`<>/@\\s\\x00-\\x08]+@[^?'\"`\\s\\x00-\\x08]+)(?:\\z|\\s|['\"`?])",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "jdbc_connection_string",
@@ -162,7 +176,8 @@
       "connection"
     ],
     "regex": "(?:\\A|\\b)(jdbc:[^:\\x00-\\x08]+:\\/\\/[^\\/\\x00-\\x08]+\\/[^?\\x00-\\x08]+\\?user=[^&\\x00-\\x08]+&password=[^\\s'\"`<{$%*\\x00-\\x08]+)(?:\\z|\\s|['\"`<])",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "hardcoded_spring_sql_passwords",
@@ -173,7 +188,8 @@
       "passwords"
     ],
     "regex": "(?:(\\A|\\b)(?:spring\\.datasource|jdbc)\\.password[ \\t]*=[ \\t]*['\"]?)([^\\r\\n'\"\\x00-\\x08]+)(?:\\z|['\"\\r\\n])",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "hardcoded_internal_emails",
@@ -184,7 +200,8 @@
       "emails"
     ],
     "regex": "(?:\\A|[\\s\"'`,;=])([^:@\\r\\n \\t\"'/\\p{Cc}]+@(internal\\.)?example\\.com)(?:\\z|[^a-zA-Z._0-9-])",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "hardcoded_internal_urls",
@@ -195,7 +212,8 @@
       "urls"
     ],
     "regex": "(?:\\A|[^A-Za-z0-9+_-])([A-Za-z][A-Za-z0-9+_-]*://([^/?#\\s\\p{Cc}]*[.@])?(example\\.com|internal\\.example\\.com)[/?#]?[^\\s\"']*)(?:\\z|[\\s'\"])",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "hardcoded_uri_passwords",
@@ -205,7 +223,8 @@
       "passwords"
     ],
     "regex": "(?:(\\b|\\A)[A-Za-z][A-Za-z0-9+_-]*://[^/?#:@\\s\\x00-\\x08]*:)([^$/?#@\\s][^/?#@\\s\\x00-\\x08]*)(?:@[\\p{L}\\p{N}\\.-]*(?:\\:[0-9]{1,5})?([/?#\\s\"'`]|\\z))",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "any_ipv4_addresses",
@@ -216,7 +235,8 @@
       "addresses"
     ],
     "regex": "(?:\\A|[^v.0-9])((?:(?:25[0-5]|(?:2[0-4]|1[0-9]|[1-9]|)[0-9])\\.){3}(?:25[0-5]|(?:2[0-4]|1[0-9]|[1-9]|)[0-9]))(?:\\z|[^.0-9-])",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "ghcr_typos",
@@ -227,6 +247,7 @@
       "registry"
     ],
     "regex": "(?:\\A|[^0-9A-Za-z-])((?:ghrc|gchr|hgcr|ghr|ghc)\\.io)(?:\\z|[^0-9A-Za-z.-])",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   }
 ]

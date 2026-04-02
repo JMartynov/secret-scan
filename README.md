@@ -1,5 +1,7 @@
 # LLM Secrets Leak Detector
 
+[![Self Secret Scan](https://github.com/JMartynov/secret-scan/actions/workflows/self-scan.yml/badge.svg)](https://github.com/JMartynov/secret-scan/actions/workflows/self-scan.yml)
+
 **LLM Secrets Leak Detector** is a security tool designed to prevent accidental exposure of sensitive data when interacting with Large Language Models (LLMs).
 
 Modern AI development workflows frequently involve sending code snippets, configuration files, logs, and debugging output to language models. In many cases developers unintentionally include sensitive information such as API keys, database credentials, private tokens, or internal infrastructure details.

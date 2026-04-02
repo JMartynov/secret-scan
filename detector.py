@@ -162,23 +162,70 @@ class DetectionEngine:
             return 4.0 # Base64 threshold
         return 4.0 # Alphanumeric/Generic threshold
 
-    def calculate_confidence(self, base_score: float, line: str, rule: Dict[str, Any]) -> float:
-        """Calculates a contextual confidence score based on keywords near the match."""
-        score = base_score
+    def calculate_confidence(self, base_score: float, line: str, rule: Dict[str, Any], match_content: str = "", start_pos: int = -1) -> tuple[float, float]:
+        """Calculates a contextual confidence score and a weighted risk score (0-100)."""
+        confidence = base_score
         line_lower = line.lower()
+        score = 0.0
 
-        # Boost confidence if specific keywords from the rule are present
-        for kw in (rule.get('keywords') or []):
-            if kw.lower() in line_lower:
-                score = min(1.0, score + 0.1)
+        base_weight = 70 if base_score >= 0.8 else 40
+
+        # Context Bonus with Proximity Decay
+        context_bonus = 0
+        best_distance = float('inf')
+        keywords = rule.get('keywords') or []
+        for kw in keywords:
+            kw_lower = kw.lower()
+            if kw_lower in line_lower:
+                confidence = min(1.0, confidence + 0.1)
+                
+        if match_content and match_content.lower() in line_lower:
+            match_idx = line_lower.find(match_content.lower())
+            for kw in keywords:
+                kw_lower = kw.lower()
+                idx = line_lower.find(kw_lower)
+                while idx != -1:
+                    distance = abs(match_idx - idx)
+                    if distance < best_distance:
+                        best_distance = distance
+                    idx = line_lower.find(kw_lower, idx + 1)
+        
+        if best_distance <= 50:
+            # Full 20 points if adjacent, linearly decreasing down to 0 at 50 chars
+            context_bonus = max(0, 20 * (1 - (best_distance / 50)))
+
+        # Entropy Adjustment
+        entropy_adj = 0
+        if match_content:
+            entropy = self.calculate_entropy(match_content)
+            if entropy > 4.5:
+                entropy_adj = 15
 
         # Suppress confidence if "false positive" indicators are present
-        suppress_keywords = ['example', 'test', 'dummy', 'localhost', 'sample', 'placeholder']
+        suppress_keywords = ['example', 'test', 'dummy', 'localhost', 'sample', 'placeholder', 'example_key']
+        is_test_data = False
         for skw in suppress_keywords:
             if skw in line_lower:
-                score = max(0.1, score - 0.3)
+                confidence = max(0.1, confidence - 0.3)
+                is_test_data = True
+                
+        fp_penalty = 50 if (is_test_data or any(skw in match_content.lower() for skw in suppress_keywords)) else 0
 
-        return round(score, 2)
+        score = (base_weight * confidence) + context_bonus + entropy_adj - fp_penalty
+
+        score = max(0.0, min(100.0, score))
+        
+        # Calculate dynamic risk level based on thresholds
+        if score >= 90:
+            risk = "CRITICAL"
+        elif score >= 70:
+            risk = "HIGH"
+        elif score >= 40:
+            risk = "MEDIUM"
+        else:
+            risk = "LOW"
+
+        return round(confidence, 2), round(score, 2), risk
 
     def run_safe_legacy_match(self, regex, text):
         """
@@ -216,15 +263,11 @@ class DetectionEngine:
                 start = line_offset + match.start()
                 end = line_offset + match.end()
                 # Use contextual heuristics to boost confidence for generic entropy hits
-                # Entropy matches are assigned Tier 4
-                finding = Finding("High Entropy String", line_num, "MEDIUM", token, 0.3, start, end, "entropy")
+                conf, sc, dynamic_risk = self.calculate_confidence(0.7 if standard_re.search(r"(?i)(key|secret|token|password|auth|api|cred|prod)", line) else 0.3, line, {'keywords': ['key', 'secret', 'token', 'password', 'auth', 'api', 'cred', 'prod']}, token, match.start())
+                finding = Finding("High Entropy String", line_num, dynamic_risk, token, conf, start=start, end=end, category="entropy", score=sc)
                 finding.tier = 4
-
                 if standard_re.search(r"(?i)(key|secret|token|password|auth|api|cred|prod)", line):
                     finding.secret_type = "Potential Secret (High Entropy + Context)"
-                    finding.severity = "HIGH"
-                    finding.confidence = 0.7
-
                 findings.append(finding)
         return findings
 
@@ -326,18 +369,19 @@ class SecretDetector:
                         continue
 
                     line_num = get_line_num(m.start())
-                    confidence = self.engine.calculate_confidence(0.8, line_content, rule_def)
+                    confidence, score, dynamic_risk = self.engine.calculate_confidence(0.8, line_content, rule_def, m.group(0), m.start() - line_offsets[max(0, bisect.bisect_right(line_offsets, m.start()) - 1)])
                     finding = Finding(
                         rule['id'], 
                         line_num, 
-                        rule['severity'].upper(), 
+                        dynamic_risk, 
                         content, 
                         confidence, 
                         m.start(), 
                         m.end(), 
                         rule_def.get('category', 'generic'), 
                         get_suggestion(rule['id'], rule_def.get('category', 'generic')),
-                        context_line=line_content
+                        context_line=line_content,
+                        score=score
                     )
                     finding.tier = rule_def.get('tier', 2)
                     all_findings.append(finding)
@@ -365,21 +409,22 @@ class SecretDetector:
                             continue
 
                         line_num = get_line_num(m.start())
-                        confidence = self.engine.calculate_confidence(0.7, line_content, rule_def)
+                        confidence, score, dynamic_risk = self.engine.calculate_confidence(0.7, line_content, rule_def, m.group(0), m.start() - line_offsets[max(0, bisect.bisect_right(line_offsets, m.start()) - 1)])
                         finding = Finding(
                             rule['id'], 
                             line_num, 
-                            rule['severity'].upper(), 
+                            dynamic_risk, 
                             content, 
                             confidence, 
                             m.start(), 
                             m.end(), 
                             rule_def.get('category', 'generic'), 
                             get_suggestion(rule['id'], rule_def.get('category', 'generic')),
-                            context_line=line_content
-                        )
-                        finding.tier = rule_def.get('tier', 2)
-                        all_findings.append(finding)
+                        context_line=line_content,
+                        score=score
+                    )
+                    finding.tier = rule_def.get('tier', 2)
+                    all_findings.append(finding)
 
         # 3. Contextual rules (Heuristic matches for likely secret declarations)
         for regex in self.context_rules:
@@ -392,19 +437,21 @@ class SecretDetector:
                 if self.ignore_engine and self.ignore_engine.is_ignored_line(line_content, "Contextual Secret (LLM Prompt)"):
                     continue
 
+                conf, sc, dynamic_risk = self.engine.calculate_confidence(0.6, line_content, {'keywords': ['api', 'token', 'secret', 'password', 'key']}, m.group(0), m.start() - line_offsets[max(0, bisect.bisect_right(line_offsets, m.start()) - 1)])
                 finding = Finding(
                     "Contextual Secret (LLM Prompt)", 
                     get_line_num(m.start()), 
-                    "MEDIUM", 
+                    dynamic_risk, 
                     secret, 
-                    0.6, 
+                    conf, 
                     m.start(), 
                     m.end(), 
                     "authentication", 
                     get_suggestion("contextual secret", "authentication"),
-                    context_line=line_content
+                        context_line=line_content,
+                    score=sc
                 )
-                finding.tier = 3 # Contextual rules are Tier 3
+                finding.tier = 3
                 all_findings.append(finding)
 
         # 4. Entropy Detection (Generic catch-all)

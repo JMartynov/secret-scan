@@ -138,7 +138,13 @@ echo ">>> ./run.sh --history --max-commits 3"
 ./run.sh --history --max-commits 3
 echo "----------------------------------------------------"
 
-echo -e "\n--- Part 12: PII Detection ---"
+echo -e "\n--- Part 12: Advanced Risk Scoring ---"
+echo ">>> Scanning: combined_small.txt with Advanced Risk Scoring"
+./run.sh "$COMBINED" --full
+echo ""
+echo ">>> Filtering out low-confidence noise with --min-score 70"
+./run.sh "$COMBINED" --full --min-score 70
+echo -e "\n--- Part 13: PII Detection ---"
 PII_SAMPLE="Contact me at support@example.com or call 555-0199. Here is my CC: 4111111111111111"
 echo ">>> echo \"$PII_SAMPLE\" | ./run.sh --pii"
 printf "%s\n" "$PII_SAMPLE" | ./run.sh --pii

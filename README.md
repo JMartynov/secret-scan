@@ -349,6 +349,11 @@ Findings are returned as structured results including:
 * location
 * confidence score
 * risk level
+* risk score (0-100)
+
+The CLI produces clear, color-coded output highlighting the location, risk level (HIGH, MEDIUM, LOW), and an Advanced Risk Score (0-100) of detected secrets. The risk score is determined by a weighted heuristic that incorporates regex confidence, contextual proximity bonuses, and entropy adjustments. The `report.py` module manages deduplication and formatting. Use `--format sarif` for CI/CD integration.
+
+You can tune sensitivity and filter out low-confidence noise by using the `--min-score` flag (e.g., `--min-score 70`).
 
 ---
 

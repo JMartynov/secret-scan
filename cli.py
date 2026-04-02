@@ -44,8 +44,9 @@ def main():
     parser.add_argument("--mode", choices=["fast", "balanced", "deep"], default="balanced", help="Scanning mode")
     parser.add_argument("--baseline", help="Baseline file to ignore existing secrets")
     parser.add_argument("--format", choices=["text", "sarif"], default="text", help="Output format")
-    parser.add_argument("--fail-on-risk", choices=["HIGH", "MEDIUM", "LOW"], help="Fail if secrets with given risk or higher are found")
+    parser.add_argument("--fail-on-risk", choices=["CRITICAL", "HIGH", "MEDIUM", "LOW"], help="Fail if secrets with given risk or higher are found")
     parser.add_argument("--data-dir", default="data", help="Path to data directory for rules")
+    parser.add_argument("--min-score", type=float, default=0.0, help="Minimum risk score to report (0-100)")
 
     # PII Flags
     parser.add_argument("--pii", action="store_true", help="Enable PII detection (emails, phones, etc.)")
@@ -192,6 +193,10 @@ def main():
             parser.print_help()
             sys.exit(0)
 
+    # Filter by minimum score
+    if args.min_score > 0:
+        all_findings = [f for f in all_findings if f.score >= args.min_score]
+
     # Output results
     if args.format == "sarif":
         print(format_sarif(all_findings))
@@ -200,7 +205,7 @@ def main():
 
     # Exit code based on fail-on-risk
     if args.fail_on_risk:
-        risk_levels = ["LOW", "MEDIUM", "HIGH"]
+        risk_levels = ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
         fail_threshold = risk_levels.index(args.fail_on_risk)
         for f in all_findings:
             if risk_levels.index(f.risk) >= fail_threshold:

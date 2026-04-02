@@ -540,6 +540,24 @@ The scanner can be integrated into:
 
 ---
 
+## PII Detection
+
+The scanner now supports detecting Personal Identifiable Information (PII) including emails, phone numbers, credit cards, and SSNs.
+
+Enable PII detection with the `--pii` flag:
+
+```bash
+# Scan a file for secrets and PII
+./run.sh --pii example_file.txt
+
+# Limit PII scanning to specific regions (e.g., US only for SSNs and US phone numbers)
+./run.sh --pii --pii-region US example_file.txt
+```
+
+PII findings are integrated into the multi-tier reporting system, where highly structured secrets (Tier 1) take precedence over contextual or generic entropy hits.
+
+---
+
 # Target Users
 
 ### AI Developers

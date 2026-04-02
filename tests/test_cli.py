@@ -66,7 +66,7 @@ def test_cli_options_passed(mock_detector, mock_format_report):
     with patch.object(sys, 'argv', ['cli.py', '--text', 'secret', '--threshold', '2.5', '--full', '--nocolors']):
         main()
     
-    mock_detector.assert_called_with(entropy_threshold=2.5, data_dir='data', ignore_engine=ANY, mode='balanced', force_scan_all=False)
+    mock_detector.assert_called_with(entropy_threshold=2.5, data_dir='data', ignore_engine=ANY, mode='balanced', force_scan_all=False, include_pii=False, pii_regions=[])
     mock_format_report.assert_called_with([], show_full=True, show_short=False, no_colors=True)
 
 def test_cli_short_option(mock_detector, mock_format_report):

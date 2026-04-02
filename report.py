@@ -31,6 +31,7 @@ class Finding:
     suggestion: str = ""
     filepath: str = ""
     context_line: str = ""
+    tier: int = 2
 
     @property
     def highlighted_context(self) -> str:

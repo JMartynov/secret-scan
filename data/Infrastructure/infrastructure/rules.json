@@ -8,7 +8,8 @@
     "regex": "(?i)(?:alienvault)(?:.|[\\n\\r]){0,40}\\b([a-z0-9]{64})\\b",
     "entropy": 3.5,
     "severity": "high",
-    "entropy_factor": 0.7
+    "entropy_factor": 0.7,
+    "tier": 2
   },
   {
     "id": "credit_cards",
@@ -18,7 +19,8 @@
       "cards"
     ],
     "regex": "((4[0-9]{12}(?:[0-9]{3})?|(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}|(34|37)[0-9]{13})# 4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\\d{3})\\d{11})",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "credit_card_visa",
@@ -29,7 +31,8 @@
       "visa"
     ],
     "regex": "(4[0-9]{12}(?:[0-9]{3})?)",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "credit_card_mastercard",
@@ -40,7 +43,8 @@
       "mastercard"
     ],
     "regex": "((?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12})",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "credit_cards_american_express",
@@ -51,7 +55,8 @@
       "american"
     ],
     "regex": "((34|37)[0-9]{13})",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "credit_card_discovery",
@@ -62,7 +67,8 @@
       "discover"
     ],
     "regex": "(6(?:011|5[0-9]{2})[0-9]{12})",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "iban",
@@ -71,7 +77,8 @@
       "iban"
     ],
     "regex": "(?:\\A|[^A-Za-z0-9-])([A-Z]{2}[0-9]{2}(?:[ -]?[A-Z0-9]{4}|(?:[ -]?[0-9]){4})?(?:[ -]?[0-9]){9,25}(?:[ -]?[A-Z0-9]){0,3})(?:\\z|[^A-Za-z0-9 -]|[ ][^0-9A-Z]|[ ]?\\z)",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "no_national_id_number",
@@ -82,7 +89,8 @@
       "identity"
     ],
     "regex": "(?:\\A|[^0-9A-Za-z_.+/\\\\-])((([04][1-9]|[15][0-9]|[26][0-9])(0[1-9]|1[0-2])|[37]0(0[469]|11)|[37][01](0[13578]|1[02]))[0-9]{2} ?[0-9]{3} ?[0-9]{2})(?:\\z|[^0-9A-Za-z_.+/\\\\=-])",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "us_ssn",
@@ -93,7 +101,8 @@
       "number"
     ],
     "regex": "(?:\\A|[^0-9A-Za-z_-])((?P<area>00[1-9]|0[1-9][0-9]|[1-8][0-9][0-9])-(?P<group>0[1-9]|[1-9][0-9])-(?P<serial>[0-9]{4}))(?:\\z|[^0-9A-Za-z_-])",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "us_itin",
@@ -104,7 +113,8 @@
       "identification"
     ],
     "regex": "(?:\\A|[^0-9A-Za-z_-])(9[0-9][0-9]-(?:5[0-9]|6[0-5]|7[0-9]|8[0-8]|9[0-24-9])-[0-9]{4})(?:\\z|[^0-9A-Za-z_-])",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   },
   {
     "id": "uk_national_insurance_number",
@@ -115,6 +125,7 @@
       "number"
     ],
     "regex": "(?:\\A|[^0-9A-Za-z])([A-Z]{2} ?[0-9]{2} ?[0-9]{2} ?[0-9]{2} ?[A-D])(?:\\z|[^0-9A-Za-z])",
-    "severity": "high"
+    "severity": "high",
+    "tier": 2
   }
 ]

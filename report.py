@@ -31,6 +31,7 @@ class Finding:
     suggestion: str = ""
     filepath: str = ""
     context_line: str = ""
+    score: float = 0.0
     tier: int = 2
 
     @property
@@ -115,8 +116,8 @@ def format_report(findings: List[Finding], show_full: bool = False, show_short: 
     final = sorted(unique.values(), key=lambda x: (x.location, x.secret_type))
 
     # Summary Generation
-    severity_order = {"HIGH": 0, "MEDIUM": 1, "LOW": 2}
-    severity_colors = {"HIGH": C_RED, "MEDIUM": C_YELLOW, "LOW": C_BLUE}
+    severity_order = {"CRITICAL": 0, "HIGH": 1, "MEDIUM": 2, "LOW": 3}
+    severity_colors = {"CRITICAL": C_BG_RED + C_WHITE, "HIGH": C_RED, "MEDIUM": C_YELLOW, "LOW": C_BLUE}
 
     header = colorize(f"⚠ Secrets detected: {len(final)}", C_BOLD, no_colors)
     summary_hdr = colorize("--- Summary ---", C_BOLD, no_colors)
@@ -150,10 +151,10 @@ def format_report(findings: List[Finding], show_full: bool = False, show_short: 
 
         report += f"\n{details_hdr}\n"
         for f in final:
-            colored_risk = colorize(f.risk, severity_colors.get(f.risk, C_RESET), no_colors)
+            colored_risk = colorize(f"[{f.risk}]", severity_colors.get(f.risk, C_RESET), no_colors)
             report += f"Type: {f.secret_type}\n"
             report += f"Location: line {f.location}\n"
-            report += f"Risk: {colored_risk}\n"
+            report += f"Risk: {colored_risk} (Score: {f.score})\n"
             if f.suggestion:
                 report += f"Suggestion: {f.suggestion}\n"
             if show_full:

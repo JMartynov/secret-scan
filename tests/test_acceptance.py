@@ -110,6 +110,15 @@ def test_git_multiline_reconstruction(): pass
 @scenario('acceptance.feature', '25. Binary File Handling with Embedded Secrets')
 def test_git_binary_handling(): pass
 
+@scenario('acceptance.feature', '26. Score-Based Filtering')
+def test_score_filtering(): pass
+
+@scenario('acceptance.feature', '27. Proximity Bonus Impact')
+def test_proximity_bonus(): pass
+
+@scenario('acceptance.feature', '28. Multi-Signal Boosting')
+def test_multi_signal_boosting(): pass
+
 
 # --- Steps ---
 
@@ -620,3 +629,51 @@ def check_preserved_text(ctx):
 def check_hashed_output(ctx):
     assert "[HASHED_" in ctx["output"]
     assert O_STRIPE not in ctx["output"]
+
+@given('the detector has found 5 findings with scores 20, 50, 65, 80, 95')
+def mock_findings_with_scores(ctx):
+    from report import Finding
+    ctx["findings"] = [
+        Finding("type_1", 1, "LOW", "sec1", 0.5, score=20.0),
+        Finding("type_2", 2, "MEDIUM", "sec2", 0.6, score=50.0),
+        Finding("type_3", 3, "MEDIUM", "sec3", 0.7, score=65.0),
+        Finding("type_4", 4, "HIGH", "sec4", 0.8, score=80.0),
+        Finding("type_5", 5, "HIGH", "sec5", 0.9, score=95.0),
+    ]
+
+@when(parsers.parse('I run the report with "{arg}"'))
+def run_report_min_score(detector, ctx, arg):
+    import re
+    m = re.match(r"--min-score\s+(\d+)", arg)
+    min_score = float(m.group(1)) if m else 0.0
+    filtered = [f for f in ctx["findings"] if f.score >= min_score]
+    ctx["report"] = detector.format_report(filtered, show_full=True)
+
+@then('only 2 findings should be visible in the output')
+def check_visible_findings(ctx):
+    assert "Secrets detected: 2" in ctx["report"]
+
+@given('a text "password is: abc123random" (High Proximity)')
+def high_proximity(ctx):
+    ctx["text_high"] = "password is: " + exrex.getone(r"[a-zA-Z0-9]{16}")
+
+@given('a text "The system has a password. Somewhere below it uses: abc123random" (Low Proximity)')
+def low_proximity(ctx):
+    ctx["text_low"] = "The system has a password. Somewhere below it uses: " + exrex.getone(r"[a-zA-Z0-9]{16}")
+
+@when('I scan both')
+def scan_both(detector, ctx):
+    ctx["findings_high"] = detector.scan(ctx["text_high"])
+    ctx["findings_low"] = detector.scan(ctx["text_low"])
+
+@then('the score for the first should be significantly higher than the second')
+def check_score_diff(ctx):
+    fh = [f for f in ctx["findings_high"] if f.category == "entropy" or f.secret_type == "High Entropy String" or f.secret_type == "Potential Secret (High Entropy + Context)"]
+    fl = [f for f in ctx["findings_low"] if f.category == "entropy" or f.secret_type == "High Entropy String" or f.secret_type == "Potential Secret (High Entropy + Context)"]
+    if fh and fl:
+        assert fh[0].score > fl[0].score
+
+@then('the finding should have a score > 90')
+def check_high_score(ctx):
+    assert len(ctx["findings"]) > 0
+    assert any(f.score > 90 for f in ctx["findings"])

@@ -50,7 +50,14 @@ The pattern library is the heart of the detector—every new rule flows through 
     python3 cli.py --history --max-commits 10 --full
     ```
 
-## 6. Scanning Large Repositories
+## 6. Risk Scoring and Filtering
+
+With the introduction of the Advanced Risk Scoring System, findings are assigned a numeric risk score (0-100) and categorized into dynamic risk levels (CRITICAL, HIGH, MEDIUM, LOW).
+
+1.  **Filtering Noise**: Use the `--min-score` flag to filter out low-confidence generic strings or test markers. For example, `--min-score 70` ensures only HIGH and CRITICAL findings are reported.
+2.  **Strict Gating**: Combine `--min-score` with `--fail-on-risk CRITICAL` to strictly fail a CI build only when a very high-confidence secret (e.g., a verified structured pattern with proximity context) is found.
+
+## 7. Scanning Large Repositories
 
 When auditing repositories with thousands of commits or large file trees, use the scalability features:
 
@@ -58,9 +65,9 @@ When auditing repositories with thousands of commits or large file trees, use th
 2.  **Caching**: The scanner maintains `.secretscan_cache`. Commits that have been scanned and found clean are skipped in subsequent runs, allowing for extremely fast incremental audits.
 3.  **Fast Mode**: For rapid feedback (e.g., pre-commit hooks), use `--mode fast` to skip deep entropy analysis and non-essential rules.
 
-## 7. Final Checks
+## 8. Final Checks
 
-* Run the demo script `./demo.sh` to verify real-world usage (force-scan, obfuscation, Git integration, highlighting).
+* Run the demo script `./demo.sh` to verify real-world usage (force-scan, obfuscation, Git integration, highlighting, risk scoring).
 * Confirm no secrets leaked in the commit (all test data is synthetic or base64-encoded).
 * `git status` → `git add ...` → `git commit` → `git push`.
 

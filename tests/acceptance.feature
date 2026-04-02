@@ -150,3 +150,18 @@ Scenario: 25. Binary File Handling with Embedded Secrets
   When I run the git-working scan
   Then it should detect the secret in "src/main.py"
   And it should NOT crash on "assets/icon.png"
+
+Scenario: 26. Score-Based Filtering
+  Given the detector has found 5 findings with scores 20, 50, 65, 80, 95
+  When I run the report with "--min-score 70"
+  Then only 2 findings should be visible in the output
+
+Scenario: 27. Proximity Bonus Impact
+  Given a text "password is: abc123random" (High Proximity)
+  And a text "The system has a password. Somewhere below it uses: abc123random" (Low Proximity)
+  When I scan both
+  Then the score for the first should be significantly higher than the second
+
+Scenario: 28. Multi-Signal Boosting
+  When I scan "My accuweather key is: A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6Q7r"
+  Then the finding should have a score > 90

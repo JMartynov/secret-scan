@@ -5,6 +5,7 @@
 
 ## Summary
 
+- **Advanced Risk Scoring**: Introduced a 0-100 weighted risk score based on regex weights, context proximity decay, and entropy adjustments. Dynamic risk levels (CRITICAL, HIGH, MEDIUM, LOW) replace static categorizations.
 - **Core Git Integration**: Native support for scanning staged changes, working directory diffs, and historical commits.
 - **Ignore & Suppression Engine**: Added support for `.secretscanignore`, `# secretscan:ignore` inline comments, and repository baselines.
 - **Scalability & Performance**: Introduced **Parallelized Historical Scanning** and **Commit Caching** to handle massive repositories.
@@ -19,6 +20,7 @@
 
 ## Tooling
 
+- **Risk Score Filtering**: The new `--min-score` flag allows filtering out low-confidence noise.
 - **Commit Caching**: `.secretscan_cache` tracks verified SHAs to avoid redundant work in deep audits.
 - **Pre-commit Hooks**: Official support via `.pre-commit-hooks.yaml` using `--mode fast`.
 - **SARIF Support**: `--format sarif` enables native vulnerability visualization in GitHub's Security tab.

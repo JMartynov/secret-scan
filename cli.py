@@ -9,6 +9,7 @@ from git_engine import GitEngine
 from ignore_engine import IgnoreEngine
 from cache_engine import load_cache, save_cache, is_commit_clean, mark_commit_clean
 from concurrent.futures import ProcessPoolExecutor
+import mmap
 
 def scan_block_worker(block, data_dir, threshold, mode, force_scan_all, include_pii, pii_regions):
     # Re-initialize detector in each process to avoid serialization issues
@@ -19,6 +20,53 @@ def scan_block_worker(block, data_dir, threshold, mode, force_scan_all, include_
         f.filepath = block.filepath
         f.location += block.start_line - 1
     return findings, block.commit_sha
+
+class FileBlock:
+    def __init__(self, filepath, content, start_line=1):
+        self.filepath = filepath
+        self.content = content
+        self.start_line = start_line
+        self.commit_sha = None
+
+def scan_file_worker(filepath, data_dir, threshold, mode, force_scan_all, include_pii, pii_regions):
+    try:
+        detector = SecretDetector(entropy_threshold=threshold, data_dir=data_dir, mode=mode, force_scan_all=force_scan_all, include_pii=include_pii, pii_regions=pii_regions)
+        all_findings = []
+        file_size = os.path.getsize(filepath)
+        if file_size > 10 * 1024 * 1024:
+            # use mmap for large files > 10MB
+            with open(filepath, 'rb') as f:
+                with mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ) as mm:
+                    chunk_size = 1024 * 1024 # 1MB
+                    overlap = 8192 # 8KB overlap
+                    pos = 0
+                    line_offset = 1
+                    while pos < file_size:
+                        end = min(pos + chunk_size, file_size)
+                        chunk_bytes = mm[pos:end]
+                        try:
+                            chunk = chunk_bytes.decode('utf-8', errors='replace')
+                            findings = detector.scan(chunk)
+                            for fn in findings:
+                                fn.filepath = filepath
+                                fn.location += line_offset - 1
+                            all_findings.extend(findings)
+                        except Exception:
+                            pass
+
+                        # Count lines in this chunk excluding the overlap part for the next iteration
+                        actual_advance = chunk_size - overlap if end < file_size else end - pos
+                        line_offset += chunk_bytes[:actual_advance].count(b'\n')
+                        pos += actual_advance
+        else:
+            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                findings = detector.scan(f.read())
+                for fn in findings:
+                    fn.filepath = filepath
+                all_findings.extend(findings)
+        return all_findings
+    except Exception:
+        return []
 
 def main():
     parser = argparse.ArgumentParser(description="LLM Secrets Leak Detector CLI")
@@ -67,36 +115,23 @@ def main():
     all_findings = []
 
     # Identify input source
-    if args.git_staged:
-        blocks = git_engine.get_staged_diff()
-        for b in blocks:
-            if ignore_engine.is_ignored_path(b.filepath):
-                continue
-            findings = detector.scan(b.content)
-            for f in findings:
-                f.filepath = b.filepath
-                f.location += b.start_line - 1
-            all_findings.extend(findings)
-    elif args.git_working:
-        blocks = git_engine.get_working_diff()
-        for b in blocks:
-            if ignore_engine.is_ignored_path(b.filepath):
-                continue
-            findings = detector.scan(b.content)
-            for f in findings:
-                f.filepath = b.filepath
-                f.location += b.start_line - 1
-            all_findings.extend(findings)
-    elif args.git_branch:
-        blocks = git_engine.get_branch_diff(args.git_branch)
-        for b in blocks:
-            if ignore_engine.is_ignored_path(b.filepath):
-                continue
-            findings = detector.scan(b.content)
-            for f in findings:
-                f.filepath = b.filepath
-                f.location += b.start_line - 1
-            all_findings.extend(findings)
+    if args.git_staged or args.git_working or args.git_branch:
+        blocks = []
+        if args.git_staged:
+            blocks = git_engine.get_staged_diff()
+        elif args.git_working:
+            blocks = git_engine.get_working_diff()
+        elif args.git_branch:
+            blocks = git_engine.get_branch_diff(args.git_branch)
+
+        valid_blocks = [b for b in blocks if not ignore_engine.is_ignored_path(b.filepath)]
+        if valid_blocks:
+            with ProcessPoolExecutor() as executor:
+                futures = [executor.submit(scan_block_worker, b, args.data_dir, args.threshold, args.mode, args.force_scan_all, args.pii, pii_regions) for b in valid_blocks]
+                for future in futures:
+                    findings, _ = future.result()
+                    if findings:
+                        all_findings.extend(findings)
     elif args.history:
         blocks = git_engine.get_history_diffs(since=args.since, max_commits=args.max_commits)
         
@@ -158,24 +193,23 @@ def main():
         elif args.input and args.input != '-':
             if os.path.isdir(args.input):
                 # Recursively scan directory
+                filepaths = []
                 for root, _, files in os.walk(args.input):
                     for file in files:
                         filepath = os.path.join(root, file)
                         rel_path = os.path.relpath(filepath, args.input)
-                        if ignore_engine.is_ignored_path(rel_path):
-                            continue
-                        try:
-                            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
-                                findings = detector.scan(f.read())
-                                for fn in findings:
-                                    fn.filepath = rel_path
+                        if not ignore_engine.is_ignored_path(rel_path):
+                            filepaths.append(filepath)
+                if filepaths:
+                    with ProcessPoolExecutor() as executor:
+                        futures = [executor.submit(scan_file_worker, fp, args.data_dir, args.threshold, args.mode, args.force_scan_all, args.pii, pii_regions) for fp in filepaths]
+                        for future in futures:
+                            findings = future.result()
+                            if findings:
                                 all_findings.extend(findings)
-                        except Exception:
-                            pass
             else:
                 try:
-                    with open(args.input, 'r', encoding='utf-8', errors='ignore') as f:
-                        all_findings.extend(detector.scan(f.read()))
+                    all_findings.extend(scan_file_worker(args.input, args.data_dir, args.threshold, args.mode, args.force_scan_all, args.pii, pii_regions))
                 except Exception as e:
                     print(f"Error opening file: {e}", file=sys.stderr)
                     sys.exit(1)

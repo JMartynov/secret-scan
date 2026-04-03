@@ -97,7 +97,7 @@ echo "----------------------------------------------------"
 echo -e "\n--- Part 6: 1MB Performance Benchmark (Summary) ---"
 echo ">>> Scanning: performance_1mb.txt (1,048,576 bytes)"
 TIMEFORMAT="Execution Time: %R seconds"
-time ./run.sh "$PERF"
+time ./run.sh "$PERF" --mode fast
 
 echo -e "\n--- Part 7: Data Obfuscation (Piping to clean logs) ---"
 echo ">>> cat combined_small.txt | ./run.sh --obfuscate"

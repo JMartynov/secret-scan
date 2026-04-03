@@ -1,0 +1,22 @@
+[
+    "https://github.com/psf/requests.git",
+    "https://github.com/pallets/flask.git",
+    "https://github.com/pypa/pip.git",
+    "https://github.com/django/django.git",
+    "https://github.com/scrapy/scrapy.git",
+    "https://github.com/boto/boto3.git",
+    "https://github.com/urllib3/urllib3.git",
+    "https://github.com/encode/httpx.git",
+    "https://github.com/pydantic/pydantic.git",
+    "https://github.com/pytest-dev/pytest.git",
+    "https://github.com/celery/celery.git",
+    "https://github.com/marshmallow-code/marshmallow.git",
+    "https://github.com/tiangolo/fastapi.git",
+    "https://github.com/certifi/python-certifi.git",
+    "https://github.com/getsentry/sentry-python.git",
+    "https://github.com/aws/aws-cli.git",
+    "https://github.com/ansible/ansible.git",
+    "https://github.com/pypa/virtualenv.git",
+    "https://github.com/python-poetry/poetry.git",
+    "https://github.com/sphinx-doc/sphinx.git"
+]

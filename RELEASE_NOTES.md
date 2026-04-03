@@ -20,6 +20,7 @@
 
 ## Tooling
 
+- **GitHub Reporting Automation**: Included a new daily GitHub Actions workflow that curates popular repositories, scans them incrementally, and publishes anonymized markdown reports.
 - **Risk Score Filtering**: The new `--min-score` flag allows filtering out low-confidence noise.
 - **Commit Caching**: `.secretscan_cache` tracks verified SHAs to avoid redundant work in deep audits.
 - **Pre-commit Hooks**: Official support via `.pre-commit-hooks.yaml` using `--mode fast`.

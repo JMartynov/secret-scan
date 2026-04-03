@@ -173,6 +173,7 @@ The **LLM Secrets Leak Detector** provides a comprehensive suite of features des
 
 | Category | Feature | Status | Implementation Details |
 | :--- | :--- | :--- | :--- |
+| **Automation** | **GitHub Secret Reporting** | ✅ | [NEW] Automated workflow to scan curated popular repositories daily and publish anonymized findings to a dedicated reporting repository. |
 | **Detection Engines** | **Regex Matching (RE2)** | ✅ | Primary engine using `google-re2`.<br>Fast, linear-time matching. |
 | | **Regex Matching (Legacy)** | ✅ | Fallback to `regex` (Python) for complex patterns.<br>ReDoS protection. |
 | | **Entropy Analysis** | ✅ | Shannon entropy scoring for random-looking tokens (min 20 chars). |

@@ -65,7 +65,15 @@ When auditing repositories with thousands of commits or large file trees, use th
 2.  **Caching**: The scanner maintains `.secretscan_cache`. Commits that have been scanned and found clean are skipped in subsequent runs, allowing for extremely fast incremental audits.
 3.  **Fast Mode**: For rapid feedback (e.g., pre-commit hooks), use `--mode fast` to skip deep entropy analysis and non-essential rules.
 
-## 8. Final Checks
+## 8. GitHub Automation (Public Repo Analysis)
+
+The project includes tooling to automatically scan curated public repositories and publish daily secret leakage reports:
+
+1.  **Repository List Generation**: Run `python tools/curate_repos.py` to curate and save the list of target repositories to `data/target_repos.json`.
+2.  **Daily Report Generator**: The `tools/run_daily_scan.py` script incrementally picks $N$ repositories from the curated list, scans them, and formats obfuscated findings into a markdown report.
+3.  **GitHub Action Workflow**: An automated action at `.github/workflows/daily-secret-report.yml` executes `tools/run_daily_scan.py` daily, commits the new markdown report into `reports/`, and pushes it to the reporting repository.
+
+## 9. Final Checks
 
 * Run the demo script `./demo.sh` to verify real-world usage (force-scan, obfuscation, Git integration, highlighting, risk scoring).
 * Confirm no secrets leaked in the commit (all test data is synthetic or base64-encoded).

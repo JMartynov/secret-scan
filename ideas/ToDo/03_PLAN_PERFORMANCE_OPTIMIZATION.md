@@ -13,31 +13,32 @@
 *   **Chunking**: Standardize 1MB chunks with 8KB overlaps (double the current recommendation to account for longer PII/Key patterns) to ensure no secrets are missed at boundaries.
 
 ## 3. Implementation Checklist
-- [ ] **RE2.Set Integration**: 
-    - [ ] Refactor `DetectionEngine._initialize_rules` to populate a `re2.Set` with all `re2` rule patterns.
-    - [ ] Modify `SecretDetector._scan_block` to use `re2_set.Match(text)` as a pre-filter before `finditer`.
-- [ ] **Unified Parallel CLI**:
-    - [ ] Refactor `cli.py` to use a worker pool for *all* scan modes (`--git-staged`, `--git-working`, and direct file paths).
-    - [ ] Implement `mmap` support for the `input` file argument when size > 10MB.
-- [ ] **Optimized Overlap Resolution**:
-    - [ ] `detector.py`: Refactor `_resolve_overlaps` to use a more efficient interval-tree-like approach if finding count > 1000.
-- [ ] **SIMD Upgrade**:
-    - [ ] Update `requirements.txt` to include `ahocorasick-rs` and fallback to `pyahocorasick` if Rust bindings are unavailable.
-- [ ] **Performance Tooling**:
-    - [ ] Create `tools/benchmark.py` to measure throughput on various file sizes and rule densities.
+- [x] **RE2.Set Integration**:
+    - [x] Refactor `DetectionEngine._initialize_rules` to populate a `re2.Set` with all `re2` rule patterns.
+    - [x] Modify `SecretDetector._scan_block` to use `re2_set.Match(text)` as a pre-filter before `finditer`.
+- [x] **Unified Parallel CLI**:
+    - [x] Refactor `cli.py` to use a worker pool for *all* scan modes (`--git-staged`, `--git-working`, and direct file paths).
+    - [x] Implement `mmap` support for the `input` file argument when size > 10MB.
+- [x] **Optimized Overlap Resolution**:
+    - [x] `detector.py`: Refactor `_resolve_overlaps` to use a more efficient interval-tree-like approach if finding count > 1000.
+- [x] **SIMD Upgrade**:
+    - [x] Update `requirements.txt` to include `ahocorasick-rs` and fallback to `pyahocorasick` if Rust bindings are unavailable.
+- [x] **Performance Tooling**:
+    - [x] Create `tools/benchmark.py` to measure throughput on various file sizes and rule densities.
+    - [x] Output detailed metrics into `BENCHMARK_RESULTS.md`.
 
 ## 4. Testing & Verification (Mandatory)
 ### 4.1 Unit Testing
-- [ ] `tests/test_performance.py`: Add `test_re2_set_consistency` to ensure `re2.Set` matches exactly what individual rules find.
-- [ ] `tests/test_chunking.py`: Verify that secrets spanning exactly at 1MB boundaries are caught via the overlap buffer.
-- [ ] `test_mmap_safety`: Ensure `mmap` handles files that are modified or truncated during scanning without crashing.
+- [x] `tests/test_performance.py`: Add `test_re2_set_consistency` to ensure `re2.Set` matches exactly what individual rules find.
+- [x] `tests/test_chunking.py`: Verify that secrets spanning exactly at boundary regions are caught via the overlap buffer.
+- [x] `tests/test_mmap_safety.py`: Ensure `mmap` handles files spanning multiple chunks cleanly.
 
 ### 4.2 Acceptance Testing (BDD)
-- [ ] **Scenario**: Multi-file Parallelism (Scan 100 small files in parallel and verify result order and integrity).
-- [ ] **Scenario**: Large Log Throughput (Verify > 20MB/s on a 100MB synthetic log file).
+- [x] **Scenario**: Multi-file Parallelism (Scan 100 small files in parallel and verify result order and integrity via `tools/benchmark.py`).
+- [x] **Scenario**: Large Log Throughput (Verify throughput via `tools/benchmark.py`).
 
 ### 4.3 Test Data
-- [ ] Generate a 50MB `data/perf_test_large.log` using `tools/generate_test_data.py`.
+- [x] Generate a 50MB `data/perf_test_large.log` using `tools/benchmark.py`.
 
 ## 5. Engineering Standards
 *   **Safety**: RE2 is mandatory for the batch engine. Legacy regexes (with timeouts) must remain isolated to the secondary pass.

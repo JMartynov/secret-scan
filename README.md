@@ -185,11 +185,12 @@ The **LLM Secrets Leak Detector** provides a comprehensive suite of features des
 | **Obfuscation** | **Redact** | ✅ | Masks the middle of secrets (e.g., `AKIA...CDEF`). |
 | | **Hash** | ✅ | Consistent SHA-256 hashing (first 12 chars) for safe debugging. |
 | | **Synthetic** | ✅ | [NEW] Realistic fake data generation (AWS, GitHub, Emails) using `Faker`. |
-| **Safety & Performance** | **Keyword Filtering** | ✅ | Uses `Aho-Corasick` automaton to skip rules missing their required keywords. |
-| | **Parallel Scanning** | ✅ | [NEW] Utilizes `ProcessPoolExecutor` for high-speed historical audits. |
+| **Safety & Performance** | **Keyword Filtering** | ✅ | Uses `ahocorasick-rs` automaton (with SIMD) to skip rules missing their required keywords. |
+| | **Parallel Scanning** | ✅ | [NEW] Utilizes `ProcessPoolExecutor` for high-speed historical audits and multi-file directory scans. |
 | | **Commit Caching** | ✅ | [NEW] Incremental scanning using `.secretscan_cache` to skip verified SHAs. |
+| | **Zero-Copy Scanning**| ✅ | Uses `mmap` mapping with chunk overlaps for gigabyte-scale logs. |
 | | **ReDoS Protection** | ✅ | `SIGALRM` timeouts (1s) for non-RE2 regex execution. |
-| | **Input Truncation** | ✅ | Blocks capped at 100,000 characters to prevent memory exhaustion. |
+| | **Input Truncation** | ✅ | Blocks capped at 1MB characters to prevent memory exhaustion. |
 | | **Deduplication** | ✅ | Merges overlapping findings.<br>Prioritizes longest matches. |
 | | **Force All Scan** | ✅ | `--force-scan-all` bypasses keyword filters so every line is scored. |
 | **Reporting & UI** | **Surgical Highlighting** | ✅ | [NEW] ANSI-colored context lines with the secret highlighted in red. |
@@ -225,7 +226,7 @@ The detector is now natively aware of Git lifecycles, allowing for surgical scan
 
 ### 🏎 Performance & Scalability
 
-- **Parallel Execution**: Large-scale historical audits automatically utilize multiple CPU cores for regex and entropy analysis.
+- **Parallel Execution**: Large-scale historical audits and multi-file directory scans automatically utilize multiple CPU cores for regex and entropy analysis.
 - **Commit Caching**: The engine maintains a `.secretscan_cache` to track verified "clean" commits, reducing redundant scan times by up to 90% in incremental audits.
 - **Modes**: Choose between `fast` (optimized for <1s hooks), `balanced` (standard dev), and `deep` (thorough CI audits).
 

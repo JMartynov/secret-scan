@@ -15,7 +15,8 @@ from suggestions import get_suggestion
 from src.validators import validate_finding
 
 # Design rule #4: Limit input size for single-block scanning
-MAX_BLOCK_SIZE = 100_000
+# Increased to 1MB to align with unified CLI chunking logic
+MAX_BLOCK_SIZE = 1_048_576
 MAX_BLOCK_SIZE_FAST = 10_000
 
 class TimeoutError(Exception):
@@ -35,6 +36,10 @@ class DetectionEngine:
         self.keyword_map = {}
         self.automaton = ahocorasick.Automaton()
         self.re2_rules = []
+        opts = re2.Options()
+        opts.max_mem = 1024 * 1024 * 1024  # 1GB to prevent RE2 DFA compilation out-of-memory
+        self.re2_set = re2.Set(re2._Anchor.UNANCHORED, opts)
+        self.re2_set_compiled = False
         self.legacy_rules = []
         self._initialize_rules()
 
@@ -128,7 +133,8 @@ class DetectionEngine:
             if engine_type == 're2':
                 try:
                     compiled = re2.compile(regex_str)
-                    self.re2_rules.append({'id': rule['id'], 'severity': rule['severity'], 'regex': compiled, 'original_idx': idx})
+                    re2_idx = self.re2_set.Add(regex_str)
+                    self.re2_rules.append({'id': rule['id'], 'severity': rule['severity'], 'regex': compiled, 'original_idx': idx, 'set_idx': re2_idx})
                 except Exception:
                     # Fallback to legacy if re2 fails (e.g. unsupported syntax)
                     engine_type = 'legacy'
@@ -139,6 +145,15 @@ class DetectionEngine:
                     self.legacy_rules.append({'id': rule['id'], 'severity': rule['severity'], 'regex': compiled, 'original_idx': idx})
                 except Exception:
                     continue
+        if self.re2_rules:
+            try:
+                self.re2_set.Compile()
+                self.re2_set_compiled = True
+            except Exception:
+                self.re2_set_compiled = False
+        else:
+            self.re2_set_compiled = False
+
         self.automaton.make_automaton()
 
     def calculate_entropy(self, data: str) -> float:
@@ -347,8 +362,21 @@ class SecretDetector:
             return best_group or ""
 
         # 1. Regex Matching (RE2 - Linear Time)
+        # Fast pre-filtering using re2.Set
+        matched_set_indices = None
+        if self.engine.re2_set_compiled:
+            try:
+                matched_set_indices = set(self.engine.re2_set.Match(text))
+            except Exception:
+                pass
+
         for rule in self.engine.re2_rules:
             rule_def = self.engine.rules[rule['original_idx']]
+
+            # Use re2.Set pre-filter if available
+            if matched_set_indices is not None and rule.get('set_idx') not in matched_set_indices:
+                continue
+
             if force_scan_all or not rule_def.get('keywords') or rule['original_idx'] in triggered_indices:
                 for m in rule['regex'].finditer(text):
                     content = extract_content(m)

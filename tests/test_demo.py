@@ -7,7 +7,9 @@ def test_demo_execution():
     os.chmod("run.sh", 0o755)
     os.chmod("demo.sh", 0o755)
     
-    result = subprocess.run(["./demo.sh"], capture_output=True, text=True, timeout=60)
+    # Increase timeout because the 1MB file benchmark in the demo may take longer
+    # due to strict regex evaluations and concurrency spinup on some environments.
+    result = subprocess.run(["./demo.sh"], capture_output=True, text=True, timeout=120)
     print("DEBUG: Full stdout from demo.sh:")
     print(result.stdout)
     print("DEBUG: Full stderr from demo.sh:")

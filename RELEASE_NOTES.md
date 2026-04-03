@@ -5,6 +5,8 @@
 
 ## Summary
 
+- **Performance & Scalability**: Drastically increased scanning throughput using a two-stage `re2.Set` pattern pre-filtering system, reducing overhead on large files and Git histories. Added `mmap` zero-copy memory mapping for parsing gigabyte-scale logs.
+- **SIMD String Searching**: Upgraded the internal search automaton to `ahocorasick-rs` to leverage Rust-based SIMD string searching logic.
 - **Advanced Risk Scoring**: Introduced a 0-100 weighted risk score based on regex weights, context proximity decay, and entropy adjustments. Dynamic risk levels (CRITICAL, HIGH, MEDIUM, LOW) replace static categorizations.
 - **Core Git Integration**: Native support for scanning staged changes, working directory diffs, and historical commits.
 - **Ignore & Suppression Engine**: Added support for `.secretscanignore`, `# secretscan:ignore` inline comments, and repository baselines.
@@ -28,9 +30,11 @@
 
 ## Testing
 
-- `pytest tests/test_acceptance.py` (Validated against 25 BDD scenarios, including 7 new Git-specific flows)
-- `pytest tests/test_performance.py` (Verified 90% reduction in scan time for cached incremental audits)
-- `pytest tests/test_git_engine.py` (Unit tests for diff parsing and reconstruction)
-- `demo.sh` (Updated to showcase Git integration and highlighted reporting)
+- `tools/benchmark.py` (Created a comprehensive benchmarking suite generating synthetic log data and high-density folders, verifying throughput in MB/s, memory metrics, and accuracy).
+- `pytest tests/test_chunking.py` and `tests/test_mmap_safety.py` (Validated accurate matches exactly spanning chunk boundaries over extremely large multi-megabyte files).
+- `pytest tests/test_re2_set.py` (Ensured that the linear-time RE2 sets map exactly to original regex outputs for zero false negatives).
+- `pytest tests/test_acceptance.py` (Validated against 25 BDD scenarios, including Git-specific flows).
+- `pytest tests/test_performance.py` (Verified 90% reduction in scan time for cached incremental audits).
+- `demo.sh` (Updated to showcase performance benchmarks alongside standard detection options).
 
-The Git integration has been stress-tested on large repositories to ensure sub-second latency in `fast` mode for pre-commit workflows.
+The performance updates push the bounds of parallelized analysis, making multi-gigabyte repository audits consistently robust, resource-aware, and performant.

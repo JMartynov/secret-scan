@@ -1,90 +1,90 @@
 {
   "alienvault_api": {
     "positives": [
-      "YWxpZW52YXVsdE9YKzQrbGNzdmg4N21pNzJ3dDMwOXdlaXFlZ2hrOGRsMTNvMG5pNXZraDVoYm85bG16MGQ4d2R1Z3dlZWd3dnFheXNpOA=="
+      "NjE2YzY5NjU2ZTc2NjE3NTZjNzQwZDYxMGE2MjY2NzM2NTc3MzM3YTM3NjY2ZTY0NmM3MjM4NjY3NTY4NzQ3YTY3NjY2NzY2Nzk2MzZkNmU2NTY0N2E2MTM3Njg3MzZiNzkzNjZiNjgzNzcxMzc2YjMxNmM2ZTM3NzQzNTMxNmM2ZjcxMzc2MTMwMzkzOTY4NzYzNzc0NzQ3MQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtMm5PMXpWbHNGVVhhVURZcXhEdGJIeUczVXFVajRJUVU="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNzM1MjM3NDM1NjZkNmI2MzUwNDg1NTM5NmY1MzUyNmQ1NzY4NGQ0NTY5NTY2NTRhMzI2NjVhNDU3ODY1NDMzMw=="
     ]
   },
   "credit_cards": {
     "positives": [
-      "NTI4NjUwNTI3MDI3NTg2OCMgNDczMzQ0MDU2OTA0NTUxMQ=="
+      "MzQzMzM2MzkzMzMyMzAzMTMwMzgzMTMyMzUzMjMyMzA="
     ],
     "negatives": [
-      "bmVnYXRpdmUtZ09vMGR6UnBRWU8wVElORjByaER3ajZMV0tuNWM1YTk="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNTY0MTZiMzA2MzMyNDc3ODZmNjU0YjQ2MzI2YzUzNjEzODMyNTUzMDQyNmY2NTUwNzY2YTRlNGI0OTczNzA2NA=="
     ]
   },
   "credit_card_visa": {
     "positives": [
-      "NDM4NzU4NTEwNjExNTUwOA=="
+      "MzQzMjM5MzYzNjM4MzkzNzM1MzkzODMwMzczNzMxMzI="
     ],
     "negatives": [
-      "bmVnYXRpdmUtUUxOUGozVjBXVDRKVzBjNWRHRE1nRE1vaHZEbWtGaTM="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNTk0MzZlNTY2ZjU0Njk2MjMxNGU1OTYxNTE2OTU5Nzc2MTRjNTQ2NTU1NmE2NjRiNjk0YzZhNzczODQxNmU3Mg=="
     ]
   },
   "credit_card_mastercard": {
     "positives": [
-      "MjI3NDQ4NzM2NzA2MjcwOQ=="
+      "MzIzMjMyMzQzNTMyMzMzNDM0MzAzMTM3MzkzODMwMzg="
     ],
     "negatives": [
-      "bmVnYXRpdmUtTlg3bzROWjdVNmowd0tEZ01rYW1BUklvVTNVejRLc2I="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNWE1ODc5MzQ1OTQ4Nzk0NzcwNzg2YTUzNzA2MjY3NmQ1MDc0MzU1MTRiNzU2ODMyNmM3MDcxNmI0ODUwNjM2OQ=="
     ]
   },
   "credit_cards_american_express": {
     "positives": [
-      "MzQ4NTIyOTgwMzc5MTYx"
+      "MzMzNDM3MzUzMDM5MzYzOTM2MzQzMDMwMzczMDMx"
     ],
     "negatives": [
-      "bmVnYXRpdmUtYzZuakRkOE92SVlVSHdzMHhkVkNmbTROU21aMHp0Tzc="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNTI2YzY4NjI3Mzc5NTY2MjcxNDQ2YzczN2EzNzcwNzU2MjZhNjI0NDZiNTg3YTMxNDE0NzRjMzc1MzdhNzM0Ng=="
     ]
   },
   "credit_card_discovery": {
     "positives": [
-      "NjU0MDIyODIxMDUyODk4NQ=="
+      "MzYzNTM1MzIzNzMyMzkzNzM4MzIzMDMzMzEzNjMwMzU="
     ],
     "negatives": [
-      "bmVnYXRpdmUtdnA2RTBQQmVkZ3I2ZDRvRXhtNGxCVzlwbDlWU3lVRWo="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNmYzNzM1MzA3NjRjNTI2ZjYyNTg0NTRhNTc3NDZlNWE3NDUzNDE2MTQ4NWE1NTUxNDE1ODM3Nzc2NDc1NmU1YQ=="
     ]
   },
   "iban": {
     "positives": [
-      "UlYzOC01NjQtNS04LTAgMjUgOC0xIDY3IDMtMDQ1MiA5"
+      "NDg1NTMzMzIzMTMyMmQzNzM4MjAzNDIwMzIzMTIwMzgzOTIwMzMyMDQ0MjAzMg=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtaUpVQmlRamZQRGRLUTdQakZTeWRkWEM5cUFUbGJibzg="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNTY1NTU5NTY0NDRiNGU0YzcwMzAzNTMwNzQ0ZjZjNTk1NDY0NjU0ODYxNDg3NzdhNDY1MDdhNjU3NjYzNjE3OA=="
     ]
   },
   "no_national_id_number": {
     "positives": [
-      "MzAwNTU4IDI5OCAzNw=="
+      "MzEzNDMxMzIzMzM2MjAzMDM2MzgyMDM3MzU="
     ],
     "negatives": [
-      "bmVnYXRpdmUtQUJzanl4bElUakdwT2cxVGlhSXNjMXFEZ0FnaHNpaXk="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNTU2Yzc1NjQ1MTRmNTg1ODdhNDQ3OTRmMzk2MjcxMzc3OTRjNDY2YTc0NTU3MDUyNjY3MjQ0NzAzODdhNGI2Ng=="
     ]
   },
   "us_ssn": {
     "positives": [
-      "MDkzLTA2LTI4MTc="
+      "MzAzMDMxMmQzMDM1MmQzOTMzMzYzNA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtS09oa0E5Ym1VWXRVbUY2QzFvRjRPeXNHSlZIRG5xbmc="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNTE2YTRkNjY3MzMwMzg0ZTZlNTA0ZTc5NTM0NDRhNjI0YTU4Njc1MDMxNGI2YTdhNDQ0NjZiNzU0YTQ0Nzk2NQ=="
     ]
   },
   "us_itin": {
     "positives": [
-      "OTc0LTcwLTExMzU="
+      "MzkzMTM5MmQzNzM4MmQzMTM1MzEzNQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtdkFORFd3dDFFQmlzUG9LbnRiSTlKOUpFeHh4TUNtSzI="
+      "NmU2NTY3NjE3NDY5NzY2NTJkMzY2NTY5MzU2ODYxNzE0ZDQ0NmY2NzczMzQ0YzUxNDk0YTRlMzEzNzQ2NjQ3YTc1NTQ3NzM4NmEzNzczMzU3Mw=="
     ]
   },
   "uk_national_insurance_number": {
     "positives": [
-      "TkE1MyAxNDA2RA=="
+      "NTA0OTM0MzkyMDM5MzkzODMwNDQ="
     ],
     "negatives": [
-      "bmVnYXRpdmUtS2dnSHNOVm5GdHNxUnFFNGprMDdDRm1JaDBTZjBkVnA="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNDM3MDU3NDE0ZjczNGI0YzM2NzUzMjcxNmQzNTQyNjI2MjY5MzE3NzY5NzAzOTczMzU2Mzc3Mzk2ZTc0Mzg0Zg=="
     ]
   }
 }

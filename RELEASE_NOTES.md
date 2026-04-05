@@ -17,6 +17,7 @@
 
 ## Data & Detection
 
+- **Generic Bearer Token Support**: Added robust detection and synthetic obfuscation for generic HTTP Authorization Bearer tokens.
 - **Multi-line Detection**: Reconstructed diff blocks allow regexes to match secrets split across multiple lines (e.g., PEM keys).
 - **Surgical Highlighting**: Terminal reports now highlight the exact secret within the context line using ANSI red background.
 - **Remediation Engine**: Integrated official security links for AWS, GitHub, Stripe, and Google Cloud to guide developer fixes.

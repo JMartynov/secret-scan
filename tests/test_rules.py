@@ -21,9 +21,23 @@ def get_all_test_data():
 
 detector = SecretDetector(data_dir='data', force_scan_all=True)
 
+def decode_sample(s):
+    try:
+        # Step 1: Decode base64 to get hex string
+        hex_str = base64.b64decode(s.encode('utf-8')).decode('utf-8')
+        # Step 2: Convert hex back to original string
+        original = bytes.fromhex(hex_str).decode('utf-8')
+        return original
+    except Exception:
+        # Fallback for old simple base64 if needed
+        try:
+            return base64.b64decode(s.encode('utf-8')).decode('utf-8')
+        except:
+            return s
+
 @pytest.mark.parametrize("rule_id, category, b64_data, should_match", get_all_test_data())
 def test_rule_detection(rule_id, category, b64_data, should_match):
-    text = base64.b64decode(b64_data).decode('utf-8', errors='ignore')
+    text = decode_sample(b64_data)
     
     findings = detector.scan(text)
     

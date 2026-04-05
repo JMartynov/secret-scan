@@ -1,42 +1,44 @@
-# Task: Performance Benchmarking & Competitive Analysis
+# Task: Benchmarking & Competitive Analysis (ACTUALIZED)
 
 ## 1. Objective & Context
-*   **Goal**: Establish a continuous benchmarking suite to compare the engine's speed and accuracy against industry competitors.
-*   **Rationale**: To validate our performance claims (10-20 MB/s) and ensure we maintain a technical advantage over tools like Gitleaks and TruffleHog.
-*   **Files Affected**:
-    *   `tests/test_performance.py`: Benchmark runner.
-    *   `tools/benchmark_report.py`: Report and chart generator.
-    *   `docs/BENCHMARKS.md`: Public-facing results.
+*   **Goal**: Evaluate the detection accuracy, recall, and false-positive rate of `secret-scan` against open secret databases and compare results with industry-standard scanning libraries.
+*   **Rationale**: Establishes a data-driven baseline for the tool's performance and identifies gaps in its rule library compared to market leaders.
 
 ## 2. Research & Strategy
-*   **Competitors**: Gitleaks, TruffleHog, Ripgrep (as speed baseline).
-*   **Datasets**: 1GB of mixed logs, 500MB of diverse source code, and 100MB of synthetic data with hidden secrets.
-*   **Metrics**: Throughput (MB/s), Memory usage (RSS), Precision/Recall, and False Positive rate.
+*   **Target Datasets**:
+    *   **SecretBench**: 97,479 manually labeled secrets (15,084 true positives) from 818 GitHub repositories.
+    *   **GitGuardian sample_secrets**: A repository specifically designed to test scanners (AWS, MongoDB, high-entropy strings).
+    *   **FPSecretBench**: Focused on false positives reported by major tools to measure and reduce noise.
+*   **Target Competitors**:
+    *   **Gitleaks**: The standard for regex-based scanning (800+ rules).
+    *   **TruffleHog**: Specialist in verified detectors and high-entropy secrets.
+    *   **detect-secrets**: IBM-led project focused on low-noise pre-commit scanning.
+*   **Comparison Metrics**:
+    *   **Recall**: TP / (TP + FN) - How many secrets did we find?
+    *   **Precision**: TP / (TP + FP) - How much noise did we generate?
+    *   **F1-Score**: Harmonic mean of Precision and Recall.
+    *   **Throughput**: Scanning speed in MB/s.
 
 ## 3. Implementation Checklist
-- [ ] **Benchmark Runner**: Implement a standardized script that executes all tools under identical conditions.
-- [ ] **Adversary Utility Harness**: Create wrappers for competitor tools to run them with "Balanced" settings.
-- [ ] **Automated Charting**: Use `matplotlib` or `plotly` to generate visual comparisons of throughput and memory efficiency.
-- [ ] **Regression Detection**: Integrate benchmarks into the CI/CD pipeline to flag any commit that drops performance by > 5%.
-- [ ] **Technical Article**: Draft a whitepaper on "The Engineering of High-Speed Secret Detection: RE2 vs. Standard Engines".
+- [ ] **Infrastructure Setup**:
+    - [ ] Create `tools/benchmark_runner.py` to automate the execution of multiple scanners on a target directory.
+    - [ ] Set up an isolated environment with Gitleaks, TruffleHog, and detect-secrets installed.
+- [ ] **Data Acquisition**:
+    - [ ] Implement a script to download/clone subsets of `SecretBench` and `sample_secrets`.
+    - [ ] Integrate `FPSecretBench` to specifically test the tool's noise reduction capabilities.
+- [ ] **Benchmark Execution**:
+    - [ ] Run `secret-scan` and the competitor tools on each dataset.
+    - [ ] Log raw findings, execution time, and memory usage to `data/benchmark_results.json`.
+- [ ] **Analysis & Reporting**:
+    - [ ] Create `tools/compare_results.py` to generate a comparison matrix.
+    - [ ] Identify the top 10 rules missed by `secret-scan` but caught by competitors.
+    - [ ] Generate `BENCHMARK_REPORT.md` with visual charts and actionable improvement tasks.
 
 ## 4. Testing & Verification (Mandatory)
-### 4.1 Unit Testing
-- [ ] `test_benchmark_accuracy`: Verify that the runner correctly records timing and resource metrics.
-- [ ] `test_competitor_execution`: Assert that competitor tools are being called with the intended configuration.
+- [ ] **Scoring Validation**: Run the `benchmark_runner.py` on a small, hand-crafted set of 10 secrets (5 TP, 5 FP) to ensure the scoring logic is mathematically correct.
+- [ ] **Reproducibility**: Ensure the benchmark script records the exact version and flags used for each tool.
 
-### 4.2 Acceptance Testing (BDD)
-- [ ] **Scenario**: Performance Report (System generates a detailed PDF report comparing the latest build to competitors).
-- [ ] **Scenario**: Speed Regression (CI build fails after a complex rule addition drops throughput below the 10 MB/s floor).
-
-### 4.3 Test Data Obfuscation
-- [ ] All datasets used for public benchmarks must be entirely synthetic.
-
-## 5. Demo & Documentation
-- [ ] **`README.md`**: Add a badge showing current throughput (e.g., "Scanning Speed: 18.4 MB/s").
-- [ ] **`docs/BENCHMARKS.md`**: Publish regularly updated comparison tables.
-
-## 6. Engineering Standards
-*   **Tone**: Senior Engineer, data-driven.
-*   **Ethics**: Benchmarks must be fair, transparent, and reproducible by third parties.
-*   **Perf**: The benchmark runner itself must have minimal overhead on the system being tested.
+## 5. Engineering Standards
+*   **Objectivity**: Use default configurations for all tools unless specific common-ground flags are required.
+*   **Ethics**: Do not store or redistribute raw secrets from research datasets; results must be aggregated and anonymized.
+*   **Automation**: The benchmark should be runnable with a single command to allow for regression testing after major rule updates.

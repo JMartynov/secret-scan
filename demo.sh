@@ -13,18 +13,12 @@ import json, base64, os, random, string
 
 def decode_sample(s):
     try:
-        # Step 1: Decode outer base64
-        second_pass = base64.b64decode(s.encode('utf-8')).decode('utf-8')
-        # Step 2: Reverse
-        first_pass_reversed = second_pass[::-1]
-        # Step 3: Decode inner base64
-        original = base64.b64decode(first_pass_reversed.encode('utf-8')).decode('utf-8')
+        hex_str = base64.b64decode(s.encode('utf-8')).decode('utf-8')
+        original = bytes.fromhex(hex_str).decode('utf-8')
         return original.replace("DUMMY_IGNORE", "")
     except Exception:
-        # Fallback for old simple base64 if needed
         try:
-            decoded = base64.b64decode(s.encode('utf-8')).decode('utf-8')
-            return decoded.replace("DUMMY_IGNORE", "")
+            return base64.b64decode(s.encode('utf-8')).decode('utf-8').replace("DUMMY_IGNORE", "")
         except:
             return s
 

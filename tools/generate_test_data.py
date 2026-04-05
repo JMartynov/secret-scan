@@ -8,6 +8,11 @@ import sys
 
 import exrex
 
+# Patch exrex to generate only ASCII for \w and \s to match re2 default behavior
+if hasattr(exrex, 'sre_parse'):
+    exrex.CATEGORIES[exrex.sre_parse.CATEGORY_WORD] = list(string.ascii_letters + string.digits + '_')
+    exrex.CATEGORIES[exrex.sre_parse.CATEGORY_SPACE] = list(' \t\n\r')
+
 
 def random_string(length, chars=string.ascii_letters + string.digits):
     return ''.join(random.choices(chars, k=length))

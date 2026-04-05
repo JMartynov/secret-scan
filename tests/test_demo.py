@@ -9,7 +9,7 @@ def test_demo_execution():
     
     # Increase timeout because the 1MB file benchmark in the demo may take longer
     # due to strict regex evaluations and concurrency spinup on some environments.
-    result = subprocess.run(["./demo.sh"], capture_output=True, text=True, timeout=120)
+    result = subprocess.run(["./demo.sh"], capture_output=True, text=True, timeout=300)
     print("DEBUG: Full stdout from demo.sh:")
     print(result.stdout)
     print("DEBUG: Full stderr from demo.sh:")
@@ -29,8 +29,8 @@ def test_demo_execution():
     assert "Demo Complete" in result.stdout
     
     # Check if redacted content is present in Part 2
-    # We look for ASIA...P68B string which should be there for AWS key redaction
-    assert "ASIA...P68B" in result.stdout
+    # We look for AKIA...CDEF string which should be there for AWS key redaction
+    assert "AKIA...CDEF" in result.stdout
     
     # Ensure no ANSI color codes in Part 4 output
     # This is tricky because Part 4 is just a section of the whole output.

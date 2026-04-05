@@ -480,11 +480,11 @@ class SecretDetector:
                             m.end(), 
                             rule_def.get('category', 'generic'), 
                             get_suggestion(rule['id'], rule_def.get('category', 'generic')),
-                        context_line=line_content,
-                        score=score
-                    )
-                    finding.tier = rule_def.get('tier', 2)
-                    all_findings.append(finding)
+                            context_line=line_content,
+                            score=score
+                        )
+                        finding.tier = rule_def.get('tier', 2)
+                        all_findings.append(finding)
 
         # 3. Contextual rules (Heuristic matches for likely secret declarations)
         for regex in self.context_rules:

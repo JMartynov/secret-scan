@@ -19,7 +19,7 @@ def get_all_test_data():
                         all_tests.append((rule_id, cat, neg, False))
     return all_tests
 
-detector = SecretDetector(data_dir='data', force_scan_all=True)
+detector = SecretDetector(data_dir='data', force_scan_all=True, include_pii=True)
 
 def decode_sample(s):
     try:

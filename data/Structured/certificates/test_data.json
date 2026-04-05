@@ -1,1 +1,10 @@
-{}
+{
+  "certificate": {
+    "positives": [
+      "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tV1A3amM+UjNnIUVoaDEtLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtUDJUYXBiUkxBRE84aTBGdWY1R2wxZGFHVGVqejRxRDA="
+    ]
+  }
+}

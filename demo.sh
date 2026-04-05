@@ -150,6 +150,12 @@ echo ">>> echo \"$PII_SAMPLE\" | ./run.sh --pii"
 printf "%s\n" "$PII_SAMPLE" | ./run.sh --pii
 echo "----------------------------------------------------"
 
+echo -e "\n--- Part 14: Natural Language Context Detection ---"
+CONTEXT_SAMPLE="aquí está mi contraseña: secretpassword123"
+echo ">>> echo \"$CONTEXT_SAMPLE\" | ./run.sh --full"
+printf "%s\n" "$CONTEXT_SAMPLE" | ./run.sh --full
+echo "----------------------------------------------------"
+
 # 4. Cleanup
 rm -rf "$DEMO_DIR"
 echo -e "\n--- Demo Complete ---"

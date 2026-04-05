@@ -1,90 +1,90 @@
 {
   "alienvault_api": {
     "positives": [
-      "YWxpZW52YXVsdAoNJDpneHFjeWJodWN3ajhnZHM5dWp1Zjc4MTVuaGtiMXF1anpneWF0cHppbXZ4YjE3cmt1N2VtODl1eWhlb3lha21p"
+      "YWxpZW52YXVsdE9YKzQrbGNzdmg4N21pNzJ3dDMwOXdlaXFlZ2hrOGRsMTNvMG5pNXZraDVoYm85bG16MGQ4d2R1Z3dlZWd3dnFheXNpOA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtdHlmUElZYkZNZE5ncGVaRHMxaXNqaGY0dG5GaWl0NDU="
+      "bmVnYXRpdmUtMm5PMXpWbHNGVVhhVURZcXhEdGJIeUczVXFVajRJUVU="
     ]
   },
   "credit_cards": {
     "positives": [
-      "NjUwMzY4NDQ4NTUyNzIwNg=="
+      "NTI4NjUwNTI3MDI3NTg2OCMgNDczMzQ0MDU2OTA0NTUxMQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtSVY2NGlQYUpOaUFWcUkyRXh4b2Q1TUJsSWlOdmRCdkM="
+      "bmVnYXRpdmUtZ09vMGR6UnBRWU8wVElORjByaER3ajZMV0tuNWM1YTk="
     ]
   },
   "credit_card_visa": {
     "positives": [
-      "NDAyODkyNzA0MDYwNDcxMg=="
+      "NDM4NzU4NTEwNjExNTUwOA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtc2hNTlo5OVF0VlpnSDEyZzJwbTFTaFlQbmF5d3lvenQ="
+      "bmVnYXRpdmUtUUxOUGozVjBXVDRKVzBjNWRHRE1nRE1vaHZEbWtGaTM="
     ]
   },
   "credit_card_mastercard": {
     "positives": [
-      "MjcwNDQzNTY1OTUyNjEyMQ=="
+      "MjI3NDQ4NzM2NzA2MjcwOQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtbGU1RTVwRndIRzRzZ2hFbGhGSzBMMTVkYlpHMjZuUVU="
+      "bmVnYXRpdmUtTlg3bzROWjdVNmowd0tEZ01rYW1BUklvVTNVejRLc2I="
     ]
   },
   "credit_cards_american_express": {
     "positives": [
-      "MzQ1NzU5OTkxNjQyNDY4"
+      "MzQ4NTIyOTgwMzc5MTYx"
     ],
     "negatives": [
-      "bmVnYXRpdmUtTm00WXFlUnZQRlV1VWg0bGJ4anJyS0xXUTJJdHRzbUw="
+      "bmVnYXRpdmUtYzZuakRkOE92SVlVSHdzMHhkVkNmbTROU21aMHp0Tzc="
     ]
   },
   "credit_card_discovery": {
     "positives": [
-      "NjAxMTg2MzU0MDAzNjQxMA=="
+      "NjU0MDIyODIxMDUyODk4NQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtMWxMcEY4SzVrcW1lN1B6Z2FXeVhqMzVJc3dtb09JYno="
+      "bmVnYXRpdmUtdnA2RTBQQmVkZ3I2ZDRvRXhtNGxCVzlwbDlWU3lVRWo="
     ]
   },
   "iban": {
     "positives": [
-      "VlMxMSBVUllHNDg5MjctMi0xLTEtMSA1My0zMDYtMTE="
+      "UlYzOC01NjQtNS04LTAgMjUgOC0xIDY3IDMtMDQ1MiA5"
     ],
     "negatives": [
-      "bmVnYXRpdmUtZlhQOWZZOEhjRklkckU0NlFnYjl3cHltbXY4VkNXdHA="
+      "bmVnYXRpdmUtaUpVQmlRamZQRGRLUTdQakZTeWRkWEM5cUFUbGJibzg="
     ]
   },
   "no_national_id_number": {
     "positives": [
-      "NDEwODI1MDc3NDM="
+      "MzAwNTU4IDI5OCAzNw=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtd1hua1poVmhIYUtlbWdnY1pIRlZHSXNJTkNpRkdVR0I="
+      "bmVnYXRpdmUtQUJzanl4bElUakdwT2cxVGlhSXNjMXFEZ0FnaHNpaXk="
     ]
   },
   "us_ssn": {
     "positives": [
-      "NTk2LTIyLTcxOTc="
+      "MDkzLTA2LTI4MTc="
     ],
     "negatives": [
-      "bmVnYXRpdmUtbEZQRWVzUjBoUXZWMUM4d1JSaXMzMnBHd1FhRkpuNXU="
+      "bmVnYXRpdmUtS09oa0E5Ym1VWXRVbUY2QzFvRjRPeXNHSlZIRG5xbmc="
     ]
   },
   "us_itin": {
     "positives": [
-      "OTM1LTg3LTE1MjQ="
+      "OTc0LTcwLTExMzU="
     ],
     "negatives": [
-      "bmVnYXRpdmUtSmtVNFlwUGx5VFlYeld3VUZ5Z2ZxN3h3NFcyT0JpTHQ="
+      "bmVnYXRpdmUtdkFORFd3dDFFQmlzUG9LbnRiSTlKOUpFeHh4TUNtSzI="
     ]
   },
   "uk_national_insurance_number": {
     "positives": [
-      "V0QgNzI4ODEyQg=="
+      "TkE1MyAxNDA2RA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtYVJ2N3BGR3ZnRVhCRkhCVGZ0VEdwdk5xdW8wNFR1WUk="
+      "bmVnYXRpdmUtS2dnSHNOVm5GdHNxUnFFNGprMDdDRm1JaDBTZjBkVnA="
     ]
   }
 }

@@ -177,9 +177,13 @@ class DetectionEngine:
             return 4.0 # Base64 threshold
         return 4.0 # Alphanumeric/Generic threshold
 
-    def calculate_confidence(self, base_score: float, line: str, rule: Dict[str, Any], match_content: str = "", start_pos: int = -1) -> tuple[float, float]:
+    def calculate_confidence(self, base_score: float, line: str, rule: Dict[str, Any], match_content: str = "", start_pos: int = -1, context_window: str = "") -> tuple[float, float]:
         """Calculates a contextual confidence score and a weighted risk score (0-100)."""
         confidence = base_score
+        
+        # If context_window is provided, use it for proximity analysis, otherwise fall back to the line
+        analysis_text = context_window if context_window else line
+        analysis_lower = analysis_text.lower()
         line_lower = line.lower()
         score = 0.0
 
@@ -191,23 +195,34 @@ class DetectionEngine:
         keywords = rule.get('keywords') or []
         for kw in keywords:
             kw_lower = kw.lower()
-            if kw_lower in line_lower:
+            if kw_lower in analysis_lower:
                 confidence = min(1.0, confidence + 0.1)
                 
-        if match_content and match_content.lower() in line_lower:
-            match_idx = line_lower.find(match_content.lower())
+        if match_content and match_content.lower() in analysis_lower:
+            match_idx = analysis_lower.find(match_content.lower())
             for kw in keywords:
                 kw_lower = kw.lower()
-                idx = line_lower.find(kw_lower)
+                idx = analysis_lower.find(kw_lower)
                 while idx != -1:
                     distance = abs(match_idx - idx)
                     if distance < best_distance:
                         best_distance = distance
-                    idx = line_lower.find(kw_lower, idx + 1)
+                    idx = analysis_lower.find(kw_lower, idx + 1)
         
-        if best_distance <= 50:
-            # Full 20 points if adjacent, linearly decreasing down to 0 at 50 chars
-            context_bonus = max(0, 20 * (1 - (best_distance / 50)))
+        if best_distance <= 100:
+            # Full 20 points if adjacent, linearly decreasing down to 0 at 100 chars
+            context_bonus = max(0, 20 * (1 - (best_distance / 100)))
+            
+        # Lightweight fuzzy matching for intent markers in the context window
+        intent_markers = [
+            "here is my", "my password", "my secret", "prod api", "our token", "aquí está", "aqui esta", "mi contraseña", "mi secreto", "voici mon", "voici ma", "mon mot de passe", "mon secret", "hier ist", "mein passwort", "mein geheimnis", "psswrd"
+        ]
+        
+        for marker in intent_markers:
+            if marker in analysis_lower:
+                context_bonus += 10 # Boost score if an intent marker is found
+                confidence = min(1.0, confidence + 0.15)
+                break
 
         # Entropy Adjustment
         entropy_adj = 0
@@ -259,7 +274,7 @@ class DetectionEngine:
             # Fallback for systems without SIGALRM or on timeout/error
             return []
 
-    def run_entropy_detection(self, line: str, line_num: int, existing_findings: List[Finding], line_offset: int = 0) -> List[Finding]:
+    def run_entropy_detection(self, line: str, line_num: int, existing_findings: List[Finding], line_offset: int = 0, full_text: str = "") -> List[Finding]:
         """
         Identifies high-entropy strings that may be secrets but aren't caught by regex rules.
         """
@@ -277,8 +292,18 @@ class DetectionEngine:
             if entropy > threshold:
                 start = line_offset + match.start()
                 end = line_offset + match.end()
+                
+                # Context Window: +/- 100 characters around the match
+                context_window = ""
+                if full_text:
+                    window_start = max(0, start - 100)
+                    window_end = min(len(full_text), end + 100)
+                    context_window = full_text[window_start:window_end]
+                else:
+                    context_window = line
+                
                 # Use contextual heuristics to boost confidence for generic entropy hits
-                conf, sc, dynamic_risk = self.calculate_confidence(0.7 if standard_re.search(r"(?i)(key|secret|token|password|auth|api|cred|prod)", line) else 0.3, line, {'keywords': ['key', 'secret', 'token', 'password', 'auth', 'api', 'cred', 'prod']}, token, match.start())
+                conf, sc, dynamic_risk = self.calculate_confidence(0.7 if standard_re.search(r"(?i)(key|secret|token|password|auth|api|cred|prod)", context_window) else 0.3, line, {'keywords': ['key', 'secret', 'token', 'password', 'auth', 'api', 'cred', 'prod']}, token, match.start(), context_window=context_window)
                 finding = Finding("High Entropy String", line_num, dynamic_risk, token, conf, start=start, end=end, category="entropy", score=sc)
                 finding.tier = 4
                 if standard_re.search(r"(?i)(key|secret|token|password|auth|api|cred|prod)", line):
@@ -338,6 +363,11 @@ class SecretDetector:
             if line_end == -1:
                 line_end = len(text)
             return text[line_start:line_end]
+            
+        def get_context_window(start_pos, end_pos):
+            window_start = max(0, start_pos - 100)
+            window_end = min(len(text), end_pos + 100)
+            return text[window_start:window_end]
 
         all_findings = []
         triggered_indices = set()
@@ -397,7 +427,8 @@ class SecretDetector:
                         continue
 
                     line_num = get_line_num(m.start())
-                    confidence, score, dynamic_risk = self.engine.calculate_confidence(0.8, line_content, rule_def, m.group(0), m.start() - line_offsets[max(0, bisect.bisect_right(line_offsets, m.start()) - 1)])
+                    context_window = get_context_window(m.start(), m.end())
+                    confidence, score, dynamic_risk = self.engine.calculate_confidence(0.8, line_content, rule_def, m.group(0), m.start() - line_offsets[max(0, bisect.bisect_right(line_offsets, m.start()) - 1)], context_window=context_window)
                     finding = Finding(
                         rule['id'], 
                         line_num, 
@@ -437,7 +468,8 @@ class SecretDetector:
                             continue
 
                         line_num = get_line_num(m.start())
-                        confidence, score, dynamic_risk = self.engine.calculate_confidence(0.7, line_content, rule_def, m.group(0), m.start() - line_offsets[max(0, bisect.bisect_right(line_offsets, m.start()) - 1)])
+                        context_window = get_context_window(m.start(), m.end())
+                        confidence, score, dynamic_risk = self.engine.calculate_confidence(0.7, line_content, rule_def, m.group(0), m.start() - line_offsets[max(0, bisect.bisect_right(line_offsets, m.start()) - 1)], context_window=context_window)
                         finding = Finding(
                             rule['id'], 
                             line_num, 
@@ -465,7 +497,8 @@ class SecretDetector:
                 if self.ignore_engine and self.ignore_engine.is_ignored_line(line_content, "Contextual Secret (LLM Prompt)"):
                     continue
 
-                conf, sc, dynamic_risk = self.engine.calculate_confidence(0.6, line_content, {'keywords': ['api', 'token', 'secret', 'password', 'key']}, m.group(0), m.start() - line_offsets[max(0, bisect.bisect_right(line_offsets, m.start()) - 1)])
+                context_window = get_context_window(m.start(), m.end())
+                conf, sc, dynamic_risk = self.engine.calculate_confidence(0.6, line_content, {'keywords': ['api', 'token', 'secret', 'password', 'key']}, m.group(0), m.start() - line_offsets[max(0, bisect.bisect_right(line_offsets, m.start()) - 1)], context_window=context_window)
                 finding = Finding(
                     "Contextual Secret (LLM Prompt)", 
                     get_line_num(m.start()), 
@@ -487,7 +520,7 @@ class SecretDetector:
             for i, start in enumerate(line_offsets):
                 end = line_offsets[i+1] if i+1 < len(line_offsets) else len(text)
                 line = text[start:end].rstrip('\r\n')
-                line_findings = self.engine.run_entropy_detection(line, base_line + i, all_findings, start)
+                line_findings = self.engine.run_entropy_detection(line, base_line + i, all_findings, start, full_text=text)
                 if self.ignore_engine:
                     line_findings = [f for f in line_findings if not self.ignore_engine.is_in_baseline(f.content)]
                 

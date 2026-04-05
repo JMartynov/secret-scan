@@ -56,6 +56,7 @@ With the introduction of the Advanced Risk Scoring System, findings are assigned
 
 1.  **Filtering Noise**: Use the `--min-score` flag to filter out low-confidence generic strings or test markers. For example, `--min-score 70` ensures only HIGH and CRITICAL findings are reported.
 2.  **Strict Gating**: Combine `--min-score` with `--fail-on-risk CRITICAL` to strictly fail a CI build only when a very high-confidence secret (e.g., a verified structured pattern with proximity context) is found.
+3.  **Natural Language Detection**: When scanning LLM prompts, the detector leverages a 100-character context window and fuzzy intent matching (e.g., "aquí está mi contraseña") to dramatically boost scores for contextual secrets and detect prompt leakage.
 
 ## 7. Scanning Large Repositories
 

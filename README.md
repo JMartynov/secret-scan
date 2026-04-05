@@ -176,7 +176,7 @@ The **LLM Secrets Leak Detector** provides a comprehensive suite of features des
 | **Detection Engines** | **Regex Matching (RE2)** | ✅ | Primary engine using `google-re2`.<br>Fast, linear-time matching. |
 | | **Regex Matching (Legacy)** | ✅ | Fallback to `regex` (Python) for complex patterns.<br>ReDoS protection. |
 | | **Entropy Analysis** | ✅ | Shannon entropy scoring for random-looking tokens (min 20 chars). |
-| | **Contextual Heuristics** | ✅ | Identifies secrets based on surrounding keywords like `prod`, `password`, `key`. |
+| | **Contextual Heuristics** | ✅ | Identifies secrets based on surrounding keywords like `prod`, `password`, `key`. Supports multi-lingual conversational intent matching (English, Spanish, French, German). |
 | | **Rule-based Logic** | ✅ | 1750+ rules loaded from `data/` (Expanded 2026). |
 | **Input Sources** | **File Scanning** | ✅ | Scans local files with UTF-8 support.<br>Error handling. |
 | | **Stdin / Piped Input** | ✅ | Real-time processing of piped data (e.g., `cat log \| ./run.sh`). |
@@ -248,6 +248,10 @@ Context: config process result Stripe secret: [SECRET_HIGHLIGHTED_IN_RED]
 ```
 
 Remediation hints now include direct links to official security guides for AWS, GitHub, Stripe, and Google Cloud to guide developers through the revocation and rotation process.
+
+### Natural Language Contextual Matching
+
+The detection engine uses a 100-character context window to detect natural language conversational intents, such as `Here is my prod api key:`, which are common when interacting with LLMs. This feature is fully multi-lingual, boosting confidence scores when intent is detected in English, Spanish, French, or German.
 
 ---
 

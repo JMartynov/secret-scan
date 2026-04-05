@@ -32,6 +32,37 @@ def test_context_decay():
     # The adjacent score should have a higher context bonus
     assert score_adjacent > score_far
 
+def test_context_window_and_intent_boost():
+    engine = DetectionEngine()
+    rule = {'keywords': ['key']}
+    
+    # Text with an intent marker in the window
+    text = "here is my api key: abcd1234efgh5678ijkl9012"
+    
+    _, score_with_intent, _ = engine.calculate_confidence(
+        base_score=0.7, 
+        line=text, 
+        rule=rule, 
+        match_content="abcd1234efgh5678ijkl9012", 
+        start_pos=20, 
+        context_window=text
+    )
+    
+    # Text without an intent marker
+    text_no_intent = "the system uses key: abcd1234efgh5678ijkl9012"
+    
+    _, score_without_intent, _ = engine.calculate_confidence(
+        base_score=0.7, 
+        line=text_no_intent, 
+        rule=rule, 
+        match_content="abcd1234efgh5678ijkl9012", 
+        start_pos=20, 
+        context_window=text_no_intent
+    )
+    
+    # Score should be higher due to the intent marker boost
+    assert score_with_intent > score_without_intent
+
 def test_score_capping():
     engine = DetectionEngine()
     rule = {'keywords': ['secret']}

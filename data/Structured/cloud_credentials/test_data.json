@@ -1,158 +1,134 @@
 {
   "youtube/google_api_key": {
     "positives": [
-      "eW91dHViZSUNQUl6YWZoTFdaR0NCd2VRNDBKa0w4Skp6cHJGUWwwS1RVV0JrM0x1"
+      "eW91dHViZQo8DTtBSXphM0FMbFhmcEVsRkVxa2ZiOGpybzhCdWFBZDRJMXk3c1pfQ2U="
     ],
     "negatives": [
-      "bmVnYXRpdmUtbVlVMEpDdkl4bHdiWVdSTEQ2b0VRUW1HZER5c0FOZUc="
-    ]
-  },
-  "aws_api_id": {
-    "positives": [
-      "QVNJQUUwWEJLNERNNEwxWlA2OEI="
-    ],
-    "negatives": [
-      "bmVnYXRpdmUtS2dHWEZzbU0wanVLMXVDOXh4V3ZFTk5KOTQ2dUlDMmE="
-    ]
-  },
-  "aws_api_secret": {
-    "positives": [
-      "MC9qYVcvRFVzUzhua3VVM3hycVFPeVJLVisxYjAva3FWZmZjUmxFNQo="
-    ],
-    "negatives": [
-      "bmVnYXRpdmUtWm1WYm1mZk9uUEJQY2FNU1VNTVRZbXBBWUF5Mk00cHE="
+      "bmVnYXRpdmUtbUJ3UkR6TjQ3bXVwOUZndFJaRDNQNGE3WTFvTERXVXo="
     ]
   },
   "azure_key_id": {
     "positives": [
-      "YXp1cmVuY2RjMTUxZjYtNGY1OC1kMjgwLWExYmQtMGNjYjQ3OGViNDVk"
+      "YXp1cmV4WClmMDdhNmY1Zi04MDBjLTg2YzEtYzM2OS0zNzQ3YWY0MjBjN2I="
     ],
     "negatives": [
-      "bmVnYXRpdmUtZ1lhb2tMS0FNNTZDU0dZMTAySElYQ0o1dGg4MzZjQkY="
+      "bmVnYXRpdmUtejJyWnlMbjc5cE9IQ2Q4ak9rMDA5WVNOalpZVTZveFM="
     ]
   },
   "azure_client_secret": {
     "positives": [
-      "YXp1cmVwaHJld3Rva2Vucy5jCyBgWjZCSXh+cGxoRlRwQVJrWXFnOU9oQ1FQLmZkaDlZVlhiSA=="
+      "YXp1cmVrZXliZwwgIT09IAkKDVtgYkVfRWVCam0xRWhZNmZ2TFpDb2pGOWdBYjZHbFdsWWhlQyA="
     ],
     "negatives": [
-      "bmVnYXRpdmUtRlRRTmcydWtzV3VKMmhTYWVlU2Y4R216WmdXRjlYY3A="
+      "bmVnYXRpdmUtQ1U2bGs4b1pjdmZhTjlaTWxyYkZYc1NCMWVXNnY0akw="
     ]
   },
   "digitalocean_api_token": {
     "positives": [
-      "ZGlnaXRhbG9jZWFuCgoKDWFTTU5TNXlGRnhwUWFEWFA2VUJRWWpsbzBiOE8wM0VEak16VWRxTUx3c3drRGdHd09kRzMtZ3JyVVhkR3R4ZG0="
+      "ZGlnaXRhbG9jZWFueQ1XUDdsMEdhckItWlpfSEt2Q0NVeEo4WXVSWGlBbERFdkoyZUF3QlkxeUVzSG5UTXFKNENJRVM0QWFKbUFraXBQ"
     ],
     "negatives": [
-      "bmVnYXRpdmUtVjFzMktadXhWSGN1V0pQcURuSFRzUVdPMEd4QVo5Y3c="
+      "bmVnYXRpdmUtTzR2a1lwOVdYUG9WRW1hVENoUWp1aXFJalp1anVZY00="
     ]
   },
   "gcp_api_key": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtUGJPeXFYY0twRUpra1E5WHd6S2EwM2I2cndLamJHNnY="
+      "bmVnYXRpdmUtSG5WRkNaMFA3WHhmQjlVUUo1d3VFMlozTnUxdG9qaDE="
     ]
   },
   "heroku_api_key": {
     "positives": [
-      "aGVyb2t1PDlkNWMyQTkyLTlhOGEtNTMyOC1iYjc0LTE4Zjc1OGI2YzM3Mw=="
+      "aGVyb2t1VQo4CjgxNTY3ZTMzLWJmMzktOWQ0ZS04YWQxLTY5YTI3NWUwZTMwZQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtTncyNlhiaGt0ZUtLN1drWlY2eGltdklaNlJibTQ0YVQ="
+      "bmVnYXRpdmUtVFZveU4wUU5MNUNkbWlUdkF0NmwxVU5yQ2hhTThZeXo="
     ]
   },
   "azure_sql_connection_string": {
     "positives": [
-      "ZjA2emppbG1oc2Q0NzAwLmRhdGFiYXNlLndpbmRvd3MubmV0"
+      "dmkxcDFqLmRhdGFiYXNlLnNlY3VyZS5jaGluYWNsb3VkYXBpLmNu"
     ],
     "negatives": [
-      "bmVnYXRpdmUtMlM5dU52eFl3cnNUMU44eE55NjJ6Qjc4bGpRM1ZaVzE="
+      "bmVnYXRpdmUtNTlxY2xYcnJ2QWpieUhaNXNJZzZRNFFQUXNteTM2djc="
     ]
   },
   "google_private_key_id_or_old_api_token": {
     "positives": [
-      "cHJpdmF0ZV9rZXlfaWQnDSALCQwgdG8gCg0MCQwMCQwJDAoJW2BlMUJEQUZFMzc3ODQ1ZTIzYUY2NWE4ZDlFYmYzRkExOGFFZDFjODNF"
+      "Z29vZ2xlX2FwaV9rZXkJCSANIA0KCQoNDSAKCQ0MYThlQWREOEFlNWVCQjVlY0RFY0NiZWVhYWRDNTdEY2YzMmE4YjU2ZA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtMzhuZ2NsTXdOalphQ1Q4eXlWdXdqT0FKUzdqS081YWE="
+      "bmVnYXRpdmUtSHJTcE1DUERDUTMxWUw3MjY0U2xPczQ0b1pLUnBwc1k="
     ]
   },
   "amazon_mws_auth_token": {
     "positives": [
-      "YW16bi5td3MuMzcyY2NhODktM2QwNC1hYTVjLTBkNGItMWViZmZlZTliODM4"
+      "YW16bi5td3MuNGU5MDVhYjktMTI0OS1mMmIxLWFjYmYtNWY5NGNkY2ZiMTUw"
     ],
     "negatives": [
-      "bmVnYXRpdmUtR0RNenRpcVh2dlBZa3FuRFFBNTdweVhsQUk1b3pIQ28="
+      "bmVnYXRpdmUtZHE4MWRjYmxyQ2x4Smc1NTQzYURvcTNEanoxZmdZdEQ="
     ]
   },
   "aws_s3_presigned_url": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtZHlyZ3V2czRuV0s5ak1FSU5yRzg0VkVPS3E1aVhzeEE="
+      "bmVnYXRpdmUtUXhET0IwN2xZUVJjNjRuMzN1UGRPTTVmb09lNjh3UnE="
     ]
   },
   "azure_access_key_legacy": {
     "positives": [
-      "QXp1cmVLZXk9WkpZclJtUWNjcnZZRzVBWE5BRHJMWTQvVXBxb09RUitid2dWeTM4bGlLMHNsbTFRSmtMZjRKdktxd3ExQ09raVl1VWEwN0xtUlRJRXFTVVk9PQ=="
+      "QXp1cmVLZXk9MndXbGpLWXYxclN3UUNVV1NtM3VaQ2MxQnZXNFNoZ2F0OGJEazBYbjBmbElNd3dvR0VBWXB2eU9OUCtwSUlHZmdKL0IrNGU1U2p6V1lWZW49PQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUteFBoR05ocjVBY0d0MG9WZXNTenhHYjgyb2lDSk9vVXE="
+      "bmVnYXRpdmUtaEF6OHhRR1M2dEN2dmJVWHdXWDF0QUZTeGNDeGhjQnA="
     ]
   },
   "azure_sas_token": {
     "positives": [
-      "c2lnPWhJeG9KVGlDN3pNVDdUVXE0cVpFZzN2OGR0VWl5cUppSzlZWjBhT05paDIlM2Q="
+      "c2lnPTg3SnBlVWg0ck42d3VrdFR6VWlGZTdFMXJSbHoycjdqcDJGUnJvaUZMaXUlM2Q="
     ],
     "negatives": [
-      "bmVnYXRpdmUtYWlhUEZocXJIeWJsTDA0aUZJdm5VTlhabXp4RWxVd3k="
-    ]
-  },
-  "aws_key_id_standalone": {
-    "positives": [
-      "QTNUT1hZR1hPVkhFRVI3MkRUR0k="
-    ],
-    "negatives": [
-      "bmVnYXRpdmUtRk9IOGFDNUphWFh5OENDamc1NEwzMThBUE5xMVdxWlY="
+      "bmVnYXRpdmUtOFNsbjNWdTd1TERZTlAxVExIYXdzc1BJRmpMMkIwTzA="
     ]
   },
   "azure_generic_key": {
     "positives": [
-      "dkJxMXdaZTRQZ01peTRXWkY1ZjBUY1lLcTFPRUw5dFVZeldYUjViNEhCMXFGM0xXR1FnT0pRUUo5OUFYQUMyZWlaUVhyalhVQUFBckNLZzJic3lz"
+      "QWU1Zmdrb1pIMFlnSjBlUnc4YzlyanFpczRhYzlvR3ZLS1ljdTMwNG5tblhnRWFhbmdGN0pRUUo5OUFYQUNJand2TndURlY2QUFBT3Bsb0Y0aWFw"
     ],
     "negatives": [
-      "bmVnYXRpdmUtM3M2c0pic3ExSXJveFN3QlR4OXB1V1lxRU01UkVnYzg="
+      "bmVnYXRpdmUtNGwyZjFkMUJIb0xxWkM0aU9KWmdLak1UMzR3TlM0RW8="
     ]
   },
   "azure_generic_key_legacy": {
     "positives": [
-      "T2NwLUFwaW0tU3Vic2NyaXB0aW9uLUtleT00YzdkNGNkMDM4Y2JiZjNjNjAwYTgzY2U2ZWQ4ZTE2NA=="
+      "T2NwLUFwaW0tU3Vic2NyaXB0aW9uLUtleTogODFjY2FmNjI1MjlhNDYyOTQzN2NhMTI1ZDQyMTliZTI="
     ],
     "negatives": [
-      "bmVnYXRpdmUtNEM4eDVhZ3kwS2c3RUIyNXpqS3ozYjdPOGdkSWw2N1U="
+      "bmVnYXRpdmUtRmoyNFN0YzIybDhHakVGM3NMQmRQYXNVRUZ4cnRHdDA="
     ]
   },
   "aws_bedrock_api_key": {
     "positives": [
-      "QUJTS1FtVmtjbTlqYTBGUVNVdGxlU2xtUmdNL21EZ2ZNTzV5L3RrK0srOHBZTFgwZ09DQjM0NkZXZC9MYVA4WVZVUlBkOXQwWldoVzliWG5Ud2tFNkhhcXJMcWdvSkJVQ042K2pXND0="
+      "QUJTS1FtVmtjbTlqYTBGUVNVdGxlU01IVzliUjVVRVN0MzJZWW5acWN5dXk1d3U2QkV2MVROPT0="
     ],
     "negatives": [
-      "bmVnYXRpdmUtY1pvSjhxSVhDb2ZnRWFtSXp6TTEzNlFrVXJMTDdZdFA="
+      "bmVnYXRpdmUtM1pBdEhBVHFFQzdsMG9COG15M2wxUnl5TElpNlFIaUk="
     ]
   },
   "aws_bedrock_api_key_2": {
     "positives": [
-      "QUJTS3NEckVGb2g3ZlkrdUtsdE9TREJoWHU0WTZQZjE4ODM3aXRMYkh6Z21xU09Ha1oxNit0STFhcnNnU3NsQ0RVaCs1VDRuVC93UFB6U2V6NHBBYTh0U25STThpWk50QUd5ckJNNkVlVVVqQmFvVTJIOXNvYWFy"
+      "QUJTS20xSFdHVEpyUGZYMVNRL2YydFV1L1E1bDFtUmtiZzAzTUhDVHZvRXI5Zit5azZraDdlZFFWbThDbnE4MWpBUXp3NTFyUDZVNUJkNVA4L1R5OW1oeG5zNitJeWhsR1VndzFEVnhDekJa"
     ],
     "negatives": [
-      "bmVnYXRpdmUtVnZxcm9DZXpVamdkYktRZkVPQUtpMElrTlBBRHJtUEo="
+      "bmVnYXRpdmUtekNYcEVzRVF4bEdZR2FKRTJNTG4zeXl4Yno5ZWtIeFM="
     ]
   },
   "youtube/google_oauth_id": {
     "positives": [
-      "MTI3NDgyMTE1NTI1MDY5NS04S2EyQVZlX0NXS0hXNEFBbDI0NHlDVXhuY1IwQWxDeC5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbQ=="
+      "ODA0NTc1NzAxMTk2ODA2LTB2OW0zQnpyTXNKMVlPSnJXdU81akRIMGRmcnJxQXFKLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29t"
     ],
     "negatives": [
-      "bmVnYXRpdmUtMTRkMmR2YURjMVNhVEVsMExTdElGYkZITVdEZXNjek8="
+      "bmVnYXRpdmUtOG5wTzRaZU9VMG9jdk5wMkd6VVZRSm1WU2l4ZU1XbjA="
     ]
   }
 }

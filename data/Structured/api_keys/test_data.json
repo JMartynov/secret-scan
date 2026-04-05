@@ -1,1068 +1,1072 @@
 {
   "abbysale_api": {
     "positives": [
-      "YWJieXNhbGUNIXcxMm5IM002alBsQW1EUEdyUkVDNnQ1RkxYMlFtM3ZYWDVLY0xtYkw="
+      "YWJieXNhbGVROid1TUJQbGtZZ1dZNDFieVU1ZWI2Zzd3Z0s0aG45WFhMWXpaS2E3SUtp"
     ],
     "negatives": [
-      "bmVnYXRpdmUtTGFZNUdvemhieFA0d0RMcW1PR2tvVlZhWnB4SVBKZmI="
+      "bmVnYXRpdmUtNmhZY01nOHZiVjBid0RLNXNPMUo2ZTJmdGsxU3ZxVGo="
     ]
   },
   "abstract_api": {
     "positives": [
-      "YWJzdHJhY3QKbWZnN2hlYjJpanN6Njdjc2p0bXQzbGZwdTQ0bDNmb3o="
+      "YWJzdHJhY3R5DWl6bzlpeGx1MGpjZDF5bDNzdmluNzE0aHRyZDI2cjd4"
     ],
     "negatives": [
-      "bmVnYXRpdmUtTjZtc0pGVWJzOHNOR09VUHIyRHpvbUFkNE5WdjJQRW8="
+      "bmVnYXRpdmUtNlZNSVJweEhwa3JHSkRKaDNYcTFqbnhmaVVYVE53OVo="
     ]
   },
   "accuweather_api": {
     "positives": [
-      "YWNjdXdlYXRoZXJrcnciCkZRVTBNM0VsenVOblN4SjlPTGVJUUhVbVNzYVBKaiV4NUhX"
+      "YWNjdXdlYXRoZXIyLFVpejRNR1Q3QTFUJTR4STc3cHpvcU1jYjZKdE1EZDFPN1Rh"
     ],
     "negatives": [
-      "bmVnYXRpdmUtQzdyZFJNUDlUNEhrOEJhNWRKZHdicHFHcEMwMkhHdUM="
+      "bmVnYXRpdmUtM202TVZZelZ0SGY0NGRKRENnZzdrVVBpdjdrNUxrbFE="
     ]
   },
   "adafruit_api": {
     "positives": [
-      "YWlvXzRGa1MzVGI1dFV4SHpEWTRFZ0RQdnVLZmJtb0I="
+      "YWlvX1lwR0lPTzJ4Umk1ZzVRMUVrczVyOHRHNzRkQm8="
     ],
     "negatives": [
-      "bmVnYXRpdmUta1oyc2xnbk1UZVRJTTdhWm5LbzV1RUdKQXprNFZaaVU="
+      "bmVnYXRpdmUtN2xiSTdwQXJpWU5PR2JIYUZoYVZ4bnVkeXI3d2cxSFU="
     ]
   },
   "adobe_stock_api": {
     "positives": [
-      "YWRvYmVlSQ0Na254OHg0OG53cnUwb2JvYXR4cWxxemczYzF1cnYwcDk="
+      "YWRvYmUKdi4NOTV4NGlkNWtuYzU0czA4NXhnMXRhbmdnNTRldDVjMng="
     ],
     "negatives": [
-      "bmVnYXRpdmUtUDBOVGZYSFNTYjFIczZzUHA1MTVDNHNIR1dtWmZMRlM="
+      "bmVnYXRpdmUtbG1aT011TFkzM1hubEVSM1Rxb29ITkRyUDVaV1dqaks="
     ]
   },
   "adzuna_api": {
     "positives": [
-      "YWR6dW5hd0YKCgpqZXV5NHV3cDIyYjBqMDJ2NzRlZWx6azJyYjhkZWwwcg=="
+      "YWR6dW5hDQoNb3IyNzFmaHBqZXZuN3J1bGQxc3luZXE5NnN5MmdqbGo="
     ],
     "negatives": [
-      "bmVnYXRpdmUtcHI0ZU4xQWhNSEk4UkJ6ejA4UGZ2T0FCeTVHYzkyMFE="
+      "bmVnYXRpdmUtc2hVc2l2ZUZTc1pGaU10Z0drTE56WmpNa2UzZGtqalc="
     ]
   },
   "aero_api": {
     "positives": [
-      "YWVyb3dvcmtmbG93DXkNRmdQcTNEN1dPM2g3aGdpMU42dG8="
+      "YWVyb3dvcmtmbG93IFoNRG5DYUcyazRxbXJqYkFGQUZCN0I="
     ],
     "negatives": [
-      "bmVnYXRpdmUtSFRhNHRpeGYyN0Z0bHlNTzRqdjBTUEJYcjBncGJzbms="
+      "bmVnYXRpdmUtc0Y3V1BxQnZiQzJnUVBLWXJpSDJwMlhYWWVRT2lPcGQ="
     ]
   },
   "agora_api": {
     "positives": [
-      "YWdvcmEKCj4KOmhoNHVvMjQ1YjJqaWtjcjF1azJ0cXlxODRoYmV5cHBu"
+      "YWdvcmEKd2Vla2xrZDFqM2h6M2ljNm5hbTcxbmNqYXpoOThtdzY="
     ],
     "negatives": [
-      "bmVnYXRpdmUta2piSlA5R0V5TmptblR0MDZtRVhuMk5KRVVBTFJabWI="
+      "bmVnYXRpdmUtalhUR05UelpOY3JoYjdFNlpwNHZpbTlUZENrQ3g4RWk="
     ]
   },
   "aha_api": {
     "positives": [
-      "YWhhTAoyOTgzMzI4Mjc5ZmZkOGI1YjUzZTYyYTZiZWY1NzgyMDhlMTU3YWY0ZWE4ZWJlNjVhZGJlM2NlZjk1NmU1Yjgx"
+      "YWhhXTY2Y2YyZDc3NzIzZTk4MWQzMjFlYWM4YzIwNWUwZjI4ZmQyYjA0ZTdkYzMwOTUyMTUxMzlkNzAxNjQ2ZTc1MWM="
     ],
     "negatives": [
-      "bmVnYXRpdmUtTXRSQW11U2pQTkZURjN2WDZyM3pQTHpoMVN1N1Nyc04="
+      "bmVnYXRpdmUtRlJhcGlQbUI3RVV0cDh2amlyaFl6UUNmcTNpZFZQR3E="
     ]
   },
   "airbrake_api": {
     "positives": [
-      "YWlyYnJha2UNDQ13TldjRGVhS1NmWUdCNExHa1J4VDhsTm9QTDl4MVJlUQ=="
+      "YWlyYnJha2VrDXoNXHJ6eUdLeEpwTlMwQllleDh6R0lSejk4aFBjTndwb3d4"
     ],
     "negatives": [
-      "bmVnYXRpdmUtVU1Zc3psbURVUEpzbUJLTGt4UFVENmM4ZDRLcnpzbzQ="
+      "bmVnYXRpdmUtV2drRjJ2aDd5ZFZBSlFHSnVOZG5pQTFNRjZia0UweHQ="
     ]
   },
   "airship_api": {
     "positives": [
-      "YWlyc2hpcFQlDTNuOGpQTjJLT1NOZW1rYWdLUzBpaTBNQzVZNW9pT05hTlBtVmhmV1p6VWE4Q3dKblY0d1J5S2tFZGdtVUs4ZG1Va3FCSkpTSnJSQUxkRllHNm1BVnQxbUFMVEE="
+      "YWlyc2hpcCANDWx4dzRnM1M2cklLdmx1cnpZQnE3Z1NBWWRFYjVsam5Lbmc5RTdvTUdnTFA2d3l4S05kN01zaElUa3RDaHRqZDcxM3dwRDZPUlVPU0hab1pGamo3bHk5YjNCbVc="
     ],
     "negatives": [
-      "bmVnYXRpdmUtNElqUjFxRUd3ajl4dEM2dmFKbWVaVTR1RWFBNDhvUzk="
+      "bmVnYXRpdmUtVXZTQ2RQQVB3enhaQk5KUWFqSG15YzBxcDJERG45cUo="
     ]
   },
   "airtable_api": {
     "positives": [
-      "a2V5YVI4MExxZjZIczVLbGU="
+      "a2V5Ulpwc0JIWUd0eXhjR04="
     ],
     "negatives": [
-      "bmVnYXRpdmUtOWRVQWxlNDA5Q09Bcm5xUTZSbXdtNmFDeW1TTHlmSVM="
+      "bmVnYXRpdmUtRUNVRFlVcWNvaVlKOUdic3BqY1pid0RKdVlpMW11Z1Q="
     ]
   },
   "airvisual_api": {
     "positives": [
-      "YWlydmlzdWFsDTkxdXBscnJ6OXhpMnhrdnNzN2UyMWQwc3N2eHRybXF4NmR1dw=="
+      "YWlydmlzdWFsIF4jUgpmNzVjYXdmaDBvbHdnazMxaXM3bndjZG8zMml3OHBqaHpjNTg="
     ],
     "negatives": [
-      "bmVnYXRpdmUteXNxMVZWM2czNVBKbzBlY1hmcjdTOGdseHRGcGE3c3c="
+      "bmVnYXRpdmUtbUozRkVEaXJ1RGpleHZXZU5oZk9CTFBrVDJVb2RXRHM="
     ]
   },
   "alconost_api": {
     "positives": [
-      "YWxjb25vc3QNbCYNY2gwNWV4eXB2cXkwdnpieW81eHE2aGQ2NjN5YWo1cGc="
+      "YWxjb25vc3QNbwoNIGU0NWFmc2l0MGExNEFyZnNidXhnQXJ4bGk5bzc1NGpi"
     ],
     "negatives": [
-      "bmVnYXRpdmUtQVlFcXdDcFd1ODViYktuNzdnV2lQSkVoZnh0ZXFFNmc="
+      "bmVnYXRpdmUtRkMydFJMeTdtQkhLdUlSWjJGZEJZdlpVM0ROMTVlbFE="
     ]
   },
   "alegra_api": {
     "positives": [
-      "YWxlZ3JhDTF2NG81ZnNsNnlnNnZrb2x5ZG9u"
+      "YWxlZ3JhDWg/ZCdvd2pzYnFkeHprNTEyMXlpam12YQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtWGZ5a1ZJeE5HQmZrWUJ6RlYwT1pWVkZ5ZU1DdENqMXA="
+      "bmVnYXRpdmUtRWYxb0JsMExHdHR5bmx4SHppUTZXdUp0clNPT21LOGM="
     ]
   },
   "aletheia_api": {
     "positives": [
-      "YWxldGhlaWFhcGkkDQoNDVZJRklXSlo4RUNYTlBPNkdURTlKUFpYS0YxOFowUTdK"
+      "YWxldGhlaWFhcGkNSW4NR0daRkMyNFczNDkzMFo5WlZNVldSQVVJUFBXOTI4Uzc="
     ],
     "negatives": [
-      "bmVnYXRpdmUtcGc0aXNkUXZ4WEZheGpibjZSQXFXc3RtdU5pOUltNjE="
+      "bmVnYXRpdmUtY1BJTEpJQm5QbFlRY1JycEJZZ3FpYU8yc0Y1b2Jac2s="
     ]
   },
   "algolia_api": {
     "positives": [
-      "YWxnb2xpYQ1MCnRwSGJac1BZMXVhcm1FWFdObEV5RG90ZklYcTRTQmpT"
+      "YWxnb2xpYQoNRDMicE1IMm93WXpZTDRscUQxUW12Z0JuRUptRXBIZjA2czU="
     ],
     "negatives": [
-      "bmVnYXRpdmUtTlQxRzFQQWcwTzNMWjdtR3B1eXdyV01PT0NCUXFkdWw="
+      "bmVnYXRpdmUtVzJCZFJkclFLTENhRko4WlpneWVScE1IMXRzbGVnb0E="
     ]
   },
   "alibaba_api": {
     "positives": [
-      "VHZ3Y2xkWDl2NWdlcXF1Y3Z0RExpR0h6d20yTFpz"
+      "ams4Y3BxY0V3MUhxcnlXZThCVGkxR3Y0a3Frc012"
     ],
     "negatives": [
-      "bmVnYXRpdmUtZ0oxVmdqWUlDZGJpdGgzSWFzUERVQkZKSEpncDEyNDY="
+      "bmVnYXRpdmUtd29EbDA1NGxwbjFWMEhXVTlnNG5UT0IxU3UyaXRLNXI="
     ]
   },
   "allsports_api": {
     "positives": [
-      "YWxsc3BvcnRzDQozZDJqeXFpNHp6ZDF3cGlwN2c3bWNoeW5taXFnZWs1YmNudmYzY2R0cHp6YXVoNXo4d3M2d2ppaXQ5bTFqcDhv"
+      "YWxsc3BvcnRzZ1oKDWo1cjgwaHdvZ3FpNHlqcjF3NzltdHp0eDllcHpnZWw4OGFtMGdsOGN4b2tkYW9tZnJidWUxZ3k4dTVjNGxweDc="
     ],
     "negatives": [
-      "bmVnYXRpdmUtRXVqTE9FWkU3ZEJHbGRmOU9PTFgzbjZjNGQ3R25vc1o="
+      "bmVnYXRpdmUtbVpUQmFzMXJlSmhwMGd3U2FtUGNubm9rUXBVd2pVN2E="
     ]
   },
   "amadeus_api": {
     "positives": [
-      "YW1hZGV1cw0KDQ0NTWVaNlZHc3Y2bmRVZmllOVNud2xjV1RqSE5tNFRibHI="
+      "YW1hZGV1c1krDTJsWXRtZmV5MVRBRmpKU1hLbGd0NHRLSTZTcTJhUmtI"
     ],
     "negatives": [
-      "bmVnYXRpdmUtaGJBTW1LTTZ4b1RFNnowSDB2UU1qd3VlMHY2UU1xWHI="
+      "bmVnYXRpdmUtM1Z0Vjl0ZW9aemZyZUJ5UERPQXBmSnNpWHZCTktaTjQ="
     ]
   },
   "ambee_api": {
     "positives": [
-      "YW1iZWVcNGQ2ZmU3NTJlOGQ4ZDM4ZDM0MjVkYmNiN2EyOGU0OWNkNjg0Nzg2MGZhODU0YTk2ZWVhMDhmOTRhMzM3NGYwYQ=="
+      "YW1iZWUKNzdlMmFkNzI3ZGJjN2VmZGE0ODhkZjc3NGRlZjJmNDQwY2E2ODU1ZGMyMmY2NWEyMjc1N2NkNDhlMTBhNDIxZQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtcVU1aHdESXhZNDNTd2dmeFhhWUp0bnN2c20xTG5vRTU="
+      "bmVnYXRpdmUtN1ZEUnZXcUw3V3VJZHJSRm5WemhYRFhzQzBaTFZ2SEs="
     ]
   },
   "amplitude_api": {
     "positives": [
-      "YW1wbGl0dWRlDSFiZmU1ZTUxZWY2NGQxZWNmOWQ1NDNhM2QwN2NkMzIwZg=="
+      "YW1wbGl0dWRlaHIKMjQyN2U1MWU2YzAwOTJiZjJmMjU3ODZmZWY3YTk2Mjg="
     ],
     "negatives": [
-      "bmVnYXRpdmUtRUxGNDI4TGZ6N0R6VXB3eUkyU2RHOU9wRzBsNXNGNG8="
+      "bmVnYXRpdmUtWk9HOGlLZGtsVkxlWHo0UXhLb0k0N2JaZXdVNXhXcEQ="
     ]
   },
   "anypoint_api": {
     "positives": [
-      "NjBwajcxcXQtY2FybC11OG50LTJnbGstMG03cmE4NmhvcTRj"
+      "N3czaW5oM24tam9uYi1leHN3LWR0aDktYjU0ZTgyd2djczl6"
     ],
     "negatives": [
-      "bmVnYXRpdmUtVDJ1U0lZTTlueENmRG1GZGJIc0RCbDFROGhjWDdsdjI="
+      "bmVnYXRpdmUtRDhMUU5mMHNGWjlwekNJUUlzdkxpeVRGMndWdFNnbjk="
     ]
   },
   "apacta_api": {
     "positives": [
-      "YXBhY3RhDWENbWJrM3huZXpic2lqbmlqaThlcjhibTE2Ynh0bGJyYmtuOGE1"
+      "YXBhY3RhDXFQCjhtbnhjbHMzNnFhenA5aDh3YTExYW5uZC1vb285dXVrdXpnNw=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtdE9tNmpiREhGWGVyME1lOWRENjZndmNlQ3luakMyV0s="
+      "bmVnYXRpdmUtZWJlOTl0T0RqQmpTRmZUSlpqRlBaM0dOdU9IT0lJTGc="
     ]
   },
   "api2cart_api": {
     "positives": [
-      "YXBpMmNhcnQNDWINXWFkMmU4Zjg2ZDg2NGNjZDVjOGFhNGQwZTc0NzA0Y2M3"
+      "YXBpMmNhcnRNCg0NPTI2YmViMDZiZWYzNDE4ZDRmNmYyMDY4NmEwMGIyZGUw"
     ],
     "negatives": [
-      "bmVnYXRpdmUtZ1lWUVIwU1dyQmd6ajZRVjRjem50dkNZdjN4dUJVMGM="
+      "bmVnYXRpdmUtSjNUdHZvS0NzbnMwd3QweU1EeWt4RjdTZzcwQ2E1cmg="
     ]
   },
   "apideck_id": {
     "positives": [
-      "YXBpZGVja0hVVAoNQ3BhVVh2YTE1cHExTDdPT0NkSGxTS0s3Skt5TzBiVHdOc092bWlmNQ=="
+      "YXBpZGVja18iZGt3MTB1NFFpWDFQNmxvMDFmcnk0VEJrVHNaZUNtWHFtb1RmNGpPZw=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtQVk3YVdsdEptWDZxZGhVN1FmUkQ2Y29PVDJ2NmFsTzg="
+      "bmVnYXRpdmUtbVR6YmdpZW56VUNxanRBTm9WNmtCYWJXRDRENndCdFo="
     ]
   },
   "apiflash_url": {
     "positives": [
-      "YXBpZmxhc2gNMl93SkdWNlV6NkRBYnhmOU1oUzlYb1Z1Qg=="
+      "YXBpZmxhc2gNDQoKTFZXbVpoZXBQZWoyNUtHYnVyWlhGSFhxVw=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtMllDRGNqdFh4REliNnd2OTMxbmh1M1dOOVQ4MEgzcGM="
+      "bmVnYXRpdmUtSjZWZXdZb1I1UDVKV1hSNnJNQTdNYUU5YUVwMGRZdXA="
     ]
   },
   "appcues_api_user": {
     "positives": [
-      "YXBwY3VlcwpDNndyZG90OGYydWk1YWhmNG5rd2hjOTR6eXA1MzVhY2p4aG5iay1s"
+      "YXBwY3Vlcw0NDQoNYnE1cmVlaWJnbGQtdHlkemgtN2d6bG5vdTdmNGtjd3V2OTJiMWRo"
     ],
     "negatives": [
-      "bmVnYXRpdmUtbXlyVklRWjIwSDZFSmdvS1NFZzhaTTdPYlh1WEhrd2E="
+      "bmVnYXRpdmUtWnVJRlZOSHE5QTJldWhBUjJXMnh3RDAxdkhNT2Zvdk0="
     ]
   },
   "appcues_api_id": {
     "positives": [
-      "YXBwY3Vlc3AKDToKNTUxMjI="
+      "YXBwY3Vlc3UNCjgKMjAwODM="
     ],
     "negatives": [
-      "bmVnYXRpdmUtcVRZOFFqRDhnODZTYmxmTGFOY3NQNHdpWllvRzQ2c1I="
+      "bmVnYXRpdmUtSXQwaEtudWY3OE9hZ0JDVHF6WUg2ZWVybHVNY0NSMk4="
     ]
   },
   "artifactory_api_url": {
     "positives": [
-      "djBpLmpmcm9nLmlv"
+      "VDFTLmpmcm9nLmlv"
     ],
     "negatives": [
-      "bmVnYXRpdmUtTDYzSlhIQXJ6c2dIbnlzcFJRSzNBYnhsS0xSblVlWTA="
+      "bmVnYXRpdmUtUmdkanVmaFBtTXVCNzdjc1pCb1hPSzRwWERxNVJISUk="
     ]
   },
   "browserstack_user_id": {
     "positives": [
-      "YnJvd3NlcnN0YWNraAoNTFBZOEg0Ql9zalN4c2E="
+      "YnJvd3NlcnN0YWNrWGp3Cgp4bnNrU18zM09lZ3M="
     ],
     "negatives": [
-      "bmVnYXRpdmUtY2FUZldvbW51TUo5UUZuUnNMem9jOXBVcWZhMGYyUDY="
+      "bmVnYXRpdmUtTGtRMHROM2lZdTJGTzZwcURYdVBONTVRZ3owWTFJNDM="
     ]
   },
   "captaindata_api_project_id": {
     "positives": [
-      "Y2FwdGFpbmRhdGFACjExYzcyNzJhLWIyYjEtNjBlNi02MGMyLTY1YWVmOTliZmU1Yw=="
+      "Y2FwdGFpbmRhdGE2DTQyZjc0NjA3LTYzYTktZWFjZi0zMGViLTg5ZjNlNTYzMDZmMA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtMXJVR2pDTWVEVzhqMGpkMUZKQkcwYzJUNEdkYzYxbFY="
+      "bmVnYXRpdmUtMWRBT3JYOHA1dDZRaDdidzNiOEh4Z05iaTdXMDR5MlA="
     ]
   },
   "caspio_api_domain": {
     "positives": [
-      "Y2FzcGlvID0gMXFiem54ZzM="
+      "Y2FzcGlvID0gNWJyZTdxNms="
     ],
     "negatives": [
-      "bmVnYXRpdmUtbzB2RWV3eXFXbDRpQ203Y09sTXloTm5TTWpnUHhsTUY="
+      "bmVnYXRpdmUtUXFncmtWc2lGdU1XQTFPZHY2RFNXRmliRUh0TGpNN2w="
     ]
   },
   "checkout_api_id": {
     "positives": [
-      "Y2hlY2tvdXQNcgpjdXNfd0ZXeWxQdXRWQTdCU3ZZVTk0cXI5V0JBcDM="
+      "Y2hlY2tvdXQjDShjdXNfNHV0S0pSMGt5amRGVWJZYlE2QlpNTEtxQ0I="
     ],
     "negatives": [
-      "bmVnYXRpdmUtM1o4U0h1bkFPY0NSZUYzRDhTdzdRaWZ5QW1ob0EzeHk="
+      "bmVnYXRpdmUtamgzNjBQU1cxR1AybHhybXNYZ25NTXVlTUtxTFpjMDM="
     ]
   },
   "clickhelp_server_url": {
     "positives": [
-      "RzFtdXRyeXJjbGlja2hlbHB6Y28="
+      "QlUxNTI1N1QhdHJ5YWNsaWNraGVscE9jbw=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtdFNXRFpIcGgyOHNjTUlYdERFdWcyMll3ZDBBUGxZenU="
+      "bmVnYXRpdmUtRWdoTkhTOU5jUUlTREZPbDhrTVBoRUpkZ2M5cE1Zb3A="
     ]
   },
   "discord_web_hook": {
     "positives": [
-      "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMzk2Nzc2MDQxOTI2MDQyMzMwL01qaktiOUxEbHdWWlZEY21UUUR3OVVjMVBEMFRVRXNQUE4tWVZSb0FzZHBLNWJ3ckp1M2FwWExMVms3ZUdTWEltUDJv"
+      "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMjgyNTM1MzAzNDg1NDczMjYxL1NhNktsT2RwdmtaZ1E1RWtLcFBPbjd4VGdjMGsyVVpCcDFlbmxzNFBBRnp0TG1wRzk2dEZ6WnhYazVSQVVOdVB2STQ3"
     ],
     "negatives": [
-      "bmVnYXRpdmUtdnpSN3FZYkRVaFI1dmdHeTNGTmtPcng1U0FPS0swaTU="
+      "bmVnYXRpdmUtN1VpczhjVXZzNzlDZWJWajB2NmlnM0VhTDNRRVBNVkM="
     ]
   },
   "freshbooks_api_url": {
     "positives": [
-      "ZnJlc2hib29rczENaHR0cHM6Ly93d3coWDFjb20="
+      "ZnJlc2hib29rcwptXz9odHRwczovL3d3d1ZLTklONXFHY29t"
     ],
     "negatives": [
-      "bmVnYXRpdmUtR1dDa3FMenoyQzhBVEduazQ1RmZqTjJJcGh1aEJXdHY="
+      "bmVnYXRpdmUta3QxdG5BZE01RHdSbndlVWV0OWxIN1RYdU5QV1ZEVm0="
     ]
   },
   "generic_pattern": {
     "positives": [
-      "c2VjcmV0DQ0kMF8/THExWHUvNz1xOEJ1IXAr"
+      "a2V5CgoKK1RlaTlgJjFeQ2p6XVZDREBMPWspUA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtR3NvVUNtSXV2ZkhSZ2tzSXF1cG5qTmZjR2FzMUp2M1o="
+      "bmVnYXRpdmUtZ1NSWHVHcWNBY0hONGNsZHRoenc5eFZpOWxIcDJVaU0="
     ]
   },
   "jira_domain_url": {
     "positives": [
-      "amlyYQ0NVnhRc0RTQ0xULllLLU5ueUEuaEZYeEU="
+      "amlyYQ1Sc1JLOWxEdC4tRllseHJhcS5UQTJveXJYeQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUteWxtcDYzY3gxRkZLZGRIUDNmTDc5M2dwcWNUTlI0NHA="
+      "bmVnYXRpdmUtc2hEZllNQjRNREFjZlB3dTJqaU1IbVlCOVR4WlViYkI="
     ]
   },
   "msteams_webhook": {
     "positives": [
-      "aHR0cHM6Ly9vaEgyLndlYmhvb2sub2ZmaWNlLmNvbS93ZWJob29rYjIvZUc0QnY3U3YtenFTUy1IWXo3LU5nTjgtWTl6dDNSeGhXclJCQGR0OXRaSWI0LTg2RmMtbmJrNS1iWEVlLXZlQVlxdmxKMDhyNi9JbmNvbWluZ1dlYmhvb2svaFI4YjNwN2k0S3kxRVhIWEQ3amdLQ3Ntd1ZZeGxUbTgvYkNrdDFnQ0YtcUpqay1KT3lBLVVjWVItWjNEOG5kNUlyVjFF"
+      "aHR0cHM6Ly9IZU1vZ1FwajVLNGdYay53ZWJob29rLm9mZmljZS5jb20vd2ViaG9va2IyL0xYTmQ5Mm5qLWtlMVctTlkwai05eFpQLVdVM00xd2xQVTF4bkBPSVEycTJkdy1ZNVBVLVlONGItUUhQTS1BSFBKMDFFRHpWS0ovSW5jb21pbmdXZWJob29rL1pRRldMNTAydU9WMWVpYko5QlJBdXJBNk44V3Y1OU9LL2JmcDFodWpYLXBjOEotZXlxai1Va2xRLXpSZUdaY3B5MmJHbQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtM0RWTmZCUWZ1ZzIzNVl3M0gzandSVFB1WWlSUVIzeUM="
+      "bmVnYXRpdmUtcng0dXJUN0xtOTVPUFp1ZXIwM2p4MDdQYjNRUUxrdzU="
     ]
   },
   "okta_api_domain_url": {
     "positives": [
-      "W2EtejAtOS1dLm9rdGFwcmV2aWV3LmNvbQ=="
+      "W2EtejAtOS1dXS5va3RhcHJldmlldy5jb20="
     ],
     "negatives": [
-      "bmVnYXRpdmUtbDJ0OFJIREV2cXJobHR0Yjk5ZERCeGpmMDZGR3FHbjg="
+      "bmVnYXRpdmUtWlpuR3NSUlRnS2E3cVdjY3RDaHJzUzBHMmFNV3pxTkw="
     ]
   },
   "planviewleankit_api_subdomain": {
     "positives": [
-      "cGxhbnZpZXdsZWFua2l0c3ViZG9tYWluXUlob0FhWWV3"
+      "cGxhbnZpZXcKWgpzdWJkb21haW4hY0dW"
     ],
     "negatives": [
-      "bmVnYXRpdmUtWlpzUVZudFlHZGRlbXRYcWh1WlZLNVcwdXNhcGMwNFo="
+      "bmVnYXRpdmUtNnlTeVYzVXdVTDU1NFkxalZ4eFU0YTgzd3VvMzEwemE="
     ]
   },
   "slack_webhook": {
     "positives": [
-      "aHR0cHM6Ly9ob29rcy5zbGFjay5jb20vc2VydmljZXMvNEd2MmRmWkhoL3Q3MHhEd1FUVS9LcWFJbHBmNlZWVHBrQkNVR2VGYkZWOTM="
+      "aHR0cHM6Ly9ob29rcy5zbGFjay5jb20vc2VydmljZXMvM2ZTWXB0eHNrL21hY25Ua1pBUy8wZXB0ZHdjZTBydlpWWm9uMU5LbWJFT1I="
     ],
     "negatives": [
-      "bmVnYXRpdmUtdm44QmRyWEVSV1lpUkxFMkdpU2dOTXVra1pTdVdPUG4="
+      "bmVnYXRpdmUtSjVTZUdJbGVsR0lmMEt2d1dKOEVXTG1qNEFYSU1PNGI="
     ]
   },
   "sugester_api_domain": {
     "positives": [
-      "c3VnZXN0ZXItalBnMzZqRWZYNXpVMjBReVJmR2Y="
+      "c3VnZXN0ZXItTlptdHV0dVpwV1RJekRDQUo1T0M="
     ],
     "negatives": [
-      "bmVnYXRpdmUtUm94VEtXcThxS3lmUDF2Y2dkeDNUd2lKOG9Hd0hHMzI="
+      "bmVnYXRpdmUtTEJZdXNJRndZQUZRVEFXeEkzZ1ZQTzBTWE5HVE85RFU="
     ]
   },
   "uri": {
     "positives": [
-      "bXlzcWw6Ly91c2VyOkw4MDduWjk2d3JYM3d2ckxpZWJ4QGxvY2FsaG9zdDozMzA2L2Ri"
+      "bXlzcWw6Ly91c2VyOmdGckszRkt4NEZZV2hWM3RhNmxXQGxvY2FsaG9zdDozMzA2L2Ri"
     ],
     "negatives": [
-      "bmVnYXRpdmUtTTBXTUszYWp6REh2d0Vld28wbWZOdEt1ZjdhVnFqZEI="
+      "bmVnYXRpdmUtS1FJY3djbDRtbzkxeEc5bTRvelE0d2dZVUc4cnFIS3k="
     ]
   },
   "zapier_webhook": {
     "positives": [
-      "aHR0cHM6Ly9ob29rcy56YXBpZXIuY29tL2hvb2tzL2NhdGNoL2pMZnVCVXhVYWpzbDJ1clA="
+      "aHR0cHM6Ly9ob29rcy56YXBpZXIuY29tL2hvb2tzL2NhdGNoL0h5Z214MWExQ2h1NEpzRFE="
     ],
     "negatives": [
-      "bmVnYXRpdmUtb2J2TzRDVHZOeHZiSU1iVmh2ekR3c0VZMXdOeEN0V0g="
+      "bmVnYXRpdmUtcExieXJESDRmZ3RhMzhQRm52eVlsN1QzVjlmQXl5Rno="
     ]
   },
   "sendgrid": {
     "positives": [
-      "U0cua1NFa2ZOLjByWDZ0UzlLZw=="
+      "U0cua3dhNVlwcloubjRtZVJ6"
     ],
     "negatives": [
-      "bmVnYXRpdmUtRnl6REJqYkRBdVpna0NreGFQSHFrWjVHQ3QxR0NQVVY="
+      "bmVnYXRpdmUtYU5meFRKcWxVY296UnVTaE1yVnl5dzZGQWNiOFVIWGQ="
     ]
   },
   "sentry_dsn_secret": {
     "positives": [
-      "aHR0cHM6Ly9DN0Q3NmNFZjMwYWZmQjA2MDVjYUU2QTJlZjgxY2FGNDphRUUwQjFDRDNkQ2VkQ2VDODI0YzFDRDlhRmNBOTZjYkBzZW50cnkuaW8vMjQ0MjM1OQ=="
+      "aHR0cHM6Ly9lYzE1RTEyY0NkOEVBNUFjQWFBRDI0REI4RjRkYTI4QzpDZjMyOUZmN0RCZjJGYTQxMzM5ZGNjREViYUMwNTZjOEBzZW50cnkuaW8vODMxMjg2NDc1Njkx"
     ],
     "negatives": [
-      "bmVnYXRpdmUtN1dqUGpDM1hOUGRiTWZEbkt0d1V6MDRnQ1JMUWo1VTE="
+      "bmVnYXRpdmUtSUNtZzB2VkxqeG5JS0VCZDZjdURZS05ZeXJLZjg2WFc="
     ]
   },
   "teams_incoming_webhook": {
     "positives": [
-      "aHR0cHM6Ly90ZXN0LndlYmhvb2sub2ZmaWNlLmNvbS93ZWJob29rYjIvMWQ0Njg0YzItMjEzOC1iNDUxLThiN2MtNmUxZDIyY2FhNzBlQGMyMDJjY2ExLTQwYjktMjBjMy0zZmYxLThkMDhhNThhNmJjOC9JbmNvbWluZ1dlYmhvb2svM2EwMDU5N2M4NTNhYjVmYTFhNDU3MDVlMGE2NjkxNDYvODA0YzAyNWUtZDZmNi0zOThiLTRhOGMtNTVjN2FiMDRmZmMw"
+      "aHR0cHM6Ly90ZXN0LndlYmhvb2sub2ZmaWNlLmNvbS93ZWJob29rYjIvYzhjNzJkOTUtMWMyMi04NTJkLWRhYTItYjNjZDIzNzZhMmI1QDU2ZGE2YTc0LTNiNmMtZWUwZC01OGY5LTQzMDJjMjE5NmU5My9JbmNvbWluZ1dlYmhvb2svNzU0NGZhN2MxZTY0NzA5NWExMWRhY2NkMmM5YmIxNmQvOTlhZGVkNjItOTI0ZC1jNzE3LWVmMDctYjQ0OTE3Y2Q5YjIy"
     ],
     "negatives": [
-      "bmVnYXRpdmUtMUtjVUg2REdudWR3bnpBa2hOdFZDUDFIZVJpOFhMaEo="
+      "bmVnYXRpdmUtMFpJTDRPS2pqYnloVW1WVlowczU4VVNTRG5UNERCVWI="
     ]
   },
   "vercel_oauth_client_secrets": {
     "positives": [
-      "Y2xpZW50X2lkOiBvYWNfMTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0CmNsaWVudF9zZWNyZXQ6IDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNA=="
+      "Y2xpZW50LklkPSAgICAgICAgIG9hY19mNWp4NzBsNDN1VlFjdnV1dTQ0djBCVWEKCgoKCQ0MCQkMCQwLDQsJCgsMY2xpZW50U2VjcmV0ICAgICAgICAgICAgIDogICAgICAgICAgICBmcmtUV2xZeFZuM0FVdTg5UjVkcG5tOEU="
     ],
     "negatives": [
-      "bmVnYXRpdmUtSTZhaWtYRXhPMlI5ajh2ajB0a1p6MFpEV3E1WWhnbjM="
+      "bmVnYXRpdmUtcE00NllDVERJVktsbnFCN1dOM0pEbGFMN2FhczhLM2o="
     ]
   },
   "iban_al": {
     "positives": [
-      "QUw2LTQtOSBXIDBSMiA5MTczOS0yMzUgOTEgNiAwLTItODYgMjVPIEw="
+      "QUw0IDIgUCBYUS1XLTkxIDkgNDQ1LTIyLTUyIDg4IDUgMS0zNCAzIE44RQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtNDRubVVWdFZDaUJ4Nmk1cU5TR2JPTGpxNVVrdkR6blY="
+      "bmVnYXRpdmUtanN6OWIxU3lkY3RIa3RhSnpUaWd6QTJNa25mT05ua1o="
     ]
   },
   "iban_ad": {
     "positives": [
-      "QUQzNS1QLUUtQTcyLTMtMzY5OS04LTU2NDAgNzRJIFYtTCBs"
+      "QUQ2IDctQi0xLTkgWS0yLTkzIDUxMzk3MTAtNzk2LVcgNzA="
     ],
     "negatives": [
-      "bmVnYXRpdmUtS3RwMDhxbXNPZUlEOFhUeWM4bzRyMUVENFpFdXN6M2s="
+      "bmVnYXRpdmUtTmx5S2NRMWdXcTlRYk1kNGdPMHUxZGE1dEFMMzBGWEI="
     ]
   },
   "iban_at": {
     "positives": [
-      "QVQyIDRILVYtWiBZIDYzIDQ1IDQ0MzAtMiBGRTggRw=="
+      "QVQ3IDU0IEg4LUsgNDMtNjYgMCAxNzctN1JVLUkg"
     ],
     "negatives": [
-      "bmVnYXRpdmUtZUxySFZYVGFMVjUzOGN5bEZ2V2lIQVlxSmxNNUgwbzI="
+      "bmVnYXRpdmUtWXpxcUt5cHFOd1hCUTM1aUtoRWpJSzVqRUY3UmVpTlQ="
     ]
   },
   "iban_az": {
     "positives": [
-      "QVowNiA4IEhXLVYgMi04LTMyIDQgNjk4OCA3NDU3IDA1LTYyIFY4LVA="
+      "QVoyMSBQVkw5MDEzMCAzMzc1LTk1LTUtMCA5LTgxLTIgOC1VLTMtMiB3"
     ],
     "negatives": [
-      "bmVnYXRpdmUtUElINTlDT2ZFZzFJMXhNdFJwdGlmVUxZdmR3VlZFUVI="
+      "bmVnYXRpdmUtdGFwUjlZVDZjdExtMVhvbnVWY0Ztbmh1bEFsMFBDNUU="
     ]
   },
   "iban_bh": {
     "positives": [
-      "QkgwNy1BTy1aNi03IDc2NTQtOTA0IDY2IDJHMi1FIA=="
+      "QkgxOEEgSDEgVy01NC0zMDUtMzU1IDMgNTUgTy0wLUk="
     ],
     "negatives": [
-      "bmVnYXRpdmUtM0Y0RVk1YmRHVms1QzBwTWpDUDhMeHhRaExJQ21xOUU="
+      "bmVnYXRpdmUtUVFyYnpvcmI5N0RwRlFuOGtzSWxBZFpKdUZ4VXpacDM="
     ]
   },
   "iban_be": {
     "positives": [
-      "QkUzM08gRlkzLTggNS0zIDktNi1YLTRC"
+      "QkU4MEJILVYgVTAtNDc3Ni01LUwgOQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtWWFHNExBSVp2eFVPZUd3emRMemplQjBrQnNib01HZlc="
+      "bmVnYXRpdmUtWmp0YVpPNFZlNHljSmJiNHRKdlFjdjV0cE9UN1FxMlk="
     ]
   },
   "iban_ba": {
     "positives": [
-      "QkExMjM0NTY3ODkwMTIzNDU2Nzg5"
+      "QkE0MiBPLTc1NCAyNy02IDI5MzU1OTMtVCBKNSA="
     ],
     "negatives": [
-      "bmVnYXRpdmUtWXVwT1U4d0FTSHQ5VnRmQzNlTDVOOGh5bWZmeUh3VFU="
+      "bmVnYXRpdmUtSzFxd1V5YUZ1enExOVo1Mno1aGxxWGE0aHljalBaRzU="
     ]
   },
   "iban_br": {
     "positives": [
-      "QlI0LTggMUwgNi00MTUtNS01LTQ1IDUxMSA5Ny0zOCA3IDkgNDg4LVAtWSA2IA=="
+      "QlI3LTgtN1NTIFE5LTI2OS0xMTc0LTkyIDAwOS02MTggNzEgVS1ZIDc="
     ],
     "negatives": [
-      "bmVnYXRpdmUtN2lUbHlNM0tWSUg5YnE5NHVyWkdKV05nOFlLNkZ5a28="
+      "bmVnYXRpdmUtY25VNWlOZkNFZjlicEhpS0c2RkZqMmJIVXNYekc3MWM="
     ]
   },
   "iban_bg": {
     "positives": [
-      "QkcyM0UgRC1IUzkgMi05MDEzLTctMy02NSAyOC1YIEw="
+      "QkcxIDVTVi1GIDIxMy00OS0zIDggMjM0IDMtOS1BWk8t"
     ],
     "negatives": [
-      "bmVnYXRpdmUtOXlld3VLVkhHZkxXNjh1cnRIaEgyYnhXbkZLZURKQW8="
+      "bmVnYXRpdmUtTXB5RER2SFhmaGdPRHBsa0dGWGt3U0VQRnFubjloUjM="
     ]
   },
   "iban_cr": {
     "positives": [
-      "Q1IxOUFGOCBEMTgzIDM1LTItOS0yLTMtNi03VSBHRyB5"
+      "Q1I4IDgtMCBQWk8gMy03MjcgNi03LTg4OCAzIDc0LTY4IA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtNHV0cm93RnR3S21JVUxDRjNvdXV5Qm9XMW1NN2lGZHE="
+      "bmVnYXRpdmUtekE5NnM1Tk0zQzd5Y0dCV2N1Tkw2cDFNNmZiOHV2SXg="
     ]
   },
   "iban_hr": {
     "positives": [
-      "SFIzLTcgRkgtSS0xLTAtOTY1IDI1LTM1LTI3SkZT"
+      "SFI5IDVLUSBWLVYgODUgOS03LTU4MTY3LTMgRkMgTyA="
     ],
     "negatives": [
-      "bmVnYXRpdmUta3dWUmdoazBIQWN4bzVlcXg5Unh5T1JxaUtFc2FEZGM="
+      "bmVnYXRpdmUtVFpXTENkaThvZE5iaFc2ZXExSmo4b3hGakE4Tkt3Mzg="
     ]
   },
   "iban_cy": {
     "positives": [
-      "Q1k1OCBLIFZYIDA1MDktMTYgOSA0IDIgMCA1MDUtMjEtNi0wOS1RSDA="
+      "Q1k2MyBEIDBINjUtMy0xOC00IDktMyAyMTIgOS02IDUxMy0xIDE1IFAtWi0="
     ],
     "negatives": [
-      "bmVnYXRpdmUtWXloZ2VKQnlOWnhjUk14RFE1MGRzaVJ4WjE5c240MUk="
+      "bmVnYXRpdmUtdmg2WmRDUTdUYmVwWURic3kxTFRENHhBbGRRbDNxRWw="
     ]
   },
   "iban_cz": {
     "positives": [
-      "Q1o2MjNUQkg2IDM1OC05IDEwIDIgMjQ5NjA2IFggVi0="
+      "Q1oyN0cgMEYgWDM0LTEtODI5LTA5MS05IDI3LTItWlUtWA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtblRjbHY3YzhzbkwzVVYwQlR0MU9NZXVyWlBBTjlNWEU="
+      "bmVnYXRpdmUtRlRoejhUQUtjNVlWTWtudnN5ZjJnV2JHZmVsRGZkRWg="
     ]
   },
   "iban_fo": {
     "positives": [
-      "Rk83LTkgTC1DSCBNLTE0LTYgNjk1NS1KRC1VLQ=="
+      "Rk8zLTAtVi1ONS1WIDYtMTQzIDk4OVlWLVYt"
     ],
     "negatives": [
-      "bmVnYXRpdmUtNVBmSjU5bWoxZkRvZHp6amwzMldBRmg2UDVac2t4TUw="
+      "bmVnYXRpdmUtNENHVWJ5YmdhNFgydnFnczNVVVZpVExBaGxFcWgzbHk="
     ]
   },
   "iban_gl": {
     "positives": [
-      "R0wxNlgtNSAySTg2NyA5LTYgMyA3IFZZWA=="
+      "R0w1LTUgNi1RIFNaLTYzIDcgMjgtMjUgMlUtTCBV"
     ],
     "negatives": [
-      "bmVnYXRpdmUtYjYzcERGTWtYYnBXQlhqTVowRU85V2xSeTBKeE9mSDE="
+      "bmVnYXRpdmUtY1hmYzFkS1E5ZEZ2QjI5VWxSSnE1M3Y3dUtEblB3Tno="
     ]
   },
   "iban_dk": {
     "positives": [
-      "REs0LThDLUtSUSA1LTM3LTU5LTMtOS00VC1LIGY="
+      "REswLTggNS1JIFhXIDIwMyA2LTUtOS00IFUtTyA4LQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUta1dDQmprdzZTYWR2b25TWGRMVXk0MUVFVWwxZXBSYVE="
+      "bmVnYXRpdmUta1pJb29YZHE4SkFlRzE4SFBFMlBZU294R2EwWHdwcFM="
     ]
   },
   "iban_do": {
     "positives": [
-      "RE80IDQgTiBNMUItNDItNzUtMTMtNCAxNSA0NyA5LTEtNCA3NzQtVC1aVg=="
+      "RE8wMzcgSSA5IFcgMyA2IDc0MjcgMDAzNiA2IDktNTcgMC01LTAgOUVCIGM="
     ],
     "negatives": [
-      "bmVnYXRpdmUtUnJrMFoxZFlQQUl0cWtIN1V4SFVSVFFGRWQ5YVhQQmk="
+      "bmVnYXRpdmUtc0lURmVmT21sTWliUDhCYkNFWjBaeWdrcFMzWGRiaUQ="
     ]
   },
   "iban_ee": {
     "positives": [
-      "RUU4OC1KLTlOViA2LTAgNi00LTYgNSA5MTAtNVIgVQ=="
+      "RUU2LTUgMVlSODMwLTggOSA2NCAyLTcyIFQgQkc="
     ],
     "negatives": [
-      "bmVnYXRpdmUtUVhQYllOWEVJRGhqd1FObkkwM2pwUXo1OWZVSGpKT0k="
+      "bmVnYXRpdmUtTnVnazN0bkNNTnVQeEFldlFSbWlZUG5mZkJvMjBJWVI="
     ]
   },
   "iban_eg": {
     "positives": [
-      "RUcyMCA5VEotQTY1OTAtMjUtMyA3NSAwLTktMzQtMzMgNi02IDQgSC1ZQw=="
+      "RUcyIDc5VS1XIFktMSA1MjM4IDggNiA0IDQgMiAzNyA4LTgtMzIgNzhWLVktTA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtRGFpN2I2Q1B1SlRlZ0puMEZCNXM1OFA3WURiR2Nrdk0="
+      "bmVnYXRpdmUtQmFWSXVnTmZyZGRQZTZCbUluMnpOQWhOMGFmUTd1M1U="
     ]
   },
   "iban_fi": {
     "positives": [
-      "RkkxMC0zRy04UTAgMCAzLTQgNzM0UlMxIA=="
+      "Rkk1IDAtT1AgRkMgMjY4MDEtMzBMLTYgQiB1"
     ],
     "negatives": [
-      "bmVnYXRpdmUtSGZ6bVBLS09aQ0FFb3ZXbjFWUzVFZDBkckowWEFnZ1M="
+      "bmVnYXRpdmUtV0pzQTY3dTNQeXJjSG96eWxJQXliQUdhQks4MlN0dlM="
     ]
   },
   "iban_fr": {
     "positives": [
-      "RlI2LTUtN0ItTiAwLTg5LTAgNSA1IDU1MjI3LTM0LTMtNSA4MyAyIFdQ"
+      "RlI0LTMtQkstRSA0LTUtMjA0NzIgMTg1MjcgNSAzNyA0LTFENCBI"
     ],
     "negatives": [
-      "bmVnYXRpdmUtQXU2TWRLYTlEQ1FZblVTYWdobmtETUZUNVdXVXBGZUU="
+      "bmVnYXRpdmUtYzg0TTdDa1hhWUpSckpDWFlJeHFiUnZ2MENMN3FHVTE="
     ]
   },
   "iban_ge": {
     "positives": [
-      "R0U0MDZWIFJHODc0OC0xLTAgMTcwMTdPLVE3IG4="
+      "R0U5LTcgQ1cwSDktODAtMTQgNC01MCA1ODEgRi1YLTQ="
     ],
     "negatives": [
-      "bmVnYXRpdmUtQUl1NjRhQ2ZOYXp3Zno1UHpwRDJ6UXo4cmZ4OFB6TWk="
+      "bmVnYXRpdmUtdmRzUWxRVlZPVVIzM0FsQmxLTkMyQ244VEU4aW9PS3U="
     ]
   },
   "iban_de": {
     "positives": [
-      "REUxNkctWiA2IFUxNjA4Ni01LTcgMy03MTdEIFZVIA=="
+      "REUxLTUtME4tTy1VLTU2Mi0yLTYgMyA5IDExNzYgRkogUi0="
     ],
     "negatives": [
-      "bmVnYXRpdmUtSjZRS3RhY1haY2s0NlI4aXp0WjVJdWlWZjgzU1Z5ZHU="
+      "bmVnYXRpdmUtY0paN2xnR3dka1paanFwOXQxT2V1aFFPQUZLRlgwSGU="
     ]
   },
   "iban_gi": {
     "positives": [
-      "R0k2IDZBODQgVC0wMzIzODEwMy0zLTMgOS02LUggTi0zLQ=="
+      "R0k0MDNILTRMLTIxMDkxLTggODA3NCA2MSBZMiBJIA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUteTZLZTlzbUNrZ1lRZnYwSEJJclhOTzNnRDJLaHczZUI="
+      "bmVnYXRpdmUtRHlxQ3FnNlV1bTM2S2tUQWhYV2s3N1pNUlgyZGtGRWE="
     ]
   },
   "iban_gr": {
     "positives": [
-      "R1I3IDQgMk1OLVogODI4MCA2LTcgNDItNzQ5NS03IDc3IDIgWlRaIA=="
+      "R1I1LTEtMVogWi1WLTA0MyAyLTEtOTYtOCA3LTQ1IDI1LTQtMy02Ty1DLVk="
     ],
     "negatives": [
-      "bmVnYXRpdmUteVlZd2RPb1BKMG5jSVJxMTQ4TWR0eDVSbE1MbmkxNXE="
+      "bmVnYXRpdmUtN1V3aHFRRDdBY0JuNnlSRG1SUHRoZlFUMXBsNnFvMWc="
     ]
   },
   "iban_gt": {
     "positives": [
-      "R1Q0NEJPLTU5My0wIDYzNzgyLTg1Ni05LTM2LTQgNSA2IDAgTSAxVSA="
+      "R1Q3IDQgRiBDWkMxLTAtMyA0OCAxMjIgMCA5LTIzNCAzLTQtMi0wRiBQLUogaA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtY0FNU1NjTUJ3UFczb1BmTXAwWHdBSzdndzRUTXYxOXo="
+      "bmVnYXRpdmUtTHlwcEV1bHlsMmg0QXcxVEZmcklQbUQ1OGFGM1gzVWs="
     ]
   },
   "iban_hu": {
     "positives": [
-      "SFUyLTgtUkggVjkwIDItMCA3IDQ2NDAzIDUgMCA5IDcxMyA0M0cgMEg="
+      "SFU4Ni1TUU40MzQtNyA1OS02MCA0NTc3MS0xIDczMCAwWDAtUyBY"
     ],
     "negatives": [
-      "bmVnYXRpdmUtMjBhQUJ2bHB5aGl4T2xZMzk1QVVKMWJlNnRyYXpyZ1A="
+      "bmVnYXRpdmUtTGlleU1PNUFBbU9uRndncHhDMldDRkxQdUhOajJaMTY="
     ]
   },
   "iban_is": {
     "positives": [
-      "SVM2N0k2VyA3NyAxMiA4LTctOTQgOS03LTA3MzQwOVIgRlM="
+      "SVM4IDVMMiAyLUQtODIxNC03MSA5MDM5LTUxLTIzNyBZIDEw"
     ],
     "negatives": [
-      "bmVnYXRpdmUtVFVwakgxRGFQTGZVaXREUkdQUEJzbUgwTUFOOFY0cGo="
+      "bmVnYXRpdmUtVmZabVhNb1o2eXlncGFmQmk2UjFkak4yVG5ydGRVNXI="
     ]
   },
   "iban_ie": {
     "positives": [
-      "SUU3LTggOS1PIFIgVzk0LTQtMTQ0LTcwIDktNDMtVlkgMA=="
+      "SUU3LTEtTy01IFotVjg4ODEtNy04LTQtNy02NDVFIERRLQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtaG1URjY2Q3JtbFpCRjUzbVNnODY0UGgxTGJCUGJVeVE="
+      "bmVnYXRpdmUtbGpmM0FXZ0tnTEN2SzVaZHNvWFZjdzVNa3RkeWRuZ08="
     ]
   },
   "iban_il": {
     "positives": [
-      "SUw5IDZIIFAtUFIwLTQgMzMyMS02OC00LTI0IDQtMS00Rw=="
+      "SUwyIDMgRi1KLTZGMCA4OC01MSAzMyA4IDIzODYtUCBDLTU="
     ],
     "negatives": [
-      "bmVnYXRpdmUtYW12V2tabkE3dm1qeGtuV3QySzh6QTFWWDJFSHBJdXE="
+      "bmVnYXRpdmUtWVZabEwzQ1FwR1hMSFB0T1I0UklscmlIMG81ODBzeE8="
     ]
   },
   "iban_it": {
     "positives": [
-      "SVQzNiBOIDVRRC01IDUgMCA1LTg0LTE1IDAyNzE0NTQtMi1ZIEhNIGc="
+      "SVQxNC1PM1QyOC0zMTEgNTctNjcyNiA1ODMtNjUtMS01MzcgZg=="
     ],
     "negatives": [
-      "bmVnYXRpdmUta2VndEc2S1NwV3JTakFnTjVNclBYM0NVT2NLOVNnOGE="
+      "bmVnYXRpdmUtcEVKRmZyWlNMNEp3dWVrOWxURlZRUDlLZnozNUJBM3A="
     ]
   },
   "iban_jo": {
     "positives": [
-      "Sk80MVggSSBXLVktOCA1IDgzLTcgMjUtNiA3IDQwLTc0NyA5LTIgNi04LTk4QSBM"
+      "Sk8yLThYLVEtOCAyLTMgNDMtMjctNiAwIDE3LTYtMjAzIDMzMjQgODJMUy1aIA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtWTVtVjVGbFNUOU5TMGc5aHZYSXd3QUlPenhMUERBTmo="
+      "bmVnYXRpdmUtZEJqVGN0aVpvbzRSRXpEZ2RJeDNSV3d2VmdwUUJlTUg="
     ]
   },
   "iban_kz": {
     "positives": [
-      "S1oxLTdWREUgVjktNCA5LTczOC05IDgxIEhLLTMgWA=="
+      "S1o3NTggVE43NCAyOSA0LTUtNS03MTctTyBKIFog"
     ],
     "negatives": [
-      "bmVnYXRpdmUtNHBuOHNIb1hsQk1UOWk3RzRObkZMMzByVG1ISXR0SUo="
+      "bmVnYXRpdmUtVGY3Mll4VEVWVDRwQXZDclFpTUU0VUhQME1Fc3hTelU="
     ]
   },
   "iban_xk": {
     "positives": [
-      "WEs1N0VQIFdHIDAwIDU2IDMtNCA4IDQ2SFBPIA=="
+      "WEs2OS1WOUtELTM2IDAzLTkzLTY5MC1XNE4gMQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtak5EdDRUSmF1clpHWWtzN2I3a29HcHdWZ0t2ckNNZWM="
+      "bmVnYXRpdmUtbWR5SW9OQUNMZFpub0hFS3NXRzJucDZJeFhmY3VvOVo="
     ]
   },
   "iban_kw": {
     "positives": [
-      "S1czIDlaLUktWVMtNiA3NyAwMTA2LTIgMyAxNS0zLTcgMi0zOTAxIDAgMk1R"
+      "S1c0NkEgTlRXIDUtMjYtMCAwLTMwLTg3ODY0MzgtNy05NDggMVJDIDMt"
     ],
     "negatives": [
-      "bmVnYXRpdmUtbFNKY0FCTjRPTXFpcHVKR0JRandQSERHN01vd1BacTc="
+      "bmVnYXRpdmUteUNwemxHbkdlUUdIdlVFa3RzNEpTVzVZOGdiRkUxS3M="
     ]
   },
   "iban_lv": {
     "positives": [
-      "TFYwLTItNC0zNS1ONSAyMy05IDIgMDg3IDggNCAzIEcgUy0="
+      "TFYxIDU4MyAyLUk1IDEgNiA1MC0zLTQtNiAzLTlVTzA="
     ],
     "negatives": [
-      "bmVnYXRpdmUtaDVsUnRheURNZElVVXZIUVJrdTd0Q2FxaXRLdjVqbnY="
+      "bmVnYXRpdmUtcVRtT3Bka1dCVlpOWXBHb0xacFcyZHQ3UDVnMHdiejg="
     ]
   },
   "iban_lb": {
     "positives": [
-      "TEI3NSA0TjAgWjgtOS0wNjM5MCA2My01MDMgNTEyMiAwIE9XLTEgOQ=="
+      "TEI1IDdHRlItMTYwLTkxLTctNSA1LTAyMi02LTAtMy0yNTIzIFhXLU0t"
     ],
     "negatives": [
-      "bmVnYXRpdmUtMnpMbnBCSUlhODRBRHQ1cmdxN1lxWDNxQ2N6N3FTck8="
+      "bmVnYXRpdmUtd2haVjhJdFFUNERPY0h4bWxaaFJTSGFPdU42U2ljZ3Y="
     ]
   },
   "iban_li": {
     "positives": [
-      "TEk5MjMtOEtVNiA1Ny0wMjMgMzgwM09FQQ=="
+      "TEk3LTYtRiBES0g1OS04NS01LTE0IDE4LTAtQyAyLUQg"
     ],
     "negatives": [
-      "bmVnYXRpdmUtRUZpcUNGWVhtRFdqUnZPWW1aWHg5YmlQUWtwdkNkVWk="
+      "bmVnYXRpdmUtNWVaQzlLa1lsSm10czNrMm05VHZkOHhKOHZBTW1FZjg="
     ]
   },
   "iban_lt": {
     "positives": [
-      "TFQ0OSBFSzQwIDEgOCA0LTUtNy01IDAwLTggQyBMIDU="
+      "TFQyIDM1LVQ4Vy0yIDAtOS0wNCA4IDEyIDgtNiAwIDAgNQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtcG1kcnVYNnF0NDdmdXdlQW1ZWkVDb3BnMUFrUkJDVlo="
+      "bmVnYXRpdmUtZDUzQlRzb1pHSjE1ak80V2hveVd2RXBFVGdjUVp2bkc="
     ]
   },
   "iban_lu": {
     "positives": [
-      "TFU4NDUtTi0zWiA3IDY4NjAtMiAzMy0xNTA3LQ=="
+      "TFU1MiA4MUI2IDMxMS03NzAtMzYtMlctWjYg"
     ],
     "negatives": [
-      "bmVnYXRpdmUtZjlZc0kyQk9heG5vVWlnNmdkNzR4ckpKR05lR2ZTMEE="
+      "bmVnYXRpdmUtZm5CTmFLSXZ0UmFSdlZYaUFDb2tJVW5ZYm40RVZxUFo="
     ]
   },
   "iban_mk": {
     "positives": [
-      "TUsxOExUIEggRiAxLTAtNy03IDgtOSAyMFotMS05LQ=="
+      "TUs1IDkgUiAwNkMgMSA0Ni0xMTU0NTAgMU4="
     ],
     "negatives": [
-      "bmVnYXRpdmUtcWdudzhxaFV3Um1JUWpneURZTGJmWVZQc2RDRzZiOTU="
+      "bmVnYXRpdmUtcGZObUFQTVpRRW52cWo5VDRqQkZOWWJlZmlLTTM4dHU="
     ]
   },
   "iban_mt": {
     "positives": [
-      "TVQwIDkgUzJSLTYwNDIxLTU0IDI3IDYgMCA3LTAzNSA2LTggMzctNiA0RzEgUQ=="
+      "TVQ5LTAgOEUgWS1IMTQgMDkgNjAyMyA0NTMgNTc2My03MTAgMTk0UU8gNA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtN0tpM1ZvTFVxOVJ6RTRSakJsaGVPQXZXVkgzcHZuYTc="
+      "bmVnYXRpdmUtRkdOaXQ1Y1hKWnlRNmhFNEJvY3dZTkJvVEFFSmVVS3A="
     ]
   },
   "iban_mr": {
     "positives": [
-      "TVIxMjM0NTY3ODkwMTIzNDU2Nzg5MDEyMzQ1Njc="
+      "TVI5OEggVSA1LUc3OTU0LTY3NTAtMzM0LTQtMy05IDU1QUQtOS0="
     ],
     "negatives": [
-      "bmVnYXRpdmUtdkx2dHIybUlJTE1LSXhnNEdzaE5vWjdRaXl3dDZ0QTQ="
+      "bmVnYXRpdmUtSEpnazlTbEVlUExRTVh5RTVJdnNoTjg0QmlDU1Y2dEk="
     ]
   },
   "iban_mu": {
     "positives": [
-      "TVU3M0UtVy1ELTMgNjUyIDc2IDggMzQgOTcgMTY0IDU0MTY2NCBLUC1ULQ=="
+      "TVU2IDUzOC0xNDQgNC0yMSA0NDE3OSA3IDc3IDI5NTM5MjZDLUggQS0="
     ],
     "negatives": [
-      "bmVnYXRpdmUtNGtxODNDWWFUNFhKUk9RRnRJaUpUU1VFS2hxaWhFOHI="
+      "bmVnYXRpdmUtQzk3NDBPZDZ0YUk5MVRnZWRsS2ZRYUZMT0pxSVc5STA="
     ]
   },
   "iban_md": {
     "positives": [
-      "TUQ5IDItR05DLVotMi02LTggMy04MDQtMSA2LTAtMy03LTMgViBCSCBo"
+      "TUQ4LTItNVkgWC1YMDkgOSAzLTQ0IDMgMCAzMyAyNCA3IDhJLTMgUA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtaTB3UUtXdDNvNlVKcVFzOW56TWNwU2lFM0JPUmtxeHQ="
+      "bmVnYXRpdmUtSHRwSXY2MjZ2YTZCdE5YTnBMamRBWWFvRksyS2hyOGk="
     ]
   },
   "iban_mc": {
     "positives": [
-      "TUM0IDIgTC02SlEtNS01NTctMCAwMTk2NzIyMS0yLTggOC01TCBHIA=="
+      "TUM3IDAgWC03TU0gNDYgMzEtNTcgNiAwLTMtNSA1MzggMjQxQUItTS0="
     ],
     "negatives": [
-      "bmVnYXRpdmUtUDBUa01Tb3lYTU53cVBndHFuQzJlaFNXOFMxNU5Xek8="
+      "bmVnYXRpdmUteWc4czlmV1hjYW1ESURleUpSbEJFV3BZQlprcUtSNUg="
     ]
   },
   "iban_me": {
     "positives": [
-      "TUUzNS1OLUwtNCA1NjI0MiA3OTgzIDYgOS0xLVo2QSBq"
+      "TUU4LTRZWk8gNzExNS02NjgtMyAwIDIzMCAxIDQx"
     ],
     "negatives": [
-      "bmVnYXRpdmUtb2VBaVZob3NqQjlsdlZkVHZhTDRGa2VNYXhLRkNzR1k="
+      "bmVnYXRpdmUteXFzTXlZU0NhRkpoVUc1TjBacGhIcHd0YkpLREFxbmg="
     ]
   },
   "iban_nl": {
     "positives": [
-      "TkwyN1AtNUEtVDE0IDY0OTQ5IDRGTS0="
+      "TkwwIDZNLTEtWS00NjkgNTU0MzhFSk0="
     ],
     "negatives": [
-      "bmVnYXRpdmUtRGcxUFMxb2w4UHNzNGZnOW1nTmptUjZ3akR6MXhYT3A="
+      "bmVnYXRpdmUtRjVqRmhCMjJSQkRzeDMzenJQY0RDTFFQQUREbzhzeE8="
     ]
   },
   "iban_no": {
     "positives": [
-      "Tk84NVYgTC1BTTUtOTUgMyBLLU5G"
+      "Tk80IDYtMVItMlUgMyA3IDg0TiBDLVQg"
     ],
     "negatives": [
-      "bmVnYXRpdmUteGxZd2V0aEExbUxLV2JtQWF0OTJaUGJjYkZGRG02eE4="
+      "bmVnYXRpdmUtR1VLUlFpMmRyNTduSnl2dkNmcjdoNnNoeGVabUF2bHk="
     ]
   },
   "iban_pk": {
     "positives": [
-      "UEsyNlAtUC1MLTgzIDctNyAxOCA1IDYtMiAwMzY4MDhPIFQt"
+      "UEs3NTAgUiBHLU80OC02NTMzNDYgMjktNTc0IEcgOCBSLQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtZEN3WmhJdXk3RXp3TkhoM1EyS3ppMlVnSGQwVXpBbUw="
+      "bmVnYXRpdmUtRGttQzFka2xYcXRmb3M4SWVjdTdQUDkxRFEyNG1raEk="
     ]
   },
   "iban_ps": {
     "positives": [
-      "UFMxN1lSNiBKIDE0LTItNDQtMDUyMDQtMTgzNjA1LTEtMkJNLTM="
+      "UFMyIDhaIFM5IEEgMSA4LTgyLTA0IDg2LTAgOTMwOCAyMjMzNlogRTM="
     ],
     "negatives": [
-      "bmVnYXRpdmUtbnA1U0F6MFdSV2I5SWtnd09XY0RicjNhTHIzSVE1UWE="
+      "bmVnYXRpdmUtM1ZuclNaeWhDR084dGJNT1ZrajU5RmhrNjRpcXh6dGE="
     ]
   },
   "iban_pl": {
     "positives": [
-      "UEw2MEI2LTEtUy03LTE3LTctNSA5IDI5NjU4NDg1NiAwMi1YLTFWIA=="
+      "UEwzIDQzIFdHLTA2LTQtNzUtNzc1IDQgMS03ODc0IDU1IDMtNDBCLU8gWA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtRk1Rcmg5V0ZvYkExVHc5NU1mWGgzbjRFenozNzRYYUc="
+      "bmVnYXRpdmUtYXJIcFo5OE56a0dIdG1zZjlyWEZFekNKSDZHdmV5bUc="
     ]
   },
   "iban_pt": {
     "positives": [
-      "UFQ2IDRWTEQtQzUgNC0yNTIwIDggMS0wIDU4IDA5IDctTEc0"
+      "UFQwLThLTDJQODE1MS00LTk2LTctNyA3LTMgNyA3MSBQQiBD"
     ],
     "negatives": [
-      "bmVnYXRpdmUtSmpQRUJ2MjZ1Sloxdmp5MWo2V3JDRTV1enlxWFRpTmw="
+      "bmVnYXRpdmUtNlhNZVZIU3p0bG04Q2xDeThERjNobWc0enhKWWRYNU4="
     ]
   },
   "iban_qa": {
     "positives": [
-      "UUE4NFpUMiBDLTYzLTcxLTEgMjQwLTUtNDU4MDYxIDY0IDggSy1HIFUg"
+      "UUEwNTEgN0sgWTEtNzkyOCA0MzUzOTggNC00NDYxLTAgNiBILTgtWSA="
     ],
     "negatives": [
-      "bmVnYXRpdmUtaE5kS3FiVzVCYjQ4UTRpVXBtN1REa0c5S1VRNnBTcjc="
+      "bmVnYXRpdmUtWldBT3M2M0s4MHAxZVN2TFJhY1dJM3U1ZEk2UHJka2Y="
     ]
   },
   "iban_ro": {
     "positives": [
-      "Uk82NC1PRCBXLVMtOTk5LTggOTE3LTMxNSAxIDExOTUgSi0="
+      "Uk84OSBTIEstVyBJIDktNjEgNC00LTI2IDAtMC00LTkgOTgtUDNR"
     ],
     "negatives": [
-      "bmVnYXRpdmUtVnpjQmNZOER3WTNES1BYNUVtN1NBakc3ckdieVpiZjQ="
+      "bmVnYXRpdmUtRTRzaGVsbU1jQlNkNlhKZnhBNWF6Q0RlTjVvZVpJZHI="
     ]
   },
   "iban_sm": {
     "positives": [
-      "U002LTkgTzZQLVk0MzgtMTUgOTAgNC0xIDUtNS0zLTk0LTYtMC1FR0ggYg=="
+      "U004MiBDIEYtUkY3IDMgMS0zIDctMCA1IDk4IDIxLTUgMi03LTggMS1ELVYgWiA="
     ],
     "negatives": [
-      "bmVnYXRpdmUtbGpKTzdwS0k2clk3OWpMaEwyWHBSNldQUExQYmxielg="
+      "bmVnYXRpdmUtOXZWSVRTUGxlUkVrakgwREtqS1dKbkhJazFwd3ROdzE="
     ]
   },
   "iban_lc": {
     "positives": [
-      "TEM0M1dXIDctUi02IDctMC03MzItNS0xMC03IDAgMyA2OTgtODUtNTAzOSA3LUNY"
+      "TEMwIDBZIEJVOS00MDAtMDgxLTg0IDQxNSA0IDYtODUgMyA0ODgzNEEgTjEg"
     ],
     "negatives": [
-      "bmVnYXRpdmUtNTUzaUk5VEVtZ3lGaFQ4bEZCbVFub3g5VjU3SGlDS1Y="
+      "bmVnYXRpdmUtS2RETW0wZU5ZalV6eW1CMDBHWFI5eHY2ZWtTdUVJMUQ="
     ]
   },
   "iban_st": {
     "positives": [
-      "U1Q5OVVFLUwtRS0xMyA5IDQtMjY2My01LTggMi02IDE3IEQtQyBZIA=="
+      "U1Q5Ni1VNS03LVItMDAwNyAxLTYyNS00Nzc2IDA4IFFaQiA="
     ],
     "negatives": [
-      "bmVnYXRpdmUtMzdwQlAwMEFvWHRYZFUxTkJ5eUt4b3NXZ0VNR0M0eEU="
+      "bmVnYXRpdmUtZkNxdmlENTNrMHJoVGlPVXNONUZvZXJpZXdqTE5LdWs="
     ]
   },
   "iban_sa": {
     "positives": [
-      "U0E3NVpKLVBOIDgtMzkgODE1MTA1LTEtMzgtMi0wIFIgUiBv"
+      "U0E4OSBQUFNGODYgODggMzcgNzctNzYgNTAzWiA2Ti0="
     ],
     "negatives": [
-      "bmVnYXRpdmUtMmg0a2JNcEMzazNyUEVPalhkUHlkR3plUE9McFJYeUw="
+      "bmVnYXRpdmUtNk92aUM3VWNabkd0ajFaR1lWdmFvcW5PYlRSWDZqMk4="
     ]
   },
   "iban_rs": {
     "positives": [
-      "UlMwODcwMTkzMTg5NDU2MDM0MTkwNQ=="
+      "UlM2MjMwNzQ1MTQ2ODg5ODUyODgyMQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtQjgzNGQ4VkNHWHhqWThhVUZObUc2R0VMeExEbFJKQ2E="
+      "bmVnYXRpdmUtNnZBZ2tlc25hUVNKRnV2NkpRQjN5am9uRmR1ZzlRUEI="
     ]
   },
   "iban_sk": {
     "positives": [
-      "U0s0OE0yTUYtMC0wNSA1IDU1IDAtMjUgMjIgNC05RzcgMCBG"
+      "U0sxLTItVS1PMjM1LTktNTg4LTI0IDYgMyA5NTkgNCA3MSBJLQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtdXRacXdKZUFoWDVXbE9UQlBubHdjN2pyQlRRM2ZTQmc="
+      "bmVnYXRpdmUtQWc2ODJWTm9hM0FtMTBXYkt0U1F4Y0Ezc3dSYzA0WVc="
     ]
   },
   "iban_si": {
     "positives": [
-      "U0k1IDUgNy1LRFEgOC02IDMtODk2IDcgOC0xIEQgOCA="
+      "U0k2N1BFMlI2LTYgNjItMjAtMjgtNjE5LQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtQnlYazRDNGUxbmcxeW5sNzZkNERnaUxrUVVuTG8wbU4="
+      "bmVnYXRpdmUtc2lsclNNeDg3Z2xzVEtoNnh2Zm5zbGlKSDJuTGZ5V2o="
     ]
   },
   "iban_es": {
     "positives": [
-      "RVMxIDMtUiAzVDYtMDcxLTItODk1MS03IDUgMDctNS01LVMw"
+      "RVM1IDdXWSBaSyA4IDgyMTYtNiA0IDM3NTgxIDAtVCBQLTkt"
     ],
     "negatives": [
-      "bmVnYXRpdmUtdE5Cc2pjWGFoeFZQempORHR5YzVPeG9FeGZxY3FwYlY="
+      "bmVnYXRpdmUtYlVSYm1HcnNkbE1nRndtMzRKTzVQS2VhUE5qRHJraTU="
     ]
   },
   "iban_se": {
     "positives": [
-      "U0U1LTRDIFAgNTUtNC0yIDggNTAtNS00MSA5IDc0NTBDNy1PIA=="
+      "U0U3NTQgTlUxODYtMjIzNC00IDE4IDg2LTMgMTJPTy0="
     ],
     "negatives": [
-      "bmVnYXRpdmUtbDd5bGhKNGhSa2VES09NZDZuWVNhTlMwaWk2SnhZUWw="
+      "bmVnYXRpdmUtTUhlSkNCWWh0bHpGeGk3SkFYUVBqUEhVWEZaS0dvRlE="
     ]
   },
   "iban_ch": {
     "positives": [
-      "Q0g4NVAtVi1SIE0gOS0yLTctMC02IDktNTgtNCA4IDQgTy02"
+      "Q0gzMiBWLUotRjktNi0zNzQgMzY3OTYtN1otTiBIIA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtcWtWWVhXM0k4VUlSeDNJSnA3akVueVNrZUhGTEF2UE8="
+      "bmVnYXRpdmUtWnVrdzhuYXVnVkdPRzdrOXEwZWlzUUVoM0lTWVRmang="
     ]
   },
   "iban_tl": {
     "positives": [
-      "VEwyNSBMMi01LTUxLTYgNTc1NCA2LTg3IDIyNTAtUiBP"
+      "VEwyIDEtRC1PRSAxIDAyIDE5LTQ3LTggNTc5MjVTLTlSIHk="
     ],
     "negatives": [
-      "bmVnYXRpdmUtVkhOY0xqRnB5TUoxWGNuNXBTS0xZUGpGQXljWjZqQ2Y="
+      "bmVnYXRpdmUtUkd3d0hDbjZsSVZOZndxdWxTWVd6cElJell1NFRxSXI="
     ]
   },
   "iban_tn": {
     "positives": [
-      "VE44MyBZLVogSVUxMTUtNDIwMCAwLTcyLTgyOSBELUdL"
+      "VE4xM0ogWDZNLTU5MSAzMjU5MDYgODkgOCA2QSBGRSA="
     ],
     "negatives": [
-      "bmVnYXRpdmUtUFlRbkQwaFRqNWtRbWFiZGhnT1BsWk5UZTFCbVoxR3M="
+      "bmVnYXRpdmUtYkRiN1ZiMElGdkdPUEExaEhYTlEzTjJsV2ZUelZuU0g="
     ]
   },
   "iban_ae": {
-    "positives": [],
+    "positives": [
+      "QUUwIDQ2MyAzSyA2IDQtNiA4NDc1OTEtNzA3LU1aVyA="
+    ],
     "negatives": [
-      "bmVnYXRpdmUtNzlmTVBjd0NhcURSbkl4NmJKT1FiNWRBbXJWZGZxUGY="
+      "bmVnYXRpdmUtOVJJY0s4Umc5bFNmb1YxQzVaeE5FcWxEcmdkWjVBN24="
     ]
   },
   "iban_gb": {
     "positives": [
-      "R0I0IDdEQy1WQTQ5IDMgOTg0NjgwIDIgNi1YMEcgaQ=="
+      "R0I4MlIgMS1aIFQ3LTMgNCA0NDAtODItOSA2LTQxIFogWiA="
     ],
     "negatives": [
-      "bmVnYXRpdmUtNVFIc3dHTXNvcTFkMFJlakh3UDR4U0pGSUhXUXdoSUI="
+      "bmVnYXRpdmUtVUxub3BqcVhXaDVHU1pSSzM0MDUzMGNQOVhDVTVRcXI="
     ]
   },
   "iban_va": {
     "positives": [
-      "VkE4MjQtMS1WSyAwLTEtMS0zODQtMTIzNzQtNy0wLVEt"
+      "VkEwIDQgNy1UVDAyMjEtOS04LTYtOSAzLTAxIDItRFQgOCB6"
     ],
     "negatives": [
-      "bmVnYXRpdmUtbEtMejRGVGFaRklXOThybnpleUNvVFo4cGJyU0pTVjY="
+      "bmVnYXRpdmUtbFk4UllkRGx2dnloWDVrRHp1SW9JZ25JTlVWdG1vMFI="
     ]
   },
   "iban_vg": {
     "positives": [
-      "Vkc0LTctTS04WSBSIDEyNCA0IDczIDcxIDQ4NzEgNkUtQyBMIA=="
+      "VkcwLTZJWiBUIFU1IDExIDM4IDQxMS01LTYtNDggNC1PIFZE"
     ],
     "negatives": [
-      "bmVnYXRpdmUtMDg3TVY5dFpDSllaRks3OWVoZ0xXRkxPaUs2aTZUNDU="
+      "bmVnYXRpdmUtQWdCMFFwZENLZW1NUWxVaEh0T2NPYW9oNUxuTFZFYjY="
     ]
   },
   "iban_ua": {
     "positives": [
-      "VUEzIDJNNiBMIDEgNiA3OTAzIDgtNTIgMzkzOS0wMS01NS02LTZaLUwz"
+      "VUE2MyAyIEwtMTk4NiAwNTY2LTgtOSAxLTA0MSA3LTI4IDUtNjJOSC1MLQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtT2czOW03b0NMR2JrbmxIanVHaktRRXZnRWZhbUVMZjU="
+      "bmVnYXRpdmUtVU42THFiMmpRREhRcG1DbTVrWlE0bEZ4T3Z0S3l3VFE="
     ]
   },
   "iban_sc": {
     "positives": [
-      "U0MzOEVTLVogRC0wMi0yIDMtMSA2OTkwLTMgNSAzMyA0LTI1NzQtOSAwUDQgVCA="
+      "U0M0OSBJIDAtTCA5LTEzIDY5MzEgNjQtNCA5OSAzLTczOSAwMjAtNjJEVSBI"
     ],
     "negatives": [
-      "bmVnYXRpdmUtWWFDaU9RTEtDTU15d3pucG5TR0ZLbkJoR2IxNURhcjU="
+      "bmVnYXRpdmUtYmZtSU5GVDBDZVRpT25reE5DYTZ6MFJzbXN2S1ZtcGo="
     ]
   },
   "iban_iq": {
     "positives": [
-      "SVEyLTMtTUJSNTYxMiAxNDY0NTgtNjEtNC1SNy1I"
+      "SVE1N1BHIEdXIDEgMzY0NSAxIDIwIDMtOSAwNyBNVyBF"
     ],
     "negatives": [
-      "bmVnYXRpdmUtb2x3U29WamN4ME5Eb29nVEQ0dUM5TEFEeEM5M0QzU0k="
+      "bmVnYXRpdmUtSXdxcHQxR0t5RTQ4WjA5S0xramhRSTYzS0VqNlVvRzg="
     ]
   },
   "iban_by": {
     "positives": [
-      "QlkyLTNGIEktOVY3LTggOS03NyAwNDctNjgwIDggNjUtMiA0IDctVkggVg=="
+      "Qlk1LTItTCBWIEFUIDIyOTIgMzMgNDYgMiA5MjMgNSAyLTg1OSBFIFlI"
     ],
     "negatives": [
-      "bmVnYXRpdmUtYkRCanp6dXd2ems1ek1JT2tCQm9DSm9VMXlMajBjcmo="
+      "bmVnYXRpdmUtVGJSM3dzYXp2Uk04dzdENWVWNFJWRTVDOVFpWEM2U1o="
     ]
   },
   "iban_sv": {
     "positives": [
-      "U1YzOCA1IFUgNVEzNzI1IDM3IDEzMDQzNjU2IDAtMTItSDEwIA=="
+      "U1Y2NTAgUy1HLUIgMy04LTggNy0wLTE4IDk1IDIgNjA4NjExIDIgWkMtNg=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtaTVVVGppNzJSOExoWFFNeU0yYXNiNnRnVUtSeEoya1o="
+      "bmVnYXRpdmUtUk5tN2pvNVlYUm93aG1CM0ZndmxnWlV5VnBLcld0akk="
     ]
   },
   "iban_ly": {
-    "positives": [],
+    "positives": [
+      "TFk2IDUtSkktTS01Ni0xMTkyMCA5LTcgNy04LTY5My00LU9NRyBZ"
+    ],
     "negatives": [
-      "bmVnYXRpdmUtVDBkdnNBRTAyTzFNclgyd3hhTWloTGg3M2pFZng3Z24="
+      "bmVnYXRpdmUtelRHSlEzRk10cEMzMmdYczB5dlpXeW1kNm51T1JnOTg="
     ]
   },
   "iban_sd": {
     "positives": [
-      "U0Q0LTAgRy1OQkYtNTctNiA2IDE2LTctVCBNLTQ="
+      "U0QxMUQgOS0yRjkgNDY3OC0yIDcgMiBLTA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtSmc0R1dqczA0TmxtM1o3WGxXNjdPVUk2MEJLWVoxa2g="
+      "bmVnYXRpdmUtZEx5MmRxaGc5WEZaUUNDSlh2M01VVzRYSVNBUEhtTW8="
     ]
   },
   "iban_bi": {
     "positives": [
-      "Qkk0MjkgT0NMMyAzIDEwLTE1OS00IDQyLTAzMzA1NCBULVMtWg=="
+      "Qkk2IDQtS1Y4SDEgMTIyOS0zLTcgOSA0LTUtMDQgOCAxIDcyLUYtQUs="
     ],
     "negatives": [
-      "bmVnYXRpdmUtTWIwcEM0NE5Yb1dLd0w3TG9xVWNmRUhBQTNoR3QxUWc="
+      "bmVnYXRpdmUtNERiRzRiN1FzdWJLNVdLbmJWWVVwa1Z5OGhtcDVYRjg="
     ]
   },
   "iban_dj": {
     "positives": [
-      "REo1NVUtT0dCNyA5Mi0xLTcxODY0MDYxNjIgMi01OFdX"
+      "REo0LTcgUS1EVlA3LTg4LTktNi02IDMtMiA2MzAtODgtMCA4LTFQWTgt"
     ],
     "negatives": [
-      "bmVnYXRpdmUtY2RYWkJBZXhsUTBqS25nRGhpcE1QamdlNk9pS0h2RHk="
+      "bmVnYXRpdmUtNk53MDM1WllkUXVRU05ndGlTUkNWQ29aamNHN3pXamU="
     ]
   },
   "iban_ru": {
     "positives": [
-      "UlUzIDUzM1M5ODA1MS0yNC03LTI5MzUtNDgtODExODcyLTIyOCBELUdW"
+      "UlU2LTEtM0VBIFAtOS0zNy03IDggNDAgOS04IDMtNTIgMSAyLTY5MzQgOC01IDkxRk40"
     ],
     "negatives": [
-      "bmVnYXRpdmUtTHl4QXhUZlhqcXVaNTV5UDFTVFF4RVg0SGFINlNDS0c="
+      "bmVnYXRpdmUtczdranBHaFViWUVQYXlmb2dPS3JaNDhXNFJuMUFuWFM="
     ]
   },
   "iban_so": {
     "positives": [
-      "U081LThMTU4gRSAwOSA1MS04OTg0LTA4OCAyIFc5LUU="
+      "U081IDBBLTQgWU8gOSA0IDctNTE3IDY2OS03MTQtTS1CLU8g"
     ],
     "negatives": [
-      "bmVnYXRpdmUtcmtBRmlTR3NvZ0xlTXZBdjZZTFJ0ME5hdEFrQXV1TlE="
+      "bmVnYXRpdmUtMWRDajNsNXgwMFZKQmxnc0FNZmRaelB1OHZMZjZiazk="
     ]
   },
   "common_passwords_shortlist": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtUmdUemlOSU05VHpTQUtLQ092Mk0yRlNxM0E1dndFbDk="
+      "bmVnYXRpdmUtOG9SYXB1aGJzSG03NXBRbGYxMGg3MG50SllpclNXcWY="
     ]
   },
   "hardcoded_database_passwords": {
     "positives": [
-      "cG9zdGdyZXNfcGFzc3dvcmQgPSBJaEk4c1hJS1N0ZExlbnVPMjd3dw=="
+      "cG9zdGdyZXNfcGFzc3dvcmQgPSBqUVp3aXIyNGpib0ZaQW9EMXIxeg=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtaHhnQVIwdWlOdk5YZ2tBc21jbW9Pc2NJMGkyTjJsT2U="
+      "bmVnYXRpdmUtb3p0djltY0Q0SjlzdkwyYTEwSjlEYW9SdjVyclV0YWo="
     ]
   },
   "yaml_static_password_fields": {
@@ -1070,7 +1074,7 @@
       "ZGJfcGFzc3dvcmQ6IHNlY3JldF92YWx1ZV8xMjM="
     ],
     "negatives": [
-      "bmVnYXRpdmUtMkF6enB5UTBXNEZyNmVLRmdkd0NuRVhWVUFaNlM0MGU="
+      "bmVnYXRpdmUtR3BNZXh3Uk9PVllZV3YxTGhuaFFQN1NEN3dOclU1em8="
     ]
   },
   "yaml_passwords_plain": {
@@ -1078,13 +1082,13 @@
       "ZGJfcGFzc3dvcmQ6IHN1cGVyc2VjcmV0MTIz"
     ],
     "negatives": [
-      "bmVnYXRpdmUtWmkyNTJkTVNlcUxKYTZES24wMVdaazdhSmx1OEl2Vms="
+      "bmVnYXRpdmUtR2ZwSU9nTnhXRmM3YUFlOVQ2dXdtdHFONlBITEVSVGY="
     ]
   },
   "yaml_passwords_single_quoted": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtMnlONTNQRzI0RlNkcGFUdTA2N1JJS2d6SDJCZWdaM1E="
+      "bmVnYXRpdmUtbHVpdlRpYWZzd01TaTJMR0hSbThucTNZb21sVzJSd2Y="
     ]
   },
   "yaml_passwords_multiline": {
@@ -1092,21 +1096,21 @@
       "ZGJfcGFzc3dvcmQ6ID4KICBzdXBlcnNlY3JldDEyMw=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtODdERUZYbmRqRXB2TmJ4bWZYeVR4ajhXM0dscGRRSkM="
+      "bmVnYXRpdmUtcW1VQkRnbW51TFRWTWRIUVhkNFlzQWNrN1pVN2ZNVUw="
     ]
   },
   "github_actions_sha_checker": {
     "positives": [
-      "dXNlczoJMWkvN2RsQGlsYgk="
+      "dXNlczoJIDZuN2ZjLy1yMTVvQHFzY2I4NAw="
     ],
     "negatives": [
-      "bmVnYXRpdmUtWHpVV2JzdVZzRUhCMTJGV3dyS3VZR0w3V2pkTVByNDM="
+      "bmVnYXRpdmUtanNIR0d4SXM1ejI0TEhDcUFpdUtiZGM2WUtpSVNDNEs="
     ]
   },
   "dotnet_configuration": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtczY5TE16MWhRMHcyUkdsTFRYMm5Za2I2alBuOXNpT3k="
+      "bmVnYXRpdmUtMjNHd3U2TEk5Z0pBWFBNNXFxNm5LbVRhdmNIc3E0bXc="
     ]
   },
   "env_passwords": {
@@ -1114,39 +1118,1753 @@
       "ZXhwb3J0IERCX1BBU1NXT1JEPXN1cGVyc2VjcmV0MTIz"
     ],
     "negatives": [
-      "bmVnYXRpdmUtQmlQZTVBTW1Qbm4zSlpsRGQyZURNMjkzTXlxdlVPd3U="
+      "bmVnYXRpdmUtMWlzWXpaNERUODVPQ2tHOW05ZEFZR0hsY2loaVNyVUc="
     ]
   },
   "yaml_base64": {
     "positives": [
-      "ZGJfc2VjcmV0OiBNRFUxVVhKVlpWbEJOR0Z2YldocFlXUnNhVlF4T1ZoTGJISlhPRTVHU21RPQ=="
+      "ZGJfc2VjcmV0OiBlVTFMYjFKdWFEaERla3hyUlRKcVRsaFBVelpxZFVsaFJIZDZPRFZqYXpRPQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtWGQ1RGd0U2F4WFdQYTlzbFl5UHVtTkpTZURlaWxiWWM="
+      "bmVnYXRpdmUtZzc2OFU3bm81eW5VVzQ5ZHhXOGxGVHhTRklxQkxrZDA="
     ]
   },
   "yaml_base64_uri": {
     "positives": [
-      "CQkJCSAJIAkJCQl1aWFobW4temd6dW5zZWNyZXQgICAJCQkJIAk6CQkgCSAgICAJCSAgIAkJCQkgCUpUMVdNYmIwN3hUVF91QU51N29sUlN6NHV1eVFCWjhTREdiRTB6RnQ1VGxXLTZFTHppVGQ0STNQalBUS3NCR2NjdjlINS1idA=="
+      "CiAJCSAJIAkgCSAgbWp0YW1kemFkc3FsbnV5c2VjcmV0CSAJCQkgIAkgOiAJCQkJCSAgCQkJCSAgPiAJCSAJICAJCgkJCSAJIAkJCQkgICAJICAgIGFub2Z2LUdRbk55alU4bUFYOHdVclc9PQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtZFZ5Mm41YXg0ekJRUHk2MW9GZnJWNUxuV0tkT29RWEI="
+      "bmVnYXRpdmUtZW90Wlp0c0tScDdoQmtyM3VIcWk5ZUN1MjhuUzFGa1U="
     ]
   },
   "json_base64": {
     "positives": [
-      "LAkgCQkJIAkgICAgCSAKICAgDQ0gICAKCiAgCiJzZWNyZXQiICAJICAJIAkJCSAgCSAJCToibDNMR0tWbUdVOU8zVTdNVHNOMk44YkluZk1aNDQ5RS9wazRpY053ZmhaaGFXSUMvb3NTU0oyTmlqWT09IgoJCQks"
+      "eyAgCQkJCSAJCQkJICAgDQogCQoKCSAKDQoJDSANCQ0iYXBhc3Njb2RlIgkJOgkJCSAJCSJSdU1DbkhyaFRyWUJFZzZJV2tQVDBOSGl3QlUvNTBnSmx0UGpSOWdrQzhUU2owZDhWeTNGbzA0ckpNUHlKWUV0b1piZXVVOXpJWEc2MlpEUiIgfQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtQ1VuQzVucnRGWkZvejNweWt5dUw0UFhFNGxDcjl4RXQ="
+      "bmVnYXRpdmUtbXZ4ZzNzdlNhc2taaHlna3luU1RTbUlyNWhSaEZ5NE4="
     ]
   },
   "json_base64_uri": {
     "positives": [
-      "eyAgCSAgIAkgCSAJCQkJICAgCSAgCg0NIA0JCiAgDQoJCiANImRsa2V5IgkJCQkJIAkJCQk6CQkJCQkgCQkJCQkiSkxqVkdNcS15SVVIOVZLckxRcl9qblhBIiAgCgoJLA=="
+      "ewkJCSAgIAkJDQ0KCgkiaHdmanh1ZXdlcWVha2V5IgkgICAgIAkgCToJICAiOHY4eGdpVnUxbHpMMHBVb3lja0JDUzdVY2RQeFZ3VGNmSG9Fb0dhTXNnV0FiS19IIgoNLA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtYlZSN3pqOXUwaGJmakMyOUZBWTExRWtYaDN1REpwTUw="
+      "bmVnYXRpdmUtZEZsWHlUdDJoTWtBNE9md3R4TXdGNW9EenNtMTNPUnY="
+    ]
+  },
+  "gitleaks_1password_secret_key": {
+    "positives": [
+      "QTMtOTBDVjhKLVlCVkJWNjVFRTNaLUxMMUg4LVAyMEhCLUZYRTdV"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtU1NIMklKWk5vZmo5M1VlS1RsUVpsaVN6eHF5MHlsSWk="
+    ]
+  },
+  "gitleaks_1password_service_account_token": {
+    "positives": [
+      "b3BzX2V5SjNreHFGelZsWDZiZTZXak94b3hZZWlnNHNldUwzY2hBODJ3WXBhMWk0clA4QjFMTjZJVmo5WUtadzJKc2x2dVVLU1pYcEFIVHNHN1Q2UGFUclk2VTBKcFZ4aGdsc3NHUzFoN1B3RFczUmI0cnRMYWpNUSt0S0p1ODR6TWh5UFp5Q29wT0U0ZG1YRUtUOXMyWkJValN0elR4bFlDQWxNUmJNYXdVQUQ1NjFCWEpxc2QyVmduVk9ScHFSY25kQVhPVTFUTVlFZkxpQ282SkZQVlZtbHRNRDJEOTFId2VnQVNEaEovbkZpOGNmWnJFMTRjOGFHVmh2TGtBdlc="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtV0xmbFpoVGZQYnNVRmZUeWl5VTc5bktqbHhTQ1h3c1Q="
+    ]
+  },
+  "gitleaks_adafruit_api_key": {
+    "positives": [
+      "w4A1dWFkYWZydWl0Ij0gPTQ4NWN2LTRoOWM5emtjdG5henowMHZpeHlxdHB3bTg0DQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtZm9TYWs5RE4xN3JTZko4WTVESlJGd3lHcDdRYnRsVlo="
+    ]
+  },
+  "gitleaks_adobe_client_id": {
+    "positives": [
+      "b8Odw5vDnjhhZG9iZT89CmM0MWE4YzUzYTc4MDg5MTAwMzIzMDdiMDQ5OGIxZmFm"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtajhUWHI3NDJBN0ZrOWNNanBKRklwNjRPMExMR0J2SkU="
+    ]
+  },
+  "gitleaks_adobe_client_secret": {
+    "positives": [
+      "cDhlLTF3d3NwcTJhcm9yZ242NzhjcWpxcG9yazl0bGlwZ202"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtM21tSHRXUkx1OGZuTmJHeFVpRDJIOUNYZDBOVHMzczY="
+    ]
+  },
+  "gitleaks_age_secret_key": {
+    "positives": [
+      "QUdFLVNFQ1JFVC1LRVktMUdVSkNXMEFBS1RWWEFLOE4wM0FFVkY0S0pGSk5IRFI4NDVENDhBQUMzNzVVWkpEOTRYSFZEMlFISlQ="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSDh6M1dLckh2OEhEVmdRd3E1OENvaWt0UHpObm05QTc="
+    ]
+  },
+  "gitleaks_airtable_api_key": {
+    "positives": [
+      "MMO5YWlydGFibGXDjycMPSALDXFmbjIzanhyOHM5aGhucGt0"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtbVRqWlBLY1ZFTUJXNmhCR2lOZml4b1hRZ0liR3VjODg="
+    ]
+  },
+  "gitleaks_airtable_personnal_access_token": {
+    "positives": [
+      "cGF0Ol1dXV1dXV1dXV1dXV1dLjE1YjM4MzYwMDNmMTEyYzdiMjVjODBjMjU1MjY1NWE3YzVmYjA2NTZhOTUxMTAxOTcwMDZlNDE0MTc0ODU2MTA="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtTGRhRVdTYm5yYUVhUlVpSjFRYldrODJ4eXcxV0tXUU0="
+    ]
+  },
+  "gitleaks_algolia_api_key": {
+    "positives": [
+      "RklhbGdvbGlhdcK+CQ0sPWs0cGFvZGNxanNpeXJjbWFhaWIwaTRjcWwyNHM1N28wIA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtMDBPTkh4Z29vR1ZVOGNTSmVGVHBwYXk3YTRqRWVDYmY="
+    ]
+  },
+  "gitleaks_alibaba_access_key_id": {
+    "positives": [
+      "TFRBSWdydHVwYzBiYWxlMHVlYzRnOWFw"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtTXJkUjdtMmxMaXZBb3NiNXVqWVZxWWV1eDg1VlRkZTg="
+    ]
+  },
+  "gitleaks_alibaba_secret_key": {
+    "positives": [
+      "w4lhbGliYWJhw57DplZjID4nMThiZ3cycnM4OGp6cnRqeHJhOTFhMmZuZnRuaHVh"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVG9uNE5sdjNWRXhSNloyRU1zU09JRGJYb1Z2MVJlaXo="
+    ]
+  },
+  "gitleaks_anthropic_admin_api_key": {
+    "positives": [
+      "c2stYW50LWFkbWluMDEtUV9STG1XdEZwMzFtbHRNUFU5blNZN2Q0aTl3Q0pPbG9mbnAzTTBBN2FqaVVhd2N6b0JNQm16Q3prYXc2Tk5OZzRqSkFnelN4VGdQcU12Q1dfX1JpbVNzUmNYaXpYQUFccg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtUEVCWkxXNmxZSHJpOU9sRW5RUEwwN2VSS1FXb0hwbWc="
+    ]
+  },
+  "gitleaks_anthropic_api_key": {
+    "positives": [
+      "c2stYW50LWFwaTAzLVFhSHZCYmRpYzBUZmx4WWtOYjdTVU5ld3NpSm4zMnZSQmtSNkp0LW1OUDhzOGI3UFJNVk1mZVo5d1N3Z2tQNzZFdUlCQ1h5cEVvNEs2N3ZuYy16dDVvQU9WbnBOMkFBXG4="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtTUh1ZjdKbDZKMGczdDJQTFFLZlZLeUxNODVxTnZYUDg="
+    ]
+  },
+  "gitleaks_artifactory_api_key": {
+    "positives": [
+      "QUtDcGNsT000WE01MDNVeFNpQ3Z1OXJ1RmxqbUMyUmRhbDd3cW9kNXU2cEtBOFhKdEdYaXpmaXh4dUFYSWY3SzNUN0ZqQkZqNA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtTTFyd2RIQUg4NXFlMlFTYTkxeGd4S0VxM2x4aWc2YjQ="
+    ]
+  },
+  "gitleaks_artifactory_reference_token": {
+    "positives": [
+      "Y21WbWRqbUxuUDdGSWNTVEp4c1BhS1VzbDA2ZEdhell0dkV0Rng0a21hTWtrZXVQaGYxSFJoR2paekNRTlg1SA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtaHF6ZldsVVR2djRnU1hjVmpIVlJwa1RrRlRkQWFsbVE="
+    ]
+  },
+  "gitleaks_asana_client_id": {
+    "positives": [
+      "Y2FzYW5hw6/DjMOQNCI6Oj09MDE5OTIxNDQ5MTU0MTEyMQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSVRKeWRnMkJpZWhZT0dGb2xCb0RKUU1BclZtYUNZSWM="
+    ]
+  },
+  "gitleaks_asana_client_secret": {
+    "positives": [
+      "MsONYXNhbmHDqz4gPQs9NWpiMTcwYm16bTI2cXkxeW1jNTQ3bGw1MHcwamcxbXk="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtQUNjWFV3bFRZMlJKdzREOEtydEpFbWdWMkh4Q0txcFk="
+    ]
+  },
+  "gitleaks_atlassian_api_token": {
+    "positives": [
+      "ejhyQ09ORkxVRU5DRS1Fw4rCuic6Ojo9DQwnIA1oOTVycDh4aXZtaHdyZThtYjdrNGI4NjQ="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVVFmdWE1MUtXNk9xem10c1NrOE9WVnB0SjZzcE16OVY="
+    ]
+  },
+  "gitleaks_authress_service_client_access_key": {
+    "positives": [
+      "c2NhdXRoXzNhcm5rY2xoZi42ajMwYnUuYWNjX3FvMnY1YjM4cTFxYWUuaTU4bG9hNTdvbm0rdjM3MTVwYWpqPWRlaWMwPW80bDk0Y3ML"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtRnBzR3BsV2tMTzJMcUxCZkZ6SG1UN3ZoVWxqdkZIaEM="
+    ]
+  },
+  "gitleaks_aws_amazon_bedrock_api_key_long_lived": {
+    "positives": [
+      "QUJTS3FnZUEvaW12a3MrOWM3Rm5CY1llSkdqdXpMZHlhWUd2T05LL2tzZTVaUkhLU3B5RUZFYkdIZnRtNUpxVzVRUmFid2xESDFwSXJKN3V0WVVnRDc4U08xNVZhK0laYW1Sci80bzVRaU5YU0NZdVM5UkxqOT09Ow=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtRmM3dmVvd2o1YkZ4bE53U0RxVVJpU0h4V0wwWUYwQno="
+    ]
+  },
+  "gitleaks_aws_amazon_bedrock_api_key_short_lived": {
+    "positives": [
+      "YmVkcm9jay1hcGkta2V5LVltVmtjbTlqYXk1aGJXRjZiMjVoZDNNdVkyOXQ="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSXVZN3Nrb2N4RkFqNkdRNGxKQ1BpMjZRdFljTWhHa2Q="
+    ]
+  },
+  "gitleaks_azure_ad_client_secret": {
+    "positives": [
+      "dVBmM1F+UDlnM3NncVBzNTRVRi5ZMi5IN0FtfkdaQXdOVGRGYVdwDQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtWUZxYmduU1VXQm9XTTFjdHVHMEJXRmN1NUhtaVh0OXY="
+    ]
+  },
+  "gitleaks_beamer_api_token": {
+    "positives": [
+      "w4vDk0xiZWFtZXLCvHk9PiBgYl9yYzQ3bDMwM3FnODhzamloNnl1aTlld3M2bGR4d3F0bzBvLXk0X2MzMTUzdVxy"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtd21DSlFIQjVTNnYya0RrZVFaeWlTTWFUektSZ2xuR2k="
+    ]
+  },
+  "gitleaks_bitbucket_client_id": {
+    "positives": [
+      "w79iaXRidWNrZXRadT4LPScicjU5Y2F1ajlyYzducmttMjllYTQ2czd0cTlqY2h4bXJcbg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtZVlxOW8wWjBoQXN1dEFIZTV4ckZZSklkYjBQSlRqbEc="
+    ]
+  },
+  "gitleaks_bitbucket_client_secret": {
+    "positives": [
+      "w7HDp2JpdGJ1Y2tldMOCNyAKCz0+PWYycy1qaWZycXNqNmplZ2d1eXRieHd0OWd1Nmpoazd4eGJwZWQxYXFtNmlieWh5XzVleG42PXNtcTM4cjJrczs="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtR0k2aklDVVJzQ1dZZ1lYRWhvUjNOZGF2ZFpINTRhdmw="
+    ]
+  },
+  "gitleaks_bittrex_access_key": {
+    "positives": [
+      "w7FYw4DDmWJpdHRyZXjCugkLJyB8fGAnbDZ4ZzJtOGtmbDduMjZoZ3F3aWNjbndxazZ5cHo0bTBccg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtYkI3YzBsRGJIemlGQ2Vrbjl0V2Rua0x3MXJyR1VRQzc="
+    ]
+  },
+  "gitleaks_cisco_meraki_api_key": {
+    "positives": [
+      "NjDDv8OFScOAwrNqZm1lcmFraTgMDSc9PidhOTZhOTZmZWE0NDQwMzkzZjIwODc4MTNhOTcyZmFmOGNmZTBiMzA2"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtM0owNjRRZ2xXYlJMUnhZeFp3NUsxMmJ5OU5LVFN1OGI="
+    ]
+  },
+  "gitleaks_clickhouse_cloud_api_secret_key": {
+    "positives": [
+      "NGIxZGpPcHIyZ3ZrQXJ6VDgwSVQ1S0MzaFVYMVVhNXRxd2VTMHI2NVVt"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUteUx1YWQxd2xPeEs3UjFMYlhzQUxJcWZXTEpzVnNjZms="
+    ]
+  },
+  "gitleaks_clojars_api_token": {
+    "positives": [
+      "Q0xPSkFSU19hbnhvZzE3MWpvbXRzcTQwcms5Zjhvc2l5ZGpuc3R0cThsdG9ubjF4bXc5dGxxaDIxaHU3M3ZzOHQ5ZjI="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtZk1xbWZ4cXh1bWdlZ1pHcDBpQ05JeFMzNHNURVhjalU="
+    ]
+  },
+  "gitleaks_cloudflare_api_key": {
+    "positives": [
+      "w5suY2xvdWRmbGFyZcOeM1l1w6w/PQo2cXJfNjEtbC1mY3MxY3U4bGlvcC04ODRnN2R6eDF0M251eF94ZmxoXG4="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtYlV3Tks0WjhaSmRUcjFCMnVGRzJla0xJUm5ZSUppRmE="
+    ]
+  },
+  "gitleaks_cloudflare_global_api_key": {
+    "positives": [
+      "R2Nsb3VkZmxhcmXDqgonJz0KYTZlOTQ0YmRhZGE0MDA1N2Q4ZjY0NThlYmUwMDQwZGU2N2FhZiI="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtMnh6V1U5T2w1Mkp0Qloyd1NrWTJSWXNKdkt6ejhBdkI="
+    ]
+  },
+  "gitleaks_cloudflare_origin_ca_key": {
+    "positives": [
+      "djEuMC01M2E4MmJmNjc4MTZjYWNkZmZhMzk1ZGYtYmQxNzEwMDI2ODE2ZTBjMzFlYWJlZmZjNTRkZTExZDlmNDlkMzg0MzNhMTA0NTczYWRkMWNlZjYzZGVjMzFhMGU4M2I0NDRkZTIzYzJlNzE2YTZiOGEzN2UwOGIzNWJmODI3YmI3MmMyMmIzZDdhMmQ2NGE4NjJmZmI4MWJkNjYxMjkzZDY2ODQ2MzZhNDhmMzEL"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtMUFEYzhrV1o1NUJaa2FmbkloRVRRekFxeEY2VGpteUQ="
+    ]
+  },
+  "gitleaks_codecov_access_token": {
+    "positives": [
+      "S8OCZG1jb2RlY292RCAJDT5obTJ4d21jbXFqanl6Y2R6M3k4ZG9ldWNwaW53bTVnaQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtYzcwVUpPbVF6ZzlwUzFzek5hd0x0Y2s2dzZVM0VJRlg="
+    ]
+  },
+  "gitleaks_cohere_api_token": {
+    "positives": [
+      "aMOtw6XDmXJjb2hlcmXDmMOVZQk6DQkgCydvR29kVGhTRVdOak1JNjFKdG5lS1BlUG5mU0dPR2hLVXNJUEc3U3NvDQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtRHhIemdvT1dpNkhXRzZBejg0d1RDMXRBbDl3UTg3SlY="
+    ]
+  },
+  "gitleaks_coinbase_access_token": {
+    "positives": [
+      "w4tpw4HDmWpjb2luYmFzZSINJz09djUybzk3cTR2Zm1kd2dsOGhuemZvdmZwdzY3ZHFnXzA4d3BoLWplMGVkZnd2dXpwcGlpaHY2c2k5aV9mbHNzeA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtbkhoYzllM3BBa3JHTW9MNUkyVFYzSE1yT2dmNmtRMTg="
+    ]
+  },
+  "gitleaks_confluent_access_token": {
+    "positives": [
+      "w7ljb25mbHVlbnRIZMO6ZUEgPz1rY3c1djdpZXpzcjdsdGx2DA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtblBQOVdBZXBxVTR3MlV2VlBtTWNWS2F5YUpBUVloQ0Q="
+    ]
+  },
+  "gitleaks_confluent_secret_key": {
+    "positives": [
+      "OUpjb25mbHVlbnQ9ICIzcjAyZWo2Nmk5NjlsZnZ2a2Nlc2JjNXA0ODI0NGswd3BydGFhYXgxd2RxMTdmNGkyZnNoMjJzZTIwazR3OHVv"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtb1l1cUdXNkFQN2o4QjkxeWp3NVNIdGdYR2xKc3I1VEg="
+    ]
+  },
+  "gitleaks_contentful_delivery_api_token": {
+    "positives": [
+      "YcOYY29udGVudGZ1bGozbXoMCgw6DAsLJwwtPTU3cmhtdGs3bG09ZWx4Nms3Ynloc2RnaXZ1bnY9YzB1aGw9NTV4ej1jYA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSzlmdnFnZDJMSkk1MnN0TDViVFhneE9kSUlnajJvejM="
+    ]
+  },
+  "gitleaks_curl_auth_header": {
+    "positives": [
+      "Y3VybCwmY2Redi9aPyAtSAkgICJYLUFwaS1Ub2tlbjpMw7/CqsOTREbDsMOJQCIJ"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtdFRkUWFBbGlFWTVlQVlUTkJ5cnJndEY3SlBLOVlGZ3I="
+    ]
+  },
+  "gitleaks_curl_auth_user": {
+    "positives": [],
+    "negatives": [
+      "bmVnYXRpdmUtVk42cjF4NjU2RTZObXdRSHdWQTI1VmExeW00OE9UeG4="
+    ]
+  },
+  "gitleaks_datadog_access_token": {
+    "positives": [
+      "akxFZGF0YWRvZ8OpVHx8YHo4NDFkc295bm1kMmJoZGw2OTdyZjI1dnplbHpkcThkeWUzZHdmc2IM"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtcDhvTkd6RXVKNHJ0QU5YaFl3OU56YXU5aTJ1N015R2c="
+    ]
+  },
+  "gitleaks_defined_networking_api_token": {
+    "positives": [
+      "aklkbmtlecK5w4c/PSBgZG5rZXktZC1qdXQ0MG1sNXM0cHd6OGdwaXZ6dzBod2gtbzk0MTc2XzVtbDh6d2pub3Y1dnAyazJzNWlnMWU2Zj11N2cwemt2c2M2ZnphZDN3amlob1xu"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtbW00cEpvTWhoRXROTndKc2x5VFR6NmRNR3lFSnp1cXM="
+    ]
+  },
+  "gitleaks_digitalocean_access_token": {
+    "positives": [
+      "ZG9vX3YxX2U1OTJlNTIwYmJlN2JkNmY1YWNkOTdiYjc4NjY1N2MwNjdjNzI0OTQzODY2ZWIxOGIwMTMwZTA1ZmY3NDFkMjlccg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtV0tBQmJtaTFRRjdxb1VKem02WVBBTmlaWVVXTEFDZjU="
+    ]
+  },
+  "gitleaks_digitalocean_pat": {
+    "positives": [
+      "ZG9wX3YxX2I0YzNhZjBkYTFlZjM0YmFhZGE1N2QyODU5NmZkYWMzNGE4OWEwNjg4OWU2MjIxM2ZkMzI5OWFhYWFkZGQ1Zjc="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtcWdLN09jY2M0UURiYWFVRVVKZ3BlUGRSeWZmc21vdm4="
+    ]
+  },
+  "gitleaks_digitalocean_refresh_token": {
+    "positives": [
+      "ZG9yX3YxX2QzYTAxNzUxNzQ1MzAzNTFhOWJhYzVlNzJmNTE0ZjMzNTA2MWVjNDA2YzNkNzVhYTE4YjkzN2FlMzc5ZmIwYmNcbg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtNTdOam9UQTV5b3dqa0JzY2p1UUt2cXhDZ3EwM3RSVFA="
+    ]
+  },
+  "gitleaks_discord_api_token": {
+    "positives": [
+      "ZGlzY29yZMOtJz89PQozMmMwMzVkNjQxY2I2N2Q4YTQ5MDQxOTg2NjgzYWRkN2ZjYTc5MDg1NzkyNzE5YjkyMWE1NDUwYjJiYWJhMzA0"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtamF2elNmVzRLUnFXaVBWdm1nOHAyelFhUk5JRGNMRkQ="
+    ]
+  },
+  "gitleaks_discord_client_id": {
+    "positives": [
+      "w4dkaXNjb3Jkw6lNwrVtbSInPT5gCjY5MTc5MzA1MjYzNjY1NjY5OFxu"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtM2VqVVFUT0s5dTJsb2Rnd2JlTlNsWTlGRE14UG93WU8="
+    ]
+  },
+  "gitleaks_discord_client_secret": {
+    "positives": [
+      "w5DDiGRpc2NvcmRSIgwLPT4Jbno4OXBfNzhidGZjcTZxX3QxYmo0ZXJzPXFub3VsczEJ"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtd3ozdEVsMXFTMzRVUFFGcHBRUUZpT0VvcHJjOEU4ZHg="
+    ]
+  },
+  "gitleaks_doppler_api_token": {
+    "positives": [
+      "ZHAucHQubHV3NWt0NnE5ODR6NzIyZm9iN2l4Zjl6OW1kYnRsaW1ucXNsaGtpNm82NA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVmh2azlvVG9FN2FEV2dOWklCMWhaN3ZFZXhiSlE3TzI="
+    ]
+  },
+  "gitleaks_droneci_access_token": {
+    "positives": [
+      "w5o1VGRyb25lY2lNw5nDrA09PgkMJydjMGxlbGp0ZXhvZWpzbDN5ZTVhdXBkYXZsbDJreHBqbVxu"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVFhLN2JkZVlma2pzRHlGdEU4bGVkc2FMSUNQQlJiT20="
+    ]
+  },
+  "gitleaks_dropbox_api_token": {
+    "positives": [
+      "a2HDpDTDjGRyb3Bib3hkVG49PiInPXZ0eWR5N3VucnUwMG8yYg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtY0VsTHJkeXRWMFNBMWxiRTROTVU4RjJKQTVNZ0hPcVc="
+    ]
+  },
+  "gitleaks_dropbox_long_lived_api_token": {
+    "positives": [
+      "w4lIw7TDicOHZHJvcGJveETDgF8MCSB8fCIKDQs9enlmYnZqcWJiM21BQUFBQUFBQUFBemxrYThmNWpjdXZ6amRhZG80bzRpeD1uPWk9PXBuaTVydngwPWk4MXh5Mg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtT0ROdkoySWVMRVFiSUxWQ0NEUFpHUlZCSjZVVkEzeng="
+    ]
+  },
+  "gitleaks_dropbox_short_lived_api_token": {
+    "positives": [
+      "ZHJvcGJveMONDDoMYD0nC3NsLm5sNmZueGxmcjB6NHE9cXo4aGVmc25vOTdsYjY0NDZkZGM2ejlrNWozc2dsMzktZDN0Zjc4NGszNHlueDF2YXNueDZ4c2dtajdkd3k5YWdvdjQtYWZvczJyMT0wa193PXdlNTRpajZiXzYzandrenhmMXV1ZjJvdWYzLTZvN3Z6ZmRnbXYtYgw="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtcjg5d3Z6MWJoamdNdnZ4RGtQVkVxZnBMQmhodlNTSDg="
+    ]
+  },
+  "gitleaks_duffel_api_token": {
+    "positives": [
+      "ZHVmZmVsX2xpdmVfYWZxczR1YmQxdTYtN2d1a2N4MTNlc2dxMWZ6NXprY3RoZDkwM3lkZ192Zg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtd2tUbzdHWWthT2xkU2tOVHd5WkpTWnVrbGxoNUtFa2E="
+    ]
+  },
+  "gitleaks_dynatrace_api_token": {
+    "positives": [
+      "ZHQwYzAxLjN3NzQwcHdnNDRkNDhxYnRpcGp0MWp4My4wdDN6NGYzMjlocGM1NHF6MjEwaG14aG5wd203c3IxNzZsMjZ5bXRkYXg1dml4MWRob252YnB6ZHYzMXN0aWoy"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtYkd6UWpteUZxV0VvVGdQS29KZkd2V0JSajh2TG5ubFc="
+    ]
+  },
+  "gitleaks_easypost_api_token": {
+    "positives": [
+      "RVpBSzVtamU4a2I4eWo1NHJqZWF2OGlvcHBoeDljaXlva2xvNTIwNGw1b2pnbGN4MG5ydXJ2NTQyNQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtM0h6RmJ2dVh4c1AyUzc3dUdVY2dkakxqVGxLb2Z0Z3E="
+    ]
+  },
+  "gitleaks_easypost_test_api_token": {
+    "positives": [
+      "RVpUS3Awdmk3NzBmdTl0dGE1enk2cmY3NDlydXF4MGEzcGo5bjhheGc5aXU4eG5iMmt5bmk4a2J6cA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVVpmR2xiSjJRaDR1enFpUmRyYlh4OVlldlp3UFZmdkE="
+    ]
+  },
+  "gitleaks_etsy_access_token": {
+    "positives": [
+      "w6zDikVUU1nDgUHDtMOUw78/PTM1aGI1aDJ4dndnOTJoNWM5cHEyajR4NGA="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVnBBVTdjQTAxdjhOcHRvYW5zRE5sdGh3Y0JzdE9LWWM="
+    ]
+  },
+  "gitleaks_facebook_access_token": {
+    "positives": [
+      "MjEyNjQ5NjAzNTUwNDA2JWdoNjdwaDA3enZnbmJkZG8tcGRoaTJpdm5jNzEJ"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSFhpa0o0U0ZnalhKZW1JWDVicTZ6THBvZmpvTFVObUk="
+    ]
+  },
+  "gitleaks_facebook_page_access_token": {
+    "positives": [
+      "RUFBQ3Y3ZGVsdTE1d3FqZWN6MzYwdjF0MHZybDMxN2ljcW9idDZ5c25meDdrdGtyaGVubmhwa2ZlNWt4OWUzaDB6bXU2cXg0eGFzcDZ5ZHJ6dm9udWZudmc2MGhlcm9yMnM0NDg5aXNg"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtaWF1VE1UT1lMR2tlTUVhZlg2WnJsc3ZKUHMxOEw3ejc="
+    ]
+  },
+  "gitleaks_facebook_secret": {
+    "positives": [
+      "wrIww4bDhWZhY2Vib29rbMK+CiJ8fD1jZjgyZTc0YzY1Njg4ODViNTgwYjUzN2I1NTE5OTBjMiA="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtU29kWEhZTVdYYWptR3pZZlVtSHdJaUdOYmtUWmZhM24="
+    ]
+  },
+  "gitleaks_fastly_api_token": {
+    "positives": [
+      "SVNPZmFzdGx5cVdfeAt8fD09DD0Ja2NudmVid3doaHllNTR5ZmZ1YTE4YzAtd3ozd3FsYz1cbg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVHhHR1NkNXVIYjh2aGlzTHJ0V3FZdzc2dU81Ujdab0E="
+    ]
+  },
+  "gitleaks_finicity_api_token": {
+    "positives": [
+      "ZmluaWNpdHlqwr7DgS4gDD0+NDJjNDIyZGNjN2IyNGYyZjEzMTY4YmQwZGY1MDg4YTAL"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtd21NbkQwbE5IOTFzZWZ1aXdhSDRVMlZRcGE0OHRLUzQ="
+    ]
+  },
+  "gitleaks_finicity_client_secret": {
+    "positives": [
+      "w47Dj2ZpbmljaXR5MsO7wrMnDTonIiBwdGtkMThwNjFmN2Q2ZG0weW5ycQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtd1Y4bEV4eVB5Q1J6Ujc5UlhIVWZHVXhNMVY1MTkxbGY="
+    ]
+  },
+  "gitleaks_finnhub_access_token": {
+    "positives": [
+      "csOcZFbDiGZpbm5odWJ2DCAgPSdgCSA9dHF0YmxycTg3aGo1dTBpMmxrZHYn"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtT2l0cU9XZjdDTzlDdWJ0UUpvUnRSNzlkWjVqaVpYclk="
+    ]
+  },
+  "gitleaks_flickr_access_token": {
+    "positives": [
+      "Qk5mbGlja3LCulYJCT89CwsJdW9uZ21rcWdzZWZ5M29jNGphdDNrcGl2dHU0MTgwOG8="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtY3hRamM5VDVld3NMd0c2b1NEbUNXY2d0UEVCRlBQaHI="
+    ]
+  },
+  "gitleaks_flutterwave_encryption_key": {
+    "positives": [
+      "RkxXU0VDS19URVNULThoMjkzYzY2ZGRiNA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtUk02M1JhVFpGdGcyaTF2TUg1bDYzcEZCdVBqZ1FVcEY="
+    ]
+  },
+  "gitleaks_flutterwave_public_key": {
+    "positives": [
+      "RkxXUFVCS19URVNULWY3NGExaDIzNjc0aGQ1aGQyZDdiaDBkOTk3MDdmYmFoLVg="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtQkhXWllWWTZtZzlRWVJlbklHekUzbHE4cWZhdHFCQVc="
+    ]
+  },
+  "gitleaks_flutterwave_secret_key": {
+    "positives": [
+      "RkxXU0VDS19URVNULWE3YTBjNzc5MmYzMjU5MGcyYzJiMDM2NTE4YmZiMmhmLVg="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtd2dNeVV4RU5qVHdpRFNQSzgyY0JwN2VQSVpmTUdvbE8="
+    ]
+  },
+  "gitleaks_flyio_access_token": {
+    "positives": [
+      "Zm0xcl9FRXBZeU9PZllBaU9OQ1JBOUpDU2V0MWt1cTJWODdvYktnd2pucHduK1BBY1RlUFJSZ2NhRWh5bkl1TWVROWVqYm8zWnlXTHBmRENwZU9taGJHR05XL0pTUWV6OENVRHBsdk4yQT09"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtWm1tVHZSZVBReDhGZW9Jc1RaQzFWMFZoajVMVFd2UFE="
+    ]
+  },
+  "gitleaks_frameio_api_token": {
+    "positives": [
+      "ZmlvLXUtM2MzdGJscmhtOTQ0czFqeWxzaXIteTItd3AxNDVpcHUxcF82eGI5MnhtdHA0ZjU5NnQ5ZWFxb2ZyZXF1NjJzeQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtOEJEYmdKVkhMOVNUdkdaZ0w1RkF1V2hBWWwwa0Q5Q0w="
+    ]
+  },
+  "gitleaks_freemius_secret_key": {
+    "positives": [],
+    "negatives": [
+      "bmVnYXRpdmUtQnY5b1preHBySEVkYXZJM29NMUdGempzb3ZaOGZlaEI="
+    ]
+  },
+  "gitleaks_freshbooks_access_token": {
+    "positives": [
+      "RzhIw5FmcmVzaGJvb2tzw49Cwr1MCnx8aWdya3dxZnRqdDc4OWZsa3BrMGZyNjF2NzNrbHhpd2gzNXN4M3BuNmRueDZzOXRicHRqM2N4bndxMjBxenF6byc="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtWGxhSG0yMlc0TEdOcnBaeFJJSG9KUllmVUl0NHNjQmk="
+    ]
+  },
+  "gitleaks_gcp_api_key": {
+    "positives": [
+      "QUl6YcKzw5ZfWMOITW1tMWvDv2TDkMO7w5LDqEV3asOlw7nDr8O2w7LDucOlw7hUw4h2N8OyWGllXG4="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtTWlxZGJZWjVPbldoTXpaalBpS0hQUDJmRU9QNzIySEk="
+    ]
+  },
+  "gitleaks_generic_api_key": {
+    "positives": [
+      "w7nDjcOSwrlsYWNjZXNzw6ZiclHDpwkiID4nICINCzc1YmlreGw4MDd6cmg2cHFlPT09"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtbXV2Q1dRdGhFdWQ4NjJpWUtnZ2t6bldXOGUyMzlFZzk="
+    ]
+  },
+  "gitleaks_github_app_token": {
+    "positives": [
+      "Z2hzX3BOSVBOZUpmSHRROTBRdGV6Y1pXVFRrT2FEOENIR3FpdlJjeA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtT3VJQVZpdW54eGI2azQwRWVxS0V1eXVNOFVZYkMzWVc="
+    ]
+  },
+  "gitleaks_github_fine_grained_pat": {
+    "positives": [
+      "Z2l0aHViX3BhdF9UMUR0VzBtwr7Dv8OWQlfDqcK6w4Vhw77DqGtzbsOPw6PDvcO9w7Byw7PDlMOQw5nDuG45YTbDkFlCUl/DlUrDpcOew7JydkjDrk5Zw6jDusOIw6LCvDXCusOPakzDi8OTR1jDj0PDv8OVYnBxw7LDtcOjw6HDtWY4YsOt"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtODNSS2JRcVIzTFgyQmlSRHhVbmVnMVJieVNjN0JyQ04="
+    ]
+  },
+  "gitleaks_github_oauth": {
+    "positives": [
+      "Z2hvX21Gb28xakhUQnl6U3N6Z0c5WTlFNmlyZHRsN1lESGR5a2ladA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtUlVNVTBxWFpTNWtpUjVrZ1F5WU1vSEo3bHlSMmhLZFY="
+    ]
+  },
+  "gitleaks_github_pat": {
+    "positives": [
+      "Z2hwX1ROMmQ3bExoN2ppbk5FN3hoTFdFeTlOTTV2YmRCOEZhejh2SA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtZUYwSER6YmxoVmxnSlFHamJVelUwZEpFUE1GSERUYko="
+    ]
+  },
+  "gitleaks_github_refresh_token": {
+    "positives": [
+      "Z2hyX0VzVFFrUzBpUWVReE81TklESUpBMGFwSlBIVzBJdUZWYU9Teg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtZDNJcVlXRGNYclRUS2x3MG1Pd0FQcmFMRlN1RUlQNzE="
+    ]
+  },
+  "gitleaks_gitlab_cicd_job_token": {
+    "positives": [
+      "Z2xjYnQtWFZfOG50RU9uMjFFVGwzM205NXRSNTc="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtWVllVDVrVUJaOUhOVWNNbm9SOWdxTzBzaWtHVXhMc0E="
+    ]
+  },
+  "gitleaks_gitlab_deploy_token": {
+    "positives": [
+      "Z2xkdC1fTXZlR2xrcWI2ZFJFMHJrSWtaQg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtRGZkWkd1aXdKandZaXB1WWY1TGludFBhSU9EaUc2aHg="
+    ]
+  },
+  "gitleaks_gitlab_feature_flag_client_token": {
+    "positives": [
+      "Z2xmZmN0LXoxWGZSamhkZXU3b2JpaHg4N1hs"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtQlcyaHRTUHNJSUZibWFUc3d4SUNPcjQzeVVLblJKQ1U="
+    ]
+  },
+  "gitleaks_gitlab_feed_token": {
+    "positives": [
+      "Z2xmdC00eXZUSi1sem9UODdha21DeFhuaQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtUDJ2d3pwWDVqTndiZmZEZlVHdE54dzM1dVRtZzV4aWo="
+    ]
+  },
+  "gitleaks_gitlab_incoming_mail_token": {
+    "positives": [
+      "Z2xpbXQtZjFkYkFOclVtNW1lcXJiUm5GeEUyVnl0Ug=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtTzFxOFN5djNqVmpnVDFlWE5IOWQ3eHJ4SWxVRUNtNXc="
+    ]
+  },
+  "gitleaks_gitlab_kubernetes_agent_token": {
+    "positives": [
+      "Z2xhZ2VudC1fcWx2bnFOUVBncHB0eEhrcXI2R1hVQUJlWWFHYXF5S05GblMwbHdlMWN1LUJFWHVXbQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtRDVIR01nVEhybHp6ejhzOGk0bXhNOHRQUGx5VmlLUEY="
+    ]
+  },
+  "gitleaks_gitlab_oauth_app_secret": {
+    "positives": [
+      "Z2xvYXMta3NMNjFQNjRodGVNbkVGbDVOSGtpZjljVUM4Sk5UWmpwTzVRT1l4bU5tYVptdXAtQWw0ZWx2STZnOXUtMmJXUQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtb3hnTGhhYUZwSzB2OWZRT2ZsNG56TFl5MlRsU2JkRm8="
+    ]
+  },
+  "gitleaks_gitlab_pat_routable": {
+    "positives": [
+      "Z2xwYXQtVk5xdDRCZHNoaTFTSjJ2Mm9GOTFFV2g0blVZUC5hdWE1anA3YzU="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtOUl2bWdpM2VZTTF1RjNrdE5jVHRYbXpKUlROc0xESmI="
+    ]
+  },
+  "gitleaks_gitlab_ptt": {
+    "positives": [
+      "Z2xwdHQtOThlOTExMTM4NTZiNWI1MjZjMDk3ZWE3Mzc5NTgzMmI3MGIwMDJjYw=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtdUFKQTFISmtOSWJneXoyakpOcmJSODRJMTFDY3h1S2I="
+    ]
+  },
+  "gitleaks_gitlab_rrt": {
+    "positives": [
+      "R1IxMzQ4OTQxw6s5w49jdnJUw4JoSnBxw4BIasOJw6zDh8OLw7E="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtb3ZRbGtRcGg5VDFCejRwdjFvNXFrV29xclVoUkFoTEo="
+    ]
+  },
+  "gitleaks_gitlab_runner_authentication_token": {
+    "positives": [
+      "Z2xydC03VGt6YXVjWFFhNUt6RnhydXViUw=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtajFaelhCN0haQlBlQnMxVktMUk9wZENhZmtUeW9aU3I="
+    ]
+  },
+  "gitleaks_gitlab_runner_authentication_token_routable": {
+    "positives": [
+      "Z2xydC10NV9NSjladXVyV1otdnh5STlUUk1FTmdzQmNUd2gzdlRFSi56MXRva212ajg="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUteGVwOW0wNklxdmd6VXBMWFFPTG85RnU1R0lsNVpiVjM="
+    ]
+  },
+  "gitleaks_gitlab_scim_token": {
+    "positives": [
+      "Z2xzb2F0LW9NVDJhVV9EMlVsV3hVbXY0SGts"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVHJTanhXdnhRcjdjT1A0MUhPbzhuVjZzY0pId21Kd3U="
+    ]
+  },
+  "gitleaks_gitlab_session_cookie": {
+    "positives": [
+      "X2dpdGxhYl9zZXNzaW9uPTRsNWNmcTl0bHEzY2lnMnpxN204NzRweHNkenY3Z3Vr"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtTTJ0NkJXWFRycG5uRmtLdE0wNlBOWnd3ZmVtSjVhdGY="
+    ]
+  },
+  "gitleaks_gitter_access_token": {
+    "positives": [
+      "w5rDlWdpdHRlcsO5YsOxOMOGJwknfHw9cXpzNzgxMmJuOHpweWIwdTE4YWdydG05X2ZkZGx0ZzVlaTJseG05YVxy"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVlV2RGs2eElaeU40Y2RkQ1BXZTRNOEZ0eGtxeGV6Qk4="
+    ]
+  },
+  "gitleaks_gocardless_api_token": {
+    "positives": [
+      "ScOGZ29jYXJkbGVzczbDhMK5Pz0LImxpdmVfdTVtNl9qLTQ3eHoyaXRnd2VmPV8yXzZuMTZoYjFtMGl6em03aHBoaA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVXA0TmZSSjY4Y3VoTFdBTWVxb2lyN1Q1MkM4VUFtb0s="
+    ]
+  },
+  "gitleaks_grafana_api_key": {
+    "positives": [
+      "ZXlKcklqb2lXYnpnV0diSEowcFZpV01ZRXN4dTZPUVpDTzhRbmJVQjFVQnNEQXVkb2hMcUd2YWhxc1VJdThyM3cyWkZVZlJxR0tTaHpHCQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtalExeEhCY1M0cUNJUE12MXhuRW9FNHI2T281M3VIY1c="
+    ]
+  },
+  "gitleaks_grafana_cloud_api_token": {
+    "positives": [
+      "Z2xjX1FQdUZLMUdZTXlZNlFJZTZMK1hDdU12NWVLK1V0U3NEPT09"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtTFRNTkk5NGVLaXgxNzZmZkxTS1lDcUw5WWxIY2U4UUY="
+    ]
+  },
+  "gitleaks_grafana_service_account_token": {
+    "positives": [
+      "Z2xzYV9JSUpRTWRwdjdZeEU5WVdTU0IxNFdrRElPTEJCUFdwbF9mQkUyMUZhMiA="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtWDlDSU1McHR4bU5tOHJ3ODRpNzdQaU5DaWhOd2xtQlo="
+    ]
+  },
+  "gitleaks_harness_api_key": {
+    "positives": [
+      "c2F0LmhLdk5GU0tFZXJoakRMalQ0ZC1BSDUuR3N6TGJRZm80NDZ5YUdFSHVWSUNvdGJLLnI0dEtsMUpsbFB3bG1UVEpqVmRG"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtMW5hWVdsVUgxV0xPRmRvdU1RbDdKNlFBNlRoQ254RFk="
+    ]
+  },
+  "gitleaks_hashicorp_tf_api_token": {
+    "positives": [
+      "dXV4enE5OTdiZ3YxNmMuYXRsYXN2MS4xY25ta3NzMWI0cGd4Z21fcDkwODNva3ZzZXdzLW82bjhtZjZ4ZTRqY2wtenc5NTA9YWp1cjhzY2VvMTktdnY="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSDBIdmVRTGpNcVdVcFVCSVBoVzNvS283Nzc4dVBQaVQ="
+    ]
+  },
+  "gitleaks_hashicorp_tf_password": {
+    "positives": [
+      "YXBhc3N3b3JkJwsnOj0gDAsNIjFncTYycmZvOHFoIlxy"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtaEZ2azEzaHVORGJLR3J4c3kyNE1MaUpGaU5tN0xHWXI="
+    ]
+  },
+  "gitleaks_heroku_api_key": {
+    "positives": [
+      "aGVyb2t1DQ0JfHwnPTA0ZjQ0ZDc0LTU3NTQtZjExMi0wZWU3LWZiMjE3MDhiODZlOFxu"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtV3RxU2lkYnc2eHdaUDZRZHN4WkdrT2g2SnZ0V0JTanE="
+    ]
+  },
+  "gitleaks_heroku_api_key_v2": {
+    "positives": [
+      "SFJLVS1BQVVGdk9VMGh3aTlXcHBDRXNxaEt0RFAteWl0QXgxVW1TUmdhZ2VEYUpYNkxtbzNCLW5JZ3lZLTlnRFQ="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVG5aVGNaaWZhMjRCMUZTY0RpNlBJYzZwdldOZW80ekM="
+    ]
+  },
+  "gitleaks_hubspot_api_key": {
+    "positives": [
+      "MC1odWJzcG90YsOZw6YnDSc6Ojo9ID1EQ0Y4QTdBNi0zRDdCLUE0NjktRDlBMi05RUI4RENEOUQ2OTkg"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtRjNJRUpzSE1EZkh4YW9YeVExamxtenZuYnRMQnRYWjg="
+    ]
+  },
+  "gitleaks_huggingface_organization_api_token": {
+    "positives": [
+      "YXBpX29yZ19hb3ltd3d6cGF5eGRhdWJkaWVzcWpoYWVnd2ZubHlsdWdpCw=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtWHdrYzNzOE1lVEE4VnBxVmdxSk5yT0taY3pYRFRvR0E="
+    ]
+  },
+  "gitleaks_infracost_api_token": {
+    "positives": [
+      "aWNvLXdMUXVJSWpQWk13Uk9uYzdnYUFyMDdIVzRxNXhQVHRLIA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtYzZ3M0NTS1lNeEU4UGFlb2ZlVzFBNlhXTzdZZ1V3dUs="
+    ]
+  },
+  "gitleaks_intercom_api_key": {
+    "positives": [
+      "aW50ZXJjb23Dg8OFw6osDQwiCw1vZWw2ZTRzM3VfNnlmd2VhX282OF9meWV2YmpuaDRzbz1wazZydWxxMzQ5eWN1ZjY5MHk4MHZxYjV3ZjNccg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUteXVNR29Wa0ZQcFBTc04xSDJEbGJMNVhKTDJsclU0c3U="
+    ]
+  },
+  "gitleaks_intra42_client_secret": {
+    "positives": [
+      "cy1zNHQyYWYtNjVlM2NjYTgzMjM3NGU0NjU0NjBlYzNkNjAyMzY4MTgyZmY2MGU0MWNhM2E3Mjk0MjlkNjM0NGFmOGI0NTEwOAk="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtcU9WdldtcUwzeFl0bWY5dE5MWDVNdEVSUkZrYnlTd2k="
+    ]
+  },
+  "gitleaks_jfrog_api_key": {
+    "positives": [
+      "NlbDkMOlc2JpbnRyYXlXCQk+IiAJCiByMzFjYmNlMWgwM2FuYzFnZXVwOG50YzI3cGsza25lbGk4NzQwZnh5dWh5eW5zbzh0cmh0cmg0Yjltam1mOXZ1dDduNmEzbDI3XHI="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtN2ZZek9pOGJ0OFAyZmZnVjdCWFFPSWtCbElQMTUzTjE="
+    ]
+  },
+  "gitleaks_jfrog_identity_token": {
+    "positives": [
+      "w7nDmcOvw73Dj3hyYXkKPT4JCj1tYjBwcjR2djF5ZWlkMW1tZndhMjVmNWdyYTl5emYxMzV5N3Rpazh4Mm9iaG50cmtzcjhvY2p1ZWMyc3Btb3liXG4="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtMkJIRUszNmRIbDVSNUx4VWxBY2RDU0MzZGJJQkFnVUo="
+    ]
+  },
+  "gitleaks_jwt": {
+    "positives": [
+      "ZXlaSUt4RkFXSnNYZWdNR242bmJSLmV5Umg1MUprWmhodzlUZ1llYWx6Lgo="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSUlWdlRqS0dxODJ5UHV0a1lvYzZtOXhHVlZVMUk3RlA="
+    ]
+  },
+  "gitleaks_jwt_base64": {
+    "positives": [
+      "WlhsS2QwMXRUV2xQY1Y0aWpHQzJfdE93cnhuTkM1CmU4LzRIVklWSGNUbERUN0FQM1J6eW09PQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtWVdFMTkwSVRVZzluaGdGdVJVWWFuV2JONU1EQmhXQTM="
+    ]
+  },
+  "gitleaks_kraken_access_token": {
+    "positives": [
+      "w53CtVVqwr1rcmFrZW7DscOWVAkMC3x8CQoLYGJxcml6eC1faDArMzUwNnV5OHg5anlraHhwNm92bndkcGNpMC92ZW0tMGllMzgyZzUwMTh0NnoweWhvZ3R2a2hhLXFfY3otMmV1aDlpa2ZxIA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtQkhESDRDSjVQUUE3MmdnTEVkVmhSUENOTExwT2lSRks="
+    ]
+  },
+  "gitleaks_kubernetes_secret_yaml": {
+    "positives": [
+      "a2luZDoJCSAJICAJICAJCQkgCSAJCQlzZWNyZXQiTEBkYXRhOmJGCQkKIAkMIAsMDcOxw5s1VMOEecOmw6HDilRfw4NsUjogCQkJIAkJICAiIg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtaUQ1ZTVObFp4WDNuMWR0aW9yMzF6UUU5YUQyTmFxU3g="
+    ]
+  },
+  "gitleaks_kucoin_access_token": {
+    "positives": [
+      "UcO1w6prdWNvaW41CT0+DAkiNTNlNjE1YWQ3OGZlMDM5N2NmYmZkMTY2"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVGlDalhjYVN2cklseHlKekhzSlE3Rm9YWm5DeVltRnE="
+    ]
+  },
+  "gitleaks_kucoin_secret_key": {
+    "positives": [
+      "M8OsWsKyw5hrdWNvaW7DmcOwUMOZOjo9ZGU5NGRlYTYtNjM1NS0xYzMxLTUyMDctNDVjYjg2NTEwMDA2Ig=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSkZndjNVVE5BS3pyNFRVWkZ2eG5uc1h3aFJuWDBXZkY="
+    ]
+  },
+  "gitleaks_launchdarkly_access_token": {
+    "positives": [
+      "wrrDmsK1w6XDrmxhdW5jaGRhcmtsecONw5kiJwo9PgsKcTBkcDB3Z3RwMzIxLWF1bmgydDV2dnlnNWJmXzh6PXN2bz1lcDlvbQo="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtMzZacDlPM2M5aEpqejVHNG84OVJTQjc5N1JTb2hUdEE="
+    ]
+  },
+  "gitleaks_linear_api_key": {
+    "positives": [
+      "bGluX2FwaV9rdHFwaXZ0cHhrNWJtZXl6emVudDdpYmdibXlkaXY3Mnd1OXVkMGFz"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtb3QzQjRxNU1KaGkzMWtEck9aYlFGT080a1l3V3VPbGg="
+    ]
+  },
+  "gitleaks_linear_client_secret": {
+    "positives": [
+      "w6tLQ2xpbmVhcjlpUCI9CyINDTUyNTY3ZDY4MjRjMTY3MTllNGFiMjEwMGNjMTY0MWY0XG4="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtbTNoczV6UnE4WTBXczJQVkxHS0UyNmNwS2p2czhyS3I="
+    ]
+  },
+  "gitleaks_linkedin_client_id": {
+    "positives": [
+      "bGlua2VkaW51w7zDjcK5QQ0+CWAgbnA3ajZzMTIyZHh2NGIL"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtY05QOGhnMHpyTW9mYXljaWlvUlhwZTBnR3pBbDE0blI="
+    ]
+  },
+  "gitleaks_linkedin_client_secret": {
+    "positives": [
+      "w4hmNWxpbmtlZGluTQwMCXx8JwsKY21qM2ZueHJtdTFsOGszagk="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtb3ZINjRoc20yUFdNN2JFeXAzcmJTR2JPZTZGbFVpN3Q="
+    ]
+  },
+  "gitleaks_lob_api_key": {
+    "positives": [
+      "ecK1N2xvYgk6ICInbGl2ZV80OWI5MmE4ZTQzNTQxYjNhMTkwNzlkMGQwYWQ4YTJiMTNlYlxy"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtM09qdDlWOE9RWGNueGpRUDZpUmlkZW5sU1dMWWEzTU4="
+    ]
+  },
+  "gitleaks_lob_pub_api_key": {
+    "positives": [
+      "MsKzw4tsb2LDq21sOjo9JyJ0ZXN0X3B1Yl84YmI0Mzg1NjUyNTI2ZTY3ZTA3NzliNTZiYThjNzFi"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtb2VpOVoxQ2ZUT2V4WjJjQU9MV0lOTXM5RGhPd3o0cFQ="
+    ]
+  },
+  "gitleaks_looker_client_id": {
+    "positives": [
+      "VcK9w59sb29rZXLDu8OHWDoJYCIJbmRtYTNjbjIwcG1uZnNyOWNmb3c="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtUUNCQnREWjhRWmM2b0Y3T2VIdGtBTWNJdHp0R04ycmQ="
+    ]
+  },
+  "gitleaks_looker_client_secret": {
+    "positives": [
+      "R8ObeWxvb2tlciDDv2UNCj89DSA9YDlzdGg2a2Y1Y2RkNzNxZDdicnB3MWplalxu"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtcjg2S0pDdWpza24wRjYyd213VkhZTTRTUGwyZGJvT24="
+    ]
+  },
+  "gitleaks_mailchimp_api_key": {
+    "positives": [
+      "eG1haWxjaGltcFLDqMOhPQ01NDViOTcwMWVkOWM3M2I5YmI0ZGFkMmZkNzAwNThjYS11czA2Cw=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtYzFGTklrbHB2NVNxdDBuVDNyaXJ1dzNQeUhxZW1kMDM="
+    ]
+  },
+  "gitleaks_mailgun_private_api_token": {
+    "positives": [
+      "bWFpbGd1bj4LCyIiCWtleS1hYWQwMDQxODgzMzI0MzYwYWZkYWEwYTA3NmY3N2MwZVxu"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtUG9PdWlzMVc4OUFYejB6OTk5NXlMWHJ4bk5iUnJzekQ="
+    ]
+  },
+  "gitleaks_mailgun_pub_key": {
+    "positives": [
+      "w6zCvsOYU8OzbWFpbGd1bnXDlGrDlSwJJw0JC3B1YmtleS0yNWExYjc4MDVkODRiNTQ0YThiYTRmZTk1MjhkZTAzMVxu"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtbHVaS1JFNTJzSHU2eFNDQ2dyUVR0MmtmOU5BWTBvbzE="
+    ]
+  },
+  "gitleaks_mailgun_signing_key": {
+    "positives": [
+      "w6tTw5ltYWlsZ3VuOUTDiGRwPWAiCg0JMDRoZTZlN2MzMDEzMDk0NmNmMWhiMGZiNDFnMjBlMDAtMWNiY2FkMTctNzBmMDJkN2cn"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtaVBFUG5TQU5HcXRzaGxZTWJCeFJmQlBmeFRkdWVkZVU="
+    ]
+  },
+  "gitleaks_mapbox_api_token": {
+    "positives": [
+      "w4PDosK5w7VtYXBib3jDo1E0PQw9CSJway4zMHJleDVod2hocTRoenB1dXk0NGFjMHUwbHVyN292amNud2syN3VoYTM3Y21zYTE1M3AwY2duZ3FsbnMuaG9ydWluYzM0Z25ycmJ6bXg1OG1mcjs="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtZ0x5ZWlPVEdURGZWRjdMTGVVaFdoRHhwelNkU3B5SXI="
+    ]
+  },
+  "gitleaks_mattermost_access_token": {
+    "positives": [
+      "w7VUbWF0dGVybW9zdFVkZgogCTo6PQonCidpd25pb21xaDNmN3FveWl6aWVxd21hYnVoMVxy"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtYU9XdXNjODhJSlZvZW9aOUhWMW5mUFhFTXJIZndWSXU="
+    ]
+  },
+  "gitleaks_maxmind_license_key": {
+    "positives": [
+      "aGZwVWtDXzFOa0VLb2h3bWM5Q25HU1NPaFBJM2NlNmNncHRvX21tawk="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtQm96Vk9Nb2EzbDRwQ2l1Q0l1QzVTczhnc2h0RG15dUo="
+    ]
+  },
+  "gitleaks_messagebird_api_token": {
+    "positives": [
+      "aW1lc3NhZ2ViaXJkeHlQMAksDQkKIgtybzZrZnN2MGU4ZjNqYmxyMjczbWU3NXZu"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtYVU5RlY1WTRHM3RpZWRtMzhkZmxMNUh4Sk5IM1hhaTk="
+    ]
+  },
+  "gitleaks_messagebird_client_id": {
+    "positives": [
+      "w7Y0bWVzc2FnZWJpcmQLCyI9PgwKJyA2OTg1MDM4Yy1kZjgzLWVlZDAtOTkwMy1jMDdlODVkNzdiZDJccg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSmhHRTNLMThQYk1yU0pCcGNqQmpqcldXSmJxTDY4aUY="
+    ]
+  },
+  "gitleaks_microsoft_teams_webhook": {
+    "positives": [
+      "aHR0cHM6Ly9pYzdpbnFvejlhbnQ4b3JyLndlYmhvb2sub2ZmaWNlLmNvbS93ZWJob29rYjIvaGtpdmU4ZHYtbDlmYS1rcXVxLTk1M20tcDdxbGJiNTI3ZjRvQHl3eXNsYmxzLXFjZzAtdzMyMC1yaWlrLXlmdmM2Mm1tem5qci9JbmNvbWluZ1dlYmhvb2svMnpvY2Z1Znc0YTE5aGlrenc5cGttdGk5ZWR5c2ticWovbGR2aDh6NWYtM3FhNC1rOHRvLXV1Zm8tZjljMncydDZvdHNm"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtZHFYTkZQZnZ2MTBybXBjM0pDZTIxcG1COWRxQWZKaFQ="
+    ]
+  },
+  "gitleaks_netlify_access_token": {
+    "positives": [
+      "RW5ldGxpZnksIgsLDV92eWZsYmxxb2hfcDI4YnhmMXphdzdnaWFodnQ9dmQ1bm9qNS12bjB0OXpmbw=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtell3czFhTHUzZkYzNDhCb0dWR2g5NFE0UWw0UjhYYWs="
+    ]
+  },
+  "gitleaks_new_relic_browser_api_token": {
+    "positives": [
+      "w4puZXctcmVsaWNJRyI6Oj0LTlJKUy1lMDI1NjE1Y2IzOGI0ODkwZDRlXG4="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtMlpwbWpUZTI5c2N0UXRzUU1rZVFKUDJDSWVFMUdKbTI="
+    ]
+  },
+  "gitleaks_new_relic_insert_key": {
+    "positives": [
+      "w7Jqw5ZBeW5ld19yZWxpY8Omw5Nzw69pDA09CU5SSUktYjllYzNmbG4zZTl3d3ZvdWpkendrYXZqYzNyY3gzM2I="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtWXFLY3pCVHBna05EV2NSY09ycDJpT1FJZDA2bkhqdDc="
+    ]
+  },
+  "gitleaks_new_relic_user_api_id": {
+    "positives": [
+      "w63DhsOnw6xuZXctcmVsaWPCvWlOwrMKPT4LJwoJIjdqaThjaDJlbm1waTlseHRjejU0djBjZ3d1b2s2YzNka3IwMjlsdnB1MW5rMHg0eTBwb25rYmt0bWF1OTN5eG4L"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVkJYWUt3Y01DVksyNTVSSmJDMVF2c3p3UVhGR0txUXc="
+    ]
+  },
+  "gitleaks_new_relic_user_api_key": {
+    "positives": [
+      "LcOPbmV3LXJlbGljRcOIw7Mxw5wLDD89DQw9DU5SQUstNjYyMjZxeDVranBtanJrbW1kajk2dGVwZWk1XG4="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtZVRjckZVaWtKNm5WSlRsVlVBdzF3NjVFS3VVaWl6dEc="
+    ]
+  },
+  "gitleaks_notion_api_token": {
+    "positives": [
+      "bnRuXzYzMTQ5MzEwOTI5S2RIR3RFeXJZNFRVdnNVZzh3V2tXWmZ1MUlic1ZFNXh5THhcbg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtRDZUelUxUk83YTcwd1p4eUpBamNoQlpQMngyVThTalU="
+    ]
+  },
+  "gitleaks_npm_access_token": {
+    "positives": [
+      "bnBtX2t4dXY3a21seTJhd3lzcTJwaXlqajdiZzI4ZnpqZ2w3YXlvZ1xy"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtejlJaHRINTE2SVZWM25FUm5GdHFLbzN4Um1TVVVCSlg="
+    ]
+  },
+  "gitleaks_nuget_config_password": {
+    "positives": [
+      "PGFkZCBrZXk9IlBhc3N3b3JkIg0NCwx2YWx1ZT0iaHJvSzJ6MHAiLz4="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVW5vSU4zTnZjQm90bzUycmMwRkNURmdmSUdXUGJPTDk="
+    ]
+  },
+  "gitleaks_nytimes_access_token": {
+    "positives": [
+      "wrJtbnl0aW1lczYgIj4iCWB5OXF4ZXN5enNpMHlsb3FjMHk3Nm9qcTE9YWprZT09MA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtQnZubk8xVDVVdlFKREhhdkVJRkxsdDI1WVFIcnBCUms="
+    ]
+  },
+  "gitleaks_octopus_deploy_api_key": {
+    "positives": [
+      "QVBJLUxTOVg3SE5PNjM5UUJQREQ2UlgwNFVVSkExJw=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtRWR2c3FJU2l5NlF5YUcyTTRvT0I5b0dickZnWEE4SE8="
+    ]
+  },
+  "gitleaks_okta_access_token": {
+    "positives": [
+      "dMODw6JPa3RhZ2laNMK1PT4gPT0MDDAwNcOFw5zDmjZFw4zDtMOeWW1Ed8O+MTNhOC1owrNtacOiSTjDp1LCvcO9ecOYZMO1w6fDrkTDhsK6w5I="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtd0NwTjRqTDF6bTJQM3ZzeHNtQnpjNU9VelpVZ3ppOUU="
+    ]
+  },
+  "gitleaks_openai_api_key": {
+    "positives": [
+      "c2stYWRtaW4teHpSeVExNzVWSDU5bFhycWlnTHNJWHdERkVkTDJuZW14c2N2WWhNSlR6ZUFFcm1PazhBdS1rZHFIYlQzQmxia0ZKQ1pZdDMtLTQyRUdSNk9SZmVrRTc5SGY0V1NhLWlyR2ExU0lmREIyOUQ3LXA2Z3BXcVhfUzltTHhpZXhyOS1tQU9RaVpLR3RLdXc7"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtNVJhRmtCYm9WNXZRR3FEdXM2M29qNlB1SG5SQnZqVzQ="
+    ]
+  },
+  "gitleaks_openshift_user_token": {
+    "positives": [
+      "c2hhMjU2fsOpw4XDjUZow4/Dk0vDpUdEw4FIw5Fpw6tnw7t4N8OLw4FlMnLDqMOlcMOgw69uw6/DjEPDgMOhLcOOOcOuMMOww7w="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtN2NPSnNzbGF5WnhTdlZNUENXdDdIMU0wcXpiNW0wRk0="
+    ]
+  },
+  "gitleaks_perplexity_api_key": {
+    "positives": [
+      "cHBseC1XY0VKdkdBcEdITDNMV0lmUExuUjFwZW1JVlRFMVJqYklrc0JUOTJjNUpxQzlyV1I="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSXpPaHNQdE9GWkJDMlFUeFNEOVdPalk0RVNCaXRNbDc="
+    ]
+  },
+  "gitleaks_plaid_api_token": {
+    "positives": [
+      "eEhTcGxhaWQ6CmFjY2Vzcy1kZXZlbG9wbWVudC03YjM0Y2VkYy0zMWFiLWE5NjMtMGZmNy05Yzc3NmM1ZGYxMTI="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtYVlxZ2JlQzNVeW92WUU5SUxzNGpkV29HbFlWekVQOTI="
+    ]
+  },
+  "gitleaks_plaid_client_id": {
+    "positives": [
+      "OUrCvHBsYWlkw6PDkmbDvXAsIj0MbDI1Y3A0Mnc0YjI5bjI5cG4yNmdlcWNrXG4="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtb3FiSHBLU3dCcmdiajFiYWp2WlVtRncwdUJjNUZLdlU="
+    ]
+  },
+  "gitleaks_plaid_secret_key": {
+    "positives": [
+      "cGxhaWRQTMOJDTonJw09YmRweTlvM25mYmlhZzdqZXlmNWZjcTRwNmJpYWF3"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtcmZ1UDIyR3lpUjRiRnBYajhpYnpoQzNoV3owRkF1ZkI="
+    ]
+  },
+  "gitleaks_planetscale_api_token": {
+    "positives": [
+      "cHNjYWxlX3Rrbl/Dj8O6ZGPDu0JCZMK5SGk9ecOyw7TCvkXCqsOJw5gueMOQw7DDszLDiMORw4rDmsOVTcK9w64uIg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtT0JyeFZBMUJEMDR3aERXNDdJYllhV0I2MGpuZTJ1QXI="
+    ]
+  },
+  "gitleaks_planetscale_oauth_token": {
+    "positives": [
+      "cHNjYWxlX29hdXRoX2jDiXnDvlLDo09Bw7bDgsO0ecO1NEx3w6jDpDjDpcOcw69ONMOkSmfDrkVUZMOKZGjDrsOeYA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtbDJhOUR0QmU1RU5uQXBTcWRvM2I3ZkZsYkZ6UVdjM3A="
+    ]
+  },
+  "gitleaks_planetscale_password": {
+    "positives": [
+      "cHNjYWxlX3B3X8Obw7HCujdaZk7Ds2fDlnIuwrnCvkRhX0nDinlXaVfDh8K8w4zDv8Ovwr5nUmlQwqpg"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtNmlqUWhzMjljN2VQTzduQ0hNeVdZckdxZ0xPdDBXaDc="
+    ]
+  },
+  "gitleaks_postman_api_token": {
+    "positives": [
+      "UE1BSy1kYTY2NjIwMGZhOTU5OTAwYTk5MTgzNzgtMTlkODlhMzgzNzU5YjU4MWM4OWRhYWViMzZmMDU2NTRkMFxy"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtNlRaV2RCNzNFc3cxZ3NQSkhHVFBWdGF5OHhqYW8yb1I="
+    ]
+  },
+  "gitleaks_prefect_api_token": {
+    "positives": [
+      "cG51XzFUb0lmS0IxbTVWWHo4dElmWGlqM2poZDl5dXlhTHExQ01ydlxu"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtRHNFMFBBVU9oSEkzbG0xaVU2RERRVHhkTFFvWWtGelE="
+    ]
+  },
+  "gitleaks_private_key": {
+    "positives": [],
+    "negatives": [
+      "bmVnYXRpdmUteTV2UzhkcGhWTDI5YWtjV1ZHVWV6cVkwWDVpMkpUSWo="
+    ]
+  },
+  "gitleaks_privateai_api_token": {
+    "positives": [
+      "w4Nowr1wcml2YXRlYWkKDD4MazFkYXdhMTRueGhkNWRjZ3VmcmpwYmltZDRpcGxoZDlccg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtZ2FYYTJselBBb3M3TU11S01kVEsycHdzaGx5ZXR1clo="
+    ]
+  },
+  "gitleaks_pulumi_api_token": {
+    "positives": [
+      "cHVsLThjMmRkYTUzMmVmZTU5ODYwY2UwMTljMGIzZTVjYzU0NGRlNmU2MDcN"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtNW1qS09wdkdhNW1yM3lvMnFoQnB6dUVMdVgzdUtjeXY="
+    ]
+  },
+  "gitleaks_pypi_upload_token": {
+    "positives": [
+      "cHlwaS1BZ0VJY0hsd2FTNXZjbWNow6VNTcOFWsO5w7PDnMOqbGPDv2hBRmHCvHnDqMOsw4hCw4J1w6bDvsOTw7DDnUvDvlHDpznDhnnDnFXDk8OKX8K9w5zDmmTDs3N3bWvDrg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtQXQxNVFTbTdnNjBtV0RTNmttS2ZNaHMzZHlXVkxrOHE="
+    ]
+  },
+  "gitleaks_rapidapi_access_token": {
+    "positives": [
+      "cmFwaWRhcGnDswknOgoKIA1iNHVwLXNnamM3OG84bzFfaXJmazVsaHZzOTRpamJxZWk2dnFpZDVmbTRnaTdmd191cVxu"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVkJYSGI0djV5dHVjYmtjSDhuV0hOU2RDVkIyN0tPT2Y="
+    ]
+  },
+  "gitleaks_readme_api_token": {
+    "positives": [
+      "cmRtZV8yaDUzcG11M3FnOWNrcjIwNW1lamV2NGw1NW1nYzN6cXp2azJqbmN5ZmZodjR2bXA4YXRqcnVncGxwYWg2ZWprb3ZvaG5iDA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtNzlyZlhXSlNPM3Nsd29FYWFMZjIwT1dFRkVKWUdaVWQ="
+    ]
+  },
+  "gitleaks_rubygems_api_token": {
+    "positives": [
+      "cnVieWdlbXNfMGU3ZjEwMTE3M2RhNTkzMmIzYTZhNmYwZTMzNDQzZjY1NGFlNzg1YzA3MGNkZDEyXG4="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtUTV0dTZ3T1RRT0NNekgybFFzdWd6Y0k4WEl4bUhpa0o="
+    ]
+  },
+  "gitleaks_scalingo_api_token": {
+    "positives": [
+      "dGstdXMtUcOJw5zDksOqY0nCtcOBw5bDu2ppw7nDgzdPSMO0w6NYQcO0w43DtGtZWMKyw5NKw77DpUg3ckVtw7FBw6nDvMO2dFXDs3rDkQ0="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtN0sxNW1VTnFYNDc4Yk9pVTlaNDhDVE91VWdKd0tQdTE="
+    ]
+  },
+  "gitleaks_sendbird_access_id": {
+    "positives": [
+      "w6fDsmNzZW5kYmlyZG/Dk28JOj1jM2NkOWEyZi1iODMzLWE2OGYtNjc2MC0zODhlMzU0YWYzNDYi"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUta0V1THB4TVFyajFjQW52NmswYldLcEU0UW1HTmRrMWg="
+    ]
+  },
+  "gitleaks_sendbird_access_token": {
+    "positives": [
+      "TnpzYnNlbmRiaXJkTz89MGFhZDEyZmRmODQyY2RkOTIxZmMxZTFhZGRlZmQzODczMzgzNWI1MA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtc0pQbDJoVWVUMkltV2h4WWJCWkJVdWtpdHBrRkNTaW4="
+    ]
+  },
+  "gitleaks_sendgrid_api_token": {
+    "positives": [
+      "U0cuaW5sXzFvbmIuNWUxb3NkdWVjNThkbTFyeXRlX2U4LndmbDUyZGp2OHJxNjF4dGJjZHgudGcuczd4dG81cTBfNi44XG4="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtbGl4SnpBc2djeXdlY3FSN0c5WVhsZlN1S2NjUWtpY3g="
+    ]
+  },
+  "gitleaks_sentry_access_token": {
+    "positives": [
+      "c0Ztc2VudHJ5w4JaCT89C2A4N2M0NTI1YzdkYWY4ZjY1MDE1MzJiYmVkODdmMzhhZGNlODEzMWEzNGJkMjhjM2YxYzJiMmE0ZTdiYzE2ZjhjYA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtbkNXYXh6M3NwSjI0WXBMVnVOakFMZWNnekxYTzNqdFo="
+    ]
+  },
+  "gitleaks_sentry_org_token": {
+    "positives": [
+      "c250cnlzX2V5SnBZWFFpT3RnejhFbkt6YW1BUTFNTkxDSnlaV2RwYjI1ZmRYSnN6RHNVdTRReDlub25za2M9X2xnVVI1a0xqZjVWR0lmZ28xQnVyR2tDS1hzMWZZZGhJUzhYU0lDMENLZ0g="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSG5Md3hJZG5kV3FNSVh1Z05aS0Q3eVpxSVpjYnJhVkY="
+    ]
+  },
+  "gitleaks_sentry_user_token": {
+    "positives": [
+      "c250cnl1X2UzNzJmMzhkY2ExOWUxOTdkOThkYmFhMmExNTNiZTM0ODkzMzIzNjM1MmFiOGIwYTQyZDBhZWZkM2ExMjdkNTI="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtQkk1dGt3d3VkR3oxZGlDbTZvejhYWmN2Y3hxWEp2aDM="
+    ]
+  },
+  "gitleaks_settlemint_application_access_token": {
+    "positives": [
+      "c21fYWF0X3N6NnYwazc3NXhOSnFBUk1cbg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtNlBCc3VQQ25oQ0w3eDBXeWNtR1hPNFJFcFU5b0NGOEo="
+    ]
+  },
+  "gitleaks_settlemint_personal_access_token": {
+    "positives": [
+      "c21fcGF0XzZjcUd1RDBYM3dWUEZ1bXI7"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtOGxJaGt0aXo0VDJCZTdwNm9weUVERVJMaVlGQTZhcnA="
+    ]
+  },
+  "gitleaks_settlemint_service_access_token": {
+    "positives": [
+      "c21fc2F0XzJDVFFValloSFp4bjgyN0E="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtaklZRnU1cFBIRVQ0NmtnNkI1UjEyNWtzSjdWU2RQUUs="
+    ]
+  },
+  "gitleaks_shippo_api_token": {
+    "positives": [
+      "c2hpcHBvX2xpdmVfN2VlQ0VGNEFEOWY2NkNhYzgzMEE0QTI5ZmRGMGVlQjZiNzIxRDdmRA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtdno2M0ZrckJra1JDVENtQVJnVHhVb1NyZ05RS2pMbG0="
+    ]
+  },
+  "gitleaks_shopify_access_token": {
+    "positives": [
+      "c2hwYXRfOUM4ZTAxYzIzMzBkZjBmMDNGOWREQjcyRUY0QTRlNWM="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVWM3NE5jYm9TVFRybURqZTZ2ZU10NktGWnFJRmd4Q28="
+    ]
+  },
+  "gitleaks_shopify_custom_access_token": {
+    "positives": [
+      "c2hwY2FfRENmODgyNDZkZjE5MmU1MjVCMWZlZDE2QzIzMjE4QWM="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtN2MyU2xBNDcyY2E5aWI4bWRQZzBuaGJMb25wc2VEZjU="
+    ]
+  },
+  "gitleaks_shopify_private_app_access_token": {
+    "positives": [
+      "c2hwcGFfRGY3ZTUwM0ExNmVkNThDZDYzZUNhQmFGRjlDMjlFYWE="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtWjBPVVZGd3pQbFJXdTJDWFUyTmxaNzZza3VFVldoREQ="
+    ]
+  },
+  "gitleaks_shopify_shared_secret": {
+    "positives": [
+      "c2hwc3NfQzlGRDYzQjZBOTFhMEZkQ2NCMTRmYTJFYzFBNGVhNmY="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtbDg4Tm1oU3RmWTQ5MVVRaFptMzdXdjdGSFVxd1JBdXY="
+    ]
+  },
+  "gitleaks_sidekiq_secret": {
+    "positives": [
+      "WHfDmHZCVU5ETEVfRU5URVJQUklTRV9fQ09OVFJJQlNZU19fQ09Nw6o3Y8OjJwkLPWEwNjdjMmE1OjM4MTQwMjBmXG4="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtY2haRWQzQUxFRHdkUFBiZzhIc3dVTWtNQ3JOcG9yQ0g="
+    ]
+  },
+  "gitleaks_sidekiq_sensitive_url": {
+    "positives": [
+      "aHR0cHM6Ly8xZTNiZTYyMjpkNDNlZmExYUBnZW1zXWNvbnRyaWJzeXM7Y29t"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVHRyd2ZsR21JWWxpeXZ0Mm94V0txcGhPY0haU3RLQmI="
+    ]
+  },
+  "gitleaks_slack_app_token": {
+    "positives": [
+      "eGFwcC0yLUIzNllCRkVOMUpKM0xCLTE1MDkxOTEyLWEzazZ4dXVwZ2s="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtOVY5OHVtbFExeHNRcWRkbDZaQlRaUVN3c0ZvUmlhM2o="
+    ]
+  },
+  "gitleaks_slack_bot_token": {
+    "positives": [
+      "eG94Yi01NTMwMDQ2NDI2NDc2LTY4ODEzNzAyMDBLYXN1UzRRTzY="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtM1BjV3BleXdrY2luTGdFT2hKTUFOTU11bG9EUlZTMks="
+    ]
+  },
+  "gitleaks_slack_config_access_token": {
+    "positives": [
+      "eG94ZT54b3hiLTUtSExKMjNVN044UEtVT0RFNVJCN1laRjdWMkFZR1ZGWTlVVldNN1ZQMFNYTjlJV1ExSVVCWlBNTFFZVEgySUJLSERKODFJNUFKVlc2NEFSWVQ5UDNVNlVBMDFEUFpLU1pGUFAwTU1XU04wUzFJU0pGMExYSlBHNFpPT1RKTDUySU9JWFlLSE9GM0xGODRCNlRNTURaWlBQVkg1UEZYMVNCTDlEVA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtczF6YjZVRVJHQWpUbW1FSTk0Y1VST0JzRmg2TTNFMWk="
+    ]
+  },
+  "gitleaks_slack_config_refresh_token": {
+    "positives": [
+      "eG94ZS02LTZHVDdBWjYzU0tZRThaNUdDMFlIWVk3Sk1MMkZKS1VDUUwxQjJJWVdOQVNJOEhENE9WMTU1M0ZNTE44RVFIV0RFVThKV01PUkoxTjAyM0c0TTNaTFdCSkNETUxIOUNRQjZPWkI4NDZSUlJLNFNJSUkyUVNaQjRYM1ZKTkxZSjFQNlQxOTJaNFdCTkFKSjFPTTlP"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtbkR6TTVERHU1ZDZHdUtlTWt4R3hLajhjbUlmOTRNTkI="
+    ]
+  },
+  "gitleaks_slack_legacy_bot_token": {
+    "positives": [
+      "eG94Yi0xOTI4NjUyMDc2MzUyLXhhR0JhSzNZVjBoRWFBYmFIRQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVE1aak5pVkk1ZFJBUlJ5aXVsM0RBazNpOERiMzFPcmQ="
+    ]
+  },
+  "gitleaks_slack_legacy_token": {
+    "positives": [
+      "eG94cy03ODQxNzMyMjctMzg1NjEyMy0zMzAyNzYyMjYyNzY5MzE2MjcxMS02RkNkNzYxYg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtQk90ek5TaVI2c1ozUHcxakxGa0R6eWdsWTdQdlY3ejk="
+    ]
+  },
+  "gitleaks_slack_legacy_workspace_token": {
+    "positives": [
+      "eG94YS0zLXBuOGpLbG1OemVMdmY="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVmxQTUJ6NEQ3NUFkMmw0NnZBczdZZ0JTd0VyaFhwNGs="
+    ]
+  },
+  "gitleaks_slack_user_token": {
+    "positives": [
+      "eG94ZS03NzU5Njg0NjkwLTQ4MDU4Nzg0NjExMDAtNzExOTcwOTMxNy1KMGUzdnB4eUhSdzd0MGk1aUYtaGFaOFQ4YWxGTGFL"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSkNKTk9UY05aU0k4T1lGT0o1T1dHeGdoOUVHZlNxMGU="
+    ]
+  },
+  "gitleaks_slack_webhook_url": {
+    "positives": [
+      "aHR0cDovL2hvb2tzeHNsYWNrOmNvbS90cmlnZ2Vycy96Y0hNRDBVZlZpSXQ4YlFBNUhLM3BpWkFuNFBRNlJtUnM4bnNLemREeUVUVndsSzE="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtNGtOaDYycUxzSFpSeXVpd3NZRW5zRXphUVkwS1hHNE0="
+    ]
+  },
+  "gitleaks_snyk_api_token": {
+    "positives": [
+      "w704MHNueWtfdG9rZW7DmMOkIj4KDWANPTRkOTFkMmNhLWQ0YjUtOWFmOC1mM2FkLTk0YWJkMzUyODBkNA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtZ3ZEOWYyQTJ0TU5KSEdJUnJCT1lrdk1qT21xREQ0S1M="
+    ]
+  },
+  "gitleaks_sonar_api_token": {
+    "positives": [
+      "ZcK6w5Rzb25hci1sb2dpbgkiCz0Lc3F1X3Z5Mm1qbTZ3bWx1Yno3MmFjaHNkcDJnYzNfZXR0dzFibjg0eWZfZjdcbg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtcjFUQXBTYjdlMEc2Tnp4RzZDNkFCRHA4dXBqc0hqbWU="
+    ]
+  },
+  "gitleaks_sourcegraph_access_token": {
+    "positives": [
+      "YjY2MTBkMDVDOWNFMGQ5QUVGY0M4ZTJCMTUyMDJjOUMxMzUxZDZDMlxu"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtM09tR2NZY1R0MllLeTBOanZReXR6UThWR2xhZTRLUFI="
+    ]
+  },
+  "gitleaks_square_access_token": {
+    "positives": [
+      "RUFBQcO7VMKqw63Dm2VEw5HDuTNUw7TDoHpxw4TDsMOyw4PDusOkw6PDmsOd"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtaFZmOFdZdmxKeFE4d0VacGZYSVhIdnJTNzV2Rm5nWGU="
+    ]
+  },
+  "gitleaks_squarespace_access_token": {
+    "positives": [
+      "c3F1YXJlc3BhY2VTSMO7SA0KJywKYjEzMmI2M2EtNzExNS0zMTdlLWYyZTMtNTIxYjBlZmY2MWE5XHI="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVWZtMG5sWmF2czJrbVp2MWViMGlKMkp2OUFzeE41eG4="
+    ]
+  },
+  "gitleaks_stripe_access_token": {
+    "positives": [
+      "c2tfdGVzdF90Z0FRMkNGVzh5NA=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtR1BuSVZXMUNxRktnY2dZTWJhUGtVdkduV0h2blZLVmk="
+    ]
+  },
+  "gitleaks_sumologic_access_id": {
+    "positives": [
+      "w4jDm8Ovw6TCusOoU1VNT8ONesOgw4cMOnN1bUNpWTF2eDdWSlJR"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtWE9CVW9yUnBCeDFTUW1IUWdGOVZDN2tPOVpSRlQ2Qmg="
+    ]
+  },
+  "gitleaks_sumologic_access_token": {
+    "positives": [
+      "w49nw7VzdW1vb8O9SSd8fGBjdWhlNWlldTM1eWVjcjl6amZqM3J6ZGlqcDd5cTBiZ29zYW82a2ZocXpwenNucGxleTRjN2xwbnp5bmgxdnU5XHI="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtSTFCbmFOaDlQbEZ1STQ0ckl4Q1g1NjI5ZHpaYVg2MVo="
+    ]
+  },
+  "gitleaks_telegram_bot_api_token": {
+    "positives": [
+      "w441QsOtSHRlbGVncsOkZsOiw6vDsQoJPT4KDQs9ODQzODcxNjpBMDR5LXh4cGpranE3dmx1dWkyZWswcnN6N28xbG1yYi1iYwk="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtQW0yRXBXU3JCVWRXTWZzTHpxZkJkTVZtVVoxN2RoNlE="
+    ]
+  },
+  "gitleaks_travisci_access_token": {
+    "positives": [
+      "LsOadHJhdmlzc0LDhAo9DA0JCwphMDBteXg1ZWV0cnZwN3QwNmE3ZnB4"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtcWdiTFlEQVhZTU92VWxPQXRRc2I3SmhJRlpFNUpoT3Q="
+    ]
+  },
+  "gitleaks_twilio_api_key": {
+    "positives": [
+      "U0syYUM3QmM0MTJCZWZCNWEyZjNkOTYzMWMxYThkYjhFQQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtYUNqYlFkMDdWSGlibGxpbGIzY3JISWZwd1Z5OTluTGo="
+    ]
+  },
+  "gitleaks_twitch_api_token": {
+    "positives": [
+      "w6TDnTRxdHdpdGNoID0NCT0NNm4wY2ltNnRpNjBjNXNpdXA2N2c0ZDNzbnF4ZmF5Ow=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtaFVoaFJKa2pmM00wTFBFblJEa0ZXS0E2bmpRTW5MeFA="
+    ]
+  },
+  "gitleaks_twitter_access_secret": {
+    "positives": [
+      "w5NxdHdpdHRlcmJsZFHDsCc+NDBpMm94eW96Z3pvemFsY3VpZTh3bDRxYzRzMHJrdGl0aGR0dzRnY3Bpcmtr"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtVE00Mjk2SVlCSTVFV1pJWGVCZ29jc3FoZVlhWTFHSDY="
+    ]
+  },
+  "gitleaks_twitter_access_token": {
+    "positives": [
+      "b8O+VHR3aXR0ZXI5LGAyMTgzNzQ4Mzc1ODMyODExNi15aUd3ZUI5V25QQkdBUVdrQTNBMjQ="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtOVo2SXZUWGhEWkgyOU1hUHdEbFBqN0ZDSnBKWVRwclU="
+    ]
+  },
+  "gitleaks_twitter_api_key": {
+    "positives": [
+      "w6bDiELDn3R3aXR0ZXJFWQt8fD0JYCdma251a2k1OGZjdnkyM282eGppOHJ1YWlhCw=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtRW9abFJRbmttaEdveXZMcFlLOXRwVFA2amxiQ3FKd1I="
+    ]
+  },
+  "gitleaks_twitter_api_secret": {
+    "positives": [
+      "YsOOY8K5dHdpdHRlckE6Oj11bm5mcDlzcW1wN3JtOWc5azZxODM4MWlqNXhrNXlqcmdkd2t6ZjZ1bTMxc2UyYXVrNCc="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtRWdyNkcwaUdMcmRBTWZhZ0NIVmVWUlpGR3ZZZUFEenk="
+    ]
+  },
+  "gitleaks_twitter_bearer_token": {
+    "positives": [
+      "dHdpdHRlcj0NCQxBQUFBQUFBQUFBQUFBQUFBQUFBQUFBVHRIQUoxbzdTb0JNYXc1MzdNem1TeVZmN3lSdUplT3BPR25YMVdEOHFaVEZYT0VCbEVlbTVVZVNvOTNZbkgxZjF1RzVuYUVWbzVodENTTXM="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtR1ZXc1I4MVZjS0MxQUFHdHpqdWlNbnVCekdhWnI2NG8="
+    ]
+  },
+  "gitleaks_typeform_api_token": {
+    "positives": [
+      "LsOndHlwZWZvcm3Dm8ORw6onDD0+dGZwX3lxZjRmZzgxdHhwamV3LXpsdS5jd2luei1zb3prb2MycXVwanZxM255LTBjbmttdjYyPXg1c2N0YT16"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtTVp0RG4wcW5PUFNHVEtHU0Z2NUFmcTQ5WG1ueE9CeVo="
+    ]
+  },
+  "gitleaks_vault_batch_token": {
+    "positives": [
+      "aHZiLsOowrMwa8OFN1ZZw4LDlMK6R8OnZMOcRHEww6xrMcO1wrpWccOzw4luw75Ow7XDhmFCwrnDkFrDksOKTMOvTXfDpcKzYTfDo2rDh3NLSsOCX3VWaHFWw5/DtGk3w7tIacODcMONS0vDgTTDtMKyw5zDhMK+Qk9URcKqw5pvw7VFw7DDm8OSS1HDsDXDssOhw43DvcKzw7M0csKywr3DrVdjw65oasO9wrLDvMO6w6LDoWHDh1fCuXTDsXVBw4VLdcOPd3Fsw7LDscO+w4p0w4VoZGTDnsOEDQ=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtb0o0a1BWejUzS2ozcUZtWE1OTk1qNm5hTVdOa3l3b2I="
+    ]
+  },
+  "gitleaks_vault_service_token": {
+    "positives": [
+      "cy40Nm16cGZwYmJubXl4c2lnYm0yOXhueXJcbg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtN3p2RUtUNW5NWkoyandhekh6Q0VlR1R1RUZaSmNLTW4="
+    ]
+  },
+  "gitleaks_yandex_access_token": {
+    "positives": [
+      "MMO1eWFuZGV4akHDjgwsC3QxLjVoN2ZMeWFtUVRKNy5seWNnankzRmJabExxQzdHRmdOSmM0eW5iTTVOT2xxQ3VmYW9OT3FmS1JDbDlaNzJlZDNqbHZkQmRweTNaWHVqWlVESXpmT1VUQWRHMUhPc3FCQXRGZVxy"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtU3J6NGx3WFpVZ1NXcXFybEtrTW5qaXdOcm02QmxzdVQ="
+    ]
+  },
+  "gitleaks_yandex_api_key": {
+    "positives": [
+      "UcODaV95YW5kZXhiS8OUd8O7CiIiPz0NPSBgQVFWTmtTaHFYU1RBWTVhSVh1aVoweElSUUhHbTBqeHNpYklzMmtveUxk"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtb2Yza2taMFRhc0ttTE5IQVhaNVlpMmsxM3FGZ1ZyN2Y="
+    ]
+  },
+  "gitleaks_yandex_aws_access_token": {
+    "positives": [
+      "w4bDiy55YW5kZXjDnCALLFlDdmR2SDQza00wX29yejZzMTMwRmFSM2FQa1V0dVFPVVpGb2Fhc3Rg"
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtaEZyNWJ3VTVRcTQzaU5zaTVhQzZwVmc0Q05naHoyRVc="
+    ]
+  },
+  "gitleaks_zendesk_secret_key": {
+    "positives": [
+      "w7NMUHplbmRlc2vCuQkJPT5gDXU4dXVnemE1OWo5eHN3dHQzMzRyY2FxczRzMXdmYTZlbHZkZ2g3bDU="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtRkE5eWg5bGdLaFVyZmdDV2dBQVp3YVRSd1g4b2cxU2k="
     ]
   }
 }

@@ -5,6 +5,7 @@
 
 ## Summary
 
+- **Natural Language & Contextual Detection**: Greatly improved secret detection in conversational LLM prompts. A new 100-character context window logic and robust fuzzy multi-lingual intent matching (English, Spanish, French, German) detect conversational preambles (e.g., `aquí está mi contraseña`) to dramatically boost detection confidence. Added specific rules for catching prompt leakage ("Ignore all previous instructions").
 - **Performance & Scalability**: Drastically increased scanning throughput using a two-stage `re2.Set` pattern pre-filtering system, reducing overhead on large files and Git histories. Added `mmap` zero-copy memory mapping for parsing gigabyte-scale logs.
 - **SIMD String Searching**: Upgraded the internal search automaton to `ahocorasick-rs` to leverage Rust-based SIMD string searching logic.
 - **Advanced Risk Scoring**: Introduced a 0-100 weighted risk score based on regex weights, context proximity decay, and entropy adjustments. Dynamic risk levels (CRITICAL, HIGH, MEDIUM, LOW) replace static categorizations.

@@ -1,142 +1,138 @@
 {
   "abuseipdb_api": {
     "positives": [
-      "YWJ1c2VpcGRiIgp1MW4xcG03b2d1bTdwY3IzcTBnenpwaHUwaWt2MDc4MGtpZjZnaXhrOGYydGp4bWhnNDhjb3dqczk0dmZiMHR2MDB1dGF1aHY2djcweXBvaQ=="
+      "YWJ1c2VpcGRiLnk1d25teml0amJhejF3ZDJoYWp3cWJhOWY0bTYzbGM1bmMxa29zMm9pMXBiY2Ixamcya2Jqd3lrcnkzcWE0YzRrc25ya3dvd2Y3OGZtYzh2"
     ],
     "negatives": [
-      "bmVnYXRpdmUtTmJIeE10TFVhYjlLdE03QThyd1F5UEltTmswUktiYVQ="
+      "bmVnYXRpdmUtaUd2eHEzQks3VjFXd2VHeDc4dGRlQ29QOWlCalp3b3A="
     ]
   },
   "getsandbox_api_key": {
     "positives": [
-      "Z2V0c2FuZGJveD5YUzEkenAzc2FpYTdqbThycWRjMi12a3piM2Frenhxd3RueDB1MzRsampqZQ=="
+      "Z2V0c2FuZGJveA1yZWhtMDJzNmhhZmJ0enpsc3NjYXU1cnNha2EyOHR3eWRqMHZzY3Mz"
     ],
     "negatives": [
-      "bmVnYXRpdmUtQ21ZR2JRQzNEdFcwOThQSXJPeVNYT0l3Q2s4bnhzMXI="
+      "bmVnYXRpdmUtc2xIazlLTFpJd0pqMXJ5YUJwa2ZmaDBvMmJ4UXkxUlM="
     ]
   },
   "ipinfodb_api_key": {
     "positives": [
-      "aXBpbmZvZGIKDQozc2p0c2ZqNDRucnAybHhjd3Z6NjJmcDNxNHlyMXM0NTVqd29wbWowZ2wweHBpeWM4aXpjN3M2cG9rMGpremZ6"
+      "aXBpbmZvZGINCgoKDXlicXAxbTV2anlzZGttaXM3cmZpdzBvYzFidjBoeHBiaXl2azBrOXNvd2ZnZHR3d2NkZXgwNmVodXp3bDlidXA="
     ],
     "negatives": [
-      "bmVnYXRpdmUtSzNtNHJLbTBKN2ZybE5ObGxtQzRXNGpHM1lTUmk5UFo="
+      "bmVnYXRpdmUtSWpNcEg0eEVCQ3pOcHZUT1VnZVhDZzdGYVRiTjhVRmw="
     ]
   },
   "jdbc_token": {
     "positives": [
-      "amRiYzpteXNxbDovL2hvc3Q6MzMwNi9kYj91c2VyPXJvb3QmcGFzc3dvcmQ9YmloQ3dlQ3VxMyA="
+      "amRiYzpteXNxbDovL2hvc3Q6MzMwNi9kYj91c2VyPXJvb3QmcGFzc3dvcmQ9eVQ3aUNOaDBtNyA="
     ],
     "negatives": [
-      "bmVnYXRpdmUtRmRhZDFqS2ZJcWJqWWtYMW8wb2J3NGhJZWZFazY1eXg="
+      "bmVnYXRpdmUtSXlQSHoyZVhvNWozUUxpM1RCM21rZGxqM1FKOWpURnA="
     ]
   },
   "paymongo_api_key": {
     "positives": [
-      "cGF5bW9uZ28NDQ1PTG5XMkVhanEwRVNLWkpOQzZ4bDZjbUNlMTd4TGsxQg=="
+      "cGF5bW9uZ282PHFOdVU0aENmQnV5NkQzSDJ5SUxoUUZlRnhjTng0aXZC"
     ],
     "negatives": [
-      "bmVnYXRpdmUta1g2MVhsUW1KY1hNdDM1SGRKamZRUVdSa1d5WTRQdmc="
+      "bmVnYXRpdmUtbUJrTWszR3dmWHJPbGJtM1RxSGJkaXMxZTM2bFZqaXY="
     ]
   },
   "sendbird_api_key": {
     "positives": [
-      "c2VuZGJpcmQpZTk3MWYzOWM5YWViNTEwY2U2ZDJkZTFkMTAyZTliNTQzNWY4ZTRmNg=="
+      "c2VuZGJpcmQNInMNODQ4MjAxNzhmNzI1MWU5ZDQzOTE0YWM5YTA2NzczMGEyZDc0Y2QyYw=="
     ],
     "negatives": [
-      "bmVnYXRpdmUta3cxaU91eHVEV2FtRzVQUkJCdWNvbWk4bzVRd2hQN3k="
+      "bmVnYXRpdmUtZWgzM1lGbm83U2dVS3RndlZTbmFHUkZmWlpvZ1ZpbFk="
     ]
   },
   "sendbird_organizational_api_key": {
     "positives": [
-      "c2VuZGJpcmQKZjIxM2UxOTVmMjliZTY3NzljN2Q1ZDI3"
+      "c2VuZGJpcmRhDQoKM2QzYjUyMzVjOGEzNGNmOGZmOGY1MDg1"
     ],
     "negatives": [
-      "bmVnYXRpdmUtT3doM2V0bjlxaW9HNVd1M2o4cjNwY3dLcFBPeTNuTHM="
+      "bmVnYXRpdmUtWTJGb2NreVpKZXNtZHdVaTBRMWJuMkJpY2E0UmF3elg="
     ]
   },
   "database_connection_string_full": {
-    "positives": [
-      "J0RhdGFzb3VyY2VuYW1lPQ0nAg0NAQINBQoGAwQiDQ=="
-    ],
+    "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtSHFzSUNEYjFwMktvbzZXaHA5UE5FN2duWTJjTEdKN2I="
+      "bmVnYXRpdmUtOVFMNnBnZVU0R2IzMnBhVGQzeUt3NG9SY2pEUE4yVUo="
     ]
   },
   "database_connection_string_1": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtTWdXWlhJTnlYZUFaczZyWDB4aTV4dTFoTFQ2ZkQzZDI="
+      "bmVnYXRpdmUtOWVuSjdPVFd6TXZwZTdacTBHSlZpU3RRZzVJczZDTHg="
     ]
   },
   "database_connection_string_2": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtNGJTWUhqVjlKV3RHVUZQc2pRWndma2M2SVhqeFFTYzg="
+      "bmVnYXRpdmUtTWVBamxYamN2ZGlKSmRXMWRWWFhNRFlhRG1MQ0RnRnM="
     ]
   },
   "database_connection_string_3": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtenpycXZIc2ZKdksyS05tcGlxMVFXTGprcHFSTzN5bTM="
+      "bmVnYXRpdmUtZjFMSWh5TThoakVHZWFCN0xZUDYzOGFidE5BT0VsUUQ="
     ]
   },
   "tsql_create_login_or_user": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtWnJDU2t3NnhaZVNnSVFqY2ppQmVLVXpPVEQyV05TSEs="
+      "bmVnYXRpdmUtdFZ2RkZ6SG1MVzhHcGRMWnY3RHVBbURQbmtZSmh1b2Y="
     ]
   },
   "sqlalchemy_connection_string": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtdzJMQUUwZ3VLSEEzT2hQUjBQWDF6aGNZYnk0RUd0TG0="
+      "bmVnYXRpdmUtamp2ZGxITHRmUGlnV3VXaVBUZnYySUlhU3ZnaUQ0TnU="
     ]
   },
   "mongodb_connection_string": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtbHI3VUdSbFJLazZPWHZlUFJZaXFZT0pGb3dvbFBhWFA="
+      "bmVnYXRpdmUtbGh5M2tGd05heWRKTmc3MVR3UGx4cENqNXZ4VU82aXU="
     ]
   },
   "jdbc_connection_string": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtaElBeVBuWFJQaE1PY0Zxc0xVcUpodHFLOHhlY1NhOE0="
+      "bmVnYXRpdmUtTzNlZURUTnlBVjJXTzVna1ZmbU5wYndoVFBLcnFjMkQ="
     ]
   },
   "hardcoded_spring_sql_passwords": {
     "positives": [
-      "c3ByaW5nLmRhdGFzb3VyY2UucGFzc3dvcmQgCSAJCSAgIAkJPQkgCSAJIAkJICAgICAJCQkJIg0BDQoBAwcFAwMNAQUEBAMGCAoN"
+      "amRiYy5wYXNzd29yZD0JCQkJCQkgICAJICAgCScEAwIICAENDQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtQzRsRTBiVlVhOG9zY2hUb2k4U3lwZjFIZHQ0TmdXYVc="
+      "bmVnYXRpdmUtbXBzazlpeEZ5Snc0YkZKRGdMbVFmSTF0UjFCQzdwY3Q="
     ]
   },
   "hardcoded_internal_emails": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtNUtIc1lidXE4WjFjbWQ4R0hpYktMNmFNdkJkVnpHaGk="
+      "bmVnYXRpdmUtSkE0bjdnMmoyZFVNakdpbkU3aE1VdGxkZ3ZWQ2JuWDk="
     ]
   },
   "hardcoded_internal_urls": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtWHJCQ2psR1ZXaWVvZjNGVHdRd0JMMUZMQTV2MzViQk4="
+      "bmVnYXRpdmUtM1hlZzZqcUJmWEtmMERTWVFVdm84NEFYNTVlWkxFNlg="
     ]
   },
   "hardcoded_uri_passwords": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtb1Nhd3h6YWdMVFZNUUk3cWpTS1JydmVxSzZHR0tVbnU="
+      "bmVnYXRpdmUtUEV4cXROR0dJN1B2N3BQWGYyY25nam9JUnhtR0F0aDc="
     ]
   },
   "any_ipv4_addresses": {
-    "positives": [
-      "My4yNTMuNS4yMjI="
-    ],
+    "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtQmVpYnpDMUExZTVibUEyOG05QkNXWVpRYmR6U2F5eUg="
+      "bmVnYXRpdmUteWxpN0xqaHBNd3VNa0trTVVGdUJybEVjV0o0S3pUZTk="
     ]
   },
   "ghcr_typos": {
@@ -144,7 +140,7 @@
       "Z2hjLmlv"
     ],
     "negatives": [
-      "bmVnYXRpdmUtQWxQblB5a0hnTUx6cG5oRGJ5VGd5d2g2OGJ2SEZqRlY="
+      "bmVnYXRpdmUtbEI4cXNIV3Z5MVA4WUdKMkRCbUhkVjZweHFCdUc4cWM="
     ]
   }
 }

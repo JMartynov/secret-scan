@@ -1,0 +1,50 @@
+{
+  "credit_card": {
+    "positives": [
+      "NDgzOTY4MjMyNjQ5MzgwNg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtY2lKSDRiQ2ZZenZpN2xwOVV6aHRmRkpHekZVdjBvMWc="
+    ]
+  },
+  "email_address": {
+    "positives": [
+      "Uk56V0JAcm9CUlZvanVxNHduVXVjeVlmLkNla3c="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtZ2YxTmRVbnFhcW05bjV6d0JyTU1ES3hUdWZJN1lqcFk="
+    ]
+  },
+  "phone_number_us": {
+    "positives": [
+      "KDg2NSk5NTAtNTM2Mg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtN2F0Wm1odE5EQjFuVUttOW5SWVdrMFRleEQ3WGZMeDM="
+    ]
+  },
+  "phone_number_uk": {
+    "positives": [
+      "KzQ0NzgxOTQxNDYzMg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtUExCZG5qcktZTUNhd0ZMQUU1ZE9JS2Z1cFJMSVc2cTg="
+    ]
+  },
+  "ssn_us": {
+    "positives": [
+      "NzMwLTIxLTI2NzA="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtamJqMDI4Tk5BRWpTWkF4MDgwSHpnM2hFQmRxNlZuQ20="
+    ]
+  },
+  "npi_number": {
+    "positives": [
+      "MTY2MDYyNzMyNg=="
+    ],
+    "negatives": [
+      "bmVnYXRpdmUtWGd6Nk4xS04wN2NYS1M1M1BlTVlPN1kzMjI4cUpXbEo="
+    ]
+  }
+}

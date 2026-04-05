@@ -1,0 +1,67 @@
+[
+  {
+    "id": "conversational_intent_english",
+    "category": "contextual",
+    "keywords": [
+      "here is my",
+      "my password",
+      "my secret",
+      "prod api",
+      "our token"
+    ],
+    "regex": "(?i)(?:my|here is|prod|our)\\s+(?:api|token|secret|password|key)\\s*[:=]\\s*([^\\s]+)",
+    "severity": "medium",
+    "tier": 3
+  },
+  {
+    "id": "conversational_intent_spanish",
+    "category": "contextual",
+    "keywords": [
+      "aquí está",
+      "aqui esta",
+      "mi contraseña",
+      "mi secreto"
+    ],
+    "regex": "(?i)(?:aquí está|aqui esta|mi)\\s+(?:contraseña|secreto|clave)\\s*[:=]\\s*([^\\s]+)",
+    "severity": "medium",
+    "tier": 3
+  },
+  {
+    "id": "conversational_intent_french",
+    "category": "contextual",
+    "keywords": [
+      "voici mon",
+      "voici ma",
+      "mon mot de passe",
+      "mon secret"
+    ],
+    "regex": "(?i)(?:voici mon|voici ma|mon|ma)\\s+(?:mot de passe|secret|clé|cle)\\s*[:=]\\s*([^\\s]+)",
+    "severity": "medium",
+    "tier": 3
+  },
+  {
+    "id": "conversational_intent_german",
+    "category": "contextual",
+    "keywords": [
+      "hier ist",
+      "mein passwort",
+      "mein geheimnis"
+    ],
+    "regex": "(?i)(?:hier ist|mein)\\s+(?:passwort|geheimnis|schlüssel)\\s*[:=]\\s*([^\\s]+)",
+    "severity": "medium",
+    "tier": 3
+  },
+  {
+    "id": "prompt_injection_leakage",
+    "category": "contextual",
+    "keywords": [
+      "ignore all previous instructions",
+      "ignore previous instructions",
+      "disregard all previous instructions",
+      "system prompt"
+    ],
+    "regex": "(?i)(?:ignore\\s+all\\s+previous\\s+instructions|ignore\\s+previous\\s+instructions|disregard\\s+all\\s+previous\\s+instructions|tell\\s+me\\s+your\\s+system\\s+prompt)",
+    "severity": "low",
+    "tier": 3
+  }
+]

@@ -13,9 +13,20 @@ import json, base64, os, random, string
 
 def decode_sample(s):
     try:
-        decoded = base64.b64decode(s.encode('utf-8')).decode('utf-8')
-        return decoded.replace("DUMMY_IGNORE", "")
-    except: return s
+        # Step 1: Decode outer base64
+        second_pass = base64.b64decode(s.encode('utf-8')).decode('utf-8')
+        # Step 2: Reverse
+        first_pass_reversed = second_pass[::-1]
+        # Step 3: Decode inner base64
+        original = base64.b64decode(first_pass_reversed.encode('utf-8')).decode('utf-8')
+        return original.replace("DUMMY_IGNORE", "")
+    except Exception:
+        # Fallback for old simple base64 if needed
+        try:
+            decoded = base64.b64decode(s.encode('utf-8')).decode('utf-8')
+            return decoded.replace("DUMMY_IGNORE", "")
+        except:
+            return s
 
 def get_noise(length=50):
     words = ["function", "const", "return", "import", "data", "value", "process", "result", "config", "env"]
@@ -111,10 +122,20 @@ echo "----------------------------------------------------"
 
 FORCE_STRIPE_SECRET=$(python3 - <<'PY'
 import json, base64
+def decode_sample(s):
+    try:
+        second_pass = base64.b64decode(s.encode('utf-8')).decode('utf-8')
+        first_pass_reversed = second_pass[::-1]
+        original = base64.b64decode(first_pass_reversed.encode('utf-8')).decode('utf-8')
+        return original
+    except Exception:
+        try: return base64.b64decode(s.encode('utf-8')).decode('utf-8')
+        except: return s
+
 with open('data/Structured/private_keys/test_data.json') as f:
     data = json.load(f)
 entry = data['stripe_api_key']['positives'][0]
-print(base64.b64decode(entry).decode('utf-8', errors='ignore'))
+print(decode_sample(entry))
 PY
 )
 
@@ -148,6 +169,12 @@ echo -e "\n--- Part 13: PII Detection ---"
 PII_SAMPLE="Contact me at support@example.com or call 555-0199. Here is my CC: 4111111111111111"
 echo ">>> echo \"$PII_SAMPLE\" | ./run.sh --pii"
 printf "%s\n" "$PII_SAMPLE" | ./run.sh --pii
+echo "----------------------------------------------------"
+
+echo -e "\n--- Part 14: Natural Language Context Detection ---"
+CONTEXT_SAMPLE="aquí está mi contraseña: secretpassword123"
+echo ">>> echo \"$CONTEXT_SAMPLE\" | ./run.sh --full"
+printf "%s\n" "$CONTEXT_SAMPLE" | ./run.sh --full
 echo "----------------------------------------------------"
 
 # 4. Cleanup

@@ -1,5 +1,17 @@
 [
   {
+    "id": "generic_bearer_token",
+    "category": "authentication",
+    "keywords": [
+      "bearer"
+    ],
+    "regex": "(?i)bearer[ \\t]+([a-zA-Z0-9_\\-\\.\\~]{20,})",
+    "entropy": 3.5,
+    "severity": "high",
+    "entropy_factor": 0.7,
+    "tier": 1
+  },
+  {
     "id": "apimatic_password",
     "category": "api_key",
     "keywords": [

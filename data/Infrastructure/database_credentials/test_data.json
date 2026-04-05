@@ -1,150 +1,150 @@
 {
   "abuseipdb_api": {
     "positives": [
-      "YWJ1c2VpcGRiIgp1MW4xcG03b2d1bTdwY3IzcTBnenpwaHUwaWt2MDc4MGtpZjZnaXhrOGYydGp4bWhnNDhjb3dqczk0dmZiMHR2MDB1dGF1aHY2djcweXBvaQ=="
+      "NjE2Mjc1NzM2NTY5NzA2NDYyNjAwZDM3Njk2NzM4NmY2NDYzNzUzMDM1NjgzOTYzNjc3ODY5NjI3OTM2NjM3ODYyMzUzMjY0MzYzMzM2NjI2NTZiNjU2ZTc1Nzc2ODY0MzE2NDZhMzczOTc3NmE3MDMzNzQ3NDczMzk3ODZiNjM3NTcyNjQ3NjZjNjE3YTYxNmI3OTYyNmIzODZjMzA3YTc5MzY3YTMyNmI2NTYyNzI2ODc4NjI="
     ],
     "negatives": [
-      "bmVnYXRpdmUtTmJIeE10TFVhYjlLdE03QThyd1F5UEltTmswUktiYVQ="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNzE1NjcyNGU3NzU4NTQ0NzM0NGEzMjc2NmY2MzQxNzk3MTUwNWE2ZjU2NTc0MTQ1MzU0Nzc4NTkzMTU2NTA3OQ=="
     ]
   },
   "getsandbox_api_key": {
     "positives": [
-      "Z2V0c2FuZGJveD5YUzEkenAzc2FpYTdqbThycWRjMi12a3piM2Frenhxd3RueDB1MzRsampqZQ=="
+      "Njc2NTc0NzM2MTZlNjQ2MjZmNzgyZDM1MGQwYTBhNzI2NjM5MzM2ZTY4MzE2MjY3MzkzMDM3NzE3ODY3Nzk3YTZhNmU3MzcyNmYzOTc0MzU3NzYzNzY3MDM5NzI3MTcyNmEzNzM1NmI3NDZiNjk="
     ],
     "negatives": [
-      "bmVnYXRpdmUtQ21ZR2JRQzNEdFcwOThQSXJPeVNYT0l3Q2s4bnhzMXI="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNDQ1NzM1MzQ3ODM4MzY0NTY2MzUzNjYyNmU1MDYxNGE1YTQ5NGYzNzczMzY1NjQ1NmE3OTc0Mzk3ODczNzI0OA=="
     ]
   },
   "ipinfodb_api_key": {
     "positives": [
-      "aXBpbmZvZGIKDQozc2p0c2ZqNDRucnAybHhjd3Z6NjJmcDNxNHlyMXM0NTVqd29wbWowZ2wweHBpeWM4aXpjN3M2cG9rMGpremZ6"
+      "Njk3MDY5NmU2NjZmNjQ2MjBkNzg2ZTdhNzk2Zjc2N2E2ODY0NjMzNTY4NzYzODYyMzU2YjM0MzI2ODcxNjUzNjZlN2E3MTMyNmEzMDZmNzUzNjMzNjg3OTM4MzU2MjdhMzE2NTcxNzU3MTMxNjI3MDdhMzg2MjZlMzYzNTYxMzk2NTYxNmY2MjM1NjczMTcyNmQ="
     ],
     "negatives": [
-      "bmVnYXRpdmUtSzNtNHJLbTBKN2ZybE5ObGxtQzRXNGpHM1lTUmk5UFo="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNDU1MzQ1NmQ2YTRiMzY1NDMwNGU0YzZhNmU1OTYxNTI3YTYzNmQ2NjM3NTQzOTRiNzIzMTYxNGE1MTUwNzQ2OA=="
     ]
   },
   "jdbc_token": {
     "positives": [
-      "amRiYzpteXNxbDovL2hvc3Q6MzMwNi9kYj91c2VyPXJvb3QmcGFzc3dvcmQ9YmloQ3dlQ3VxMyA="
+      "NmE2NDYyNjMzYTZkNzk3MzcxNmMzYTJmMmY2ODZmNzM3NDNhMzMzMzMwMzYyZjY0NjIzZjc1NzM2NTcyM2Q3MjZmNmY3NDI2NzA2MTczNzM3NzZmNzI2NDNkNDQ3NjRiNzI3NTMzMzg2NDM1NzQyMA=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtRmRhZDFqS2ZJcWJqWWtYMW8wb2J3NGhJZWZFazY1eXg="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNGY0NzYyNTM2MTZjMzkzNzQzNGE3Mjc2Nzc2NzUxNWE2ZDY1NTI3NzQxNzIzODY5NTY1MDc4MzU2NTRhMzY1MA=="
     ]
   },
   "paymongo_api_key": {
     "positives": [
-      "cGF5bW9uZ28NDQ1PTG5XMkVhanEwRVNLWkpOQzZ4bDZjbUNlMTd4TGsxQg=="
+      "NzA2MTc5NmQ2ZjZlNjc2ZjJhMjgwZDBhNTQzNzYyNjM0NzU2Nzk2YTc3NTg1YTU3NTY3NDYyMzUzMDY2NTE1OTVmNmQ2MjMwNGI2Njc2Njc2MzVhNWY2ZQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUta1g2MVhsUW1KY1hNdDM1SGRKamZRUVdSa1d5WTRQdmc="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNjQ0ZTRmNTc2OTRkNGI0NDRhMzI2NDQ0NmUzNTM2Mzg0ZDM3NGQ0Zjc3MzI3MjU2NTM2NDRiMzE2YTMwNzE0NA=="
     ]
   },
   "sendbird_api_key": {
     "positives": [
-      "c2VuZGJpcmQpZTk3MWYzOWM5YWViNTEwY2U2ZDJkZTFkMTAyZTliNTQzNWY4ZTRmNg=="
+      "NzM2NTZlNjQ2MjY5NzI2NDBhNjQwZDM3MzkzNTYzNjQ2MjMyNjIzNzMzMzMzODM0MzQzNzYyMzIzODM4NjQzNDMyMzczNTM5MzA2MTM5NjY2MjY1Mzk2MTY1MzAzMjYxMzk2MjY0"
     ],
     "negatives": [
-      "bmVnYXRpdmUta3cxaU91eHVEV2FtRzVQUkJCdWNvbWk4bzVRd2hQN3k="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNTAzOTY4Njg2MzcwNjk1YTU1MzI2ZTRhNGU0ODdhNDk1MTQ1NTYzNjc2NDY2YjM1MzIzMDQ2NmI0OTc5NGM1Mg=="
     ]
   },
   "sendbird_organizational_api_key": {
     "positives": [
-      "c2VuZGJpcmQKZjIxM2UxOTVmMjliZTY3NzljN2Q1ZDI3"
+      "NzM2NTZlNjQ2MjY5NzI2NDBhMGEzODMwNjYzMTM4NjE2MzM0NjEzODYzMzk2MjM1MzM2MTM4MzY2MjM5MzYzMzYxMzE="
     ],
     "negatives": [
-      "bmVnYXRpdmUtT3doM2V0bjlxaW9HNVd1M2o4cjNwY3dLcFBPeTNuTHM="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNjEzMzQzNmY0OTZkNmQzODM3MzA2ZDcyMzA1NDQyNjU2NTM1NTU3MjQyNGY2YTM2NTE3MjMyNTEzMDY5NzczMA=="
     ]
   },
   "database_connection_string_full": {
     "positives": [
-      "J0RhdGFzb3VyY2VuYW1lPQ0nAg0NAQINBQoGAwQiDQ=="
+      "MjY3MTc1NmY3NDNiNjQ2MTc0NjE1MzZmNzU3MjYzNjU2ZTYxNmQ2NTNkMGQyNzA1MDgyMjI3MjcwNjIyMDIwMDA1MDgwNQ=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtSHFzSUNEYjFwMktvbzZXaHA5UE5FN2duWTJjTEdKN2I="
+      "NmU2NTY3NjE3NDY5NzY2NTJkMzA1MDZiNjUzODQ1NjI3NjY2NjM2Yjc5NmEzNjU3NzY1ODQ1NmU2ODZkNzkzNzM3Mzk2YzM5NGQ1NTM5MzA2Yg=="
     ]
   },
   "database_connection_string_1": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtTWdXWlhJTnlYZUFaczZyWDB4aTV4dTFoTFQ2ZkQzZDI="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNjM1OTU4NGM3YTQ1NmQ0ODZmNTAzNjU2NjQ0MTQ1NjQzNjM3MzY2NDdhNDk0MjU4NjY0ZjUxNGE2ZTRmNDgzMg=="
     ]
   },
   "database_connection_string_2": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtNGJTWUhqVjlKV3RHVUZQc2pRWndma2M2SVhqeFFTYzg="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNzM0ZDRhNTIzOTY0NDI3YTc5NTQ2YTUyNjg1YTcwMzQ1NTM5MzY2YzU2NzY1ODY5NjU2YjQ1NDQ0YTM4NGY2OA=="
     ]
   },
   "database_connection_string_3": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtenpycXZIc2ZKdksyS05tcGlxMVFXTGprcHFSTzN5bTM="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNTk0MzczNzE2NjQ0NDMzNjc3Njg0NTUyNTM3ODY1NDQ2ZTZkMzY1NzQ5MzM0YjRkNGI2MTU2Nzg1MTVhMzAzNA=="
     ]
   },
   "tsql_create_login_or_user": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtWnJDU2t3NnhaZVNnSVFqY2ppQmVLVXpPVEQyV05TSEs="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNmM0ODM1NGY0MzRlNTMzODY0NGM1NzQ1NzU1NTUxNDk3NDU2NGI2NTc3NjU1YTc2Njg0YzZjNjMzNTU4NjQzMw=="
     ]
   },
   "sqlalchemy_connection_string": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtdzJMQUUwZ3VLSEEzT2hQUjBQWDF6aGNZYnk0RUd0TG0="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNTY2MjU4NGY0NTU4NTk0NjcxNDQ0MjRiMzY0NTdhNDg1NjU4NTY1MzRiNzc3NTM5Nzc2NDYzMzA3MTU5Nzg1MA=="
     ]
   },
   "mongodb_connection_string": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtbHI3VUdSbFJLazZPWHZlUFJZaXFZT0pGb3dvbFBhWFA="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNjM2Yjc2MzM2ZDUwNjI1MTM4NDMzNTMwMzU0OTVhNDI2Yzc4NjM0ODcxNTI2YjcwNTY3MjU0MzY2NTM5NjY2ZA=="
     ]
   },
   "jdbc_connection_string": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtaElBeVBuWFJQaE1PY0Zxc0xVcUpodHFLOHhlY1NhOE0="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNTI2NjM3MzIzOTcyN2E2YTZiNmUzMDc4NDEzNTZlNjYzMzM2NWE0NTRjNjgzMjc5MzQ3NjczNGI2MjY3MzQzNA=="
     ]
   },
   "hardcoded_spring_sql_passwords": {
     "positives": [
-      "c3ByaW5nLmRhdGFzb3VyY2UucGFzc3dvcmQgCSAJCSAgIAkJPQkgCSAJIAkJICAgICAJCQkJIg0BDQoBAwcFAwMNAQUEBAMGCAoN"
+      "NzM3MDcyNjk2ZTY3MmU2NDYxNzQ2MTczNmY3NTcyNjM2NTJlNzA2MTczNzM3NzZmNzI2NDIwMDkyMDIwMDkwOTIwMjAyMDIwMjAwOTA5M2QyMDIwMjAyMDIwMDkyMDA5MDkwOTIwMjAwYTA4MDMwNzAwMDEwNjAzMDEwMjA0MGEwNzAxMGEyNw=="
     ],
     "negatives": [
-      "bmVnYXRpdmUtQzRsRTBiVlVhOG9zY2hUb2k4U3lwZjFIZHQ0TmdXYVc="
+      "NmU2NTY3NjE3NDY5NzY2NTJkMzY3MjZlNDE1NTY0NTY2NjU3MzI0NzVhMzM2NjQ3NjYzMTY0NGM1ODRiNTIzNDU4NmUzNjMxMzM2ZTM2NDQ0OA=="
     ]
   },
   "hardcoded_internal_emails": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtNUtIc1lidXE4WjFjbWQ4R0hpYktMNmFNdkJkVnpHaGk="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNTU0NjU1NjE3NDY3NDU1MDQ5NTE2OTY2NGYzNzUyNzU1NTY0MzgzMDc1NmM2Yzc1NjM3MjdhNDg2NTZjNjczMA=="
     ]
   },
   "hardcoded_internal_urls": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtWHJCQ2psR1ZXaWVvZjNGVHdRd0JMMUZMQTV2MzViQk4="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNTk3MjQ5NzczMTc1Mzc3MDUwNGU2NzM3NDM0ODM3NTg1NjczMzA3MDY3NjQ2ZTM5NmY0NzU2MzU0ODQzNzg2Mg=="
     ]
   },
   "hardcoded_uri_passwords": {
     "positives": [],
     "negatives": [
-      "bmVnYXRpdmUtb1Nhd3h6YWdMVFZNUUk3cWpTS1JydmVxSzZHR0tVbnU="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNjE2NTZjNjY2OTQ5NjM0ODZhNDIzMzM0NTU0ZjQ5NGQ0ZTRiNzk0YzRlNTM2MTQ5NzY0MTc0NDg0ZDM0NzQ3Mg=="
     ]
   },
   "any_ipv4_addresses": {
     "positives": [
-      "My4yNTMuNS4yMjI="
+      "MzYyZTMyMzAzNzJlMzIzNTMxMmUzMjM1MzU="
     ],
     "negatives": [
-      "bmVnYXRpdmUtQmVpYnpDMUExZTVibUEyOG05QkNXWVpRYmR6U2F5eUg="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNDY0YTc2NzAzNDU2NmY0YTc1NzE2NjRkNzM0NjQ4NzE0MTMxNDM3NTM4MzU0MjRmNTk3NDQ1NTc2ODYzMzc3OQ=="
     ]
   },
   "ghcr_typos": {
     "positives": [
-      "Z2hjLmlv"
+      "Njc2ODcyMmU2OTZm"
     ],
     "negatives": [
-      "bmVnYXRpdmUtQWxQblB5a0hnTUx6cG5oRGJ5VGd5d2g2OGJ2SEZqRlY="
+      "NmU2NTY3NjE3NDY5NzY2NTJkNzU2NDQ1MzU2YjRmMzQ0MjQ1Njk0YzQ4NmI1MTY5MzI2OTY4NzQzNzYxNGM1NDM5NjE1YTMwNjM3MDUwNGY3Mg=="
     ]
   }
 }

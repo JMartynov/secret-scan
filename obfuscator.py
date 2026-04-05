@@ -45,6 +45,7 @@ class Obfuscator:
             (r"password", lambda length: self.fake.password(length=length)),
             (r"secret", lambda length: self.fake.password(length=length)),
             (r"auth", lambda length: self.fake.password(length=length)),
+            (r"bearer", lambda length: self.fake.password(length=length, special_chars=False, digits=True, upper_case=True, lower_case=True)),
             (r"token", lambda length: self.fake.password(length=length, special_chars=False)),
             (r"api.*key", lambda length: self.fake.password(length=length, special_chars=False)),
         ]

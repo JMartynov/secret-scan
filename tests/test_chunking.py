@@ -1,5 +1,5 @@
 import pytest
-from cli import scan_file_worker
+from src.cli import scan_file_worker
 import os
 
 def test_chunk_boundary_overlap():

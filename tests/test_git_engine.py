@@ -1,5 +1,5 @@
 import unittest
-from git_engine import GitEngine
+from src.git_engine import GitEngine
 
 class TestGitEngine(unittest.TestCase):
     def test_parse_diff(self):

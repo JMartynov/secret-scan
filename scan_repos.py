@@ -1,6 +1,7 @@
 import subprocess
 import os
 import tempfile
+import sys
 
 repos = [
     "https://github.com/psf/requests.git",
@@ -45,7 +46,7 @@ with tempfile.TemporaryDirectory() as tmpdir:
         # But we added `--git-working` and `--git-staged`.
         # To do a real-world scan over an entire checkout, maybe we should just simulate `find ... | xargs cat | python cli.py`
 
-        cmd = f"find {repo_path} -type f -not -path '*/.git/*' | xargs cat 2>/dev/null | python cli.py --mode fast"
+        cmd = f"find {repo_path} -type f -not -path '*/.git/*' | xargs cat 2>/dev/null | {sys.executable} -m src.cli --mode fast"
         res = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
         count = 0

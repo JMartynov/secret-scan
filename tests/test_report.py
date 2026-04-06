@@ -1,6 +1,6 @@
 import base64
 
-from report import Finding, format_report
+from src.report import Finding, format_report
 
 
 def _decode_secret(encoded: str) -> str:

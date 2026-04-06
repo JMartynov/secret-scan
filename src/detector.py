@@ -9,9 +9,9 @@ import ahocorasick
 import re2
 import regex as standard_re
 
-from report import Finding, format_report
+from src.report import Finding, format_report
 
-from suggestions import get_suggestion
+from src.suggestions import get_suggestion
 from src.validators import validate_finding
 
 # Design rule #4: Limit input size for single-block scanning

@@ -420,24 +420,31 @@ risk: CRITICAL
 ## Installation
 
 ```bash
+# Install from PyPI (Recommended)
+pip install secret-scan-detector
+
+# Run
+secret-scan example_file.txt
+```
+
+### Developer Installation
+
+```bash
 # Create virtual environment
 python3 -m venv .venv
 source .venv/bin/activate
 
-# Install dependencies
-pip install -r requirements.txt
-
-# Run
-./run.sh example_file.txt
+# Install in editable mode
+pip install -e .
 ```
 
 Or scan text directly:
 ```bash
 # Standard scan
-python3 cli.py --text "My API key is AIzaSy-12345"
+secret-scan --text "My API key is AIzaSy-12345"
 
 # Force scan all lines (bypasses keyword filters)
-python3 cli.py --force-scan-all .
+secret-scan --force-scan-all .
 ```
 
 ### Data Obfuscation & Masking
@@ -450,7 +457,7 @@ Enable obfuscation with the `--obfuscate` flag:
 # Default mode: redact (Redacts middle of the secret)
 # Input: "My key is ghp_1234567890abcdefghijklmnopqrstuvwx"
 # Output: "My key is ghp_...uvwx"
-cat logs.txt | python3 cli.py --obfuscate
+cat logs.txt | secret-scan --obfuscate
 ```
 
 Choose different obfuscation strategies with `--obfuscate-mode`:
@@ -471,21 +478,21 @@ Replaces secrets with realistic-looking fake data that matches the original form
 
 ```bash
 # Use synthetic mode for realistic placeholders
-./run.sh --obfuscate --obfuscate-mode synthetic logs.txt
+secret-scan --obfuscate --obfuscate-mode synthetic logs.txt
 ```
 
 ### Custom CLI helpers
 
 The repository ships with a few convenience commands:
 
-* `./run.sh <file>` formats and scans a local file with `cli.py` and prints the report.
-* `python3 cli.py --text "<string>"` runs the scanner on an inline string (useful when building prompts before sending them to an LLM).
+* `./run.sh <file>` is deprecated, use `secret-scan <file>` directly.
+* `secret-scan --text "<string>"` runs the scanner on an inline string (useful when building prompts before sending them to an LLM).
 * `python tools/generate_test_data.py` rebuilds `data/test_data.json` from `data/rules.json` and should be rerun whenever the rule set changes.
 
 ## Usage Example
 
 ```
-$ ./run.sh test_file.py
+$ secret-scan test_file.py
 
 ⚠ Secrets detected: 1
 - CRITICAL: 1
@@ -560,10 +567,10 @@ Enable PII detection with the `--pii` flag:
 
 ```bash
 # Scan a file for secrets and PII
-./run.sh --pii example_file.txt
+secret-scan --pii example_file.txt
 
 # Limit PII scanning to specific regions (e.g., US only for SSNs and US phone numbers)
-./run.sh --pii --pii-region US example_file.txt
+secret-scan --pii --pii-region US example_file.txt
 ```
 
 PII findings are integrated into the multi-tier reporting system, where highly structured secrets (Tier 1) take precedence over contextual or generic entropy hits.

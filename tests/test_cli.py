@@ -1,17 +1,17 @@
 import pytest
 from unittest.mock import patch, MagicMock, ANY
 import sys
-from cli import main
+from src.cli import main
 from io import StringIO
 
 @pytest.fixture
 def mock_detector():
-    with patch("cli.SecretDetector") as mock:
+    with patch("src.cli.SecretDetector") as mock:
         yield mock
 
 @pytest.fixture
 def mock_format_report():
-    with patch("cli.format_report") as mock:
+    with patch("src.cli.format_report") as mock:
         yield mock
 
 def test_cli_help(capsys):

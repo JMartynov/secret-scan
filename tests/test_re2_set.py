@@ -1,5 +1,5 @@
 import pytest
-from detector import SecretDetector, DetectionEngine
+from src.detector import SecretDetector, DetectionEngine
 import re2
 
 def test_re2_set_consistency():

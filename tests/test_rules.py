@@ -2,7 +2,7 @@ import pytest
 import os
 import json
 import base64
-from detector import SecretDetector
+from src.detector import SecretDetector
 
 def get_all_test_data():
     all_tests = []

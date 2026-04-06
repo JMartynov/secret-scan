@@ -1,5 +1,5 @@
-from detector import SecretDetector, DetectionEngine
-from obfuscator import Obfuscator
+from src.detector import SecretDetector, DetectionEngine
+from src.obfuscator import Obfuscator
 
 def test_taxonomy_loading():
     # Verify that detector loads rules from multiple subdirectories

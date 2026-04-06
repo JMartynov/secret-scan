@@ -30,14 +30,14 @@ def test_history_scan_performance(tmp_path):
     
     # First run (no cache)
     start_time = time.time()
-    result = subprocess.run([run_sh, "--history", "--mode", "deep", "--data-dir", os.path.join(project_root, "data")], cwd=repo_path, capture_output=True, text=True)
+    result = subprocess.run(["python3", "-m", "src.cli", "--history", "--mode", "deep", "--data-dir", os.path.join(project_root, "data")], cwd=repo_path, capture_output=True, text=True)
     first_run_duration = time.time() - start_time
     print(f"\nFirst run duration (50 commits): {first_run_duration:.2f}s")
     assert result.returncode == 0
     
     # Second run (with cache)
     start_time = time.time()
-    result = subprocess.run([run_sh, "--history", "--mode", "deep", "--data-dir", os.path.join(project_root, "data")], cwd=repo_path, capture_output=True, text=True)
+    result = subprocess.run(["python3", "-m", "src.cli", "--history", "--mode", "deep", "--data-dir", os.path.join(project_root, "data")], cwd=repo_path, capture_output=True, text=True)
     second_run_duration = time.time() - start_time
     print(f"Second run duration (cached): {second_run_duration:.2f}s")
     

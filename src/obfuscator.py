@@ -5,7 +5,7 @@ from typing import List
 
 from faker import Faker
 
-from report import Finding
+from src.report import Finding
 
 """
 This module provides the Obfuscator class, which is used to redact, hash, or

@@ -1,5 +1,5 @@
-from detector import SecretDetector
-from report import Finding
+from src.detector import SecretDetector
+from src.report import Finding
 
 def test_overlap_resolution_entropy_vs_structured():
     """

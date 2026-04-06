@@ -3,9 +3,10 @@ from pytest_bdd import scenario, given, when, then, parsers
 import time
 import subprocess
 import os
+import sys
 import exrex
 
-from detector import SecretDetector
+from src.detector import SecretDetector
 
 
 def _build_secret(codes: list[int]) -> str:
@@ -180,7 +181,7 @@ def stage_kitchen_sink(temp_repo):
 def run_git_staged(temp_repo, ctx):
     repo_path = temp_repo["path"]
     project_root = os.getcwd() 
-    cmd = [f"{project_root}/run.sh", "--git-staged", "--mode", "deep", "--data-dir", f"{project_root}/data", "--full"]
+    cmd = [sys.executable, "-m", "src.cli", "--git-staged", "--mode", "deep", "--data-dir", f"{project_root}/data", "--full"]
     result = subprocess.run(cmd, cwd=repo_path, capture_output=True, text=True)
     ctx["output"] = result.stdout
     ctx["exit_code"] = result.returncode
@@ -226,7 +227,7 @@ def create_unstaged_files(temp_repo):
 def run_git_working(temp_repo, ctx):
     repo_path = temp_repo["path"]
     project_root = os.getcwd()
-    cmd = [f"{project_root}/run.sh", "--git-working", "--mode", "deep", "--data-dir", f"{project_root}/data"]
+    cmd = [sys.executable, "-m", "src.cli", "--git-working", "--mode", "deep", "--data-dir", f"{project_root}/data"]
     result = subprocess.run(cmd, cwd=repo_path, capture_output=True, text=True)
     ctx["output"] = result.stdout
 
@@ -252,7 +253,7 @@ def run_git_branch(temp_repo, ctx, base):
     project_root = os.getcwd()
     # Note: we need to be on the branch to scan against base
     subprocess.run(["git", "checkout", "feature-leak"], cwd=repo_path, check=True)
-    cmd = [f"{project_root}/run.sh", "--git-branch", base, "--mode", "deep", "--data-dir", f"{project_root}/data"]
+    cmd = [sys.executable, "-m", "src.cli", "--git-branch", base, "--mode", "deep", "--data-dir", f"{project_root}/data"]
     result = subprocess.run(cmd, cwd=repo_path, capture_output=True, text=True)
     ctx["output"] = result.stdout
 
@@ -270,7 +271,7 @@ def create_history_leaks(temp_repo):
 def run_git_history(temp_repo, ctx):
     repo_path = temp_repo["path"]
     project_root = os.getcwd()
-    cmd = [f"{project_root}/run.sh", "--history", "--mode", "deep", "--data-dir", f"{project_root}/data"]
+    cmd = [sys.executable, "-m", "src.cli", "--history", "--mode", "deep", "--data-dir", f"{project_root}/data"]
     result = subprocess.run(cmd, cwd=repo_path, capture_output=True, text=True)
     ctx["output"] = result.stdout
 
@@ -617,7 +618,7 @@ def stripe_text(ctx, text):
 @when(parsers.parse('I run the CLI with "{args}"'))
 def run_cli(ctx, args):
     project_root = os.getcwd()
-    cmd = f"python3 cli.py --text \"{ctx['text']}\" {args} --data-dir \"{project_root}/data\""
+    cmd = f"{sys.executable} -m src.cli --text \"{ctx['text']}\" {args} --data-dir \"{project_root}/data\""
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     ctx["output"] = result.stdout
 
@@ -641,7 +642,7 @@ def check_hashed_output(ctx):
 
 @given('the detector has found 5 findings with scores 20, 50, 65, 80, 95')
 def mock_findings_with_scores(ctx):
-    from report import Finding
+    from src.report import Finding
     ctx["findings"] = [
         Finding("type_1", 1, "LOW", "sec1", 0.5, score=20.0),
         Finding("type_2", 2, "MEDIUM", "sec2", 0.6, score=50.0),

@@ -11,20 +11,20 @@
 *   **Security**: Use Trusted Publishing (OIDC) between GitHub and PyPI to avoid long-lived API tokens.
 
 ## 3. Implementation Checklist
-- [ ] **Initial Setup**:
-    - [ ] Create `pyproject.toml` with metadata, dependencies, and `secret-scan` entry point.
-    - [ ] Create a `LICENSE` file (required for PyPI).
+- [x] **Initial Setup**:
+    - [x] Create `pyproject.toml` with metadata, dependencies, and `secret-scan` entry point.
+    - [x] Create a `LICENSE` file (required for PyPI).
     - [ ] Manually register the project on PyPI (initial "dry-run" upload).
-- [ ] **Automated CD (GitHub Action)**:
-    - [ ] Create `.github/workflows/pypi-publish.yml`.
-    - [ ] Configure it to trigger on new tags (e.g., `v*`).
+- [x] **Automated CD (GitHub Action)**:
+    - [x] Create `.github/workflows/pypi-publish.yml`.
+    - [x] Configure it to trigger on new tags (e.g., `v*`).
     - [ ] Set up Trusted Publishing on PyPI for the `JMartynov/secret-scan` repository.
-    - [ ] Add build steps (generate `.tar.gz` and `.whl`).
-    - [ ] Add the publish step to upload artifacts to PyPI.
+    - [x] Add build steps (generate `.tar.gz` and `.whl`).
+    - [x] Add the publish step to upload artifacts to PyPI.
 
 ## 4. Testing & Verification
 - [ ] **TestPyPI**: Perform a trial run to the TestPyPI environment to verify the packaging and upload logic.
-- [ ] **Installation**: Run `pip install secret-scan-detector` in a clean environment and verify functionality.
+- [x] **Installation**: Run `pip install secret-scan-detector` in a clean environment and verify functionality.
 
 ## 5. Engineering Standards
 *   **SemVer**: Strictly follow Semantic Versioning.

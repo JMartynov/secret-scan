@@ -2,12 +2,12 @@ import argparse
 import sys
 import os
 
-from detector import SecretDetector
-from obfuscator import Obfuscator
-from report import format_report, format_sarif
-from git_engine import GitEngine
-from ignore_engine import IgnoreEngine
-from cache_engine import load_cache, save_cache, is_commit_clean, mark_commit_clean
+from src.detector import SecretDetector
+from src.obfuscator import Obfuscator
+from src.report import format_report, format_sarif
+from src.git_engine import GitEngine
+from src.ignore_engine import IgnoreEngine
+from src.cache_engine import load_cache, save_cache, is_commit_clean, mark_commit_clean
 from concurrent.futures import ProcessPoolExecutor
 import mmap
 

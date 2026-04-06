@@ -3,7 +3,7 @@ import os
 import tempfile
 import sys
 
-from cli import scan_file_worker
+from src.cli import scan_file_worker
 
 def test_mmap_safety_large_file():
     # create a >10MB file with a secret across the chunk boundary

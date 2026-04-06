@@ -1,5 +1,5 @@
 import pytest
-from detector import DetectionEngine, SecretDetector
+from src.detector import DetectionEngine, SecretDetector
 
 def test_scoring_weights():
     engine = DetectionEngine()

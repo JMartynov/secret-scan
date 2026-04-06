@@ -1,7 +1,7 @@
 import pytest
 from src.validators import luhn_check, validate_finding
-from detector import DetectionEngine, SecretDetector
-from report import Finding
+from src.detector import DetectionEngine, SecretDetector
+from src.report import Finding
 
 def test_luhn_check_valid():
     # Example valid CC

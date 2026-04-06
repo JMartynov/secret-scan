@@ -1,6 +1,6 @@
 import io
 
-from detector import SecretDetector
+from src.detector import SecretDetector
 
 
 def _build_stripe_secret() -> str:

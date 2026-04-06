@@ -47,7 +47,7 @@ The pattern library is the heart of the detector—every new rule flows through 
     * performance benchmarks for parallel/cached modes.
 4.  For manual verification of historical audits, use:
     ```bash
-    python3 cli.py --history --max-commits 10 --full
+    secret-scan --history --max-commits 10 --full
     ```
 
 ## 6. Risk Scoring and Filtering

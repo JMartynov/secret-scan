@@ -1,7 +1,7 @@
 import base64
 
-from obfuscator import Obfuscator
-from report import Finding
+from src.obfuscator import Obfuscator
+from src.report import Finding
 
 
 def _decode_secret(encoded: str) -> str:

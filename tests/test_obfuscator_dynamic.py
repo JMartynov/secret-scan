@@ -1,5 +1,5 @@
-from obfuscator import Obfuscator
-from report import Finding
+from src.obfuscator import Obfuscator
+from src.report import Finding
 
 def test_dynamic_synthetic_mapping():
     obf = Obfuscator(mode="synthetic")

@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch, MagicMock, ANY
 import sys
-from cli import main
+from src.cli import main
 from io import StringIO
 
 @pytest.fixture

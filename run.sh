@@ -14,4 +14,4 @@ fi
 # Run the CLI scanner
 # Using exec to replace the shell process with the python process,
 # which better handles signals (Ctrl+C) and preserves the stdin stream.
-exec python3 "$SCRIPT_DIR/cli.py" "$@"
+exec python3 -m src.cli "$@"

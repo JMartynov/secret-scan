@@ -221,7 +221,7 @@ The detector is now natively aware of Git lifecycles, allowing for surgical scan
 ./run.sh --git-branch origin/main --format sarif
 
 # Deep audit of repository history (Parallelized & Cached)
-./run.sh --history --since "1 month ago" --max-commits 100
+./run.sh --scan-history --limit-depth 30 --limit-commits 100
 ```
 
 ### 🏎 Performance & Scalability

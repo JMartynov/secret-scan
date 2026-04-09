@@ -77,3 +77,31 @@ def test_cli_short_option(mock_detector, mock_format_report):
         main()
     
     mock_format_report.assert_called_with([], show_full=False, show_short=True, no_colors=False)
+
+@patch('src.cli.GitEngine')
+@patch('src.cli.load_cache')
+@patch('src.cli.save_cache')
+def test_cli_history_limits(mock_save_cache, mock_load_cache, MockGitEngine, mock_detector, mock_format_report):
+    mock_git_engine_instance = MockGitEngine.return_value
+    mock_git_engine_instance.get_history_diffs.return_value = []
+
+    mock_load_cache.return_value = {}
+
+    with patch.object(sys, 'argv', ['cli.py', '--scan-history', '--limit-commits', '5', '--limit-depth', '14']):
+        main()
+
+    mock_git_engine_instance.get_history_diffs.assert_called_once_with(since='14 days ago', max_commits=5)
+
+@patch('src.cli.GitEngine')
+@patch('src.cli.load_cache')
+@patch('src.cli.save_cache')
+def test_cli_history_alias(mock_save_cache, mock_load_cache, MockGitEngine, mock_detector, mock_format_report):
+    mock_git_engine_instance = MockGitEngine.return_value
+    mock_git_engine_instance.get_history_diffs.return_value = []
+
+    mock_load_cache.return_value = {}
+
+    with patch.object(sys, 'argv', ['cli.py', '--history']):
+        main()
+
+    mock_git_engine_instance.get_history_diffs.assert_called_once_with(since=None, max_commits=None)

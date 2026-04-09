@@ -9,7 +9,7 @@
 - **Performance & Scalability**: Drastically increased scanning throughput using a two-stage `re2.Set` pattern pre-filtering system, reducing overhead on large files and Git histories. Added `mmap` zero-copy memory mapping for parsing gigabyte-scale logs.
 - **SIMD String Searching**: Upgraded the internal search automaton to `ahocorasick-rs` to leverage Rust-based SIMD string searching logic.
 - **Advanced Risk Scoring**: Introduced a 0-100 weighted risk score based on regex weights, context proximity decay, and entropy adjustments. Dynamic risk levels (CRITICAL, HIGH, MEDIUM, LOW) replace static categorizations.
-- **Core Git Integration**: Native support for scanning staged changes, working directory diffs, and historical commits.
+- **Core Git Integration**: Native support for scanning staged changes, working directory diffs, and historical commits using `--scan-history` with optional `--limit-commits` and `--limit-depth` constraints.
 - **Ignore & Suppression Engine**: Added support for `.secretscanignore`, `# secretscan:ignore` inline comments, and repository baselines.
 - **Scalability & Performance**: Introduced **Parallelized Historical Scanning** and **Commit Caching** to handle massive repositories.
 - **Actionable UX**: Surgical ANSI highlighting of secrets in the terminal and enriched remediation hints with provider documentation links.

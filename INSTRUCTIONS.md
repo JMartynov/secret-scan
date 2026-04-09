@@ -47,7 +47,7 @@ The pattern library is the heart of the detector—every new rule flows through 
     * performance benchmarks for parallel/cached modes.
 4.  For manual verification of historical audits, use:
     ```bash
-    secret-scan --history --max-commits 10 --full
+    secret-scan --scan-history --limit-commits 10 --full
     ```
 
 ## 6. Risk Scoring and Filtering
@@ -62,7 +62,7 @@ With the introduction of the Advanced Risk Scoring System, findings are assigned
 
 When auditing repositories with thousands of commits or large file trees, use the scalability features:
 
-1.  **Parallelization**: Use `--history` or `--input <dir>` to automatically trigger `ProcessPoolExecutor`. This distributes the workload across available CPU cores. Large individual files (>10MB) are automatically chunked and mapped into memory (`mmap`) to avoid memory exhaustion and garbage collector lag.
+1.  **Parallelization**: Use `--scan-history` or `--input <dir>` to automatically trigger `ProcessPoolExecutor`. This distributes the workload across available CPU cores. Large individual files (>10MB) are automatically chunked and mapped into memory (`mmap`) to avoid memory exhaustion and garbage collector lag.
 2.  **Caching**: The scanner maintains `.secretscan_cache`. Commits that have been scanned and found clean are skipped in subsequent runs, allowing for extremely fast incremental audits.
 3.  **Fast Mode**: For rapid feedback (e.g., pre-commit hooks), use `--mode fast` to skip deep entropy analysis and non-essential rules.
 

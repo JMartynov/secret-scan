@@ -84,9 +84,10 @@ def main():
     parser.add_argument("--git-staged", action="store_true", help="Scan staged changes")
     parser.add_argument("--git-working", action="store_true", help="Scan working directory changes")
     parser.add_argument("--git-branch", help="Scan diff between branch and HEAD")
-    parser.add_argument("--history", action="store_true", help="Scan git history")
+    parser.add_argument("--history", "--scan-history", action="store_true", help="Scan git history")
     parser.add_argument("--since", help="Used with --history (e.g., '1 week ago')")
-    parser.add_argument("--max-commits", type=int, help="Used with --history")
+    parser.add_argument("--limit-commits", type=int, help="Maximum number of commits to scan per branch (default: 0 / no limit), used with --history")
+    parser.add_argument("--limit-depth", type=int, help="Maximum history depth in days, used with --history")
     
     # Advanced Flags
     parser.add_argument("--mode", choices=["fast", "balanced", "deep"], default="balanced", help="Scanning mode")
@@ -133,7 +134,10 @@ def main():
                     if findings:
                         all_findings.extend(findings)
     elif args.history:
-        blocks = git_engine.get_history_diffs(since=args.since, max_commits=args.max_commits)
+        since = args.since
+        if args.limit_depth:
+            since = f"{args.limit_depth} days ago"
+        blocks = git_engine.get_history_diffs(since=since, max_commits=args.limit_commits)
         
         # Filter blocks based on cache
         uncached_blocks = []

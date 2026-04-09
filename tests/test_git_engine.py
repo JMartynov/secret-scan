@@ -88,6 +88,21 @@ diff --git a/file2.txt b/file2.txt
 
                 self.assertIsNotNone(dummy_block)
                 self.assertEqual(dummy_block.content, 'dummy content')
+
+                # Create another commit
+                with open(dummy_path, 'a') as f:
+                    f.write('second commit content\n')
+                subprocess.run(['git', 'add', 'dummy.txt'], cwd=tmpdir, check=True)
+                subprocess.run(['git', 'commit', '-m', 'Second commit'], cwd=tmpdir, check=True)
+
+                # Test max_commits limit
+                blocks = engine.get_history_diffs(max_commits=1)
+                self.assertEqual(len(blocks), 1)
+                self.assertEqual(blocks[0].content, 'second commit content')
+
+                # Test since limit
+                blocks = engine.get_history_diffs(since='1 day ago')
+                self.assertGreaterEqual(len(blocks), 2)
             finally:
                 os.chdir(original_dir)
 

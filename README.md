@@ -421,7 +421,7 @@ risk: CRITICAL
 
 ```bash
 # Install from PyPI (Recommended)
-pip install secret-scan-detector
+pip install py-secret-scan
 
 # Run
 secret-scan example_file.txt

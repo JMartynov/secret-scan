@@ -3,8 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "secret-scan-detector"
-version = "3.0.0"
+name = "py-secret-scan"
+version = "3.0.1"
 description = "A local security tool to detect secrets and PII in LLM prompts, code, and logs."
 readme = "README.md"
 authors = [

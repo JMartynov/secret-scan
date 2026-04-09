@@ -34,18 +34,10 @@ with tempfile.TemporaryDirectory() as tmpdir:
         print(f"Scanning {name}...")
         repo_path = os.path.join(tmpdir, name)
         # Shallow clone to save time
-        subprocess.run(["git", "clone", "--depth", "1", repo, repo_path], capture_output=True)
+        subprocess.run(["git", "clone", "--depth", "50", repo, repo_path], capture_output=True)
 
         # We need to run the CLI on the downloaded repository directory
-        # Since our detector.py expects standard input via piped stream or file paths directly,
-        # we can just use force-scan-all mode on the cloned path.
-        # However, cli.py reads one file if input is provided. If we want to scan a directory, we need to adapt it, or use `find`.
-
         # Let's write a small shell command to find all .py/.txt/.yml/.json files and scan them
-        # Note: cli.py "input" only takes a single file right now.
-        # But we added `--git-working` and `--git-staged`.
-        # To do a real-world scan over an entire checkout, maybe we should just simulate `find ... | xargs cat | python cli.py`
-
         cmd = f"find {repo_path} -type f -not -path '*/.git/*' | xargs cat 2>/dev/null | {sys.executable} -m src.cli --mode fast"
         res = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
@@ -56,8 +48,18 @@ with tempfile.TemporaryDirectory() as tmpdir:
             if m:
                 count = int(m.group(1))
 
-        results[name] = count
+        # Scan history as well to demonstrate history scanning orchestration
+        cmd_history = f"cd {repo_path} && {sys.executable} -m src.cli --scan-history --limit-commits 10 --mode fast"
+        res_hist = subprocess.run(cmd_history, shell=True, capture_output=True, text=True)
+        hist_count = 0
+        if "Secrets detected:" in res_hist.stdout:
+            import re
+            m = re.search(r"Secrets detected:\s+(\d+)", res_hist.stdout)
+            if m:
+                hist_count = int(m.group(1))
+
+        results[name] = (count, hist_count)
 
 print("\n--- Real World Scan Results ---")
-for r, c in results.items():
-    print(f"{r}: {c} secrets detected")
+for r, (c, hc) in results.items():
+    print(f"{r}: {c} secrets detected in latest, {hc} in last 10 commits")

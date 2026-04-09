@@ -129,6 +129,25 @@ Scenario: 22. Git History Audit - Deep Scan
   When I run the git-history scan
   Then it should find all 10 distinct secret types spanning 10 different commits
 
+Scenario: 22b. Git History Audit - Added and Removed Secret
+  Given a temporary git repository
+  And a secret added in commit A and removed in commit B
+  When I run the git-history scan
+  Then it should find the secret in history
+  And when I run the normal scan, it should not find the secret
+
+Scenario: 22c. Git History Audit - Limit Commits
+  Given a temporary git repository
+  And a git history with 5 commits, each leaking a different obfuscated secret type
+  When I run the git-history scan with a commit limit of 2
+  Then it should find exactly 2 distinct secret types
+
+Scenario: 22d. Git History Audit - Limit Depth
+  Given a temporary git repository
+  And a git history with 1 commit 10 days ago and 1 commit 2 days ago leaking secrets
+  When I run the git-history scan with a depth limit of 5 days
+  Then it should find exactly 1 distinct secret type
+
 Scenario: 23. Git Ignore and Inline Suppression
   Given a temporary git repository
   And a file "ignored_path/secret.txt" with an obfuscated Stripe key

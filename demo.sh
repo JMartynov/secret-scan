@@ -149,8 +149,8 @@ rm staged_secret.txt
 echo "----------------------------------------------------"
 
 echo -e "\n--- Part 11: Git History Scan ---"
-echo ">>> ./run.sh --history --max-commits 3"
-./run.sh --history --max-commits 3
+echo ">>> ./run.sh --scan-history --limit-commits 3"
+./run.sh --scan-history --limit-commits 3
 echo "----------------------------------------------------"
 
 echo -e "\n--- Part 12: Advanced Risk Scoring ---"

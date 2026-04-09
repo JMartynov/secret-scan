@@ -102,6 +102,15 @@ def test_git_branch_scan(): pass
 @scenario('acceptance.feature', '22. Git History Audit - Deep Scan')
 def test_git_history_scan(): pass
 
+@scenario('acceptance.feature', '22b. Git History Audit - Added and Removed Secret')
+def test_git_history_scan_added_removed(): pass
+
+@scenario('acceptance.feature', '22c. Git History Audit - Limit Commits')
+def test_git_history_scan_limit_commits(): pass
+
+@scenario('acceptance.feature', '22d. Git History Audit - Limit Depth')
+def test_git_history_scan_limit_depth(): pass
+
 @scenario('acceptance.feature', '23. Git Ignore and Inline Suppression')
 def test_git_ignore_suppression(): pass
 
@@ -267,13 +276,41 @@ def create_history_leaks(temp_repo):
         subprocess.run(["git", "add", f"leak_{i}.txt"], cwd=repo_path, check=True)
         subprocess.run(["git", "commit", "-m", f"Leak {name}"], cwd=repo_path, check=True)
 
+@given('a secret added in commit A and removed in commit B')
+def create_added_removed_secret(temp_repo):
+    repo_path = temp_repo["path"]
+    secrets = get_obfuscated_secrets()
+    secret = list(secrets.values())[0] # Take the first secret
+    f = repo_path / "transient_leak.txt"
+    f.write_text(secret)
+    subprocess.run(["git", "add", "transient_leak.txt"], cwd=repo_path, check=True)
+    subprocess.run(["git", "commit", "-m", "Commit A"], cwd=repo_path, check=True)
+    f.write_text("clean text")
+    subprocess.run(["git", "add", "transient_leak.txt"], cwd=repo_path, check=True)
+    subprocess.run(["git", "commit", "-m", "Commit B"], cwd=repo_path, check=True)
+
 @when('I run the git-history scan')
 def run_git_history(temp_repo, ctx):
     repo_path = temp_repo["path"]
     project_root = os.getcwd()
-    cmd = [sys.executable, "-m", "src.cli", "--history", "--mode", "deep", "--data-dir", f"{project_root}/data"]
+    cmd = [sys.executable, "-m", "src.cli", "--scan-history", "--mode", "deep", "--data-dir", f"{project_root}/data"]
     result = subprocess.run(cmd, cwd=repo_path, capture_output=True, text=True)
     ctx["output"] = result.stdout
+
+@then('it should find the secret in history')
+def check_secret_in_history(ctx):
+    assert "Secrets detected: " in ctx["output"]
+    import re
+    match = re.search(r"Secrets detected: (\d+)", ctx["output"])
+    assert match and int(match.group(1)) > 0
+
+@then('when I run the normal scan, it should not find the secret')
+def run_normal_scan_no_secret(temp_repo, ctx):
+    repo_path = temp_repo["path"]
+    project_root = os.getcwd()
+    cmd = [sys.executable, "-m", "src.cli", str(repo_path), "--mode", "fast", "--data-dir", f"{project_root}/data"]
+    result = subprocess.run(cmd, cwd=repo_path, capture_output=True, text=True)
+    assert "CRITICAL" not in result.stdout # Ensure the high confidence secret is gone
 
 @then('it should find all 10 distinct secret types spanning 10 different commits')
 def check_history_counts(ctx):
@@ -284,6 +321,70 @@ def check_history_counts(ctx):
         assert count >= 8
     else:
         pytest.fail(f"Could not find 'Secrets detected' in output: {ctx['output']}")
+
+@given('a git history with 5 commits, each leaking a different obfuscated secret type')
+def create_history_leaks_5(temp_repo):
+    repo_path = temp_repo["path"]
+    secrets = get_obfuscated_secrets()
+    for i, (name, secret) in enumerate(list(secrets.items())[:5]):
+        f = repo_path / f"leak_{i}.txt"
+        f.write_text(secret)
+        subprocess.run(["git", "add", f"leak_{i}.txt"], cwd=repo_path, check=True)
+        subprocess.run(["git", "commit", "-m", f"Leak {name}"], cwd=repo_path, check=True)
+
+@when(parsers.parse('I run the git-history scan with a commit limit of {limit:d}'))
+def run_git_history_limit_commits(temp_repo, ctx, limit):
+    repo_path = temp_repo["path"]
+    project_root = os.getcwd()
+    cmd = [sys.executable, "-m", "src.cli", "--scan-history", f"--limit-commits={limit}", "--mode", "deep", "--data-dir", f"{project_root}/data"]
+    result = subprocess.run(cmd, cwd=repo_path, capture_output=True, text=True)
+    ctx["output"] = result.stdout
+
+@then(parsers.parse('it should find exactly {count:d} distinct secret type'))
+@then(parsers.parse('it should find exactly {count:d} distinct secret types'))
+def check_exact_secret_count(ctx, count):
+    import re
+    match = re.search(r"Secrets detected: (\d+)", ctx["output"])
+    if match:
+        actual_count = int(match.group(1))
+        assert actual_count == count
+    else:
+        assert count == 0
+
+@given('a git history with 1 commit 10 days ago and 1 commit 2 days ago leaking secrets')
+def create_history_depth(temp_repo):
+    import datetime
+    repo_path = temp_repo["path"]
+    secrets = get_obfuscated_secrets()
+    secret_list = list(secrets.values())
+
+    # Commit 10 days ago
+    date_10_days_ago = (datetime.datetime.now() - datetime.timedelta(days=10)).isoformat()
+    f1 = repo_path / "leak_old.txt"
+    f1.write_text(secret_list[0])
+    subprocess.run(["git", "add", "leak_old.txt"], cwd=repo_path, check=True)
+    env1 = os.environ.copy()
+    env1["GIT_AUTHOR_DATE"] = date_10_days_ago
+    env1["GIT_COMMITTER_DATE"] = date_10_days_ago
+    subprocess.run(["git", "commit", "-m", "Leak 10 days ago"], cwd=repo_path, env=env1, check=True)
+
+    # Commit 2 days ago
+    date_2_days_ago = (datetime.datetime.now() - datetime.timedelta(days=2)).isoformat()
+    f2 = repo_path / "leak_new.txt"
+    f2.write_text(secret_list[1])
+    subprocess.run(["git", "add", "leak_new.txt"], cwd=repo_path, check=True)
+    env2 = os.environ.copy()
+    env2["GIT_AUTHOR_DATE"] = date_2_days_ago
+    env2["GIT_COMMITTER_DATE"] = date_2_days_ago
+    subprocess.run(["git", "commit", "-m", "Leak 2 days ago"], cwd=repo_path, env=env2, check=True)
+
+@when(parsers.parse('I run the git-history scan with a depth limit of {days:d} days'))
+def run_git_history_limit_depth(temp_repo, ctx, days):
+    repo_path = temp_repo["path"]
+    project_root = os.getcwd()
+    cmd = [sys.executable, "-m", "src.cli", "--scan-history", f"--limit-depth={days}", "--mode", "deep", "--data-dir", f"{project_root}/data"]
+    result = subprocess.run(cmd, cwd=repo_path, capture_output=True, text=True)
+    ctx["output"] = result.stdout
 
 @given('a file "ignored_path/secret.txt" with an obfuscated Stripe key')
 def create_ignored_path_file(temp_repo):

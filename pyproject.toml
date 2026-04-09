@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "py-secret-scan"
-version = "3.0.1"
+version = "3.0.2"
 description = "A local security tool to detect secrets and PII in LLM prompts, code, and logs."
 readme = "README.md"
 authors = [

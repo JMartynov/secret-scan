@@ -554,6 +554,8 @@ The scanner can be integrated into:
 
 * CI/CD pipelines
 * AI gateways
+* Custom Python applications using our Developer SDK
+* ML Frameworks natively via `src.integrations` (LangChain, HuggingFace, LlamaIndex, PyTorch, Pydantic AI, vLLM, Ollama, Haystack)
 * API proxies
 * developer tooling
 

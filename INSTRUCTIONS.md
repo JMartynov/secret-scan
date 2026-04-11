@@ -73,3 +73,45 @@ When auditing repositories with thousands of commits or large file trees, use th
 * `git status` → `git add ...` → `git commit` → `git push`.
 
 By following these steps you keep the pattern library healthy, the detection engine precise, and the project ready for production-grade releases.
+
+## SDK & Framework Integrations
+
+`py-secret-scan` provides a Python SDK and seamless integrations for your favorite ML/AI libraries.
+
+### Basic SDK Usage
+```python
+from src.sdk import Scanner, secure_prompt
+
+scanner = Scanner(obfuscate=True, obfuscate_mode="redact")
+safe_text = scanner.redact("My password is ghp_1234567890abcdefghijklmnopqrstuvwx")
+print(safe_text)
+
+@secure_prompt(obfuscate=True)
+def run_model(prompt: str):
+    print(f"Running safe prompt: {prompt}")
+
+run_model("What is the meaning of life, and also ghp_12345?")
+```
+
+### Framework Integrations
+
+The library provides drop-in wrappers for common frameworks in `src.integrations`.
+Examples include LangChain, LlamaIndex, HuggingFace, PyTorch Datasets, Pydantic AI, vLLM offline inference, Ollama clients, and Haystack components.
+
+**LangChain Example:**
+```python
+from src.integrations import SecretScannerRunnable
+from langchain.llms import OpenAI
+
+safe_llm = SecretScannerRunnable(OpenAI(), mode="redact")
+safe_llm.invoke("Help me use ghp_12345")
+```
+
+**HuggingFace Example:**
+```python
+from src.integrations import SecurePipeline
+from transformers import pipeline
+
+safe_pipe = SecurePipeline(pipeline("text-generation", model="gpt2"))
+safe_pipe("My token is ghp_12345")
+```

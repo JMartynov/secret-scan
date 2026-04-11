@@ -40,3 +40,15 @@
 - `demo.sh` (Updated to showcase performance benchmarks alongside standard detection options).
 
 The performance updates push the bounds of parallelized analysis, making multi-gigabyte repository audits consistently robust, resource-aware, and performant.
+
+## SDK and LLM Integrations
+- Introduced a developer-friendly SDK (`src/sdk.py`) for integrating secret scanning easily in Python applications.
+- Added drop-in integrations (`src/integrations/`) for popular ML/AI frameworks:
+  - HuggingFace Transformers
+  - LangChain
+  - LlamaIndex
+  - PyTorch Datasets
+  - Pydantic AI
+  - vLLM
+  - Ollama
+  - Haystack

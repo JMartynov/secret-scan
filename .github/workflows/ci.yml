@@ -44,7 +44,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: secret-results.sarif
-        if: always()
+        if: hashFiles('secret-results.sarif') != ''
 
       - name: Lint regex
         run: python tools/regex_lint.py

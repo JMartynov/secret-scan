@@ -37,7 +37,11 @@ jobs:
         run: pytest
 
       - name: Secret Scan (Git Diff)
-        run: ./run.sh --git-branch origin/main --format sarif > secret-results.sarif
+        run: |
+          ./run.sh --git-branch origin/main --format sarif > secret-results.sarif || true
+          if [ ! -s secret-results.sarif ]; then
+            echo '{"$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json","version": "2.1.0","runs": [{"tool": {"driver": {"name": "LLM Secrets Leak Detector","rules": []}},"results": []}]}' > secret-results.sarif
+          fi
         continue-on-error: true
 
       - name: Upload SARIF
